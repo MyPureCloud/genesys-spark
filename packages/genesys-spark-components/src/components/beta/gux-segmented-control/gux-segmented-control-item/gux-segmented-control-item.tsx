@@ -42,30 +42,6 @@ export class GuxSegmentedControlItem {
     }
   }
 
-  // private isInStartPosition(): boolean {
-  //   const parentSegmentControl = getClosestElement(
-  //     'gux-segmented-control-beta',
-  //     this.root
-  //   ) as HTMLGuxSegmentedControlBetaElement;
-
-  //   const children = Array.from(parentSegmentControl.children);
-  //   const index = children.findIndex(i => i === this.root);
-
-  //   return index === 0;
-  // }
-
-  // private isInEndPosition(): boolean {
-  //   const parentSegmentControl = getClosestElement(
-  //     'gux-segmented-control-beta',
-  //     this.root
-  //   ) as HTMLGuxSegmentedControlBetaElement;
-
-  //   const children = Array.from(parentSegmentControl.children);
-  //   const index = children.findIndex(i => i === this.root);
-
-  //   return index === children.length - 1;
-  // }
-
   private hasDisabledParent(): boolean {
     const parentSegmentControl = getClosestElement(
       'gux-segmented-control-beta',
