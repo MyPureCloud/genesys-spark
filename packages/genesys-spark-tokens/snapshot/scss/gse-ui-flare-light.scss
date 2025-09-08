@@ -172,8 +172,6 @@
     0 6px 10px 4px #3d538f33, 0 0 2px 0 #3d538f33;
   --gse-ui-calendarMenu-ctaGroup-height: 68px;
   --gse-ui-calendarMenu-ctaGroup-padding: 18px 24px;
-  --gse-ui-globalNav-menuOption-selected-backgroundColor: #2143a2;
-  --gse-ui-globalNav-menuOption-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-disabled-backgroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-disabled-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-selectedPanel-backgroundColor: #2954cb;
@@ -197,9 +195,9 @@
   --gse-ui-globalNav-menuOption-focus-borderRadius: 8px;
   --gse-ui-globalNav-menuOption-borderRadius: 4px;
   --gse-ui-globalNav-menuOption-disableOpacity: 0.5;
-  --gse-ui-globalNav-menuOption-activeSelected-backgroundColor: #2954cb;
-  --gse-ui-globalNav-menuOption-activeSelected-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-activeSelected-stroke: #ff451a;
+  --gse-ui-globalNav-menuOption-selected-backgroundColor: #2954cb;
+  --gse-ui-globalNav-menuOption-selected-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-selected-stroke: #ff451a;
   --gse-ui-globalNav-menuOption-treeView-bar: #3d538f;
   --gse-ui-globalNav-menuOption-newTab-default-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-newTab-hover-backgroundColor: #1a2b67;
@@ -261,7 +259,7 @@
   --gse-ui-globalNav-topBar-button-disconnected-default-foregroundColor: #881429;
   --gse-ui-globalNav-topBar-button-disconnected-hover-backgroundColor: #d5def7;
   --gse-ui-globalNav-topBar-button-disconnected-hover-foregroundColor: #881429;
-  --gse-ui-globalNav-topBar-button-connected-default-backgroundColor: #079167;
+  --gse-ui-globalNav-topBar-button-connected-default-backgroundColor: #056d4d;
   --gse-ui-globalNav-topBar-button-connected-default-foregroundColor: #ffffff;
   --gse-ui-globalNav-topBar-button-connected-hover-backgroundColor: #0e5c42;
   --gse-ui-globalNav-topBar-button-connected-hover-foregroundColor: #ffffff;

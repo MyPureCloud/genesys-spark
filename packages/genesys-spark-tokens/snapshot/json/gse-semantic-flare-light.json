@@ -67,7 +67,7 @@
           },
           "top_nav": {
             "connected": {
-              "default": "#079167",
+              "default": "#056d4d",
               "hover": "#0e5c42",
               "active": "#044834"
             }
