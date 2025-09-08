@@ -4,6 +4,8 @@ import {
   GuxNotificationBadgeSize
 } from './gux-notification-badge.types';
 import { trackComponent } from '@utils/tracking/usage';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import defaultResources from './i18n/en.json';
 
 /**
  * @slot - Slot for up to 3 digits or a gux-icon
@@ -15,11 +17,13 @@ import { trackComponent } from '@utils/tracking/usage';
   shadow: true
 })
 export class GuxNotificationBadge {
+  private i18n: GetI18nValue;
+
   @Element()
   root: HTMLElement;
 
   @Prop()
-  accent: GuxNotificationBadgeAccent = 'info';
+  accent: GuxNotificationBadgeAccent = 'info-on-dark';
 
   @Prop()
   size: GuxNotificationBadgeSize = 'medium';
@@ -29,16 +33,14 @@ export class GuxNotificationBadge {
 
   private hasIconOnly(): boolean {
     const children = Array.from(this.root.children);
+    const tagNames = children.map(child => child.tagName);
 
-    if (children.length === 1) {
-      const child = children[0];
-      if (child.tagName === 'GUX-ICON') {
-        return true;
-      }
+    if (children.length === 1 && tagNames[0] === 'GUX-ICON') {
+      return true;
     } else if (
       children.length === 2 &&
-      children[0].tagName === 'GUX-ICON' &&
-      ['GUX-TOOLTIP', 'GUX-TOOLTIP-BETA'].includes(children[1].tagName)
+      tagNames.includes('GUX-ICON') &&
+      ['GUX-TOOLTIP', 'GUX-TOOLTIP-BETA'].some(tag => tagNames.includes(tag))
     ) {
       return true;
     }
@@ -52,6 +54,7 @@ export class GuxNotificationBadge {
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
+    this.i18n = await buildI18nForComponent(this.root, defaultResources);
   }
 
   render(): JSX.Element {
@@ -59,10 +62,15 @@ export class GuxNotificationBadge {
       <div
         class={{
           'gux-notification-badge': true,
-          [`gux-${this.accent}`]: true
+          [`gux-${this.accent}`]: true,
+          [`gux-${this.size}`]: true,
+          'gux-icon-only': this.iconOnly
         }}
       >
         <slot onSlotchange={this.slotChanged.bind(this)} />
+        <gux-screen-reader-beta>
+          {this.i18n('notifications')}
+        </gux-screen-reader-beta>
       </div>
     ) as JSX.Element;
   }

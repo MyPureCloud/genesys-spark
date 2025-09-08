@@ -1,73 +1,109 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
-// Style
+// UNUSED TOKENS:
+// $gse-ui-notificationBadge-lightOnlyContentColor
+// $gse-ui-notificationBadge-darkOnlyContentColor
+// $gse-ui-notificationBadge-width-large-large
+// $gse-ui-notificationBadge-width-medium-large
+// $gse-ui-notificationBadge-width-large-medium
+// $gse-ui-notificationBadge-width-medium-medium
+
+// MISSING TOKENS:
+// $gse-ui-notificationBadge-tertiaryBackgroundColor: global.$gse-semantic-theme-background-system-success-40
+
+// $gse-ui-notificationBadge-large-padding = 0 6px;
+// $gse-ui-notificationBadge-medium-padding = 0 4px;
+// $gse-ui-notificationBadge-small-padding = 0;
+
 :host {
   display: inline-block;
   block-size: fit-content;
-  border-radius: ui.$gse-ui-badge-borderRadius;
+  color: inherit;
+  background-color: inherit;
+  border-radius: global.$gse-core-borderRadius-full;
 }
 
 .gux-notification-badge {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  gap: ui.$gse-ui-badge-gap;
   align-items: center;
   justify-content: center;
-  block-size: ui.$gse-ui-badge-height;
-  padding: ui.$gse-ui-badge-padding;
-  font-family: ui.$gse-ui-badge-text-fontFamily;
-  font-size: ui.$gse-ui-badge-text-fontSize;
-  font-weight: ui.$gse-ui-badge-text-fontWeight;
-  line-height: ui.$gse-ui-badge-text-lineHeight;
-  border-radius: ui.$gse-ui-badge-borderRadius;
+  min-inline-size: ui.$gse-ui-notificationBadge-width-large-default;
+  block-size: ui.$gse-ui-notificationBadge-height-large;
+  padding-block: 0;
+  padding-inline: 6px; // TODO: Get token for this
+  font-family: ui.$gse-ui-notificationBadge-large-fontFamily;
+  font-size: ui.$gse-ui-notificationBadge-large-fontSize;
+  font-weight: ui.$gse-ui-notificationBadge-large-fontWeight;
+  line-height: ui.$gse-ui-notificationBadge-large-lineHeight;
+  color: ui.$gse-ui-notificationBadge-lightContentColor;
+  border-radius: global.$gse-core-borderRadius-lg;
 
-  gux-tooltip-title {
-    white-space: nowrap;
+  &.gux-icon-only {
+    max-inline-size: ui.$gse-ui-notificationBadge-width-large-default;
   }
 
-  .gux-sr-only {
-    @include mixins.gux-sr-only-clip;
+  & > gux-icon {
+    inline-size: ui.$gse-ui-notificationBadge-iconSize-large;
+    block-size: ui.$gse-ui-notificationBadge-iconSize-large;
   }
 
-  &.gux-info {
-    color: ui.$gse-ui-badge-info-regular-foregroundColor;
-    background-color: ui.$gse-ui-badge-info-regular-backgroundColor;
+  &.gux-medium {
+    min-inline-size: ui.$gse-ui-notificationBadge-width-medium-default;
+    block-size: ui.$gse-ui-notificationBadge-height-medium;
+    padding-block: 0;
+    padding-inline: 4px; // TODO: Get token for this
+    font-family: ui.$gse-ui-notificationBadge-medium-fontFamily;
+    font-size: ui.$gse-ui-notificationBadge-medium-fontSize;
+    font-weight: ui.$gse-ui-notificationBadge-medium-fontWeight;
+    line-height: ui.$gse-ui-notificationBadge-medium-lineHeight;
 
-    &.gux-bold {
-      color: ui.$gse-ui-badge-info-bold-foregroundColor;
-      background-color: ui.$gse-ui-badge-info-bold-backgroundColor;
+    &.gux-icon-only {
+      max-inline-size: ui.$gse-ui-notificationBadge-width-medium-default;
+      padding: 0; // TODO: Get token for this
     }
+
+    & > gux-icon {
+      inline-size: ui.$gse-ui-notificationBadge-iconSize-medium;
+      block-size: ui.$gse-ui-notificationBadge-iconSize-medium;
+    }
+  }
+
+  &.gux-small {
+    inline-size: ui.$gse-ui-notificationBadge-width-small;
+    min-inline-size: ui.$gse-ui-notificationBadge-width-small;
+    block-size: ui.$gse-ui-notificationBadge-height-small;
+    padding: 0;
+
+    & > slot {
+      visibility: hidden;
+    }
+  }
+
+  &.gux-info-on-dark {
+    color: ui.$gse-ui-notificationBadge-darkContentColor;
+    background-color: ui.$gse-ui-notificationBadge-neutralBackgroundColor;
   }
 
   &.gux-error {
-    color: ui.$gse-ui-badge-error-regular-foregroundColor;
-    background-color: ui.$gse-ui-badge-error-regular-backgroundColor;
-
-    &.gux-bold {
-      color: ui.$gse-ui-badge-error-bold-foregroundColor;
-      background-color: ui.$gse-ui-badge-error-bold-backgroundColor;
-    }
+    background-color: ui.$gse-ui-notificationBadge-primaryBackgroundColor;
   }
 
   &.gux-warning {
-    color: ui.$gse-ui-badge-warning-regular-foregroundColor;
-    background-color: ui.$gse-ui-badge-warning-regular-backgroundColor;
+    color: ui.$gse-ui-notificationBadge-darkContentColor;
+    background-color: ui.$gse-ui-notificationBadge-secondaryBackgroundColor;
+  }
 
-    &.gux-bold {
-      color: ui.$gse-ui-badge-warning-bold-foregroundColor;
-      background-color: ui.$gse-ui-badge-warning-bold-backgroundColor;
-    }
+  &.gux-info-on-light {
+    background-color: ui.$gse-ui-notificationBadge-subtleBackgroundColor;
   }
 
   &.gux-success {
-    color: ui.$gse-ui-badge-success-regular-foregroundColor;
-    background-color: ui.$gse-ui-badge-success-regular-backgroundColor;
-
-    &.gux-bold {
-      color: ui.$gse-ui-badge-success-bold-foregroundColor;
-      background-color: ui.$gse-ui-badge-success-bold-backgroundColor;
-    }
+    // TODO: Get token for this $gse-ui-notificationBadge-tertiaryBackgroundColor
+    background-color: global.$gse-semantic-theme-background-system-success-40;
   }
 
   &.gux-inherit {
