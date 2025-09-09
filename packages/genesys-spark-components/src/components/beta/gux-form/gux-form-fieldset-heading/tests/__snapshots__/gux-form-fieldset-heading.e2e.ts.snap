@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-form-fieldset-heading #render should render with slotted heading 1`] = `"<gux-form-fieldset-heading hydrated=""><template shadowrootmode="open"><slot></slot></template><h2>Form Fieldset Header</h2></gux-form-fieldset-heading>"`;

@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-tooltip-beta #render should link to "for" element 1`] = `"<gux-tooltip-beta for="element" id="gux-tooltip-i" hydrated=""><template shadowrootmode="open"><gux-tooltip-base-beta hydrated=""><span slot="content"><slot name="content"><slot></slot></slot></span></gux-tooltip-base-beta></template> <div slot="content">Tooltip</div> </gux-tooltip-beta>"`;
-
-exports[`gux-tooltip-beta #render should link to sibling element 1`] = `"<gux-tooltip-beta id="gux-tooltip-i" hydrated=""><template shadowrootmode="open"><gux-tooltip-base-beta hydrated=""><span slot="content"><slot name="content"><slot></slot></slot></span></gux-tooltip-base-beta></template> <span slot="content">Tooltip</span> </gux-tooltip-beta>"`;

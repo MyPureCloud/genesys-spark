@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-flag-icon-beta should render component as expected 1`] = `"<gux-flag-icon-beta flag="IE" hydrated=""><template shadowrootmode="open"><span role="img" class="gux-flag-ie" aria-label="Ireland" style="background-image: url("data:image/png;"></span></template></gux-flag-icon-beta>"`;
-
-exports[`gux-flag-icon-beta should render component with screenreader text as expected 1`] = `"<gux-flag-icon-beta flag="IE" screenreader-text="Irish flag" hydrated=""><template shadowrootmode="open"><span role="img" class="gux-flag-ie" aria-label="Irish flag" style="background-image: url("data:image/png;"></span></template></gux-flag-icon-beta>"`;

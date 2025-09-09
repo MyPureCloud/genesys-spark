@@ -1,6 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-prompt-input-beta #render should render component as expected 1`] = `
-"<gux-prompt-input-beta placeholder="Ask Genesys AI" hydrated=""><template shadowrootmode="open"><div class="gux-input-container"><input class="gux-input" placeholder="Ask Genesys AI" data-testid="prompt-input"><gux-button-slot accent="primary" hydrated=""><button type="button" class="gux-generate" disabled="" title="Generate Genesys AI text" data-testid="generate-button"><gux-icon icon-name="fa/arrow-up-regular" size="small" hydrated=""></gux-icon></button></gux-button-slot></div><div class="caution-message"><slot name="caution-message"></slot></div></template> <div slot="caution-message"> Genesys AI may provide incorrect information. Double-check AI responses.
-          Genesys AI privacy, terms and conditions </div> </gux-prompt-input-beta>"
-`;
