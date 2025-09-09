@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-file-beta #render should render component as expected when an optional "error" slot is provided (19) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-file-beta>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -48,7 +48,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when an optional "error" slot is provided and drop-and-drag is enabled (20) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when an optional "error" slot is provided and drop-and-drag is enabled 1`] = `
 <gux-form-field-file-beta drag-and-drop="">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -99,7 +99,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when an optional "help" slot is provided (17) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when an optional "help" slot is provided 1`] = `
 <gux-form-field-file-beta>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -147,7 +147,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when an optional "help" slot is provided and drop-and-drag is enabled (18) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when an optional "help" slot is provided and drop-and-drag is enabled 1`] = `
 <gux-form-field-file-beta drag-and-drop="">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -198,7 +198,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when an optional "label-info" slot is provided (21) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-file-beta>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -248,7 +248,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when an optional "label-info" slot is provided and drop-and-drag is enabled (22) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when an optional "label-info" slot is provided and drop-and-drag is enabled 1`] = `
 <gux-form-field-file-beta drag-and-drop="">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -301,7 +301,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when indicator-mark is "optional" (13) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when indicator-mark is "optional" 1`] = `
 <gux-form-field-file-beta indicator-mark="optional">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -346,7 +346,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when indicator-mark is "optional" and drop-and-drag is enabled (14) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when indicator-mark is "optional" and drop-and-drag is enabled 1`] = `
 <gux-form-field-file-beta drag-and-drop="" indicator-mark="optional">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -394,7 +394,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when indicator-mark is "required" (15) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when indicator-mark is "required" 1`] = `
 <gux-form-field-file-beta indicator-mark="required">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -439,7 +439,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when indicator-mark is "required" and drop-and-drag is enabled (16) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when indicator-mark is "required" and drop-and-drag is enabled 1`] = `
 <gux-form-field-file-beta drag-and-drop="" indicator-mark="required">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -487,7 +487,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "disabled" (7) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "disabled" 1`] = `
 <gux-form-field-file-beta>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -532,7 +532,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "disabled" and drop-and-drag is enabled (8) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "disabled" and drop-and-drag is enabled 1`] = `
 <gux-form-field-file-beta drag-and-drop="">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -580,7 +580,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "multiple" (11) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "multiple" 1`] = `
 <gux-form-field-file-beta>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -625,7 +625,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "multiple" and drop-and-drag is enabled (12) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "multiple" and drop-and-drag is enabled 1`] = `
 <gux-form-field-file-beta drag-and-drop="">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -673,7 +673,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "required" (9) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "required" 1`] = `
 <gux-form-field-file-beta>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -718,7 +718,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "required" and drop-and-drag is enabled (10) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when input attribute is "required" and drop-and-drag is enabled 1`] = `
 <gux-form-field-file-beta drag-and-drop="">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -766,7 +766,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when label-position is above (1) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when label-position is above 1`] = `
 <gux-form-field-file-beta label-position="above">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -811,7 +811,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when label-position is above and drop-and-drag is enabled (2) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when label-position is above and drop-and-drag is enabled 1`] = `
 <gux-form-field-file-beta drag-and-drop="" label-position="above">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -859,7 +859,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when label-position is beside (3) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when label-position is beside 1`] = `
 <gux-form-field-file-beta label-position="beside">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -904,7 +904,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when label-position is beside and drop-and-drag is enabled (4) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when label-position is beside and drop-and-drag is enabled 1`] = `
 <gux-form-field-file-beta drag-and-drop="" label-position="beside">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -952,7 +952,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when label-position is screenreader (5) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when label-position is screenreader 1`] = `
 <gux-form-field-file-beta label-position="screenreader">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -997,7 +997,7 @@ exports[`gux-form-field-file-beta #render should render component as expected wh
 </gux-form-field-file-beta>
 `;
 
-exports[`gux-form-field-file-beta #render should render component as expected when label-position is screenreader and drop-and-drag is enabled (6) 1`] = `
+exports[`gux-form-field-file-beta #render should render component as expected when label-position is screenreader and drop-and-drag is enabled 1`] = `
 <gux-form-field-file-beta drag-and-drop="" label-position="screenreader">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">

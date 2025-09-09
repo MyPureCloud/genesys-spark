@@ -1,4 +1,4 @@
-import { newSpecPage } from '@test/specTestUtils';
+import { newSpecPage, checkRenders } from '@test/specTestUtils';
 
 import { GuxSelectorCards } from '../gux-selector-cards';
 import { renderConfigs } from './gux-selector-cards.common';
@@ -46,12 +46,6 @@ describe('gux-selector-cards', () => {
   });
 
   describe('#render', () => {
-    renderConfigs.forEach(({ description, html }) => {
-      it(description, async () => {
-        const page = await newSpecPage({ components, html, language });
-
-        expect(page.root).toMatchSnapshot();
-      });
-    });
+    checkRenders(renderConfigs, components);
   });
 });
