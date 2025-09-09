@@ -49,6 +49,12 @@
     <gux-button accent="secondary" id="toggle-headingSize"
       >Toggle heading size</gux-button
     >
+
+    <h2>Nav-bar</h2>
+
+    <gux-button accent="secondary" id="toggle-navBarPanel"
+      >Toggle nav-bar panel</gux-button
+    >
   </div>
 
   <gux-side-panel-beta size="medium" id="dynamic-example">
@@ -140,7 +146,6 @@
       <gux-side-panel-heading slot="title"
         >Modal Side Panel</gux-side-panel-heading
       >
-
       <gux-icon
         slot="icon"
         decorative
@@ -189,6 +194,54 @@
       </gux-cta-group>
     </footer>
   </gux-modal-side-panel-beta>
+
+  <gux-side-panel-beta size="medium" id="nav-bar-example">
+    <gux-side-panel-header slot="header">
+      <gux-side-panel-heading slot="title"
+        >Side Panel within the nav-bar</gux-side-panel-heading
+      >
+      <gux-icon
+        slot="icon"
+        decorative
+        size="medium"
+        icon-name="user-add"
+        screenreader-text="add John Smith to contact list"
+      ></gux-icon>
+      <gux-icon
+        id="expand-icon"
+        slot="expand"
+        decorative
+        size="small"
+        icon-name="expand"
+      ></gux-icon>
+      <gux-icon
+        id="collapse-icon"
+        slot="collapse"
+        decorative
+        size="small"
+        icon-name="collapse"
+      ></gux-icon>
+    </gux-side-panel-header>
+    <div slot="content" id="nav-bar-content">
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </div>
+    <footer slot="footer" aria-label="Side panel footer">
+      <gux-cta-group>
+        <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+        <gux-button slot="secondary" onclick="notify(event)"
+          >Secondary</gux-button
+        >
+        <gux-button
+          slot="dismiss"
+          onclick="document.getElementById('nav-bar-example').style.display = 'none'"
+          >Dismiss</gux-button
+        >
+      </gux-cta-group>
+    </footer>
+  </gux-side-panel-beta>
 </div>
 
 <style
@@ -198,6 +251,7 @@
   const modalSidePanel = document.getElementById('modal-example');
   const dynamicSidePanel = document.getElementById('dynamic-example');
   const tabsSidePanel = document.getElementById('tabs-example');
+  const navBarSidePanel = document.getElementById('nav-bar-example');
 
   // Buttons
   const modalSmall = document.getElementById('modal-small');
@@ -207,10 +261,14 @@
   const toggleMedium = document.getElementById('toggle-medium');
   const toggleTabsPanel = document.getElementById('toggle-tabsPanel');
   const toggleHeadingSize = document.getElementById('toggle-headingSize');
+  const toggleNavBarPanel = document.getElementById('toggle-navBarPanel');
+  const expandIcon = document.getElementById('expand-icon');
+  const collapseIcon = document.getElementById('collapse-icon');
 
   function hideAllPanels() {
     dynamicSidePanel.style.display = 'none';
     tabsSidePanel.style.display = 'none';
+    navBarSidePanel.style.display = 'none';
   }
 
   function showPanel(panel, size = null) {
@@ -259,6 +317,10 @@
     showPanel(tabsSidePanel);
   });
 
+  toggleNavBarPanel.addEventListener('click', function () {
+    showPanel(navBarSidePanel);
+  });
+
   toggleHeadingSize.addEventListener('click', function () {
     const headings = document.querySelectorAll('gux-side-panel-heading');
     headings.forEach(heading => {
@@ -278,6 +340,22 @@
 
   tabsSidePanel.addEventListener('sidePanelDismiss', function(event) {
     togglePanel(tabsSidePanel);
+  });
+
+  navBarSidePanel.addEventListener('sidePanelDismiss', function(event) {
+    togglePanel(navBarSidePanel);
+  });
+
+  expandIcon.addEventListener('click', function(event) {
+    document.getElementById('nav-bar-content').classList.toggle('gux-expanded');
+    expandIcon.style.display = 'none';
+    collapseIcon.style.display = 'block';
+  });
+
+  collapseIcon.addEventListener('click', function(event) {
+    document.getElementById('nav-bar-content').classList.toggle('gux-expanded');
+    collapseIcon.style.display = 'none';
+    expandIcon.style.display = 'block';
   });
 })()"
 >
@@ -304,5 +382,29 @@
 
   #tabs-example {
     display: none;
+  }
+
+  #nav-bar-example {
+    display: none;
+  }
+
+  #nav-bar-example gux-side-panel-header {
+    gap: 12px; /* The developer can set this to whichever value they need */
+    block-size: 56px; /* The developer can set this to whichever value they need */
+  }
+
+  .gux-expanded {
+    block-size: 400px; /* The developer can set this to whichever value they need */
+  }
+
+  #collapse-icon {
+    position: relative;
+    inset-inline-end: 10px;
+    display: none;
+  }
+
+  #collapse-icon:hover,
+  #expand-icon:hover {
+    cursor: pointer;
   }
 </style>
