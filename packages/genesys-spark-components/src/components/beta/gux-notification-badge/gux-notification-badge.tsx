@@ -37,12 +37,6 @@ export class GuxNotificationBadge {
 
     if (children.length === 1 && tagNames[0] === 'GUX-ICON') {
       return true;
-    } else if (
-      children.length === 2 &&
-      tagNames.includes('GUX-ICON') &&
-      ['GUX-TOOLTIP', 'GUX-TOOLTIP-BETA'].some(tag => tagNames.includes(tag))
-    ) {
-      return true;
     }
 
     return false;
