@@ -441,6 +441,12 @@
         "value": "{foreground.form_control.label.default}",
         "type": "color"
       }
+    },
+    "fixed_column": {
+      "box_shadow": {
+        "value": "{shadow.scroll_indicator}",
+        "type": "boxShadow"
+      }
     }
   },
   "avatar": {
@@ -1001,6 +1007,10 @@
     "width": {
       "value": "1440px",
       "type": "sizing"
+    },
+    "gap": {
+      "value": "{container.md.gap}",
+      "type": "spacing"
     }
   },
   "focus": {
