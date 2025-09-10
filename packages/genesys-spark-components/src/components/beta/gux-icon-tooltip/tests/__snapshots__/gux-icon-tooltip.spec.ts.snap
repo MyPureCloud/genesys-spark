@@ -1,15 +1,18 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-icon-tooltip-beta #render should render component as expected (1) 1`] = `
 <gux-icon-tooltip-beta>
   <template shadowrootmode="open">
     <div class="gux-icon-tooltip">
       <gux-screen-reader-beta>
-        <slot name="content"></slot>
+        <slot name="content">
+        </slot>
       </gux-screen-reader-beta>
-      <gux-icon decorative="" size="small"></gux-icon>
+      <gux-icon size="small" decorative="">
+      </gux-icon>
       <gux-tooltip-beta placement="right">
-        <div slot="content"></div>
+        <div slot="content">
+        </div>
       </gux-tooltip-beta>
     </div>
   </template>
@@ -21,9 +24,11 @@ exports[`gux-icon-tooltip-beta #render should render component as expected (2) 1
   <template shadowrootmode="open">
     <div class="gux-icon-tooltip">
       <gux-screen-reader-beta>
-        <slot name="content"></slot>
+        <slot name="content">
+        </slot>
       </gux-screen-reader-beta>
-      <gux-icon decorative="" size="small"></gux-icon>
+      <gux-icon size="small" decorative="">
+      </gux-icon>
       <gux-tooltip-beta placement="right">
         <div slot="content">
           This is some tooltip text
@@ -42,11 +47,14 @@ exports[`gux-icon-tooltip-beta #render should render component as expected (3) 1
   <template shadowrootmode="open">
     <div class="gux-icon-tooltip">
       <gux-screen-reader-beta>
-        <slot name="content"></slot>
+        <slot name="content">
+        </slot>
       </gux-screen-reader-beta>
-      <gux-icon decorative="" icon-name="fa/bell-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/bell-regular" size="small" decorative="">
+      </gux-icon>
       <gux-tooltip-beta placement="right">
-        <div slot="content"></div>
+        <div slot="content">
+        </div>
       </gux-tooltip-beta>
     </div>
   </template>
@@ -58,9 +66,11 @@ exports[`gux-icon-tooltip-beta #render should render component as expected (4) 1
   <template shadowrootmode="open">
     <div class="gux-icon-tooltip">
       <gux-screen-reader-beta>
-        <slot name="content"></slot>
+        <slot name="content">
+        </slot>
       </gux-screen-reader-beta>
-      <gux-icon decorative="" icon-name="fa/bell-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/bell-regular" size="small" decorative="">
+      </gux-icon>
       <gux-tooltip-beta placement="right">
         <div slot="content">
           This is some tooltip text

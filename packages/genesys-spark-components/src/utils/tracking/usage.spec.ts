@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { trackComponent, trackAction, getVersionEvent } from './usage';
 import packageInfo from '../../../package.json';
 

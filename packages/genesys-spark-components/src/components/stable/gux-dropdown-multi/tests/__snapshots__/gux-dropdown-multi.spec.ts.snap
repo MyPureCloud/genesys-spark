@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-dropdown #render should render as expected 1`] = `
 <gux-dropdown-multi>
@@ -6,67 +6,77 @@ exports[`gux-dropdown #render should render as expected 1`] = `
     <div class="gux-dropdown-container">
       <gux-popup>
         <div class="gux-target-container gux-target-container-not-filterable" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+          <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
             <span class="gux-field-content">
               <span class="gux-placeholder">
                 Select...
               </span>
             </span>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+            <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
           </button>
         </div>
-        <div class="gux-listbox-container" slot="popup">
-          <slot></slot>
+        <div slot="popup" class="gux-listbox-container">
+          <slot>
+          </slot>
         </div>
       </gux-popup>
     </div>
   </template>
-  <gux-listbox-multi aria-label="Animals" aria-multiselectable="true" role="listbox" tabindex="0">
+  <gux-listbox-multi aria-label="Animals" role="listbox" aria-multiselectable="true" tabindex="0">
     <template shadowrootmode="open">
-      <slot></slot>
-      <slot name="create"></slot>
+      <slot>
+      </slot>
+      <slot name="create">
+      </slot>
     </template>
-    <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+    <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
       <template shadowrootmode="open">
-        <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+        <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+          </path>
         </svg>
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Ant
+      </template>Ant
     </gux-option-multi>
-    <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+    <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
-        <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+        <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+          </path>
         </svg>
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Bat
+      </template>Bat
     </gux-option-multi>
-    <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+    <gux-option-multi value="c" id="gux-option-multi-i" role="option" class="gux-show-subtext" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
-        <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+        <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+          </path>
         </svg>
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Cat
+      </template>Cat
       <span slot="subtext">
         Medium
       </span>

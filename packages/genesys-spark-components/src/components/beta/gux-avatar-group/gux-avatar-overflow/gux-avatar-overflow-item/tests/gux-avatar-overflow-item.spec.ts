@@ -3,7 +3,7 @@ jest.mock('../../../../../../utils/error/log-error', () => ({
   logWarn: jest.fn()
 }));
 
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { logWarn } from '../../../../../../utils/error/log-error';
 import { GuxAvatarOverflowItem } from '../gux-avatar-overflow-item';
 

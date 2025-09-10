@@ -292,7 +292,6 @@ a {
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
   border-radius: 0;
-  /* stylelint-enable nesting-selector-no-missing-scoping-root */
 }
 a:hover {
   color: var(--gse-ui-links-hover-foregroundColor);
@@ -307,14 +306,15 @@ a:focus-visible {
   outline: var(--gse-semantic-focusOutline-md-borderWidth) solid var(--gse-semantic-border-focus);
   outline-offset: var(--gse-semantic-focusOutline-offset);
 }
+a {
+  /* stylelint-enable nesting-selector-no-missing-scoping-root */
+}
 
 table a {
   /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
   border-radius: 0;
-  /* stylelint-enable nesting-selector-no-missing-scoping-root */
-  /* stylelint-disable-next-line block-no-redundant-nested-style-rules, nesting-selector-no-missing-scoping-root */
 }
 table a:hover {
   color: var(--gse-ui-links-hover-foregroundColor);
@@ -330,6 +330,10 @@ table a:focus-visible {
   outline-offset: var(--gse-semantic-focusOutline-offset);
 }
 table a {
+  /* stylelint-enable nesting-selector-no-missing-scoping-root */
+  /* stylelint-disable-next-line block-no-redundant-nested-style-rules, nesting-selector-no-missing-scoping-root */
+}
+table a {
   text-decoration: none;
 }
 
@@ -338,7 +342,6 @@ table a {
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
   border-radius: 0;
-  /* stylelint-enable nesting-selector-no-missing-scoping-root */
 }
 .gux-ui-anchor:hover {
   color: var(--gse-ui-links-hover-foregroundColor);
@@ -353,14 +356,15 @@ table a {
   outline: var(--gse-semantic-focusOutline-md-borderWidth) solid var(--gse-semantic-border-focus);
   outline-offset: var(--gse-semantic-focusOutline-offset);
 }
+.gux-ui-anchor {
+  /* stylelint-enable nesting-selector-no-missing-scoping-root */
+}
 
 .gux-anchor-table {
   /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
   border-radius: 0;
-  /* stylelint-enable nesting-selector-no-missing-scoping-root */
-  /* stylelint-disable-next-line block-no-redundant-nested-style-rules, nesting-selector-no-missing-scoping-root */
 }
 .gux-anchor-table:hover {
   color: var(--gse-ui-links-hover-foregroundColor);
@@ -374,6 +378,10 @@ table a {
 .gux-anchor-table:focus-visible {
   outline: var(--gse-semantic-focusOutline-md-borderWidth) solid var(--gse-semantic-border-focus);
   outline-offset: var(--gse-semantic-focusOutline-offset);
+}
+.gux-anchor-table {
+  /* stylelint-enable nesting-selector-no-missing-scoping-root */
+  /* stylelint-disable-next-line block-no-redundant-nested-style-rules, nesting-selector-no-missing-scoping-root */
 }
 .gux-anchor-table {
   text-decoration: none;

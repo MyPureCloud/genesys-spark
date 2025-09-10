@@ -13,7 +13,7 @@ import {
 
 import { trackComponent } from '@utils/tracking/usage';
 import translationResources from '../i18n/en.json';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { afterNextRender } from '@utils/dom/after-next-render';
 

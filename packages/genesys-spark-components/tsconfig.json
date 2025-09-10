@@ -9,8 +9,9 @@
     "jsxFactory": "h",
     "baseUrl": "./src",
     "paths": {
-      "@utils/*": ["utils/*"],
-      "@test/*": ["test/*"]
+      "@components/*": ["components/*"],
+      "@test/*": ["test/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": ["src"]

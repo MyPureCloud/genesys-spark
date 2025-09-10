@@ -1,7 +1,7 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-dropdown-option Class Logic shouldFilter should filter if string is not in the text 1`] = `
-<gux-dropdown-option tabindex="0" text="TestsAreAwesome">
+<gux-dropdown-option text="TestsAreAwesome" tabindex="0">
   <div class="gux-dropdown-option" title="TestsAreAwesome">
     <span>
       TestsAreAwesome
@@ -11,21 +11,20 @@ exports[`gux-dropdown-option Class Logic shouldFilter should filter if string is
 `;
 
 exports[`gux-dropdown-option Class Logic shouldFilter should not filter if case-insensitive string is in the text 1`] = `
-<gux-dropdown-option tabindex="0" text="TestsAreAwesome">
+<gux-dropdown-option text="TestsAreAwesome" tabindex="0">
   <div class="gux-dropdown-option" title="TestsAreAwesome">
     <span>
       Tests
       <strong>
         Are
-      </strong>
-      Awesome
+      </strong>Awesome
     </span>
   </div>
 </gux-dropdown-option>
 `;
 
 exports[`gux-dropdown-option Class Logic shouldFilter should not filter if no search string is provided 1`] = `
-<gux-dropdown-option tabindex="0" text="TestsAreAwesome">
+<gux-dropdown-option text="TestsAreAwesome" tabindex="0">
   <div class="gux-dropdown-option" title="TestsAreAwesome">
     <span>
       TestsAreAwesome
@@ -35,21 +34,20 @@ exports[`gux-dropdown-option Class Logic shouldFilter should not filter if no se
 `;
 
 exports[`gux-dropdown-option Class Logic shouldFilter should not filter if string is in the text 1`] = `
-<gux-dropdown-option tabindex="0" text="TestsAreAwesome">
+<gux-dropdown-option text="TestsAreAwesome" tabindex="0">
   <div class="gux-dropdown-option" title="TestsAreAwesome">
     <span>
       Tests
       <strong>
         Are
-      </strong>
-      Awesome
+      </strong>Awesome
     </span>
   </div>
 </gux-dropdown-option>
 `;
 
 exports[`gux-dropdown-option should build 1`] = `
-<gux-dropdown-option tabindex="0" text="TestsAreAwesome">
+<gux-dropdown-option text="TestsAreAwesome" tabindex="0">
   <div class="gux-dropdown-option" title="TestsAreAwesome">
     <span>
       TestsAreAwesome

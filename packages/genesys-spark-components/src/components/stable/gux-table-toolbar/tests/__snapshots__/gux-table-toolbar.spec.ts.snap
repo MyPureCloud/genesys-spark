@@ -1,25 +1,30 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-table-toolbar #render should render table toolbar as expected 1`] = `
-<gux-table-toolbar aria-orientation="horizontal" gs-layout="full" role="toolbar">
+<gux-table-toolbar role="toolbar" aria-orientation="horizontal" gs-layout="full">
   <template shadowrootmode="open">
     <div class="search-filter-container">
-      <slot name="search-and-filter"></slot>
+      <slot name="search-and-filter">
+      </slot>
     </div>
-    <div class="section-spacing"></div>
+    <div class="section-spacing">
+    </div>
     <div class="gux-contextual-permanent-primary">
       <div class="gux-contextual-wrapper">
-        <slot name="contextual-actions"></slot>
+        <slot name="contextual-actions">
+        </slot>
       </div>
       <div class="gux-permanent-menu-primary-wrapper">
-        <slot name="permanent-actions"></slot>
-        <gux-table-toolbar-menu-button class="gux-show-menu" show-menu="">
+        <slot name="permanent-actions">
+        </slot>
+        <gux-table-toolbar-menu-button show-menu="" class="gux-show-menu">
           <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-popup exceed-target-width="">
-              <div class="gux-toolbar-menu-container" slot="target">
+              <div slot="target" class="gux-toolbar-menu-container">
                 <gux-button-slot accent="secondary">
-                  <button aria-expanded="false" aria-haspopup="true" class="gux-menu-button" type="button">
-                    <gux-icon decorative="" icon-name="fa/ellipsis-regular" size="small"></gux-icon>
+                  <button class="gux-menu-button" type="button" aria-haspopup="true" aria-expanded="false">
+                    <gux-icon icon-name="fa/ellipsis-regular" size="small" decorative="">
+                    </gux-icon>
                     <gux-screen-reader-beta>
                       Additional Actions
                     </gux-screen-reader-beta>
@@ -33,20 +38,23 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
               </div>
               <div class="gux-list-container" slot="popup">
                 <gux-list>
-                  <slot></slot>
+                  <slot>
+                  </slot>
                 </gux-list>
               </div>
             </gux-popup>
           </template>
-          <slot name="menu-actions"></slot>
+          <slot name="menu-actions">
+          </slot>
         </gux-table-toolbar-menu-button>
-        <slot name="primary-action"></slot>
+        <slot name="primary-action">
+        </slot>
       </div>
     </div>
   </template>
   <div slot="search-and-filter">
     <gux-form-field-search label-position="screenreader">
-      <input name="a-3" placeholder="Enter search" slot="input" type="search">
+      <input slot="input" type="search" name="a-3" placeholder="Enter search">
       <label slot="label">
         Toolbar Search
       </label>
@@ -54,10 +62,12 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
     <gux-table-toolbar-custom-action>
       <template shadowrootmode="open" shadowrootdelegatesfocus>
         <gux-button-slot accent="secondary">
-          <button class="gux-action-title" type="button">
-            <slot name="icon"></slot>
+          <button type="button" class="gux-action-title">
+            <slot name="icon">
+            </slot>
             <span>
-              <slot name="text"></slot>
+              <slot name="text">
+              </slot>
             </span>
           </button>
         </gux-button-slot>
@@ -65,7 +75,8 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
       <span slot="text">
         Filter
       </span>
-      <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+      <gux-icon slot="icon" icon-name="filter" decorative="">
+      </gux-icon>
     </gux-table-toolbar-custom-action>
   </div>
   <div slot="contextual-actions">
@@ -74,10 +85,12 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
         <gux-table-toolbar-custom-action>
           <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="secondary">
-              <button class="gux-action-title" type="button">
-                <slot name="icon"></slot>
+              <button type="button" class="gux-action-title">
+                <slot name="icon">
+                </slot>
                 <span>
-                  <slot name="text"></slot>
+                  <slot name="text">
+                  </slot>
                 </span>
               </button>
             </gux-button-slot>
@@ -85,7 +98,8 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
           <span slot="text">
             Delete
           </span>
-          <gux-icon decorative="" icon-name="fa/trash-regular" slot="icon"></gux-icon>
+          <gux-icon slot="icon" icon-name="fa/trash-regular" decorative="">
+          </gux-icon>
         </gux-table-toolbar-custom-action>
       </template>
     </gux-table-toolbar-action>
@@ -96,10 +110,12 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
         <gux-table-toolbar-custom-action>
           <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="secondary">
-              <button class="gux-action-title" type="button">
-                <slot name="icon"></slot>
+              <button type="button" class="gux-action-title">
+                <slot name="icon">
+                </slot>
                 <span>
-                  <slot name="text"></slot>
+                  <slot name="text">
+                  </slot>
                 </span>
               </button>
             </gux-button-slot>
@@ -107,7 +123,8 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
           <span slot="text">
             Export
           </span>
-          <gux-icon decorative="" icon-name="fa/arrow-up-from-line-regular" slot="icon"></gux-icon>
+          <gux-icon slot="icon" icon-name="fa/arrow-up-from-line-regular" decorative="">
+          </gux-icon>
         </gux-table-toolbar-custom-action>
       </template>
     </gux-table-toolbar-action>
@@ -116,10 +133,12 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
         <gux-table-toolbar-custom-action>
           <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="secondary">
-              <button class="gux-action-title" type="button">
-                <slot name="icon"></slot>
+              <button type="button" class="gux-action-title">
+                <slot name="icon">
+                </slot>
                 <span>
-                  <slot name="text"></slot>
+                  <slot name="text">
+                  </slot>
                 </span>
               </button>
             </gux-button-slot>
@@ -127,7 +146,8 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
           <span slot="text">
             Refresh
           </span>
-          <gux-icon decorative="" icon-name="fa/arrows-rotate-regular" slot="icon"></gux-icon>
+          <gux-icon slot="icon" icon-name="fa/arrows-rotate-regular" decorative="">
+          </gux-icon>
         </gux-table-toolbar-custom-action>
       </template>
     </gux-table-toolbar-action>
@@ -136,10 +156,12 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
         <gux-table-toolbar-custom-action>
           <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="secondary">
-              <button class="gux-action-title" type="button">
-                <slot name="icon"></slot>
+              <button type="button" class="gux-action-title">
+                <slot name="icon">
+                </slot>
                 <span>
-                  <slot name="text"></slot>
+                  <slot name="text">
+                  </slot>
                 </span>
               </button>
             </gux-button-slot>
@@ -147,7 +169,8 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
           <span slot="text">
             Revert
           </span>
-          <gux-icon decorative="" icon-name="fa/arrow-rotate-left-regular" slot="icon"></gux-icon>
+          <gux-icon slot="icon" icon-name="fa/arrow-rotate-left-regular" decorative="">
+          </gux-icon>
         </gux-table-toolbar-custom-action>
       </template>
     </gux-table-toolbar-action>
@@ -156,10 +179,12 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
         <gux-table-toolbar-custom-action>
           <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="secondary">
-              <button class="gux-action-title" type="button">
-                <slot name="icon"></slot>
+              <button type="button" class="gux-action-title">
+                <slot name="icon">
+                </slot>
                 <span>
-                  <slot name="text"></slot>
+                  <slot name="text">
+                  </slot>
                 </span>
               </button>
             </gux-button-slot>
@@ -167,7 +192,8 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
           <span slot="text">
             Import
           </span>
-          <gux-icon decorative="" icon-name="fa/file-import-regular" slot="icon"></gux-icon>
+          <gux-icon slot="icon" icon-name="fa/file-import-regular" decorative="">
+          </gux-icon>
         </gux-table-toolbar-custom-action>
       </template>
     </gux-table-toolbar-action>
@@ -178,10 +204,12 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
         <gux-table-toolbar-custom-action>
           <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
-              <button class="gux-action-title" type="button">
-                <slot name="icon"></slot>
+              <button type="button" class="gux-action-title">
+                <slot name="icon">
+                </slot>
                 <span>
-                  <slot name="text"></slot>
+                  <slot name="text">
+                  </slot>
                 </span>
               </button>
             </gux-button-slot>
@@ -189,7 +217,8 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
           <span slot="text">
             Export
           </span>
-          <gux-icon decorative="" icon-name="fa/arrow-up-from-line-regular" slot="icon"></gux-icon>
+          <gux-icon slot="icon" icon-name="fa/arrow-up-from-line-regular" decorative="">
+          </gux-icon>
         </gux-table-toolbar-custom-action>
       </template>
     </gux-table-toolbar-action>
@@ -198,10 +227,12 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
         <gux-table-toolbar-custom-action>
           <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
-              <button class="gux-action-title" type="button">
-                <slot name="icon"></slot>
+              <button type="button" class="gux-action-title">
+                <slot name="icon">
+                </slot>
                 <span>
-                  <slot name="text"></slot>
+                  <slot name="text">
+                  </slot>
                 </span>
               </button>
             </gux-button-slot>
@@ -209,18 +240,21 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
           <span slot="text">
             Refresh
           </span>
-          <gux-icon decorative="" icon-name="fa/arrows-rotate-regular" slot="icon"></gux-icon>
+          <gux-icon slot="icon" icon-name="fa/arrows-rotate-regular" decorative="">
+          </gux-icon>
         </gux-table-toolbar-custom-action>
       </template>
     </gux-table-toolbar-action>
   </div>
-  <gux-table-toolbar-custom-action accent="primary" slot="primary">
+  <gux-table-toolbar-custom-action slot="primary" accent="primary">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-button-slot accent="primary">
-        <button class="gux-action-title" type="button">
-          <slot name="icon"></slot>
+        <button type="button" class="gux-action-title">
+          <slot name="icon">
+          </slot>
           <span>
-            <slot name="text"></slot>
+            <slot name="text">
+            </slot>
           </span>
         </button>
       </gux-button-slot>
@@ -228,7 +262,8 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
     <span slot="text">
       Add
     </span>
-    <gux-icon decorative="" icon-name="add" slot="icon"></gux-icon>
+    <gux-icon slot="icon" icon-name="add" decorative="">
+    </gux-icon>
   </gux-table-toolbar-custom-action>
 </gux-table-toolbar>
 `;

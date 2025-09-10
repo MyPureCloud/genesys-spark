@@ -1,44 +1,46 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-list should render gux-list 1`] = `
-<gux-list id="list" role="list" tabindex="-1">
+<gux-list id="list" tabindex="-1" role="list">
   <template shadowrootmode="open">
-    <slot></slot>
+    <slot>
+    </slot>
   </template>
   <gux-list-item role="listitem">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <button data-testid="list-item-button" tabindex="-1" type="button">
-        <slot></slot>
+      <button type="button" tabindex="-1" data-testid="list-item-button">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Test1
+    </template>Test1
   </gux-list-item>
   <gux-list-divider role="presentation">
-    <template shadowrootmode="open"></template>
+    <template shadowrootmode="open">
+    </template>
   </gux-list-divider>
   <gux-list-item role="listitem">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <button data-testid="list-item-button" tabindex="-1" type="button">
-        <slot></slot>
+      <button type="button" tabindex="-1" data-testid="list-item-button">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Test2
+    </template>Test2
   </gux-list-item>
   <gux-list-item role="listitem">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <button data-testid="list-item-button" tabindex="-1" type="button">
-        <slot></slot>
+      <button type="button" tabindex="-1" data-testid="list-item-button">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Test3
+    </template>Test3
   </gux-list-item>
   <gux-list-item role="listitem">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <button data-testid="list-item-button" tabindex="-1" type="button">
-        <slot></slot>
+      <button type="button" tabindex="-1" data-testid="list-item-button">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Test4
+    </template>Test4
   </gux-list-item>
 </gux-list>
 `;

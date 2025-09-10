@@ -7,7 +7,7 @@ import {
   forceUpdate,
   State
 } from '@stencil/core';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
 
 /**

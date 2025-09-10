@@ -55,30 +55,6 @@ export const config: Config = {
       })
     ]
   },
-  testing: {
-    browserArgs: ['--no-sandbox'],
-    moduleDirectories: ['node_modules', 'src'],
-    moduleNameMapper: {
-      '@utils/(.*)': '<rootDir>/src/utils/$1'
-    },
-    browserHeadless: 'shell',
-    collectCoverage: true,
-    coverageDirectory: 'build/test-reports/coverage',
-    coverageReporters: ['json', 'lcov', 'clover'],
-    setupFilesAfterEnv: [
-      '<rootDir>/src/test/setupTests.js',
-      '<rootDir>/src/test/setupAxeTests.js'
-    ],
-    reporters: [
-      'default',
-      [
-        'jest-junit',
-        {
-          outputDirectory: 'build/test-reports'
-        }
-      ]
-    ]
-  },
   extras: {
     experimentalImportInjection: true
   },

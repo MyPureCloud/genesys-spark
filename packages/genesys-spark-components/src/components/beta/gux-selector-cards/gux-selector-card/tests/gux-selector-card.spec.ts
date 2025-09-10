@@ -5,7 +5,7 @@ import { GuxSelectorCard } from '../gux-selector-card';
 const components = [GuxSelectorCard];
 const language = 'en';
 
-describe('gux-form-field-radio', () => {
+describe('gux-selector-card', () => {
   describe('#render', () => {
     [
       `

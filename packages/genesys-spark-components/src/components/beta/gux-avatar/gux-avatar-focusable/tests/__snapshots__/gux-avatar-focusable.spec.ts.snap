@@ -1,12 +1,14 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-avatar-focusable #render renders as expected with slotted button 1`] = `
 <gux-avatar-focusable-beta>
   <template shadowrootmode="open">
-    <slot></slot>
+    <slot>
+    </slot>
   </template>
   <button>
-    <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
+    <gux-avatar-beta name="Conor Darcy">
+    </gux-avatar-beta>
   </button>
 </gux-avatar-focusable-beta>
 `;
@@ -14,10 +16,12 @@ exports[`gux-avatar-focusable #render renders as expected with slotted button 1`
 exports[`gux-avatar-focusable #render renders as expected with slotted gux-avatar-change-photo 1`] = `
 <gux-avatar-focusable-beta>
   <template shadowrootmode="open">
-    <slot></slot>
+    <slot>
+    </slot>
   </template>
   <gux-avatar-change-photo-beta>
-    <gux-avatar-beta name="Conor Darcy" slot="avatar"></gux-avatar-beta>
+    <gux-avatar-beta slot="avatar" name="Conor Darcy">
+    </gux-avatar-beta>
   </gux-avatar-change-photo-beta>
 </gux-avatar-focusable-beta>
 `;
@@ -25,10 +29,12 @@ exports[`gux-avatar-focusable #render renders as expected with slotted gux-avata
 exports[`gux-avatar-focusable #render renders as expected with slotted link 1`] = `
 <gux-avatar-focusable-beta>
   <template shadowrootmode="open">
-    <slot></slot>
+    <slot>
+    </slot>
   </template>
   <a href="#">
-    <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
+    <gux-avatar-beta name="Conor Darcy">
+    </gux-avatar-beta>
   </a>
 </gux-avatar-focusable-beta>
 `;

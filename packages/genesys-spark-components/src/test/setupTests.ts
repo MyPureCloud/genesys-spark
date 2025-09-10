@@ -1,5 +1,9 @@
 /* eslint-env jest, node */
 
+import { setupJestStencil } from 'jest-stencil-runner';
+
+setupJestStencil();
+
 global.beforeEach(() => {
   jest.spyOn(global.Math, 'random').mockReturnValue(0.5);
 });

@@ -1,87 +1,94 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-tabs-advanced #render should render as expected 1`] = `
-<gux-tabs-advanced id="interactive" lang="en">
+<gux-tabs-advanced lang="en" id="interactive">
   <template shadowrootmode="open">
-    <slot name="tab-list"></slot>
-    <slot></slot>
+    <slot name="tab-list">
+    </slot>
+    <slot>
+    </slot>
   </template>
-  <gux-tab-advanced-list show-new-tab-button="true" slot="tab-list">
+  <gux-tab-advanced-list slot="tab-list" show-new-tab-button="true">
     <!---->
-    <div aria-live="polite" class="gux-aria-live-region gux-sr-only"></div>
+    <div class="gux-sr-only gux-aria-live-region" aria-live="polite">
+    </div>
     <div class="gux-tab-container">
-      <div></div>
+      <div>
+      </div>
       <div class="gux-scrollable-section">
-        <div aria-owns="gux-1-1-tab gux-1-2-tab gux-1-3-tab" class="gux-tablist" role="tablist">
+        <div class="gux-tablist" role="tablist" aria-owns="gux-1-1-tab gux-1-2-tab gux-1-3-tab">
           <gux-tab-advanced tab-id="1-1">
             <!---->
-            <div class="gux-dropdown-options gux-tab">
+            <div class="gux-tab gux-dropdown-options">
               <div class="gux-buttons">
-                <button aria-controls="gux-1-1-panel" aria-disabled="false" aria-selected="false" class="gux-tab-button" id="gux-1-1-tab" role="tab" tabindex="-1" type="button">
+                <button class="gux-tab-button" type="button" role="tab" aria-selected="false" aria-disabled="false" aria-controls="gux-1-1-panel" tabindex="-1" id="gux-1-1-tab">
                   <gux-tooltip-title>
                     <span class="gux-tab-button-text">
-                      <gux-icon decorative="true" icon-name="lock"></gux-icon>
-                      Hello World
+                      <gux-icon icon-name="lock" decorative="true">
+                      </gux-icon>Hello World
                     </span>
                   </gux-tooltip-title>
                 </button>
                 <div class="gux-tab-options">
                   <gux-button-slot accent="ghost">
-                    <button aria-expanded="false" class="gux-tab-options-trigger" id="gux-i" role="tab" tabindex="-1" type="button">
-                      <gux-icon decorative="" icon-name="fa/ellipsis-vertical-regular"></gux-icon>
+                    <button id="gux-i" role="tab" aria-expanded="false" type="button" class="gux-tab-options-trigger" tabindex="-1">
+                      <gux-icon icon-name="fa/ellipsis-vertical-regular" decorative="">
+                      </gux-icon>
                       <gux-screen-reader-beta>
                         Tab Options for
                       </gux-screen-reader-beta>
                     </button>
                   </gux-button-slot>
-                  <gux-popover-list closeonclickoutside="" for="gux-i" position="top-end">
+                  <gux-popover-list position="top-end" for="gux-i" closeonclickoutside="">
                     <div class="gux-dropdown-options-container">
                       <gux-list slot="dropdown-options">
                         <gux-list-item>
-                          <gux-icon decorative="true" icon-name="edit"></gux-icon>
-                          Edit
+                          <gux-icon icon-name="edit" decorative="true">
+                          </gux-icon>Edit
                         </gux-list-item>
                         <gux-list-item>
-                          <gux-icon decorative="true" icon-name="clone"></gux-icon>
-                          Clone
+                          <gux-icon icon-name="clone" decorative="true">
+                          </gux-icon>Clone
                         </gux-list-item>
                         <gux-list-item>
-                          <gux-icon decorative="true" icon-name="share"></gux-icon>
-                          Share
+                          <gux-icon icon-name="share" decorative="true">
+                          </gux-icon>Share
                         </gux-list-item>
                         <gux-list-item>
-                          <gux-icon decorative="true" icon-name="download"></gux-icon>
-                          Download
+                          <gux-icon icon-name="download" decorative="true">
+                          </gux-icon>Download
                         </gux-list-item>
                       </gux-list>
                     </div>
                   </gux-popover-list>
                 </div>
               </div>
-              <div class="gux-divider"></div>
+              <div class="gux-divider">
+              </div>
             </div>
           </gux-tab-advanced>
           <gux-tab-advanced tab-id="1-2">
             <!---->
             <div class="gux-tab">
               <div class="gux-buttons">
-                <button aria-controls="gux-1-2-panel" aria-disabled="false" aria-selected="false" class="gux-tab-button" id="gux-1-2-tab" role="tab" tabindex="-1" type="button">
+                <button class="gux-tab-button" type="button" role="tab" aria-selected="false" aria-disabled="false" aria-controls="gux-1-2-panel" tabindex="-1" id="gux-1-2-tab">
                   <gux-tooltip-title>
                     <span class="gux-tab-button-text">
-                      <gux-icon decorative="true" icon-name="user-directory"></gux-icon>
-                      Hello World 2 long long long long long
+                      <gux-icon icon-name="user-directory" decorative="true">
+                      </gux-icon>Hello World 2 long long long long long
                     </span>
                   </gux-tooltip-title>
                 </button>
               </div>
-              <div class="gux-divider"></div>
+              <div class="gux-divider">
+              </div>
             </div>
           </gux-tab-advanced>
           <gux-tab-advanced gux-disabled="" tab-id="1-3">
             <!---->
-            <div class="gux-disabled gux-tab">
+            <div class="gux-tab gux-disabled">
               <div class="gux-buttons">
-                <button aria-controls="gux-1-3-panel" aria-disabled="true" aria-selected="false" class="gux-tab-button" disabled="" id="gux-1-3-tab" role="tab" tabindex="-1" type="button">
+                <button class="gux-tab-button" type="button" role="tab" disabled="" aria-selected="false" aria-disabled="true" aria-controls="gux-1-3-panel" tabindex="-1" id="gux-1-3-tab">
                   <gux-tooltip-title>
                     <span class="gux-tab-button-text">
                       Hello World 3
@@ -89,24 +96,27 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
                   </gux-tooltip-title>
                 </button>
               </div>
-              <div class="gux-divider"></div>
+              <div class="gux-divider">
+              </div>
             </div>
           </gux-tab-advanced>
         </div>
       </div>
-      <div></div>
+      <div>
+      </div>
       <div>
         <gux-button-slot accent="ghost">
           <button>
-            <slot-fb hidden="" name="add-tab">
-              <gux-icon decorative="" icon-name="fa/plus-regular" size="small"></gux-icon>
+            <slot-fb name="add-tab" hidden="">
+              <gux-icon size="small" icon-name="fa/plus-regular" decorative="">
+              </gux-icon>
               <gux-screen-reader-beta>
                 Add View
               </gux-screen-reader-beta>
             </slot-fb>
             <div slot="add-tab">
-              <gux-icon decorative="" icon-name="file-preview"></gux-icon>
-              Add View
+              <gux-icon icon-name="file-preview" decorative="">
+              </gux-icon>Add View
             </div>
           </button>
         </gux-button-slot>
@@ -115,7 +125,7 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
   </gux-tab-advanced-list>
   <gux-tab-advanced-panel tab-id="1-1">
     <!---->
-    <div aria-labelledby="gux-1-1-tab" aria-live="assertive" class="gux-tabpanel" hidden="" id="gux-1-1-panel" role="tabpanel" tabindex="0">
+    <div id="gux-1-1-panel" class="gux-tabpanel" role="tabpanel" aria-labelledby="gux-1-1-tab" tabindex="0" hidden="" aria-live="assertive">
       <span>
         Tab content 1
       </span>
@@ -123,7 +133,7 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
   </gux-tab-advanced-panel>
   <gux-tab-advanced-panel tab-id="1-2">
     <!---->
-    <div aria-labelledby="gux-1-2-tab" aria-live="assertive" class="gux-tabpanel" hidden="" id="gux-1-2-panel" role="tabpanel" tabindex="0">
+    <div id="gux-1-2-panel" class="gux-tabpanel" role="tabpanel" aria-labelledby="gux-1-2-tab" tabindex="0" hidden="" aria-live="assertive">
       <span>
         Tab content 2
       </span>
@@ -131,7 +141,7 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
   </gux-tab-advanced-panel>
   <gux-tab-advanced-panel tab-id="1-3">
     <!---->
-    <div aria-labelledby="gux-1-3-tab" aria-live="assertive" class="gux-tabpanel" hidden="" id="gux-1-3-panel" role="tabpanel" tabindex="0">
+    <div id="gux-1-3-panel" class="gux-tabpanel" role="tabpanel" aria-labelledby="gux-1-3-tab" tabindex="0" hidden="" aria-live="assertive">
       <span>
         Tab content 3
       </span>

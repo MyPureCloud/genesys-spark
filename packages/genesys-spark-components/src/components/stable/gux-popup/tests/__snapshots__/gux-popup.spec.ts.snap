@@ -1,12 +1,14 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-popup #render should render component as expected (1) 1`] = `
 <gux-popup>
   <template shadowrootmode="open">
-    <div aria-disabled="false" class="gux-target-container">
-      <slot name="target"></slot>
+    <div class="gux-target-container" aria-disabled="false">
+      <slot name="target">
+      </slot>
       <div class="gux-popup-container">
-        <slot name="popup"></slot>
+        <slot name="popup">
+        </slot>
       </div>
     </div>
   </template>
@@ -30,10 +32,12 @@ exports[`gux-popup #render should render component as expected (1) 1`] = `
 exports[`gux-popup #render should render component as expected (2) 1`] = `
 <gux-popup expanded="">
   <template shadowrootmode="open">
-    <div aria-disabled="false" class="gux-target-container">
-      <slot name="target"></slot>
-      <div class="gux-expanded gux-popup-container">
-        <slot name="popup"></slot>
+    <div class="gux-target-container" aria-disabled="false">
+      <slot name="target">
+      </slot>
+      <div class="gux-popup-container gux-expanded">
+        <slot name="popup">
+        </slot>
       </div>
     </div>
   </template>
@@ -57,10 +61,12 @@ exports[`gux-popup #render should render component as expected (2) 1`] = `
 exports[`gux-popup #render should render component as expected (3) 1`] = `
 <gux-popup disabled="">
   <template shadowrootmode="open">
-    <div aria-disabled="true" class="gux-disabled gux-target-container">
-      <slot name="target"></slot>
+    <div class="gux-target-container gux-disabled" aria-disabled="true">
+      <slot name="target">
+      </slot>
       <div class="gux-popup-container">
-        <slot name="popup"></slot>
+        <slot name="popup">
+        </slot>
       </div>
     </div>
   </template>
@@ -82,12 +88,14 @@ exports[`gux-popup #render should render component as expected (3) 1`] = `
 `;
 
 exports[`gux-popup #render should render component as expected (4) 1`] = `
-<gux-popup disabled="" expanded="">
+<gux-popup expanded="" disabled="">
   <template shadowrootmode="open">
-    <div aria-disabled="true" class="gux-disabled gux-target-container">
-      <slot name="target"></slot>
+    <div class="gux-target-container gux-disabled" aria-disabled="true">
+      <slot name="target">
+      </slot>
       <div class="gux-popup-container">
-        <slot name="popup"></slot>
+        <slot name="popup">
+        </slot>
       </div>
     </div>
   </template>

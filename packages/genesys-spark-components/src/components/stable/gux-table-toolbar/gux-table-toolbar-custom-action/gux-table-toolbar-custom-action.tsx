@@ -1,5 +1,5 @@
 import { Component, Element, JSX, h, Listen, Prop } from '@stencil/core';
-import { getClosestElement } from 'genesys-spark-utils/get-closest-element';
+import { getClosestElement } from '../../../../genesys-spark-utils/get-closest-element';
 
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxTableToolbarActionAccent } from '../gux-table-toolbar-action-accents.types';

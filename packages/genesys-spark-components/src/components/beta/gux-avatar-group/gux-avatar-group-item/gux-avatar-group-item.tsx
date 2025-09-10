@@ -12,8 +12,8 @@ import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
 import { groupKeyboardNavigation } from '../gux-avatar-group.service';
 import { generateInitials } from '@utils/string/generate-initials';
-import { getAvatarAccentClass } from 'components/beta/gux-avatar/gux-avatar.service';
-import { GuxAvatarAccent } from 'components/beta/gux-avatar/gux-avatar.types';
+import { getAvatarAccentClass } from '@components/beta/gux-avatar/gux-avatar.service';
+import { GuxAvatarAccent } from '@components/beta/gux-avatar/gux-avatar.types';
 
 /**
  * @slot image - Avatar photo.

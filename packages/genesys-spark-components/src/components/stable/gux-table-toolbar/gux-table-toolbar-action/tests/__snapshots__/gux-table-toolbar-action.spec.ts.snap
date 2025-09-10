@@ -1,26 +1,28 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`#render should render a disabled toolbar-action 1`] = `
-<gux-table-toolbar-action action="export" disabled="">
+<gux-table-toolbar-action disabled="" action="export">
   <template shadowrootmode="open">
     <gux-table-toolbar-custom-action accent="secondary" disabled="">
       <span slot="text">
         Export
       </span>
-      <gux-icon decorative="" icon-name="fa/arrow-up-from-line-regular" slot="icon"></gux-icon>
+      <gux-icon slot="icon" icon-name="fa/arrow-up-from-line-regular" decorative="">
+      </gux-icon>
     </gux-table-toolbar-custom-action>
   </template>
 </gux-table-toolbar-action>
 `;
 
 exports[`#render should render a primary toolbar-action 1`] = `
-<gux-table-toolbar-action accent="primary" action="export" slot="primary-action">
+<gux-table-toolbar-action slot="primary-action" accent="primary" action="export">
   <template shadowrootmode="open">
     <gux-table-toolbar-custom-action accent="primary">
       <span slot="text">
         Export
       </span>
-      <gux-icon decorative="" icon-name="fa/arrow-up-from-line-regular" slot="icon"></gux-icon>
+      <gux-icon slot="icon" icon-name="fa/arrow-up-from-line-regular" decorative="">
+      </gux-icon>
     </gux-table-toolbar-custom-action>
   </template>
 </gux-table-toolbar-action>
@@ -33,7 +35,8 @@ exports[`#render should render delete toolbar-action 1`] = `
       <span slot="text">
         Delete
       </span>
-      <gux-icon decorative="" icon-name="fa/trash-regular" slot="icon"></gux-icon>
+      <gux-icon slot="icon" icon-name="fa/trash-regular" decorative="">
+      </gux-icon>
     </gux-table-toolbar-custom-action>
   </template>
 </gux-table-toolbar-action>
@@ -46,7 +49,8 @@ exports[`#render should render export toolbar-action 1`] = `
       <span slot="text">
         Export
       </span>
-      <gux-icon decorative="" icon-name="fa/arrow-up-from-line-regular" slot="icon"></gux-icon>
+      <gux-icon slot="icon" icon-name="fa/arrow-up-from-line-regular" decorative="">
+      </gux-icon>
     </gux-table-toolbar-custom-action>
   </template>
 </gux-table-toolbar-action>
@@ -59,7 +63,8 @@ exports[`#render should render import toolbar-action 1`] = `
       <span slot="text">
         Import
       </span>
-      <gux-icon decorative="" icon-name="fa/file-import-regular" slot="icon"></gux-icon>
+      <gux-icon slot="icon" icon-name="fa/file-import-regular" decorative="">
+      </gux-icon>
     </gux-table-toolbar-custom-action>
   </template>
 </gux-table-toolbar-action>
@@ -72,7 +77,8 @@ exports[`#render should render refresh toolbar-action 1`] = `
       <span slot="text">
         Refresh
       </span>
-      <gux-icon decorative="" icon-name="fa/arrows-rotate-regular" slot="icon"></gux-icon>
+      <gux-icon slot="icon" icon-name="fa/arrows-rotate-regular" decorative="">
+      </gux-icon>
     </gux-table-toolbar-custom-action>
   </template>
 </gux-table-toolbar-action>
@@ -85,7 +91,8 @@ exports[`#render should render revert toolbar-action 1`] = `
       <span slot="text">
         Revert
       </span>
-      <gux-icon decorative="" icon-name="fa/arrow-rotate-left-regular" slot="icon"></gux-icon>
+      <gux-icon slot="icon" icon-name="fa/arrow-rotate-left-regular" decorative="">
+      </gux-icon>
     </gux-table-toolbar-custom-action>
   </template>
 </gux-table-toolbar-action>

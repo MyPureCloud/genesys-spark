@@ -1,7 +1,7 @@
 import { Component, Element, Prop, h, Listen } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxHighlightColor } from './gux-rich-highlight-list-item.types';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import translationResources from '../../gux-rich-text-editor-action/i18n/en.json';
 import { getClosestElement } from '@utils/dom/get-closest-element';
 

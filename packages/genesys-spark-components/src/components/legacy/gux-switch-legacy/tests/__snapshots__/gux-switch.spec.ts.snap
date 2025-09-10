@@ -1,37 +1,38 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-switch-legacy #render should render component as expected (1) 1`] = `
-<gux-switch-legacy class="gux-small" layout="small" role="group" value="day">
+<gux-switch-legacy layout="small" value="day" role="group" class="gux-small">
   <template shadowrootmode="open">
-    <slot></slot>
+    <slot>
+    </slot>
   </template>
   <gux-switch-item value="month">
     <!---->
-    <button aria-current="false" class="gux-switch-item" type="button">
+    <button aria-current="false" type="button" class="gux-switch-item">
       Month
     </button>
   </gux-switch-item>
   <gux-switch-item value="week">
     <!---->
-    <button aria-current="false" class="gux-switch-item" type="button">
+    <button aria-current="false" type="button" class="gux-switch-item">
       Week
     </button>
   </gux-switch-item>
   <gux-switch-item value="day">
     <!---->
-    <button aria-current="false" class="gux-switch-item" type="button">
+    <button aria-current="false" type="button" class="gux-switch-item">
       Day
     </button>
   </gux-switch-item>
-  <gux-switch-item disabled="" value="hour">
+  <gux-switch-item value="hour" disabled="">
     <!---->
-    <button aria-current="false" class="gux-switch-item" disabled="" type="button">
+    <button aria-current="false" type="button" class="gux-switch-item" disabled="">
       Hour
     </button>
   </gux-switch-item>
   <gux-switch-item value="minute">
     <!---->
-    <button aria-current="false" class="gux-switch-item" type="button">
+    <button aria-current="false" type="button" class="gux-switch-item">
       Minute
     </button>
   </gux-switch-item>
@@ -39,43 +40,44 @@ exports[`gux-switch-legacy #render should render component as expected (1) 1`] =
 `;
 
 exports[`gux-switch-legacy onSlotchange should set selected items as expected 1`] = `
-<gux-switch-legacy class="gux-small" layout="small" role="group" value="day">
+<gux-switch-legacy layout="small" value="day" role="group" class="gux-small">
   <template shadowrootmode="open">
-    <slot></slot>
+    <slot>
+    </slot>
   </template>
   <gux-switch-item value="month">
     <!---->
-    <button aria-current="false" class="gux-switch-item" type="button">
+    <button aria-current="false" type="button" class="gux-switch-item">
       Month
     </button>
   </gux-switch-item>
   <gux-switch-item value="week">
     <!---->
-    <button aria-current="false" class="gux-switch-item" type="button">
+    <button aria-current="false" type="button" class="gux-switch-item">
       Week
     </button>
   </gux-switch-item>
   <gux-switch-item value="day">
     <!---->
-    <button aria-current="false" class="gux-switch-item" type="button">
+    <button aria-current="false" type="button" class="gux-switch-item">
       Day
     </button>
   </gux-switch-item>
-  <gux-switch-item disabled="" value="hour">
+  <gux-switch-item value="hour" disabled="">
     <!---->
-    <button aria-current="false" class="gux-switch-item" disabled="" type="button">
+    <button aria-current="false" type="button" class="gux-switch-item" disabled="">
       Hour
     </button>
   </gux-switch-item>
   <gux-switch-item value="minute">
     <!---->
-    <button aria-current="false" class="gux-switch-item" type="button">
+    <button aria-current="false" type="button" class="gux-switch-item">
       Minute
     </button>
   </gux-switch-item>
   <gux-switch-item value="second">
     <!---->
-    <button aria-current="false" class="gux-switch-item" type="button">
+    <button aria-current="false" type="button" class="gux-switch-item">
       Second
     </button>
   </gux-switch-item>

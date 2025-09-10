@@ -1,7 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-list-divider #render should render component as expected (1) 1`] = `
 <gux-list-divider role="presentation">
-  <template shadowrootmode="open"></template>
+  <template shadowrootmode="open">
+  </template>
 </gux-list-divider>
 `;

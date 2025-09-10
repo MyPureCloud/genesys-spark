@@ -1,14 +1,16 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-disclosure-button #render should render component as expected (1) 1`] = `
 <gux-disclosure-button-legacy lang="en">
   <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-left">
-      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button" data-testid="disclosure-button">
-        <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
+      <button class="gux-disclosure-button" aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" data-testid="disclosure-button">
+        <gux-icon icon-name="fa/caret-right-solid" decorative="">
+        </gux-icon>
       </button>
-      <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
-        <slot name="panel-content"></slot>
+      <div id="gux-disclosure-button-panel-i" class="gux-disclosure-panel" role="region">
+        <slot name="panel-content">
+        </slot>
       </div>
     </div>
   </template>
@@ -19,14 +21,16 @@ exports[`gux-disclosure-button #render should render component as expected (1) 1
 `;
 
 exports[`gux-disclosure-button #render should render component as expected (2) 1`] = `
-<gux-disclosure-button-legacy is-open="" lang="en">
+<gux-disclosure-button-legacy lang="en" is-open="">
   <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-left">
-      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button" data-testid="disclosure-button">
-        <gux-icon decorative="" icon-name="fa/caret-left-solid"></gux-icon>
+      <button class="gux-disclosure-button" aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" data-testid="disclosure-button">
+        <gux-icon icon-name="fa/caret-left-solid" decorative="">
+        </gux-icon>
       </button>
-      <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
-        <slot name="panel-content"></slot>
+      <div id="gux-disclosure-button-panel-i" class="gux-disclosure-panel gux-active" role="region">
+        <slot name="panel-content">
+        </slot>
       </div>
     </div>
   </template>
@@ -40,11 +44,13 @@ exports[`gux-disclosure-button #render should render component as expected (3) 1
 <gux-disclosure-button-legacy lang="en" position="left">
   <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-left">
-      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button" data-testid="disclosure-button">
-        <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
+      <button class="gux-disclosure-button" aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" data-testid="disclosure-button">
+        <gux-icon icon-name="fa/caret-right-solid" decorative="">
+        </gux-icon>
       </button>
-      <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
-        <slot name="panel-content"></slot>
+      <div id="gux-disclosure-button-panel-i" class="gux-disclosure-panel" role="region">
+        <slot name="panel-content">
+        </slot>
       </div>
     </div>
   </template>
@@ -55,14 +61,16 @@ exports[`gux-disclosure-button #render should render component as expected (3) 1
 `;
 
 exports[`gux-disclosure-button #render should render component as expected (4) 1`] = `
-<gux-disclosure-button-legacy is-open="" lang="en" position="left">
+<gux-disclosure-button-legacy lang="en" is-open="" position="left">
   <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-left">
-      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button" data-testid="disclosure-button">
-        <gux-icon decorative="" icon-name="fa/caret-left-solid"></gux-icon>
+      <button class="gux-disclosure-button" aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" data-testid="disclosure-button">
+        <gux-icon icon-name="fa/caret-left-solid" decorative="">
+        </gux-icon>
       </button>
-      <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
-        <slot name="panel-content"></slot>
+      <div id="gux-disclosure-button-panel-i" class="gux-disclosure-panel gux-active" role="region">
+        <slot name="panel-content">
+        </slot>
       </div>
     </div>
   </template>
@@ -76,11 +84,13 @@ exports[`gux-disclosure-button #render should render component as expected (5) 1
 <gux-disclosure-button-legacy lang="en" position="right">
   <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-right">
-      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button" data-testid="disclosure-button">
-        <gux-icon decorative="" icon-name="fa/caret-left-solid"></gux-icon>
+      <button class="gux-disclosure-button" aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" data-testid="disclosure-button">
+        <gux-icon icon-name="fa/caret-left-solid" decorative="">
+        </gux-icon>
       </button>
-      <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
-        <slot name="panel-content"></slot>
+      <div id="gux-disclosure-button-panel-i" class="gux-disclosure-panel" role="region">
+        <slot name="panel-content">
+        </slot>
       </div>
     </div>
   </template>
@@ -91,14 +101,16 @@ exports[`gux-disclosure-button #render should render component as expected (5) 1
 `;
 
 exports[`gux-disclosure-button #render should render component as expected (6) 1`] = `
-<gux-disclosure-button-legacy is-open="" lang="en" position="right">
+<gux-disclosure-button-legacy lang="en" is-open="" position="right">
   <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-right">
-      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button" data-testid="disclosure-button">
-        <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
+      <button class="gux-disclosure-button" aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" data-testid="disclosure-button">
+        <gux-icon icon-name="fa/caret-right-solid" decorative="">
+        </gux-icon>
       </button>
-      <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
-        <slot name="panel-content"></slot>
+      <div id="gux-disclosure-button-panel-i" class="gux-disclosure-panel gux-active" role="region">
+        <slot name="panel-content">
+        </slot>
       </div>
     </div>
   </template>
@@ -109,14 +121,16 @@ exports[`gux-disclosure-button #render should render component as expected (6) 1
 `;
 
 exports[`gux-disclosure-button #render should render component as expected (7) 1`] = `
-<gux-disclosure-button-legacy label="More Info" lang="en">
+<gux-disclosure-button-legacy lang="en" label="More Info">
   <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-left">
-      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="More Info" class="gux-disclosure-button" data-testid="disclosure-button">
-        <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
+      <button class="gux-disclosure-button" aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="More Info" data-testid="disclosure-button">
+        <gux-icon icon-name="fa/caret-right-solid" decorative="">
+        </gux-icon>
       </button>
-      <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
-        <slot name="panel-content"></slot>
+      <div id="gux-disclosure-button-panel-i" class="gux-disclosure-panel" role="region">
+        <slot name="panel-content">
+        </slot>
       </div>
     </div>
   </template>

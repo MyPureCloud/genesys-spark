@@ -33,23 +33,23 @@ describe('gux-form', () => {
           <input slot="input" type="text" name="lp-3" />
           <label slot="label">Fieldset Form field label</label>
         </gux-form-field-text-like>
-  
+
         <gux-form-field-phone label-position="above">
           <gux-phone-input-beta></gux-phone-input-beta>
           <label slot="label">Fieldset Form field label</label>
         </gux-form-field-phone>
-  
+
         <gux-form-field-textarea label-position="above">
           <textarea slot="input" name="textarea"></textarea>
           <label slot="label">Fieldset Form field label</label>
         </gux-form-field-textarea>
       </fieldset>
-  
+
       <gux-form-field-text-like label-position="above">
         <input slot="input" type="text" name="lp-3" />
         <label slot="label">Fieldset Form field label</label>
       </gux-form-field-text-like>
-  
+
       <gux-form-footer placement="page-desktop">
         <footer>
           <gux-button accent="primary">Primary</gux-button>
@@ -57,7 +57,7 @@ describe('gux-form', () => {
         </footer>
       </gux-form-footer>
     </form>
-  </gux-form-beta>  
+  </gux-form-beta>
     `;
     const page = await newSpecPage({ components, html, language });
 
@@ -93,12 +93,12 @@ describe('gux-form', () => {
             <label slot="label">Fieldset Form field label</label>
           </gux-form-field-text-like>
         </fieldset>
-    
+
         <gux-form-field-text-like label-position="above">
           <input slot="input" type="text" name="lp-3" />
           <label slot="label">Fieldset Form field label</label>
         </gux-form-field-text-like>
-    
+
         <gux-form-footer placement="page-desktop">
           <footer>
             <gux-button accent="primary">Primary</gux-button>
@@ -135,13 +135,13 @@ describe('gux-form', () => {
             <label slot="label">Fieldset Form field label</label>
           </gux-form-field-text-like>
         </fieldset>
-    
+
         <gux-form-field-text-like label-position="above">
           <input slot="input" type="text" name="lp-3" />
           <label slot="label">Fieldset Form field label</label>
         </gux-form-field-text-like>
       </form>
-    </gux-form-beta>    
+    </gux-form-beta>
     `
     ].forEach((html, index) => {
       it(`should render gux-form component as expected (${index + 1})`, async () => {

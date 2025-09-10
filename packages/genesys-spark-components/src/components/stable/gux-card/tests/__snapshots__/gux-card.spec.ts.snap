@@ -1,10 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`#render different card accents should render component as expected (1) 1`] = `
 <gux-card>
   <template shadowrootmode="open">
-    <div class="gux-bordered gux-card">
-      <slot></slot>
+    <div class="gux-card gux-bordered">
+      <slot>
+      </slot>
     </div>
   </template>
   <span>
@@ -16,8 +17,9 @@ exports[`#render different card accents should render component as expected (1) 
 exports[`#render different card accents should render component as expected (2) 1`] = `
 <gux-card accent="bordered">
   <template shadowrootmode="open">
-    <div class="gux-bordered gux-card">
-      <slot></slot>
+    <div class="gux-card gux-bordered">
+      <slot>
+      </slot>
     </div>
   </template>
   <span>
@@ -30,7 +32,8 @@ exports[`#render different card accents should render component as expected (3) 
 <gux-card accent="raised">
   <template shadowrootmode="open">
     <div class="gux-card gux-raised">
-      <slot></slot>
+      <slot>
+      </slot>
     </div>
   </template>
   <span>
@@ -42,8 +45,9 @@ exports[`#render different card accents should render component as expected (3) 
 exports[`#render different card accents should render component as expected (4) 1`] = `
 <gux-card accent="borderless">
   <template shadowrootmode="open">
-    <div class="gux-borderless gux-card">
-      <slot></slot>
+    <div class="gux-card gux-borderless">
+      <slot>
+      </slot>
     </div>
   </template>
   <span>
