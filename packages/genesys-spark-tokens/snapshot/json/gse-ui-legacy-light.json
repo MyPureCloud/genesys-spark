@@ -2892,6 +2892,16 @@
         "lineHeight": "18px"
       },
       "text": "#2e394c"
+    },
+    "fixed_column": {
+      "box_shadow": {
+        "blur": "14px",
+        "spread": "4px",
+        "color": "#3d538f33",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "-4px"
+      }
     }
   },
   "avatar": {
@@ -3164,7 +3174,8 @@
       "offsetX": "0",
       "offsetY": "2px"
     },
-    "width": "1440px"
+    "width": "1440px",
+    "gap": "12px"
   },
   "focus": {
     "color": "#aac9ff",
