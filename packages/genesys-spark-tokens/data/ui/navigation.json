@@ -818,6 +818,10 @@
           "value": "{background.container.global_nav.desktop.menu_panel.feedback_container}",
           "type": "color"
         }
+      },
+      "box_shadow": {
+        "value": "{shadow.7_menu}",
+        "type": "boxShadow"
       }
     },
     "user_settings_window": {
