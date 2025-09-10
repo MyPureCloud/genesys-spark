@@ -1,7 +1,18 @@
-import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Host,
+  JSX,
+  Listen,
+  Prop,
+  State
+} from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxTreeViewLayout } from './gux-tree-view-types';
+import { randomHTMLId } from '@utils/dom/random-html-id';
+
 // import simulateNativeEvent from '@utils/dom/simulate-native-event';
 
 /**
@@ -15,6 +26,9 @@ import { GuxTreeViewLayout } from './gux-tree-view-types';
   shadow: true
 })
 export class GuxTreeViewBeta {
+  private labelId: string = randomHTMLId('gux-tree-view-label');
+  private childIds: string;
+
   @Element()
   root: HTMLElement;
 
@@ -46,7 +60,16 @@ export class GuxTreeViewBeta {
 
   componentWillLoad() {
     this.getTreeViewChildren(this.root);
+    this.setLabelId();
+    this.setOwnedIds();
     trackComponent(this.root);
+  }
+
+  private setLabelId() {
+    const treeLabel = this.root.querySelector('[slot="tree-view-heading"]');
+    if (treeLabel) {
+      treeLabel.id = this.labelId;
+    }
   }
 
   private getSelectableElements(): void {
@@ -55,21 +78,71 @@ export class GuxTreeViewBeta {
     ).concat(Array.from(this.root.querySelectorAll('gux-tree-view-leaf-beta')));
   }
 
-  private getTreeViewChildren(parent: Element, depth = 0): void {
+  private setOwnedIds(): void {
+    this.childIds = Array.from(this.root.children)
+      .filter(
+        child =>
+          child.nodeName === 'GUX-TREE-VIEW-BRANCH-BETA' ||
+          child.nodeName === 'GUX-TREE-VIEW-LEAF-BETA'
+      )
+      .map(
+        element =>
+          `${
+            (
+              element as
+                | HTMLGuxTreeViewBranchBetaElement
+                | HTMLGuxTreeViewLeafBetaElement
+            ).id
+          }`
+      )
+      .join(' ');
+  }
+
+  private setSelected() {
     this.getSelectableElements();
-    Array.from(parent.children).forEach(child => {
+    this.selectableElements.forEach(element => {
+      if (element.id !== this.value) {
+        (
+          element as
+            | HTMLGuxTreeViewBranchBetaElement
+            | HTMLGuxTreeViewLeafBetaElement
+        ).selected = false;
+      } else {
+        (
+          element as
+            | HTMLGuxTreeViewBranchBetaElement
+            | HTMLGuxTreeViewLeafBetaElement
+        ).selected = true;
+      }
+    });
+  }
+
+  private getSetSize(parent: Element) {
+    return Array.from(parent.children).filter(
+      child =>
+        child.nodeName === 'GUX-TREE-VIEW-BRANCH-BETA' ||
+        child.nodeName === 'GUX-TREE-VIEW-LEAF-BETA'
+    ).length;
+  }
+
+  private getTreeViewChildren(parent: Element, depth = 0): void {
+    this.setSelected();
+    Array.from(parent.children).forEach((child, index) => {
       if (
         child.nodeName === 'GUX-TREE-VIEW-BRANCH-BETA' ||
         child.nodeName === 'GUX-TREE-VIEW-LEAF-BETA'
       ) {
         child.setAttribute('layout', this.layout);
-        if (depth === 1) {
-          child.classList.add('gux-child-node');
-        } else if (depth === 2) {
-          child.classList.add('gux-grandchild-node');
-        } else if (depth >= 3) {
-          child.classList.add('gux-greatgrandchild-node');
-        }
+        child.setAttribute('aria-posinset', depth.toString());
+        child.setAttribute('aria-posinset', index.toString());
+        child.setAttribute('aria-setsize', this.getSetSize(parent).toString());
+        // if (depth === 1) {
+        //   child.classList.add('gux-child-node');
+        // } else if (depth === 2) {
+        //   child.classList.add('gux-grandchild-node');
+        // } else if (depth >= 3) {
+        //   child.classList.add('gux-greatgrandchild-node');
+        // }
         this.getTreeViewChildren(child, depth + 1);
       }
     });
@@ -88,19 +161,24 @@ export class GuxTreeViewBeta {
 
   render(): JSX.Element {
     return (
-      <div
-        class={{
-          'gux-tree-view-comfy': this.layout === 'comfy',
-          'gux-tree-view-compact': this.layout === 'compact'
-        }}
+      <Host
+        role="tree"
+        aria-labelledby={this.labelId}
+        aria-owns={this.childIds}
       >
-        <div class="gux-tree-view-header">
-          <slot name="tree-view-heading"></slot>
-          {this.renderSearch()}
+        <div
+          class={{
+            'gux-tree-view-comfy': this.layout === 'comfy',
+            'gux-tree-view-compact': this.layout === 'compact'
+          }}
+        >
+          <div class="gux-tree-view-header" id={this.labelId}>
+            <slot name="tree-view-heading"></slot>
+            {this.renderSearch()}
+          </div>
+          <slot></slot>
         </div>
-        <slot name="tree-view-meter-title"></slot>
-        <slot></slot>
-      </div>
+      </Host>
     ) as JSX.Element;
   }
 }

@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  Host,
   JSX,
   Prop,
   Watch
@@ -63,45 +64,47 @@ export class GuxTreeViewBranchBeta {
 
   render(): JSX.Element {
     return (
-      <div>
-        <button
-          class={{
-            'gux-tree-view-branch-target': true,
-            'gux-selected': this.selected,
-            'gux-disabled': this.disabled,
-            'gux-compact': this.layout === 'compact',
-            'gux-comfy': this.layout === 'comfy'
-          }}
-          type="button"
-          aria-expanded={this.open.toString()}
-          disabled={this.disabled}
-          onClick={this.toggle.bind(this)}
-        >
+      <Host role="treeitem">
+        <div>
+          <button
+            class={{
+              'gux-tree-view-branch-target': true,
+              'gux-selected': this.selected,
+              'gux-disabled': this.disabled,
+              'gux-compact': this.layout === 'compact',
+              'gux-comfy': this.layout === 'comfy'
+            }}
+            type="button"
+            aria-expanded={this.open.toString()}
+            disabled={this.disabled}
+            onClick={this.toggle.bind(this)}
+          >
+            <div
+              class={{
+                'gux-header-icon': true,
+                'gux-expanded': this.open
+              }}
+            >
+              <gux-icon
+                class="gux-arrow-icon"
+                decorative
+                icon-name="fa/caret-right-solid"
+                size="small"
+              ></gux-icon>
+            </div>
+            <slot name="branch-label"></slot>
+          </button>
+
           <div
             class={{
-              'gux-header-icon': true,
+              'gux-content': true,
               'gux-expanded': this.open
             }}
           >
-            <gux-icon
-              class="gux-arrow-icon"
-              decorative
-              icon-name="fa/caret-right-solid"
-              size="small"
-            ></gux-icon>
-          </div>{' '}
-          <slot name="branch-label"></slot>
-        </button>
-
-        <div
-          class={{
-            'gux-content': true,
-            'gux-expanded': this.open
-          }}
-        >
-          <slot></slot>
+            <slot></slot>
+          </div>
         </div>
-      </div>
+      </Host>
     ) as JSX.Element;
   }
 }

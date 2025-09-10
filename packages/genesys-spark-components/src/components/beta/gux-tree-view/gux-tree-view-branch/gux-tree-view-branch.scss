@@ -1,57 +1,3 @@
-:host(.gux-child-node) {
-  .gux-comfy {
-    margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
-
-    &.gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
-    }
-  }
-
-  .gux-compact {
-    margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
-
-    &.gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
-    }
-  }
-}
-
-:host(.gux-grandchild-node) {
-  .gux-comfy {
-    margin: var(--gse-ui-treeView-item-comfy-grandchild-defaultPadding);
-
-    &.gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-grandchild-selectedPadding);
-    }
-  }
-
-  .gux-compact {
-    margin: var(--gse-ui-treeView-item-comfy-grandchild-defaultPadding);
-
-    &.gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-grandchild-selectedPadding);
-    }
-  }
-}
-
-:host(.gux-greatgrandchild-node) {
-  .gux-comfy {
-    margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-defaultPadding);
-
-    .gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-selectedPadding);
-    }
-  }
-
-  .gux-compact {
-    margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-defaultPadding);
-
-    .gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-selectedPadding);
-    }
-  }
-}
-
 .gux-tree-view-branch-target {
   display: inline-flex;
   background-color: transparent;
@@ -91,6 +37,7 @@
 .gux-content {
   box-sizing: border-box;
   display: none;
+  margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
 
   &.gux-expanded {
     display: block;

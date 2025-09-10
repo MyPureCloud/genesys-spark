@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  Host,
   JSX,
   Prop,
   Watch
@@ -53,26 +54,27 @@ export class GuxTreeViewLeafBeta {
     this.selected = true;
   }
   async componentWillLoad(): Promise<void> {
-    this.root.id = this.root.id || randomHTMLId('gux-tree-view-branch');
+    this.root.id = this.root.id || randomHTMLId('gux-tree-view-leaf');
   }
   render(): JSX.Element {
     return (
-      <div>
-        <button
-          aria-checked={this.selected.toString()}
-          onClick={() => this.selectLeaf()}
-          class={{
-            'gux-tree-view-leaf-target': true,
-            'gux-selected': this.selected,
-            'gux-disabled': this.disabled,
-            'gux-compact': this.layout === 'compact',
-            'gux-comfy': this.layout === 'comfy'
-          }}
-        >
-          <slot name="leaf-icon"></slot>
-          <slot name="leaf-label"></slot>
-        </button>
-      </div>
+      <Host role="treeitem">
+        <div>
+          <button
+            onClick={() => this.selectLeaf()}
+            class={{
+              'gux-tree-view-leaf-target': true,
+              'gux-selected': this.selected,
+              'gux-disabled': this.disabled,
+              'gux-compact': this.layout === 'compact',
+              'gux-comfy': this.layout === 'comfy'
+            }}
+          >
+            <slot name="leaf-icon"></slot>
+            <slot name="leaf-label"></slot>
+          </button>
+        </div>
+      </Host>
     ) as JSX.Element;
   }
 }

@@ -2,77 +2,77 @@ gux-tree-view-leaf-beta {
   -custom-noop: noop;
 }
 
-:host(.gux-child-node) {
-  .gux-comfy {
-    margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
+// :host(.gux-child-node) {
+//   .gux-comfy {
+//     margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
 
-    .gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
-    }
-  }
+//     .gux-selected {
+//       margin: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
+//     }
+//   }
 
-  .gux-compact {
-    margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
+//   .gux-compact {
+//     margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
 
-    .gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
-    }
-  }
-}
+//     .gux-selected {
+//       margin: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
+//     }
+//   }
+// }
 
-:host(.gux-grandchild-node) {
-  .gux-comfy {
-    margin: var(--gse-ui-treeView-item-comfy-grandchild-defaultPadding);
+// :host(.gux-grandchild-node) {
+//   .gux-comfy {
+//     margin: var(--gse-ui-treeView-item-comfy-grandchild-defaultPadding);
 
-    .gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-grandchild-selectedPadding);
-    }
-  }
+//     .gux-selected {
+//       margin: var(--gse-ui-treeView-item-comfy-grandchild-selectedPadding);
+//     }
+//   }
 
-  .gux-compact {
-    margin: var(--gse-ui-treeView-item-comfy-grandchild-defaultPadding);
+//   .gux-compact {
+//     margin: var(--gse-ui-treeView-item-comfy-grandchild-defaultPadding);
 
-    .gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-grandchild-selectedPadding);
-    }
-  }
-}
+//     .gux-selected {
+//       margin: var(--gse-ui-treeView-item-comfy-grandchild-selectedPadding);
+//     }
+//   }
+// }
 
-:host(.gux-greatgrandchild-node) {
-  .gux-comfy {
-    margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-defaultPadding);
+// :host(.gux-greatgrandchild-node) {
+//   .gux-comfy {
+//     margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-defaultPadding);
 
-    .gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-selectedPadding);
-    }
-  }
+//     .gux-selected {
+//       margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-selectedPadding);
+//     }
+//   }
 
-  .gux-compact {
-    margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-defaultPadding);
+//   .gux-compact {
+//     margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-defaultPadding);
 
-    .gux-selected {
-      margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-selectedPadding);
-    }
-  }
-}
+//     .gux-selected {
+//       margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-selectedPadding);
+//     }
+//   }
+// }
 
-.gux-grandchild-node {
-  .gux-comfy {
-    padding: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
+// .gux-grandchild-node {
+//   .gux-comfy {
+//     padding: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
 
-    .gux-selected {
-      padding: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
-    }
-  }
+//     .gux-selected {
+//       padding: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
+//     }
+//   }
 
-  .gux-compact {
-    padding: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
+//   .gux-compact {
+//     padding: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
 
-    .gux-selected {
-      padding: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
-    }
-  }
-}
+//     .gux-selected {
+//       padding: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
+//     }
+//   }
+// }
 
 .gux-tree-view-leaf-target {
   background-color: transparent;
