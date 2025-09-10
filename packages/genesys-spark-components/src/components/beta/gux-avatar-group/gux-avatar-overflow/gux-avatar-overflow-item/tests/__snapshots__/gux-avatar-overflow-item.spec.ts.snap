@@ -1,12 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-avatar-overflow-item-beta Render should render with name 1`] = `
 <gux-avatar-overflow-item-beta name="John Doe" role="menuitem">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <button aria-label="John Doe" tabindex="-1" type="button">
-      <span class="gux-accent-3 gux-avatar">
+    <button type="button" aria-label="John Doe" tabindex="-1">
+      <span class="gux-avatar gux-accent-3">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             JD
           </span>
         </slot>
@@ -22,10 +22,10 @@ exports[`gux-avatar-overflow-item-beta Render should render with name 1`] = `
 exports[`gux-avatar-overflow-item-beta Render should render with slotted image 1`] = `
 <gux-avatar-overflow-item-beta name="John Doe" role="menuitem">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <button aria-label="John Doe" tabindex="-1" type="button">
-      <span class="gux-accent-3 gux-avatar">
+    <button type="button" aria-label="John Doe" tabindex="-1">
+      <span class="gux-avatar gux-accent-3">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             JD
           </span>
         </slot>
@@ -35,6 +35,6 @@ exports[`gux-avatar-overflow-item-beta Render should render with slotted image 1
       </span>
     </button>
   </template>
-  <img alt="John Doe" slot="image" src="test.jpg">
+  <img slot="image" src="test.jpg" alt="John Doe">
 </gux-avatar-overflow-item-beta>
 `;

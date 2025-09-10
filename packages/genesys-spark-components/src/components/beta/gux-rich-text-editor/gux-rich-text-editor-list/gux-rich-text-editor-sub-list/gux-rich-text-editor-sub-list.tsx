@@ -14,7 +14,7 @@ import {
   Host,
   h
 } from '@stencil/core';
-import { next, previous } from 'components/stable/gux-list/gux-list.service';
+import { next, previous } from '@components/stable/gux-list/gux-list.service';
 
 @Component({
   tag: 'gux-rich-text-editor-sub-list',

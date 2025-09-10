@@ -1,13 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-table-toolbar-custom-action #render Should render as expected for "ghost" accent 1`] = `
 <gux-table-toolbar-custom-action accent="ghost">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-button-slot accent="ghost">
-      <button class="gux-action-title" type="button">
-        <slot name="icon"></slot>
+      <button type="button" class="gux-action-title">
+        <slot name="icon">
+        </slot>
         <span>
-          <slot name="text"></slot>
+          <slot name="text">
+          </slot>
         </span>
       </button>
     </gux-button-slot>
@@ -15,7 +17,8 @@ exports[`gux-table-toolbar-custom-action #render Should render as expected for "
   <span slot="text">
     Filter
   </span>
-  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="filter" decorative="">
+  </gux-icon>
 </gux-table-toolbar-custom-action>
 `;
 
@@ -23,10 +26,12 @@ exports[`gux-table-toolbar-custom-action #render Should render as expected for "
 <gux-table-toolbar-custom-action accent="primary">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-button-slot accent="primary">
-      <button class="gux-action-title" type="button">
-        <slot name="icon"></slot>
+      <button type="button" class="gux-action-title">
+        <slot name="icon">
+        </slot>
         <span>
-          <slot name="text"></slot>
+          <slot name="text">
+          </slot>
         </span>
       </button>
     </gux-button-slot>
@@ -34,7 +39,8 @@ exports[`gux-table-toolbar-custom-action #render Should render as expected for "
   <span slot="text">
     Filter
   </span>
-  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="filter" decorative="">
+  </gux-icon>
 </gux-table-toolbar-custom-action>
 `;
 
@@ -42,10 +48,12 @@ exports[`gux-table-toolbar-custom-action #render Should render as expected for "
 <gux-table-toolbar-custom-action accent="secondary">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-button-slot accent="secondary">
-      <button class="gux-action-title" type="button">
-        <slot name="icon"></slot>
+      <button type="button" class="gux-action-title">
+        <slot name="icon">
+        </slot>
         <span>
-          <slot name="text"></slot>
+          <slot name="text">
+          </slot>
         </span>
       </button>
     </gux-button-slot>
@@ -53,7 +61,8 @@ exports[`gux-table-toolbar-custom-action #render Should render as expected for "
   <span slot="text">
     Filter
   </span>
-  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="filter" decorative="">
+  </gux-icon>
 </gux-table-toolbar-custom-action>
 `;
 
@@ -61,10 +70,12 @@ exports[`gux-table-toolbar-custom-action #render should render a toolbar-custom-
 <gux-table-toolbar-custom-action>
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-button-slot accent="secondary">
-      <button class="gux-action-title" type="button">
-        <slot name="icon"></slot>
+      <button type="button" class="gux-action-title">
+        <slot name="icon">
+        </slot>
         <span>
-          <slot name="text"></slot>
+          <slot name="text">
+          </slot>
         </span>
       </button>
     </gux-button-slot>
@@ -72,7 +83,8 @@ exports[`gux-table-toolbar-custom-action #render should render a toolbar-custom-
   <span slot="text">
     Filter
   </span>
-  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="filter" decorative="">
+  </gux-icon>
 </gux-table-toolbar-custom-action>
 `;
 
@@ -80,10 +92,12 @@ exports[`gux-table-toolbar-custom-action #render should render disabled toolbar-
 <gux-table-toolbar-custom-action disabled="">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-button-slot accent="secondary">
-      <button class="gux-action-title" disabled="" type="button">
-        <slot name="icon"></slot>
+      <button disabled="" type="button" class="gux-action-title">
+        <slot name="icon">
+        </slot>
         <span>
-          <slot name="text"></slot>
+          <slot name="text">
+          </slot>
         </span>
       </button>
     </gux-button-slot>
@@ -91,7 +105,8 @@ exports[`gux-table-toolbar-custom-action #render should render disabled toolbar-
   <span slot="text">
     Filter
   </span>
-  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="filter" decorative="">
+  </gux-icon>
 </gux-table-toolbar-custom-action>
 `;
 
@@ -99,10 +114,12 @@ exports[`gux-table-toolbar-custom-action #render should render icon-only toolbar
 <gux-table-toolbar-custom-action icon-only="">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-button-slot accent="secondary">
-      <button class="gux-action-title" type="button">
-        <slot name="icon"></slot>
+      <button type="button" class="gux-action-title">
+        <slot name="icon">
+        </slot>
         <span class="gux-sr-only">
-          <slot name="text"></slot>
+          <slot name="text">
+          </slot>
         </span>
       </button>
       <gux-tooltip>
@@ -115,6 +132,7 @@ exports[`gux-table-toolbar-custom-action #render should render icon-only toolbar
   <span slot="text">
     Filter
   </span>
-  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="filter" decorative="">
+  </gux-icon>
 </gux-table-toolbar-custom-action>
 `;

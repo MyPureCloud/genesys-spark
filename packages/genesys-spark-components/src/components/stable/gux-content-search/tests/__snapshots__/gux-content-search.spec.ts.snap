@@ -1,13 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-content-search #render should render default control no props 1`] = `
 <gux-content-search>
   <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
     </div>
   </template>
   <input type="text">
@@ -19,12 +21,14 @@ exports[`gux-content-search #render should render default control no props With 
   <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
     </div>
   </template>
-  <input placeholder="Search" type="text">
+  <input type="text" placeholder="Search">
 </gux-content-search>
 `;
 
@@ -33,31 +37,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="false" class="gux-navigation-panel">
+        <div class="gux-navigation-panel" aria-disabled="false">
           <span class="gux-navigation-result">
             1 of 10
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input placeholder="Search" type="text" value="Default Search Text">
+  <input type="text" placeholder="Search" value="Default Search Text">
 </gux-content-search>
 `;
 
@@ -66,31 +76,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="true" class="gux-navigation-disabled gux-navigation-panel">
+        <div class="gux-navigation-panel gux-navigation-disabled" aria-disabled="true">
           <span class="gux-navigation-result gux-navigation-result-disabled">
             10 of 10
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear" disabled="">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input disabled="true" placeholder="Search" type="text" value="Search Disabled">
+  <input type="text" disabled="true" placeholder="Search" value="Search Disabled">
 </gux-content-search>
 `;
 
@@ -99,31 +115,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="true" class="gux-navigation-disabled gux-navigation-panel">
+        <div class="gux-navigation-panel gux-navigation-disabled" aria-disabled="true">
           <span class="gux-navigation-result gux-navigation-result-disabled">
             1 of 1
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear" disabled="">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input disabled="true" placeholder="Search" type="text" value="Search Disabled with 1 match">
+  <input type="text" disabled="true" placeholder="Search" value="Search Disabled with 1 match">
 </gux-content-search>
 `;
 
@@ -132,31 +154,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="true" class="gux-navigation-disabled gux-navigation-panel">
+        <div class="gux-navigation-panel gux-navigation-disabled" aria-disabled="true">
           <span class="gux-navigation-result gux-navigation-result-disabled">
             10,000 of 100,000,000
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear" disabled="">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input disabled="true" placeholder="Search" type="text" value="Search Disabled with big match">
+  <input type="text" disabled="true" placeholder="Search" value="Search Disabled with big match">
 </gux-content-search>
 `;
 
@@ -165,31 +193,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="true" class="gux-navigation-disabled gux-navigation-panel">
+        <div class="gux-navigation-panel gux-navigation-disabled" aria-disabled="true">
           <span class="gux-navigation-result gux-navigation-result-disabled">
             1 of 1
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear" disabled="">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input disabled="true" placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
+  <input type="text" disabled="true" placeholder="Search" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
@@ -198,31 +232,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="true" class="gux-navigation-disabled gux-navigation-panel">
+        <div class="gux-navigation-panel gux-navigation-disabled" aria-disabled="true">
           <span class="gux-navigation-result gux-navigation-result-disabled">
             1,100 of 100,000,001
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear" disabled="">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input disabled="true" placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
+  <input type="text" disabled="true" placeholder="Search" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
@@ -231,31 +271,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="true" class="gux-navigation-disabled gux-navigation-panel">
+        <div class="gux-navigation-panel gux-navigation-disabled" aria-disabled="true">
           <span class="gux-navigation-result gux-navigation-result-disabled">
             0 of 0
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear" disabled="">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input disabled="true" placeholder="Search" type="text" value="Search Disabled with no Match">
+  <input type="text" disabled="true" placeholder="Search" value="Search Disabled with no Match">
 </gux-content-search>
 `;
 
@@ -264,31 +310,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="true" class="gux-navigation-disabled gux-navigation-panel">
+        <div class="gux-navigation-panel gux-navigation-disabled" aria-disabled="true">
           <span class="gux-navigation-result gux-navigation-result-disabled">
             0 of 0
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear" disabled="">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
+  <input type="text" placeholder="Search" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
@@ -297,31 +349,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="false" class="gux-navigation-panel">
+        <div class="gux-navigation-panel" aria-disabled="false">
           <span class="gux-navigation-result">
             0 of 100
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
+  <input type="text" placeholder="Search" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
@@ -330,31 +388,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="false" class="gux-navigation-panel">
+        <div class="gux-navigation-panel" aria-disabled="false">
           <span class="gux-navigation-result">
             1 of 1
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
+  <input type="text" placeholder="Search" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
@@ -363,31 +427,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="false" class="gux-navigation-panel">
+        <div class="gux-navigation-panel" aria-disabled="false">
           <span class="gux-navigation-result">
             1,000 of 100,000
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
+  <input type="text" placeholder="Search" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
@@ -396,31 +466,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="true" class="gux-navigation-disabled gux-navigation-panel">
+        <div class="gux-navigation-panel gux-navigation-disabled" aria-disabled="true">
           <span class="gux-navigation-result gux-navigation-result-disabled">
             0 of 0
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear" disabled="">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
+  <input type="text" placeholder="Search" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
@@ -429,31 +505,37 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="true" class="gux-navigation-disabled gux-navigation-panel">
+        <div class="gux-navigation-panel gux-navigation-disabled" aria-disabled="true">
           <span class="gux-navigation-result gux-navigation-result-disabled">
             0 of 0
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match" disabled="">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear" disabled="">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input placeholder="Search" type="text" value="Default Search Text">
+  <input type="text" placeholder="Search" value="Default Search Text">
 </gux-content-search>
 `;
 
@@ -462,30 +544,36 @@ exports[`gux-content-search #render should render default control with all props
   <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+        <gux-icon size="small" decorative="" icon-name="fa/magnifying-glass-regular">
+        </gux-icon>
       </div>
-      <slot></slot>
+      <slot>
+      </slot>
       <div class="gux-content-control-panel">
-        <div aria-disabled="false" class="gux-navigation-panel">
+        <div class="gux-navigation-panel" aria-disabled="false">
           <span class="gux-navigation-result">
             1,000 of 100,000
           </span>
           <div class="gux-navigation-buttons">
-            <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+            <button type="button" class="gux-previous-button" title="Highlight previous match" aria-label="Highlight previous match">
+              <gux-icon decorative="" icon-name="fa/caret-up-solid" size="small">
+              </gux-icon>
             </button>
-            <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+            <button type="button" class="gux-next-button" title="Highlight next match" aria-label="Highlight next match">
+              <gux-icon decorative="" icon-name="fa/caret-down-solid" size="small">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-navigation-divider"></div>
+          <div class="gux-navigation-divider">
+          </div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+        <button class="gux-clear-button" tabindex="-1" type="button" title="Clear">
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </button>
       </div>
     </div>
   </template>
-  <input placeholder="Search" type="text" value="Lorem ipsum dolor ">
+  <input type="text" placeholder="Search" value="Lorem ipsum dolor ">
 </gux-content-search>
 `;

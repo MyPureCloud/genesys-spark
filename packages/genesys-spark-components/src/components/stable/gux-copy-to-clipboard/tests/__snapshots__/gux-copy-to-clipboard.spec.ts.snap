@@ -1,15 +1,17 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-copy-to-clipboard #render should render copy to clipboard 1`] = `
 <gux-copy-to-clipboard>
   <template shadowrootmode="open">
-    <button aria-label="Test" class="gux-copy-to-clipboard-wrapper">
+    <button class="gux-copy-to-clipboard-wrapper" aria-label="Test">
       <div class="gux-copy-content">
-        <slot name="content"></slot>
-        <gux-icon decorative="" icon-name="fa/copy-regular" size="small"></gux-icon>
+        <slot name="content">
+        </slot>
+        <gux-icon icon-name="fa/copy-regular" size="small" decorative="">
+        </gux-icon>
       </div>
       <gux-tooltip placement="bottom-end">
-        <div class="gux-tooltip-content" slot="content">
+        <div slot="content" class="gux-tooltip-content">
           <span>
             Click to Copy
           </span>

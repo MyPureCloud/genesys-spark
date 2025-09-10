@@ -1,35 +1,42 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-form-field-file #render should render component as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-file>
   <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
-        <slot name="input"></slot>
-        <div class="gux-form-field-error gux-show" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <slot name="input">
+        </slot>
+        <div role="alert" class="gux-form-field-error gux-show">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <label for="avatar" slot="label">
+  <label slot="label" for="avatar">
     Upload a profile picture
   </label>
-  <input accept="image/png, image/jpeg" aria-describedby="gux-form-field-error-i" aria-invalid="true" id="avatar" name="avatar" slot="input" type="file">
-  <span id="gux-form-field-error-i" slot="error">
+  <input slot="input" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" aria-invalid="true" aria-describedby="gux-form-field-error-i">
+  <span slot="error" id="gux-form-field-error-i">
     This is an error message
   </span>
 </gux-form-field-file>
@@ -38,33 +45,40 @@ exports[`gux-form-field-file #render should render component as expected when an
 exports[`gux-form-field-file #render should render component as expected when an optional "help" slot is provided 1`] = `
 <gux-form-field-file>
   <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
-        <slot name="input"></slot>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <slot name="input">
+        </slot>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help gux-show">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <label for="avatar" slot="label">
+  <label slot="label" for="avatar">
     Upload a profile picture
   </label>
-  <input accept="image/png, image/jpeg" aria-describedby="gux-form-field-help-i" id="avatar" name="avatar" slot="input" type="file">
-  <span id="gux-form-field-help-i" slot="help">
+  <input slot="input" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" aria-describedby="gux-form-field-help-i">
+  <span slot="help" id="gux-form-field-help-i">
     This is a help message
   </span>
 </gux-form-field-file>
@@ -73,33 +87,40 @@ exports[`gux-form-field-file #render should render component as expected when an
 exports[`gux-form-field-file #render should render component as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-file>
   <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
-        <slot name="input"></slot>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <slot name="input">
+        </slot>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <label for="avatar" slot="label">
+  <label slot="label" for="avatar">
     Upload a profile picture
   </label>
-  <input accept="image/png, image/jpeg" aria-describedby="gux-label-info-beta-i" id="avatar" name="avatar" slot="input" type="file">
-  <gux-label-info-beta id="gux-label-info-beta-i" slot="label-info">
+  <input slot="input" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" aria-describedby="gux-label-info-beta-i">
+  <gux-label-info-beta slot="label-info" id="gux-label-info-beta-i">
     <span slot="content">
       This is some tooltip text
     </span>
@@ -110,192 +131,234 @@ exports[`gux-form-field-file #render should render component as expected when an
 exports[`gux-form-field-file #render should render component as expected when indicator-mark is "optional" 1`] = `
 <gux-form-field-file indicator-mark="optional">
   <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="optional">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
-        <slot name="input"></slot>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <slot name="input">
+        </slot>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <label for="avatar" slot="label">
+  <label slot="label" for="avatar">
     Upload a profile picture
   </label>
-  <input accept="image/png, image/jpeg" id="avatar" name="avatar" slot="input" type="file">
+  <input slot="input" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
 </gux-form-field-file>
 `;
 
 exports[`gux-form-field-file #render should render component as expected when indicator-mark is "required" 1`] = `
 <gux-form-field-file indicator-mark="required">
   <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
-        <slot name="input"></slot>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <slot name="input">
+        </slot>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <label for="avatar" slot="label">
+  <label slot="label" for="avatar">
     Upload a profile picture
   </label>
-  <input accept="image/png, image/jpeg" id="avatar" name="avatar" slot="input" type="file">
+  <input slot="input" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
 </gux-form-field-file>
 `;
 
 exports[`gux-form-field-file #render should render component as expected when input attribute is "disabled" 1`] = `
 <gux-form-field-file>
   <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
-        <slot name="input"></slot>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <slot name="input">
+        </slot>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <label for="avatar" slot="label">
+  <label slot="label" for="avatar">
     Upload a profile picture
   </label>
-  <input accept="image/png, image/jpeg" disabled="" id="avatar" name="avatar" slot="input" type="file">
+  <input slot="input" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" disabled="">
 </gux-form-field-file>
 `;
 
 exports[`gux-form-field-file #render should render component as expected when input attribute is "required" 1`] = `
 <gux-form-field-file>
   <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label gux-required">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above gux-required">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required" required="">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
-        <slot name="input"></slot>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <slot name="input">
+        </slot>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <label for="avatar" slot="label">
+  <label slot="label" for="avatar">
     Upload a profile picture
   </label>
-  <input accept="image/png, image/jpeg" id="avatar" name="avatar" required="" slot="input" type="file">
+  <input slot="input" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required="">
 </gux-form-field-file>
 `;
 
 exports[`gux-form-field-file #render should render component as expected when label-position is above 1`] = `
 <gux-form-field-file label-position="above">
   <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
-        <slot name="input"></slot>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <slot name="input">
+        </slot>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <label for="avatar" slot="label">
+  <label slot="label" for="avatar">
     Upload a profile picture
   </label>
-  <input accept="image/png, image/jpeg" id="avatar" name="avatar" slot="input" type="file">
+  <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" slot="input">
 </gux-form-field-file>
 `;
 
 exports[`gux-form-field-file #render should render component as expected when label-position is beside 1`] = `
 <gux-form-field-file label-position="beside">
   <template shadowrootmode="open">
-    <div class="gux-beside gux-form-field-container">
-      <div class="gux-beside gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+    <div class="gux-form-field-container gux-beside">
+      <div class="gux-form-field-label gux-beside">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
-        <slot name="input"></slot>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <slot name="input">
+        </slot>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <label for="avatar" slot="label">
+  <label slot="label" for="avatar">
     Upload a profile picture
   </label>
-  <input accept="image/png, image/jpeg" id="avatar" name="avatar" slot="input" type="file">
+  <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" slot="input">
 </gux-form-field-file>
 `;
 
@@ -304,29 +367,36 @@ exports[`gux-form-field-file #render should render component as expected when la
   <template shadowrootmode="open">
     <div class="gux-form-field-container gux-screenreader">
       <div class="gux-form-field-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
-        <slot name="input"></slot>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <slot name="input">
+        </slot>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <label for="avatar" slot="label">
+  <label slot="label" for="avatar">
     Upload a profile picture
   </label>
-  <input accept="image/png, image/jpeg" id="avatar" name="avatar" slot="input" type="file">
+  <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" slot="input">
 </gux-form-field-file>
 `;

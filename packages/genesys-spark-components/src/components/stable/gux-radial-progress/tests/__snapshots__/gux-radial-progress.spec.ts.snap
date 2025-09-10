@@ -1,21 +1,24 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-radial-progress #render should render component as expected (1) 1`] = `
 <gux-radial-progress screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
+    <gux-radial-loading screenreader-text="Uploading file" context="modal">
+    </gux-radial-loading>
   </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (2) 1`] = `
-<gux-radial-progress screenreader-text="Uploading file" value="0">
+<gux-radial-progress value="0" screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar">
-      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-dasharray="138.23007675795088" stroke-dashoffset="138.23007675795088" stroke-linecap="round"></circle>
-        <text class="gux-percentage" dominant-baseline="central" x="50%" y="50%">
+    <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Uploading file">
+      <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
+        <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle" stroke-dashoffset="138.23007675795088" stroke-dasharray="138.23007675795088" stroke-linecap="round">
+        </circle>
+        <text x="50%" y="50%" dominant-baseline="central" class="gux-percentage">
           0%
         </text>
       </svg>
@@ -25,13 +28,15 @@ exports[`gux-radial-progress #render should render component as expected (2) 1`]
 `;
 
 exports[`gux-radial-progress #render should render component as expected (3) 1`] = `
-<gux-radial-progress screenreader-text="Uploading file" value="10">
+<gux-radial-progress value="10" screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
-      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-dasharray="138.23007675795088" stroke-dashoffset="124.4070690821558" stroke-linecap="round"></circle>
-        <text class="gux-percentage" dominant-baseline="central" x="50%" y="50%">
+    <div role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" aria-label="Uploading file">
+      <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
+        <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle" stroke-dashoffset="124.4070690821558" stroke-dasharray="138.23007675795088" stroke-linecap="round">
+        </circle>
+        <text x="50%" y="50%" dominant-baseline="central" class="gux-percentage">
           10%
         </text>
       </svg>
@@ -41,13 +46,15 @@ exports[`gux-radial-progress #render should render component as expected (3) 1`]
 `;
 
 exports[`gux-radial-progress #render should render component as expected (4) 1`] = `
-<gux-radial-progress screenreader-text="Uploading file" value="100">
+<gux-radial-progress value="100" screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar">
-      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-dasharray="138.23007675795088" stroke-dashoffset="0" stroke-linecap="round"></circle>
-        <text class="gux-percentage" dominant-baseline="central" x="50%" y="50%">
+    <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Uploading file">
+      <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
+        <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle" stroke-dashoffset="0" stroke-dasharray="138.23007675795088" stroke-linecap="round">
+        </circle>
+        <text x="50%" y="50%" dominant-baseline="central" class="gux-percentage">
           100%
         </text>
       </svg>
@@ -57,29 +64,33 @@ exports[`gux-radial-progress #render should render component as expected (4) 1`]
 `;
 
 exports[`gux-radial-progress #render should render component as expected (5) 1`] = `
-<gux-radial-progress screenreader-text="Uploading file" value="123">
+<gux-radial-progress value="123" screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
+    <gux-radial-loading screenreader-text="Uploading file" context="modal">
+    </gux-radial-loading>
   </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (6) 1`] = `
-<gux-radial-progress screenreader-text="Uploading file" value="200">
+<gux-radial-progress value="200" screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
+    <gux-radial-loading screenreader-text="Uploading file" context="modal">
+    </gux-radial-loading>
   </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (7) 1`] = `
-<gux-radial-progress max="100" screenreader-text="Uploading file" value="10">
+<gux-radial-progress value="10" max="100" screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
-      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-dasharray="138.23007675795088" stroke-dashoffset="124.4070690821558" stroke-linecap="round"></circle>
-        <text class="gux-percentage" dominant-baseline="central" x="50%" y="50%">
+    <div role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" aria-label="Uploading file">
+      <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
+        <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle" stroke-dashoffset="124.4070690821558" stroke-dasharray="138.23007675795088" stroke-linecap="round">
+        </circle>
+        <text x="50%" y="50%" dominant-baseline="central" class="gux-percentage">
           10%
         </text>
       </svg>
@@ -89,13 +100,15 @@ exports[`gux-radial-progress #render should render component as expected (7) 1`]
 `;
 
 exports[`gux-radial-progress #render should render component as expected (8) 1`] = `
-<gux-radial-progress max="10" screenreader-text="Uploading file" value="10">
+<gux-radial-progress value="10" max="10" screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <div aria-label="Uploading file" aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" role="progressbar">
-      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-dasharray="138.23007675795088" stroke-dashoffset="0" stroke-linecap="round"></circle>
-        <text class="gux-percentage" dominant-baseline="central" x="50%" y="50%">
+    <div role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" aria-label="Uploading file">
+      <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
+        <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle" stroke-dashoffset="0" stroke-dasharray="138.23007675795088" stroke-linecap="round">
+        </circle>
+        <text x="50%" y="50%" dominant-baseline="central" class="gux-percentage">
           100%
         </text>
       </svg>
@@ -105,33 +118,37 @@ exports[`gux-radial-progress #render should render component as expected (8) 1`]
 `;
 
 exports[`gux-radial-progress #render should render component as expected (9) 1`] = `
-<gux-radial-progress max="100" screenreader-text="Uploading file" value="test">
+<gux-radial-progress value="test" max="100" screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
+    <gux-radial-loading screenreader-text="Uploading file" context="modal">
+    </gux-radial-loading>
   </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (10) 1`] = `
-<gux-radial-progress max="100" screenreader-text="Uploading file" value="-123">
+<gux-radial-progress value="-123" max="100" screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
+    <gux-radial-loading screenreader-text="Uploading file" context="modal">
+    </gux-radial-loading>
   </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (11) 1`] = `
-<gux-radial-progress max="100" screenreader-text="Uploading file" value="200">
+<gux-radial-progress value="200" max="100" screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
+    <gux-radial-loading screenreader-text="Uploading file" context="modal">
+    </gux-radial-loading>
   </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (12) 1`] = `
-<gux-radial-progress max="test" screenreader-text="Uploading file" value="10">
+<gux-radial-progress value="10" max="test" screenreader-text="Uploading file">
   <template shadowrootmode="open">
-    <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
+    <gux-radial-loading screenreader-text="Uploading file" context="modal">
+    </gux-radial-loading>
   </template>
 </gux-radial-progress>
 `;

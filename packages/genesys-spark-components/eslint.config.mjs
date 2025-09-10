@@ -85,6 +85,15 @@ export default [
     }
   },
   {
+    files: ['**/*.spec.{ts,js}'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+        ...globals.node
+      }
+    }
+  },
+  {
     ...playwright.configs['flat/recommended'],
     files: ['**/*.e2e.playwright.ts']
   }

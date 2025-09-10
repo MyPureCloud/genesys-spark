@@ -8,7 +8,7 @@ import {
   h
 } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../../../../../i18n';
 import { ILocalizedComponentResources } from 'i18n/fetchResources';
 
 import { trackComponent } from '@utils/tracking/usage';

@@ -1,44 +1,51 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-toast #render should render action toast 1`] = `
 <gux-toast toast-type="action">
   <template shadowrootmode="open">
     <div class="gux-toast gux-toast-action">
       <div class="gux-icon gux-icon-action">
-        <slot name="icon"></slot>
+        <slot name="icon">
+        </slot>
       </div>
       <div class="gux-content">
         <div class="gux-message">
           <gux-truncate class="gux-message-title" max-lines="1">
-            <slot name="title"></slot>
+            <slot name="title">
+            </slot>
           </gux-truncate>
           <gux-truncate class="gux-message-body" max-lines="2">
-            <slot name="message"></slot>
+            <slot name="message">
+            </slot>
           </gux-truncate>
         </div>
-        <gux-cta-group align="end" class="gux-buttons-bar">
+        <gux-cta-group class="gux-buttons-bar" align="end">
           <gux-button-slot slot="secondary">
-            <slot name="secondary-button"></slot>
+            <slot name="secondary-button">
+            </slot>
           </gux-button-slot>
           <gux-button-slot slot="primary">
-            <slot name="primary-button"></slot>
+            <slot name="primary-button">
+            </slot>
           </gux-button-slot>
         </gux-cta-group>
       </div>
-      <gux-dismiss-button position="inherit"></gux-dismiss-button>
+      <gux-dismiss-button position="inherit">
+      </gux-dismiss-button>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+  </gux-icon>
   <div slot="title">
     2 Actions
   </div>
   <div slot="message">
     This is an example message
   </div>
-  <button onclick="notify(event)" slot="primary-button" type="button">
+  <button slot="primary-button" type="button" onclick="notify(event)">
     Action 1
   </button>
-  <button onclick="notify(event)" slot="secondary-button" type="button">
+  <button slot="secondary-button" type="button" onclick="notify(event)">
     Action 2
   </button>
 </gux-toast>
@@ -49,24 +56,29 @@ exports[`gux-toast #render should render error toast 1`] = `
   <template shadowrootmode="open">
     <div class="gux-toast gux-toast-error">
       <div class="gux-icon gux-icon-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+        <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="">
+        </gux-icon>
       </div>
       <div class="gux-content">
         <div class="gux-message">
           <gux-truncate class="gux-message-title" max-lines="1">
-            <slot name="title"></slot>
+            <slot name="title">
+            </slot>
           </gux-truncate>
           <gux-truncate class="gux-message-body" max-lines="2">
-            <slot name="message"></slot>
+            <slot name="message">
+            </slot>
           </gux-truncate>
         </div>
         <div class="gux-buttons-bar">
           <gux-link-beta standalone="">
-            <slot name="link"></slot>
+            <slot name="link">
+            </slot>
           </gux-link-beta>
         </div>
       </div>
-      <gux-dismiss-button position="inherit"></gux-dismiss-button>
+      <gux-dismiss-button position="inherit">
+      </gux-dismiss-button>
     </div>
   </template>
   <div slot="title">
@@ -75,7 +87,7 @@ exports[`gux-toast #render should render error toast 1`] = `
   <div slot="message">
     This is an example message
   </div>
-  <a href="#" slot="link">
+  <a slot="link" href="#">
     Link
   </a>
 </gux-toast>
@@ -86,24 +98,29 @@ exports[`gux-toast #render should render info toast 1`] = `
   <template shadowrootmode="open">
     <div class="gux-toast gux-toast-info">
       <div class="gux-icon gux-icon-info">
-        <gux-icon decorative="" icon-name="fa/circle-info-solid"></gux-icon>
+        <gux-icon icon-name="fa/circle-info-solid" decorative="">
+        </gux-icon>
       </div>
       <div class="gux-content">
         <div class="gux-message">
           <gux-truncate class="gux-message-title" max-lines="1">
-            <slot name="title"></slot>
+            <slot name="title">
+            </slot>
           </gux-truncate>
           <gux-truncate class="gux-message-body" max-lines="2">
-            <slot name="message"></slot>
+            <slot name="message">
+            </slot>
           </gux-truncate>
         </div>
         <div class="gux-buttons-bar">
           <gux-link-beta standalone="">
-            <slot name="link"></slot>
+            <slot name="link">
+            </slot>
           </gux-link-beta>
         </div>
       </div>
-      <gux-dismiss-button position="inherit"></gux-dismiss-button>
+      <gux-dismiss-button position="inherit">
+      </gux-dismiss-button>
     </div>
   </template>
   <div slot="title">
@@ -112,7 +129,7 @@ exports[`gux-toast #render should render info toast 1`] = `
   <div slot="message">
     This is an example message
   </div>
-  <a href="#" slot="link">
+  <a slot="link" href="#">
     Link
   </a>
 </gux-toast>
@@ -123,24 +140,29 @@ exports[`gux-toast #render should render success toast 1`] = `
   <template shadowrootmode="open">
     <div class="gux-toast gux-toast-success">
       <div class="gux-icon gux-icon-success">
-        <gux-icon decorative="" icon-name="fa/circle-check-solid"></gux-icon>
+        <gux-icon icon-name="fa/circle-check-solid" decorative="">
+        </gux-icon>
       </div>
       <div class="gux-content">
         <div class="gux-message">
           <gux-truncate class="gux-message-title" max-lines="1">
-            <slot name="title"></slot>
+            <slot name="title">
+            </slot>
           </gux-truncate>
           <gux-truncate class="gux-message-body" max-lines="2">
-            <slot name="message"></slot>
+            <slot name="message">
+            </slot>
           </gux-truncate>
         </div>
         <div class="gux-buttons-bar">
           <gux-link-beta standalone="">
-            <slot name="link"></slot>
+            <slot name="link">
+            </slot>
           </gux-link-beta>
         </div>
       </div>
-      <gux-dismiss-button position="inherit"></gux-dismiss-button>
+      <gux-dismiss-button position="inherit">
+      </gux-dismiss-button>
     </div>
   </template>
   <div slot="title">
@@ -149,7 +171,7 @@ exports[`gux-toast #render should render success toast 1`] = `
   <div slot="message">
     This is an example message
   </div>
-  <a href="#" slot="link">
+  <a slot="link" href="#">
     Link
   </a>
 </gux-toast>
@@ -160,24 +182,29 @@ exports[`gux-toast #render should render warning toast 1`] = `
   <template shadowrootmode="open">
     <div class="gux-toast gux-toast-warning">
       <div class="gux-icon gux-icon-warning">
-        <gux-icon decorative="" icon-name="fa/triangle-exclamation-solid"></gux-icon>
+        <gux-icon icon-name="fa/triangle-exclamation-solid" decorative="">
+        </gux-icon>
       </div>
       <div class="gux-content">
         <div class="gux-message">
           <gux-truncate class="gux-message-title" max-lines="1">
-            <slot name="title"></slot>
+            <slot name="title">
+            </slot>
           </gux-truncate>
           <gux-truncate class="gux-message-body" max-lines="2">
-            <slot name="message"></slot>
+            <slot name="message">
+            </slot>
           </gux-truncate>
         </div>
         <div class="gux-buttons-bar">
           <gux-link-beta standalone="">
-            <slot name="link"></slot>
+            <slot name="link">
+            </slot>
           </gux-link-beta>
         </div>
       </div>
-      <gux-dismiss-button position="inherit"></gux-dismiss-button>
+      <gux-dismiss-button position="inherit">
+      </gux-dismiss-button>
     </div>
   </template>
   <div slot="title">
@@ -186,7 +213,7 @@ exports[`gux-toast #render should render warning toast 1`] = `
   <div slot="message">
     This is an example message
   </div>
-  <a href="#" slot="link">
+  <a slot="link" href="#">
     Link
   </a>
 </gux-toast>

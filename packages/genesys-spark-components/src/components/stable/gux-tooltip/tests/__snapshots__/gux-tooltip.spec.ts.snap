@@ -1,65 +1,4308 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-tooltip #remove should remove component as expected (1) 1`] = `
-<body>
-  <div>
-    <div>
-      Element
-    </div>
-  </div>
-</body>
+MockHTMLElement {
+  "__attributeMap": MockAttributeMap {
+    "__items": [],
+    "caseInsensitive": true,
+  },
+  "__listeners": null,
+  "__namespaceURI": "http://www.w3.org/1999/xhtml",
+  "_nodeValue": null,
+  "childNodes": [
+    MockHTMLElement {
+      "__attributeMap": MockAttributeMap {
+        "__items": [],
+        "caseInsensitive": true,
+      },
+      "__listeners": [],
+      "__namespaceURI": "http://www.w3.org/1999/xhtml",
+      "__shadowRoot": null,
+      "_nodeValue": null,
+      "childNodes": [
+        _MockTextNode {
+          "_nodeValue": "
+          ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        MockHTMLElement {
+          "__attributeMap": MockAttributeMap {
+            "__items": [],
+            "caseInsensitive": true,
+          },
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [
+            _MockTextNode {
+              "_nodeValue": "Element",
+              "childNodes": [],
+              "nodeName": "#text",
+              "nodeType": 3,
+              "ownerDocument": _MockDocument {
+                "childNodes": [
+                  MockDocumentTypeNode {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "html",
+                          "_namespaceURI": null,
+                          "_value": "",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "__shadowRoot": null,
+                    "_nodeValue": null,
+                    "childNodes": [],
+                    "nodeName": "!DOCTYPE",
+                    "nodeType": 10,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "lang",
+                          "_namespaceURI": null,
+                          "_value": "en",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockHTMLElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "_nodeValue": null,
+                        "childNodes": [
+                          MockStyleElement {
+                            "__attributeMap": MockAttributeMap {
+                              "__items": [
+                                MockAttr {
+                                  "_name": "data-styles",
+                                  "_namespaceURI": null,
+                                  "_value": "",
+                                },
+                              ],
+                              "caseInsensitive": true,
+                            },
+                            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                            "__shadowRoot": null,
+                            "_nodeValue": null,
+                            "childNodes": [
+                              _MockTextNode {
+                                "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                                "childNodes": [],
+                                "nodeName": "#text",
+                                "nodeType": 3,
+                                "ownerDocument": [Circular],
+                                "parentNode": [Circular],
+                              },
+                            ],
+                            "nodeName": "STYLE",
+                            "nodeType": 1,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                            "sheet": MockCSSStyleSheet {
+                              "cssRules": [
+                                MockCSSRule {
+                                  "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                                  "parentStyleSheet": [Circular],
+                                  "type": 0,
+                                },
+                              ],
+                              "ownerNode": [Circular],
+                              "parentStyleSheet": null,
+                              "type": "text/css",
+                            },
+                          },
+                        ],
+                        "nodeName": "HEAD",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                      },
+                      [Circular],
+                    ],
+                    "nodeName": "HTML",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                ],
+                "cookie": "",
+                "defaultView": [MockWindow],
+                "nodeName": "#document",
+                "nodeType": 9,
+                "ownerDocument": null,
+                "parentNode": null,
+                "referrer": "",
+              },
+              "parentNode": [Circular],
+            },
+          ],
+          "nodeName": "DIV",
+          "nodeType": 1,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        _MockTextNode {
+          "_nodeValue": "
+          ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        _MockTextNode {
+          "_nodeValue": "
+        ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+      ],
+      "nodeName": "DIV",
+      "nodeType": 1,
+      "ownerDocument": _MockDocument {
+        "childNodes": [
+          MockDocumentTypeNode {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "html",
+                  "_namespaceURI": null,
+                  "_value": "",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "__shadowRoot": null,
+            "_nodeValue": null,
+            "childNodes": [],
+            "nodeName": "!DOCTYPE",
+            "nodeType": 10,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+          MockHTMLElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "lang",
+                  "_namespaceURI": null,
+                  "_value": "en",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "_nodeValue": null,
+            "childNodes": [
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockStyleElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "data-styles",
+                          "_namespaceURI": null,
+                          "_value": "",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "__shadowRoot": null,
+                    "_nodeValue": null,
+                    "childNodes": [
+                      _MockTextNode {
+                        "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                        "childNodes": [],
+                        "nodeName": "#text",
+                        "nodeType": 3,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                      },
+                    ],
+                    "nodeName": "STYLE",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                    "sheet": MockCSSStyleSheet {
+                      "cssRules": [
+                        MockCSSRule {
+                          "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                          "parentStyleSheet": [Circular],
+                          "type": 0,
+                        },
+                      ],
+                      "ownerNode": [Circular],
+                      "parentStyleSheet": null,
+                      "type": "text/css",
+                    },
+                  },
+                ],
+                "nodeName": "HEAD",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              [Circular],
+            ],
+            "nodeName": "HTML",
+            "nodeType": 1,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+        ],
+        "cookie": "",
+        "defaultView": [MockWindow],
+        "nodeName": "#document",
+        "nodeType": 9,
+        "ownerDocument": null,
+        "parentNode": null,
+        "referrer": "",
+      },
+      "parentNode": [Circular],
+    },
+  ],
+  "nodeName": "BODY",
+  "nodeType": 1,
+  "ownerDocument": _MockDocument {
+    "childNodes": [
+      MockDocumentTypeNode {
+        "__attributeMap": MockAttributeMap {
+          "__items": [
+            MockAttr {
+              "_name": "html",
+              "_namespaceURI": null,
+              "_value": "",
+            },
+          ],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "__shadowRoot": null,
+        "_nodeValue": null,
+        "childNodes": [],
+        "nodeName": "!DOCTYPE",
+        "nodeType": 10,
+        "ownerDocument": [Circular],
+        "parentNode": [Circular],
+      },
+      MockHTMLElement {
+        "__attributeMap": MockAttributeMap {
+          "__items": [
+            MockAttr {
+              "_name": "lang",
+              "_namespaceURI": null,
+              "_value": "en",
+            },
+          ],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "_nodeValue": null,
+        "childNodes": [
+          MockHTMLElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "_nodeValue": null,
+            "childNodes": [
+              MockStyleElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "data-styles",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [
+                  _MockTextNode {
+                    "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                    "childNodes": [],
+                    "nodeName": "#text",
+                    "nodeType": 3,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                ],
+                "nodeName": "STYLE",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+                "sheet": MockCSSStyleSheet {
+                  "cssRules": [
+                    MockCSSRule {
+                      "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                      "parentStyleSheet": [Circular],
+                      "type": 0,
+                    },
+                  ],
+                  "ownerNode": [Circular],
+                  "parentStyleSheet": null,
+                  "type": "text/css",
+                },
+              },
+            ],
+            "nodeName": "HEAD",
+            "nodeType": 1,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+          [Circular],
+        ],
+        "nodeName": "HTML",
+        "nodeType": 1,
+        "ownerDocument": [Circular],
+        "parentNode": [Circular],
+      },
+    ],
+    "cookie": "",
+    "defaultView": [MockWindow],
+    "nodeName": "#document",
+    "nodeType": 9,
+    "ownerDocument": null,
+    "parentNode": null,
+    "referrer": "",
+  },
+  "parentNode": MockHTMLElement {
+    "__attributeMap": MockAttributeMap {
+      "__items": [
+        MockAttr {
+          "_name": "lang",
+          "_namespaceURI": null,
+          "_value": "en",
+        },
+      ],
+      "caseInsensitive": true,
+    },
+    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+    "_nodeValue": null,
+    "childNodes": [
+      MockHTMLElement {
+        "__attributeMap": MockAttributeMap {
+          "__items": [],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "_nodeValue": null,
+        "childNodes": [
+          MockStyleElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "data-styles",
+                  "_namespaceURI": null,
+                  "_value": "",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "__shadowRoot": null,
+            "_nodeValue": null,
+            "childNodes": [
+              _MockTextNode {
+                "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                "childNodes": [],
+                "nodeName": "#text",
+                "nodeType": 3,
+                "ownerDocument": _MockDocument {
+                  "childNodes": [
+                    MockDocumentTypeNode {
+                      "__attributeMap": MockAttributeMap {
+                        "__items": [
+                          MockAttr {
+                            "_name": "html",
+                            "_namespaceURI": null,
+                            "_value": "",
+                          },
+                        ],
+                        "caseInsensitive": true,
+                      },
+                      "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                      "__shadowRoot": null,
+                      "_nodeValue": null,
+                      "childNodes": [],
+                      "nodeName": "!DOCTYPE",
+                      "nodeType": 10,
+                      "ownerDocument": [Circular],
+                      "parentNode": [Circular],
+                    },
+                    [Circular],
+                  ],
+                  "cookie": "",
+                  "defaultView": [MockWindow],
+                  "nodeName": "#document",
+                  "nodeType": 9,
+                  "ownerDocument": null,
+                  "parentNode": null,
+                  "referrer": "",
+                },
+                "parentNode": [Circular],
+              },
+            ],
+            "nodeName": "STYLE",
+            "nodeType": 1,
+            "ownerDocument": _MockDocument {
+              "childNodes": [
+                MockDocumentTypeNode {
+                  "__attributeMap": MockAttributeMap {
+                    "__items": [
+                      MockAttr {
+                        "_name": "html",
+                        "_namespaceURI": null,
+                        "_value": "",
+                      },
+                    ],
+                    "caseInsensitive": true,
+                  },
+                  "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                  "__shadowRoot": null,
+                  "_nodeValue": null,
+                  "childNodes": [],
+                  "nodeName": "!DOCTYPE",
+                  "nodeType": 10,
+                  "ownerDocument": [Circular],
+                  "parentNode": [Circular],
+                },
+                [Circular],
+              ],
+              "cookie": "",
+              "defaultView": [MockWindow],
+              "nodeName": "#document",
+              "nodeType": 9,
+              "ownerDocument": null,
+              "parentNode": null,
+              "referrer": "",
+            },
+            "parentNode": [Circular],
+            "sheet": MockCSSStyleSheet {
+              "cssRules": [
+                MockCSSRule {
+                  "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                  "parentStyleSheet": [Circular],
+                  "type": 0,
+                },
+              ],
+              "ownerNode": [Circular],
+              "parentStyleSheet": null,
+              "type": "text/css",
+            },
+          },
+        ],
+        "nodeName": "HEAD",
+        "nodeType": 1,
+        "ownerDocument": _MockDocument {
+          "childNodes": [
+            MockDocumentTypeNode {
+              "__attributeMap": MockAttributeMap {
+                "__items": [
+                  MockAttr {
+                    "_name": "html",
+                    "_namespaceURI": null,
+                    "_value": "",
+                  },
+                ],
+                "caseInsensitive": true,
+              },
+              "__namespaceURI": "http://www.w3.org/1999/xhtml",
+              "__shadowRoot": null,
+              "_nodeValue": null,
+              "childNodes": [],
+              "nodeName": "!DOCTYPE",
+              "nodeType": 10,
+              "ownerDocument": [Circular],
+              "parentNode": [Circular],
+            },
+            [Circular],
+          ],
+          "cookie": "",
+          "defaultView": [MockWindow],
+          "nodeName": "#document",
+          "nodeType": 9,
+          "ownerDocument": null,
+          "parentNode": null,
+          "referrer": "",
+        },
+        "parentNode": [Circular],
+      },
+      [Circular],
+    ],
+    "nodeName": "HTML",
+    "nodeType": 1,
+    "ownerDocument": _MockDocument {
+      "childNodes": [
+        MockDocumentTypeNode {
+          "__attributeMap": MockAttributeMap {
+            "__items": [
+              MockAttr {
+                "_name": "html",
+                "_namespaceURI": null,
+                "_value": "",
+              },
+            ],
+            "caseInsensitive": true,
+          },
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [],
+          "nodeName": "!DOCTYPE",
+          "nodeType": 10,
+          "ownerDocument": [Circular],
+          "parentNode": [Circular],
+        },
+        [Circular],
+      ],
+      "cookie": "",
+      "defaultView": [MockWindow],
+      "nodeName": "#document",
+      "nodeType": 9,
+      "ownerDocument": null,
+      "parentNode": null,
+      "referrer": "",
+    },
+    "parentNode": _MockDocument {
+      "childNodes": [
+        MockDocumentTypeNode {
+          "__attributeMap": MockAttributeMap {
+            "__items": [
+              MockAttr {
+                "_name": "html",
+                "_namespaceURI": null,
+                "_value": "",
+              },
+            ],
+            "caseInsensitive": true,
+          },
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [],
+          "nodeName": "!DOCTYPE",
+          "nodeType": 10,
+          "ownerDocument": [Circular],
+          "parentNode": [Circular],
+        },
+        [Circular],
+      ],
+      "cookie": "",
+      "defaultView": [MockWindow],
+      "nodeName": "#document",
+      "nodeType": 9,
+      "ownerDocument": null,
+      "parentNode": null,
+      "referrer": "",
+    },
+  },
+}
 `;
 
 exports[`gux-tooltip #remove should remove component as expected (2) 1`] = `
-<body>
-  <div>
-    <div id="element">
-      Element
-    </div>
-  </div>
-</body>
+MockHTMLElement {
+  "__attributeMap": MockAttributeMap {
+    "__items": [],
+    "caseInsensitive": true,
+  },
+  "__listeners": null,
+  "__namespaceURI": "http://www.w3.org/1999/xhtml",
+  "_nodeValue": null,
+  "childNodes": [
+    MockHTMLElement {
+      "__attributeMap": MockAttributeMap {
+        "__items": [],
+        "caseInsensitive": true,
+      },
+      "__namespaceURI": "http://www.w3.org/1999/xhtml",
+      "__shadowRoot": null,
+      "_nodeValue": null,
+      "childNodes": [
+        _MockTextNode {
+          "_nodeValue": "
+          ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        MockHTMLElement {
+          "__attributeMap": MockAttributeMap {
+            "__items": [
+              MockAttr {
+                "_name": "id",
+                "_namespaceURI": null,
+                "_value": "element",
+              },
+            ],
+            "caseInsensitive": true,
+          },
+          "__listeners": [],
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [
+            _MockTextNode {
+              "_nodeValue": "Element",
+              "childNodes": [],
+              "nodeName": "#text",
+              "nodeType": 3,
+              "ownerDocument": _MockDocument {
+                "childNodes": [
+                  MockDocumentTypeNode {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "html",
+                          "_namespaceURI": null,
+                          "_value": "",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "__shadowRoot": null,
+                    "_nodeValue": null,
+                    "childNodes": [],
+                    "nodeName": "!DOCTYPE",
+                    "nodeType": 10,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "lang",
+                          "_namespaceURI": null,
+                          "_value": "en",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockHTMLElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "_nodeValue": null,
+                        "childNodes": [
+                          MockStyleElement {
+                            "__attributeMap": MockAttributeMap {
+                              "__items": [
+                                MockAttr {
+                                  "_name": "data-styles",
+                                  "_namespaceURI": null,
+                                  "_value": "",
+                                },
+                              ],
+                              "caseInsensitive": true,
+                            },
+                            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                            "__shadowRoot": null,
+                            "_nodeValue": null,
+                            "childNodes": [
+                              _MockTextNode {
+                                "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                                "childNodes": [],
+                                "nodeName": "#text",
+                                "nodeType": 3,
+                                "ownerDocument": [Circular],
+                                "parentNode": [Circular],
+                              },
+                            ],
+                            "nodeName": "STYLE",
+                            "nodeType": 1,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                            "sheet": MockCSSStyleSheet {
+                              "cssRules": [
+                                MockCSSRule {
+                                  "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                                  "parentStyleSheet": [Circular],
+                                  "type": 0,
+                                },
+                              ],
+                              "ownerNode": [Circular],
+                              "parentStyleSheet": null,
+                              "type": "text/css",
+                            },
+                          },
+                        ],
+                        "nodeName": "HEAD",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                      },
+                      [Circular],
+                    ],
+                    "nodeName": "HTML",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                ],
+                "cookie": "",
+                "defaultView": [MockWindow],
+                "nodeName": "#document",
+                "nodeType": 9,
+                "ownerDocument": null,
+                "parentNode": null,
+                "referrer": "",
+              },
+              "parentNode": [Circular],
+            },
+          ],
+          "nodeName": "DIV",
+          "nodeType": 1,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        _MockTextNode {
+          "_nodeValue": "
+          ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        _MockTextNode {
+          "_nodeValue": "
+        ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+      ],
+      "nodeName": "DIV",
+      "nodeType": 1,
+      "ownerDocument": _MockDocument {
+        "childNodes": [
+          MockDocumentTypeNode {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "html",
+                  "_namespaceURI": null,
+                  "_value": "",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "__shadowRoot": null,
+            "_nodeValue": null,
+            "childNodes": [],
+            "nodeName": "!DOCTYPE",
+            "nodeType": 10,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+          MockHTMLElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "lang",
+                  "_namespaceURI": null,
+                  "_value": "en",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "_nodeValue": null,
+            "childNodes": [
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockStyleElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "data-styles",
+                          "_namespaceURI": null,
+                          "_value": "",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "__shadowRoot": null,
+                    "_nodeValue": null,
+                    "childNodes": [
+                      _MockTextNode {
+                        "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                        "childNodes": [],
+                        "nodeName": "#text",
+                        "nodeType": 3,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                      },
+                    ],
+                    "nodeName": "STYLE",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                    "sheet": MockCSSStyleSheet {
+                      "cssRules": [
+                        MockCSSRule {
+                          "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                          "parentStyleSheet": [Circular],
+                          "type": 0,
+                        },
+                      ],
+                      "ownerNode": [Circular],
+                      "parentStyleSheet": null,
+                      "type": "text/css",
+                    },
+                  },
+                ],
+                "nodeName": "HEAD",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              [Circular],
+            ],
+            "nodeName": "HTML",
+            "nodeType": 1,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+        ],
+        "cookie": "",
+        "defaultView": [MockWindow],
+        "nodeName": "#document",
+        "nodeType": 9,
+        "ownerDocument": null,
+        "parentNode": null,
+        "referrer": "",
+      },
+      "parentNode": [Circular],
+    },
+  ],
+  "nodeName": "BODY",
+  "nodeType": 1,
+  "ownerDocument": _MockDocument {
+    "childNodes": [
+      MockDocumentTypeNode {
+        "__attributeMap": MockAttributeMap {
+          "__items": [
+            MockAttr {
+              "_name": "html",
+              "_namespaceURI": null,
+              "_value": "",
+            },
+          ],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "__shadowRoot": null,
+        "_nodeValue": null,
+        "childNodes": [],
+        "nodeName": "!DOCTYPE",
+        "nodeType": 10,
+        "ownerDocument": [Circular],
+        "parentNode": [Circular],
+      },
+      MockHTMLElement {
+        "__attributeMap": MockAttributeMap {
+          "__items": [
+            MockAttr {
+              "_name": "lang",
+              "_namespaceURI": null,
+              "_value": "en",
+            },
+          ],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "_nodeValue": null,
+        "childNodes": [
+          MockHTMLElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "_nodeValue": null,
+            "childNodes": [
+              MockStyleElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "data-styles",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [
+                  _MockTextNode {
+                    "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                    "childNodes": [],
+                    "nodeName": "#text",
+                    "nodeType": 3,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                ],
+                "nodeName": "STYLE",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+                "sheet": MockCSSStyleSheet {
+                  "cssRules": [
+                    MockCSSRule {
+                      "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                      "parentStyleSheet": [Circular],
+                      "type": 0,
+                    },
+                  ],
+                  "ownerNode": [Circular],
+                  "parentStyleSheet": null,
+                  "type": "text/css",
+                },
+              },
+            ],
+            "nodeName": "HEAD",
+            "nodeType": 1,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+          [Circular],
+        ],
+        "nodeName": "HTML",
+        "nodeType": 1,
+        "ownerDocument": [Circular],
+        "parentNode": [Circular],
+      },
+    ],
+    "cookie": "",
+    "defaultView": [MockWindow],
+    "nodeName": "#document",
+    "nodeType": 9,
+    "ownerDocument": null,
+    "parentNode": null,
+    "referrer": "",
+  },
+  "parentNode": MockHTMLElement {
+    "__attributeMap": MockAttributeMap {
+      "__items": [
+        MockAttr {
+          "_name": "lang",
+          "_namespaceURI": null,
+          "_value": "en",
+        },
+      ],
+      "caseInsensitive": true,
+    },
+    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+    "_nodeValue": null,
+    "childNodes": [
+      MockHTMLElement {
+        "__attributeMap": MockAttributeMap {
+          "__items": [],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "_nodeValue": null,
+        "childNodes": [
+          MockStyleElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "data-styles",
+                  "_namespaceURI": null,
+                  "_value": "",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "__shadowRoot": null,
+            "_nodeValue": null,
+            "childNodes": [
+              _MockTextNode {
+                "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                "childNodes": [],
+                "nodeName": "#text",
+                "nodeType": 3,
+                "ownerDocument": _MockDocument {
+                  "childNodes": [
+                    MockDocumentTypeNode {
+                      "__attributeMap": MockAttributeMap {
+                        "__items": [
+                          MockAttr {
+                            "_name": "html",
+                            "_namespaceURI": null,
+                            "_value": "",
+                          },
+                        ],
+                        "caseInsensitive": true,
+                      },
+                      "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                      "__shadowRoot": null,
+                      "_nodeValue": null,
+                      "childNodes": [],
+                      "nodeName": "!DOCTYPE",
+                      "nodeType": 10,
+                      "ownerDocument": [Circular],
+                      "parentNode": [Circular],
+                    },
+                    [Circular],
+                  ],
+                  "cookie": "",
+                  "defaultView": [MockWindow],
+                  "nodeName": "#document",
+                  "nodeType": 9,
+                  "ownerDocument": null,
+                  "parentNode": null,
+                  "referrer": "",
+                },
+                "parentNode": [Circular],
+              },
+            ],
+            "nodeName": "STYLE",
+            "nodeType": 1,
+            "ownerDocument": _MockDocument {
+              "childNodes": [
+                MockDocumentTypeNode {
+                  "__attributeMap": MockAttributeMap {
+                    "__items": [
+                      MockAttr {
+                        "_name": "html",
+                        "_namespaceURI": null,
+                        "_value": "",
+                      },
+                    ],
+                    "caseInsensitive": true,
+                  },
+                  "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                  "__shadowRoot": null,
+                  "_nodeValue": null,
+                  "childNodes": [],
+                  "nodeName": "!DOCTYPE",
+                  "nodeType": 10,
+                  "ownerDocument": [Circular],
+                  "parentNode": [Circular],
+                },
+                [Circular],
+              ],
+              "cookie": "",
+              "defaultView": [MockWindow],
+              "nodeName": "#document",
+              "nodeType": 9,
+              "ownerDocument": null,
+              "parentNode": null,
+              "referrer": "",
+            },
+            "parentNode": [Circular],
+            "sheet": MockCSSStyleSheet {
+              "cssRules": [
+                MockCSSRule {
+                  "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                  "parentStyleSheet": [Circular],
+                  "type": 0,
+                },
+              ],
+              "ownerNode": [Circular],
+              "parentStyleSheet": null,
+              "type": "text/css",
+            },
+          },
+        ],
+        "nodeName": "HEAD",
+        "nodeType": 1,
+        "ownerDocument": _MockDocument {
+          "childNodes": [
+            MockDocumentTypeNode {
+              "__attributeMap": MockAttributeMap {
+                "__items": [
+                  MockAttr {
+                    "_name": "html",
+                    "_namespaceURI": null,
+                    "_value": "",
+                  },
+                ],
+                "caseInsensitive": true,
+              },
+              "__namespaceURI": "http://www.w3.org/1999/xhtml",
+              "__shadowRoot": null,
+              "_nodeValue": null,
+              "childNodes": [],
+              "nodeName": "!DOCTYPE",
+              "nodeType": 10,
+              "ownerDocument": [Circular],
+              "parentNode": [Circular],
+            },
+            [Circular],
+          ],
+          "cookie": "",
+          "defaultView": [MockWindow],
+          "nodeName": "#document",
+          "nodeType": 9,
+          "ownerDocument": null,
+          "parentNode": null,
+          "referrer": "",
+        },
+        "parentNode": [Circular],
+      },
+      [Circular],
+    ],
+    "nodeName": "HTML",
+    "nodeType": 1,
+    "ownerDocument": _MockDocument {
+      "childNodes": [
+        MockDocumentTypeNode {
+          "__attributeMap": MockAttributeMap {
+            "__items": [
+              MockAttr {
+                "_name": "html",
+                "_namespaceURI": null,
+                "_value": "",
+              },
+            ],
+            "caseInsensitive": true,
+          },
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [],
+          "nodeName": "!DOCTYPE",
+          "nodeType": 10,
+          "ownerDocument": [Circular],
+          "parentNode": [Circular],
+        },
+        [Circular],
+      ],
+      "cookie": "",
+      "defaultView": [MockWindow],
+      "nodeName": "#document",
+      "nodeType": 9,
+      "ownerDocument": null,
+      "parentNode": null,
+      "referrer": "",
+    },
+    "parentNode": _MockDocument {
+      "childNodes": [
+        MockDocumentTypeNode {
+          "__attributeMap": MockAttributeMap {
+            "__items": [
+              MockAttr {
+                "_name": "html",
+                "_namespaceURI": null,
+                "_value": "",
+              },
+            ],
+            "caseInsensitive": true,
+          },
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [],
+          "nodeName": "!DOCTYPE",
+          "nodeType": 10,
+          "ownerDocument": [Circular],
+          "parentNode": [Circular],
+        },
+        [Circular],
+      ],
+      "cookie": "",
+      "defaultView": [MockWindow],
+      "nodeName": "#document",
+      "nodeType": 9,
+      "ownerDocument": null,
+      "parentNode": null,
+      "referrer": "",
+    },
+  },
+}
 `;
 
 exports[`gux-tooltip #render should render component as expected (1) 1`] = `
-<body>
-  <div aria-describedby="gux-tooltip-i">
-    <div>
-      Element
+MockHTMLElement {
+  "__attributeMap": MockAttributeMap {
+    "__items": [],
+    "caseInsensitive": true,
+  },
+  "__listeners": null,
+  "__namespaceURI": "http://www.w3.org/1999/xhtml",
+  "_nodeValue": null,
+  "childNodes": [
+    MockHTMLElement {
+      "__attributeMap": MockAttributeMap {
+        "__items": [
+          MockAttr {
+            "_name": "aria-describedby",
+            "_namespaceURI": null,
+            "_value": "gux-tooltip-i",
+          },
+        ],
+        "caseInsensitive": true,
+      },
+      "__listeners": [
+        MockEventListener {
+          "handler": [Function],
+          "type": "pointerenter",
+        },
+        MockEventListener {
+          "handler": [Function],
+          "type": "pointerleave",
+        },
+        MockEventListener {
+          "handler": [Function],
+          "type": "focusin",
+        },
+        MockEventListener {
+          "handler": [Function],
+          "type": "focusout",
+        },
+      ],
+      "__namespaceURI": "http://www.w3.org/1999/xhtml",
+      "__shadowRoot": null,
+      "_nodeValue": null,
+      "childNodes": [
+        _MockTextNode {
+          "_nodeValue": "
+          ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        MockHTMLElement {
+          "__attributeMap": MockAttributeMap {
+            "__items": [],
+            "caseInsensitive": true,
+          },
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [
+            _MockTextNode {
+              "_nodeValue": "Element",
+              "childNodes": [],
+              "nodeName": "#text",
+              "nodeType": 3,
+              "ownerDocument": _MockDocument {
+                "childNodes": [
+                  MockDocumentTypeNode {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "html",
+                          "_namespaceURI": null,
+                          "_value": "",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "__shadowRoot": null,
+                    "_nodeValue": null,
+                    "childNodes": [],
+                    "nodeName": "!DOCTYPE",
+                    "nodeType": 10,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "lang",
+                          "_namespaceURI": null,
+                          "_value": "en",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockHTMLElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "_nodeValue": null,
+                        "childNodes": [
+                          MockStyleElement {
+                            "__attributeMap": MockAttributeMap {
+                              "__items": [
+                                MockAttr {
+                                  "_name": "data-styles",
+                                  "_namespaceURI": null,
+                                  "_value": "",
+                                },
+                              ],
+                              "caseInsensitive": true,
+                            },
+                            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                            "__shadowRoot": null,
+                            "_nodeValue": null,
+                            "childNodes": [
+                              _MockTextNode {
+                                "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                                "childNodes": [],
+                                "nodeName": "#text",
+                                "nodeType": 3,
+                                "ownerDocument": [Circular],
+                                "parentNode": [Circular],
+                              },
+                            ],
+                            "nodeName": "STYLE",
+                            "nodeType": 1,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                            "sheet": MockCSSStyleSheet {
+                              "cssRules": [
+                                MockCSSRule {
+                                  "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                                  "parentStyleSheet": [Circular],
+                                  "type": 0,
+                                },
+                              ],
+                              "ownerNode": [Circular],
+                              "parentStyleSheet": null,
+                              "type": "text/css",
+                            },
+                          },
+                        ],
+                        "nodeName": "HEAD",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                      },
+                      [Circular],
+                    ],
+                    "nodeName": "HTML",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                ],
+                "cookie": "",
+                "defaultView": [MockWindow],
+                "nodeName": "#document",
+                "nodeType": 9,
+                "ownerDocument": null,
+                "parentNode": null,
+                "referrer": "",
+              },
+              "parentNode": [Circular],
+            },
+          ],
+          "nodeName": "DIV",
+          "nodeType": 1,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        _MockTextNode {
+          "_nodeValue": "
+          ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        <gux-tooltip id="gux-tooltip-i" role="tooltip">
+  <template shadowrootmode="open">
+    <div class="gux-container gux-light" data-placement="bottom-start">
+      <slot name="content">
+        <slot>
+        </slot>
+      </slot>
     </div>
-    <gux-tooltip id="gux-tooltip-i" role="tooltip">
-      <template shadowrootmode="open">
-        <div class="gux-container gux-light" data-placement="bottom-start">
-          <slot name="content">
-            <slot></slot>
-          </slot>
-        </div>
-      </template>
-      <div slot="content">
-        Tooltip
-      </div>
-    </gux-tooltip>
+  </template>
+  <div slot="content">
+    Tooltip
   </div>
-</body>
+</gux-tooltip>,
+        _MockTextNode {
+          "_nodeValue": "
+        ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+      ],
+      "nodeName": "DIV",
+      "nodeType": 1,
+      "ownerDocument": _MockDocument {
+        "childNodes": [
+          MockDocumentTypeNode {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "html",
+                  "_namespaceURI": null,
+                  "_value": "",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "__shadowRoot": null,
+            "_nodeValue": null,
+            "childNodes": [],
+            "nodeName": "!DOCTYPE",
+            "nodeType": 10,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+          MockHTMLElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "lang",
+                  "_namespaceURI": null,
+                  "_value": "en",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "_nodeValue": null,
+            "childNodes": [
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockStyleElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "data-styles",
+                          "_namespaceURI": null,
+                          "_value": "",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "__shadowRoot": null,
+                    "_nodeValue": null,
+                    "childNodes": [
+                      _MockTextNode {
+                        "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                        "childNodes": [],
+                        "nodeName": "#text",
+                        "nodeType": 3,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                      },
+                    ],
+                    "nodeName": "STYLE",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                    "sheet": MockCSSStyleSheet {
+                      "cssRules": [
+                        MockCSSRule {
+                          "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                          "parentStyleSheet": [Circular],
+                          "type": 0,
+                        },
+                      ],
+                      "ownerNode": [Circular],
+                      "parentStyleSheet": null,
+                      "type": "text/css",
+                    },
+                  },
+                ],
+                "nodeName": "HEAD",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              [Circular],
+            ],
+            "nodeName": "HTML",
+            "nodeType": 1,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+        ],
+        "cookie": "",
+        "defaultView": [MockWindow],
+        "nodeName": "#document",
+        "nodeType": 9,
+        "ownerDocument": null,
+        "parentNode": null,
+        "referrer": "",
+      },
+      "parentNode": [Circular],
+    },
+  ],
+  "nodeName": "BODY",
+  "nodeType": 1,
+  "ownerDocument": _MockDocument {
+    "childNodes": [
+      MockDocumentTypeNode {
+        "__attributeMap": MockAttributeMap {
+          "__items": [
+            MockAttr {
+              "_name": "html",
+              "_namespaceURI": null,
+              "_value": "",
+            },
+          ],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "__shadowRoot": null,
+        "_nodeValue": null,
+        "childNodes": [],
+        "nodeName": "!DOCTYPE",
+        "nodeType": 10,
+        "ownerDocument": [Circular],
+        "parentNode": [Circular],
+      },
+      MockHTMLElement {
+        "__attributeMap": MockAttributeMap {
+          "__items": [
+            MockAttr {
+              "_name": "lang",
+              "_namespaceURI": null,
+              "_value": "en",
+            },
+          ],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "_nodeValue": null,
+        "childNodes": [
+          MockHTMLElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "_nodeValue": null,
+            "childNodes": [
+              MockStyleElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "data-styles",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [
+                  _MockTextNode {
+                    "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                    "childNodes": [],
+                    "nodeName": "#text",
+                    "nodeType": 3,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                ],
+                "nodeName": "STYLE",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+                "sheet": MockCSSStyleSheet {
+                  "cssRules": [
+                    MockCSSRule {
+                      "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                      "parentStyleSheet": [Circular],
+                      "type": 0,
+                    },
+                  ],
+                  "ownerNode": [Circular],
+                  "parentStyleSheet": null,
+                  "type": "text/css",
+                },
+              },
+            ],
+            "nodeName": "HEAD",
+            "nodeType": 1,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+          [Circular],
+        ],
+        "nodeName": "HTML",
+        "nodeType": 1,
+        "ownerDocument": [Circular],
+        "parentNode": [Circular],
+      },
+    ],
+    "cookie": "",
+    "defaultView": [MockWindow],
+    "nodeName": "#document",
+    "nodeType": 9,
+    "ownerDocument": null,
+    "parentNode": null,
+    "referrer": "",
+  },
+  "parentNode": MockHTMLElement {
+    "__attributeMap": MockAttributeMap {
+      "__items": [
+        MockAttr {
+          "_name": "lang",
+          "_namespaceURI": null,
+          "_value": "en",
+        },
+      ],
+      "caseInsensitive": true,
+    },
+    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+    "_nodeValue": null,
+    "childNodes": [
+      MockHTMLElement {
+        "__attributeMap": MockAttributeMap {
+          "__items": [],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "_nodeValue": null,
+        "childNodes": [
+          MockStyleElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "data-styles",
+                  "_namespaceURI": null,
+                  "_value": "",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "__shadowRoot": null,
+            "_nodeValue": null,
+            "childNodes": [
+              _MockTextNode {
+                "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                "childNodes": [],
+                "nodeName": "#text",
+                "nodeType": 3,
+                "ownerDocument": _MockDocument {
+                  "childNodes": [
+                    MockDocumentTypeNode {
+                      "__attributeMap": MockAttributeMap {
+                        "__items": [
+                          MockAttr {
+                            "_name": "html",
+                            "_namespaceURI": null,
+                            "_value": "",
+                          },
+                        ],
+                        "caseInsensitive": true,
+                      },
+                      "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                      "__shadowRoot": null,
+                      "_nodeValue": null,
+                      "childNodes": [],
+                      "nodeName": "!DOCTYPE",
+                      "nodeType": 10,
+                      "ownerDocument": [Circular],
+                      "parentNode": [Circular],
+                    },
+                    [Circular],
+                  ],
+                  "cookie": "",
+                  "defaultView": [MockWindow],
+                  "nodeName": "#document",
+                  "nodeType": 9,
+                  "ownerDocument": null,
+                  "parentNode": null,
+                  "referrer": "",
+                },
+                "parentNode": [Circular],
+              },
+            ],
+            "nodeName": "STYLE",
+            "nodeType": 1,
+            "ownerDocument": _MockDocument {
+              "childNodes": [
+                MockDocumentTypeNode {
+                  "__attributeMap": MockAttributeMap {
+                    "__items": [
+                      MockAttr {
+                        "_name": "html",
+                        "_namespaceURI": null,
+                        "_value": "",
+                      },
+                    ],
+                    "caseInsensitive": true,
+                  },
+                  "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                  "__shadowRoot": null,
+                  "_nodeValue": null,
+                  "childNodes": [],
+                  "nodeName": "!DOCTYPE",
+                  "nodeType": 10,
+                  "ownerDocument": [Circular],
+                  "parentNode": [Circular],
+                },
+                [Circular],
+              ],
+              "cookie": "",
+              "defaultView": [MockWindow],
+              "nodeName": "#document",
+              "nodeType": 9,
+              "ownerDocument": null,
+              "parentNode": null,
+              "referrer": "",
+            },
+            "parentNode": [Circular],
+            "sheet": MockCSSStyleSheet {
+              "cssRules": [
+                MockCSSRule {
+                  "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                  "parentStyleSheet": [Circular],
+                  "type": 0,
+                },
+              ],
+              "ownerNode": [Circular],
+              "parentStyleSheet": null,
+              "type": "text/css",
+            },
+          },
+        ],
+        "nodeName": "HEAD",
+        "nodeType": 1,
+        "ownerDocument": _MockDocument {
+          "childNodes": [
+            MockDocumentTypeNode {
+              "__attributeMap": MockAttributeMap {
+                "__items": [
+                  MockAttr {
+                    "_name": "html",
+                    "_namespaceURI": null,
+                    "_value": "",
+                  },
+                ],
+                "caseInsensitive": true,
+              },
+              "__namespaceURI": "http://www.w3.org/1999/xhtml",
+              "__shadowRoot": null,
+              "_nodeValue": null,
+              "childNodes": [],
+              "nodeName": "!DOCTYPE",
+              "nodeType": 10,
+              "ownerDocument": [Circular],
+              "parentNode": [Circular],
+            },
+            [Circular],
+          ],
+          "cookie": "",
+          "defaultView": [MockWindow],
+          "nodeName": "#document",
+          "nodeType": 9,
+          "ownerDocument": null,
+          "parentNode": null,
+          "referrer": "",
+        },
+        "parentNode": [Circular],
+      },
+      [Circular],
+    ],
+    "nodeName": "HTML",
+    "nodeType": 1,
+    "ownerDocument": _MockDocument {
+      "childNodes": [
+        MockDocumentTypeNode {
+          "__attributeMap": MockAttributeMap {
+            "__items": [
+              MockAttr {
+                "_name": "html",
+                "_namespaceURI": null,
+                "_value": "",
+              },
+            ],
+            "caseInsensitive": true,
+          },
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [],
+          "nodeName": "!DOCTYPE",
+          "nodeType": 10,
+          "ownerDocument": [Circular],
+          "parentNode": [Circular],
+        },
+        [Circular],
+      ],
+      "cookie": "",
+      "defaultView": [MockWindow],
+      "nodeName": "#document",
+      "nodeType": 9,
+      "ownerDocument": null,
+      "parentNode": null,
+      "referrer": "",
+    },
+    "parentNode": _MockDocument {
+      "childNodes": [
+        MockDocumentTypeNode {
+          "__attributeMap": MockAttributeMap {
+            "__items": [
+              MockAttr {
+                "_name": "html",
+                "_namespaceURI": null,
+                "_value": "",
+              },
+            ],
+            "caseInsensitive": true,
+          },
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [],
+          "nodeName": "!DOCTYPE",
+          "nodeType": 10,
+          "ownerDocument": [Circular],
+          "parentNode": [Circular],
+        },
+        [Circular],
+      ],
+      "cookie": "",
+      "defaultView": [MockWindow],
+      "nodeName": "#document",
+      "nodeType": 9,
+      "ownerDocument": null,
+      "parentNode": null,
+      "referrer": "",
+    },
+  },
+}
 `;
 
 exports[`gux-tooltip #render should render component as expected (2) 1`] = `
-<body>
-  <div>
-    <div aria-describedby="gux-tooltip-i" id="element">
-      Element
+MockHTMLElement {
+  "__attributeMap": MockAttributeMap {
+    "__items": [],
+    "caseInsensitive": true,
+  },
+  "__listeners": null,
+  "__namespaceURI": "http://www.w3.org/1999/xhtml",
+  "_nodeValue": null,
+  "childNodes": [
+    MockHTMLElement {
+      "__attributeMap": MockAttributeMap {
+        "__items": [],
+        "caseInsensitive": true,
+      },
+      "__namespaceURI": "http://www.w3.org/1999/xhtml",
+      "__shadowRoot": null,
+      "_nodeValue": null,
+      "childNodes": [
+        _MockTextNode {
+          "_nodeValue": "
+          ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        MockHTMLElement {
+          "__attributeMap": MockAttributeMap {
+            "__items": [
+              MockAttr {
+                "_name": "id",
+                "_namespaceURI": null,
+                "_value": "element",
+              },
+              MockAttr {
+                "_name": "aria-describedby",
+                "_namespaceURI": null,
+                "_value": "gux-tooltip-i",
+              },
+            ],
+            "caseInsensitive": true,
+          },
+          "__listeners": [
+            MockEventListener {
+              "handler": [Function],
+              "type": "pointerenter",
+            },
+            MockEventListener {
+              "handler": [Function],
+              "type": "pointerleave",
+            },
+            MockEventListener {
+              "handler": [Function],
+              "type": "focusin",
+            },
+            MockEventListener {
+              "handler": [Function],
+              "type": "focusout",
+            },
+          ],
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [
+            _MockTextNode {
+              "_nodeValue": "Element",
+              "childNodes": [],
+              "nodeName": "#text",
+              "nodeType": 3,
+              "ownerDocument": _MockDocument {
+                "childNodes": [
+                  MockDocumentTypeNode {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "html",
+                          "_namespaceURI": null,
+                          "_value": "",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "__shadowRoot": null,
+                    "_nodeValue": null,
+                    "childNodes": [],
+                    "nodeName": "!DOCTYPE",
+                    "nodeType": 10,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "lang",
+                          "_namespaceURI": null,
+                          "_value": "en",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockHTMLElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "_nodeValue": null,
+                        "childNodes": [
+                          MockStyleElement {
+                            "__attributeMap": MockAttributeMap {
+                              "__items": [
+                                MockAttr {
+                                  "_name": "data-styles",
+                                  "_namespaceURI": null,
+                                  "_value": "",
+                                },
+                              ],
+                              "caseInsensitive": true,
+                            },
+                            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                            "__shadowRoot": null,
+                            "_nodeValue": null,
+                            "childNodes": [
+                              _MockTextNode {
+                                "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                                "childNodes": [],
+                                "nodeName": "#text",
+                                "nodeType": 3,
+                                "ownerDocument": [Circular],
+                                "parentNode": [Circular],
+                              },
+                            ],
+                            "nodeName": "STYLE",
+                            "nodeType": 1,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                            "sheet": MockCSSStyleSheet {
+                              "cssRules": [
+                                MockCSSRule {
+                                  "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                                  "parentStyleSheet": [Circular],
+                                  "type": 0,
+                                },
+                              ],
+                              "ownerNode": [Circular],
+                              "parentStyleSheet": null,
+                              "type": "text/css",
+                            },
+                          },
+                        ],
+                        "nodeName": "HEAD",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                      },
+                      [Circular],
+                    ],
+                    "nodeName": "HTML",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                ],
+                "cookie": "",
+                "defaultView": [MockWindow],
+                "nodeName": "#document",
+                "nodeType": 9,
+                "ownerDocument": null,
+                "parentNode": null,
+                "referrer": "",
+              },
+              "parentNode": [Circular],
+            },
+          ],
+          "nodeName": "DIV",
+          "nodeType": 1,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        _MockTextNode {
+          "_nodeValue": "
+          ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+        <gux-tooltip for="element" id="gux-tooltip-i" role="tooltip">
+  <template shadowrootmode="open">
+    <div class="gux-container gux-light" data-placement="bottom-start">
+      <slot name="content">
+        <slot>
+        </slot>
+      </slot>
     </div>
-    <gux-tooltip for="element" id="gux-tooltip-i" role="tooltip">
-      <template shadowrootmode="open">
-        <div class="gux-container gux-light" data-placement="bottom-start">
-          <slot name="content">
-            <slot></slot>
-          </slot>
-        </div>
-      </template>
-      <div slot="content">
-        Tooltip
-      </div>
-    </gux-tooltip>
+  </template>
+  <div slot="content">
+    Tooltip
   </div>
-</body>
+</gux-tooltip>,
+        _MockTextNode {
+          "_nodeValue": "
+        ",
+          "childNodes": [],
+          "nodeName": "#text",
+          "nodeType": 3,
+          "ownerDocument": _MockDocument {
+            "childNodes": [
+              MockDocumentTypeNode {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "html",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [],
+                "nodeName": "!DOCTYPE",
+                "nodeType": 10,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "lang",
+                      "_namespaceURI": null,
+                      "_value": "en",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockHTMLElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "_nodeValue": null,
+                    "childNodes": [
+                      MockStyleElement {
+                        "__attributeMap": MockAttributeMap {
+                          "__items": [
+                            MockAttr {
+                              "_name": "data-styles",
+                              "_namespaceURI": null,
+                              "_value": "",
+                            },
+                          ],
+                          "caseInsensitive": true,
+                        },
+                        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                        "__shadowRoot": null,
+                        "_nodeValue": null,
+                        "childNodes": [
+                          _MockTextNode {
+                            "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                            "childNodes": [],
+                            "nodeName": "#text",
+                            "nodeType": 3,
+                            "ownerDocument": [Circular],
+                            "parentNode": [Circular],
+                          },
+                        ],
+                        "nodeName": "STYLE",
+                        "nodeType": 1,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                        "sheet": MockCSSStyleSheet {
+                          "cssRules": [
+                            MockCSSRule {
+                              "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                              "parentStyleSheet": [Circular],
+                              "type": 0,
+                            },
+                          ],
+                          "ownerNode": [Circular],
+                          "parentStyleSheet": null,
+                          "type": "text/css",
+                        },
+                      },
+                    ],
+                    "nodeName": "HEAD",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                  [Circular],
+                ],
+                "nodeName": "HTML",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+            ],
+            "cookie": "",
+            "defaultView": [MockWindow],
+            "nodeName": "#document",
+            "nodeType": 9,
+            "ownerDocument": null,
+            "parentNode": null,
+            "referrer": "",
+          },
+          "parentNode": [Circular],
+        },
+      ],
+      "nodeName": "DIV",
+      "nodeType": 1,
+      "ownerDocument": _MockDocument {
+        "childNodes": [
+          MockDocumentTypeNode {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "html",
+                  "_namespaceURI": null,
+                  "_value": "",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "__shadowRoot": null,
+            "_nodeValue": null,
+            "childNodes": [],
+            "nodeName": "!DOCTYPE",
+            "nodeType": 10,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+          MockHTMLElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "lang",
+                  "_namespaceURI": null,
+                  "_value": "en",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "_nodeValue": null,
+            "childNodes": [
+              MockHTMLElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "_nodeValue": null,
+                "childNodes": [
+                  MockStyleElement {
+                    "__attributeMap": MockAttributeMap {
+                      "__items": [
+                        MockAttr {
+                          "_name": "data-styles",
+                          "_namespaceURI": null,
+                          "_value": "",
+                        },
+                      ],
+                      "caseInsensitive": true,
+                    },
+                    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                    "__shadowRoot": null,
+                    "_nodeValue": null,
+                    "childNodes": [
+                      _MockTextNode {
+                        "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                        "childNodes": [],
+                        "nodeName": "#text",
+                        "nodeType": 3,
+                        "ownerDocument": [Circular],
+                        "parentNode": [Circular],
+                      },
+                    ],
+                    "nodeName": "STYLE",
+                    "nodeType": 1,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                    "sheet": MockCSSStyleSheet {
+                      "cssRules": [
+                        MockCSSRule {
+                          "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                          "parentStyleSheet": [Circular],
+                          "type": 0,
+                        },
+                      ],
+                      "ownerNode": [Circular],
+                      "parentStyleSheet": null,
+                      "type": "text/css",
+                    },
+                  },
+                ],
+                "nodeName": "HEAD",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+              },
+              [Circular],
+            ],
+            "nodeName": "HTML",
+            "nodeType": 1,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+        ],
+        "cookie": "",
+        "defaultView": [MockWindow],
+        "nodeName": "#document",
+        "nodeType": 9,
+        "ownerDocument": null,
+        "parentNode": null,
+        "referrer": "",
+      },
+      "parentNode": [Circular],
+    },
+  ],
+  "nodeName": "BODY",
+  "nodeType": 1,
+  "ownerDocument": _MockDocument {
+    "childNodes": [
+      MockDocumentTypeNode {
+        "__attributeMap": MockAttributeMap {
+          "__items": [
+            MockAttr {
+              "_name": "html",
+              "_namespaceURI": null,
+              "_value": "",
+            },
+          ],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "__shadowRoot": null,
+        "_nodeValue": null,
+        "childNodes": [],
+        "nodeName": "!DOCTYPE",
+        "nodeType": 10,
+        "ownerDocument": [Circular],
+        "parentNode": [Circular],
+      },
+      MockHTMLElement {
+        "__attributeMap": MockAttributeMap {
+          "__items": [
+            MockAttr {
+              "_name": "lang",
+              "_namespaceURI": null,
+              "_value": "en",
+            },
+          ],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "_nodeValue": null,
+        "childNodes": [
+          MockHTMLElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "_nodeValue": null,
+            "childNodes": [
+              MockStyleElement {
+                "__attributeMap": MockAttributeMap {
+                  "__items": [
+                    MockAttr {
+                      "_name": "data-styles",
+                      "_namespaceURI": null,
+                      "_value": "",
+                    },
+                  ],
+                  "caseInsensitive": true,
+                },
+                "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                "__shadowRoot": null,
+                "_nodeValue": null,
+                "childNodes": [
+                  _MockTextNode {
+                    "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                    "childNodes": [],
+                    "nodeName": "#text",
+                    "nodeType": 3,
+                    "ownerDocument": [Circular],
+                    "parentNode": [Circular],
+                  },
+                ],
+                "nodeName": "STYLE",
+                "nodeType": 1,
+                "ownerDocument": [Circular],
+                "parentNode": [Circular],
+                "sheet": MockCSSStyleSheet {
+                  "cssRules": [
+                    MockCSSRule {
+                      "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                      "parentStyleSheet": [Circular],
+                      "type": 0,
+                    },
+                  ],
+                  "ownerNode": [Circular],
+                  "parentStyleSheet": null,
+                  "type": "text/css",
+                },
+              },
+            ],
+            "nodeName": "HEAD",
+            "nodeType": 1,
+            "ownerDocument": [Circular],
+            "parentNode": [Circular],
+          },
+          [Circular],
+        ],
+        "nodeName": "HTML",
+        "nodeType": 1,
+        "ownerDocument": [Circular],
+        "parentNode": [Circular],
+      },
+    ],
+    "cookie": "",
+    "defaultView": [MockWindow],
+    "nodeName": "#document",
+    "nodeType": 9,
+    "ownerDocument": null,
+    "parentNode": null,
+    "referrer": "",
+  },
+  "parentNode": MockHTMLElement {
+    "__attributeMap": MockAttributeMap {
+      "__items": [
+        MockAttr {
+          "_name": "lang",
+          "_namespaceURI": null,
+          "_value": "en",
+        },
+      ],
+      "caseInsensitive": true,
+    },
+    "__namespaceURI": "http://www.w3.org/1999/xhtml",
+    "_nodeValue": null,
+    "childNodes": [
+      MockHTMLElement {
+        "__attributeMap": MockAttributeMap {
+          "__items": [],
+          "caseInsensitive": true,
+        },
+        "__namespaceURI": "http://www.w3.org/1999/xhtml",
+        "_nodeValue": null,
+        "childNodes": [
+          MockStyleElement {
+            "__attributeMap": MockAttributeMap {
+              "__items": [
+                MockAttr {
+                  "_name": "data-styles",
+                  "_namespaceURI": null,
+                  "_value": "",
+                },
+              ],
+              "caseInsensitive": true,
+            },
+            "__namespaceURI": "http://www.w3.org/1999/xhtml",
+            "__shadowRoot": null,
+            "_nodeValue": null,
+            "childNodes": [
+              _MockTextNode {
+                "_nodeValue": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                "childNodes": [],
+                "nodeName": "#text",
+                "nodeType": 3,
+                "ownerDocument": _MockDocument {
+                  "childNodes": [
+                    MockDocumentTypeNode {
+                      "__attributeMap": MockAttributeMap {
+                        "__items": [
+                          MockAttr {
+                            "_name": "html",
+                            "_namespaceURI": null,
+                            "_value": "",
+                          },
+                        ],
+                        "caseInsensitive": true,
+                      },
+                      "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                      "__shadowRoot": null,
+                      "_nodeValue": null,
+                      "childNodes": [],
+                      "nodeName": "!DOCTYPE",
+                      "nodeType": 10,
+                      "ownerDocument": [Circular],
+                      "parentNode": [Circular],
+                    },
+                    [Circular],
+                  ],
+                  "cookie": "",
+                  "defaultView": [MockWindow],
+                  "nodeName": "#document",
+                  "nodeType": 9,
+                  "ownerDocument": null,
+                  "parentNode": null,
+                  "referrer": "",
+                },
+                "parentNode": [Circular],
+              },
+            ],
+            "nodeName": "STYLE",
+            "nodeType": 1,
+            "ownerDocument": _MockDocument {
+              "childNodes": [
+                MockDocumentTypeNode {
+                  "__attributeMap": MockAttributeMap {
+                    "__items": [
+                      MockAttr {
+                        "_name": "html",
+                        "_namespaceURI": null,
+                        "_value": "",
+                      },
+                    ],
+                    "caseInsensitive": true,
+                  },
+                  "__namespaceURI": "http://www.w3.org/1999/xhtml",
+                  "__shadowRoot": null,
+                  "_nodeValue": null,
+                  "childNodes": [],
+                  "nodeName": "!DOCTYPE",
+                  "nodeType": 10,
+                  "ownerDocument": [Circular],
+                  "parentNode": [Circular],
+                },
+                [Circular],
+              ],
+              "cookie": "",
+              "defaultView": [MockWindow],
+              "nodeName": "#document",
+              "nodeType": 9,
+              "ownerDocument": null,
+              "parentNode": null,
+              "referrer": "",
+            },
+            "parentNode": [Circular],
+            "sheet": MockCSSStyleSheet {
+              "cssRules": [
+                MockCSSRule {
+                  "cssText": "gux-tooltip{visibility:hidden}.hydrated{visibility:inherit}",
+                  "parentStyleSheet": [Circular],
+                  "type": 0,
+                },
+              ],
+              "ownerNode": [Circular],
+              "parentStyleSheet": null,
+              "type": "text/css",
+            },
+          },
+        ],
+        "nodeName": "HEAD",
+        "nodeType": 1,
+        "ownerDocument": _MockDocument {
+          "childNodes": [
+            MockDocumentTypeNode {
+              "__attributeMap": MockAttributeMap {
+                "__items": [
+                  MockAttr {
+                    "_name": "html",
+                    "_namespaceURI": null,
+                    "_value": "",
+                  },
+                ],
+                "caseInsensitive": true,
+              },
+              "__namespaceURI": "http://www.w3.org/1999/xhtml",
+              "__shadowRoot": null,
+              "_nodeValue": null,
+              "childNodes": [],
+              "nodeName": "!DOCTYPE",
+              "nodeType": 10,
+              "ownerDocument": [Circular],
+              "parentNode": [Circular],
+            },
+            [Circular],
+          ],
+          "cookie": "",
+          "defaultView": [MockWindow],
+          "nodeName": "#document",
+          "nodeType": 9,
+          "ownerDocument": null,
+          "parentNode": null,
+          "referrer": "",
+        },
+        "parentNode": [Circular],
+      },
+      [Circular],
+    ],
+    "nodeName": "HTML",
+    "nodeType": 1,
+    "ownerDocument": _MockDocument {
+      "childNodes": [
+        MockDocumentTypeNode {
+          "__attributeMap": MockAttributeMap {
+            "__items": [
+              MockAttr {
+                "_name": "html",
+                "_namespaceURI": null,
+                "_value": "",
+              },
+            ],
+            "caseInsensitive": true,
+          },
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [],
+          "nodeName": "!DOCTYPE",
+          "nodeType": 10,
+          "ownerDocument": [Circular],
+          "parentNode": [Circular],
+        },
+        [Circular],
+      ],
+      "cookie": "",
+      "defaultView": [MockWindow],
+      "nodeName": "#document",
+      "nodeType": 9,
+      "ownerDocument": null,
+      "parentNode": null,
+      "referrer": "",
+    },
+    "parentNode": _MockDocument {
+      "childNodes": [
+        MockDocumentTypeNode {
+          "__attributeMap": MockAttributeMap {
+            "__items": [
+              MockAttr {
+                "_name": "html",
+                "_namespaceURI": null,
+                "_value": "",
+              },
+            ],
+            "caseInsensitive": true,
+          },
+          "__namespaceURI": "http://www.w3.org/1999/xhtml",
+          "__shadowRoot": null,
+          "_nodeValue": null,
+          "childNodes": [],
+          "nodeName": "!DOCTYPE",
+          "nodeType": 10,
+          "ownerDocument": [Circular],
+          "parentNode": [Circular],
+        },
+        [Circular],
+      ],
+      "cookie": "",
+      "defaultView": [MockWindow],
+      "nodeName": "#document",
+      "nodeType": 9,
+      "ownerDocument": null,
+      "parentNode": null,
+      "referrer": "",
+    },
+  },
+}
 `;

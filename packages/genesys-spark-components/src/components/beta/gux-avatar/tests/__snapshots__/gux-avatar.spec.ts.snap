@@ -1,46 +1,46 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-avatar #render component with image type (1) for valid markup 1`] = `
 <gux-avatar-beta name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
   </template>
-  <img alt="John Doe Image" slot="image" src="https://i.pravatar.cc/300">
+  <img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300">
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render component with image type (2) for valid markup 1`] = `
 <gux-avatar-beta name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
   </template>
-  <img alt="John Doe Image" slot="image" src="https://i.pravatar.cc/300">
+  <img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300">
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render component with name type (1) for valid markup 1`] = `
 <gux-avatar-beta name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -53,10 +53,10 @@ exports[`gux-avatar #render component with name type (1) for valid markup 1`] = 
 exports[`gux-avatar #render component with name type (2) for valid markup 1`] = `
 <gux-avatar-beta name="JohnDoe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="JohnDoe" role="img">
+          <span role="img" aria-label="JohnDoe">
             Jo
           </span>
         </slot>
@@ -69,10 +69,10 @@ exports[`gux-avatar #render component with name type (2) for valid markup 1`] = 
 exports[`gux-avatar #render component with name type (3) for valid markup 1`] = `
 <gux-avatar-beta name="山田 太郎">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="山田 太郎" role="img">
+          <span role="img" aria-label="山田 太郎">
             山太
           </span>
         </slot>
@@ -85,10 +85,10 @@ exports[`gux-avatar #render component with name type (3) for valid markup 1`] = 
 exports[`gux-avatar #render component with name type (4) for valid markup 1`] = `
 <gux-avatar-beta name="이 영수">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="이 영수" role="img">
+          <span role="img" aria-label="이 영수">
             이영
           </span>
         </slot>
@@ -101,10 +101,10 @@ exports[`gux-avatar #render component with name type (4) for valid markup 1`] = 
 exports[`gux-avatar #render component with name type (5) for valid markup 1`] = `
 <gux-avatar-beta name="邓 小平">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="邓 小平" role="img">
+          <span role="img" aria-label="邓 小平">
             邓小
           </span>
         </slot>
@@ -115,12 +115,12 @@ exports[`gux-avatar #render component with name type (5) for valid markup 1`] = 
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "0" 1`] = `
-<gux-avatar-beta accent="0" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="0">
   <template shadowrootmode="open">
-    <div class="gux-accent-0 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-0">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -131,12 +131,12 @@ exports[`gux-avatar #render different accents should work as expected for "0" 1`
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "1" 1`] = `
-<gux-avatar-beta accent="1" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="1">
   <template shadowrootmode="open">
-    <div class="gux-accent-1 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-1">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -147,12 +147,12 @@ exports[`gux-avatar #render different accents should work as expected for "1" 1`
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "2" 1`] = `
-<gux-avatar-beta accent="2" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="2">
   <template shadowrootmode="open">
-    <div class="gux-accent-2 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-2">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -163,12 +163,12 @@ exports[`gux-avatar #render different accents should work as expected for "2" 1`
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "3" 1`] = `
-<gux-avatar-beta accent="3" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="3">
   <template shadowrootmode="open">
-    <div class="gux-accent-3 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-3">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -179,12 +179,12 @@ exports[`gux-avatar #render different accents should work as expected for "3" 1`
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "4" 1`] = `
-<gux-avatar-beta accent="4" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="4">
   <template shadowrootmode="open">
-    <div class="gux-accent-4 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-4">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -195,12 +195,12 @@ exports[`gux-avatar #render different accents should work as expected for "4" 1`
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "5" 1`] = `
-<gux-avatar-beta accent="5" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="5">
   <template shadowrootmode="open">
-    <div class="gux-accent-5 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-5">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -211,12 +211,12 @@ exports[`gux-avatar #render different accents should work as expected for "5" 1`
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "6" 1`] = `
-<gux-avatar-beta accent="6" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="6">
   <template shadowrootmode="open">
-    <div class="gux-accent-6 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-6">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -227,12 +227,12 @@ exports[`gux-avatar #render different accents should work as expected for "6" 1`
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "7" 1`] = `
-<gux-avatar-beta accent="7" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="7">
   <template shadowrootmode="open">
-    <div class="gux-accent-7 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-7">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -243,12 +243,12 @@ exports[`gux-avatar #render different accents should work as expected for "7" 1`
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "8" 1`] = `
-<gux-avatar-beta accent="8" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="8">
   <template shadowrootmode="open">
-    <div class="gux-accent-8 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-8">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -259,12 +259,12 @@ exports[`gux-avatar #render different accents should work as expected for "8" 1`
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "9" 1`] = `
-<gux-avatar-beta accent="9" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="9">
   <template shadowrootmode="open">
-    <div class="gux-accent-9 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-9">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -275,12 +275,12 @@ exports[`gux-avatar #render different accents should work as expected for "9" 1`
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "10" 1`] = `
-<gux-avatar-beta accent="10" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="10">
   <template shadowrootmode="open">
-    <div class="gux-accent-10 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-10">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -291,12 +291,12 @@ exports[`gux-avatar #render different accents should work as expected for "10" 1
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "11" 1`] = `
-<gux-avatar-beta accent="11" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="11">
   <template shadowrootmode="open">
-    <div class="gux-accent-11 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-11">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -307,12 +307,12 @@ exports[`gux-avatar #render different accents should work as expected for "11" 1
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "12" 1`] = `
-<gux-avatar-beta accent="12" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="12">
   <template shadowrootmode="open">
-    <div class="gux-accent-12 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-12">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -323,12 +323,12 @@ exports[`gux-avatar #render different accents should work as expected for "12" 1
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "auto" 1`] = `
-<gux-avatar-beta accent="auto" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="auto">
   <template shadowrootmode="open">
-    <div class="gux-accent-3 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-3">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -339,12 +339,12 @@ exports[`gux-avatar #render different accents should work as expected for "auto"
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "default" 1`] = `
-<gux-avatar-beta accent="default" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="default">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -355,12 +355,12 @@ exports[`gux-avatar #render different accents should work as expected for "defau
 `;
 
 exports[`gux-avatar #render different accents should work as expected for "invalid-accent" 1`] = `
-<gux-avatar-beta accent="invalid-accent" name="John Doe">
+<gux-avatar-beta name="John Doe" accent="invalid-accent">
   <template shadowrootmode="open">
-    <div class="gux-accent-invalid-accent gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-invalid-accent">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -371,69 +371,72 @@ exports[`gux-avatar #render different accents should work as expected for "inval
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "available" 1`] = `
-<gux-avatar-beta badge="" name="John Doe" presence="available">
+<gux-avatar-beta badge="" presence="available" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-available gux-avatar gux-large">
+    <div class="gux-avatar gux-available gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
-    <div aria-hidden="true" class="gux-available gux-avatar-badge gux-large">
-      <gux-icon decorative="" icon-name="fa/circle-check-solid"></gux-icon>
+    <div aria-hidden="true" class="gux-avatar-badge gux-available gux-large">
+      <gux-icon icon-name="fa/circle-check-solid" decorative="">
+      </gux-icon>
     </div>
   </template>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "away" 1`] = `
-<gux-avatar-beta badge="" name="John Doe" presence="away">
+<gux-avatar-beta badge="" presence="away" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-away gux-large">
+    <div class="gux-avatar gux-away gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
     <div aria-hidden="true" class="gux-avatar-badge gux-away gux-large">
-      <gux-icon decorative="" icon-name="fa/clock-outline"></gux-icon>
+      <gux-icon icon-name="fa/clock-outline" decorative="">
+      </gux-icon>
     </div>
   </template>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "busy" 1`] = `
-<gux-avatar-beta badge="" name="John Doe" presence="busy">
+<gux-avatar-beta badge="" presence="busy" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-busy gux-large">
+    <div class="gux-avatar gux-busy gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
     <div aria-hidden="true" class="gux-avatar-badge gux-busy gux-large">
-      <gux-icon decorative="" icon-name="fa/ban-outline"></gux-icon>
+      <gux-icon icon-name="fa/ban-outline" decorative="">
+      </gux-icon>
     </div>
   </template>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "idle" 1`] = `
-<gux-avatar-beta badge="" name="John Doe" presence="idle">
+<gux-avatar-beta badge="" presence="idle" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-idle gux-large">
+    <div class="gux-avatar gux-idle gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -444,133 +447,140 @@ exports[`gux-avatar #render different presences should work as expected for "idl
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "invalid-presence" 1`] = `
-<gux-avatar-beta badge="" name="John Doe" presence="invalid-presence">
+<gux-avatar-beta badge="" presence="invalid-presence" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-invalid-presence gux-large">
+    <div class="gux-avatar gux-invalid-presence gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
     <div aria-hidden="true" class="gux-avatar-badge gux-invalid-presence gux-large">
-      <gux-icon decorative="" icon-name="fa/circle-xmark-regular"></gux-icon>
+      <gux-icon icon-name="fa/circle-xmark-regular" decorative="">
+      </gux-icon>
     </div>
   </template>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "meal" 1`] = `
-<gux-avatar-beta badge="" name="John Doe" presence="meal">
+<gux-avatar-beta badge="" presence="meal" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large gux-meal">
+    <div class="gux-avatar gux-meal gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
-    <div aria-hidden="true" class="gux-avatar-badge gux-large gux-meal">
-      <gux-icon decorative="" icon-name="fa/clock-outline"></gux-icon>
+    <div aria-hidden="true" class="gux-avatar-badge gux-meal gux-large">
+      <gux-icon icon-name="fa/clock-outline" decorative="">
+      </gux-icon>
     </div>
   </template>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "meeting" 1`] = `
-<gux-avatar-beta badge="" name="John Doe" presence="meeting">
+<gux-avatar-beta badge="" presence="meeting" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large gux-meeting">
+    <div class="gux-avatar gux-meeting gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
-    <div aria-hidden="true" class="gux-avatar-badge gux-large gux-meeting">
-      <gux-icon decorative="" icon-name="fa/ban-outline"></gux-icon>
+    <div aria-hidden="true" class="gux-avatar-badge gux-meeting gux-large">
+      <gux-icon icon-name="fa/ban-outline" decorative="">
+      </gux-icon>
     </div>
   </template>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "offline" 1`] = `
-<gux-avatar-beta badge="" name="John Doe" presence="offline">
+<gux-avatar-beta badge="" presence="offline" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large gux-offline">
+    <div class="gux-avatar gux-offline gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
-    <div aria-hidden="true" class="gux-avatar-badge gux-large gux-offline">
-      <gux-icon decorative="" icon-name="fa/circle-xmark-regular"></gux-icon>
+    <div aria-hidden="true" class="gux-avatar-badge gux-offline gux-large">
+      <gux-icon icon-name="fa/circle-xmark-regular" decorative="">
+      </gux-icon>
     </div>
   </template>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "on-queue" 1`] = `
-<gux-avatar-beta badge="" name="John Doe" presence="on-queue">
+<gux-avatar-beta badge="" presence="on-queue" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large gux-on-queue">
+    <div class="gux-avatar gux-on-queue gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
-    <div aria-hidden="true" class="gux-avatar-badge gux-large gux-on-queue">
-      <gux-icon decorative="" icon-name="fa/headset-solid"></gux-icon>
+    <div aria-hidden="true" class="gux-avatar-badge gux-on-queue gux-large">
+      <gux-icon icon-name="fa/headset-solid" decorative="">
+      </gux-icon>
     </div>
   </template>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "out-of-office" 1`] = `
-<gux-avatar-beta badge="" name="John Doe" presence="out-of-office">
+<gux-avatar-beta badge="" presence="out-of-office" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large gux-out-of-office">
+    <div class="gux-avatar gux-out-of-office gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
-    <div aria-hidden="true" class="gux-avatar-badge gux-large gux-out-of-office">
-      <gux-icon decorative="" icon-name="fa/subtract-circle"></gux-icon>
+    <div aria-hidden="true" class="gux-avatar-badge gux-out-of-office gux-large">
+      <gux-icon icon-name="fa/subtract-circle" decorative="">
+      </gux-icon>
     </div>
   </template>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "training" 1`] = `
-<gux-avatar-beta badge="" name="John Doe" presence="training">
+<gux-avatar-beta badge="" presence="training" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large gux-training">
+    <div class="gux-avatar gux-training gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
       </div>
     </div>
-    <div aria-hidden="true" class="gux-avatar-badge gux-large gux-training">
-      <gux-icon decorative="" icon-name="fa/clock-outline"></gux-icon>
+    <div aria-hidden="true" class="gux-avatar-badge gux-training gux-large">
+      <gux-icon icon-name="fa/clock-outline" decorative="">
+      </gux-icon>
     </div>
   </template>
 </gux-avatar-beta>
@@ -579,10 +589,10 @@ exports[`gux-avatar #render different presences should work as expected for "tra
 exports[`gux-avatar #render different sizes should work as expected for "large" 1`] = `
 <gux-avatar-beta name="John Doe" size="large">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -595,10 +605,10 @@ exports[`gux-avatar #render different sizes should work as expected for "large" 
 exports[`gux-avatar #render different sizes should work as expected for "medium" 1`] = `
 <gux-avatar-beta name="John Doe" size="medium">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-medium">
+    <div class="gux-avatar gux-medium gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -611,10 +621,10 @@ exports[`gux-avatar #render different sizes should work as expected for "medium"
 exports[`gux-avatar #render different sizes should work as expected for "medium-rare" 1`] = `
 <gux-avatar-beta name="John Doe" size="medium-rare">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-medium-rare">
+    <div class="gux-avatar gux-medium-rare gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -627,10 +637,10 @@ exports[`gux-avatar #render different sizes should work as expected for "medium-
 exports[`gux-avatar #render different sizes should work as expected for "small" 1`] = `
 <gux-avatar-beta name="John Doe" size="small">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-small">
+    <div class="gux-avatar gux-small gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -643,10 +653,10 @@ exports[`gux-avatar #render different sizes should work as expected for "small" 
 exports[`gux-avatar #render different sizes should work as expected for "xsmall" 1`] = `
 <gux-avatar-beta name="John Doe" size="xsmall">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-xsmall">
+    <div class="gux-avatar gux-xsmall gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -659,19 +669,21 @@ exports[`gux-avatar #render different sizes should work as expected for "xsmall"
 exports[`gux-avatar #render different uc-integration logos should work as expected for "8x8" 1`] = `
 <gux-avatar-beta name="John Doe" uc-integration="8x8">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe (8 by 8)" role="img">
+          <span role="img" aria-label="John Doe (8 by 8)">
             JD
           </span>
         </slot>
       </div>
     </div>
-    <div aria-hidden="true" class="gux-avatar-integration-badge">
-      <svg fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
-        <rect fill="#CB2233" height="32" width="32"></rect>
-        <path clip-rule="evenodd" d="M19.4298 14.2388H16.8341L16.2371 15.4154C16.1751 15.5507 16.1037 15.6811 16.0236 15.8055H15.9988C15.9988 15.8055 15.8808 15.5988 15.7841 15.4154L15.1965 14.2302H12.6127L14.6479 17.5052L12.621 20.7815H15.1611L15.8454 19.4129C15.9061 19.2937 15.9589 19.1704 16.0035 19.0437H16.0283C16.0283 19.0437 16.1227 19.2898 16.1864 19.4129L16.886 20.7815H19.4298L17.4028 17.5052L19.4298 14.2388ZM7.95949 19.1225C7.79341 19.1261 7.62828 19.0954 7.47357 19.0323C7.31886 18.9692 7.17761 18.8748 7.05792 18.7547C6.93823 18.6345 6.84245 18.4909 6.77608 18.332C6.7097 18.1732 6.67404 18.0022 6.67112 17.8289C6.68897 17.3197 6.89037 16.8362 7.23508 16.4751C8.28512 16.9674 9.24078 17.3465 9.24078 17.9852C9.24668 18.7163 8.75352 19.1225 7.95949 19.1225ZM8.03028 12.3975C8.72992 12.3975 9.15112 12.8037 9.15112 13.4252C9.14236 13.9074 9.0139 14.3789 8.77829 14.7938C7.83443 14.3705 7.06047 13.9975 7.06047 13.2677C7.05575 12.7877 7.3625 12.3975 8.03028 12.3975ZM10.6613 15.7625C10.7651 15.6308 11.7113 14.4283 11.7113 13.2258C11.7113 11.152 10.082 10 8.09399 10C5.59748 10 4.5085 11.5914 4.5085 13.2086C4.5085 14.1625 4.91436 14.8258 5.47832 15.3403C5.15269 15.6148 4 16.624 4 18.0615C4 19.8363 5.35916 21.52 7.95949 21.52C10.6058 21.52 11.9178 19.8191 11.9178 18.1194C11.9178 16.9994 11.3774 16.2782 10.6613 15.7625ZM24.0452 19.1225C23.8792 19.1259 23.7142 19.0951 23.5597 19.0319C23.4051 18.9688 23.264 18.8744 23.1444 18.7542C23.0249 18.6341 22.9292 18.4905 22.8629 18.3317C22.7966 18.1729 22.761 18.0021 22.758 17.8289C22.7759 17.3197 22.9773 16.8362 23.322 16.4751C24.372 16.9674 25.3277 17.3465 25.3277 17.9852C25.3277 18.7237 24.8345 19.1286 24.0476 19.1286L24.0452 19.1225ZM24.1172 12.3975C24.8168 12.3975 25.238 12.8037 25.238 13.4252C25.2296 13.9076 25.1007 14.3794 24.864 14.7938C23.9202 14.3705 23.1474 13.9975 23.1474 13.2677C23.1474 12.7877 23.4494 12.3975 24.1172 12.3975ZM26.7435 15.7625C26.8473 15.6222 27.7935 14.4197 27.7935 13.2258C27.7935 11.152 26.163 10 24.1762 10C21.6797 10 20.5907 11.5914 20.5907 13.2086C20.5907 14.1625 20.9966 14.8258 21.5605 15.3403C21.2349 15.6049 20.0822 16.6166 20.0822 18.048C20.0822 19.8228 21.4414 21.5065 24.0405 21.5065C26.688 21.5065 28 19.8068 28 18.1058C28 16.9994 27.4596 16.2782 26.7435 15.7625Z" fill="white" fill-rule="evenodd"></path>
+    <div class="gux-avatar-integration-badge" aria-hidden="true">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" fill="#CB2233">
+        </rect>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4298 14.2388H16.8341L16.2371 15.4154C16.1751 15.5507 16.1037 15.6811 16.0236 15.8055H15.9988C15.9988 15.8055 15.8808 15.5988 15.7841 15.4154L15.1965 14.2302H12.6127L14.6479 17.5052L12.621 20.7815H15.1611L15.8454 19.4129C15.9061 19.2937 15.9589 19.1704 16.0035 19.0437H16.0283C16.0283 19.0437 16.1227 19.2898 16.1864 19.4129L16.886 20.7815H19.4298L17.4028 17.5052L19.4298 14.2388ZM7.95949 19.1225C7.79341 19.1261 7.62828 19.0954 7.47357 19.0323C7.31886 18.9692 7.17761 18.8748 7.05792 18.7547C6.93823 18.6345 6.84245 18.4909 6.77608 18.332C6.7097 18.1732 6.67404 18.0022 6.67112 17.8289C6.68897 17.3197 6.89037 16.8362 7.23508 16.4751C8.28512 16.9674 9.24078 17.3465 9.24078 17.9852C9.24668 18.7163 8.75352 19.1225 7.95949 19.1225ZM8.03028 12.3975C8.72992 12.3975 9.15112 12.8037 9.15112 13.4252C9.14236 13.9074 9.0139 14.3789 8.77829 14.7938C7.83443 14.3705 7.06047 13.9975 7.06047 13.2677C7.05575 12.7877 7.3625 12.3975 8.03028 12.3975ZM10.6613 15.7625C10.7651 15.6308 11.7113 14.4283 11.7113 13.2258C11.7113 11.152 10.082 10 8.09399 10C5.59748 10 4.5085 11.5914 4.5085 13.2086C4.5085 14.1625 4.91436 14.8258 5.47832 15.3403C5.15269 15.6148 4 16.624 4 18.0615C4 19.8363 5.35916 21.52 7.95949 21.52C10.6058 21.52 11.9178 19.8191 11.9178 18.1194C11.9178 16.9994 11.3774 16.2782 10.6613 15.7625ZM24.0452 19.1225C23.8792 19.1259 23.7142 19.0951 23.5597 19.0319C23.4051 18.9688 23.264 18.8744 23.1444 18.7542C23.0249 18.6341 22.9292 18.4905 22.8629 18.3317C22.7966 18.1729 22.761 18.0021 22.758 17.8289C22.7759 17.3197 22.9773 16.8362 23.322 16.4751C24.372 16.9674 25.3277 17.3465 25.3277 17.9852C25.3277 18.7237 24.8345 19.1286 24.0476 19.1286L24.0452 19.1225ZM24.1172 12.3975C24.8168 12.3975 25.238 12.8037 25.238 13.4252C25.2296 13.9076 25.1007 14.3794 24.864 14.7938C23.9202 14.3705 23.1474 13.9975 23.1474 13.2677C23.1474 12.7877 23.4494 12.3975 24.1172 12.3975ZM26.7435 15.7625C26.8473 15.6222 27.7935 14.4197 27.7935 13.2258C27.7935 11.152 26.163 10 24.1762 10C21.6797 10 20.5907 11.5914 20.5907 13.2086C20.5907 14.1625 20.9966 14.8258 21.5605 15.3403C21.2349 15.6049 20.0822 16.6166 20.0822 18.048C20.0822 19.8228 21.4414 21.5065 24.0405 21.5065C26.688 21.5065 28 19.8068 28 18.1058C28 16.9994 27.4596 16.2782 26.7435 15.7625Z" fill="white">
+        </path>
       </svg>
     </div>
   </template>
@@ -681,10 +693,10 @@ exports[`gux-avatar #render different uc-integration logos should work as expect
 exports[`gux-avatar #render different uc-integration logos should work as expected for "invalid-uc-integration" 1`] = `
 <gux-avatar-beta name="John Doe" uc-integration="invalid-uc-integration">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -697,41 +709,59 @@ exports[`gux-avatar #render different uc-integration logos should work as expect
 exports[`gux-avatar #render different uc-integration logos should work as expected for "teams" 1`] = `
 <gux-avatar-beta name="John Doe" uc-integration="teams">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe (Microsoft Teams)" role="img">
+          <span role="img" aria-label="John Doe (Microsoft Teams)">
             JD
           </span>
         </slot>
       </div>
     </div>
-    <div aria-hidden="true" class="gux-avatar-integration-badge">
-      <svg fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+    <div class="gux-avatar-integration-badge" aria-hidden="true">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_17811_243865)">
-          <path d="M22.3205 12.0769H30.5862C31.3671 12.0769 32.0002 12.7051 32.0002 13.48V20.951C32.0002 23.799 29.6735 26.1077 26.8035 26.1077H26.7789C23.9089 26.1081 21.582 23.7997 21.5815 20.9517C21.5815 20.9515 21.5815 20.9512 21.5815 20.951V12.8102C21.5816 12.4052 21.9124 12.0769 22.3205 12.0769Z" fill="#5059C9"></path>
-          <path d="M27.9069 10.6C29.7565 10.6 31.2558 9.11222 31.2558 7.27694C31.2558 5.44165 29.7565 3.95386 27.9069 3.95386C26.0574 3.95386 24.5581 5.44165 24.5581 7.27694C24.5581 9.11222 26.0574 10.6 27.9069 10.6Z" fill="#5059C9"></path>
-          <path d="M17.4886 10.6C20.1601 10.6 22.3258 8.45098 22.3258 5.80001C22.3258 3.14904 20.1601 1 17.4886 1C14.8171 1 12.6514 3.14904 12.6514 5.80001C12.6514 8.45098 14.8171 10.6 17.4886 10.6Z" fill="#7B83EB"></path>
-          <path d="M23.9381 12.0769H10.2941C9.52253 12.0959 8.91215 12.7313 8.93005 13.497V22.0181C8.8223 26.613 12.4857 30.426 17.1161 30.5385C21.7465 30.426 25.4099 26.613 25.3022 22.0181V13.497C25.32 12.7313 24.7097 12.0959 23.9381 12.0769Z" fill="#7B83EB"></path>
-          <path d="M17.8603 12.0769V24.0178C17.8566 24.5654 17.5222 25.0573 17.0119 25.2658C16.8495 25.334 16.6749 25.3692 16.4985 25.3692H9.58496C9.48822 25.1255 9.39892 24.8818 9.32449 24.6308C9.064 23.7834 8.93108 22.9025 8.93007 22.0166V13.4948C8.91218 12.7303 9.52156 12.0959 10.2919 12.0769H17.8603Z" fill="black" opacity="0.1"></path>
-          <path d="M17.1161 12.0769V24.7563C17.1161 24.9313 17.0807 25.1046 17.0119 25.2658C16.8018 25.7722 16.3061 26.104 15.7543 26.1077H9.93474C9.80822 25.864 9.68915 25.6203 9.58496 25.3692C9.48077 25.1181 9.39892 24.8818 9.32449 24.6308C9.064 23.7834 8.93108 22.9025 8.93007 22.0166V13.4948C8.91218 12.7303 9.52156 12.0959 10.2919 12.0769H17.1161Z" fill="black" opacity="0.2"></path>
-          <path d="M17.1161 12.0769V23.2794C17.1105 24.0234 16.504 24.6251 15.7543 24.6308H9.32449C9.064 23.7834 8.93108 22.9025 8.93007 22.0166V13.4948C8.91218 12.7303 9.52156 12.0959 10.2919 12.0769H17.1161Z" fill="black" opacity="0.2"></path>
-          <path d="M16.3719 12.0769V23.2794C16.3663 24.0234 15.7598 24.6251 15.0101 24.6308H9.32449C9.064 23.7834 8.93108 22.9025 8.93007 22.0166V13.4948C8.91218 12.7303 9.52156 12.0959 10.2919 12.0769H16.3719Z" fill="black" opacity="0.2"></path>
-          <path d="M17.8605 8.25909V10.5852C17.734 10.5926 17.6149 10.6 17.4884 10.6C17.3619 10.6 17.2428 10.5926 17.1163 10.5852C16.8651 10.5687 16.616 10.5291 16.3721 10.4671C14.8652 10.113 13.6201 9.06422 13.0233 7.64617C12.9206 7.40804 12.8409 7.16077 12.7852 6.90771H16.4986C17.2496 6.91054 17.8577 7.5139 17.8605 8.25909Z" fill="black" opacity="0.1"></path>
-          <path d="M17.1165 8.99749V10.5852C16.8653 10.5686 16.6161 10.5291 16.3723 10.467C14.8653 10.1129 13.6203 9.06416 13.0234 7.64612H15.7546C16.5055 7.64894 17.1136 8.25232 17.1165 8.99749Z" fill="black" opacity="0.2"></path>
-          <path d="M17.1165 8.99749V10.5852C16.8653 10.5686 16.6161 10.5291 16.3723 10.467C14.8653 10.1129 13.6203 9.06416 13.0234 7.64612H15.7546C16.5055 7.64894 17.1136 8.25232 17.1165 8.99749Z" fill="black" opacity="0.2"></path>
-          <path d="M16.3723 8.9975V10.467C14.8653 10.1129 13.6203 9.06416 13.0234 7.64612H15.0104C15.7614 7.64895 16.3694 8.25234 16.3723 8.9975Z" fill="black" opacity="0.2"></path>
-          <path d="M1.36409 7.64612H15.008C15.7614 7.64612 16.3721 8.25215 16.3721 8.99971V22.5387C16.3721 23.2862 15.7613 23.8923 15.008 23.8923H1.36409C0.610716 23.8923 0 23.2862 0 22.5387V8.99971C0 8.25215 0.61073 7.64612 1.36409 7.64612Z" fill="url(#paint0_linear_17811_243865)"></path>
-          <path d="M11.7761 12.7992H9.04865V20.169H7.31098V12.7992H4.59619V11.3695H11.7761V12.7992Z" fill="white"></path>
+          <path d="M22.3205 12.0769H30.5862C31.3671 12.0769 32.0002 12.7051 32.0002 13.48V20.951C32.0002 23.799 29.6735 26.1077 26.8035 26.1077H26.7789C23.9089 26.1081 21.582 23.7997 21.5815 20.9517C21.5815 20.9515 21.5815 20.9512 21.5815 20.951V12.8102C21.5816 12.4052 21.9124 12.0769 22.3205 12.0769Z" fill="#5059C9">
+          </path>
+          <path d="M27.9069 10.6C29.7565 10.6 31.2558 9.11222 31.2558 7.27694C31.2558 5.44165 29.7565 3.95386 27.9069 3.95386C26.0574 3.95386 24.5581 5.44165 24.5581 7.27694C24.5581 9.11222 26.0574 10.6 27.9069 10.6Z" fill="#5059C9">
+          </path>
+          <path d="M17.4886 10.6C20.1601 10.6 22.3258 8.45098 22.3258 5.80001C22.3258 3.14904 20.1601 1 17.4886 1C14.8171 1 12.6514 3.14904 12.6514 5.80001C12.6514 8.45098 14.8171 10.6 17.4886 10.6Z" fill="#7B83EB">
+          </path>
+          <path d="M23.9381 12.0769H10.2941C9.52253 12.0959 8.91215 12.7313 8.93005 13.497V22.0181C8.8223 26.613 12.4857 30.426 17.1161 30.5385C21.7465 30.426 25.4099 26.613 25.3022 22.0181V13.497C25.32 12.7313 24.7097 12.0959 23.9381 12.0769Z" fill="#7B83EB">
+          </path>
+          <path opacity="0.1" d="M17.8603 12.0769V24.0178C17.8566 24.5654 17.5222 25.0573 17.0119 25.2658C16.8495 25.334 16.6749 25.3692 16.4985 25.3692H9.58496C9.48822 25.1255 9.39892 24.8818 9.32449 24.6308C9.064 23.7834 8.93108 22.9025 8.93007 22.0166V13.4948C8.91218 12.7303 9.52156 12.0959 10.2919 12.0769H17.8603Z" fill="black">
+          </path>
+          <path opacity="0.2" d="M17.1161 12.0769V24.7563C17.1161 24.9313 17.0807 25.1046 17.0119 25.2658C16.8018 25.7722 16.3061 26.104 15.7543 26.1077H9.93474C9.80822 25.864 9.68915 25.6203 9.58496 25.3692C9.48077 25.1181 9.39892 24.8818 9.32449 24.6308C9.064 23.7834 8.93108 22.9025 8.93007 22.0166V13.4948C8.91218 12.7303 9.52156 12.0959 10.2919 12.0769H17.1161Z" fill="black">
+          </path>
+          <path opacity="0.2" d="M17.1161 12.0769V23.2794C17.1105 24.0234 16.504 24.6251 15.7543 24.6308H9.32449C9.064 23.7834 8.93108 22.9025 8.93007 22.0166V13.4948C8.91218 12.7303 9.52156 12.0959 10.2919 12.0769H17.1161Z" fill="black">
+          </path>
+          <path opacity="0.2" d="M16.3719 12.0769V23.2794C16.3663 24.0234 15.7598 24.6251 15.0101 24.6308H9.32449C9.064 23.7834 8.93108 22.9025 8.93007 22.0166V13.4948C8.91218 12.7303 9.52156 12.0959 10.2919 12.0769H16.3719Z" fill="black">
+          </path>
+          <path opacity="0.1" d="M17.8605 8.25909V10.5852C17.734 10.5926 17.6149 10.6 17.4884 10.6C17.3619 10.6 17.2428 10.5926 17.1163 10.5852C16.8651 10.5687 16.616 10.5291 16.3721 10.4671C14.8652 10.113 13.6201 9.06422 13.0233 7.64617C12.9206 7.40804 12.8409 7.16077 12.7852 6.90771H16.4986C17.2496 6.91054 17.8577 7.5139 17.8605 8.25909Z" fill="black">
+          </path>
+          <path opacity="0.2" d="M17.1165 8.99749V10.5852C16.8653 10.5686 16.6161 10.5291 16.3723 10.467C14.8653 10.1129 13.6203 9.06416 13.0234 7.64612H15.7546C16.5055 7.64894 17.1136 8.25232 17.1165 8.99749Z" fill="black">
+          </path>
+          <path opacity="0.2" d="M17.1165 8.99749V10.5852C16.8653 10.5686 16.6161 10.5291 16.3723 10.467C14.8653 10.1129 13.6203 9.06416 13.0234 7.64612H15.7546C16.5055 7.64894 17.1136 8.25232 17.1165 8.99749Z" fill="black">
+          </path>
+          <path opacity="0.2" d="M16.3723 8.9975V10.467C14.8653 10.1129 13.6203 9.06416 13.0234 7.64612H15.0104C15.7614 7.64895 16.3694 8.25234 16.3723 8.9975Z" fill="black">
+          </path>
+          <path d="M1.36409 7.64612H15.008C15.7614 7.64612 16.3721 8.25215 16.3721 8.99971V22.5387C16.3721 23.2862 15.7613 23.8923 15.008 23.8923H1.36409C0.610716 23.8923 0 23.2862 0 22.5387V8.99971C0 8.25215 0.61073 7.64612 1.36409 7.64612Z" fill="url(#paint0_linear_17811_243865)">
+          </path>
+          <path d="M11.7761 12.7992H9.04865V20.169H7.31098V12.7992H4.59619V11.3695H11.7761V12.7992Z" fill="white">
+          </path>
         </g>
         <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_17811_243865" x1="2.84416" x2="13.4047" y1="6.58844" y2="25.0206">
-            <stop stop-color="#5A62C3"></stop>
-            <stop offset="0.5" stop-color="#4D55BD"></stop>
-            <stop offset="1" stop-color="#3940AB"></stop>
+          <linearGradient id="paint0_linear_17811_243865" x1="2.84416" y1="6.58844" x2="13.4047" y2="25.0206" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#5A62C3">
+            </stop>
+            <stop offset="0.5" stop-color="#4D55BD">
+            </stop>
+            <stop offset="1" stop-color="#3940AB">
+            </stop>
           </linearGradient>
           <clipPath id="clip0_17811_243865">
-            <rect fill="white" height="29.5385" transform="translate(0 1)" width="32"></rect>
+            <rect width="32" height="29.5385" fill="white" transform="translate(0 1)">
+            </rect>
           </clipPath>
         </defs>
       </svg>
@@ -743,24 +773,29 @@ exports[`gux-avatar #render different uc-integration logos should work as expect
 exports[`gux-avatar #render different uc-integration logos should work as expected for "zoom" 1`] = `
 <gux-avatar-beta name="John Doe" uc-integration="zoom">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe (Zoom)" role="img">
+          <span role="img" aria-label="John Doe (Zoom)">
             JD
           </span>
         </slot>
       </div>
     </div>
-    <div aria-hidden="true" class="gux-avatar-integration-badge">
-      <svg fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 14C0 6.26801 6.26801 0 14 0H18C25.732 0 32 6.26801 32 14V18C32 25.732 25.732 32 18 32H14C6.26801 32 0 25.732 0 18V14Z" fill="url(#paint0_linear_17811_243867)"></path>
-        <path d="M9.03495 17.9231H4.76573C4.48252 17.9231 4.22028 17.7885 4.08392 17.5577C3.93706 17.2885 3.98951 16.9712 4.22028 16.7692L7.1888 14.0481H5.05944C4.47203 14.0481 4 13.6058 4 13.0769H7.93355C8.21677 13.0769 8.479 13.2115 8.61537 13.4423C8.76222 13.7115 8.70977 14.0288 8.479 14.2308L5.51048 16.9519H7.97551C8.56292 16.9519 9.03495 17.3942 9.03495 17.9231ZM25.944 13C25.3356 13 24.7796 13.2404 24.402 13.6346C24.0244 13.25 23.4685 13 22.8601 13C21.7272 13 20.7936 13.8846 20.7936 14.9231V17.9231C21.3811 17.9231 21.8531 17.4904 21.8531 16.9519V14.9135C21.8531 14.4135 22.2727 13.9904 22.8181 13.9712C23.395 13.9519 23.8671 14.375 23.8671 14.8942V16.9519C23.8671 17.4904 24.3391 17.9231 24.9265 17.9231V14.9135C24.9265 14.4135 25.3461 13.9904 25.8915 13.9712C26.4684 13.9519 26.9405 14.375 26.9405 14.8942V16.9519C26.9405 17.4904 27.4125 17.9231 27.9999 17.9231V14.9231C28.0104 13.8846 27.0768 13 25.944 13ZM14.3846 15.5C14.3846 16.875 13.1573 18 11.6573 18C10.1468 18 8.93005 16.875 8.93005 15.5C8.93005 14.125 10.1573 13 11.6573 13C13.1573 13 14.3846 14.125 14.3846 15.5ZM13.3251 15.5C13.3251 14.6538 12.5804 13.9712 11.6573 13.9712C10.7342 13.9712 9.98949 14.6538 9.98949 15.5C9.98949 16.3462 10.7342 17.0288 11.6573 17.0288C12.5804 17.0288 13.3251 16.3462 13.3251 15.5ZM20.2692 15.5C20.2692 16.875 19.0419 18 17.5419 18C16.0314 18 14.8146 16.875 14.8146 15.5C14.8146 14.125 16.0419 13 17.5419 13C19.0419 13 20.2692 14.125 20.2692 15.5ZM19.2097 15.5C19.2097 14.6538 18.465 13.9712 17.5419 13.9712C16.6188 13.9712 15.8741 14.6538 15.8741 15.5C15.8741 16.3462 16.6188 17.0288 17.5419 17.0288C18.465 17.0288 19.2097 16.3462 19.2097 15.5Z" fill="white"></path>
+    <div class="gux-avatar-integration-badge" aria-hidden="true">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 14C0 6.26801 6.26801 0 14 0H18C25.732 0 32 6.26801 32 14V18C32 25.732 25.732 32 18 32H14C6.26801 32 0 25.732 0 18V14Z" fill="url(#paint0_linear_17811_243867)">
+        </path>
+        <path d="M9.03495 17.9231H4.76573C4.48252 17.9231 4.22028 17.7885 4.08392 17.5577C3.93706 17.2885 3.98951 16.9712 4.22028 16.7692L7.1888 14.0481H5.05944C4.47203 14.0481 4 13.6058 4 13.0769H7.93355C8.21677 13.0769 8.479 13.2115 8.61537 13.4423C8.76222 13.7115 8.70977 14.0288 8.479 14.2308L5.51048 16.9519H7.97551C8.56292 16.9519 9.03495 17.3942 9.03495 17.9231ZM25.944 13C25.3356 13 24.7796 13.2404 24.402 13.6346C24.0244 13.25 23.4685 13 22.8601 13C21.7272 13 20.7936 13.8846 20.7936 14.9231V17.9231C21.3811 17.9231 21.8531 17.4904 21.8531 16.9519V14.9135C21.8531 14.4135 22.2727 13.9904 22.8181 13.9712C23.395 13.9519 23.8671 14.375 23.8671 14.8942V16.9519C23.8671 17.4904 24.3391 17.9231 24.9265 17.9231V14.9135C24.9265 14.4135 25.3461 13.9904 25.8915 13.9712C26.4684 13.9519 26.9405 14.375 26.9405 14.8942V16.9519C26.9405 17.4904 27.4125 17.9231 27.9999 17.9231V14.9231C28.0104 13.8846 27.0768 13 25.944 13ZM14.3846 15.5C14.3846 16.875 13.1573 18 11.6573 18C10.1468 18 8.93005 16.875 8.93005 15.5C8.93005 14.125 10.1573 13 11.6573 13C13.1573 13 14.3846 14.125 14.3846 15.5ZM13.3251 15.5C13.3251 14.6538 12.5804 13.9712 11.6573 13.9712C10.7342 13.9712 9.98949 14.6538 9.98949 15.5C9.98949 16.3462 10.7342 17.0288 11.6573 17.0288C12.5804 17.0288 13.3251 16.3462 13.3251 15.5ZM20.2692 15.5C20.2692 16.875 19.0419 18 17.5419 18C16.0314 18 14.8146 16.875 14.8146 15.5C14.8146 14.125 16.0419 13 17.5419 13C19.0419 13 20.2692 14.125 20.2692 15.5ZM19.2097 15.5C19.2097 14.6538 18.465 13.9712 17.5419 13.9712C16.6188 13.9712 15.8741 14.6538 15.8741 15.5C15.8741 16.3462 16.6188 17.0288 17.5419 17.0288C18.465 17.0288 19.2097 16.3462 19.2097 15.5Z" fill="white">
+        </path>
         <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_17811_243867" x1="6" x2="26" y1="29" y2="2.5">
-            <stop stop-color="#084ACD"></stop>
-            <stop offset="0.505" stop-color="#0B5CFF"></stop>
-            <stop offset="1" stop-color="#236EF9"></stop>
+          <linearGradient id="paint0_linear_17811_243867" x1="6" y1="29" x2="26" y2="2.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#084ACD">
+            </stop>
+            <stop offset="0.505" stop-color="#0B5CFF">
+            </stop>
+            <stop offset="1" stop-color="#236EF9">
+            </stop>
           </linearGradient>
         </defs>
       </svg>
@@ -772,10 +807,10 @@ exports[`gux-avatar #render different uc-integration logos should work as expect
 exports[`gux-avatar #render label should render label 1`] = `
 <gux-avatar-beta label="All Hands" name="John Doe" presence="busy" ring="">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-busy gux-large gux-ring">
+    <div class="gux-avatar gux-busy gux-large gux-ring gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe (All Hands)" role="img">
+          <span role="img" aria-label="John Doe (All Hands)">
             JD
           </span>
         </slot>
@@ -786,31 +821,32 @@ exports[`gux-avatar #render label should render label 1`] = `
 `;
 
 exports[`gux-avatar #render notification badge should render notification badge 1`] = `
-<gux-avatar-beta badge="" name="John Doe" notifications="">
+<gux-avatar-beta badge="" notifications="" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large gux-none">
+    <div class="gux-avatar gux-none gux-large gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe (Notifications)" role="img">
+          <span role="img" aria-label="John Doe (Notifications)">
             JD
           </span>
         </slot>
       </div>
     </div>
-    <div aria-hidden="true" class="gux-avatar-badge gux-large gux-notifications">
-      <gux-icon decorative="" icon-name="fa/bell-regular"></gux-icon>
+    <div aria-hidden="true" class="gux-avatar-badge gux-notifications gux-large">
+      <gux-icon icon-name="fa/bell-regular" decorative="">
+      </gux-icon>
     </div>
   </template>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render presence ring should render presence ring 1`] = `
-<gux-avatar-beta name="John Doe" presen="" ring="">
+<gux-avatar-beta ring="" name="John Doe" presen="">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-large gux-none gux-ring">
+    <div class="gux-avatar gux-none gux-large gux-ring gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -823,10 +859,10 @@ exports[`gux-avatar #render presence ring should render presence ring 1`] = `
 exports[`gux-avatar #tooltip should render with tooltip 1`] = `
 <gux-avatar-beta label="All Hands" name="John Doe" presence="busy" ring="">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-busy gux-large gux-ring">
+    <div class="gux-avatar gux-busy gux-large gux-ring gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe (All Hands)" role="img">
+          <span role="img" aria-label="John Doe (All Hands)">
             JD
           </span>
         </slot>
@@ -842,12 +878,12 @@ exports[`gux-avatar #tooltip should render with tooltip 1`] = `
 `;
 
 exports[`gux-avatar #tooltip should render without tooltip 1`] = `
-<gux-avatar-beta label="All Hands" name="John Doe" presence="busy" ring="" tooltip-enabled="false">
+<gux-avatar-beta tooltip-enabled="false" label="All Hands" name="John Doe" presence="busy" ring="">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-busy gux-large gux-ring">
+    <div class="gux-avatar gux-busy gux-large gux-ring gux-accent-default">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe (All Hands)" role="img">
+          <span role="img" aria-label="John Doe (All Hands)">
             JD
           </span>
         </slot>
@@ -860,10 +896,10 @@ exports[`gux-avatar #tooltip should render without tooltip 1`] = `
 exports[`gux-avatar changes to attributes after initial load should be reflected in DOM should update accent attribute 1`] = `
 <gux-avatar-beta accent="6" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-6 gux-avatar gux-large">
+    <div class="gux-avatar gux-large gux-accent-6">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>
@@ -874,12 +910,12 @@ exports[`gux-avatar changes to attributes after initial load should be reflected
 `;
 
 exports[`gux-avatar changes to attributes after initial load should be reflected in DOM should update size attribute 1`] = `
-<gux-avatar-beta name="John Doe" size="small">
+<gux-avatar-beta size="small" name="John Doe">
   <template shadowrootmode="open">
-    <div class="gux-accent-default gux-avatar gux-small">
+    <div class="gux-avatar gux-accent-default gux-small">
       <div class="gux-content">
         <slot name="image">
-          <span aria-label="John Doe" role="img">
+          <span role="img" aria-label="John Doe">
             JD
           </span>
         </slot>

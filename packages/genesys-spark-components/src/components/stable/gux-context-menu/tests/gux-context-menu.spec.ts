@@ -1,7 +1,7 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GuxList } from 'components/stable/gux-list/gux-list';
-import { GuxListItem } from 'components/stable/gux-list/gux-list-item/gux-list-item';
-import { GuxButton } from '../../../stable/gux-button/gux-button';
+import { GuxList } from '@components/stable/gux-list/gux-list';
+import { GuxListItem } from '@components/stable/gux-list/gux-list-item/gux-list-item';
+import { GuxButton } from '@components/stable/gux-button/gux-button';
 import { GuxContextMenu } from '../gux-context-menu';
 
 const components = [GuxContextMenu, GuxButton, GuxList, GuxListItem];

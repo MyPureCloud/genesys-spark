@@ -1,130 +1,142 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
 <gux-dropdown lang="en" value="j">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
       <div class="gux-target-container-not-filterable" slot="target">
-        <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+        <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
           <div class="gux-field-content">
             <div class="gux-placeholder">
               Select...
             </div>
           </div>
-          <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+          <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+          </gux-icon>
         </button>
       </div>
-      <slot slot="popup"></slot>
+      <slot slot="popup">
+      </slot>
     </gux-popup>
   </template>
   <gux-listbox aria-label="Animals" role="listbox" tabindex="0">
     <template shadowrootmode="open">
-      <slot></slot>
+      <slot>
+      </slot>
     </template>
-    <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="a">
+    <gux-option value="a" id="gux-option-i" role="option" class="gux-show-subtext" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Ant
+      </template>Ant
       <span slot="subtext">
         Small
       </span>
     </gux-option>
-    <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
+    <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Bat
+      </template>Bat
     </gux-option>
-    <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
+    <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Cat
+      </template>Cat
     </gux-option>
-    <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="d">
+    <gux-option value="d" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Dog
+      </template>Dog
     </gux-option>
-    <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="e">
+    <gux-option value="e" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Eel
+      </template>Eel
     </gux-option>
-    <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="f">
+    <gux-option value="f" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Frog
+      </template>Frog
     </gux-option>
-    <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="g">
+    <gux-option value="g" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Goat
+      </template>Goat
     </gux-option>
-    <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="h">
+    <gux-option value="h" id="gux-option-i" role="option" class="gux-show-subtext" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Horse
+      </template>Horse
       <span slot="subtext">
         Large
       </span>
     </gux-option>
-    <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="i">
+    <gux-option value="i" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Ibis
+      </template>Ibis
     </gux-option>
   </gux-listbox>
 </gux-dropdown>
@@ -135,7 +147,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
       <div class="gux-target-container-not-filterable" slot="target">
-        <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+        <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
           <div class="gux-field-content">
             <div class="gux-selected-option">
               <gux-truncate dir="auto">
@@ -143,15 +155,18 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
               </gux-truncate>
             </div>
           </div>
-          <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+          <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+          </gux-icon>
         </button>
       </div>
-      <slot slot="popup"></slot>
+      <slot slot="popup">
+      </slot>
     </gux-popup>
   </template>
   <gux-listbox aria-label="Animals" role="listbox" tabindex="0">
     <template shadowrootmode="open">
-      <slot></slot>
+      <slot>
+      </slot>
     </template>
     <gux-option-group-beta label="Group 1">
       <template shadowrootmode="open">
@@ -160,54 +175,60 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
             Group 1
           </div>
           <div role="group">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
-          <gux-list-divider></gux-list-divider>
+          <gux-list-divider>
+          </gux-list-divider>
         </div>
       </template>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="a">
+      <gux-option value="a" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option>
-      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="c">
+      <gux-option value="c" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
+        </template>Cat
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="d">
+      <gux-option value="d" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Dog
+        </template>Dog
       </gux-option>
     </gux-option-group-beta>
     <gux-option-group-beta label="Group 2">
@@ -217,43 +238,48 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
             Group 2
           </div>
           <div role="group">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
-          <gux-list-divider></gux-list-divider>
+          <gux-list-divider>
+          </gux-list-divider>
         </div>
       </template>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="e">
+      <gux-option value="e" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Eel
+        </template>Eel
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option" value="f">
+      <gux-option value="f" id="gux-option-i" role="option" class="gux-selected" aria-selected="true" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Frog
+        </template>Frog
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="g">
+      <gux-option value="g" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Goat
+        </template>Goat
       </gux-option>
     </gux-option-group-beta>
     <gux-option-group-beta label="Group 3">
@@ -263,32 +289,36 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
             Group 3
           </div>
           <div role="group">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
-          <gux-list-divider></gux-list-divider>
+          <gux-list-divider>
+          </gux-list-divider>
         </div>
       </template>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="h">
+      <gux-option value="h" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Horse
+        </template>Horse
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="i">
+      <gux-option value="i" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ibis
+        </template>Ibis
       </gux-option>
     </gux-option-group-beta>
   </gux-listbox>
@@ -300,21 +330,24 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
       <div class="gux-target-container-not-filterable" slot="target">
-        <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+        <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
           <div class="gux-field-content">
             <div class="gux-placeholder">
               Select...
             </div>
           </div>
-          <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+          <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+          </gux-icon>
         </button>
       </div>
-      <slot slot="popup"></slot>
+      <slot slot="popup">
+      </slot>
     </gux-popup>
   </template>
   <gux-listbox aria-label="Animals" role="listbox" tabindex="0">
     <template shadowrootmode="open">
-      <slot></slot>
+      <slot>
+      </slot>
     </template>
     <gux-option-group-beta label="Group 1">
       <template shadowrootmode="open">
@@ -323,37 +356,43 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
             Group 1
           </div>
           <div role="group">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
-          <gux-list-divider></gux-list-divider>
+          <gux-list-divider>
+          </gux-list-divider>
         </div>
       </template>
-      <gux-option-icon aria-disabled="false" aria-selected="false" class="gux-show-subtext" icon-color="var(--gux-blue-60)" icon-name="user" id="gux-option-icon-i" role="option" value="leonardo">
+      <gux-option-icon icon-name="user" icon-color="var(--gux-blue-60)" value="leonardo" id="gux-option-icon-i" role="option" class="gux-show-subtext" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <gux-icon decorative="" icon-name="user" size="small" style="color: var(--gux-blue-60);"></gux-icon>
+          <gux-icon decorative="" icon-name="user" size="small" style="color: var(--gux-blue-60);">
+          </gux-icon>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Leonardo
+        </template>Leonardo
         <span slot="subtext">
           TMNT
         </span>
       </gux-option-icon>
-      <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#8452cf" icon-name="user" id="gux-option-icon-i" role="option" value="donatello">
+      <gux-option-icon icon-name="user" icon-color="#8452cf" value="donatello" id="gux-option-icon-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <gux-icon decorative="" icon-name="user" size="small" style="color: #8452cf;"></gux-icon>
+          <gux-icon decorative="" icon-name="user" size="small" style="color: #8452cf;">
+          </gux-icon>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Donatello
+        </template>Donatello
       </gux-option-icon>
     </gux-option-group-beta>
     <gux-option-group-beta label="Group 2">
@@ -363,34 +402,40 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
             Group 2
           </div>
           <div role="group">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
-          <gux-list-divider></gux-list-divider>
+          <gux-list-divider>
+          </gux-list-divider>
         </div>
       </template>
-      <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="rgb(234, 11, 11)" icon-name="user" id="gux-option-icon-i" role="option" value="raphael">
+      <gux-option-icon icon-name="user" icon-color="rgb(234, 11, 11)" value="raphael" id="gux-option-icon-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <gux-icon decorative="" icon-name="user" size="small" style="color: rgb(234, 11, 11);"></gux-icon>
+          <gux-icon decorative="" icon-name="user" size="small" style="color: rgb(234, 11, 11);">
+          </gux-icon>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Raphael
+        </template>Raphael
       </gux-option-icon>
-      <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#e08915" icon-name="user" icon-sr-text="Screenreader information about the icon goes here, if needed" id="gux-option-icon-i" role="option" value="michelangelo">
+      <gux-option-icon icon-name="user" icon-color="#e08915" icon-sr-text="Screenreader information about the icon goes here, if needed" value="michelangelo" id="gux-option-icon-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <gux-icon icon-name="user" screenreader-text="Screenreader information about the icon goes here, if needed" size="small" style="color: #e08915;"></gux-icon>
+          <gux-icon screenreader-text="Screenreader information about the icon goes here, if needed" icon-name="user" size="small" style="color: #e08915;">
+          </gux-icon>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Michelangelo
+        </template>Michelangelo
       </gux-option-icon>
     </gux-option-group-beta>
   </gux-listbox>
@@ -402,72 +447,83 @@ exports[`gux-dropdown #render should render as expected with gux-option-icon 1`]
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
       <div class="gux-target-container-not-filterable" slot="target">
-        <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+        <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
           <div class="gux-field-content">
             <div class="gux-placeholder">
               Select...
             </div>
           </div>
-          <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+          <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+          </gux-icon>
         </button>
       </div>
-      <slot slot="popup"></slot>
+      <slot slot="popup">
+      </slot>
     </gux-popup>
   </template>
   <gux-listbox aria-label="Animals" role="listbox" tabindex="0">
     <template shadowrootmode="open">
-      <slot></slot>
+      <slot>
+      </slot>
     </template>
-    <gux-option-icon aria-disabled="false" aria-selected="false" class="gux-show-subtext" icon-color="var(--gux-blue-60)" icon-name="user" id="gux-option-icon-i" role="option" value="leonardo">
+    <gux-option-icon icon-name="user" icon-color="var(--gux-blue-60)" value="leonardo" id="gux-option-icon-i" role="option" class="gux-show-subtext" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
-        <gux-icon decorative="" icon-name="user" size="small" style="color: var(--gux-blue-60);"></gux-icon>
+        <gux-icon decorative="" icon-name="user" size="small" style="color: var(--gux-blue-60);">
+        </gux-icon>
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Leonardo
+      </template>Leonardo
       <span slot="subtext">
         TMNT
       </span>
     </gux-option-icon>
-    <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#8452cf" icon-name="user" id="gux-option-icon-i" role="option" value="donatello">
+    <gux-option-icon icon-name="user" icon-color="#8452cf" value="donatello" id="gux-option-icon-i" role="option" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
-        <gux-icon decorative="" icon-name="user" size="small" style="color: #8452cf;"></gux-icon>
+        <gux-icon decorative="" icon-name="user" size="small" style="color: #8452cf;">
+        </gux-icon>
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Donatello
+      </template>Donatello
     </gux-option-icon>
-    <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="rgb(234, 11, 11)" icon-name="user" id="gux-option-icon-i" role="option" value="raphael">
+    <gux-option-icon icon-name="user" icon-color="rgb(234, 11, 11)" value="raphael" id="gux-option-icon-i" role="option" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
-        <gux-icon decorative="" icon-name="user" size="small" style="color: rgb(234, 11, 11);"></gux-icon>
+        <gux-icon decorative="" icon-name="user" size="small" style="color: rgb(234, 11, 11);">
+        </gux-icon>
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Raphael
+      </template>Raphael
     </gux-option-icon>
-    <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#e08915" icon-name="user" icon-sr-text="Screenreader information about the icon goes here, if needed" id="gux-option-icon-i" role="option" value="michelangelo">
+    <gux-option-icon icon-name="user" icon-color="#e08915" icon-sr-text="Screenreader information about the icon goes here, if needed" value="michelangelo" id="gux-option-icon-i" role="option" aria-selected="false" aria-disabled="false">
       <template shadowrootmode="open">
-        <gux-icon icon-name="user" screenreader-text="Screenreader information about the icon goes here, if needed" size="small" style="color: #e08915;"></gux-icon>
+        <gux-icon screenreader-text="Screenreader information about the icon goes here, if needed" icon-name="user" size="small" style="color: #e08915;">
+        </gux-icon>
         <div class="gux-option-wrapper">
           <gux-truncate tooltip-placement="right">
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot name="subtext">
+          </slot>
         </div>
-      </template>
-      Michelangelo
+      </template>Michelangelo
     </gux-option-icon>
   </gux-listbox>
 </gux-dropdown>

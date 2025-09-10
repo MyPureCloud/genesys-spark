@@ -1,13 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-sort-control #render Not sorted 1`] = `
 <gux-sort-control>
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-container">
-      <button aria-label="Column Header 1 . The table is not currently sorted by this column. Click the column header to sort the table by this column in ascending order" class="gux-sort-button" type="button">
-        <gux-icon class="gux-sort-icon" decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+      <button class="gux-sort-button" type="button" aria-label="Column Header 1 . The table is not currently sorted by this column. Click the column header to sort the table by this column in ascending order">
+        <gux-icon class="gux-sort-icon" size="small" icon-name="fa/caret-up-solid" decorative="">
+        </gux-icon>
       </button>
-      <div class="gux-resize-spacer"></div>
+      <div class="gux-resize-spacer">
+      </div>
     </div>
   </template>
 </gux-sort-control>
@@ -16,11 +18,13 @@ exports[`gux-sort-control #render Not sorted 1`] = `
 exports[`gux-sort-control #render Sorted ascending 1`] = `
 <gux-sort-control>
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-active gux-container">
-      <button aria-label="Column Header 1 . The table is currently sorted by this column in ascending order. Click the column header to sort the table by this column in descending order" class="gux-sort-button" type="button">
-        <gux-icon class="gux-sort-icon" decorative="" icon-name="fa/caret-up-solid" size="small"></gux-icon>
+    <div class="gux-container gux-active">
+      <button class="gux-sort-button" type="button" aria-label="Column Header 1 . The table is currently sorted by this column in ascending order. Click the column header to sort the table by this column in descending order">
+        <gux-icon class="gux-sort-icon" size="small" icon-name="fa/caret-up-solid" decorative="">
+        </gux-icon>
       </button>
-      <div class="gux-resize-spacer"></div>
+      <div class="gux-resize-spacer">
+      </div>
     </div>
   </template>
 </gux-sort-control>
@@ -29,11 +33,13 @@ exports[`gux-sort-control #render Sorted ascending 1`] = `
 exports[`gux-sort-control #render Sorted descending 1`] = `
 <gux-sort-control>
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-active gux-container">
-      <button aria-label="Column Header 1 . The table is currently sorted by this column in descending order. Click the column header to sort the table by this column in ascending order" class="gux-sort-button" type="button">
-        <gux-icon class="gux-sort-icon" decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+    <div class="gux-container gux-active">
+      <button class="gux-sort-button" type="button" aria-label="Column Header 1 . The table is currently sorted by this column in descending order. Click the column header to sort the table by this column in ascending order">
+        <gux-icon class="gux-sort-icon" size="small" icon-name="fa/caret-down-solid" decorative="">
+        </gux-icon>
       </button>
-      <div class="gux-resize-spacer"></div>
+      <div class="gux-resize-spacer">
+      </div>
     </div>
   </template>
 </gux-sort-control>
@@ -42,11 +48,13 @@ exports[`gux-sort-control #render Sorted descending 1`] = `
 exports[`gux-sort-control #render Sorted descending, unsorted allowed 1`] = `
 <gux-sort-control include-unsorted="">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-active gux-container">
-      <button aria-label="Column Header 1 . The table is currently sorted by this column in descending order. Click the column header to not sort the table by this column" class="gux-sort-button" type="button">
-        <gux-icon class="gux-sort-icon" decorative="" icon-name="fa/caret-down-solid" size="small"></gux-icon>
+    <div class="gux-container gux-active">
+      <button class="gux-sort-button" type="button" aria-label="Column Header 1 . The table is currently sorted by this column in descending order. Click the column header to not sort the table by this column">
+        <gux-icon class="gux-sort-icon" size="small" icon-name="fa/caret-down-solid" decorative="">
+        </gux-icon>
       </button>
-      <div class="gux-resize-spacer"></div>
+      <div class="gux-resize-spacer">
+      </div>
     </div>
   </template>
 </gux-sort-control>

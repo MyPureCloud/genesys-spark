@@ -1,337 +1,397 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`gux-form-field-radio #render should render component as expected (1) 1`] = `
+exports[`gux-selector-card #render should render component as expected (1) 1`] = `
 <gux-selector-card-beta variant="simple">
   <template shadowrootmode="open">
-    <div class="gux-disabled gux-selector-card gux-simple">
+    <div class="gux-selector-card gux-simple gux-disabled">
       <div class="gux-content">
         <div class="gux-icon">
-          <slot name="icon"></slot>
+          <slot name="icon">
+          </slot>
         </div>
         <div class="gux-label-container">
-          <slot name="label"></slot>
+          <slot name="label">
+          </slot>
         </div>
-        <slot name="input"></slot>
+        <slot name="input">
+        </slot>
         <span class="gux-screenreader">
-          <slot name="description"></slot>
+          <slot name="description">
+          </slot>
         </span>
       </div>
     </div>
   </template>
-  <label for="second" slot="label">
+  <label slot="label" for="second">
     Card Label
   </label>
-  <input disabled="" id="second" name="example2" slot="input" type="radio" value="card-label">
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon">
-    <span id="existing-id" slot="content">
+  <input slot="input" id="second" type="radio" name="example2" disabled="" value="card-label">
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+    <span slot="content" id="existing-id">
       A second label for a sample selector card. Used in Spark WCL.
     </span>
   </gux-icon>
 </gux-selector-card-beta>
 `;
 
-exports[`gux-form-field-radio #render should render component as expected (2) 1`] = `
+exports[`gux-selector-card #render should render component as expected (2) 1`] = `
 <gux-selector-card-beta variant="simple">
   <template shadowrootmode="open">
-    <div class="gux-disabled gux-selector-card gux-simple">
+    <div class="gux-selector-card gux-simple gux-disabled">
       <div class="gux-content">
         <div class="gux-icon">
-          <slot name="icon"></slot>
+          <slot name="icon">
+          </slot>
         </div>
         <div class="gux-label-container">
-          <slot name="label"></slot>
+          <slot name="label">
+          </slot>
         </div>
-        <slot name="input"></slot>
+        <slot name="input">
+        </slot>
         <span class="gux-screenreader">
-          <slot name="description"></slot>
+          <slot name="description">
+          </slot>
         </span>
       </div>
     </div>
   </template>
-  <label for="third" slot="label">
+  <label slot="label" for="third">
     Card Label
   </label>
-  <input checked="" disabled="" id="third" name="example3" slot="input" type="radio" value="card-label">
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  <input slot="input" id="third" type="radio" name="example3" disabled="" checked="" value="card-label">
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+  </gux-icon>
 </gux-selector-card-beta>
 `;
 
-exports[`gux-form-field-radio #render should render component as expected (3) 1`] = `
+exports[`gux-selector-card #render should render component as expected (3) 1`] = `
 <gux-selector-card-beta variant="simple">
   <template shadowrootmode="open">
     <div class="gux-selector-card gux-simple">
       <div class="gux-content">
         <div class="gux-icon">
-          <slot name="icon"></slot>
+          <slot name="icon">
+          </slot>
         </div>
         <div class="gux-label-container">
-          <slot name="label"></slot>
+          <slot name="label">
+          </slot>
         </div>
-        <slot name="input"></slot>
+        <slot name="input">
+        </slot>
         <span class="gux-screenreader">
-          <slot name="description"></slot>
+          <slot name="description">
+          </slot>
         </span>
       </div>
     </div>
   </template>
-  <label for="fourth" slot="label">
+  <label slot="label" for="fourth">
     A longer card label example
   </label>
-  <input id="fourth" name="example4" slot="input" type="radio" value="card-label">
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  <input slot="input" id="fourth" type="radio" name="example4" value="card-label">
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+  </gux-icon>
 </gux-selector-card-beta>
 `;
 
-exports[`gux-form-field-radio #render should render component as expected (4) 1`] = `
+exports[`gux-selector-card #render should render component as expected (4) 1`] = `
 <gux-selector-card-beta variant="descriptive">
   <template shadowrootmode="open">
-    <div class="gux-descriptive gux-selector-card">
+    <div class="gux-selector-card gux-descriptive">
       <div class="gux-content">
         <div class="gux-icon">
-          <slot name="icon"></slot>
+          <slot name="icon">
+          </slot>
         </div>
         <div class="gux-label-container">
-          <slot name="label"></slot>
+          <slot name="label">
+          </slot>
         </div>
-        <slot name="input"></slot>
+        <slot name="input">
+        </slot>
         <div class="gux-description-container">
-          <slot name="description"></slot>
+          <slot name="description">
+          </slot>
         </div>
-        <slot name="badge"></slot>
+        <slot name="badge">
+        </slot>
       </div>
     </div>
   </template>
-  <label for="fourth" slot="label">
+  <label slot="label" for="fourth">
     A longer card label example. This can span up to 2 lines.
   </label>
-  <input id="fourth" name="example4" slot="input" type="radio" value="card-label">
+  <input slot="input" id="fourth" type="radio" name="example4" value="card-label">
   <span slot="content">
     A description for a sample selector card. Used in Spark WCL. Descriptions can span up to 3 lines before being truncated.
   </span>
-  <gux-badge bold="" slot="badge">
+  <gux-badge slot="badge" bold="">
     Badge
   </gux-badge>
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+  </gux-icon>
 </gux-selector-card-beta>
 `;
 
-exports[`gux-form-field-radio #render should render component as expected (5) 1`] = `
+exports[`gux-selector-card #render should render component as expected (5) 1`] = `
 <gux-selector-card-beta variant="descriptive">
   <template shadowrootmode="open">
-    <div class="gux-descriptive gux-disabled gux-selector-card">
+    <div class="gux-selector-card gux-descriptive gux-disabled">
       <div class="gux-content">
         <div class="gux-icon">
-          <slot name="icon"></slot>
+          <slot name="icon">
+          </slot>
         </div>
         <div class="gux-label-container">
-          <slot name="label"></slot>
+          <slot name="label">
+          </slot>
         </div>
-        <slot name="input"></slot>
+        <slot name="input">
+        </slot>
         <div class="gux-description-container">
-          <slot name="description"></slot>
+          <slot name="description">
+          </slot>
         </div>
-        <slot name="badge"></slot>
+        <slot name="badge">
+        </slot>
       </div>
     </div>
   </template>
-  <label for="third" slot="label">
+  <label slot="label" for="third">
     Card Label
   </label>
-  <input checked="" disabled="" id="third" name="example3" slot="input" type="radio" value="card-label">
+  <input slot="input" id="third" type="radio" name="example3" disabled="" checked="" value="card-label">
   <span slot="content">
     A label for a sample selector card. Used in Spark WCL.
   </span>
-  <gux-badge bold="" slot="badge">
+  <gux-badge slot="badge" bold="">
     Badge
   </gux-badge>
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+  </gux-icon>
 </gux-selector-card-beta>
 `;
 
-exports[`gux-form-field-radio #render should render component as expected (6) 1`] = `
+exports[`gux-selector-card #render should render component as expected (6) 1`] = `
 <gux-selector-card-beta variant="descriptive">
   <template shadowrootmode="open">
-    <div class="gux-descriptive gux-disabled gux-selector-card">
+    <div class="gux-selector-card gux-descriptive gux-disabled">
       <div class="gux-content">
         <div class="gux-icon">
-          <slot name="icon"></slot>
+          <slot name="icon">
+          </slot>
         </div>
         <div class="gux-label-container">
-          <slot name="label"></slot>
+          <slot name="label">
+          </slot>
         </div>
-        <slot name="input"></slot>
+        <slot name="input">
+        </slot>
         <div class="gux-description-container">
-          <slot name="description"></slot>
+          <slot name="description">
+          </slot>
         </div>
-        <slot name="badge"></slot>
+        <slot name="badge">
+        </slot>
       </div>
     </div>
   </template>
-  <label for="second" slot="label">
+  <label slot="label" for="second">
     Card Label
   </label>
-  <input disabled="" id="second" name="example2" slot="input" type="radio" value="card-label">
+  <input slot="input" id="second" type="radio" name="example2" disabled="" value="card-label">
   <span slot="content">
     A label for a sample selector card. Used in Spark WCL.
   </span>
-  <gux-badge bold="" slot="badge">
+  <gux-badge slot="badge" bold="">
     Badge
-  </gux-badge>
-  ß
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  </gux-badge>ß
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+  </gux-icon>
 </gux-selector-card-beta>
 `;
 
-exports[`gux-form-field-radio #render should render component as expected (7) 1`] = `
+exports[`gux-selector-card #render should render component as expected (7) 1`] = `
 <gux-selector-card-beta variant="descriptive">
   <template shadowrootmode="open">
-    <div class="gux-descriptive gux-selector-card">
+    <div class="gux-selector-card gux-descriptive">
       <div class="gux-content">
         <div class="gux-icon">
-          <slot name="icon"></slot>
+          <slot name="icon">
+          </slot>
         </div>
         <div class="gux-label-container">
-          <slot name="label"></slot>
+          <slot name="label">
+          </slot>
         </div>
-        <slot name="input"></slot>
+        <slot name="input">
+        </slot>
         <div class="gux-description-container">
-          <slot name="description"></slot>
+          <slot name="description">
+          </slot>
         </div>
-        <slot name="badge"></slot>
+        <slot name="badge">
+        </slot>
       </div>
     </div>
   </template>
-  <label for="first" slot="label">
+  <label slot="label" for="first">
     Card label
   </label>
-  <input id="first" name="example1" slot="input" type="radio" value="card-label">
+  <input slot="input" id="first" type="radio" name="example1" value="card-label">
   <span slot="content">
     A label for a sample selector card. Used in Spark WCL.
   </span>
-  <gux-badge bold="" slot="badge">
+  <gux-badge slot="badge" bold="">
     Badge
   </gux-badge>
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+  </gux-icon>
 </gux-selector-card-beta>
 `;
 
-exports[`gux-form-field-radio #render should render component as expected (8) 1`] = `
+exports[`gux-selector-card #render should render component as expected (8) 1`] = `
 <gux-selector-card-beta variant="descriptive">
   <template shadowrootmode="open">
-    <div class="gux-descriptive gux-selector-card">
+    <div class="gux-selector-card gux-descriptive">
       <div class="gux-content">
         <div class="gux-icon">
-          <slot name="icon"></slot>
+          <slot name="icon">
+          </slot>
         </div>
         <div class="gux-label-container">
-          <slot name="label"></slot>
+          <slot name="label">
+          </slot>
         </div>
-        <slot name="input"></slot>
+        <slot name="input">
+        </slot>
         <div class="gux-description-container">
-          <slot name="description"></slot>
+          <slot name="description">
+          </slot>
         </div>
-        <slot name="badge"></slot>
+        <slot name="badge">
+        </slot>
       </div>
     </div>
   </template>
-  <label for="first" slot="label">
+  <label slot="label" for="first">
     Card label
   </label>
-  <input id="first" name="example1" slot="input" type="radio" value="card-label">
+  <input slot="input" id="first" type="radio" name="example1" value="card-label">
   <span slot="content">
     A label for a sample selector card. Used in Spark WCL.
   </span>
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+  </gux-icon>
 </gux-selector-card-beta>
 `;
 
-exports[`gux-form-field-radio #render should render component as expected (9) 1`] = `
+exports[`gux-selector-card #render should render component as expected (9) 1`] = `
 <gux-selector-card-beta variant="descriptive">
   <template shadowrootmode="open">
-    <div class="gux-descriptive gux-selector-card">
+    <div class="gux-selector-card gux-descriptive">
       <div class="gux-content">
         <div class="gux-icon">
-          <slot name="icon"></slot>
+          <slot name="icon">
+          </slot>
         </div>
         <div class="gux-label-container">
-          <slot name="label"></slot>
+          <slot name="label">
+          </slot>
         </div>
-        <slot name="input"></slot>
+        <slot name="input">
+        </slot>
         <div class="gux-description-container">
-          <slot name="description"></slot>
+          <slot name="description">
+          </slot>
         </div>
-        <slot name="badge"></slot>
+        <slot name="badge">
+        </slot>
       </div>
     </div>
   </template>
-  <label for="first" slot="label">
+  <label slot="label" for="first">
     Card label
   </label>
-  <input id="first" name="example1" slot="input" type="radio" value="card-label">
-  <gux-badge bold="" slot="badge">
+  <input slot="input" id="first" type="radio" name="example1" value="card-label">
+  <gux-badge slot="badge" bold="">
     Badge
   </gux-badge>
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+  </gux-icon>
 </gux-selector-card-beta>
 `;
 
-exports[`gux-form-field-radio #render should render component as expected (10) 1`] = `
+exports[`gux-selector-card #render should render component as expected (10) 1`] = `
 <gux-selector-card-beta variant="descriptive">
   <template shadowrootmode="open">
-    <div class="gux-descriptive gux-selector-card">
+    <div class="gux-selector-card gux-descriptive">
       <div class="gux-content">
         <div class="gux-icon">
-          <slot name="icon"></slot>
+          <slot name="icon">
+          </slot>
         </div>
         <div class="gux-label-container">
-          <slot name="label"></slot>
+          <slot name="label">
+          </slot>
         </div>
-        <slot name="input"></slot>
+        <slot name="input">
+        </slot>
         <div class="gux-description-container">
-          <slot name="description"></slot>
+          <slot name="description">
+          </slot>
         </div>
-        <slot name="badge"></slot>
+        <slot name="badge">
+        </slot>
       </div>
     </div>
   </template>
-  <label for="gux-form-field-input-i" slot="label">
+  <label slot="label" for="gux-form-field-input-i">
     A longer card label example. This can span up to 2 lines.
   </label>
-  <input aria-describedby="gux-description-i" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pasta">
-  <span id="gux-description-i" slot="description">
-    A description for a sample selector card. Used in Spark WCL. Descriptions can span up to 3 lines before being truncated.
+  <input slot="input" type="checkbox" name="food-1[]" value="pasta" aria-describedby="gux-description-i" id="gux-form-field-input-i">
+  <span slot="description" id="gux-description-i">
+    A description for a sample selector card. Used in Spark WCL.
+        Descriptions can span up to 3 lines before being truncated.
   </span>
-  <gux-badge bold="" slot="badge">
+  <gux-badge slot="badge" bold="">
     Badge
   </gux-badge>
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+  </gux-icon>
 </gux-selector-card-beta>
 `;
 
-exports[`gux-form-field-radio #render should render component as expected (11) 1`] = `
+exports[`gux-selector-card #render should render component as expected (11) 1`] = `
 <gux-selector-card-beta variant="simple">
   <template shadowrootmode="open">
     <div class="gux-selector-card gux-simple">
       <div class="gux-content">
         <div class="gux-icon">
-          <slot name="icon"></slot>
+          <slot name="icon">
+          </slot>
         </div>
         <div class="gux-label-container">
-          <slot name="label"></slot>
+          <slot name="label">
+          </slot>
         </div>
-        <slot name="input"></slot>
+        <slot name="input">
+        </slot>
         <span class="gux-screenreader">
-          <slot name="description"></slot>
+          <slot name="description">
+          </slot>
         </span>
       </div>
     </div>
   </template>
-  <label for="gux-form-field-input-i" slot="label">
+  <label slot="label" for="gux-form-field-input-i">
     Card label
   </label>
-  <input aria-describedby="gux-description-i" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
-  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon">
-    <span id="gux-description-i" slot="description">
+  <input slot="input" type="checkbox" name="food-1[]" value="pizza" aria-describedby="gux-description-i" id="gux-form-field-input-i">
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative="">
+    <span slot="description" id="gux-description-i">
       A label for a sample selector card. Used in Spark WCL.
     </span>
   </gux-icon>

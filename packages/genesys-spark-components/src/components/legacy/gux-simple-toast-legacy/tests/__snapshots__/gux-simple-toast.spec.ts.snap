@@ -1,17 +1,21 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-simple-toast-legacy #render should render alert simple toast 1`] = `
 <gux-simple-toast-legacy accent="alert">
   <template shadowrootmode="open">
-    <div class="gux-alert gux-icon">
-      <slot name="icon"></slot>
+    <div class="gux-icon gux-alert">
+      <slot name="icon">
+      </slot>
     </div>
     <gux-truncate class="gux-message" max-lines="2">
-      <slot name="message"></slot>
+      <slot name="message">
+      </slot>
     </gux-truncate>
-    <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
+    <gux-dismiss-button class="gux-dismiss" position="inherit">
+    </gux-dismiss-button>
   </template>
-  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="user-add" decorative="">
+  </gux-icon>
   <div slot="message">
     This is the message
   </div>
@@ -22,14 +26,18 @@ exports[`gux-simple-toast-legacy #render should render neutral simple toast 1`] 
 <gux-simple-toast-legacy accent="neutral">
   <template shadowrootmode="open">
     <div class="gux-icon gux-neutral">
-      <slot name="icon"></slot>
+      <slot name="icon">
+      </slot>
     </div>
     <gux-truncate class="gux-message" max-lines="2">
-      <slot name="message"></slot>
+      <slot name="message">
+      </slot>
     </gux-truncate>
-    <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
+    <gux-dismiss-button class="gux-dismiss" position="inherit">
+    </gux-dismiss-button>
   </template>
-  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="user-add" decorative="">
+  </gux-icon>
   <div slot="message">
     This is the message
   </div>
@@ -40,14 +48,18 @@ exports[`gux-simple-toast-legacy #render should render positive simple toast 1`]
 <gux-simple-toast-legacy accent="positive">
   <template shadowrootmode="open">
     <div class="gux-icon gux-positive">
-      <slot name="icon"></slot>
+      <slot name="icon">
+      </slot>
     </div>
     <gux-truncate class="gux-message" max-lines="2">
-      <slot name="message"></slot>
+      <slot name="message">
+      </slot>
     </gux-truncate>
-    <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
+    <gux-dismiss-button class="gux-dismiss" position="inherit">
+    </gux-dismiss-button>
   </template>
-  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="user-add" decorative="">
+  </gux-icon>
   <div slot="message">
     This is the message
   </div>
@@ -58,14 +70,18 @@ exports[`gux-simple-toast-legacy #render should render warning simple toast 1`] 
 <gux-simple-toast-legacy accent="warning">
   <template shadowrootmode="open">
     <div class="gux-icon gux-warning">
-      <slot name="icon"></slot>
+      <slot name="icon">
+      </slot>
     </div>
     <gux-truncate class="gux-message" max-lines="2">
-      <slot name="message"></slot>
+      <slot name="message">
+      </slot>
     </gux-truncate>
-    <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
+    <gux-dismiss-button class="gux-dismiss" position="inherit">
+    </gux-dismiss-button>
   </template>
-  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="user-add" decorative="">
+  </gux-icon>
   <div slot="message">
     This is the message
   </div>

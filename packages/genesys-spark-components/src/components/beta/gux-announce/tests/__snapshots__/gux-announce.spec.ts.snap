@@ -1,41 +1,45 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-announce #render should have assertive politeness 1`] = `
-<gux-announce-beta aria-live="assertive" politeness="assertive">
+<gux-announce-beta politeness="assertive" aria-live="assertive">
   <template shadowrootmode="open">
-    <slot></slot>
-    <div></div>
-  </template>
-  This is some text to read
+    <slot>
+    </slot>
+    <div>
+    </div>
+  </template>This is some text to read
 </gux-announce-beta>
 `;
 
 exports[`gux-announce #render should have default politeness 1`] = `
 <gux-announce-beta aria-live="polite">
   <template shadowrootmode="open">
-    <slot></slot>
-    <div></div>
-  </template>
-  This is some text to read
+    <slot>
+    </slot>
+    <div>
+    </div>
+  </template>This is some text to read
 </gux-announce-beta>
 `;
 
 exports[`gux-announce #render should have off politeness 1`] = `
-<gux-announce-beta aria-live="off" politeness="off">
+<gux-announce-beta politeness="off" aria-live="off">
   <template shadowrootmode="open">
-    <slot></slot>
-    <div></div>
-  </template>
-  This is some text to read
+    <slot>
+    </slot>
+    <div>
+    </div>
+  </template>This is some text to read
 </gux-announce-beta>
 `;
 
 exports[`gux-announce #render should have polite politeness 1`] = `
-<gux-announce-beta aria-live="polite" politeness="polite">
+<gux-announce-beta politeness="polite" aria-live="polite">
   <template shadowrootmode="open">
-    <slot></slot>
-    <div></div>
-  </template>
-  This is some text to read
+    <slot>
+    </slot>
+    <div>
+    </div>
+  </template>This is some text to read
 </gux-announce-beta>
 `;

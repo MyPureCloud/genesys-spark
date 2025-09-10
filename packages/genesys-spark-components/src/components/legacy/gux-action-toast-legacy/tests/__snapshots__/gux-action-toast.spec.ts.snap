@@ -1,29 +1,35 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-action-toast #render should render action toast 1`] = `
-<gux-action-toast-legacy accent="neutral" lang="en">
+<gux-action-toast-legacy lang="en" accent="neutral">
   <template shadowrootmode="open">
     <div class="gux-header">
       <div class="gux-icon">
-        <slot name="icon"></slot>
+        <slot name="icon">
+        </slot>
       </div>
       <div class="gux-title">
-        <slot name="title"></slot>
+        <slot name="title">
+        </slot>
       </div>
     </div>
     <div class="gux-message">
-      <slot name="message"></slot>
+      <slot name="message">
+      </slot>
     </div>
     <div class="gux-action-buttons">
       <div class="gux-positive-button">
-        <slot name="positive-button"></slot>
+        <slot name="positive-button">
+        </slot>
       </div>
       <div class="gux-negative-button">
-        <slot name="negative-button"></slot>
+        <slot name="negative-button">
+        </slot>
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <gux-icon slot="icon" icon-name="user-add" decorative="">
+  </gux-icon>
   <div slot="title">
     Title
   </div>
@@ -32,19 +38,19 @@ exports[`gux-action-toast #render should render action toast 1`] = `
   </div>
   <gux-button slot="negative-button">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <button class="gux-secondary" id="button-i" type="button">
-        <slot></slot>
+      <button id="button-i" type="button" class="gux-secondary">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Reject
+    </template>Reject
   </gux-button>
-  <gux-button accent="primary" slot="positive-button">
+  <gux-button slot="positive-button" accent="primary">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <button class="gux-primary" id="button-i" type="button">
-        <slot></slot>
+      <button id="button-i" type="button" class="gux-primary">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Accept
+    </template>Accept
   </gux-button>
 </gux-action-toast-legacy>
 `;

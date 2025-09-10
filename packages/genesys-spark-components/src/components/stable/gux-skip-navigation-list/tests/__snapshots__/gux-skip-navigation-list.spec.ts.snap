@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-skip-navigation-list #render should render component as expected (1) 1`] = `
 <gux-skip-navigation-list>
@@ -6,14 +6,16 @@ exports[`gux-skip-navigation-list #render should render component as expected (1
     <div class="gux-container">
       <nav aria-label="Skip links navigation">
         <ul role="list">
-          <slot></slot>
+          <slot>
+          </slot>
         </ul>
       </nav>
     </div>
   </template>
   <gux-skip-navigation-item role="listitem">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <slot></slot>
+      <slot>
+      </slot>
     </template>
     <a href="#" onclick="notify(event)">
       Navigation Link 1
@@ -21,7 +23,8 @@ exports[`gux-skip-navigation-list #render should render component as expected (1
   </gux-skip-navigation-item>
   <gux-skip-navigation-item role="listitem">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <slot></slot>
+      <slot>
+      </slot>
     </template>
     <a href="#" onclick="notify(event)">
       Navigation Link 2 that is long
@@ -29,7 +32,8 @@ exports[`gux-skip-navigation-list #render should render component as expected (1
   </gux-skip-navigation-item>
   <gux-skip-navigation-item role="listitem">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <slot></slot>
+      <slot>
+      </slot>
     </template>
     <a href="#" onclick="notify(event)">
       Navigation Link 3
@@ -37,7 +41,8 @@ exports[`gux-skip-navigation-list #render should render component as expected (1
   </gux-skip-navigation-item>
   <gux-skip-navigation-item role="listitem">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <slot></slot>
+      <slot>
+      </slot>
     </template>
     <a href="#" onclick="notify(event)">
       Link 4

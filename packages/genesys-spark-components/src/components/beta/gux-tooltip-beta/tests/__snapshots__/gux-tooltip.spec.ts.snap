@@ -1,12 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-tooltip-beta #render should link to "for" element 1`] = `
 <gux-tooltip-beta for="element" id="gux-tooltip-i">
   <template shadowrootmode="open">
-    <gux-tooltip-base-beta accent="light" placement="bottom-start" tooltipid="gux-tooltip-i">
+    <gux-tooltip-base-beta placement="bottom-start" accent="light" tooltipid="gux-tooltip-i">
       <span slot="content">
         <slot name="content">
-          <slot></slot>
+          <slot>
+          </slot>
         </slot>
       </span>
     </gux-tooltip-base-beta>
@@ -20,10 +21,11 @@ exports[`gux-tooltip-beta #render should link to "for" element 1`] = `
 exports[`gux-tooltip-beta #render should link to sibling element 1`] = `
 <gux-tooltip-beta id="gux-tooltip-i">
   <template shadowrootmode="open">
-    <gux-tooltip-base-beta accent="light" placement="bottom-start" tooltipid="gux-tooltip-i">
+    <gux-tooltip-base-beta placement="bottom-start" accent="light" tooltipid="gux-tooltip-i">
       <span slot="content">
         <slot name="content">
-          <slot></slot>
+          <slot>
+          </slot>
         </slot>
       </span>
     </gux-tooltip-base-beta>
