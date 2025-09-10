@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-phone #render should render component as expected when an optional "error" slot is provided (7) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-phone>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -42,7 +42,7 @@ exports[`gux-form-field-phone #render should render component as expected when a
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render should render component as expected when an optional "help" slot is provided (6) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when an optional "help" slot is provided 1`] = `
 <gux-form-field-phone>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -84,7 +84,7 @@ exports[`gux-form-field-phone #render should render component as expected when a
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render should render component as expected when an optional "label-info" slot is provided (8) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-phone>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -128,7 +128,7 @@ exports[`gux-form-field-phone #render should render component as expected when a
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render should render component as expected when indicator-mark is "optional" (4) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when indicator-mark is "optional" 1`] = `
 <gux-form-field-phone indicator-mark="optional">
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -167,7 +167,7 @@ exports[`gux-form-field-phone #render should render component as expected when i
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render should render component as expected when indicator-mark is "required" (5) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when indicator-mark is "required" 1`] = `
 <gux-form-field-phone indicator-mark="required">
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -206,7 +206,7 @@ exports[`gux-form-field-phone #render should render component as expected when i
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render should render component as expected when label-position is above (1) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when label-position is above 1`] = `
 <gux-form-field-phone label-position="above">
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -245,7 +245,7 @@ exports[`gux-form-field-phone #render should render component as expected when l
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render should render component as expected when label-position is beside (2) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when label-position is beside 1`] = `
 <gux-form-field-phone label-position="beside">
   <template shadowrootmode="open">
     <fieldset class="gux-beside gux-form-field-fieldset-container">
@@ -284,7 +284,7 @@ exports[`gux-form-field-phone #render should render component as expected when l
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render should render component as expected when label-position is screenreader (3) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when label-position is screenreader 1`] = `
 <gux-form-field-phone label-position="screenreader">
   <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">

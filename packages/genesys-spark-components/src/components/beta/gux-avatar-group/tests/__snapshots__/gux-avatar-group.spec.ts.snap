@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-avatar-group renders avatar group should render component as expected type 1`] = `
+exports[`gux-avatar-group #render renders avatar group 1`] = `
 <gux-avatar-group-beta role="menu">
   <template shadowrootmode="open">
     <slot></slot>
@@ -207,7 +207,7 @@ exports[`gux-avatar-group renders avatar group should render component as expect
 </gux-avatar-group-beta>
 `;
 
-exports[`gux-avatar-group renders avatar group with add item should render component as expected type 1`] = `
+exports[`gux-avatar-group #render renders avatar group with add item 1`] = `
 <gux-avatar-group-beta role="menu">
   <template shadowrootmode="open">
     <slot></slot>

@@ -3,7 +3,7 @@ jest.mock('../../../../utils/error/log-error', () => ({
   logWarn: jest.fn()
 }));
 
-import { newSpecPage } from '@test/specTestUtils';
+import { newSpecPage, checkRenders } from '@test/specTestUtils';
 
 import { GuxAvatarGroup } from '../gux-avatar-group';
 import { logWarn } from '../../../../utils/error/log-error';
@@ -14,13 +14,8 @@ import { renderConfigs } from './gux-avatar-group.common';
 const components = [GuxAvatarGroup, GuxAvatarGroupItem, GuxAvatarGroupAddItem];
 
 describe('gux-avatar-group', () => {
-  renderConfigs.forEach(({ description, html }) => {
-    it(`${description} should render component as expected type`, async () => {
-      const page = await newSpecPage({ components, html });
-
-      expect(page.root).toMatchSnapshot();
-      expect(logWarn).not.toHaveBeenCalled();
-    });
+  describe('#render', () => {
+    checkRenders(renderConfigs, components);
   });
 
   describe('warnings', () => {

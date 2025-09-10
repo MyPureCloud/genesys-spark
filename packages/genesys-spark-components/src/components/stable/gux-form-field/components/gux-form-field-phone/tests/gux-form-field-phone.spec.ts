@@ -1,4 +1,4 @@
-import { newSpecPage } from '@test/specTestUtils';
+import { newSpecPage, checkRenders } from '@test/specTestUtils';
 
 import { GuxFormFieldPhone } from '../gux-form-field-phone';
 import { renderConfigs } from './gux-form-field-phone.common';
@@ -20,12 +20,6 @@ describe('gux-form-field-phone', () => {
   });
 
   describe('#render', () => {
-    renderConfigs.forEach(({ description, html }, index) => {
-      it(`${description} (${index + 1})`, async () => {
-        const page = await newSpecPage({ components, html, language });
-
-        expect(page.root).toMatchSnapshot();
-      });
-    });
+    checkRenders(renderConfigs, components);
   });
 });
