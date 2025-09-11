@@ -2411,7 +2411,8 @@
       "tree_view.compact.label": "S:4ee9efd6b0cbf55d521e95ae108236b40c799712,",
       "tree_view.group_header.heading": "S:b7e74966ef821c4c9aae6969e4a8959510a0f607,",
       "tree_view.group_header.meter_title": "S:70e650bd59e4fb8e3f58a75f68bf0831cbbd4597,",
-      "tree_view.quantity_meter": "S:946e6205aacb54dfe1b123ef67d629c18684fcff,"
+      "tree_view.quantity_meter": "S:946e6205aacb54dfe1b123ef67d629c18684fcff,",
+      "global_nav.panel.box_shadow": "S:43a6ffcee5e4aa553b7fdbdc75a21b6359ec9b8a,"
     },
     "selectedTokenSets": {
       "ui/unordered": "enabled",
