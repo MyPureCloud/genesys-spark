@@ -177,6 +177,90 @@ exports[`gux-toast #render should render success toast 1`] = `
 </gux-toast>
 `;
 
+exports[`gux-toast #render should render toast with a long message 1`] = `
+<gux-toast toast-type="success">
+  <template shadowrootmode="open">
+    <div class="gux-toast gux-toast-success">
+      <div class="gux-icon gux-icon-success">
+        <gux-icon icon-name="fa/circle-check-solid" decorative="">
+        </gux-icon>
+      </div>
+      <div class="gux-content">
+        <div class="gux-message">
+          <gux-truncate class="gux-message-title" max-lines="1">
+            <slot name="title">
+            </slot>
+          </gux-truncate>
+          <gux-truncate class="gux-message-body" max-lines="2">
+            <slot name="message">
+            </slot>
+          </gux-truncate>
+        </div>
+        <div class="gux-buttons-bar">
+          <gux-link-beta standalone="">
+            <slot name="link">
+            </slot>
+          </gux-link-beta>
+        </div>
+      </div>
+      <gux-dismiss-button position="inherit">
+      </gux-dismiss-button>
+    </div>
+  </template>
+  <div slot="title">
+    Success Example with Link
+  </div>
+  <div slot="message">
+    This is an example message that is longer thatn a single line
+  </div>
+  <a slot="link" href="#">
+    Link
+  </a>
+</gux-toast>
+`;
+
+exports[`gux-toast #render should render toast with a long word in the message 1`] = `
+<gux-toast toast-type="success">
+  <template shadowrootmode="open">
+    <div class="gux-toast gux-toast-success">
+      <div class="gux-icon gux-icon-success">
+        <gux-icon icon-name="fa/circle-check-solid" decorative="">
+        </gux-icon>
+      </div>
+      <div class="gux-content">
+        <div class="gux-message">
+          <gux-truncate class="gux-message-title" max-lines="1">
+            <slot name="title">
+            </slot>
+          </gux-truncate>
+          <gux-truncate class="gux-message-body" max-lines="2">
+            <slot name="message">
+            </slot>
+          </gux-truncate>
+        </div>
+        <div class="gux-buttons-bar">
+          <gux-link-beta standalone="">
+            <slot name="link">
+            </slot>
+          </gux-link-beta>
+        </div>
+      </div>
+      <gux-dismiss-button position="inherit">
+      </gux-dismiss-button>
+    </div>
+  </template>
+  <div slot="title">
+    Success Example with Link
+  </div>
+  <div slot="message">
+    accountswitcherdcatestuser2@accountswitcherdca.test account successfully removed
+  </div>
+  <a slot="link" href="#">
+    Link
+  </a>
+</gux-toast>
+`;
+
 exports[`gux-toast #render should render warning toast 1`] = `
 <gux-toast toast-type="warning">
   <template shadowrootmode="open">
