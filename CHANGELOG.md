@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.171.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.3...v4.171.4) (2025-09-11)
+
+
+### Bug Fixes
+
+* **tabs:** fix vertical tabs style for vue ([b186484](https://github.com/MyPureCloud/genesys-spark/commit/b186484d773afd4eb4dfec629ee1ba1909a0d164))
+
 ### [4.171.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.2...v4.171.3) (2025-09-10)
 
 ### [4.171.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.1...v4.171.2) (2025-09-09)
