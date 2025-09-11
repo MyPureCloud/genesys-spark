@@ -13,7 +13,7 @@ import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import clamp from '@utils/number/clamp';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import ratingResources from './i18n/en.json';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 
