@@ -182,6 +182,11 @@
   --gse-ui-globalNav-menuOption-return-default-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-return-hover-backgroundColor: #102251;
   --gse-ui-globalNav-menuOption-return-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-newTab-default-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-newTab-hover-backgroundColor: #0c193d;
+  --gse-ui-globalNav-menuOption-newTab-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-newTab-selected-backgroundColor: #102251;
+  --gse-ui-globalNav-menuOption-newTab-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-height: 32px;
   --gse-ui-globalNav-menuOption-width: 248px;
   --gse-ui-globalNav-menuOption-padding: 0px 12px;
@@ -199,11 +204,6 @@
   --gse-ui-globalNav-menuOption-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-selected-stroke: #ff451a;
   --gse-ui-globalNav-menuOption-treeView-bar: #263b73;
-  --gse-ui-globalNav-menuOption-newTab-default-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-newTab-hover-backgroundColor: #0c193d;
-  --gse-ui-globalNav-menuOption-newTab-hover-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-newTab-selected-backgroundColor: #102251;
-  --gse-ui-globalNav-menuOption-newTab-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-sideMenu: linear-gradient(
     135deg,
     #09b581 0%,
@@ -270,6 +270,8 @@
   --gse-ui-globalNav-panel-primary: #19327a;
   --gse-ui-globalNav-panel-secondary: #0c193d;
   --gse-ui-globalNav-panel-feedbackContainer-backgroundColor: #19327a;
+  --gse-ui-globalNav-panel-boxShadow:
+    0 6px 10px 4px #00000073, 0 0 2px 0 #00000073;
   --gse-ui-globalNav-userSettingsWindow-body-height: 400px;
   --gse-ui-globalNav-userSettingsWindow-body-width: 360px;
   --gse-ui-globalNav-userSettingsWindow-body-gap: 4px;
