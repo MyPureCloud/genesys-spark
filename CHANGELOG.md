@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.171.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.4...v4.171.5) (2025-09-12)
+
+
+### Bug Fixes
+
+* **dropdown:** fix shift tab focus trap ([f8fd803](https://github.com/MyPureCloud/genesys-spark/commit/f8fd8034d4965f3c456f4948b20da89a3ea17830))
+* **toast:** fixed message word break ([4610b6f](https://github.com/MyPureCloud/genesys-spark/commit/4610b6facb823145ab1607c1a1552d237a82f4c7))
+
 ### [4.171.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.3...v4.171.4) (2025-09-11)
 
 
