@@ -29,9 +29,9 @@
   .gux-grow-wrap {
     display: grid;
     inline-size: 100%;
-    min-block-size: ui.$gse-ui-promptInput-simple-label-minHeight;
     min-block-size: 0;
     max-block-size: ui.$gse-ui-promptInput-simple-label-maxHeight;
+    padding: ui.$gse-ui-promptInput-complex-labelContainer-scrollEnabled-padding;
     overflow: hidden auto;
 
     &::after {
