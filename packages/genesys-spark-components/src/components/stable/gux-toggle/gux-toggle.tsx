@@ -162,7 +162,7 @@ export class GuxToggle {
   private renderError(): JSX.Element {
     if (this.errorMessage) {
       return (
-        <div id={this.errorId} class="gux-toggle-error">
+        <div role="alert" id={this.errorId} class="gux-toggle-error">
           <div class="gux-toggle-error-container">
             <gux-icon
               icon-name="fa/hexagon-exclamation-solid"
