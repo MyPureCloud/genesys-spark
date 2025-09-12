@@ -23,6 +23,7 @@
 
  - [gux-action-button](../gux-action-button)
  - [gux-blank-state](../gux-blank-state)
+ - [gux-blank-state-beta](../../beta/gux-blank-state-beta)
  - [gux-button-multi](../gux-button-multi)
  - [gux-context-menu](../gux-context-menu)
  - [gux-dismiss-button](../gux-dismiss-button)
@@ -49,6 +50,7 @@
 graph TD;
   gux-action-button --> gux-button-slot
   gux-blank-state --> gux-button-slot
+  gux-blank-state-beta --> gux-button-slot
   gux-button-multi --> gux-button-slot
   gux-context-menu --> gux-button-slot
   gux-dismiss-button --> gux-button-slot
