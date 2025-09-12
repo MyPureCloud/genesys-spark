@@ -64,6 +64,30 @@ export const renderConfigs = [
         </gux-toast>
       </div>
     `
+  },
+  {
+    description: 'should render toast with a long message',
+    html: `
+      <div aria-live="polite">
+        <gux-toast toast-type="success">
+          <div slot="title">Success Example with Link</div>
+          <div slot="message">This is an example message that is longer thatn a single line</div>
+          <a slot="link" href="#">Link</a>
+        </gux-toast>
+      </div>
+    `
+  },
+  {
+    description: 'should render toast with a long word in the message',
+    html: `
+      <div aria-live="polite">
+        <gux-toast toast-type="success">
+          <div slot="title">Success Example with Link</div>
+          <div slot="message">accountswitcherdcatestuser2@accountswitcherdca.test account successfully removed</div>
+          <a slot="link" href="#">Link</a>
+        </gux-toast>
+      </div>
+    `
   }
 ];
 

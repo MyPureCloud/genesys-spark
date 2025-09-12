@@ -2573,6 +2573,11 @@
       "label": {
         "max_height": "200px",
         "min_height": "32px"
+      },
+      "label_container": {
+        "scroll_enabled": {
+          "padding": "0px 8px 0px 0px"
+        }
       }
     },
     "complex": {
@@ -2591,6 +2596,11 @@
       },
       "file_container": {
         "gap": "8px"
+      },
+      "label_container": {
+        "scroll_enabled": {
+          "padding": "0px 8px 0px 0px"
+        }
       }
     },
     "border": {
