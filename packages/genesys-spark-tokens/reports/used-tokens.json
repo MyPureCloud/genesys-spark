@@ -847,6 +847,8 @@
   "--gse-ui-progressAndLoading-spinner-text-fontWeight",
   "--gse-ui-progressAndLoading-spinner-text-lineHeight",
   "--gse-ui-progressAndLoading-textColor",
+  "--gse-ui-promptInput-complex-labelContainer-scrollEnabled-padding",
+  "--gse-ui-promptInput-simple-label-maxHeight",
   "--gse-ui-radioButton-disabled-opacity",
   "--gse-ui-radioButton-focus-border-color",
   "--gse-ui-radioButton-focus-border-style",
