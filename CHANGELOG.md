@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.171.6](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.5...v4.171.6) (2025-09-13)
+
+
+### Bug Fixes
+
+* **prompt-input-beta:** add vertical scroll state ([c5c0b65](https://github.com/MyPureCloud/genesys-spark/commit/c5c0b656c4475c5738add6767aa181b489a68986))
+
 ### [4.171.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.4...v4.171.5) (2025-09-12)
 
 
