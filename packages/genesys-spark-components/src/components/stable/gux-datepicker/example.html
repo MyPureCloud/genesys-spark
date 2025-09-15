@@ -1,103 +1,81 @@
-<h1>gux-datepicker</h1>
-<h2>Single Date Selection</h2>
-<gux-datepicker value="1997-08-15" format="mm/dd/yyyy"></gux-datepicker>
-<gux-datepicker format="mm/dd/yyyy"></gux-datepicker>
-<gux-datepicker value="1997-08-15" format="mm/dd/yy"></gux-datepicker>
-<gux-datepicker
-  label-position="above"
-  label="Birthday"
-  value="1997-08-15"
-  format="mm.dd.yyyy"
-></gux-datepicker>
-<gux-datepicker
-  label-position="above"
-  label="Disabled"
-  format="mm/dd/yyyy"
-  disabled
-></gux-datepicker>
+<h1>Thai Locale</h1>
 
-<h2>Range Selection</h2>
-<gux-datepicker
-  mode="range"
-  value="2019-11-25/2019-12-02"
-  number-of-months="2"
-></gux-datepicker>
-<gux-datepicker
-  mode="range"
-  value="2019-11-25/2019-12-02"
-  min-date="2019-11-10"
-  max-date="2019-12-31"
-  number-of-months="2"
-></gux-datepicker>
-<gux-datepicker
-  mode="range"
-  value="2019-11-25/2019-12-02"
-  min-date="2019-11-10"
-  max-date="2019-12-31"
-  number-of-months="2"
-  format="mm.dd.yyyy"
-></gux-datepicker>
-<gux-datepicker
-  mode="range"
-  value="2019-11-25/2019-12-02"
-  number-of-months="2"
-  disabled
-></gux-datepicker>
-<gux-datepicker
-  mode="range"
-  label="Start Date,End Date"
-  value="2019-11-25/2019-12-02"
-  number-of-months="2"
-></gux-datepicker>
+<div lang="th">
+  <h2>gux-datepicker</h2>
 
-<h2>Start Day of Week</h2>
+  <gux-datepicker value="1997-08-15" format="mm/dd/yyyy"></gux-datepicker>
+  <gux-datepicker format="mm/dd/yyyy"></gux-datepicker>
+  <gux-datepicker value="1997-08-15" format="mm/dd/yy"></gux-datepicker>
+  <gux-datepicker
+    label-position="above"
+    label="Birthday"
+    value="1997-08-15"
+    format="mm.dd.yyyy"
+  ></gux-datepicker>
 
-<h3>Monday</h3>
-<gux-datepicker start-day-of-week="1"></gux-datepicker>
+  <h2>gux-calendar</h2>
 
-<h3>Saturday</h3>
-<gux-datepicker start-day-of-week="6"></gux-datepicker>
+  <gux-calendar
+    mode="single"
+    value="1997-08-29"
+    min-date="1997-08-25"
+  ></gux-calendar>
 
-<h3>Sunday</h3>
-<gux-datepicker start-day-of-week="7"></gux-datepicker>
+  <h2>gux-calendar-beta</h2>
 
-<h2>Languages</h2>
-<div id="languages-container"></div>
+  <gux-calendar-beta oninput="notify(event)">
+    <input type="date" value="2023-05-19" />
+  </gux-calendar-beta>
 
-<style
-  onload="(function () {
-  // window['GUX_OPTIONS_enableRegionalDates'] = true
-  const languagesContainer = document.getElementById('languages-container');
-  const arHtml = window.toHTML([
-    '<div>',
-        '<h3>ar</h3>',
-          '<gux-datepicker dir=rtl lang=ar value=2022-12-23></gux-datepicker>',
-      '</div>'
-    ].join(''));
-    languagesContainer.appendChild(arHtml);
+  <h2>gux-date-time-beta</h2>
 
-  [
-    'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi', 'fr-ca',
-    'fr', 'he', 'hi', 'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
-    'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
-  ].forEach((lang) => {
-    const html = window.toHTML([
-      '<div lang=' + lang + '>',
-        '<h3>' + lang + '</h3>',
-          '<gux-datepicker value=2022-12-23></gux-datepicker>',
-      '</div>'
-    ].join(''));
-    languagesContainer.appendChild(html);
-  });
-})()"
->
-  #languages-container {
-    display: flex;
-    flex-direction: column;
-  }
+  <h3>Default</h3>
+  <gux-date-beta></gux-date-beta>
 
-  gux-datepicker {
-    margin-block: 8px;
-    margin-inline: 0;
-  }
-</style>
+  <h3>Short</h3>
+  <gux-date-beta
+    datetime="2022-01-01T14:48:00.000Z"
+    format="short"
+  ></gux-date-beta>
+
+  <h3>Medium</h3>
+  <gux-date-beta
+    datetime="2022-01-01T14:48:00.000Z"
+    format="medium"
+  ></gux-date-beta>
+
+  <h3>Long</h3>
+  <gux-date-beta
+    datetime="2022-01-01T14:48:00.000Z"
+    format="long"
+  ></gux-date-beta>
+
+  <h3>Full</h3>
+  <gux-date-beta
+    datetime="2022-01-01T14:48:00.000Z"
+    format="full"
+  ></gux-date-beta>
+
+  <h3>Time zone</h3>
+  <gux-date-beta
+    time-zone="America/Los_Angeles"
+    datetime="2022-01-01T12:00:00.000Z"
+    format="full"
+  ></gux-date-beta>
+
+  <h2>gux-date-beta</h2>
+  <h3>Default</h3>
+  <gux-date-time-beta></gux-date-time-beta>
+
+  <h3>Short</h3>
+  <gux-date-time-beta format="short"></gux-date-time-beta>
+
+  <h3>Medium</h3>
+  <gux-date-time-beta format="medium"></gux-date-time-beta>
+
+  <h3>Long</h3>
+  <gux-date-time-beta format="long"></gux-date-time-beta>
+
+  <h3>Full</h3>
+  <gux-date-time-beta format="full"></gux-date-time-beta>
+</div>
