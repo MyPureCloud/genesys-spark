@@ -40,6 +40,34 @@
             "type": "color"
           }
         }
+      },
+      "new_tab": {
+        "default": {
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.default}",
+            "type": "color"
+          }
+        },
+        "hover": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.new_tab.hover}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.hover}",
+            "type": "color"
+          }
+        },
+        "selected": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.new_tab.selected}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.selected}",
+            "type": "color"
+          }
+        }
       }
     }
   },
