@@ -2,10 +2,18 @@ import { getAssetPath } from '@stencil/core';
 
 const svgHTMLCache: Map<string, Promise<string>> = new Map();
 
+function getBackgroundShape(shapeName: string): string {
+  return shapeName.includes('narrow') ? 'narrow' : 'wide';
+}
+
 function getIllustrationPath(
   illustrationName: string,
   type: 'variants' | 'status' | 'background-shapes'
 ): string {
+  if (type === 'background-shapes') {
+    const shapeType = getBackgroundShape(illustrationName);
+    return `./illustrations/${type}/${shapeType}.svg`;
+  }
   return `./illustrations/${type}/${illustrationName}.svg`;
 }
 
