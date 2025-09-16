@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.172.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.6...v4.172.0) (2025-09-16)
+
+
+### Features
+
+* **logo-beta:** added new logo components ([e803948](https://github.com/MyPureCloud/genesys-spark/commit/e803948cf7c6af2c978e3801c4e659ad0e89babc))
+
 ### [4.171.6](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.5...v4.171.6) (2025-09-13)
 
 
