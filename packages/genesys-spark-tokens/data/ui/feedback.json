@@ -691,6 +691,10 @@
         "lineHeight": "16px"
       },
       "type": "typography"
+    },
+    "trial_color": {
+      "value": "{color_legacy.secondary.fuchsia}",
+      "type": "color"
     }
   }
 }
