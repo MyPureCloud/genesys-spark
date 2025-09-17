@@ -58,8 +58,8 @@ button {
     align-items: center;
     block-size: 100%;
     padding: ui.$gse-ui-segmentedControl-button-padding;
-    line-height: 0;
     color: ui.$gse-ui-segmentedControl-button-default-foregroundColor;
+    white-space: nowrap;
     cursor: pointer;
     background-color: ui.$gse-ui-segmentedControl-button-default-backgroundColor;
 
@@ -100,6 +100,8 @@ button {
     }
 
     .gux-icon {
+      line-height: 0;
+
       slot[name='icon']::slotted(gux-icon) {
         inline-size: ui.$gse-ui-icon-small-size;
         block-size: ui.$gse-ui-icon-small-size;

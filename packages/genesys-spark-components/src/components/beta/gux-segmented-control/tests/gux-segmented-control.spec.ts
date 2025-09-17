@@ -1,7 +1,9 @@
-import { newSpecPage } from '@test/specTestUtils';
+import { checkRenders, newSpecPage } from '@test/specTestUtils';
 
 import { GuxSegmentedControl } from '../gux-segmented-control';
 import { GuxSegmentedControlItem } from '../gux-segmented-control-item/gux-segmented-control-item';
+
+import { renderConfigs } from './gux-segmented-control.common';
 
 const components = [GuxSegmentedControl, GuxSegmentedControlItem];
 const html = `
@@ -27,12 +29,7 @@ const language = 'en';
 
 describe('gux-segmented-control-beta', () => {
   describe('#render', () => {
-    it(`should render as expected`, async () => {
-      const page = await newSpecPage({ components, html, language });
-
-      expect(page.rootInstance).toBeInstanceOf(GuxSegmentedControl);
-      expect(page.root).toMatchSnapshot();
-    });
+    checkRenders(renderConfigs, components);
   });
 
   describe('#interactions', () => {
