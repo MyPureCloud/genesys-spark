@@ -16,7 +16,8 @@ test.describe('gux-tag', () => {
     test('should fire guxdelete event when remove button is clicked', async ({
       page
     }) => {
-      const html = '<gux-tag removable>Removable Tag</gux-tag>';
+      const html =
+        '<gux-tag removable><span slot="content">Removable Tag</span></gux-tag>';
       await setContent(page, html);
       const deleteSpy = await page.spyOnEvent('guxdelete');
 
@@ -31,7 +32,7 @@ test.describe('gux-tag', () => {
       page
     }) => {
       const html =
-        '<gux-tag removable disabled>Disabled Removable Tag</gux-tag>';
+        '<gux-tag removable disabled><span slot="content">Disabled Removable Tag</span></gux-tag>';
       await setContent(page, html);
       const deleteSpy = await page.spyOnEvent('guxdelete');
 
@@ -46,7 +47,8 @@ test.describe('gux-tag', () => {
     test('should have correct aria-disabled attribute when disabled', async ({
       page
     }) => {
-      const html = '<gux-tag disabled>Disabled Tag</gux-tag>';
+      const html =
+        '<gux-tag disabled><span slot="content">Disabled Tag</span></gux-tag>';
       await setContent(page, html);
 
       const tagContainer = page.locator('.gux-tag');
@@ -56,7 +58,7 @@ test.describe('gux-tag', () => {
     test('should have correct aria-disabled attribute when not disabled', async ({
       page
     }) => {
-      const html = '<gux-tag>Normal Tag</gux-tag>';
+      const html = '<gux-tag><span slot="content">Normal Tag</span></gux-tag>';
       await setContent(page, html);
 
       const tagContainer = page.locator('.gux-tag');
@@ -64,7 +66,8 @@ test.describe('gux-tag', () => {
     });
 
     test('should render remove button when removable', async ({ page }) => {
-      const html = '<gux-tag removable>Removable Tag</gux-tag>';
+      const html =
+        '<gux-tag removable><span slot="content">Removable Tag</span></gux-tag>';
       await setContent(page, html);
 
       const removeButton = page.locator('.gux-tag-remove-button');
@@ -74,7 +77,8 @@ test.describe('gux-tag', () => {
     test('should not render remove button when not removable', async ({
       page
     }) => {
-      const html = '<gux-tag>Non-removable Tag</gux-tag>';
+      const html =
+        '<gux-tag><span slot="content">Non-removable Tag</span></gux-tag>';
       await setContent(page, html);
 
       const removeButton = page.locator('.gux-tag-remove-button');
