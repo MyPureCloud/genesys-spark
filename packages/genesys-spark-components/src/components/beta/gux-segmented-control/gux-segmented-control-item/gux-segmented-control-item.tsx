@@ -101,7 +101,7 @@ export class GuxSegmentedControlItem {
         </span>
       </button>,
       this.renderTooltip(),
-      <div class="gux-divider"></div>
+      <gux-segmented-control-divider></gux-segmented-control-divider>
     ] as JSX.Element;
   }
 }

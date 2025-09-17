@@ -14,8 +14,8 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
           </slot>
         </span>
       </button>
-      <div class="gux-divider">
-      </div>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Month
@@ -29,8 +29,8 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
           </slot>
         </span>
       </button>
-      <div class="gux-divider">
-      </div>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Week
@@ -44,8 +44,8 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
           </slot>
         </span>
       </button>
-      <div class="gux-divider">
-      </div>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Day
@@ -59,8 +59,8 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
           </slot>
         </span>
       </button>
-      <div class="gux-divider">
-      </div>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Hour
@@ -74,8 +74,8 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
           </slot>
         </span>
       </button>
-      <div class="gux-divider">
-      </div>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Minute
@@ -98,8 +98,8 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </slot>
         </span>
       </button>
-      <div class="gux-divider">
-      </div>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Month
@@ -113,8 +113,8 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </slot>
         </span>
       </button>
-      <div class="gux-divider">
-      </div>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Week
@@ -128,8 +128,8 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </slot>
         </span>
       </button>
-      <div class="gux-divider">
-      </div>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Day
@@ -143,8 +143,8 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </slot>
         </span>
       </button>
-      <div class="gux-divider">
-      </div>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Hour
@@ -158,8 +158,8 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </slot>
         </span>
       </button>
-      <div class="gux-divider">
-      </div>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Minute
@@ -173,8 +173,8 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </slot>
         </span>
       </button>
-      <div class="gux-divider">
-      </div>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>Second
   </gux-segmented-control-item>
 </gux-segmented-control-beta>
