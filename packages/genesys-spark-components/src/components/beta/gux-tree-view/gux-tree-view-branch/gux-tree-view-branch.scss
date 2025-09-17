@@ -1,0 +1,49 @@
+.gux-tree-view-branch-target {
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--gse-ui-treeView-borderRadius);
+
+  &.gux-selected {
+    background-color: var(--gse-ui-treeView-selectionBookmark-midEmphasis);
+  }
+
+  &.gux-comfy {
+    font-family: var(--gse-ui-treeView-comfy-label-fontFamily);
+    font-size: var(--gse-ui-treeView-comfy-label-fontSize);
+    font-weight: var(--gse-ui-treeView-comfy-label-fontWeight);
+    line-height: var(--gse-ui-treeView-comfy-label-lineHeight);
+  }
+
+  &.gux-compact {
+    font-family: var(--gse-ui-treeView-compact-label-fontFamily);
+    font-size: var(--gse-ui-treeView-compact-label-fontSize);
+    font-weight: var(--gse-ui-treeView-compact-label-fontWeight);
+    line-height: var(--gse-ui-treeView-compact-label-lineHeight);
+  }
+}
+
+.gux-arrow-icon {
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+.gux-expanded {
+  .gux-arrow-icon {
+    transform: rotate(90deg);
+  }
+}
+
+.gux-content {
+  box-sizing: border-box;
+  display: none;
+  margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
+
+  &.gux-expanded {
+    display: block;
+  }
+
+  ::slotted([slot='content']) {
+    margin: 0;
+  }
+}
