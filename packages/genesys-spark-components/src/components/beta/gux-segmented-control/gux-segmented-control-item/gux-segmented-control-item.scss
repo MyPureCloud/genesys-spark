@@ -78,15 +78,7 @@ button {
 }
 
 :host(:last-of-type) {
-  .gux-divider {
+  gux-segmented-control-divider {
     display: none;
   }
-}
-
-.gux-divider {
-  inline-size: ui.$gse-ui-segmentedControl-divider-width;
-  block-size: ui.$gse-ui-segmentedControl-dividerLine;
-  margin-inline: ui.$gse-ui-segmentedControl-dividerComponent-margin;
-  background-color: ui.$gse-ui-segmentedControl-divider-color;
-  border-radius: ui.$gse-ui-segmentedControl-borderRadius;
 }
