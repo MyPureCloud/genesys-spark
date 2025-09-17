@@ -17,7 +17,7 @@ import tagResources from './i18n/en.json';
 import { GuxTagAccent, GuxTagSize, GuxTagEmphasis } from './gux-tag.types';
 
 /**
- * @slot - content
+ * @slot content - content
  */
 
 @Component({
@@ -83,9 +83,15 @@ export class GuxTag {
       <gux-tooltip-title>
         <span>
           <slot
+            name="content"
             aria-hidden="true"
             onSlotchange={this.onSlotChange.bind(this)}
-          />
+          >
+            <slot
+              aria-hidden="true"
+              onSlotchange={this.onSlotChange.bind(this)}
+            />
+          </slot>
         </span>
       </gux-tooltip-title>
     ) as JSX.Element;
