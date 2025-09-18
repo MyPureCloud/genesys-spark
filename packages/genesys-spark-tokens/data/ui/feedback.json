@@ -695,6 +695,10 @@
     "tertiary_background_color": {
       "value": "{background.system.notification.tertiary}",
       "type": "color"
+    },
+    "trial_token": {
+      "value": "{color_legacy.secondary.fuchsia}",
+      "type": "color"
     }
   }
 }
