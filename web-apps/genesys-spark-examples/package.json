@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "genesys-spark": "file:../../packages/genesys-spark",
-    "monaco-editor": "^0.52.2",
+    "monaco-editor": "^0.53.0",
     "parse5": "^8.0.0"
   },
   "devDependencies": {
