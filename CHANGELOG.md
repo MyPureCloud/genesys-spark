@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.173.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.172.0...v4.173.0) (2025-09-18)
+
+
+### Features
+
+* **icon:** addition of ai custom icons ([e584c23](https://github.com/MyPureCloud/genesys-spark/commit/e584c239afff66f679a2a1084b8d8a1afa45ba6d))
+
+
+### Bug Fixes
+
+* **dropdown-multi:** fix options not clearing when clear button pressed ([6459a01](https://github.com/MyPureCloud/genesys-spark/commit/6459a0195de6e7e272017bef1b5225563fcc48db))
+
 ## [4.172.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.6...v4.172.0) (2025-09-16)
 
 
