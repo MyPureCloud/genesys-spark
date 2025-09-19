@@ -508,6 +508,34 @@
           "value": "{border.container.global_nav.tree_view.bar}",
           "type": "color"
         }
+      },
+      "new_tab": {
+        "default": {
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.default}",
+            "type": "color"
+          }
+        },
+        "hover": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.new_tab.hover}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.hover}",
+            "type": "color"
+          }
+        },
+        "selected": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.new_tab.selected}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.selected}",
+            "type": "color"
+          }
+        }
       }
     },
     "button_return": {
@@ -790,10 +818,6 @@
           "value": "{background.container.global_nav.desktop.menu_panel.feedback_container}",
           "type": "color"
         }
-      },
-      "box_shadow": {
-        "value": "{shadow.7_menu}",
-        "type": "boxShadow"
       }
     },
     "user_settings_window": {

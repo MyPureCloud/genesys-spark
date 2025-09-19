@@ -2175,14 +2175,6 @@
           "value": "{container.md.height}",
           "type": "sizing"
         }
-      },
-      "label_container": {
-        "scroll_enabled": {
-          "padding": {
-            "value": "0px {interactive.md.padding} 0px 0px",
-            "type": "spacing"
-          }
-        }
       }
     },
     "complex": {
@@ -2218,14 +2210,6 @@
         "gap": {
           "value": "{container.sm.gap}",
           "type": "spacing"
-        }
-      },
-      "label_container": {
-        "scroll_enabled": {
-          "padding": {
-            "value": "0px {interactive.md.padding} 0px 0px",
-            "type": "spacing"
-          }
         }
       }
     },

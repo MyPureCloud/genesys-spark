@@ -398,6 +398,10 @@
             "value": "{color.azure_blue.500}",
             "type": "color"
           },
+          "50": {
+            "value": "{color.emerald.700}",
+            "type": "color"
+          },
           "30d": {
             "value": "{color.haze.950}",
             "type": "color"
@@ -412,6 +416,10 @@
           },
           "10d": {
             "value": "{color.pepper.500}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.emerald.500}",
             "type": "color"
           }
         },
