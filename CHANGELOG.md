@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.173.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.173.0...v4.173.1) (2025-09-19)
+
+
+### Bug Fixes
+
+* **icon:** improved error handling ([eef4a8f](https://github.com/MyPureCloud/genesys-spark/commit/eef4a8fc5663032bdad3e4d1ee716285542d01db))
+* **segmented-control-beta:** fixed long list rendering ([ef82487](https://github.com/MyPureCloud/genesys-spark/commit/ef8248750ccd6f10e7ce41e02ddf5f73c5e99bee))
+* **toggle:** added alert role to error message ([c035d7c](https://github.com/MyPureCloud/genesys-spark/commit/c035d7c65c9775b87c2e90fe892edc318bb387cb))
+
 ## [4.173.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.172.0...v4.173.0) (2025-09-18)
 
 
