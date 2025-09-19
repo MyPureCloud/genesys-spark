@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.135.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.134.0...v3.135.0) (2025-09-19)
+
+
+### Features
+
+* **icon:** add rectangle-history-regular to v3 ([#1351](https://github.com/MyPureCloud/genesys-spark/issues/1351)) ([69a3a2e](https://github.com/MyPureCloud/genesys-spark/commit/69a3a2e5d3d5f778fe7875f86450729c3a73d1bb))
+
 ## [3.134.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.133.7...v3.134.0) (2025-08-13)
 
 
