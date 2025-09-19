@@ -288,6 +288,7 @@ body {
 }
 
 a {
+  display: inline-block;
   /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
@@ -311,6 +312,7 @@ a {
 }
 
 table a {
+  display: inline-block;
   /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
@@ -338,6 +340,7 @@ table a {
 }
 
 .gux-ui-anchor {
+  display: inline-block;
   /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
@@ -361,6 +364,7 @@ table a {
 }
 
 .gux-anchor-table {
+  display: inline-block;
   /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;

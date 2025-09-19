@@ -290,6 +290,7 @@
 
 /* Anchor */
 @mixin ui-anchor {
+  display:inline-block;
   // https://github.com/stylelint/stylelint/issues/8728
   /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
