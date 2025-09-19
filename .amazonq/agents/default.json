@@ -1,6 +1,5 @@
 {
-  "name": "default-agent",
-  "version": "1.0.0",
+  "name": "amazon_q_default",
   "description": "Agent configuration",
   "mcpServers": {
     "Playwright": {
@@ -13,6 +12,8 @@
   "tools": ["@Playwright"],
   "allowedTools": [],
   "toolsSettings": {},
-  "includedFiles": [],
-  "resources": []
+  "resources": [],
+  "prompt": "",
+  "toolAliases": {},
+  "useLegacyMcpJson": false
 }

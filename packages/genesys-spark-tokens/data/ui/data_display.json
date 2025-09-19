@@ -993,12 +993,6 @@
       }
     }
   },
-  "global_nav": {
-    "side_menu": {
-      "value": "linear-gradient(135deg, {color.emerald.500} 0%, {color.emerald.200} 100%)",
-      "type": "color"
-    }
-  },
   "data_table_composed": {
     "box_shadow": {
       "value": "{shadow.1_card.default}",
