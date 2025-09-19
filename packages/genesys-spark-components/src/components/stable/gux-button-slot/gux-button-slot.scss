@@ -203,3 +203,38 @@
     background: none;
   }
 }
+
+:host([accent='input-icon']) {
+  ::slotted(input[type='button']),
+  ::slotted(input[type='submit']),
+  ::slotted(button) {
+    inline-size: 16px;
+    min-inline-size: initial;
+    block-size: 16px;
+    padding: 1px;
+    color: var(--gse-ui-formControl-input-inputClearable-inputClearableColor);
+    background-color: transparent;
+  }
+
+  ::slotted(input[type='button']:hover:enabled),
+  ::slotted(input[type='submit']:hover:enabled),
+  ::slotted(button:hover:enabled) {
+    color: var(--gse-semantic-background-interactive-primary-hover);
+    background-color: transparent;
+  }
+
+  ::slotted(input[type='button']:active:enabled),
+  ::slotted(input[type='submit']:active:enabled),
+  ::slotted(button:active:enabled) {
+    color: var(--gse-semantic-background-interactive-primary-active);
+    background-color: transparent;
+  }
+
+  ::slotted(input[type='button']:focus-visible:enabled),
+  ::slotted(input[type='submit']:focus-visible:enabled),
+  ::slotted(button:focus-visible:enabled) {
+    // outline: none;
+    color: var(--gse-semantic-background-interactive-primary-default);
+    background-color: transparent;
+  }
+}

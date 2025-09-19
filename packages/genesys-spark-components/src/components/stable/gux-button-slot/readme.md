@@ -4,10 +4,10 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type                                                                        | Default       |
-| ---------- | ----------- | ----------- | --------------------------------------------------------------------------- | ------------- |
-| `accent`   | `accent`    |             | `"danger" \| "ghost" \| "inline" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
-| `iconOnly` | `icon-only` |             | `boolean`                                                                   | `undefined`   |
+| Property   | Attribute   | Description | Type                                                                                        | Default       |
+| ---------- | ----------- | ----------- | ------------------------------------------------------------------------------------------- | ------------- |
+| `accent`   | `accent`    |             | `"danger" \| "ghost" \| "inline" \| "input-icon" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
+| `iconOnly` | `icon-only` |             | `boolean`                                                                                   | `undefined`   |
 
 
 ## Slots
@@ -21,6 +21,7 @@
 
 ### Used by
 
+ - [dux-form-field-date-beta](../gux-form-field/components/gux-form-field-date)
  - [gux-action-button](../gux-action-button)
  - [gux-blank-state](../gux-blank-state)
  - [gux-button-multi](../gux-button-multi)
@@ -47,6 +48,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  dux-form-field-date-beta --> gux-button-slot
   gux-action-button --> gux-button-slot
   gux-blank-state --> gux-button-slot
   gux-button-multi --> gux-button-slot

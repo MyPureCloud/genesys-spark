@@ -1,7 +1,6 @@
-gux-form-field-search {
+dux-form-field-date-beta {
   input {
-    &::-webkit-search-cancel-button,
-    &::-webkit-search-results-button {
+    &::-webkit-calendar-picker-indicator {
       display: none;
       -webkit-appearance: none;
     }

@@ -1,0 +1,610 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`gux-form-field-date #render should render component as expected when an optional "error" slot is provided 1`] = `
+<dux-form-field-date-beta>
+  <template shadowrootmode="open">
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <gux-popup inline="" offset="4">
+          <div slot="target" class="gux-input gux-input-error">
+            <div class="gux-input-container">
+              <slot name="input">
+              </slot>
+              <gux-form-field-input-clear-button>
+              </gux-form-field-input-clear-button>
+              <gux-button-slot accent="input-icon">
+                <button type="button" data-testid="picker-button" aria-expanded="false">
+                  <gux-icon icon-name="fa/calendar-regular" decorative="">
+                  </gux-icon>
+                  <gux-screen-reader-beta>
+                    Open date picker
+                  </gux-screen-reader-beta>
+                </button>
+              </gux-button-slot>
+            </div>
+          </div>
+          <div slot="popup" class="gux-popup-container" role="dialog" aria-label="Date picker">
+            <gux-calendar>
+            </gux-calendar>
+          </div>
+        </gux-popup>
+        <div role="alert" class="gux-form-field-error gux-show">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="date" value="2025-09-21" id="gux-form-field-input-i" aria-invalid="true" aria-describedby="gux-form-field-error-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+  <span slot="error" id="gux-form-field-error-i">
+    This is an error message
+  </span>
+</dux-form-field-date-beta>
+`;
+
+exports[`gux-form-field-date #render should render component as expected when an optional "help" slot is provided 1`] = `
+<dux-form-field-date-beta>
+  <template shadowrootmode="open">
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <gux-popup inline="" offset="4">
+          <div slot="target" class="gux-input">
+            <div class="gux-input-container">
+              <slot name="input">
+              </slot>
+              <gux-form-field-input-clear-button>
+              </gux-form-field-input-clear-button>
+              <gux-button-slot accent="input-icon">
+                <button type="button" data-testid="picker-button" aria-expanded="false">
+                  <gux-icon icon-name="fa/calendar-regular" decorative="">
+                  </gux-icon>
+                  <gux-screen-reader-beta>
+                    Open date picker
+                  </gux-screen-reader-beta>
+                </button>
+              </gux-button-slot>
+            </div>
+          </div>
+          <div slot="popup" class="gux-popup-container" role="dialog" aria-label="Date picker">
+            <gux-calendar>
+            </gux-calendar>
+          </div>
+        </gux-popup>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help gux-show">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="date" value="2025-09-21" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+  <span slot="help" id="gux-form-field-help-i">
+    This is a help message
+  </span>
+</dux-form-field-date-beta>
+`;
+
+exports[`gux-form-field-date #render should render component as expected when an optional "label-info" slot is provided 1`] = `
+<dux-form-field-date-beta>
+  <template shadowrootmode="open">
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <gux-popup inline="" offset="4">
+          <div slot="target" class="gux-input">
+            <div class="gux-input-container">
+              <slot name="input">
+              </slot>
+              <gux-form-field-input-clear-button>
+              </gux-form-field-input-clear-button>
+              <gux-button-slot accent="input-icon">
+                <button type="button" data-testid="picker-button" aria-expanded="false">
+                  <gux-icon icon-name="fa/calendar-regular" decorative="">
+                  </gux-icon>
+                  <gux-screen-reader-beta>
+                    Open date picker
+                  </gux-screen-reader-beta>
+                </button>
+              </gux-button-slot>
+            </div>
+          </div>
+          <div slot="popup" class="gux-popup-container" role="dialog" aria-label="Date picker">
+            <gux-calendar>
+            </gux-calendar>
+          </div>
+        </gux-popup>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="date" value="2025-09-21" id="gux-form-field-input-i" aria-describedby="gux-label-info-beta-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+  <gux-label-info-beta slot="label-info" id="gux-label-info-beta-i">
+    <span slot="content">
+      This is some tooltip text
+    </span>
+  </gux-label-info-beta>
+</dux-form-field-date-beta>
+`;
+
+exports[`gux-form-field-date #render should render component as expected when indicator-mark is "optional" 1`] = `
+<dux-form-field-date-beta indicator-mark="optional">
+  <template shadowrootmode="open">
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="optional">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <gux-popup inline="" offset="4">
+          <div slot="target" class="gux-input">
+            <div class="gux-input-container">
+              <slot name="input">
+              </slot>
+              <gux-form-field-input-clear-button>
+              </gux-form-field-input-clear-button>
+              <gux-button-slot accent="input-icon">
+                <button type="button" data-testid="picker-button" aria-expanded="false">
+                  <gux-icon icon-name="fa/calendar-regular" decorative="">
+                  </gux-icon>
+                  <gux-screen-reader-beta>
+                    Open date picker
+                  </gux-screen-reader-beta>
+                </button>
+              </gux-button-slot>
+            </div>
+          </div>
+          <div slot="popup" class="gux-popup-container" role="dialog" aria-label="Date picker">
+            <gux-calendar>
+            </gux-calendar>
+          </div>
+        </gux-popup>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="date" value="2025-09-21" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+</dux-form-field-date-beta>
+`;
+
+exports[`gux-form-field-date #render should render component as expected when indicator-mark is "required" 1`] = `
+<dux-form-field-date-beta indicator-mark="required">
+  <template shadowrootmode="open">
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <gux-popup inline="" offset="4">
+          <div slot="target" class="gux-input">
+            <div class="gux-input-container">
+              <slot name="input">
+              </slot>
+              <gux-form-field-input-clear-button>
+              </gux-form-field-input-clear-button>
+              <gux-button-slot accent="input-icon">
+                <button type="button" data-testid="picker-button" aria-expanded="false">
+                  <gux-icon icon-name="fa/calendar-regular" decorative="">
+                  </gux-icon>
+                  <gux-screen-reader-beta>
+                    Open date picker
+                  </gux-screen-reader-beta>
+                </button>
+              </gux-button-slot>
+            </div>
+          </div>
+          <div slot="popup" class="gux-popup-container" role="dialog" aria-label="Date picker">
+            <gux-calendar>
+            </gux-calendar>
+          </div>
+        </gux-popup>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="date" value="2025-09-21" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+</dux-form-field-date-beta>
+`;
+
+exports[`gux-form-field-date #render should render component as expected when input attribute is "disabled" 1`] = `
+<dux-form-field-date-beta>
+  <template shadowrootmode="open">
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <gux-popup disabled="" inline="" offset="4">
+          <div slot="target" class="gux-input">
+            <div class="gux-input-container gux-disabled">
+              <slot name="input">
+              </slot>
+              <gux-button-slot accent="input-icon">
+                <button type="button" data-testid="picker-button" disabled="" aria-expanded="false">
+                  <gux-icon icon-name="fa/calendar-regular" decorative="">
+                  </gux-icon>
+                  <gux-screen-reader-beta>
+                    Open date picker
+                  </gux-screen-reader-beta>
+                </button>
+              </gux-button-slot>
+            </div>
+          </div>
+          <div slot="popup" class="gux-popup-container" role="dialog" aria-label="Date picker">
+            <gux-calendar>
+            </gux-calendar>
+          </div>
+        </gux-popup>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="date" disabled="" value="2025-09-21" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+</dux-form-field-date-beta>
+`;
+
+exports[`gux-form-field-date #render should render component as expected when input attribute is "required" 1`] = `
+<dux-form-field-date-beta>
+  <template shadowrootmode="open">
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above gux-required">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required" required="">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <gux-popup inline="" offset="4">
+          <div slot="target" class="gux-input">
+            <div class="gux-input-container">
+              <slot name="input">
+              </slot>
+              <gux-form-field-input-clear-button>
+              </gux-form-field-input-clear-button>
+              <gux-button-slot accent="input-icon">
+                <button type="button" data-testid="picker-button" aria-expanded="false">
+                  <gux-icon icon-name="fa/calendar-regular" decorative="">
+                  </gux-icon>
+                  <gux-screen-reader-beta>
+                    Open date picker
+                  </gux-screen-reader-beta>
+                </button>
+              </gux-button-slot>
+            </div>
+          </div>
+          <div slot="popup" class="gux-popup-container" role="dialog" aria-label="Date picker">
+            <gux-calendar>
+            </gux-calendar>
+          </div>
+        </gux-popup>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="date" required="" value="2025-09-21" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+</dux-form-field-date-beta>
+`;
+
+exports[`gux-form-field-date #render should render component as expected when label-position is above 1`] = `
+<dux-form-field-date-beta label-position="above">
+  <template shadowrootmode="open">
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <gux-popup inline="" offset="4">
+          <div slot="target" class="gux-input">
+            <div class="gux-input-container">
+              <slot name="input">
+              </slot>
+              <gux-form-field-input-clear-button>
+              </gux-form-field-input-clear-button>
+              <gux-button-slot accent="input-icon">
+                <button type="button" data-testid="picker-button" aria-expanded="false">
+                  <gux-icon icon-name="fa/calendar-regular" decorative="">
+                  </gux-icon>
+                  <gux-screen-reader-beta>
+                    Open date picker
+                  </gux-screen-reader-beta>
+                </button>
+              </gux-button-slot>
+            </div>
+          </div>
+          <div slot="popup" class="gux-popup-container" role="dialog" aria-label="Date picker">
+            <gux-calendar>
+            </gux-calendar>
+          </div>
+        </gux-popup>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="date" value="2025-09-21" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+</dux-form-field-date-beta>
+`;
+
+exports[`gux-form-field-date #render should render component as expected when label-position is beside 1`] = `
+<dux-form-field-date-beta label-position="beside">
+  <template shadowrootmode="open">
+    <div class="gux-form-field-container gux-beside">
+      <div class="gux-form-field-label gux-beside">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <gux-popup inline="" offset="4">
+          <div slot="target" class="gux-input">
+            <div class="gux-input-container">
+              <slot name="input">
+              </slot>
+              <gux-form-field-input-clear-button>
+              </gux-form-field-input-clear-button>
+              <gux-button-slot accent="input-icon">
+                <button type="button" data-testid="picker-button" aria-expanded="false">
+                  <gux-icon icon-name="fa/calendar-regular" decorative="">
+                  </gux-icon>
+                  <gux-screen-reader-beta>
+                    Open date picker
+                  </gux-screen-reader-beta>
+                </button>
+              </gux-button-slot>
+            </div>
+          </div>
+          <div slot="popup" class="gux-popup-container" role="dialog" aria-label="Date picker">
+            <gux-calendar>
+            </gux-calendar>
+          </div>
+        </gux-popup>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="date" value="2025-09-21" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+</dux-form-field-date-beta>
+`;
+
+exports[`gux-form-field-date #render should render component as expected when label-position is screenreader 1`] = `
+<dux-form-field-date-beta label-position="screenreader">
+  <template shadowrootmode="open">
+    <div class="gux-form-field-container gux-screenreader">
+      <div class="gux-form-field-label gux-screenreader">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <gux-popup inline="" offset="4">
+          <div slot="target" class="gux-input">
+            <div class="gux-input-container">
+              <slot name="input">
+              </slot>
+              <gux-form-field-input-clear-button>
+              </gux-form-field-input-clear-button>
+              <gux-button-slot accent="input-icon">
+                <button type="button" data-testid="picker-button" aria-expanded="false">
+                  <gux-icon icon-name="fa/calendar-regular" decorative="">
+                  </gux-icon>
+                  <gux-screen-reader-beta>
+                    Open date picker
+                  </gux-screen-reader-beta>
+                </button>
+              </gux-button-slot>
+            </div>
+          </div>
+          <div slot="popup" class="gux-popup-container" role="dialog" aria-label="Date picker">
+            <gux-calendar>
+            </gux-calendar>
+          </div>
+        </gux-popup>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="date" value="2025-09-21" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+</dux-form-field-date-beta>
+`;

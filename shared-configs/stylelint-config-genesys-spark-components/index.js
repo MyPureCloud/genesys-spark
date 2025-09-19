@@ -35,7 +35,7 @@ module.exports = {
     'selector-type-no-unknown': [
       true,
       {
-        ignoreTypes: ['/^gux-/', 'lineargradient']
+        ignoreTypes: ['/^dux-/', '/^gux-/', 'lineargradient']
       }
     ],
     'function-no-unknown': [

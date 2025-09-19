@@ -1,0 +1,161 @@
+<h1>dux-form-field-date-beta</h1>
+
+<p>slot a input[type=date] element into a dux-form-field-date-beta element</p>
+
+<h2>Examples</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>Label Position</legend>
+
+    <dux-form-field-date-beta>
+      <input slot="input" type="date" name="lp-1" value="2025-09-21" />
+      <label slot="label">Default</label>
+    </dux-form-field-date-beta>
+
+    <dux-form-field-date-beta>
+      <input slot="input" type="date" name="lp-2" value="2025-09-21" />
+      <label slot="label">Default long label</label>
+    </dux-form-field-date-beta>
+
+    <dux-form-field-date-beta label-position="above">
+      <input slot="input" type="date" name="lp-3" value="2025-09-21" />
+      <label slot="label">Above</label>
+    </dux-form-field-date-beta>
+
+    <dux-form-field-date-beta label-position="beside">
+      <input slot="input" type="date" name="lp-4" value="2025-09-21" />
+      <label slot="label">Beside</label>
+    </dux-form-field-date-beta>
+
+    <dux-form-field-date-beta label-position="screenreader">
+      <input slot="input" type="date" name="lp-5" value="2025-09-21" />
+      <label slot="label">Screenreader</label>
+    </dux-form-field-date-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Input attributes</legend>
+
+    <dux-form-field-date-beta>
+      <input slot="input" type="date" name="a-1" disabled value="2025-09-21" />
+      <label slot="label">Disabled</label>
+    </dux-form-field-date-beta>
+
+    <dux-form-field-date-beta>
+      <input slot="input" type="date" name="a-2" required value="2025-09-21" />
+      <label slot="label">Required</label>
+    </dux-form-field-date-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Error</legend>
+
+    <dux-form-field-date-beta>
+      <input slot="input" type="date" name="e-1" value="2025-09-21" />
+      <label slot="label">Default</label>
+      <span slot="error">This is an error message</span>
+    </dux-form-field-date-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Help</legend>
+
+    <dux-form-field-date-beta>
+      <input slot="input" type="date" name="h-1" value="2025-09-21" />
+      <label slot="label">Default</label>
+      <span slot="help">This is a help message</span>
+    </dux-form-field-date-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Label Info</legend>
+
+    <dux-form-field-date-beta>
+      <input slot="input" type="date" name="l-1" value="2025-09-21" />
+      <label slot="label">Default</label>
+      <gux-label-info-beta slot="label-info">
+        <span slot="content">This is some tooltip text</span>
+      </gux-label-info-beta>
+    </dux-form-field-date-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Indicator Mark</legend>
+    <a href="gux-form-field-label-indicator.html"
+      >Click here for usage examples</a
+    >
+  </fieldset>
+
+  <fieldset>
+    <legend>Programmatically set value</legend>
+
+    <dux-form-field-date-beta id="a">
+      <input slot="input" type="date" name="a-5" value="2025-09-21" />
+      <label slot="label">Random Date</label>
+    </dux-form-field-date-beta>
+
+    <gux-button-slot>
+      <button
+        type="button"
+        onclick="(function () {
+          const formField = document.getElementById('a');
+          const input = document.querySelector('[name=a-5]');
+          input.value = '';
+          formField.guxForceUpdate();
+        })()"
+      >
+        Clear field
+      </button>
+    </gux-button-slot>
+
+    <gux-button-slot>
+      <button
+        type="button"
+        onclick="(function () {
+
+          const randomDate = new Date(Math.floor(Date.now()) * Math.random()).toISOString().substring(0, 10);
+          const formField = document.getElementById('a');
+          const input = document.querySelector('[name=a-5]');
+
+          input.value = randomDate;
+          formField.guxForceUpdate();
+        })()"
+      >
+        Set field to random number
+      </button>
+    </gux-button-slot>
+  </fieldset>
+</form>
+
+<h2>Languages</h2>
+<div id="languages-container"></div>
+
+<style
+  onload="(function () {
+  const languagesContainer = document.getElementById('languages-container');
+  [
+    'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
+    'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
+    'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
+  ].forEach((lang) => {
+    const html = window.toHTML([
+      '<div lang=' + lang + '>',
+        '<dux-form-field-date-beta label-position=above>',
+          '<input slot=input type=date />',
+          '<label slot=label>' + lang + '</label>',
+        '</dux-form-field-date-beta>',
+      '</div>'
+    ].join(''));
+    languagesContainer.appendChild(html);
+  });
+})()"
+>
+  #languages-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  dux-form-field-date-beta {
+    margin: 10px;
+  }
+</style>

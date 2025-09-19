@@ -37,6 +37,7 @@
 
 ### Used by
 
+ - [dux-form-field-date-beta](../gux-form-field/components/gux-form-field-date)
  - [gux-action-button](../gux-action-button)
  - [gux-advanced-dropdown-legacy](../../legacy/gux-advanced-dropdown-legacy)
  - [gux-button-multi](../gux-button-multi)
@@ -55,6 +56,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  dux-form-field-date-beta --> gux-popup
   gux-action-button --> gux-popup
   gux-advanced-dropdown-legacy --> gux-popup
   gux-button-multi --> gux-popup

@@ -16,6 +16,7 @@
 
 ### Used by
 
+ - [dux-form-field-date-beta](../../stable/gux-form-field/components/gux-form-field-date)
  - [gux-context-menu](../../stable/gux-context-menu)
  - [gux-file-list-item](../../stable/gux-form-field/components/gux-form-field-file-beta/components/gux-file-list-item)
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
@@ -35,6 +36,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  dux-form-field-date-beta --> gux-screen-reader-beta
   gux-context-menu --> gux-screen-reader-beta
   gux-file-list-item --> gux-screen-reader-beta
   gux-icon-tooltip-beta --> gux-screen-reader-beta

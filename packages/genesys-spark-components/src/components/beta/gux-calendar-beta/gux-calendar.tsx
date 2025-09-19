@@ -359,7 +359,7 @@ export class GuxCalendar {
                           tabindex={day.selected || day.focused ? '0' : '-1'}
                           class={`
                             ${!day.inCurrentMonth || day.disabled ? 'gux-muted' : ''}
-                            day-${isoDateStr}  
+                            day-${isoDateStr}
                           `}
                         ></gux-day-beta>
                       ) as JSX.Element;

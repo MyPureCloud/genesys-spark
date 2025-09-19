@@ -14,8 +14,9 @@ export async function bootstrap() {
 
   const components = Object.values(componentSpecs)
     .filter(component => component.example || !component.tag.includes('gux-'))
+    .filter(component => !component.tag.includes('dux-'))
     .sort((a, b) => shortName(a.tag).localeCompare(shortName(b.tag)));
-
+  console.log(Object.values(componentSpecs), components);
   document.body.appendChild(
     toHTML(`
         <main>

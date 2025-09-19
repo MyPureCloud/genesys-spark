@@ -73,6 +73,7 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [dux-form-field-date-beta](../gux-form-field/components/gux-form-field-date)
  - [gux-datepicker](../gux-datepicker)
 
 ### Depends on
@@ -83,6 +84,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-calendar --> gux-icon
+  dux-form-field-date-beta --> gux-calendar
   gux-datepicker --> gux-calendar
   style gux-calendar fill:#f9f,stroke:#333,stroke-width:4px
 ```

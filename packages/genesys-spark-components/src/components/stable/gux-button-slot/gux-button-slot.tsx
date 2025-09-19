@@ -2,7 +2,7 @@ import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
 import { logError } from '@utils/error/log-error';
-import { GuxButtonAccent } from '../gux-button/gux-button.types';
+import { GuxButtonSlotAccent } from './gux-button-slot.types';
 
 /**
  * @slot - button, input[type="button"] or input[type="submit"] element
@@ -16,7 +16,7 @@ export class GuxButtonSlot {
   @Element() root: HTMLElement;
 
   @Prop()
-  accent: GuxButtonAccent = 'secondary';
+  accent: GuxButtonSlotAccent = 'secondary';
 
   @Prop()
   iconOnly: boolean;

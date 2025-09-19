@@ -17,6 +17,7 @@
 
 ### Used by
 
+ - [dux-form-field-date-beta](../../components/gux-form-field-date)
  - [gux-form-field-checkbox-group-beta](../../components/gux-form-field-checkbox-group)
  - [gux-form-field-color](../../components/gux-form-field-color)
  - [gux-form-field-dropdown](../../components/gux-form-field-dropdown)
@@ -36,6 +37,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  dux-form-field-date-beta --> gux-form-field-label-indicator
   gux-form-field-checkbox-group-beta --> gux-form-field-label-indicator
   gux-form-field-color --> gux-form-field-label-indicator
   gux-form-field-dropdown --> gux-form-field-label-indicator

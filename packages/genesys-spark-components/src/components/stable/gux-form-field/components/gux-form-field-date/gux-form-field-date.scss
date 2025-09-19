@@ -1,0 +1,113 @@
+@use '~genesys-spark/dist/scss/mixins.scss';
+@use '../../gux-form-field.scss';
+@use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
+@use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
+@use '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
+@use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+
+@include gux-form-field-container.Style;
+@include gux-form-field-error.Style;
+@include gux-form-field-label.Style;
+@include gux-form-field-help.Style;
+
+:host {
+  display: block;
+}
+
+::slotted(label) {
+  @include gux-form-field.gse-ui-formControl-label-bold;
+}
+
+::slotted(input) {
+  flex: 1 1 auto;
+  align-self: auto;
+  order: 0;
+  inline-size: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
+  font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
+  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
+  color: var(--gse-ui-formControl-input-populatedColor);
+  outline: none;
+  background-color: var(--gse-ui-formControl-input-backgroundColor);
+  border: none;
+
+  &::placeholder {
+    color: var(--gse-ui-formControl-input-placeholderColor);
+    opacity: 1; // missing token COMUI-2187
+  }
+}
+
+.gux-input-and-error-container {
+  flex-grow: 1;
+
+  .gux-input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+
+    .gux-input-container {
+      box-sizing: border-box;
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: var(--gse-ui-formControl-input-gap);
+      place-content: stretch center;
+      align-items: center;
+      align-self: auto;
+      order: 0;
+      inline-size: 100%;
+      block-size: var(--gse-ui-formControl-input-textfield-height);
+      padding: var(--gse-ui-formControl-input-padding);
+      font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
+      font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+      font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
+      line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
+      color: var(--gse-ui-formControl-input-populatedColor);
+      cursor: text;
+      background-color: var(--gse-ui-formControl-input-backgroundColor);
+      background-image: none;
+      border: var(--gse-ui-formControl-input-default-border-width)
+        var(--gse-ui-formControl-input-default-border-style)
+        var(--gse-ui-formControl-input-default-border-color);
+      border-radius: var(--gse-ui-formControl-input-borderRadius);
+
+      &.gux-disabled {
+        cursor: default;
+        opacity: var(--gse-ui-formControl-input-disabled-opacity);
+      }
+
+      &:focus-within {
+        outline: var(--gse-ui-formControl-input-focus-border-width)
+          var(--gse-ui-formControl-input-focus-border-style)
+          var(--gse-ui-formControl-input-focus-border-color);
+        outline-offset: var(--gse-semantic-focusOutline-offset);
+        border: var(--gse-ui-formControl-input-active-border-width)
+          var(--gse-ui-formControl-input-active-border-style)
+          var(--gse-ui-formControl-input-active-border-color);
+        border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+      }
+
+      &:hover:not(.gux-disabled) {
+        border: var(--gse-ui-formControl-input-hover-border-width)
+          var(--gse-ui-formControl-input-hover-border-style)
+          var(--gse-ui-formControl-input-hover-border-color);
+      }
+    }
+
+    &.gux-input-error {
+      .gux-input-container {
+        border-color: var(--gse-ui-formControl-input-error-border-color);
+      }
+    }
+  }
+}
+
+.gux-popup-container {
+  @include mixins.gux-menu-container;
+}

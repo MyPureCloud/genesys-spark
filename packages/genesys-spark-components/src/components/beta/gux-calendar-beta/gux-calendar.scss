@@ -2,6 +2,11 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
+::slotted(input[type='date']) {
+  display: none;
+  -webkit-appearance: none;
+}
+
 .gux-calendar-beta.gux-disabled {
   pointer-events: none;
   opacity: ui.$gse-ui-calendarMenu-disabled-opacity;

@@ -17,6 +17,7 @@
 
 ### Used by
 
+ - [dux-form-field-date-beta](../gux-form-field/components/gux-form-field-date)
  - [gux-accordion-section](../gux-accordion/gux-accordion-section)
  - [gux-action-button](../gux-action-button)
  - [gux-advanced-dropdown-legacy](../../legacy/gux-advanced-dropdown-legacy)
@@ -93,6 +94,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  dux-form-field-date-beta --> gux-icon
   gux-accordion-section --> gux-icon
   gux-action-button --> gux-icon
   gux-advanced-dropdown-legacy --> gux-icon
