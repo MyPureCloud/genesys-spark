@@ -2,6 +2,56 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.173.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.173.0...v4.173.1) (2025-09-19)
+
+
+### Bug Fixes
+
+* **icon:** improved error handling ([eef4a8f](https://github.com/MyPureCloud/genesys-spark/commit/eef4a8fc5663032bdad3e4d1ee716285542d01db))
+* **segmented-control-beta:** fixed long list rendering ([ef82487](https://github.com/MyPureCloud/genesys-spark/commit/ef8248750ccd6f10e7ce41e02ddf5f73c5e99bee))
+* **toggle:** added alert role to error message ([c035d7c](https://github.com/MyPureCloud/genesys-spark/commit/c035d7c65c9775b87c2e90fe892edc318bb387cb))
+
+## [4.173.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.172.0...v4.173.0) (2025-09-18)
+
+
+### Features
+
+* **icon:** addition of ai custom icons ([e584c23](https://github.com/MyPureCloud/genesys-spark/commit/e584c239afff66f679a2a1084b8d8a1afa45ba6d))
+
+
+### Bug Fixes
+
+* **dropdown-multi:** fix options not clearing when clear button pressed ([6459a01](https://github.com/MyPureCloud/genesys-spark/commit/6459a0195de6e7e272017bef1b5225563fcc48db))
+
+## [4.172.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.6...v4.172.0) (2025-09-16)
+
+
+### Features
+
+* **logo-beta:** added new logo components ([e803948](https://github.com/MyPureCloud/genesys-spark/commit/e803948cf7c6af2c978e3801c4e659ad0e89babc))
+
+### [4.171.6](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.5...v4.171.6) (2025-09-13)
+
+
+### Bug Fixes
+
+* **prompt-input-beta:** add vertical scroll state ([c5c0b65](https://github.com/MyPureCloud/genesys-spark/commit/c5c0b656c4475c5738add6767aa181b489a68986))
+
+### [4.171.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.4...v4.171.5) (2025-09-12)
+
+
+### Bug Fixes
+
+* **dropdown:** fix shift tab focus trap ([f8fd803](https://github.com/MyPureCloud/genesys-spark/commit/f8fd8034d4965f3c456f4948b20da89a3ea17830))
+* **toast:** fixed message word break ([4610b6f](https://github.com/MyPureCloud/genesys-spark/commit/4610b6facb823145ab1607c1a1552d237a82f4c7))
+
+### [4.171.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.3...v4.171.4) (2025-09-11)
+
+
+### Bug Fixes
+
+* **tabs:** fix vertical tabs style for vue ([b186484](https://github.com/MyPureCloud/genesys-spark/commit/b186484d773afd4eb4dfec629ee1ba1909a0d164))
+
 ### [4.171.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.2...v4.171.3) (2025-09-10)
 
 ### [4.171.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.171.1...v4.171.2) (2025-09-09)

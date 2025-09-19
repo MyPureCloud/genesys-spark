@@ -1,0 +1,30 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
+:host {
+  display: inline-block;
+}
+
+svg {
+  inline-size: 100%;
+  block-size: 100%;
+  fill: global.$gse-core-color-transparent;
+
+  &.gux-monotone {
+    .gux-logomark {
+      fill: ui.$gse-ui-logo-brand-monotone-iconColor;
+    }
+
+    .gux-logo-text {
+      fill: ui.$gse-ui-logo-brand-monotone-textColor;
+    }
+  }
+
+  .gux-logomark {
+    fill: ui.$gse-ui-logo-brand-duotone-iconColor;
+  }
+
+  .gux-logo-text {
+    fill: ui.$gse-ui-logo-brand-duotone-textColor;
+  }
+}

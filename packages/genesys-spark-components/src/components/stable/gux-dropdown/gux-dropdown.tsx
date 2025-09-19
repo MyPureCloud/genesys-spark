@@ -136,7 +136,7 @@ export class GuxDropdown {
           return this.filterElement.focus();
         } else if (this.shiftTabFromExpandedFilterInput(event)) {
           event.preventDefault();
-          return this.collapseListbox('focusFieldButton');
+          return this.collapseListbox('noFocusChange');
         } else {
           this.collapseListbox('noFocusChange');
         }

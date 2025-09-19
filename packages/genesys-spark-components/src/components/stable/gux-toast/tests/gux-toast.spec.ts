@@ -3,7 +3,6 @@ import { GuxToast } from '../gux-toast';
 import { renderConfig, renderConfigs } from './gux-toast.common';
 
 const components = [GuxToast];
-const language = 'en';
 
 describe('gux-toast', () => {
   describe('#render', () => {
@@ -13,7 +12,7 @@ describe('gux-toast', () => {
   describe('dismiss', () => {
     it('click dismiss button', async () => {
       const html = renderConfig.html;
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({ components, html });
       const element = page.root as HTMLElement;
       const dismissButton =
         element.shadowRoot.querySelector('gux-dismiss-button');
@@ -34,7 +33,7 @@ describe('gux-toast', () => {
 
     it('click dismiss button and prevent default', async () => {
       const html = renderConfig.html;
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({ components, html });
       const element = page.root as HTMLElement;
       const dismissButton =
         element.shadowRoot.querySelector('gux-dismiss-button');

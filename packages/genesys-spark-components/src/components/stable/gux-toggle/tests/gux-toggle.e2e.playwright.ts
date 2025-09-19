@@ -267,39 +267,4 @@ test.describe('gux-toggle', () => {
       await expect(toggle).toHaveJSProperty('checked', false);
     });
   });
-
-  test.describe('Regression tests', () => {
-    checkRenders({
-      renderConfigs: [
-        {
-          description: 'COMUI-3436: TargetSize Violation for toggles in tables',
-          html: `
-          <gux-table compact>
-            <table slot="data">
-              <thead>
-                <tr>
-                  <th data-column-name="first-name">First name</th>
-                  <th data-column-name="last-name">Last name</th>
-                  <th data-column-name="toggle">Toggle</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>John</td>
-                  <td>Doe</td>
-                  <td><gux-toggle></gux-toggle></td>
-                </tr>
-                <tr>
-                  <td>Jane</td>
-                  <td>Doe</td>
-                  <td><gux-toggle></gux-toggle></td>
-                </tr>
-              </tbody>
-            </table>
-          </gux-table>`
-        }
-      ],
-      element: 'gux-table'
-    });
-  });
 });

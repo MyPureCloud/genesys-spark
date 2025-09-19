@@ -182,6 +182,11 @@
   --gse-ui-globalNav-menuOption-return-default-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-return-hover-backgroundColor: #19327a;
   --gse-ui-globalNav-menuOption-return-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-newTab-default-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-newTab-hover-backgroundColor: #1a2b67;
+  --gse-ui-globalNav-menuOption-newTab-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-newTab-selected-backgroundColor: #2143a2;
+  --gse-ui-globalNav-menuOption-newTab-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-height: 32px;
   --gse-ui-globalNav-menuOption-width: 248px;
   --gse-ui-globalNav-menuOption-padding: 0px 12px;
@@ -199,11 +204,6 @@
   --gse-ui-globalNav-menuOption-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-selected-stroke: #ff451a;
   --gse-ui-globalNav-menuOption-treeView-bar: #3d538f;
-  --gse-ui-globalNav-menuOption-newTab-default-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-newTab-hover-backgroundColor: #1a2b67;
-  --gse-ui-globalNav-menuOption-newTab-hover-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-newTab-selected-backgroundColor: #2143a2;
-  --gse-ui-globalNav-menuOption-newTab-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-sideMenu: linear-gradient(
     135deg,
     #09b581 0%,
@@ -270,6 +270,8 @@
   --gse-ui-globalNav-panel-primary: #19327a;
   --gse-ui-globalNav-panel-secondary: #1a2b67;
   --gse-ui-globalNav-panel-feedbackContainer-backgroundColor: #2143a2;
+  --gse-ui-globalNav-panel-boxShadow:
+    0 6px 10px 4px #3d538f33, 0 0 2px 0 #3d538f33;
   --gse-ui-globalNav-userSettingsWindow-body-height: 400px;
   --gse-ui-globalNav-userSettingsWindow-body-width: 360px;
   --gse-ui-globalNav-userSettingsWindow-body-gap: 4px;
@@ -1159,12 +1161,16 @@
   --gse-ui-promptInput-simple-gap: 16px;
   --gse-ui-promptInput-simple-label-maxHeight: 200px;
   --gse-ui-promptInput-simple-label-minHeight: 32px;
+  --gse-ui-promptInput-simple-labelContainer-scrollEnabled-padding: 0px 8px 0px
+    0px;
   --gse-ui-promptInput-complex-padding: 16px;
   --gse-ui-promptInput-complex-gap: 16px;
   --gse-ui-promptInput-complex-lowerContainer-leftAligned-gap: 4px;
   --gse-ui-promptInput-complex-lowerContainer-rightAligned-gap: 16px;
   --gse-ui-promptInput-complex-label-maxHeight: 160px;
   --gse-ui-promptInput-complex-fileContainer-gap: 8px;
+  --gse-ui-promptInput-complex-labelContainer-scrollEnabled-padding: 0px 8px 0px
+    0px;
   --gse-ui-promptInput-border-default: #cad1e1;
   --gse-ui-promptInput-border-hover: #19327a;
   --gse-ui-promptInput-border-active: #102251;
@@ -1821,6 +1827,7 @@
   --gse-ui-notificationBadge-medium-fontWeight: 600;
   --gse-ui-notificationBadge-medium-fontSize: 9px;
   --gse-ui-notificationBadge-medium-lineHeight: 16px;
+  --gse-ui-notificationBadge-tertiaryBackgroundColor: #056d4d;
   --gse-ui-accordion-header-height: 40px;
   --gse-ui-accordion-header-padding: 8px 16px 8px 16px;
   --gse-ui-accordion-header-chevronIcon: 16px;
@@ -2634,6 +2641,11 @@
   --gse-ui-globalNav-menuOption-return-default-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-return-hover-backgroundColor: #102251;
   --gse-ui-globalNav-menuOption-return-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-newTab-default-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-newTab-hover-backgroundColor: #0c193d;
+  --gse-ui-globalNav-menuOption-newTab-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-newTab-selected-backgroundColor: #102251;
+  --gse-ui-globalNav-menuOption-newTab-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-height: 32px;
   --gse-ui-globalNav-menuOption-width: 248px;
   --gse-ui-globalNav-menuOption-padding: 0px 12px;
@@ -2651,11 +2663,6 @@
   --gse-ui-globalNav-menuOption-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-selected-stroke: #ff451a;
   --gse-ui-globalNav-menuOption-treeView-bar: #263b73;
-  --gse-ui-globalNav-menuOption-newTab-default-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-newTab-hover-backgroundColor: #0c193d;
-  --gse-ui-globalNav-menuOption-newTab-hover-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-newTab-selected-backgroundColor: #102251;
-  --gse-ui-globalNav-menuOption-newTab-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-sideMenu: linear-gradient(
     135deg,
     #09b581 0%,
@@ -2722,6 +2729,8 @@
   --gse-ui-globalNav-panel-primary: #19327a;
   --gse-ui-globalNav-panel-secondary: #0c193d;
   --gse-ui-globalNav-panel-feedbackContainer-backgroundColor: #19327a;
+  --gse-ui-globalNav-panel-boxShadow:
+    0 6px 10px 4px #00000073, 0 0 2px 0 #00000073;
   --gse-ui-globalNav-userSettingsWindow-body-height: 400px;
   --gse-ui-globalNav-userSettingsWindow-body-width: 360px;
   --gse-ui-globalNav-userSettingsWindow-body-gap: 4px;
@@ -3611,12 +3620,16 @@
   --gse-ui-promptInput-simple-gap: 16px;
   --gse-ui-promptInput-simple-label-maxHeight: 200px;
   --gse-ui-promptInput-simple-label-minHeight: 32px;
+  --gse-ui-promptInput-simple-labelContainer-scrollEnabled-padding: 0px 8px 0px
+    0px;
   --gse-ui-promptInput-complex-padding: 16px;
   --gse-ui-promptInput-complex-gap: 16px;
   --gse-ui-promptInput-complex-lowerContainer-leftAligned-gap: 4px;
   --gse-ui-promptInput-complex-lowerContainer-rightAligned-gap: 16px;
   --gse-ui-promptInput-complex-label-maxHeight: 160px;
   --gse-ui-promptInput-complex-fileContainer-gap: 8px;
+  --gse-ui-promptInput-complex-labelContainer-scrollEnabled-padding: 0px 8px 0px
+    0px;
   --gse-ui-promptInput-border-default: #3e4044;
   --gse-ui-promptInput-border-hover: #19327a;
   --gse-ui-promptInput-border-active: #ffffff;
@@ -4249,7 +4262,7 @@
   --gse-ui-notificationBadge-secondaryBackgroundColor: #c9a132;
   --gse-ui-notificationBadge-neutralBackgroundColor: #1e1e21;
   --gse-ui-notificationBadge-subtleBackgroundColor: #3d538f;
-  --gse-ui-notificationBadge-lightContentColor: #ffffff;
+  --gse-ui-notificationBadge-lightContentColor: #2a2a2e;
   --gse-ui-notificationBadge-lightOnlyContentColor: #ffffff;
   --gse-ui-notificationBadge-darkContentColor: #ffffff;
   --gse-ui-notificationBadge-darkOnlyContentColor: #2a2a2e;
@@ -4273,6 +4286,7 @@
   --gse-ui-notificationBadge-medium-fontWeight: 600;
   --gse-ui-notificationBadge-medium-fontSize: 9px;
   --gse-ui-notificationBadge-medium-lineHeight: 16px;
+  --gse-ui-notificationBadge-tertiaryBackgroundColor: #09b581;
   --gse-ui-accordion-header-height: 40px;
   --gse-ui-accordion-header-padding: 8px 16px 8px 16px;
   --gse-ui-accordion-header-chevronIcon: 16px;

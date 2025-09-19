@@ -21,6 +21,45 @@
       global.$gse-semantic-foreground-interactive-secondary-active;
   }
 
+  gux-button-slot {
+    align-self: flex-end;
+  }
+
+  //https://inindca.atlassian.net/browse/COMUI-4148
+  .gux-grow-wrap {
+    display: grid;
+    inline-size: 100%;
+    min-block-size: 0;
+    max-block-size: ui.$gse-ui-promptInput-simple-label-maxHeight;
+    padding: ui.$gse-ui-promptInput-complex-labelContainer-scrollEnabled-padding;
+    overflow: hidden auto;
+
+    &::after {
+      visibility: hidden;
+      grid-area: 1 / 1 / 2 / 2;
+      padding: 0;
+      margin: 0;
+      font-family: global.$gse-semantic-theme-fontFamily-body;
+      font-size: global.$gse-core-fontSize-sm;
+      font-weight: global.$gse-core-fontWeight-regular;
+      line-height: global.$gse-core-lineHeight-sm;
+      color: global.$gse-semantic-foreground-formControl-textInput-placeholder;
+      word-break: normal;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+      content: attr(data-replicated-value) ' ';
+      border: 0;
+    }
+
+    > textarea {
+      grid-area: 1 / 1 / 2 / 2;
+      overflow: hidden;
+      word-break: normal;
+      overflow-wrap: anywhere;
+      resize: none;
+    }
+  }
+
   .gux-input {
     inline-size: 100%;
     font-family: global.$gse-semantic-theme-fontFamily-body;

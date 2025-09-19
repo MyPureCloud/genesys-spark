@@ -281,6 +281,7 @@ export class GuxDropdownMulti {
 
     if (
       this.isFilterable() &&
+      event?.relatedTarget &&
       !this.root.contains(event?.relatedTarget as Node)
     ) {
       this.textInputElement.focus();

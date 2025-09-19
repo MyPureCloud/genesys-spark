@@ -811,10 +811,12 @@ table a {
   --gse-semantic-theme-background-customAccents-notification-20: #f8c73e;
   --gse-semantic-theme-background-customAccents-notification-30: #e7e9f9;
   --gse-semantic-theme-background-customAccents-notification-40: #2954cb;
+  --gse-semantic-theme-background-customAccents-notification-50: #056d4d;
   --gse-semantic-theme-background-customAccents-notification-30d: #1e1e21;
   --gse-semantic-theme-background-customAccents-notification-20d: #3d538f;
   --gse-semantic-theme-background-customAccents-notification-40d: #c9a132;
   --gse-semantic-theme-background-customAccents-notification-10d: #e22245;
+  --gse-semantic-theme-background-customAccents-notification-50d: #09b581;
   --gse-semantic-theme-background-customAccents-bold-10: #263b73;
   --gse-semantic-theme-background-customAccents-bold-20: #596ea6;
   --gse-semantic-theme-background-customAccents-bold-30: #54c6ab;
@@ -1715,6 +1717,8 @@ table a {
   --gse-semantic-background-system-notification-subtle: #2954cb;
   --gse-semantic-background-system-notification-darkOnlyContent: #2a2a2e;
   --gse-semantic-background-system-notification-lightOnlyContent: #ffffff;
+  --gse-semantic-background-system-notification-tertiary: #056d4d;
+  --gse-semantic-background-system-notification-lightContent: #ffffff;
   --gse-semantic-background-system-illustration-default: #2143a2;
   --gse-semantic-background-system-illustration-successBase: #cef0e6;
   --gse-semantic-background-system-illustration-successSymbol: #056d4d;
@@ -2062,6 +2066,8 @@ table a {
   --gse-semantic-background-system-notification-subtle: #3d538f;
   --gse-semantic-background-system-notification-darkOnlyContent: #2a2a2e;
   --gse-semantic-background-system-notification-lightOnlyContent: #ffffff;
+  --gse-semantic-background-system-notification-tertiary: #09b581;
+  --gse-semantic-background-system-notification-lightContent: #2a2a2e;
   --gse-semantic-background-system-illustration-default: #829ce5;
   --gse-semantic-background-system-illustration-successBase: #cef0e6;
   --gse-semantic-background-system-illustration-successSymbol: #056d4d;

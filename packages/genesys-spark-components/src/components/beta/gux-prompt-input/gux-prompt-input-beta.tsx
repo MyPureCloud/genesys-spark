@@ -36,7 +36,7 @@ export class GuxPromptInputBeta {
   @State()
   hasInputText: boolean = false;
 
-  private inputElement: HTMLInputElement;
+  private inputElement: HTMLTextAreaElement;
   private i18n: GetI18nValue;
 
   /**
@@ -82,8 +82,18 @@ export class GuxPromptInputBeta {
     this.isGenerating = false;
   }
 
-  private keyUp(): void {
+  private handleInput(): void {
     this.hasInputText = this.inputElement.value?.length > 0;
+
+    /**
+     * Sets the data-replicated-value attribute on the gux-grow-wrap div element and sets the value to
+     * whatever the text is currently in the text area.
+     * In the scss file there is a ::after pseudo selector that uses this attribute to display the content
+     * invisibly. The grid container sizes itself based on the pseudo-elements height which makes the text-area
+     * auto-grow vertically.
+     */
+    this.inputElement.parentElement.dataset.replicatedValue =
+      this.inputElement.value;
   }
 
   private renderSubmitButton(): JSX.Element {
@@ -130,14 +140,16 @@ export class GuxPromptInputBeta {
     return (
       <Host>
         <div class="gux-input-container">
-          <input
-            class="gux-input"
-            ref={el => (this.inputElement = el)}
-            placeholder={this.placeholder || this.i18n('inputPlaceholder')}
-            onKeyUp={this.keyUp.bind(this)}
-            data-testid="prompt-input"
-          ></input>
-
+          <div class="gux-grow-wrap">
+            <textarea
+              rows={1}
+              class="gux-input"
+              ref={el => (this.inputElement = el)}
+              placeholder={this.placeholder || this.i18n('inputPlaceholder')}
+              onInput={this.handleInput.bind(this)}
+              data-testid="prompt-input"
+            ></textarea>
+          </div>
           {this.isGenerating
             ? this.renderStopButton()
             : this.renderSubmitButton()}

@@ -402,6 +402,19 @@
           "foreground_color": "#ffffff"
         }
       },
+      "new_tab": {
+        "default": {
+          "foreground_color": "#ffffff"
+        },
+        "hover": {
+          "background_color": "#1a2b67",
+          "foreground_color": "#ffffff"
+        },
+        "selected": {
+          "background_color": "#2143a2",
+          "foreground_color": "#ffffff"
+        }
+      },
       "height": "32px",
       "width": "248px",
       "padding": "0px 12px",
@@ -432,19 +445,6 @@
       },
       "tree_view": {
         "bar": "#3d538f"
-      },
-      "new_tab": {
-        "default": {
-          "foreground_color": "#ffffff"
-        },
-        "hover": {
-          "background_color": "#1a2b67",
-          "foreground_color": "#ffffff"
-        },
-        "selected": {
-          "background_color": "#2143a2",
-          "foreground_color": "#ffffff"
-        }
       }
     },
     "side_menu": "linear-gradient(135deg, #09b581 0%, #9de1cd 100%)",
@@ -577,6 +577,24 @@
       "secondary": "#1a2b67",
       "feedback_container": {
         "background_color": "#2143a2"
+      },
+      "box_shadow": {
+        "1": {
+          "blur": "10px",
+          "spread": "4px",
+          "color": "#3d538f40",
+          "type": "dropShadow",
+          "offsetX": "0",
+          "offsetY": "6px"
+        },
+        "2": {
+          "blur": "2px",
+          "spread": "0",
+          "color": "#3d538f40",
+          "type": "dropShadow",
+          "offsetX": "0",
+          "offsetY": "0"
+        }
       }
     },
     "user_settings_window": {
@@ -2555,6 +2573,11 @@
       "label": {
         "max_height": "200px",
         "min_height": "32px"
+      },
+      "label_container": {
+        "scroll_enabled": {
+          "padding": "0px 8px 0px 0px"
+        }
       }
     },
     "complex": {
@@ -2573,6 +2596,11 @@
       },
       "file_container": {
         "gap": "8px"
+      },
+      "label_container": {
+        "scroll_enabled": {
+          "padding": "0px 8px 0px 0px"
+        }
       }
     },
     "border": {
@@ -3859,7 +3887,8 @@
       "fontWeight": "600",
       "fontSize": "9px",
       "lineHeight": "16px"
-    }
+    },
+    "tertiary_background_color": "#056d4d"
   },
   "accordion": {
     "header": {
