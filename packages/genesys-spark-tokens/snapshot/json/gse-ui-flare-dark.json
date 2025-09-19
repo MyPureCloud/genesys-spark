@@ -3850,7 +3850,7 @@
     "secondary_background_color": "#c9a132",
     "neutral_background_color": "#1e1e21",
     "subtle_background_color": "#3d538f",
-    "light_content_color": "#ffffff",
+    "light_content_color": "#2a2a2e",
     "light_only_content_color": "#ffffff",
     "dark_content_color": "#ffffff",
     "dark_only_content_color": "#2a2a2e",
@@ -3887,7 +3887,8 @@
       "fontWeight": "600",
       "fontSize": "9px",
       "lineHeight": "16px"
-    }
+    },
+    "tertiary_background_color": "#09b581"
   },
   "accordion": {
     "header": {

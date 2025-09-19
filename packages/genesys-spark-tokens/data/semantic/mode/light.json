@@ -852,6 +852,14 @@
         "light_only_content": {
           "value": "{theme.foreground.primary.30d}",
           "type": "other"
+        },
+        "tertiary": {
+          "value": "{theme.background.custom_accents.notification.50}",
+          "type": "color"
+        },
+        "light_content": {
+          "value": "{theme.foreground.secondary.10}",
+          "type": "color"
         }
       },
       "illustration": {

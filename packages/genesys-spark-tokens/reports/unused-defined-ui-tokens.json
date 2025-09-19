@@ -828,6 +828,7 @@
   "--gse-ui-notificationBadge-primaryBackgroundColor",
   "--gse-ui-notificationBadge-secondaryBackgroundColor",
   "--gse-ui-notificationBadge-subtleBackgroundColor",
+  "--gse-ui-notificationBadge-tertiaryBackgroundColor",
   "--gse-ui-notificationBadge-width-large-default",
   "--gse-ui-notificationBadge-width-large-large",
   "--gse-ui-notificationBadge-width-large-medium",

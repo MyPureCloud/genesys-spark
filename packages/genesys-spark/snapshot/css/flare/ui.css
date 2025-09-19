@@ -1827,6 +1827,7 @@
   --gse-ui-notificationBadge-medium-fontWeight: 600;
   --gse-ui-notificationBadge-medium-fontSize: 9px;
   --gse-ui-notificationBadge-medium-lineHeight: 16px;
+  --gse-ui-notificationBadge-tertiaryBackgroundColor: #056d4d;
   --gse-ui-accordion-header-height: 40px;
   --gse-ui-accordion-header-padding: 8px 16px 8px 16px;
   --gse-ui-accordion-header-chevronIcon: 16px;
@@ -4261,7 +4262,7 @@
   --gse-ui-notificationBadge-secondaryBackgroundColor: #c9a132;
   --gse-ui-notificationBadge-neutralBackgroundColor: #1e1e21;
   --gse-ui-notificationBadge-subtleBackgroundColor: #3d538f;
-  --gse-ui-notificationBadge-lightContentColor: #ffffff;
+  --gse-ui-notificationBadge-lightContentColor: #2a2a2e;
   --gse-ui-notificationBadge-lightOnlyContentColor: #ffffff;
   --gse-ui-notificationBadge-darkContentColor: #ffffff;
   --gse-ui-notificationBadge-darkOnlyContentColor: #2a2a2e;
@@ -4285,6 +4286,7 @@
   --gse-ui-notificationBadge-medium-fontWeight: 600;
   --gse-ui-notificationBadge-medium-fontSize: 9px;
   --gse-ui-notificationBadge-medium-lineHeight: 16px;
+  --gse-ui-notificationBadge-tertiaryBackgroundColor: #09b581;
   --gse-ui-accordion-header-height: 40px;
   --gse-ui-accordion-header-padding: 8px 16px 8px 16px;
   --gse-ui-accordion-header-chevronIcon: 16px;

@@ -606,11 +606,11 @@
       "type": "color"
     },
     "light_content_color": {
-      "value": "{foreground.system.custom_accents.light}",
+      "value": "{background.system.notification.light_content}",
       "type": "color"
     },
     "light_only_content_color": {
-      "value": "{background.system.notification.light_only_content}",
+      "value": "{foreground.system.custom_accents.light}",
       "type": "color"
     },
     "dark_content_color": {
@@ -691,6 +691,10 @@
         "lineHeight": "16px"
       },
       "type": "typography"
+    },
+    "tertiary_background_color": {
+      "value": "{background.system.notification.tertiary}",
+      "type": "color"
     }
   }
 }

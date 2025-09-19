@@ -3887,7 +3887,8 @@
       "fontWeight": "600",
       "fontSize": "9px",
       "lineHeight": "16px"
-    }
+    },
+    "tertiary_background_color": "#056d4d"
   },
   "accordion": {
     "header": {
