@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.173.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.173.1...v4.173.2) (2025-09-20)
+
+
+### Bug Fixes
+
+* **form-field:** Prevent icon shrinking on long text ([#1388](https://github.com/MyPureCloud/genesys-spark/issues/1388)) ([08aa301](https://github.com/MyPureCloud/genesys-spark/commit/08aa30151182971fd49d09f30bfcbe4503b20792))
+
 ### [4.173.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.173.0...v4.173.1) (2025-09-19)
 
 
