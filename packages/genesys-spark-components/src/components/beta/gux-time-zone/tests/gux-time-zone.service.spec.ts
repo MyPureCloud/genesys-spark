@@ -9,7 +9,8 @@ describe('gux-time-zone.service', () => {
   describe('#getLocalizedOffset', () => {
     const cases: ZoneTestCase[] = [
       { timeZoneId: 'Etc/GMT', expectedOutput: 'UTC+00:00' },
-      { timeZoneId: 'Etc/GMT-1', expectedOutput: 'UTC+01:00' }
+      { timeZoneId: 'Etc/GMT-1', expectedOutput: 'UTC+01:00' },
+      { timeZoneId: 'Asia/Calcutta', expectedOutput: 'UTC+05:30' }
     ];
     cases.forEach(
       ({
@@ -29,7 +30,8 @@ describe('gux-time-zone.service', () => {
   describe('#shortenZone', () => {
     [
       { timeZone: 'Etc/GMT', expectedOutput: 'GMT' },
-      { timeZone: 'Europe/London', expectedOutput: 'London' }
+      { timeZone: 'Europe/London', expectedOutput: 'London' },
+      { timeZone: 'Asia/Calcutta', expectedOutput: 'Calcutta' }
     ].forEach(({ timeZone, expectedOutput }) => {
       it(`should work as expected for "${timeZone}"`, async () => {
         expect(shortenZone(timeZone)).toBe(expectedOutput);
