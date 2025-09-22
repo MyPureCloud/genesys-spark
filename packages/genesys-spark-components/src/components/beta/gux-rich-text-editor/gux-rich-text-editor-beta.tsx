@@ -41,6 +41,9 @@ export class GuxRichTextEditor {
   @Prop()
   disabled: boolean = false;
 
+  @Prop()
+  dragAndDrop: boolean = false;
+
   @State()
   typographicalEmphasisActions: string[] = [];
 
@@ -55,6 +58,9 @@ export class GuxRichTextEditor {
 
   @State()
   hasToolbar: boolean = false;
+
+  @State()
+  showDropOverlay: boolean = false;
 
   // This event is emitted when an action has been selected from the menu in the shadowDOM.
   @Event({ composed: true })
@@ -84,6 +90,10 @@ export class GuxRichTextEditor {
     afterNextRenderTimeout(() => {
       this.checkResponsiveLayout();
     });
+
+    if (this.dragAndDrop) {
+      this.setupDragAndDrop();
+    }
   }
 
   componentDidUpdate(): void {
@@ -309,6 +319,27 @@ export class GuxRichTextEditor {
     ].some(child => child !== null && child !== undefined);
   }
 
+  private setupDragAndDrop(): void {
+    const editorContainer = this.root.shadowRoot.querySelector(
+      '.gux-editor-container'
+    );
+
+    editorContainer.addEventListener('dragover', (e: DragEvent) => {
+      e.preventDefault();
+      this.showDropOverlay = true;
+    });
+
+    editorContainer.addEventListener('dragleave', (e: DragEvent) => {
+      if (!editorContainer.contains(e.relatedTarget as Node)) {
+        this.showDropOverlay = false;
+      }
+    });
+
+    editorContainer.addEventListener('drop', () => {
+      this.showDropOverlay = false;
+    });
+  }
+
   render(): JSX.Element {
     return (
       <div
@@ -326,7 +357,12 @@ export class GuxRichTextEditor {
           {this.renderTextEditorMenu()}
           {this.renderGlobalAction()}
         </div>
-        <slot name="editor"></slot>
+        <div class="gux-editor-container">
+          <slot name="editor"></slot>
+          {this.dragAndDrop && this.showDropOverlay && (
+            <div class="gux-drop-overlay">Drop the file here</div>
+          )}
+        </div>
       </div>
     ) as JSX.Element;
   }
