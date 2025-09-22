@@ -1,9 +1,11 @@
 :host {
-  display: block;
+  display: inline-block;
   inline-size: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  vertical-align: bottom;
   white-space: nowrap;
+  text-decoration: inherit;
   cursor: inherit;
 }
 

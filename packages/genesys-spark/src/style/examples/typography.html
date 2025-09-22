@@ -241,9 +241,20 @@
 
 <h2>Anchor Styling</h2>
 
-<h3>Default</h3>
+<h3>Text node within an anchor</h3>
+
 <a href="#">Default link</a>
 
+<h3>Span within an anchor</h3>
+<a href="#"><span>Default link</span></a>
+
+<h3>Div within an anchor</h3>
+<a href="#"><div>Default link</div></a>
+
+<h3>Truncate within an anchor</h3>
+<a href="#">
+  <gux-truncate style="inline-size: 40px"> Some text to truncate </gux-truncate>
+</a>
 <h3>With Icon</h3>
 <div>Use the gux-icon-anchor class to add padding to the right of the icon</div>
 <a href="#" class="gux-icon-anchor">
