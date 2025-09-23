@@ -21,7 +21,7 @@
   position: fixed;
   display: none;
   border: none;
-  border-radius: ui.$gse-ui-menu-borderRadius;
+  border-radius: ui.$gse-ui-flyoutMenu-borderRadius;
   opacity: 0;
 
   &.gux-shown {
@@ -34,8 +34,8 @@
 
   .gux-arrow {
     position: absolute;
-    inline-size: ui.$gse-ui-popover-anchor-width; // TODO: COMUI-2993 Replace this token with menu-specific token
-    block-size: ui.$gse-ui-popover-anchor-height; // TODO: COMUI-2993 Replace this token with menu-specific token
+    inline-size: ui.$gse-ui-flyoutMenu-anchor-width;
+    block-size: ui.$gse-ui-flyoutMenu-anchor-height;
 
     /* 4px padding leaves some space for the shadow to bleed into */
     padding-block-end: 4px;
@@ -45,18 +45,13 @@
   .gux-arrow-caret {
     inline-size: 0;
     block-size: 0;
-    border-block-start: calc(#{ui.$gse-ui-popover-anchor-width} / 2) solid
-      ui.$gse-ui-popover-backgroundColor; // TODO: COMUI-2993 Replace this token with menu-specific token
-
-    border-inline-start: calc(#{ui.$gse-ui-popover-anchor-width} / 2) solid
-      transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
-
-    border-inline-end: calc(#{ui.$gse-ui-popover-anchor-width} / 2) solid
-      transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
-
-    filter: drop-shadow(
-      0 0 4px #{global.$gse-semantic-effects-boxShadow}
-    ); // TODO: COMUI-2993 Replace this token with menu-specific token
+    border-block-start: calc(#{ui.$gse-ui-flyoutMenu-anchor-width} / 2) solid
+      ui.$gse-ui-flyoutMenu-backgroundColor;
+    border-inline-start: calc(#{ui.$gse-ui-flyoutMenu-anchor-width} / 2) solid
+      transparent;
+    border-inline-end: calc(#{ui.$gse-ui-flyoutMenu-anchor-width} / 2) solid
+      transparent;
+    filter: drop-shadow(#{gse-ui-menu-boxShadow});
   }
 }
 
