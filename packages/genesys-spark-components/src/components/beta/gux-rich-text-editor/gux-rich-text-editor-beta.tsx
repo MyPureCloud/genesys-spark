@@ -34,6 +34,7 @@ import { OnMutation } from '@utils/decorator/on-mutation';
 })
 export class GuxRichTextEditor {
   private i18n: GetI18nValue;
+  private dragAndDropObserver: MutationObserver;
 
   @Element()
   root: HTMLElement;
@@ -92,6 +93,12 @@ export class GuxRichTextEditor {
     });
 
     if (this.dragAndDrop) {
+      // The mutation observer is needed as Tiptap interferes with the native drop event preventing it from executing correctly.
+      this.dragAndDropObserver = new MutationObserver((): void => {
+        if (this.showDropOverlay) {
+          this.showDropOverlay = false;
+        }
+      });
       this.setupDragAndDrop();
     }
   }
@@ -320,24 +327,30 @@ export class GuxRichTextEditor {
   }
 
   private setupDragAndDrop(): void {
-    const editorContainer = this.root.shadowRoot.querySelector(
-      '.gux-editor-container'
-    );
+    const editorElement = this.root?.querySelector('[slot="editor"]');
+    if (editorElement) {
+      this.dragAndDropObserver.observe(editorElement, {
+        childList: true,
+        subtree: true
+      });
 
-    editorContainer.addEventListener('dragover', (e: DragEvent) => {
-      e.preventDefault();
-      this.showDropOverlay = true;
-    });
+      editorElement.addEventListener('dragover', (e: DragEvent) => {
+        e.preventDefault();
+        this.showDropOverlay = true;
+      });
 
-    editorContainer.addEventListener('dragleave', (e: DragEvent) => {
-      if (!editorContainer.contains(e.relatedTarget as Node)) {
-        this.showDropOverlay = false;
-      }
-    });
+      editorElement.addEventListener('dragleave', (e: DragEvent) => {
+        if (!editorElement.contains(e.relatedTarget as Node)) {
+          this.showDropOverlay = false;
+        }
+      });
+    }
+  }
 
-    editorContainer.addEventListener('drop', () => {
-      this.showDropOverlay = false;
-    });
+  disconnectedCallback(): void {
+    if (this.dragAndDropObserver) {
+      this.dragAndDropObserver.disconnect();
+    }
   }
 
   render(): JSX.Element {
