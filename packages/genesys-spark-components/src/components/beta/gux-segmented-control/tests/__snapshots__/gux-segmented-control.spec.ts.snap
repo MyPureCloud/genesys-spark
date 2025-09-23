@@ -8,14 +8,14 @@ exports[`gux-segmented-control-beta #render Should render basic segmented contro
   </template>
   <gux-segmented-control-item value="option1">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-start">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 1
@@ -23,14 +23,14 @@ exports[`gux-segmented-control-beta #render Should render basic segmented contro
   </gux-segmented-control-item>
   <gux-segmented-control-item value="option2">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 2
@@ -38,14 +38,14 @@ exports[`gux-segmented-control-beta #render Should render basic segmented contro
   </gux-segmented-control-item>
   <gux-segmented-control-item value="option3">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-end">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 3
@@ -62,14 +62,14 @@ exports[`gux-segmented-control-beta #render Should render disabled segmented con
   </template>
   <gux-segmented-control-item value="option1">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-parent-disabled gux-start">
-        <button class="gux-segmented-control-item" type="button" aria-current="false" disabled="">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item gux-parent-disabled" type="button" id="gux-segmented-control-item-i" aria-current="false" disabled="">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 1
@@ -77,14 +77,14 @@ exports[`gux-segmented-control-beta #render Should render disabled segmented con
   </gux-segmented-control-item>
   <gux-segmented-control-item value="option2">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-parent-disabled">
-        <button class="gux-segmented-control-item" type="button" aria-current="false" disabled="">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item gux-parent-disabled" type="button" id="gux-segmented-control-item-i" aria-current="false" disabled="">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 2
@@ -92,14 +92,14 @@ exports[`gux-segmented-control-beta #render Should render disabled segmented con
   </gux-segmented-control-item>
   <gux-segmented-control-item value="option3">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-parent-disabled gux-end">
-        <button class="gux-segmented-control-item" type="button" aria-current="false" disabled="">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item gux-parent-disabled" type="button" id="gux-segmented-control-item-i" aria-current="false" disabled="">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 3
@@ -116,23 +116,23 @@ exports[`gux-segmented-control-beta #render Should render icon-only items 1`] = 
   </template>
   <gux-segmented-control-item value="home" icon-only="">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-start gux-end">
-        <button class="gux-segmented-control-item gux-icon-only" type="button" aria-current="false">
-          <div class="gux-icon gux-icon-only">
-            <slot name="icon">
-            </slot>
-          </div>
-          <span class="gux-text gux-icon-only">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-        <gux-tooltip>
-          <div slot="content">
-            Home
-          </div>
-        </gux-tooltip>
-      </div>
+      <button class="gux-segmented-control-item gux-icon-only" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <div class="gux-icon gux-icon-only">
+          <slot name="icon">
+          </slot>
+        </div>
+        <span class="gux-text gux-icon-only">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-tooltip-beta visual-only="" for="gux-segmented-control-item-i" placement="bottom">
+        <div slot="content">
+          Home
+        </div>
+      </gux-tooltip-beta>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <gux-icon slot="icon" icon-name="home" decorative="">
     </gux-icon>
@@ -151,18 +151,18 @@ exports[`gux-segmented-control-beta #render Should render with icons 1`] = `
   </template>
   <gux-segmented-control-item value="home">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-start">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <div class="gux-icon">
-            <slot name="icon">
-            </slot>
-          </div>
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <div class="gux-icon">
+          <slot name="icon">
+          </slot>
+        </div>
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <gux-icon slot="icon" icon-name="home" decorative="">
     </gux-icon>
@@ -172,18 +172,18 @@ exports[`gux-segmented-control-beta #render Should render with icons 1`] = `
   </gux-segmented-control-item>
   <gux-segmented-control-item value="settings">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <div class="gux-icon">
-            <slot name="icon">
-            </slot>
-          </div>
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <div class="gux-icon">
+          <slot name="icon">
+          </slot>
+        </div>
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <gux-icon slot="icon" icon-name="settings" decorative="">
     </gux-icon>
@@ -193,18 +193,18 @@ exports[`gux-segmented-control-beta #render Should render with icons 1`] = `
   </gux-segmented-control-item>
   <gux-segmented-control-item value="profile">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-end">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <div class="gux-icon">
-            <slot name="icon">
-            </slot>
-          </div>
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <div class="gux-icon">
+          <slot name="icon">
+          </slot>
+        </div>
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <gux-icon slot="icon" icon-name="user" decorative="">
     </gux-icon>
@@ -223,14 +223,14 @@ exports[`gux-segmented-control-beta #render Should render with individual disabl
   </template>
   <gux-segmented-control-item value="option1">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-start">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 1
@@ -238,14 +238,14 @@ exports[`gux-segmented-control-beta #render Should render with individual disabl
   </gux-segmented-control-item>
   <gux-segmented-control-item value="option2" disabled="">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false" disabled="">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false" disabled="">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 2
@@ -253,14 +253,14 @@ exports[`gux-segmented-control-beta #render Should render with individual disabl
   </gux-segmented-control-item>
   <gux-segmented-control-item value="option3">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-end">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 3
@@ -277,14 +277,14 @@ exports[`gux-segmented-control-beta #render Should render with selected value 1`
   </template>
   <gux-segmented-control-item value="option1">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-start">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 1
@@ -292,14 +292,14 @@ exports[`gux-segmented-control-beta #render Should render with selected value 1`
   </gux-segmented-control-item>
   <gux-segmented-control-item value="option2">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 2
@@ -307,14 +307,14 @@ exports[`gux-segmented-control-beta #render Should render with selected value 1`
   </gux-segmented-control-item>
   <gux-segmented-control-item value="option3">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-end">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Option 3
@@ -331,14 +331,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </template>
   <gux-segmented-control-item value="one">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-start">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day One
@@ -346,14 +346,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="two">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Two
@@ -361,14 +361,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="three">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Three
@@ -376,14 +376,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="four">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Four
@@ -391,14 +391,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="five">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Five
@@ -406,14 +406,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="six">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Six
@@ -421,14 +421,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="seven">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Seven
@@ -436,14 +436,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="eight">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Eight
@@ -451,14 +451,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="nine">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Nine
@@ -466,14 +466,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="ten">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Ten
@@ -481,14 +481,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="eleven">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Eleven
@@ -496,14 +496,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="twelve">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Twelve
@@ -511,14 +511,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="thirteen">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Thirteen
@@ -526,14 +526,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="fourteen">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Fourteen
@@ -541,14 +541,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="fifteen">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Fifteen
@@ -556,14 +556,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="sixteen">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Sixteen
@@ -571,14 +571,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="seventeen">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Seventeen
@@ -586,14 +586,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="eighteen">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Eighteen
@@ -601,14 +601,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="nineteen">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Nineteen
@@ -616,14 +616,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="twenty">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Twenty
@@ -631,14 +631,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="twentyone">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Twenty One
@@ -646,14 +646,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="twentytwo">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Twenty Two
@@ -661,14 +661,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="twentythree">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Twenty Three
@@ -676,14 +676,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="twentyfour">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Twenty Four
@@ -691,14 +691,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="twentyfive">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Twenty Five
@@ -706,14 +706,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="twentysix">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Twenty Six
@@ -721,14 +721,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="twentyseven">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Twenty Seven
@@ -736,14 +736,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="twentyeight">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Twenty Eight
@@ -751,14 +751,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="twentynine">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Twenty Nine
@@ -766,14 +766,14 @@ exports[`gux-segmented-control-beta #render Should render with thirty items 1`] 
   </gux-segmented-control-item>
   <gux-segmented-control-item value="thirty">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-end">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Day Thirty
@@ -790,14 +790,14 @@ exports[`gux-segmented-control-beta #render Should render with two items 1`] = `
   </template>
   <gux-segmented-control-item value="left">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-start">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Left
@@ -805,14 +805,14 @@ exports[`gux-segmented-control-beta #render Should render with two items 1`] = `
   </gux-segmented-control-item>
   <gux-segmented-control-item value="right">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-end">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <span slot="text">
       Right
@@ -829,14 +829,14 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
   </template>
   <gux-segmented-control-item value="month">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-start">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Month
@@ -844,14 +844,14 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
   </gux-segmented-control-item>
   <gux-segmented-control-item value="week">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Week
@@ -859,14 +859,14 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
   </gux-segmented-control-item>
   <gux-segmented-control-item value="day">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Day
@@ -874,14 +874,14 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
   </gux-segmented-control-item>
   <gux-segmented-control-item value="hour" disabled="">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container">
-        <button class="gux-segmented-control-item" type="button" aria-current="false" disabled="">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false" disabled="">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Hour
@@ -889,14 +889,14 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
   </gux-segmented-control-item>
   <gux-segmented-control-item value="minute">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-end">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>
     <div slot="text">
       Minute
@@ -904,14 +904,14 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
   </gux-segmented-control-item>
   <gux-segmented-control-item value="second">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
-      <div class="gux-container gux-end">
-        <button class="gux-segmented-control-item" type="button" aria-current="false">
-          <span class="gux-text">
-            <slot name="text">
-            </slot>
-          </span>
-        </button>
-      </div>
+      <button class="gux-segmented-control-item" type="button" id="gux-segmented-control-item-i" aria-current="false">
+        <span class="gux-text">
+          <slot name="text">
+          </slot>
+        </span>
+      </button>
+      <gux-segmented-control-divider>
+      </gux-segmented-control-divider>
     </template>Second
   </gux-segmented-control-item>
 </gux-segmented-control-beta>

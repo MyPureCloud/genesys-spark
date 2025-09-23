@@ -2,13 +2,6 @@
 @use '~genesys-spark/dist/scss/mixins.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
-@mixin button-text {
-  font-family: ui.$gse-ui-button-text-fontFamily;
-  font-size: ui.$gse-ui-button-text-fontSize;
-  font-weight: ui.$gse-ui-button-text-fontWeight;
-  line-height: ui.$gse-ui-button-text-lineHeight;
-}
-
 :host {
   display: block;
   -webkit-user-select: none;

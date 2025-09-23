@@ -150,6 +150,9 @@
           "header": "#1e1e21",
           "footer": "#dfe3ec"
         }
+      },
+      "sunken": {
+        "base": "#ebedf5"
       }
     },
     "system": {
@@ -267,6 +270,10 @@
           "first_level": "#ffef27",
           "subsequent_level": "#fff793"
         }
+      },
+      "segment": {
+        "active": "#ffffff",
+        "hover": "#cad1e1"
       }
     }
   },
@@ -428,6 +435,11 @@
       },
       "search": {
         "matching_text": "#2a2a2e"
+      },
+      "segment": {
+        "active": "#2a60c8",
+        "hover": "#2754ac",
+        "default": "#2a60c8"
       }
     }
   },
