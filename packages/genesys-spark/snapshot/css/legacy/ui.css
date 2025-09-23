@@ -510,6 +510,7 @@
   --gse-ui-checkbox-focus-borderRadiusSmall: 4px;
   --gse-ui-checkbox-focus-offset: 1px;
   --gse-ui-checkbox-group-gap: 8px;
+  --gse-ui-checkbox-group-paddingLeft: 24px;
   --gse-ui-menu-option-gap: 8px;
   --gse-ui-menu-option-height: 32px;
   --gse-ui-menu-option-startIcon-height: 16px;
