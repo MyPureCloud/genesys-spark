@@ -703,6 +703,8 @@
   "--gse-ui-dataTableItems-tablePagination-currentResultText-fontFamily",
   "--gse-ui-dataTableItems-tablePagination-currentResultText-fontSize",
   "--gse-ui-dataTableItems-tablePagination-currentResultText-lineHeight",
+  "--gse-ui-dataTableItems-tablePagination-sticky-boxShadow",
+  "--gse-ui-dataTableItems-tablePagination-sticky-elevationContainer-padding",
   "--gse-ui-dataTableItems-tableToolbar-divider-height",
   "--gse-ui-datePicker-dateTime-gap",
   "--gse-ui-datePicker-dateTime-inputLeft-borderRadius",

@@ -2899,6 +2899,19 @@
       "count-display": {
         "gap": "4px"
       },
+      "sticky": {
+        "elevation_container": {
+          "padding": "24px, 0px, 0px, 0px"
+        },
+        "box_shadow": {
+          "blur": "14px",
+          "spread": "4px",
+          "color": "#3d538f26",
+          "type": "dropShadow",
+          "offsetX": "0",
+          "offsetY": "-4px"
+        }
+      },
       "divider": {
         "color": "#dce1ed",
         "width": "1px",
