@@ -1306,9 +1306,37 @@
           "value": "{color.mango.600}",
           "type": "color"
         },
+        "35": {
+          "value": "{color.mango.600}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.3",
+                "space": "srgb",
+                "color": "{color.genesys_orange.500}"
+              }
+            }
+          }
+        },
         "40": {
           "value": "{color.genesys_orange.500}",
           "type": "color"
+        },
+        "35d": {
+          "value": "{color.mango.700}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.3",
+                "space": "srgb",
+                "color": "{color.genesys_orange.600}"
+              }
+            }
+          }
         },
         "30d": {
           "value": "{color.mango.700}",

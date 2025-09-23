@@ -1414,5 +1414,47 @@
       "type": "zindex",
       "description": "The recommended z-index for tooltips."
     }
+  },
+  "glow": {
+    "ai": {
+      "default": {
+        "value": [
+          {
+            "x": "0",
+            "y": "2px",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.yellow.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "-2px",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.orange.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-2px",
+            "y": "0",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.gold.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "2px",
+            "y": "0",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.teal.100}",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow",
+        "description": "The glow we use to highlight important AI elements."
+      }
+    }
   }
 }
