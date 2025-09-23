@@ -610,10 +610,6 @@
       "theme.border.custom_accents.ai.10d": "ad3df5f3a926b841c4b585efe92c6b67929c7b0a",
       "theme.border.custom_accents.ai.20": "03d37aad51db1e2cf0904755a9d9957c71ce1aaa",
       "theme.border.custom_accents.ai.20d": "c3c960a46902ce5a061156d2cd571d3b29535d3b",
-      "theme.border.custom_accents.ai.30": "dcbe64c5867365659dc3a4f1dba2cad47ea3ddd6",
-      "theme.border.custom_accents.ai.30d": "d2653a2d3847a9dc55cd619f598e62aed7eb3087",
-      "theme.border.custom_accents.ai.40": "ce720db7e048bd8c428cfac14d41cc6282c9cc95",
-      "theme.border.custom_accents.ai.40d": "cb0b5253af3e265eff2753a5f9eab2e6fcb34713",
       "theme.border.custom_accents.ai.50": "5d4cd4a407d38c9d4f302d482861cb161be646ee",
       "theme.border.custom_accents.ai.50d": "67608e20a20e7d9167806a6df88cc14c99b28587",
       "theme.border.divider.10": "45f80666616927a9c9a1bb974fbe92a50832eae9",
@@ -882,7 +878,11 @@
       "theme.foreground.tertiary.20": "13fd9a83e03fad120c36d5f84bfd0bbe2231c1c6",
       "theme.foreground.tertiary.20d": "5ee2108c18545d6562a34574ce670a25920e4c05",
       "theme.foreground.tertiary.30": "ae9e0f8bd3bb782ca9db305771054df705a2a575",
-      "theme.foreground.tertiary.30d": "19711f1434af8de411c4d13221d56b25321eb486"
+      "theme.foreground.tertiary.30d": "19711f1434af8de411c4d13221d56b25321eb486",
+      "theme.effects.ai_glow.30": "dcbe64c5867365659dc3a4f1dba2cad47ea3ddd6",
+      "theme.effects.ai_glow.40": "ce720db7e048bd8c428cfac14d41cc6282c9cc95",
+      "theme.effects.ai_glow.30d": "d2653a2d3847a9dc55cd619f598e62aed7eb3087",
+      "theme.effects.ai_glow.40d": "cb0b5253af3e265eff2753a5f9eab2e6fcb34713"
     }
   },
   {
@@ -1036,10 +1036,6 @@
       "theme.border.custom_accents.ai.10d": "ad3df5f3a926b841c4b585efe92c6b67929c7b0a",
       "theme.border.custom_accents.ai.20": "03d37aad51db1e2cf0904755a9d9957c71ce1aaa",
       "theme.border.custom_accents.ai.20d": "c3c960a46902ce5a061156d2cd571d3b29535d3b",
-      "theme.border.custom_accents.ai.30": "dcbe64c5867365659dc3a4f1dba2cad47ea3ddd6",
-      "theme.border.custom_accents.ai.30d": "d2653a2d3847a9dc55cd619f598e62aed7eb3087",
-      "theme.border.custom_accents.ai.40": "ce720db7e048bd8c428cfac14d41cc6282c9cc95",
-      "theme.border.custom_accents.ai.40d": "cb0b5253af3e265eff2753a5f9eab2e6fcb34713",
       "theme.border.custom_accents.ai.50": "5d4cd4a407d38c9d4f302d482861cb161be646ee",
       "theme.border.custom_accents.ai.50d": "67608e20a20e7d9167806a6df88cc14c99b28587",
       "theme.border.divider.10": "45f80666616927a9c9a1bb974fbe92a50832eae9",
@@ -1212,7 +1208,11 @@
       "theme.foreground.tertiary.10": "4e7b285031148cbbe27ec116955634a73178656b",
       "theme.foreground.tertiary.15": "d538c34edce9f442e73ad7bf5ef1adca738ed473",
       "theme.foreground.tertiary.20": "13fd9a83e03fad120c36d5f84bfd0bbe2231c1c6",
-      "theme.foreground.tertiary.30": "ae9e0f8bd3bb782ca9db305771054df705a2a575"
+      "theme.foreground.tertiary.30": "ae9e0f8bd3bb782ca9db305771054df705a2a575",
+      "theme.effects.ai_glow.30": "dcbe64c5867365659dc3a4f1dba2cad47ea3ddd6",
+      "theme.effects.ai_glow.40": "ce720db7e048bd8c428cfac14d41cc6282c9cc95",
+      "theme.effects.ai_glow.30d": "d2653a2d3847a9dc55cd619f598e62aed7eb3087",
+      "theme.effects.ai_glow.40d": "cb0b5253af3e265eff2753a5f9eab2e6fcb34713"
     }
   },
   {
@@ -1456,9 +1456,6 @@
       "border.container.high_constrast.default": "34344b34e2361dec12dd6be5a01920f30fd152fb",
       "border.container.high_constrast.enabled": "1f17e169a2c77dad4a8eb7426221420328b69f1c",
       "border.container.high_constrast.hover": "01f8997457dde237d7d430e1cd1aefd2f0b71f11",
-      "border.container.special_accents.ai.bottom_right": "53e2848d081ad1cc083cd586aa869ce2b4fbd17a",
-      "border.container.special_accents.ai.middle": "6acccf2f4d90ea08446c8a495c81a3b6e64ccde5",
-      "border.container.special_accents.ai.top_left": "a976674c9e7d21df03f061fd302e58af0a95d002",
       "border.focus": "f6b6d35bc61074da860d63566a4509c015b31401",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
       "border.form_control.text_input.default": "b3e5c197aea4a4ac612e4d7dbaee2f8c7d191e0b",
@@ -1718,7 +1715,10 @@
       "interactive.xs.size": "3b912898427f3afad7f5e7b11b109d77e8816635",
       "interactive.xs.width": "7eef26000b5b741e25905874cb7d89eaa02a5102",
       "opacity.disabled": "57b30140a548ab8a62a5a54618d391cb8c0e8aeb",
-      "opacity.shroud": "1279e7d8432b628af26abdd6657a42e06627835b"
+      "opacity.shroud": "1279e7d8432b628af26abdd6657a42e06627835b",
+      "effects.ai_glow.bottom_right": "53e2848d081ad1cc083cd586aa869ce2b4fbd17a",
+      "effects.ai_glow.middle": "6acccf2f4d90ea08446c8a495c81a3b6e64ccde5",
+      "effects.ai_glow.top_left": "a976674c9e7d21df03f061fd302e58af0a95d002"
     }
   },
   {
@@ -1976,9 +1976,6 @@
       "border.container.high_constrast.default": "34344b34e2361dec12dd6be5a01920f30fd152fb",
       "border.container.high_constrast.enabled": "1f17e169a2c77dad4a8eb7426221420328b69f1c",
       "border.container.high_constrast.hover": "01f8997457dde237d7d430e1cd1aefd2f0b71f11",
-      "border.container.special_accents.ai.bottom_right": "53e2848d081ad1cc083cd586aa869ce2b4fbd17a",
-      "border.container.special_accents.ai.middle": "6acccf2f4d90ea08446c8a495c81a3b6e64ccde5",
-      "border.container.special_accents.ai.top_left": "a976674c9e7d21df03f061fd302e58af0a95d002",
       "border.focus": "f6b6d35bc61074da860d63566a4509c015b31401",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
       "border.form_control.text_input.default": "b3e5c197aea4a4ac612e4d7dbaee2f8c7d191e0b",
@@ -2238,7 +2235,10 @@
       "interactive.xs.size": "3b912898427f3afad7f5e7b11b109d77e8816635",
       "interactive.xs.width": "7eef26000b5b741e25905874cb7d89eaa02a5102",
       "opacity.disabled": "57b30140a548ab8a62a5a54618d391cb8c0e8aeb",
-      "opacity.shroud": "1279e7d8432b628af26abdd6657a42e06627835b"
+      "opacity.shroud": "1279e7d8432b628af26abdd6657a42e06627835b",
+      "effects.ai_glow.bottom_right": "53e2848d081ad1cc083cd586aa869ce2b4fbd17a",
+      "effects.ai_glow.middle": "6acccf2f4d90ea08446c8a495c81a3b6e64ccde5",
+      "effects.ai_glow.top_left": "a976674c9e7d21df03f061fd302e58af0a95d002"
     }
   },
   {

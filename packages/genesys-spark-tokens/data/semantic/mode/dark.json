@@ -424,12 +424,12 @@
           },
           "copilot_launcher": {
             "top_left": {
-              "value": "{theme.border.custom_accents.ai.30}",
+              "value": "{theme.effects.ai_glow.30}",
               "type": "color",
               "description": "This is the top left color that the ai gradient uses for borders."
             },
             "middle": {
-              "value": "{theme.border.custom_accents.ai.40}",
+              "value": "{theme.effects.ai_glow.40}",
               "type": "color",
               "description": "This is the middle color that the ai gradient uses for borders."
             },
@@ -1549,7 +1549,7 @@
       "special_accents": {
         "ai": {
           "top_left": {
-            "value": "{theme.border.custom_accents.ai.30d}",
+            "value": "{theme.effects.ai_glow.30d}",
             "type": "color",
             "description": "This is the top left color that the ai gradient uses for borders."
           },
@@ -1559,7 +1559,7 @@
             "description": "This is the bottom right color that the ai gradient uses for borders."
           },
           "middle": {
-            "value": "{theme.border.custom_accents.ai.40}",
+            "value": "{theme.effects.ai_glow.40}",
             "type": "color",
             "description": "This is the middle color that the ai gradient uses for borders."
           }
