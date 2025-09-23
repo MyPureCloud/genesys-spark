@@ -525,23 +525,13 @@ const editor = new Editor({
     }),
     FileHandler.configure({
         onDrop: (currentEditor, files, pos) => {
-          files.forEach(file => {
-            const fileReader = new FileReader()
-
-            fileReader.readAsDataURL(file)
-            fileReader.onload = () => {
-              currentEditor
-                .chain()
-                .insertContentAt(pos, {
-                  type: 'image',
-                  attrs: {
-                    src: fileReader.result,
-                  },
-                })
-                .focus()
-                .run()
-            }
-          })
+          //Send files to the rich-text-editor component for display.
+          const richTextEditor = document.querySelector('gux-rich-text-editor-beta');
+          if(richTextEditor) {
+            richTextEditor.dispatchEvent(new CustomEvent('filesDropped', {
+              detail: { files : Array.from(files)}
+            }))
+          }
         },
         onPaste: (currentEditor, files, htmlContent) => {
           files.forEach(file => {

@@ -87,4 +87,23 @@
     background: rgb(255 255 255);
     border: 1px dashed black;
   }
+
+  .gux-files-area {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    background: #f9f9f9;
+    border-block-start: 1px solid #e0e0e0;
+  }
+
+  .gux-file-item {
+    padding-block: 8px;
+    padding-inline: 12px;
+    font-size: 14px;
+    color: #333;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  }
 }

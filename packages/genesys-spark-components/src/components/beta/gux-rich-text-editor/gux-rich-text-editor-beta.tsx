@@ -63,6 +63,9 @@ export class GuxRichTextEditor {
   @State()
   showDropOverlay: boolean = false;
 
+  @State()
+  droppedFiles: File[] = [];
+
   // This event is emitted when an action has been selected from the menu in the shadowDOM.
   @Event({ composed: true })
   guxToggleAction: EventEmitter<string>;
@@ -344,6 +347,11 @@ export class GuxRichTextEditor {
           this.showDropOverlay = false;
         }
       });
+
+      this.root.addEventListener('filesDropped', (e: CustomEvent) => {
+        const files = e.detail.files;
+        this.droppedFiles = [...this.droppedFiles, ...files];
+      });
     }
   }
 
@@ -376,6 +384,15 @@ export class GuxRichTextEditor {
             <div class="gux-drop-overlay">Drop the file here</div>
           )}
         </div>
+        {this.dragAndDrop && this.droppedFiles.length > 0 && (
+          <div class="gux-files-area">
+            {this.droppedFiles.map((file, index) => (
+              <div key={index} class="gux-file-item">
+                {file.name}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     ) as JSX.Element;
   }
