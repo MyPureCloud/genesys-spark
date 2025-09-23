@@ -888,16 +888,6 @@
     },
     "border_radius": "4px",
     "height": "32px",
-    "border": {
-      "color": "#829ce5",
-      "width": "1px",
-      "style": "solid"
-    },
-    "divider": {
-      "color": "#829ce5",
-      "width": "1px",
-      "style": "solid"
-    },
     "icon_only": {
       "padding": "0 8px"
     },
@@ -911,7 +901,17 @@
     "divider_component": {
       "margin": "4px"
     },
-    "padding": "2px"
+    "padding": "2px",
+    "border": {
+      "color": "#829ce5",
+      "width": "1px",
+      "style": "solid"
+    },
+    "divider": {
+      "color": "#829ce5",
+      "width": "1px",
+      "style": "solid"
+    }
   },
   "card": {
     "background-color": "#ffffff",
