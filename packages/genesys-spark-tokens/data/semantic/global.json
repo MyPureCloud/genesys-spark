@@ -1450,6 +1450,38 @@
             "spread": "0",
             "color": "{effects.ai_glow.teal.100}",
             "type": "dropShadow"
+          },
+          {
+            "x": "-1px",
+            "y": "3px",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.yellow.30}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "-3px",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.orange.40}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-3px",
+            "y": "0",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.gold.40}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "3px",
+            "y": "0",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.teal.50}",
+            "type": "dropShadow"
           }
         ],
         "type": "boxShadow",
