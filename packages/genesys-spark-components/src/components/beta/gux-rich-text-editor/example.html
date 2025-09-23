@@ -794,6 +794,11 @@ richTextEditor.addEventListener('guxToggleAction', (event) => {
   }
 });
 
+//Listen for file removal events
+richTextEditor.addEventListener('guxFileRemoved', (event) => {
+  console.log('File removed:', event.detail.file.name, 'at index:', event.detail.index);
+});
+
 })();
 
   })()"

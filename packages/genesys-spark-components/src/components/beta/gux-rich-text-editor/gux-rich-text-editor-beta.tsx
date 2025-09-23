@@ -34,7 +34,6 @@ import { OnMutation } from '@utils/decorator/on-mutation';
 })
 export class GuxRichTextEditor {
   private i18n: GetI18nValue;
-  private dragAndDropObserver: MutationObserver;
 
   @Element()
   root: HTMLElement;
@@ -70,6 +69,10 @@ export class GuxRichTextEditor {
   @Event({ composed: true })
   guxToggleAction: EventEmitter<string>;
 
+  // This event is emited when a file has been removed.
+  @Event({ composed: true })
+  guxFileRemoved: EventEmitter<{ file: File; index: number }>;
+
   @OnResize()
   checkResponsiveLayout(): void {
     readTask(() => {
@@ -96,12 +99,6 @@ export class GuxRichTextEditor {
     });
 
     if (this.dragAndDrop) {
-      // The mutation observer is needed as Tiptap interferes with the native drop event preventing it from executing correctly.
-      this.dragAndDropObserver = new MutationObserver((): void => {
-        if (this.showDropOverlay) {
-          this.showDropOverlay = false;
-        }
-      });
       this.setupDragAndDrop();
     }
   }
@@ -332,11 +329,6 @@ export class GuxRichTextEditor {
   private setupDragAndDrop(): void {
     const editorElement = this.root?.querySelector('[slot="editor"]');
     if (editorElement) {
-      this.dragAndDropObserver.observe(editorElement, {
-        childList: true,
-        subtree: true
-      });
-
       editorElement.addEventListener('dragover', (e: DragEvent) => {
         e.preventDefault();
         this.showDropOverlay = true;
@@ -351,14 +343,15 @@ export class GuxRichTextEditor {
       this.root.addEventListener('filesDropped', (e: CustomEvent) => {
         const files = e.detail.files;
         this.droppedFiles = [...this.droppedFiles, ...files];
+        this.showDropOverlay = false;
       });
     }
   }
 
-  disconnectedCallback(): void {
-    if (this.dragAndDropObserver) {
-      this.dragAndDropObserver.disconnect();
-    }
+  private removeFile(index: number): void {
+    const removedFile = this.droppedFiles[index];
+    this.droppedFiles = this.droppedFiles.filter((_, i) => i !== index);
+    this.guxFileRemoved.emit({ file: removedFile, index });
   }
 
   render(): JSX.Element {
@@ -388,7 +381,13 @@ export class GuxRichTextEditor {
           <div class="gux-files-area">
             {this.droppedFiles.map((file, index) => (
               <div key={index} class="gux-file-item">
-                {file.name}
+                <gux-truncate maxLines={1}>{file.name}</gux-truncate>
+                <gux-button
+                  accent="ghost"
+                  onClick={() => this.removeFile(index)}
+                >
+                  <gux-icon iconName="close" decorative></gux-icon>
+                </gux-button>
               </div>
             ))}
           </div>
