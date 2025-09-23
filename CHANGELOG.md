@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.174.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.173.2...v4.174.0) (2025-09-23)
+
+
+### Features
+
+* **icon:** added new icons ([728cc15](https://github.com/MyPureCloud/genesys-spark/commit/728cc158db20f3191ebdc56bd66f25516f4e26bc))
+
+
+### Bug Fixes
+
+* **screen-reader-beta:** remove component from contributing to layout ([fa99c14](https://github.com/MyPureCloud/genesys-spark/commit/fa99c1440ea55eb3b18239e9115371abece27815))
+
 ### [4.173.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.173.1...v4.173.2) (2025-09-20)
 
 
