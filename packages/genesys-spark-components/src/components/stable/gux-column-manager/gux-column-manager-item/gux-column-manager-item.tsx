@@ -182,6 +182,28 @@ export class GuxColumnManagerItem {
     this.setReorderMode(!this.isReordering, true);
   }
 
+  private onMouseDown(): void {
+    const elementToReorder = document.querySelector(
+      'gux-column-manager-item[gs-reorder-indicator="below"]'
+    );
+
+    if (elementToReorder) {
+      const oldIndex = getIndexInParent(elementToReorder as HTMLElement);
+      const dropIndex = getIndexInParent(this.root);
+      if (oldIndex === dropIndex) {
+        return;
+      }
+
+      this.pendingReorder = 'none';
+
+      const newIndex = getNewIndex(oldIndex, dropIndex, null);
+
+      this.internal_order_change.emit({ oldIndex, newIndex });
+    }
+
+    this.setReorderMode(!this.isReordering, true);
+  }
+
   private keyboardReorder(event: KeyboardEvent): void {
     if (this.isReordering) {
       switch (event.key) {
@@ -246,6 +268,7 @@ export class GuxColumnManagerItem {
             }}
             type="button"
             onClick={() => this.toggleReorderMode()}
+            onMouseDown={() => this.onMouseDown()}
             onKeyDown={event => this.keyboardReorder(event)}
             ref={el => (this.reorderButtonElement = el)}
           >
