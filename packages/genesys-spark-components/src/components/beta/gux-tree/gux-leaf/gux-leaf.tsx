@@ -1,0 +1,64 @@
+import {
+  AttachInternals,
+  Component,
+  Element,
+  h,
+  JSX,
+  Prop,
+  Watch
+} from '@stencil/core';
+
+/**
+ * @slot label - Required slot for the text
+ * @slot icon - Optional slot for an icon
+ */
+
+@Component({
+  styleUrl: 'gux-leaf.scss',
+  tag: 'gux-leaf',
+  formAssociated: true,
+  shadow: true
+})
+export class GuxLeaf {
+  @Element()
+  root: HTMLElement;
+
+  @AttachInternals()
+  internals: ElementInternals;
+
+  @Prop()
+  value: string;
+
+  @Prop()
+  selected: boolean = false;
+
+  @Watch('selected')
+  handleSelectedChange(newValue: boolean) {
+    this.internals.ariaSelected = newValue.toString();
+    this.root.setAttribute('aria-selected', newValue.toString());
+  }
+
+  componentWillLoad() {
+    this.internals.role = 'treeitem';
+    this.root.setAttribute('role', 'treeitem');
+    this.root.setAttribute('tabIndex', '0');
+  }
+
+  render(): JSX.Element {
+    return (
+      <div
+        class={{
+          'gux-target': true,
+          'gux-selected': this.selected
+        }}
+      >
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <div class="gux-label">
+          <slot name="label"></slot>
+        </div>
+      </div>
+    ) as JSX.Element;
+  }
+}
