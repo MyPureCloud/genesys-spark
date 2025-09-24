@@ -2,27 +2,27 @@
 
 <div class="container">
   <gux-card accent="bordered">
-    <h2>Bordered</h2>
-    <p>
+    <div role="heading" aria-level="2" class="heading">Bordered</div>
+    <div class="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis
       erat fringilla tristique condimentums.
-    </p>
+    </div>
   </gux-card>
 
   <gux-card accent="raised">
-    <h2>Raised</h2>
-    <p>
+    <div role="heading" aria-level="2" class="heading">Raised</div>
+    <div class="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis
       erat fringilla tristique condimentums.
-    </p>
+    </div>
   </gux-card>
 
   <gux-card accent="borderless">
-    <h2>Borderless</h2>
-    <p>
+    <div role="heading" aria-level="2" class="heading">Borderless</div>
+    <div class="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis
       erat fringilla tristique condimentums.
-    </p>
+    </div>
   </gux-card>
 </div>
 
@@ -37,16 +37,14 @@
     inline-size: 200px;
   }
 
-  h2 {
-    margin: 0;
+  .heading {
     font-family: var(--gse-semantic-heading-xl-semiBold-fontFamily);
     font-size: var(--gse-semantic-heading-xl-semiBold-fontSize);
     font-weight: var(--gse-semantic-heading-xl-semiBold-fontWeight);
     line-height: var(--gse-semantic-heading-xl-semiBold-lineHeight);
   }
 
-  p {
-    margin: 0;
+  .content {
     font-family: var(--gse-semantic-body-md-regular-fontFamily);
     font-size: var(--gse-semantic-body-md-regular-fontSize);
     font-weight: var(--gse-semantic-body-md-regular-fontWeight);
