@@ -71,7 +71,7 @@ export class GuxRichTextEditor {
 
   // This event is emited when a file has been removed.
   @Event({ composed: true })
-  guxFileRemoved: EventEmitter<{ file: File; index: number }>;
+  guxFileRemoved: EventEmitter<{ file: File }>;
 
   @OnResize()
   checkResponsiveLayout(): void {
@@ -351,7 +351,7 @@ export class GuxRichTextEditor {
   private removeFile(index: number): void {
     const removedFile = this.droppedFiles[index];
     this.droppedFiles = this.droppedFiles.filter((_, i) => i !== index);
-    this.guxFileRemoved.emit({ file: removedFile, index });
+    this.guxFileRemoved.emit({ file: removedFile });
   }
 
   render(): JSX.Element {
