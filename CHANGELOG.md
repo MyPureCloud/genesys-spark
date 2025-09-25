@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.175.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.175.0...v4.175.1) (2025-09-25)
+
+
+### Bug Fixes
+
+* **card:** fix stylings of slotted elements on example page ([b275485](https://github.com/MyPureCloud/genesys-spark/commit/b2754853c225aed2064b30db7e7220d2bce42133))
+
 ## [4.175.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.174.0...v4.175.0) (2025-09-24)
 
 
