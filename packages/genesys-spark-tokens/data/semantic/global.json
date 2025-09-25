@@ -1453,7 +1453,7 @@
           },
           {
             "x": "-1px",
-            "y": "3px",
+            "y": "1px",
             "blur": "6px",
             "spread": "0",
             "color": "{effects.ai_glow.yellow.30}",
@@ -1461,14 +1461,14 @@
           },
           {
             "x": "0",
-            "y": "-3px",
+            "y": "1px",
             "blur": "6px",
             "spread": "0",
             "color": "{effects.ai_glow.orange.40}",
             "type": "dropShadow"
           },
           {
-            "x": "-3px",
+            "x": "-1px",
             "y": "0",
             "blur": "6px",
             "spread": "0",
@@ -1476,7 +1476,7 @@
             "type": "dropShadow"
           },
           {
-            "x": "3px",
+            "x": "1px",
             "y": "0",
             "blur": "6px",
             "spread": "0",
