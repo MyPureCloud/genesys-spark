@@ -170,11 +170,10 @@
 }
 
 :host([accent='inline']) {
-  min-inline-size: initial;
-
   ::slotted(input[type='button']),
   ::slotted(input[type='submit']),
   ::slotted(button) {
+    min-inline-size: initial;
     block-size: initial;
     padding: 0;
     color: ui.$gse-ui-links-default-foregroundColor;

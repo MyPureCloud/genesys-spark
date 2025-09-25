@@ -28,6 +28,10 @@ export const renderConfigs = [
     html: '<gux-button-slot accent="inline"><button type="button"accent="primary">Button</button></gux-button-slot>'
   },
   {
+    description: 'should render inline button without width constraint',
+    html: '<gux-button-slot accent="inline"><button type="button"accent="primary">S</button></gux-button-slot>'
+  },
+  {
     description: 'should render invalid button',
     html: '<gux-button-slot accent="invalid"><button type="button"accent="primary">Button</button></gux-button-slot>'
   },
