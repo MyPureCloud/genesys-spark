@@ -1,0 +1,27 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
+:host {
+  display: block;
+}
+
+.gux-side-panel-header-mini {
+  display: flex;
+  gap: var(--gse-ui-sidePanel-header-navBased-gap);
+  align-items: center;
+  padding: var(--gse-ui-sidePanel-header-navBased-padding);
+  font-family: var(--gse-ui-sidePanel-heading-navBased-fontFamily);
+  font-size: var(--gse-ui-sidePanel-heading-navBased-fontSize);
+  font-weight: var(--gse-ui-sidePanel-heading-navBased-fontWeight);
+  line-height: var(--gse-ui-sidePanel-heading-navBased-lineHeight);
+}
+
+.gux-side-panel-header-mini-title {
+  flex: 1 1 auto;
+}
+
+.gux-side-panel-header-mini-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: var(--gse-ui-sidePanel-header-navBased-gap);
+  align-items: center;
+}
