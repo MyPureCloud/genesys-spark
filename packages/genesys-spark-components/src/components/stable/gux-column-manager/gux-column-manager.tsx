@@ -48,6 +48,7 @@ export class GuxColumnManager {
   private searchElement: HTMLInputElement;
   private announceElement: HTMLGuxAnnounceBetaElement;
   private i18n: GetI18nValue;
+  private startMouseClickIndex: number = null;
 
   @Element()
   root: HTMLElement;
@@ -111,6 +112,28 @@ export class GuxColumnManager {
     void this.announceElement.guxAnnounce(
       this.i18n('reorderingModeActive', { columnName })
     );
+  }
+
+  @Listen('internal_mouse_reorder_move')
+  handleInternalMousereordermove(event: CustomEvent): void {
+    event.stopPropagation();
+
+    if (this.startMouseClickIndex) {
+      const startIndex = this.startMouseClickIndex;
+      const newIndex = getIndexInParent(event.target as HTMLElement);
+
+      this.keyboardOrderChange = {
+        oldIndex: startIndex,
+        newIndex
+      };
+
+      this.emitOrderChange(this.keyboardOrderChange);
+
+      this.startMouseClickIndex = null;
+    } else {
+      const newIndex = getIndexInParent(event.target as HTMLElement);
+      this.startMouseClickIndex = newIndex;
+    }
   }
 
   @Listen('internal_keyboard_reorder_move')
