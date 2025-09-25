@@ -1,4 +1,4 @@
-import { Component, h, JSX, Prop } from '@stencil/core';
+import { Component, h, JSX, Prop, Watch } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-toggle-slider.scss',
@@ -22,6 +22,13 @@ export class GuxToggleSlider {
 
   @Prop()
   errorId: string = '';
+
+  @Watch('guxAriaLabel')
+  watchGuxAriaLabel(newValue: string): void {
+    if (newValue) {
+      this.checkboxElement?.setAttribute('aria-label', newValue);
+    }
+  }
 
   componentDidLoad(): void {
     this.checkboxElement?.setAttribute('aria-label', this.guxAriaLabel);
