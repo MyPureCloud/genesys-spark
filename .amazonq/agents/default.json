@@ -1,5 +1,5 @@
 {
-  "name": "amazon_q_default",
+  "name": "q_ide_default",
   "description": "Agent configuration",
   "mcpServers": {
     "Playwright": {
@@ -15,5 +15,5 @@
   "resources": [],
   "prompt": "",
   "toolAliases": {},
-  "useLegacyMcpJson": false
+  "useLegacyMcpJson": true
 }
