@@ -344,6 +344,18 @@ exports[`gux-button-slot #render should render inline button 1`] = `
 </gux-button-slot>
 `;
 
+exports[`gux-button-slot #render should render inline button without width constraint 1`] = `
+<gux-button-slot accent="inline">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <button type="button" accent="primary">
+    S
+  </button>
+</gux-button-slot>
+`;
+
 exports[`gux-button-slot #render should render inline input[type=button] 1`] = `
 <gux-button-slot accent="inline">
   <template shadowrootmode="open">
