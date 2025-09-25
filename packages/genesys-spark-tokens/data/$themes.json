@@ -1804,9 +1804,9 @@
       "subheading.bold": "S:d709afa6d538540c8964f5979dd0fbbdf9915075,",
       "subheading.regular": "S:18f9f2b81b98c8afba64abd3bc5f7a1b68b33fd8,",
       "subheading.semi_bold": "S:9896e3b33eea312d1d1d9ef61df5c2e9c02dcbab,",
-      "glow.ai.default": "S:945f38793b751e9ac5330f5e6ff1dc38bd40e6cb,",
-      "glow.ai.hover": "S:18dba12c9c56ade18a8c4c4ecbf19b0ac2ec99a4,",
-      "glow.ai.active": "S:20605a664beaf1532b1a99fc8f772db23bdd3dc3,"
+      "glow.ai.default": "S:c6f9d64af2c3ad9f8cfd64a1f6ec820f962f40f9,",
+      "glow.ai.hover": "S:833a350ce5016360414340f1536c950bdca5a6b9,",
+      "glow.ai.active": "S:b622268e3fb91cf045834a766b74670d19a563c7,"
     },
     "selectedTokenSets": {
       "semantic/mode/dark": "enabled",
