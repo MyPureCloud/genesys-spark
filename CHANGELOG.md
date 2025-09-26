@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.175.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.175.1...v4.175.2) (2025-09-26)
+
+
+### Bug Fixes
+
+* **button-slot:** set inline-size to initial for inline accent ([7baa385](https://github.com/MyPureCloud/genesys-spark/commit/7baa3855b98a135ac34e4f86d19036ea4fa71cb2))
+* **toggle-slider:** update aria-label when changed dynamically ([1f97a16](https://github.com/MyPureCloud/genesys-spark/commit/1f97a165632a78382220dd51ef3f18854dedc339))
+
 ### [4.175.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.175.0...v4.175.1) (2025-09-25)
 
 
