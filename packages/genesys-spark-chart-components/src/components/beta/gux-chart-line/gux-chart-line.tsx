@@ -38,8 +38,7 @@ export class GuxLineChart {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
     mark: {
       type: 'line',
-      interpolate: 'linear',
-      point: false
+      interpolate: 'linear'
     },
     config: {
       axis: {
@@ -215,7 +214,9 @@ export class GuxLineChart {
     }
 
     if (includeDataPointMarkers) {
-      this.baseChartSpec.mark.point = includeDataPointMarkers;
+      this.baseChartSpec.mark.point = { size: 576 };
+    } else {
+      this.baseChartSpec.mark.point = false;
     }
 
     const spec = Object.assign(this.baseChartSpec, chartData);
