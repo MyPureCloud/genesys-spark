@@ -1,5 +1,5 @@
 <h1>gux-rich-text-editor</h1>
-<gux-rich-text-editor-beta>
+<gux-rich-text-editor-beta drag-and-drop>
   <gux-rich-text-editor-action-group slot="typographical-emphasis">
     <gux-rich-text-editor-action action="bold"></gux-rich-text-editor-action>
     <gux-rich-text-editor-action action="italic"></gux-rich-text-editor-action>
@@ -505,21 +505,62 @@
   // - StarterKit: Provides basic functionality like bold, italic, lists, etc.
   // - Underline: Adds underline support to the editor.
   // - Link : Creates a hyperlink for highlighted text.
+  // - FileHandler - Allows to drag and drop files into the editor.
   const { Editor } = await import('https://cdn.jsdelivr.net/npm/@tiptap/core@2.2.2/+esm');
   const StarterKit = (await import('https://cdn.jsdelivr.net/npm/@tiptap/starter-kit@2.2.2/+esm')).default;
   const Underline = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-underline@2.2.2/+esm')).default;
   const Link = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-link@2.7.4/+esm')).default;
   const Highlight = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-highlight@2.7.4/+esm')).default;
+  const FileHandler = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-file-handler@3.4.4/+esm')).default;
+  const Image = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-image@2.2.2/+esm')).default;
     
 // Initialize the editor
 const editor = new Editor({
   element: document.querySelector('.editorElement'),
-  extensions: [StarterKit, Underline, Highlight.configure({ multicolor: true })
+  extensions: [StarterKit, Underline, Image, Highlight.configure({ multicolor: true })
     ,Link.configure({
       openOnClick: true,      // Automatically opens links when clicked.
       autolink: false,         // Automatically creates links when typing URLs.
       defaultProtocol: 'https', // Default protocol for links if not specified.
-    }),],
+    }),
+    FileHandler.configure({
+        onDrop: (currentEditor, files, pos) => {
+          //Send files to the rich-text-editor component for display.
+          const richTextEditor = document.querySelector('gux-rich-text-editor-beta');
+          if(richTextEditor) {
+            richTextEditor.dispatchEvent(new CustomEvent('filesDropped', {
+              detail: { files : Array.from(files)}
+            }))
+          }
+        },
+        onPaste: (currentEditor, files, htmlContent) => {
+          files.forEach(file => {
+            if (htmlContent) {
+              // if there is htmlContent, stop manual insertion & let other extensions handle insertion via inputRule
+              // you could extract the pasted file from this url string and upload it to a server for example
+              console.log(htmlContent) // eslint-disable-line no-console
+              return false
+            }
+
+            const fileReader = new FileReader()
+
+            fileReader.readAsDataURL(file)
+            fileReader.onload = () => {
+              currentEditor
+                .chain()
+                .insertContentAt(currentEditor.state.selection.anchor, {
+                  type: 'image',
+                  attrs: {
+                    src: fileReader.result,
+                  },
+                })
+                .focus()
+                .run()
+            }
+          })
+        },
+      }),
+  ],
   content: 'Start typing here...',
   injectCSS: false,
   editorProps: {
@@ -751,6 +792,11 @@ richTextEditor.addEventListener('guxToggleAction', (event) => {
   if (actionsMenu[event.detail]) {
     actionsMenu[event.detail]();
   }
+});
+
+//Listen for file removal events
+richTextEditor.addEventListener('guxFileRemoved', (event) => {
+  console.log('File removed:', event.detail.file.name, 'at index:', event.detail.index);
 });
 
 })();
