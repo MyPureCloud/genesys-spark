@@ -118,19 +118,19 @@ export class GuxColumnManager {
   handleInternalMousereordermove(event: CustomEvent): void {
     event.stopPropagation();
 
-    if (this.startMouseClickIndex) {
+    if (typeof this.startMouseClickIndex === 'number') {
+      //2nd mouse click triggered
       const startIndex = this.startMouseClickIndex;
       const newIndex = getIndexInParent(event.target as HTMLElement);
-
       this.keyboardOrderChange = {
         oldIndex: startIndex,
         newIndex
       };
-
       this.emitOrderChange(this.keyboardOrderChange);
-
       this.startMouseClickIndex = null;
+      this.keyboardOrderChange = getEmptyKeyboardOrderChange();
     } else {
+      // First mouse click triggered
       const newIndex = getIndexInParent(event.target as HTMLElement);
       this.startMouseClickIndex = newIndex;
     }

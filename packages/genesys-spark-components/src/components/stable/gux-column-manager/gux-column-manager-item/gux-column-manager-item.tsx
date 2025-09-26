@@ -186,6 +186,7 @@ export class GuxColumnManagerItem {
   }
 
   private onMouseDown(): void {
+    // event.stopPropagation(); // stops the browser from redirecting.
     this.toggleReorderMode();
     this.internal_mouse_reorder_move.emit(this.text);
   }
