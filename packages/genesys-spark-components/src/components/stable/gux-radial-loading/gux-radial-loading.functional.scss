@@ -5,12 +5,15 @@
 $largeSpinnerSize: 48; // Linked to --gse-ui-progressAndLoading-spinner-large
 $largeSpinnerBorder: 4; // Linked to --gse-ui-progressAndLoading-largeBorder
 
+$mediumSpinnerSize: 30; // Linked to --gse-ui-progressAndLoading-spinner-medium
+
 $smallSpinnerSize: 16; // Linked to --gse-ui-progressAndLoading-spinner-small
 $smallSpinnerBorder: 2; // Linked to --gse-ui-progressAndLoading-smallBorder
 
 $thinSpinnerBorder: 2; // Linked to --gse-ui-progressAndLoading-smallBorder
 
 $largeCircumference: (math.$pi * ($largeSpinnerSize - $largeSpinnerBorder));
+$mediumCircumference: (math.$pi * ($mediumSpinnerSize - $smallSpinnerBorder));
 $smallCircumference: (math.$pi * ($smallSpinnerSize - $smallSpinnerBorder));
 $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
 
@@ -73,6 +76,7 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
 }
 
 @include spin('large', $largeCircumference);
+@include spin('medium', $mediumCircumference);
 @include spin('small', $smallCircumference);
 @include spin('largeThin', $largeThinCircumference);
 
@@ -139,6 +143,24 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
         .gux-static-circle {
           stroke: ui.$gse-ui-progressAndLoading-spinner-base;
           stroke-width: $smallSpinnerBorder;
+        }
+      }
+    }
+
+    &.gux-around-icon {
+      .gux-svg-container {
+        inline-size: ui.$gse-ui-progressAndLoading-spinner-medium;
+        block-size: ui.$gse-ui-progressAndLoading-spinner-medium;
+      }
+    }
+
+    &.gux-around-icon-light {
+      .gux-svg-container {
+        inline-size: ui.$gse-ui-progressAndLoading-spinner-medium;
+        block-size: ui.$gse-ui-progressAndLoading-spinner-medium;
+
+        .gux-static-circle {
+          stroke: ui.$gse-ui-progressAndLoading-spinner-baseLight;
         }
       }
     }
