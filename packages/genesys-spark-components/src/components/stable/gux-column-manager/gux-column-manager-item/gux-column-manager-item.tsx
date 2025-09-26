@@ -75,6 +75,9 @@ export class GuxColumnManagerItem {
   @Event()
   private internal_keyboard_reorder_finish: EventEmitter<void>;
 
+  @Event()
+  private internal_mouse_reorder_move: EventEmitter<string>;
+
   @Method('guxSetHighlight')
   // eslint-disable-next-line @typescript-eslint/require-await
   async guxSetHighlight(
@@ -182,6 +185,12 @@ export class GuxColumnManagerItem {
     this.setReorderMode(!this.isReordering, true);
   }
 
+  private onMouseDown(): void {
+    // event.stopPropagation(); // stops the browser from redirecting.
+    this.toggleReorderMode();
+    this.internal_mouse_reorder_move.emit(this.text);
+  }
+
   private keyboardReorder(event: KeyboardEvent): void {
     if (this.isReordering) {
       switch (event.key) {
@@ -246,6 +255,7 @@ export class GuxColumnManagerItem {
             }}
             type="button"
             onClick={() => this.toggleReorderMode()}
+            onMouseDown={() => this.onMouseDown()}
             onKeyDown={event => this.keyboardReorder(event)}
             ref={el => (this.reorderButtonElement = el)}
           >
