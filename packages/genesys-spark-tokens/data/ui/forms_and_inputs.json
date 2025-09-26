@@ -182,6 +182,10 @@
       "gap": {
         "value": "{spacing.3xs}",
         "type": "spacing"
+      },
+      "padding_left": {
+        "value": "{spacing.md}",
+        "type": "spacing"
       }
     }
   },
