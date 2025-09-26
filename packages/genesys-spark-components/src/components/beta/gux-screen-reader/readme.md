@@ -23,6 +23,7 @@
  - [gux-label-info-beta](../gux-label-info)
  - [gux-month-calendar](../gux-month-picker/gux-month-calendar)
  - [gux-month-picker-beta](../gux-month-picker)
+ - [gux-notification-badge](../gux-notification-badge)
  - [gux-pagination-cursor](../../stable/gux-pagination-cursor)
  - [gux-rich-text-editor-action](../gux-rich-text-editor/gux-rich-text-editor-action)
  - [gux-rich-text-editor-action-text-highlight](../gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-text-highlight)
@@ -42,6 +43,7 @@ graph TD;
   gux-label-info-beta --> gux-screen-reader-beta
   gux-month-calendar --> gux-screen-reader-beta
   gux-month-picker-beta --> gux-screen-reader-beta
+  gux-notification-badge --> gux-screen-reader-beta
   gux-pagination-cursor --> gux-screen-reader-beta
   gux-rich-text-editor-action --> gux-screen-reader-beta
   gux-rich-text-editor-action-text-highlight --> gux-screen-reader-beta
