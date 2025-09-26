@@ -1,4 +1,5 @@
 import { Temporal } from '@js-temporal/polyfill';
+import { fullLocaleString } from 'genesys-spark-utils/intl';
 
 /**
  * Given a date, return the first day of the month that date is in.
@@ -36,7 +37,10 @@ export function localizedYearMonth(
   date: Temporal.PlainDate,
   locale: string
 ): string {
-  return date.toLocaleString(locale, { year: 'numeric', month: 'long' });
+  return date.toLocaleString(fullLocaleString(locale), {
+    year: 'numeric',
+    month: 'long'
+  });
 }
 
 /**

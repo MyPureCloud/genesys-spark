@@ -1,5 +1,15 @@
 import { getClosestElement } from './get-closest-element';
 
+export function fullLocale(localeBaseName: string): Intl.Locale {
+  return new Intl.Locale(localeBaseName, {
+    calendar: 'gregory'
+  });
+}
+
+export function fullLocaleString(localeBaseName: string): string {
+  return fullLocale(localeBaseName).toString();
+}
+
 /**
  * Provides an [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
  * object for formatting dates and times. Unlike the native version, `locale` is
@@ -13,19 +23,16 @@ export function dateTimeFormat(
   localeOrOptions: string | Intl.DateTimeFormatOptions,
   options?: Intl.DateTimeFormatOptions
 ): Intl.DateTimeFormat {
-  let locale = undefined;
+  let locale: string | undefined = undefined;
+
   if (typeof localeOrOptions === 'string') {
     locale = localeOrOptions;
   } else {
+    locale = determineDisplayLocale();
     options = localeOrOptions;
   }
 
-  if (locale != undefined) {
-    return new Intl.DateTimeFormat(locale as string, options);
-  } else {
-    const userLocale = determineDisplayLocale();
-    return new Intl.DateTimeFormat(userLocale, options);
-  }
+  return new Intl.DateTimeFormat(fullLocaleString(locale), options);
 }
 /**
  * Provides an [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
@@ -42,17 +49,13 @@ export function relativeTimeFormat(
 ): Intl.RelativeTimeFormat {
   let locale = undefined;
   if (typeof localeOrOptions === 'string') {
-    locale = localeOrOptions;
+    locale = fullLocaleString(localeOrOptions);
   } else {
+    locale = determineDisplayLocale();
     options = localeOrOptions;
   }
 
-  if (locale != undefined) {
-    return new Intl.RelativeTimeFormat(locale as string, options);
-  } else {
-    const userLocale = determineDisplayLocale();
-    return new Intl.RelativeTimeFormat(userLocale, options);
-  }
+  return new Intl.RelativeTimeFormat(fullLocaleString(locale), options);
 }
 
 /**

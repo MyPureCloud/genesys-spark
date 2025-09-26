@@ -20,16 +20,13 @@
   <gux-modal id="example1" size="small">
     <div slot="title">Modal Title</div>
     <div slot="content">This contains the modal content.</div>
-    <gux-cta-group slot="footer" align="end">
-      <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
-      <gux-button slot="secondary" onclick="notify(event)"
-        >Secondary</gux-button
-      >
-      <gux-button
-        slot="dismiss"
-        onclick="document.getElementById('example1').close()"
-        >Cancel</gux-button
-      >
+    <gux-cta-group slot="footer" align="start">
+      <gux-button-slot slot="primary">
+        <button type="button" onclick="notify(event)">Primary</button>
+      </gux-button-slot>
+      <gux-button-slot slot="dismiss">
+        <button type="button" onclick="notify(event)">Cancel</button>
+      </gux-button-slot>
     </gux-cta-group>
   </gux-modal>
 </div>
@@ -41,16 +38,16 @@
   >
   <gux-modal id="example2" size="small">
     <div slot="content">This contains the modal content.</div>
-    <gux-cta-group slot="footer" align="end">
-      <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
-      <gux-button slot="secondary" onclick="notify(event)"
-        >Secondary</gux-button
-      >
-      <gux-button
-        slot="dismiss"
-        onclick="document.getElementById('example2').close()"
-        >Cancel</gux-button
-      >
+    <gux-cta-group slot="footer" align="start">
+      <gux-button-slot slot="primary">
+        <button type="button" onclick="notify(event)">Primary</button>
+      </gux-button-slot>
+      <gux-button-slot slot="secondary">
+        <input type="button" onclick="notify(event)" value="Secondary" />
+      </gux-button-slot>
+      <gux-button-slot slot="dismiss">
+        <button type="button" onclick="notify(event)">Dismiss</button>
+      </gux-button-slot>
     </gux-cta-group>
   </gux-modal>
 </div>
@@ -117,16 +114,16 @@
       ornare massa, non blandit est. Vestibulum semper sem at mauris iaculis
       pulvinar.
     </div>
-    <gux-cta-group slot="footer" align="end">
-      <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
-      <gux-button slot="secondary" onclick="notify(event)"
-        >Secondary</gux-button
-      >
-      <gux-button
-        slot="dismiss"
-        onclick="document.getElementById('example3').close()"
-        >Cancel</gux-button
-      >
+    <gux-cta-group slot="footer" align="start">
+      <gux-button-slot slot="primary">
+        <button type="button" onclick="notify(event)">Primary</button>
+      </gux-button-slot>
+      <gux-button-slot slot="secondary">
+        <input type="button" onclick="notify(event)" value="Secondary" />
+      </gux-button-slot>
+      <gux-button-slot slot="dismiss">
+        <button type="button" onclick="notify(event)">Dismiss</button>
+      </gux-button-slot>
     </gux-cta-group>
   </gux-modal>
 
@@ -189,16 +186,16 @@
       ornare massa, non blandit est. Vestibulum semper sem at mauris iaculis
       pulvinar.
     </div>
-    <gux-cta-group slot="footer" align="end">
-      <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
-      <gux-button slot="secondary" onclick="notify(event)"
-        >Secondary</gux-button
-      >
-      <gux-button
-        slot="dismiss"
-        onclick="document.getElementById('example4').close()"
-        >Cancel</gux-button
-      >
+    <gux-cta-group slot="footer" align="start">
+      <gux-button-slot slot="primary">
+        <button type="button" onclick="notify(event)">Primary</button>
+      </gux-button-slot>
+      <gux-button-slot slot="secondary">
+        <input type="button" onclick="notify(event)" value="Secondary" />
+      </gux-button-slot>
+      <gux-button-slot slot="dismiss">
+        <button type="button" onclick="notify(event)">Dismiss</button>
+      </gux-button-slot>
     </gux-cta-group>
   </gux-modal>
 
@@ -261,16 +258,16 @@
       ornare massa, non blandit est. Vestibulum semper sem at mauris iaculis
       pulvinar.
     </div>
-    <gux-cta-group slot="footer" align="end">
-      <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
-      <gux-button slot="secondary" onclick="notify(event)"
-        >Secondary</gux-button
-      >
-      <gux-button
-        slot="dismiss"
-        onclick="document.getElementById('example5').close()"
-        >Cancel</gux-button
-      >
+    <gux-cta-group slot="footer" align="start">
+      <gux-button-slot slot="primary">
+        <button type="button" onclick="notify(event)">Primary</button>
+      </gux-button-slot>
+      <gux-button-slot slot="secondary">
+        <input type="button" onclick="notify(event)" value="Secondary" />
+      </gux-button-slot>
+      <gux-button-slot slot="dismiss">
+        <button type="button" onclick="notify(event)">Dismiss</button>
+      </gux-button-slot>
     </gux-cta-group>
   </gux-modal>
 
@@ -333,7 +330,7 @@
       ornare massa, non blandit est. Vestibulum semper sem at mauris iaculis
       pulvinar.
     </div>
-    <gux-cta-group slot="footer" align="end">
+    <gux-cta-group slot="footer" align="start">
       <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
       <gux-button slot="secondary" onclick="notify(event)"
         >Secondary</gux-button
@@ -400,16 +397,16 @@
         keyboard to navigate.
       </p>
     </div>
-    <gux-cta-group slot="footer" align="end">
-      <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
-      <gux-button slot="secondary" onclick="notify(event)"
-        >Secondary</gux-button
-      >
-      <gux-button
-        slot="dismiss"
-        onclick="document.getElementById('example8').close()"
-        >Cancel</gux-button
-      >
+    <gux-cta-group slot="footer" align="start">
+      <gux-button-slot slot="primary">
+        <button type="button" onclick="notify(event)">Primary</button>
+      </gux-button-slot>
+      <gux-button-slot slot="secondary">
+        <input type="button" onclick="notify(event)" value="Secondary" />
+      </gux-button-slot>
+      <gux-button-slot slot="dismiss">
+        <button type="button" onclick="notify(event)">Dismiss</button>
+      </gux-button-slot>
     </gux-cta-group>
   </gux-modal>
 
@@ -430,18 +427,16 @@
         keyboard to navigate.
       </p>
     </div>
-    <gux-cta-group slot="footer" align="end">
-      <gux-button slot="primary" onclick="notify(event)" autofocus
-        >Primary</gux-button
-      >
-      <gux-button slot="secondary" onclick="notify(event)"
-        >Secondary</gux-button
-      >
-      <gux-button
-        slot="dismiss"
-        onclick="document.getElementById('example9').close()"
-        >Cancel</gux-button
-      >
+    <gux-cta-group slot="footer" align="start">
+      <gux-button-slot slot="primary">
+        <button type="button" onclick="notify(event)">Primary</button>
+      </gux-button-slot>
+      <gux-button-slot slot="secondary">
+        <input type="button" onclick="notify(event)" value="Secondary" />
+      </gux-button-slot>
+      <gux-button-slot slot="dismiss">
+        <button type="button" onclick="notify(event)">Dismiss</button>
+      </gux-button-slot>
     </gux-cta-group>
   </gux-modal>
 </div>

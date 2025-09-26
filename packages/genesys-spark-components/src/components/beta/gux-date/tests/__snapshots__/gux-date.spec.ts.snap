@@ -707,7 +707,7 @@ exports[`gux-date #render regional dates #render different languages #sv should 
 exports[`gux-date #render regional dates #render different languages #th should render as expected for "full" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
-    วันพฤหัสบดีที่ 7 กรกฎาคม พ.ศ. 2565
+    วันพฤหัสบดีที่ 7 กรกฎาคม ค.ศ. 2022
   </template>
 </gux-date-beta>
 `;
@@ -715,7 +715,7 @@ exports[`gux-date #render regional dates #render different languages #th should 
 exports[`gux-date #render regional dates #render different languages #th should render as expected for "long" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="long">
   <template shadowrootmode="open">
-    7 กรกฎาคม 2565
+    7 กรกฎาคม ค.ศ. 2022
   </template>
 </gux-date-beta>
 `;
@@ -723,7 +723,7 @@ exports[`gux-date #render regional dates #render different languages #th should 
 exports[`gux-date #render regional dates #render different languages #th should render as expected for "medium" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="medium">
   <template shadowrootmode="open">
-    7 ก.ค. 2565
+    7 ก.ค. 2022
   </template>
 </gux-date-beta>
 `;
@@ -731,7 +731,7 @@ exports[`gux-date #render regional dates #render different languages #th should 
 exports[`gux-date #render regional dates #render different languages #th should render as expected for "short" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="short">
   <template shadowrootmode="open">
-    7/7/65
+    7/7/22
   </template>
 </gux-date-beta>
 `;
@@ -5259,7 +5259,7 @@ exports[`gux-date #render using non regional dates #render different languages #
 exports[`gux-date #render using non regional dates #render different languages #th should render as expected for "full" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
-    วันพฤหัสบดีที่ 7 กรกฎาคม พ.ศ. 2565
+    วันพฤหัสบดีที่ 7 กรกฎาคม ค.ศ. 2022
   </template>
 </gux-date-beta>
 `;
@@ -5267,7 +5267,7 @@ exports[`gux-date #render using non regional dates #render different languages #
 exports[`gux-date #render using non regional dates #render different languages #th should render as expected for "long" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="long">
   <template shadowrootmode="open">
-    7 กรกฎาคม 2565
+    7 กรกฎาคม ค.ศ. 2022
   </template>
 </gux-date-beta>
 `;
@@ -5275,7 +5275,7 @@ exports[`gux-date #render using non regional dates #render different languages #
 exports[`gux-date #render using non regional dates #render different languages #th should render as expected for "medium" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="medium">
   <template shadowrootmode="open">
-    7 ก.ค. 2565
+    7 ก.ค. 2022
   </template>
 </gux-date-beta>
 `;
@@ -5283,7 +5283,7 @@ exports[`gux-date #render using non regional dates #render different languages #
 exports[`gux-date #render using non regional dates #render different languages #th should render as expected for "short" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="short">
   <template shadowrootmode="open">
-    7/7/65
+    7/7/22
   </template>
 </gux-date-beta>
 `;
