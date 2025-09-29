@@ -7,11 +7,6 @@ exports[`gux-dropdown #render should render as expected 1`] = `
       <gux-popup>
         <div class="gux-target-container gux-target-container-not-filterable" slot="target">
           <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
-            <span class="gux-field-content">
-              <span class="gux-placeholder">
-                Select...
-              </span>
-            </span>
             <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
             </gux-icon>
           </button>

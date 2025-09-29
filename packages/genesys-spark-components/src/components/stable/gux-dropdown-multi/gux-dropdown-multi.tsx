@@ -586,7 +586,6 @@ export class GuxDropdownMulti {
                   onFocus={() => (this.expanded = true)}
                   disabled={this.disabled}
                 ></input>
-                {this.renderTargetContent()}
               </div>
             </div>
           </div>
