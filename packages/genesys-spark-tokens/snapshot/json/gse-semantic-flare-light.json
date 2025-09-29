@@ -467,13 +467,6 @@
         "hover": "#102251",
         "active": "#19327a"
       },
-      "special_accents": {
-        "ai": {
-          "top_left": "#ffc650",
-          "middle": "#ff451a",
-          "bottom_right": "#53bee5"
-        }
-      },
       "global_nav": {
         "tree_view": {
           "bar": "#3d538f"
@@ -522,6 +515,38 @@
       }
     }
   },
+  "effects": {
+    "ai_glow": {
+      "yellow": {
+        "30": "#ffc6504d",
+        "40": "#ffc65066",
+        "100": "#ffc650"
+      },
+      "gold": {
+        "40": "#ff9f4066",
+        "60": "#ff9f4099",
+        "100": "#ff9f40"
+      },
+      "orange": {
+        "40": "#ff451a66",
+        "60": "#ff451a99",
+        "100": "#ff451a"
+      },
+      "teal": {
+        "50": "#53bee580",
+        "70": "#53bee5b3",
+        "100": "#53bee5"
+      }
+    },
+    "box_shadow": "#2a2a2e26",
+    "shadows": {
+      "10": "#3d538f1a",
+      "20": "#3d538f26",
+      "30": "#3d538f33",
+      "40": "#3d538f40",
+      "50": "#3d538f4d"
+    }
+  },
   "container": {
     "lg": {
       "box_shadow": {
@@ -552,16 +577,6 @@
         "offsetX": "0",
         "offsetY": "0"
       }
-    }
-  },
-  "effects": {
-    "box_shadow": "#2a2a2e26",
-    "shadows": {
-      "10": "#3d538f1a",
-      "20": "#3d538f26",
-      "30": "#3d538f33",
-      "40": "#3d538f40",
-      "50": "#3d538f4d"
     }
   },
   "charts": {

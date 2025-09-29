@@ -596,14 +596,28 @@
   --gse-semantic-theme-border-edges-globalNav-30: rgba(0, 0, 0, 0);
   --gse-semantic-theme-border-customAccents-ai-10: #53bee5;
   --gse-semantic-theme-border-customAccents-ai-20: #8b7de2;
-  --gse-semantic-theme-border-customAccents-ai-30: #ffc650;
-  --gse-semantic-theme-border-customAccents-ai-40: #ff451a;
   --gse-semantic-theme-border-customAccents-ai-50: #5476d5;
   --gse-semantic-theme-border-customAccents-ai-10d: #056385;
   --gse-semantic-theme-border-customAccents-ai-20d: #6e5ddb;
-  --gse-semantic-theme-border-customAccents-ai-30d: #cc9e40;
-  --gse-semantic-theme-border-customAccents-ai-40d: #cc3715;
   --gse-semantic-theme-border-customAccents-ai-50d: #2954cb;
+  --gse-semantic-theme-effects-aiGlow-10: #53bee5;
+  --gse-semantic-theme-effects-aiGlow-30: #ffc650;
+  --gse-semantic-theme-effects-aiGlow-35: #ff9f40;
+  --gse-semantic-theme-effects-aiGlow-40: #ff451a;
+  --gse-semantic-theme-effects-aiGlow-35d: #cc7f33;
+  --gse-semantic-theme-effects-aiGlow-30d: #cc9e40;
+  --gse-semantic-theme-effects-aiGlow-40d: #cc3715;
+  --gse-semantic-theme-effects-aiGlow-10d: #056385;
+  --gse-semantic-theme-effects-boxShadow-10: #3d538f26;
+  --gse-semantic-theme-effects-boxShadow-20: #3d538f33;
+  --gse-semantic-theme-effects-boxShadow-30: #3d538f40;
+  --gse-semantic-theme-effects-boxShadow-40: #3d538f4d;
+  --gse-semantic-theme-effects-boxShadow-50: #3d538f66;
+  --gse-semantic-theme-effects-boxShadow-10d: #0000005c;
+  --gse-semantic-theme-effects-boxShadow-20d: #0006;
+  --gse-semantic-theme-effects-boxShadow-30d: #00000080;
+  --gse-semantic-theme-effects-boxShadow-40d: #0009;
+  --gse-semantic-theme-effects-boxShadow-50d: #000000b3;
   --gse-semantic-theme-borderRadius-interactive-xlarge: 100%;
   --gse-semantic-theme-borderRadius-interactive-large: 4px;
   --gse-semantic-theme-borderRadius-interactive-small: 4px;
@@ -660,16 +674,6 @@
   --gse-semantic-theme-charts-sparkline-positive: #95c189;
   --gse-semantic-theme-charts-sparkline-neutral: #75a8ff;
   --gse-semantic-theme-charts-sparkline-trendline: #deeaff;
-  --gse-semantic-theme-effects-boxShadow-10: #3d538f26;
-  --gse-semantic-theme-effects-boxShadow-20: #3d538f33;
-  --gse-semantic-theme-effects-boxShadow-30: #3d538f40;
-  --gse-semantic-theme-effects-boxShadow-40: #3d538f4d;
-  --gse-semantic-theme-effects-boxShadow-50: #3d538f66;
-  --gse-semantic-theme-effects-boxShadow-10d: #0000005c;
-  --gse-semantic-theme-effects-boxShadow-20d: #0006;
-  --gse-semantic-theme-effects-boxShadow-30d: #00000080;
-  --gse-semantic-theme-effects-boxShadow-40d: #0009;
-  --gse-semantic-theme-effects-boxShadow-50d: #000000b3;
   --gse-semantic-zIndex-base: 0;
   --gse-semantic-zIndex-showFocus: 1;
   --gse-semantic-zIndex-sticky: 1;
@@ -812,6 +816,18 @@
   --gse-semantic-shadow-10Tooltip:
     0 6px 10px 4px #3d538f4d, 0 0 2px 0 #3d538f4d;
   --gse-semantic-shadow-scrollIndicator: 0 -4px 14px 4px #3d538f33;
+  --gse-semantic-glow-ai-default:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 1px 4px 0 #ffc6504d, 0 1px 4px 0 #ff451a66,
+    -1px 0 4px 0 #ff9f4066, 1px 0 4px 0 #53bee580;
+  --gse-semantic-glow-ai-hover:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 3px 6px 0 #ffc65066, 0 -3px 6px 0 #ff451a99,
+    -3px 0 6px 0 #ff9f4099, 3px 0 6px 0 #53bee5b3;
+  --gse-semantic-glow-ai-active:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 4px 6px 0 #ffc65066, 0 -4px 6px 0 #ff451a99,
+    -4px 0 6px 0 #ff9f4099, 4px 0 6px 0 #53bee5b3;
   --gse-semantic-body-sm-regular-fontFamily: Roboto;
   --gse-semantic-body-sm-regular-fontWeight: 400;
   --gse-semantic-body-sm-regular-fontSize: 12px;
@@ -1258,9 +1274,6 @@
   --gse-semantic-border-container-highConstrast-enabled: #2a60c8;
   --gse-semantic-border-container-highConstrast-hover: #23478f;
   --gse-semantic-border-container-highConstrast-active: #2a60c8;
-  --gse-semantic-border-container-specialAccents-ai-topLeft: #ffc650;
-  --gse-semantic-border-container-specialAccents-ai-middle: #ff451a;
-  --gse-semantic-border-container-specialAccents-ai-bottomRight: #53bee5;
   --gse-semantic-border-container-globalNav-treeView-bar: #3d538f;
   --gse-semantic-border-container-globalNav-topCommandBar-divider: #cad1e1;
   --gse-semantic-border-container-globalNav-panel-divider: #cad1e100;
@@ -1279,15 +1292,27 @@
   --gse-semantic-border-formControl-textInput-hover: #2754ac;
   --gse-semantic-border-formControl-textInput-active: #2a60c8;
   --gse-semantic-border-formControl-textInput-error: #cc0a0a;
-  --gse-semantic-container-lg-boxShadow: 0 0 8px 1px #28324326;
-  --gse-semantic-container-md-boxShadow: 0 0 6px 1px #28324326;
-  --gse-semantic-container-sm-boxShadow: 0 0 4px 1px #28324326;
+  --gse-semantic-effects-aiGlow-yellow-30: #ffc6504d;
+  --gse-semantic-effects-aiGlow-yellow-40: #ffc65066;
+  --gse-semantic-effects-aiGlow-yellow-100: #ffc650;
+  --gse-semantic-effects-aiGlow-gold-40: #ff9f4066;
+  --gse-semantic-effects-aiGlow-gold-60: #ff9f4099;
+  --gse-semantic-effects-aiGlow-gold-100: #ff9f40;
+  --gse-semantic-effects-aiGlow-orange-40: #ff451a66;
+  --gse-semantic-effects-aiGlow-orange-60: #ff451a99;
+  --gse-semantic-effects-aiGlow-orange-100: #ff451a;
+  --gse-semantic-effects-aiGlow-teal-50: #53bee580;
+  --gse-semantic-effects-aiGlow-teal-70: #53bee5b3;
+  --gse-semantic-effects-aiGlow-teal-100: #53bee5;
   --gse-semantic-effects-boxShadow: #28324326;
   --gse-semantic-effects-shadows-10: #3d538f26;
   --gse-semantic-effects-shadows-20: #3d538f33;
   --gse-semantic-effects-shadows-30: #3d538f40;
   --gse-semantic-effects-shadows-40: #3d538f4d;
   --gse-semantic-effects-shadows-50: #3d538f66;
+  --gse-semantic-container-lg-boxShadow: 0 0 8px 1px #28324326;
+  --gse-semantic-container-md-boxShadow: 0 0 6px 1px #28324326;
+  --gse-semantic-container-sm-boxShadow: 0 0 4px 1px #28324326;
   --gse-semantic-charts-categoricalData-category1-default: #056385;
   --gse-semantic-charts-categoricalData-category1-shading: #82b1c2;
   --gse-semantic-charts-categoricalData-category2-default: #5798d9;

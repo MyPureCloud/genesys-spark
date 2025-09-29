@@ -753,14 +753,28 @@
   --gse-semantic-theme-border-inputs-active-10d: #adbff0;
   --gse-semantic-theme-border-customAccents-ai-10: #53bee5;
   --gse-semantic-theme-border-customAccents-ai-20: #8b7de2;
-  --gse-semantic-theme-border-customAccents-ai-30: #ffc650;
-  --gse-semantic-theme-border-customAccents-ai-40: #ff451a;
   --gse-semantic-theme-border-customAccents-ai-50: #5476d5;
   --gse-semantic-theme-border-customAccents-ai-10d: #056385;
   --gse-semantic-theme-border-customAccents-ai-20d: #6e5ddb;
-  --gse-semantic-theme-border-customAccents-ai-30d: #cc9e40;
-  --gse-semantic-theme-border-customAccents-ai-40d: #cc3715;
   --gse-semantic-theme-border-customAccents-ai-50d: #2954cb;
+  --gse-semantic-theme-effects-aiGlow-10: #53bee5;
+  --gse-semantic-theme-effects-aiGlow-30: #ffc650;
+  --gse-semantic-theme-effects-aiGlow-35: #ff9f40;
+  --gse-semantic-theme-effects-aiGlow-40: #ff451a;
+  --gse-semantic-theme-effects-aiGlow-10d: #056385;
+  --gse-semantic-theme-effects-aiGlow-30d: #cc9e40;
+  --gse-semantic-theme-effects-aiGlow-40d: #cc3715;
+  --gse-semantic-theme-effects-aiGlow-35d: #cc7f33;
+  --gse-semantic-theme-effects-boxShadow-10: #3d538f1a;
+  --gse-semantic-theme-effects-boxShadow-20: #3d538f26;
+  --gse-semantic-theme-effects-boxShadow-30: #3d538f33;
+  --gse-semantic-theme-effects-boxShadow-40: #3d538f40;
+  --gse-semantic-theme-effects-boxShadow-50: #3d538f4d;
+  --gse-semantic-theme-effects-boxShadow-10d: #0000004d;
+  --gse-semantic-theme-effects-boxShadow-20d: #00000059;
+  --gse-semantic-theme-effects-boxShadow-30d: #00000073;
+  --gse-semantic-theme-effects-boxShadow-40d: #00000080;
+  --gse-semantic-theme-effects-boxShadow-50d: #0009;
   --gse-semantic-theme-borderRadius-interactive-xlarge: 100%;
   --gse-semantic-theme-borderRadius-interactive-large: 16px;
   --gse-semantic-theme-borderRadius-interactive-small: 4px;
@@ -856,16 +870,6 @@
   --gse-semantic-theme-charts-sparkline-neutrald: #808db2;
   --gse-semantic-theme-charts-sparkline-trendline: #cad1e1;
   --gse-semantic-theme-charts-sparkline-trendlined: #6a6d75;
-  --gse-semantic-theme-effects-boxShadow-10: #3d538f1a;
-  --gse-semantic-theme-effects-boxShadow-20: #3d538f26;
-  --gse-semantic-theme-effects-boxShadow-30: #3d538f33;
-  --gse-semantic-theme-effects-boxShadow-40: #3d538f40;
-  --gse-semantic-theme-effects-boxShadow-50: #3d538f4d;
-  --gse-semantic-theme-effects-boxShadow-10d: #0000004d;
-  --gse-semantic-theme-effects-boxShadow-20d: #00000059;
-  --gse-semantic-theme-effects-boxShadow-30d: #00000073;
-  --gse-semantic-theme-effects-boxShadow-40d: #00000080;
-  --gse-semantic-theme-effects-boxShadow-50d: #0009;
   --gse-semantic-zIndex-base: 0;
   --gse-semantic-zIndex-showFocus: 1;
   --gse-semantic-zIndex-sticky: 1;
@@ -1008,6 +1012,18 @@
   --gse-semantic-shadow-10Tooltip:
     0 6px 10px 4px #00000080, 0 0 2px 0 #00000080;
   --gse-semantic-shadow-scrollIndicator: 0 -4px 14px 4px #00000059;
+  --gse-semantic-glow-ai-default:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 1px 4px 0 #cc9e404d, 0 1px 4px 0 #cc371566,
+    -1px 0 4px 0 #cc7f3366, 1px 0 4px 0 #05638580;
+  --gse-semantic-glow-ai-hover:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 3px 6px 0 #cc9e4066, 0 -3px 6px 0 #cc371599,
+    -3px 0 6px 0 #cc7f3399, 3px 0 6px 0 #056385b3;
+  --gse-semantic-glow-ai-active:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 4px 6px 0 #cc9e4066, 0 -4px 6px 0 #cc371599,
+    -4px 0 6px 0 #cc7f3399, 4px 0 6px 0 #056385b3;
   --gse-semantic-body-sm-regular-fontFamily: "Noto Sans";
   --gse-semantic-body-sm-regular-fontWeight: 400;
   --gse-semantic-body-sm-regular-fontSize: 12px;
@@ -1454,9 +1470,6 @@
   --gse-semantic-border-container-highConstrast-enabled: #2143a2;
   --gse-semantic-border-container-highConstrast-hover: #102251;
   --gse-semantic-border-container-highConstrast-active: #19327a;
-  --gse-semantic-border-container-specialAccents-ai-topLeft: #ffc650;
-  --gse-semantic-border-container-specialAccents-ai-middle: #ff451a;
-  --gse-semantic-border-container-specialAccents-ai-bottomRight: #53bee5;
   --gse-semantic-border-container-globalNav-treeView-bar: #3d538f;
   --gse-semantic-border-container-globalNav-topCommandBar-divider: #cad1e1;
   --gse-semantic-border-container-globalNav-panel-divider: #cad1e100;
@@ -1475,15 +1488,27 @@
   --gse-semantic-border-formControl-textInput-hover: #19327a;
   --gse-semantic-border-formControl-textInput-active: #102251;
   --gse-semantic-border-formControl-textInput-error: #e22245;
-  --gse-semantic-container-lg-boxShadow: 0 0 8px 1px #2a2a2e26;
-  --gse-semantic-container-md-boxShadow: 0 0 6px 1px #2a2a2e26;
-  --gse-semantic-container-sm-boxShadow: 0 0 4px 1px #2a2a2e26;
+  --gse-semantic-effects-aiGlow-yellow-30: #ffc6504d;
+  --gse-semantic-effects-aiGlow-yellow-40: #ffc65066;
+  --gse-semantic-effects-aiGlow-yellow-100: #ffc650;
+  --gse-semantic-effects-aiGlow-gold-40: #ff9f4066;
+  --gse-semantic-effects-aiGlow-gold-60: #ff9f4099;
+  --gse-semantic-effects-aiGlow-gold-100: #ff9f40;
+  --gse-semantic-effects-aiGlow-orange-40: #ff451a66;
+  --gse-semantic-effects-aiGlow-orange-60: #ff451a99;
+  --gse-semantic-effects-aiGlow-orange-100: #ff451a;
+  --gse-semantic-effects-aiGlow-teal-50: #53bee580;
+  --gse-semantic-effects-aiGlow-teal-70: #53bee5b3;
+  --gse-semantic-effects-aiGlow-teal-100: #53bee5;
   --gse-semantic-effects-boxShadow: #2a2a2e26;
   --gse-semantic-effects-shadows-10: #3d538f1a;
   --gse-semantic-effects-shadows-20: #3d538f26;
   --gse-semantic-effects-shadows-30: #3d538f33;
   --gse-semantic-effects-shadows-40: #3d538f40;
   --gse-semantic-effects-shadows-50: #3d538f4d;
+  --gse-semantic-container-lg-boxShadow: 0 0 8px 1px #2a2a2e26;
+  --gse-semantic-container-md-boxShadow: 0 0 6px 1px #2a2a2e26;
+  --gse-semantic-container-sm-boxShadow: 0 0 4px 1px #2a2a2e26;
   --gse-semantic-charts-categoricalData-category1-default: #056385;
   --gse-semantic-charts-categoricalData-category1-shading: #82b1c2;
   --gse-semantic-charts-categoricalData-category2-default: #5798d9;
@@ -1808,9 +1833,6 @@
   --gse-semantic-border-container-highConstrast-enabled: #2143a2;
   --gse-semantic-border-container-highConstrast-hover: #19327a;
   --gse-semantic-border-container-highConstrast-active: #5476d5;
-  --gse-semantic-border-container-specialAccents-ai-topLeft: #cc9e40;
-  --gse-semantic-border-container-specialAccents-ai-bottomRight: #056385;
-  --gse-semantic-border-container-specialAccents-ai-middle: #ff451a;
   --gse-semantic-border-container-globalNav-treeView-bar: #263b73;
   --gse-semantic-border-container-globalNav-topCommandBar-divider: #3e4044;
   --gse-semantic-border-container-globalNav-panel-divider: #3e4044;
@@ -1838,6 +1860,18 @@
   --gse-semantic-effects-shadows-30: #00000073;
   --gse-semantic-effects-shadows-40: #00000080;
   --gse-semantic-effects-shadows-50: #0009;
+  --gse-semantic-effects-aiGlow-yellow-30: #cc9e404d;
+  --gse-semantic-effects-aiGlow-yellow-40: #cc9e4066;
+  --gse-semantic-effects-aiGlow-yellow-100: #ffc650;
+  --gse-semantic-effects-aiGlow-gold-40: #cc7f3366;
+  --gse-semantic-effects-aiGlow-gold-60: #cc7f3399;
+  --gse-semantic-effects-aiGlow-gold-100: #ff9f40;
+  --gse-semantic-effects-aiGlow-orange-40: #cc371566;
+  --gse-semantic-effects-aiGlow-orange-60: #cc371599;
+  --gse-semantic-effects-aiGlow-orange-100: #ff451a;
+  --gse-semantic-effects-aiGlow-teal-50: #05638580;
+  --gse-semantic-effects-aiGlow-teal-70: #056385b3;
+  --gse-semantic-effects-aiGlow-teal-100: #53bee5;
   --gse-semantic-charts-categoricalData-category1-default: #53bee5;
   --gse-semantic-charts-categoricalData-category1-shading: #4793b0;
   --gse-semantic-charts-categoricalData-category2-default: #467aae;
