@@ -22,5 +22,15 @@ export const renderConfigs = [
   '<gux-rating value="5" max-value=10 aria-label="Feedback"></gux-rating>',
   '<gux-rating value="10" max-value=10 aria-label="Feedback"></gux-rating>',
   '<gux-rating value="3" disabled aria-label="Feedback"></gux-rating>',
-  '<gux-rating value="3" readonly aria-label="Feedback"></gux-rating>'
+  '<gux-rating value="3" readonly aria-label="Feedback"></gux-rating>',
+  '<gux-rating compact aria-label="Feedback"></gux-rating>',
+  '<gux-rating compact value="0" aria-label="Feedback"></gux-rating>',
+  '<gux-rating compact value="1" aria-label="Feedback"></gux-rating>',
+  '<gux-rating compact value="2" aria-label="Feedback"></gux-rating>',
+  '<gux-rating compact value="3" aria-label="Feedback"></gux-rating>',
+  '<gux-rating compact value="4" aria-label="Feedback"></gux-rating>',
+  '<gux-rating compact value="5" aria-label="Feedback"></gux-rating>',
+  '<gux-rating compact increment="half" value="2.5" aria-label="Feedback"></gux-rating>',
+  '<gux-rating compact value="3" readonly aria-label="Feedback"></gux-rating>',
+  '<gux-rating compact value="3" disabled aria-label="Feedback"></gux-rating>'
 ].map(html => ({ html }));
