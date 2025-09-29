@@ -123,5 +123,30 @@
         }
       }
     }
+  },
+  "segmented_control": {
+    "button": {
+      "start": {
+        "border_radius": {
+          "value": "{theme.border_radius.container.small} 0 0 {theme.border_radius.container.small}",
+          "type": "borderRadius",
+          "description": "Deprecated token since the new segmented control doesn't use different border sizes anymore."
+        }
+      },
+      "selected": {
+        "border_radius": {
+          "value": "{theme.border_radius.container.small}",
+          "type": "borderRadius",
+          "description": "Deprecated token since the new segmented control doesn't use different border sizes anymore."
+        }
+      },
+      "end": {
+        "border_radius": {
+          "value": "0 {theme.border_radius.container.small} {theme.border_radius.container.small} 0",
+          "type": "borderRadius",
+          "description": "Deprecated token since the new segmented control doesn't use different border sizes anymore."
+        }
+      }
+    }
   }
 }

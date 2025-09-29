@@ -46,8 +46,17 @@
             "value": "{color_legacy.blue.100}",
             "type": "color"
           },
+          "55": {
+            "value": "{color.haze.100}",
+            "type": "color",
+            "description": "Legacy background color for segmented control"
+          },
           "60": {
             "value": "{color_legacy.grey.60}",
+            "type": "color"
+          },
+          "65": {
+            "value": "{color.haze.200}",
             "type": "color"
           }
         },
