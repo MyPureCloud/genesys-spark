@@ -22,6 +22,7 @@
  - [gux-advanced-dropdown-legacy](../../legacy/gux-advanced-dropdown-legacy)
  - [gux-avatar-beta](../../beta/gux-avatar)
  - [gux-avatar-change-photo-beta](../../beta/gux-avatar/gux-avatar-change-photo)
+ - [gux-branch](../../beta/gux-tree/gux-branch)
  - [gux-button-multi](../gux-button-multi)
  - [gux-calendar](../gux-calendar)
  - [gux-calendar-beta](../../beta/gux-calendar-beta)
@@ -99,6 +100,7 @@ graph TD;
   gux-advanced-dropdown-legacy --> gux-icon
   gux-avatar-beta --> gux-icon
   gux-avatar-change-photo-beta --> gux-icon
+  gux-branch --> gux-icon
   gux-button-multi --> gux-icon
   gux-calendar --> gux-icon
   gux-calendar-beta --> gux-icon

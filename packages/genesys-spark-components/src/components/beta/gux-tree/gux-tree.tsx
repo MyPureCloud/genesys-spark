@@ -2,15 +2,25 @@ import {
   AttachInternals,
   Component,
   Element,
+  Event,
+  EventEmitter,
   h,
   JSX,
   Prop,
-  Listen
+  Listen,
+  State
 } from '@stencil/core';
+
+import {
+  onClickedNode,
+  convertValueToArray,
+  getTreeNodes
+} from './gux-tree.service';
 
 import { trackComponent } from '@utils/tracking/usage';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
+import { TreeNodeElement } from './tree-node-types';
 
 /**
  * @slot default - gux-tree-view-branch or gux-tree-view-leaf elements
@@ -24,33 +34,44 @@ import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
 })
 export class GuxTreeBeta {
   @Element()
-  root: HTMLElement;
+  root: HTMLGuxTreeBetaElement;
 
   @AttachInternals()
   internals: ElementInternals;
+
+  @State()
+  selectedValues: string[] = [];
+
+  @State()
+  treeNodes: TreeNodeElement[] = [];
+
+  @Event()
+  internaltreenodesupdated: EventEmitter;
 
   @Prop({ mutable: true })
   value: string;
 
   @Listen('click')
   onClick(event: MouseEvent): void {
-    // If it's got a value attribute, that's good enough.
-    whenEventIsFrom('gux-branch', event, (branch: HTMLGuxBranchElement) => {
-      console.info({ branch });
-      branch.expanded = !branch.expanded;
-
-      if (branch.value) {
-        this.updateValue(branch.value);
-      }
-    });
-
+    let eventFromLeaf = false;
     whenEventIsFrom('gux-leaf', event, (leaf: HTMLGuxLeafElement) => {
-      console.info({ leaf });
+      console.info('from leaf', { leaf });
       if (leaf.value) {
         leaf.selected = true;
-        this.updateValue(leaf.value);
+        onClickedNode(leaf, value => this.updateValue(value));
+        eventFromLeaf = true;
       }
     });
+    // If it's got a value attribute, that's good enough.
+    if (!eventFromLeaf) {
+      whenEventIsFrom('gux-branch', event, (branch: HTMLGuxBranchElement) => {
+        console.info('from branch', { branch });
+        branch.selected = true;
+        branch.expanded = !branch.expanded;
+        onClickedNode(branch, value => this.updateValue(value));
+        return;
+      });
+    }
   }
 
   @Listen('keydown')
@@ -94,12 +115,23 @@ export class GuxTreeBeta {
     trackComponent(this.root);
     this.internals.role = 'tree';
     this.root.setAttribute('role', 'tree');
+    this.setTreeNodes();
+  }
+
+  componentWillRender(): void {
+    this.treeNodes.forEach(treeNode => {
+      treeNode.selected = treeNode.value === this.value;
+    });
+  }
+
+  private setTreeNodes(): void {
+    this.selectedValues = convertValueToArray(this.value);
+    this.treeNodes = getTreeNodes(this.root);
+    this.internaltreenodesupdated.emit();
   }
 
   render(): JSX.Element {
-    return (
-      <slot onSlotchange={() => this.setListboxOptions()} />
-    ) as JSX.Element;
+    return (<slot onSlotchange={() => this.setTreeNodes()} />) as JSX.Element;
   }
 
   private updateValue(newValue: string): void {
@@ -110,10 +142,5 @@ export class GuxTreeBeta {
       simulateNativeEvent(this.root, 'input');
       simulateNativeEvent(this.root, 'change');
     }
-  }
-
-  private setListboxOptions(): void {
-    this.listboxOptions = getListOptions(this.root);
-    this.internallistboxoptionsupdated.emit();
   }
 }

@@ -32,6 +32,15 @@ export class GuxLeaf {
   @Prop()
   selected: boolean = false;
 
+  @Prop()
+  disabled: boolean = false;
+
+  @Prop()
+  active: boolean = false;
+
+  @Prop()
+  filtered: boolean = false;
+
   @Watch('selected')
   handleSelectedChange(newValue: boolean) {
     this.internals.ariaSelected = newValue.toString();

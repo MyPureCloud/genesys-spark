@@ -31,6 +31,18 @@ export class GuxBranch {
   @Prop()
   expanded: boolean = false;
 
+  @Prop()
+  disabled: boolean = false;
+
+  @Prop()
+  filtered: boolean = false;
+
+  @Prop()
+  active: boolean = false;
+
+  @Prop()
+  selected: boolean = false;
+
   componentWillLoad() {
     this.internals.role = 'treeitem';
     this.root.setAttribute('role', 'treeitem');
@@ -50,7 +62,12 @@ export class GuxBranch {
           'gux-expanded': this.expanded
         }}
       >
-        <div class="gux-target">
+        <div
+          class={{
+            'gux-target': true,
+            'gux-selected': this.selected
+          }}
+        >
           <div class="gux-branch-indicator">
             <gux-icon
               class="gux-arrow-icon"

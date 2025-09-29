@@ -7,7 +7,11 @@
 
 | Property   | Attribute  | Description | Type      | Default     |
 | ---------- | ---------- | ----------- | --------- | ----------- |
+| `active`   | `active`   |             | `boolean` | `false`     |
+| `disabled` | `disabled` |             | `boolean` | `false`     |
 | `expanded` | `expanded` |             | `boolean` | `false`     |
+| `filtered` | `filtered` |             | `boolean` | `false`     |
+| `selected` | `selected` |             | `boolean` | `false`     |
 | `value`    | `value`    |             | `string`  | `undefined` |
 
 

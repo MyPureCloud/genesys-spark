@@ -9,6 +9,10 @@
     padding: 5px;
     margin: 5px;
     border: 1px solid brown;
+
+    &.gux-selected {
+      background-color: lightgrey;
+    }
   }
 
   .gux-treeitems {
