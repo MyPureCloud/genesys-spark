@@ -87,6 +87,15 @@ test.describe('gux-dropdown', () => {
       visibleItems = await getUnfilteredOptions(page, 'gux-option');
       await expect(visibleItems).toHaveCount(2);
       await expect(visibleItems.first()).toContainText('Bear');
+
+      await filterInput.selectText();
+      await page.keyboard.press('c');
+      await page.waitForChanges();
+
+      // Should find the "Cat" option even though its slotted content starts with whitespace
+      visibleItems = await getUnfilteredOptions(page, 'gux-option');
+      await expect(visibleItems).toHaveCount(1);
+      await expect(visibleItems.first()).toContainText('Cat');
     });
 
     test('does not filter items when filter type is custom', async ({
