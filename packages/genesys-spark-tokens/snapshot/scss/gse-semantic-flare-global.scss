@@ -141,6 +141,18 @@
   --gse-semantic-shadow-10Tooltip:
     0 6px 10px 4px #00000080, 0 0 2px 0 #00000080;
   --gse-semantic-shadow-scrollIndicator: 0 -4px 14px 4px #00000059;
+  --gse-semantic-glow-ai-default:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 1px 4px 0 #cc9e404d, 0 1px 4px 0 #cc371566,
+    -1px 0 4px 0 #cc7f3366, 1px 0 4px 0 #05638580;
+  --gse-semantic-glow-ai-hover:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 3px 6px 0 #cc9e4066, 0 -3px 6px 0 #cc371599,
+    -3px 0 6px 0 #cc7f3399, 3px 0 6px 0 #056385b3;
+  --gse-semantic-glow-ai-active:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 4px 6px 0 #cc9e4066, 0 -4px 6px 0 #cc371599,
+    -4px 0 6px 0 #cc7f3399, 4px 0 6px 0 #056385b3;
   --gse-semantic-body-sm-regular-fontFamily: 'Noto Sans';
   --gse-semantic-body-sm-regular-fontWeight: 400;
   --gse-semantic-body-sm-regular-fontSize: 12px;
