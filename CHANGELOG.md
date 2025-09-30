@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.176.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.175.3...v4.176.0) (2025-09-30)
+
+
+### Features
+
+* **icon:** add comparison icons ([d3ed36e](https://github.com/MyPureCloud/genesys-spark/commit/d3ed36e99be2e0806c8a52fd2b76ebb08c10af24))
+* **rating:** addition of responsive behaviour ([f8f5acd](https://github.com/MyPureCloud/genesys-spark/commit/f8f5acdd8180f83782288542dacf5974cb638c0c))
+* **segmented-control:** Updating redesign for UI component segmented control ([#1292](https://github.com/MyPureCloud/genesys-spark/issues/1292)) ([e927d43](https://github.com/MyPureCloud/genesys-spark/commit/e927d4350b75ea4854e00eb49dc7823618a60a11))
+
 ### [4.175.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.175.2...v4.175.3) (2025-09-27)
 
 ### [4.175.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.175.1...v4.175.2) (2025-09-26)
