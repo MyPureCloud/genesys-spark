@@ -18,6 +18,7 @@ const config: Config = {
   collectCoverage: true,
   coverageDirectory: 'build/test-reports/coverage',
   coverageReporters: ['json', 'lcov', 'clover'],
+  coveragePathIgnorePatterns: ['/tests/'],
   setupFilesAfterEnv: [
     '<rootDir>/src/test/setupTests.ts',
     '<rootDir>/src/test/setupAxeTests.ts'
