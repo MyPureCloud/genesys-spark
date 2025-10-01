@@ -22,6 +22,7 @@
  - [gux-advanced-dropdown-legacy](../../legacy/gux-advanced-dropdown-legacy)
  - [gux-avatar-beta](../../beta/gux-avatar)
  - [gux-avatar-change-photo-beta](../../beta/gux-avatar/gux-avatar-change-photo)
+ - [gux-branch](../../beta/gux-tree/gux-branch)
  - [gux-button-multi](../gux-button-multi)
  - [gux-calendar](../gux-calendar)
  - [gux-calendar-beta](../../beta/gux-calendar-beta)
@@ -89,6 +90,7 @@
  - [gux-toast](../gux-toast)
  - [gux-toggle](../gux-toggle)
  - [gux-toggle-slider](../gux-toggle/gux-toggle-slider)
+ - [gux-tree-view-branch-beta](../../beta/gux-tree-view/gux-tree-view-branch)
 
 ### Graph
 ```mermaid
@@ -98,6 +100,7 @@ graph TD;
   gux-advanced-dropdown-legacy --> gux-icon
   gux-avatar-beta --> gux-icon
   gux-avatar-change-photo-beta --> gux-icon
+  gux-branch --> gux-icon
   gux-button-multi --> gux-icon
   gux-calendar --> gux-icon
   gux-calendar-beta --> gux-icon
@@ -165,6 +168,7 @@ graph TD;
   gux-toast --> gux-icon
   gux-toggle --> gux-icon
   gux-toggle-slider --> gux-icon
+  gux-tree-view-branch-beta --> gux-icon
   style gux-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

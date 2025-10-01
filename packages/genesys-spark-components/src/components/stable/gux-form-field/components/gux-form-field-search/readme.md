@@ -42,6 +42,7 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-advanced-dropdown-legacy](../../../../legacy/gux-advanced-dropdown-legacy)
+ - [gux-tree-view-beta](../../../../beta/gux-tree-view)
 
 ### Depends on
 
@@ -59,6 +60,7 @@ graph TD;
   gux-form-field-input-clear-button --> gux-tooltip-beta
   gux-tooltip-beta --> gux-tooltip-base-beta
   gux-advanced-dropdown-legacy --> gux-form-field-search
+  gux-tree-view-beta --> gux-form-field-search
   style gux-form-field-search fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
