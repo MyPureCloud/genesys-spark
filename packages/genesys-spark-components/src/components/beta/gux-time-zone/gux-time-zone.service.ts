@@ -1,4 +1,3 @@
-import { GuxTimeZoneIdentifier } from '../../../i18n/time-zone/types';
 import { getTimeZoneList, formatOffset } from '../../../utils/date/time-zone';
 import { GuxTimeZoneListing } from '../gux-time-zone-picker/gux-time-zone-picker.types';
 
@@ -9,7 +8,7 @@ export function shortenZone(zone: string): string {
 
 export function getLocalizedOffset(
   localizedUTC: string,
-  timeZoneId: GuxTimeZoneIdentifier
+  timeZoneId: string
 ): string {
   const zoneList: GuxTimeZoneListing[] = getTimeZoneList();
   const timeZone = zoneList.find(zone => zone.name === timeZoneId);

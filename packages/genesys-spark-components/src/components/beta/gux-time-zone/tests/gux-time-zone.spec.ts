@@ -1,8 +1,7 @@
 import { getLocalizedOffset, shortenZone } from '../gux-time-zone.service';
-import { GuxTimeZoneIdentifier } from '../../../../i18n/time-zone/types';
 
 interface ZoneTestCase {
-  timeZoneId: GuxTimeZoneIdentifier;
+  timeZoneId: string;
   expectedOutput: string;
 }
 
@@ -17,7 +16,7 @@ describe('gux-time-zone.service', () => {
         timeZoneId,
         expectedOutput
       }: {
-        timeZoneId: GuxTimeZoneIdentifier;
+        timeZoneId: string;
         expectedOutput: string;
       }) => {
         it(`should work as expected for "${timeZoneId}"`, async () => {
