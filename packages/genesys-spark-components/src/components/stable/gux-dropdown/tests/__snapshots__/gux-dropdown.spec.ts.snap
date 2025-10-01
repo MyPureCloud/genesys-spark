@@ -142,6 +142,78 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
 </gux-dropdown>
 `;
 
+exports[`gux-dropdown #render should render as expected with gux-option whose slotted content includes whitespace 1`] = `
+<gux-dropdown lang="en" value="f">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <gux-popup>
+      <div class="gux-target-container-not-filterable" slot="target">
+        <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+          <div class="gux-field-content">
+            <div class="gux-selected-option">
+              <gux-truncate dir="auto">
+                Frog
+              </gux-truncate>
+            </div>
+          </div>
+          <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+          </gux-icon>
+        </button>
+      </div>
+      <slot slot="popup">
+      </slot>
+    </gux-popup>
+  </template>
+  <gux-listbox aria-label="Animals" role="listbox" tabindex="0">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>
+    <gux-option value="e" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+      <template shadowrootmode="open">
+        <div class="gux-option-wrapper">
+          <gux-truncate tooltip-placement="right">
+            <slot>
+            </slot>
+          </gux-truncate>
+          <slot name="subtext">
+          </slot>
+        </div>
+      </template>Eel
+    </gux-option>
+    <gux-option value="f" id="gux-option-i" role="option" class="gux-selected gux-show-subtext" aria-selected="true" aria-disabled="false">
+      <template shadowrootmode="open">
+        <div class="gux-option-wrapper">
+          <gux-truncate tooltip-placement="right">
+            <slot>
+            </slot>
+          </gux-truncate>
+          <slot name="subtext">
+          </slot>
+        </div>
+      </template>
+      <span>
+        Frog
+      </span>
+      <span slot="subtext">
+        Amphibian
+      </span>
+    </gux-option>
+    <gux-option value="g" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+      <template shadowrootmode="open">
+        <div class="gux-option-wrapper">
+          <gux-truncate tooltip-placement="right">
+            <slot>
+            </slot>
+          </gux-truncate>
+          <slot name="subtext">
+          </slot>
+        </div>
+      </template>Goat
+    </gux-option>
+  </gux-listbox>
+</gux-dropdown>
+`;
+
 exports[`gux-dropdown #render should render as expected with gux-option-group and gux-option 1`] = `
 <gux-dropdown lang="en" value="f">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
