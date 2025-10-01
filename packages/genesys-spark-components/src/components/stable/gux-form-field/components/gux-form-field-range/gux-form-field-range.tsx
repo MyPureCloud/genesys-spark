@@ -282,6 +282,7 @@ export class GuxFormFieldRange {
           'gux-range-input-container': true,
           'gux-disabled': this.disabled
         }}
+        aria-disabled={this.disabled ? 'true' : 'false'}
         ref={el => (this.containerElement = el)}
       >
         <div class="gux-range">

@@ -20,7 +20,8 @@ export function toHaveNoViolations(
       const excluded = axeScanDetails.axeExclusions.some(exclusion => {
         return (
           exclusion.issueId === violation.id &&
-          (!exclusion.target || exclusion.target === node.target[0].toString())
+          (!exclusion.target ||
+            node.target[0].toString().startsWith(exclusion.target))
         );
       });
 

@@ -13,6 +13,15 @@
     ui.$gse-ui-menu-border-color;
   border-radius: ui.$gse-ui-menu-borderRadius;
   box-shadow: ui.$gse-ui-menu-boxShadow;
+
+  ::slotted(gux-select-all) {
+    position: sticky;
+    inset-block-start: 0;
+  }
+}
+
+:host(.has-select-all) {
+  padding: 0;
 }
 
 .gux-message-container {

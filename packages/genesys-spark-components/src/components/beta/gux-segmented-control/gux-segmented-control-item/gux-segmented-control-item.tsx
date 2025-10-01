@@ -3,6 +3,7 @@ import { Component, h, Element, Listen, JSX, Prop } from '@stencil/core';
 import { getClosestElement } from '@utils/dom/get-closest-element';
 import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 import { hasSlot } from '@utils/dom/has-slot';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 
 /**
  * @slot icon - optional slot for an icon
@@ -17,6 +18,8 @@ import { hasSlot } from '@utils/dom/has-slot';
   }
 })
 export class GuxSegmentedControlItem {
+  private id: string = randomHTMLId('gux-segmented-control-item');
+
   @Element()
   root: HTMLGuxSegmentedControlItemElement;
 
@@ -39,30 +42,6 @@ export class GuxSegmentedControlItem {
     }
   }
 
-  private isInStartPosition(): boolean {
-    const parentSegmentControl = getClosestElement(
-      'gux-segmented-control-beta',
-      this.root
-    ) as HTMLGuxSegmentedControlBetaElement;
-
-    const children = Array.from(parentSegmentControl.children);
-    const index = children.findIndex(i => i === this.root);
-
-    return index === 0;
-  }
-
-  private isInEndPosition(): boolean {
-    const parentSegmentControl = getClosestElement(
-      'gux-segmented-control-beta',
-      this.root
-    ) as HTMLGuxSegmentedControlBetaElement;
-
-    const children = Array.from(parentSegmentControl.children);
-    const index = children.findIndex(i => i === this.root);
-
-    return index === children.length - 1;
-  }
-
   private hasDisabledParent(): boolean {
     const parentSegmentControl = getClosestElement(
       'gux-segmented-control-beta',
@@ -75,9 +54,9 @@ export class GuxSegmentedControlItem {
   private renderTooltip(): JSX.Element {
     if (this.iconOnly) {
       return (
-        <gux-tooltip>
+        <gux-tooltip-beta visual-only for={this.id} placement="bottom">
           <div slot="content">{getSlotTextContent(this.root, 'text')}</div>
-        </gux-tooltip>
+        </gux-tooltip-beta>
       ) as JSX.Element;
     }
   }
@@ -98,37 +77,31 @@ export class GuxSegmentedControlItem {
   }
 
   render(): JSX.Element {
-    return (
-      <div
+    return [
+      <button
         class={{
-          'gux-container': true,
-          'gux-parent-disabled': this.hasDisabledParent(),
-          'gux-start': this.isInStartPosition(),
-          'gux-end': this.isInEndPosition()
+          'gux-segmented-control-item': true,
+          'gux-icon-only': this.iconOnly,
+          'gux-selected': this.selected,
+          'gux-parent-disabled': this.hasDisabledParent()
         }}
+        type="button"
+        id={this.id}
+        aria-current={this.selected ? 'true' : 'false'}
+        disabled={this.disabled || this.hasDisabledParent()}
       >
-        <button
+        {this.renderIconSlot()}
+        <span
           class={{
-            'gux-segmented-control-item': true,
-            'gux-icon-only': this.iconOnly,
-            'gux-selected': this.selected
+            'gux-text': true,
+            'gux-icon-only': this.iconOnly
           }}
-          type="button"
-          aria-current={this.selected ? 'true' : 'false'}
-          disabled={this.disabled || this.hasDisabledParent()}
         >
-          {this.renderIconSlot()}
-          <div
-            class={{
-              'gux-text': true,
-              'gux-icon-only': this.iconOnly
-            }}
-          >
-            <slot name="text" />
-          </div>
-        </button>
-        {this.renderTooltip()}
-      </div>
-    ) as JSX.Element;
+          <slot name="text" />
+        </span>
+      </button>,
+      this.renderTooltip(),
+      <gux-segmented-control-divider></gux-segmented-control-divider>
+    ] as JSX.Element;
   }
 }

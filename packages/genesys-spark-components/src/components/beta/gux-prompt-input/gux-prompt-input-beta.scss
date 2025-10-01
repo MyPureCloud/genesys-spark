@@ -1,0 +1,134 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+@use '~genesys-spark/dist/scss/_typography';
+@use '~genesys-spark/dist/scss/focus';
+
+.gux-input-container {
+  display: flex;
+  flex-shrink: 0;
+  gap: ui.$gse-ui-rte-innerContainer-gap;
+  align-items: center;
+  inline-size: 400px; // TODO: COMUI-3928 Get token from UX
+  padding-block: 12px; // TODO: COMUI-3928 Get token from UX
+  padding-inline: 16px; // TODO: COMUI-3928 Get token from UX
+  background: ui.$gse-ui-formControl-input-backgroundColor;
+  border: global.$gse-semantic-container-edges-borderWidth solid
+    global.$gse-semantic-border-container-edges-dataTable-default;
+  border-radius: ui.$gse-ui-rte-container-borderRadius;
+
+  &:focus-within {
+    border: global.$gse-semantic-container-edges-borderWidth solid
+      global.$gse-semantic-foreground-interactive-secondary-active;
+  }
+
+  gux-button-slot {
+    align-self: flex-end;
+  }
+
+  //https://inindca.atlassian.net/browse/COMUI-4148
+  .gux-grow-wrap {
+    display: grid;
+    inline-size: 100%;
+    min-block-size: 0;
+    max-block-size: ui.$gse-ui-promptInput-simple-label-maxHeight;
+    padding: ui.$gse-ui-promptInput-complex-labelContainer-scrollEnabled-padding;
+    overflow: hidden auto;
+
+    &::after {
+      visibility: hidden;
+      grid-area: 1 / 1 / 2 / 2;
+      padding: 0;
+      margin: 0;
+      font-family: global.$gse-semantic-theme-fontFamily-body;
+      font-size: global.$gse-core-fontSize-sm;
+      font-weight: global.$gse-core-fontWeight-regular;
+      line-height: global.$gse-core-lineHeight-sm;
+      color: global.$gse-semantic-foreground-formControl-textInput-placeholder;
+      word-break: normal;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+      content: attr(data-replicated-value) ' ';
+      border: 0;
+    }
+
+    > textarea {
+      grid-area: 1 / 1 / 2 / 2;
+      overflow: hidden;
+      word-break: normal;
+      overflow-wrap: anywhere;
+      resize: none;
+    }
+  }
+
+  .gux-input {
+    inline-size: 100%;
+    font-family: global.$gse-semantic-theme-fontFamily-body;
+    font-size: global.$gse-core-fontSize-sm;
+    font-style: normal;
+    font-weight: global.$gse-core-fontWeight-regular;
+    line-height: global.$gse-core-lineHeight-sm;
+    color: global.$gse-semantic-foreground-formControl-textInput-placeholder;
+    outline: none;
+    border: none;
+  }
+
+  .gux-generate {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    inline-size: ui.$gse-ui-button-iconOnly-width;
+    block-size: ui.$gse-ui-button-default-height;
+    padding-block: 0;
+    padding-inline: ui.$gse-ui-button-default-paddingIconOnly;
+    background: ui.$gse-ui-button-primary-default-backgroundColor;
+    border-radius: ui.$gse-ui-button-borderRadius;
+    opacity: ui.$gse-ui-button-disabled-opacity;
+
+    &-active {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      inline-size: ui.$gse-ui-button-iconOnly-width;
+      block-size: ui.$gse-ui-button-default-height;
+      padding-block: 0;
+      padding-inline: ui.$gse-ui-button-default-paddingIconOnly;
+      background: ui.$gse-ui-button-primary-default-backgroundColor;
+      border-radius: ui.$gse-ui-button-borderRadius;
+    }
+
+    &-cancel {
+      display: flex;
+      gap: ui.$gse-ui-segmentedControl-button-padding; // TODO: COMUI-3928 not sure about this mapping from what's declared in Figma: var(--button-padding_icon_only, 8px);
+      align-items: center;
+      justify-content: center;
+      inline-size: ui.$gse-ui-button-iconOnly-width;
+      block-size: ui.$gse-ui-button-default-height;
+      padding-block: 0;
+      padding-inline: 8px; // TODO: COMUI-3928 Get token from UX
+
+      gux-icon {
+        background: ui.$gse-ui-formControl-input-backgroundColor;
+      }
+    }
+  }
+}
+
+.caution-message {
+  align-items: center;
+  inline-size: 400px; // TODO: COMUI-3928 Get token from UX
+  padding-block: 12px; // TODO: COMUI-3928 Get token from UX
+  padding-inline: 16px; // TODO: COMUI-3928 Get token from UX
+  font-family: global.$gse-semantic-theme-fontFamily-body;
+  font-size: global.$gse-core-fontSize-2xs;
+  font-style: normal;
+  font-weight: global.$gse-core-fontWeight-regular;
+  line-height: global.$gse-core-lineHeight-3xs;
+  color: global.$gse-semantic-foreground-container-midEmphasis;
+  text-decoration-thickness: auto;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-underline-position: from-font;
+  text-underline-offset: auto;
+}

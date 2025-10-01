@@ -226,4 +226,33 @@ describe('gux-toggle', () => {
       });
     });
   });
+
+  describe('testing aria-label functionality', () => {
+    it('should set aria-label on toggle slider when label is provided on gux-toggle', async () => {
+      const html = '<gux-toggle label="Dark Mode"></gux-toggle>';
+      const page = await newSpecPage({ components, html, language });
+      const element = page.root as HTMLGuxToggleElement;
+      const toggleSlider = element.shadowRoot.querySelector(
+        'gux-toggle-slider .gux-toggle-slider'
+      );
+
+      expect(toggleSlider.getAttribute('aria-label')).toBe('Dark Mode');
+    });
+
+    it('should update aria-label when label changes', async () => {
+      const html = '<gux-toggle label="Dark Mode"></gux-toggle>';
+      const page = await newSpecPage({ components, html, language });
+      const element = page.root as HTMLGuxToggleElement;
+      const toggleSlider = element.shadowRoot.querySelector(
+        'gux-toggle-slider .gux-toggle-slider'
+      );
+
+      expect(toggleSlider.getAttribute('aria-label')).toBe('Dark Mode');
+
+      element.label = 'Light Mode';
+      await page.waitForChanges();
+
+      expect(toggleSlider.getAttribute('aria-label')).toBe('Light Mode');
+    });
+  });
 });

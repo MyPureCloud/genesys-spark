@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-badge #render should render component as expected (1) 1`] = `
 <gux-badge>
@@ -6,15 +6,15 @@ exports[`gux-badge #render should render component as expected (1) 1`] = `
     <div class="gux-badge gux-info">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label: , accent: info
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
@@ -24,15 +24,15 @@ exports[`gux-badge #render should render component as expected (2) 1`] = `
     <div class="gux-badge gux-info">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label: , accent: info
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
@@ -42,15 +42,15 @@ exports[`gux-badge #render should render component as expected (3) 1`] = `
     <div class="gux-badge gux-success">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label: , accent: success
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
@@ -60,15 +60,15 @@ exports[`gux-badge #render should render component as expected (4) 1`] = `
     <div class="gux-badge gux-warning">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label: , accent: warning
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
@@ -78,15 +78,15 @@ exports[`gux-badge #render should render component as expected (5) 1`] = `
     <div class="gux-badge gux-error">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label: , accent: error
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
@@ -96,123 +96,123 @@ exports[`gux-badge #render should render component as expected (6) 1`] = `
     <div class="gux-badge gux-inherit">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label:
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (7) 1`] = `
 <gux-badge bold="">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-info">
+    <div class="gux-badge gux-info gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label: , accent: info bold
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (8) 1`] = `
-<gux-badge accent="info" bold="">
+<gux-badge bold="" accent="info">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-info">
+    <div class="gux-badge gux-info gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label: , accent: info bold
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (9) 1`] = `
-<gux-badge accent="success" bold="">
+<gux-badge bold="" accent="success">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-success">
+    <div class="gux-badge gux-success gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label: , accent: success bold
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (10) 1`] = `
-<gux-badge accent="warning" bold="">
+<gux-badge bold="" accent="warning">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-warning">
+    <div class="gux-badge gux-warning gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label: , accent: warning bold
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (11) 1`] = `
-<gux-badge accent="error" bold="">
+<gux-badge bold="" accent="error">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-error">
+    <div class="gux-badge gux-error gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label: , accent: error bold
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (12) 1`] = `
-<gux-badge accent="inherit" bold="">
+<gux-badge bold="" accent="inherit">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-inherit">
+    <div class="gux-badge gux-inherit gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         badge with label: , bold
       </div>
     </div>
-  </template>
-  Badge
+  </template>Badge
 </gux-badge>
 `;
 
@@ -222,7 +222,8 @@ exports[`gux-badge #render should render component as expected (13) 1`] = `
     <div class="gux-badge gux-info">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -230,8 +231,8 @@ exports[`gux-badge #render should render component as expected (13) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;
 
@@ -241,7 +242,8 @@ exports[`gux-badge #render should render component as expected (14) 1`] = `
     <div class="gux-badge gux-info">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -249,8 +251,8 @@ exports[`gux-badge #render should render component as expected (14) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;
 
@@ -260,7 +262,8 @@ exports[`gux-badge #render should render component as expected (15) 1`] = `
     <div class="gux-badge gux-success">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -268,8 +271,8 @@ exports[`gux-badge #render should render component as expected (15) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;
 
@@ -279,7 +282,8 @@ exports[`gux-badge #render should render component as expected (16) 1`] = `
     <div class="gux-badge gux-warning">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -287,8 +291,8 @@ exports[`gux-badge #render should render component as expected (16) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;
 
@@ -298,7 +302,8 @@ exports[`gux-badge #render should render component as expected (17) 1`] = `
     <div class="gux-badge gux-error">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -306,8 +311,8 @@ exports[`gux-badge #render should render component as expected (17) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;
 
@@ -317,7 +322,8 @@ exports[`gux-badge #render should render component as expected (18) 1`] = `
     <div class="gux-badge gux-inherit">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -325,18 +331,19 @@ exports[`gux-badge #render should render component as expected (18) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (19) 1`] = `
 <gux-badge bold="">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-info">
+    <div class="gux-badge gux-info gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -344,18 +351,19 @@ exports[`gux-badge #render should render component as expected (19) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (20) 1`] = `
-<gux-badge accent="info" bold="">
+<gux-badge bold="" accent="info">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-info">
+    <div class="gux-badge gux-info gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -363,18 +371,19 @@ exports[`gux-badge #render should render component as expected (20) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (21) 1`] = `
-<gux-badge accent="success" bold="">
+<gux-badge bold="" accent="success">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-success">
+    <div class="gux-badge gux-success gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -382,18 +391,19 @@ exports[`gux-badge #render should render component as expected (21) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (22) 1`] = `
-<gux-badge accent="warning" bold="">
+<gux-badge bold="" accent="warning">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-warning">
+    <div class="gux-badge gux-warning gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -401,18 +411,19 @@ exports[`gux-badge #render should render component as expected (22) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (23) 1`] = `
-<gux-badge accent="error" bold="">
+<gux-badge bold="" accent="error">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-error">
+    <div class="gux-badge gux-error gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -420,18 +431,19 @@ exports[`gux-badge #render should render component as expected (23) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;
 
 exports[`gux-badge #render should render component as expected (24) 1`] = `
-<gux-badge accent="inherit" bold="">
+<gux-badge bold="" accent="inherit">
   <template shadowrootmode="open">
-    <div class="gux-badge gux-bold gux-inherit">
+    <div class="gux-badge gux-inherit gux-bold">
       <gux-tooltip-title aria-hidden="true">
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
@@ -439,7 +451,7 @@ exports[`gux-badge #render should render component as expected (24) 1`] = `
       </div>
     </div>
   </template>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  Badge
+  <gux-icon icon-name="subtract" decorative="">
+  </gux-icon>Badge
 </gux-badge>
 `;

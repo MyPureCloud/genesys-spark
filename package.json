@@ -1,12 +1,12 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.157.1",
+  "version": "4.177.0",
   "description": "Common webcomponents",
   "license": "MIT",
   "scripts": {
     "build": "npm run build --workspaces --if-present && npm run create-dist-folder",
     "commit": "git-cz",
-    "commitlint": "commitlint --from 81b354d83c18eb6ac0ca925b4694d43c09e588e8",
+    "commitlint": "commitlint --from 5825dd3d6008ea48f19ee12dd36663d196d601c2",
     "copy.chart-components": "cp -R ./packages/genesys-spark-chart-components/dist ./dist/chart",
     "create-dist-folder": "node ./scripts/create-dist-folder.js",
     "create-manifest": "node ./scripts/create-manifest.js",
@@ -32,7 +32,7 @@
     "lint-staged.workspaces": "npm run lint-staged --workspaces --if-present",
     "new-tokens-data": "npm run lint && npm run build && npm run snapshot",
     "playground.angular": "run-pty playground.angular.json",
-    "playground.angular.start": "cd ./playground/angular-v13 && npm install && npm start",
+    "playground.angular.start": "cd ./playground/angular-v18 && npm install && npm start",
     "playground.ember": "run-pty playground.ember.json",
     "playground.ember.start": "cd ./playground/ember-3 && npm install && npm start",
     "playground.knockout": "run-pty playground.knockout.json",
@@ -65,17 +65,20 @@
     "./shared-configs/*",
     "./web-apps/*"
   ],
+  "dependencies": {
+    "google-libphonenumber": "3.2.43"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "commitizen": "^4.3.1",
     "cross-replace": "^0.2.0",
-    "eslint": "^9.30.1",
+    "eslint": "^9.36.0",
     "eslint-config-genesys-spark-components": "^0.0.1",
     "git-cz": "^4.9.0",
-    "globals": "^16.3.0",
+    "globals": "^16.4.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.2",
+    "lint-staged": "^16.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.6.2",
     "prettier-config-genesys-spark-components": "^0.0.1",
@@ -89,6 +92,6 @@
     }
   },
   "volta": {
-    "node": "22.14.0"
+    "node": "22.18.0"
   }
 }

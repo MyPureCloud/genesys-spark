@@ -1,220 +1,496 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`gux-form-field-dropdown multi select dropdown #render help multi select should render component as expected 1`] = `
+exports[`gux-form-field-dropdown #render should render multi select dropdown as expected 1`] = `
 <gux-form-field-dropdown>
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default This is a help message
+        Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
-        <div class="gux-form-field-help gux-show">
+        <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
+            <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+                </span>
+              </span>
+              <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
+          <div slot="popup" class="gux-listbox-container">
+            <slot>
+            </slot>
           </div>
         </gux-popup>
       </div>
     </template>
-    <gux-listbox-multi aria-describedby="gux-help-i" aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" role="listbox" aria-multiselectable="true" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
+        <slot>
+        </slot>
+        <slot name="create">
+        </slot>
       </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+      <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+      <gux-option-multi value="c" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
-  <span id="gux-help-i" slot="help">
+</gux-form-field-dropdown>
+`;
+
+exports[`gux-form-field-dropdown #render should render multi select dropdown as expected when an optional "error" slot is provided 1`] = `
+<gux-form-field-dropdown>
+  <template shadowrootmode="open">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
+      <legend class="gux-form-field-screenreader-label">
+        Label This is an error message
+      </legend>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-input-error">
+          <slot>
+          </slot>
+        </div>
+        <div role="alert" class="gux-form-field-error gux-show">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-dropdown-multi>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <div class="gux-dropdown-container">
+        <gux-popup>
+          <div class="gux-target-container gux-target-container-not-filterable gux-error" slot="target">
+            <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
+                  Select...
+                </span>
+              </span>
+              <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+              </gux-icon>
+            </button>
+          </div>
+          <div slot="popup" class="gux-listbox-container">
+            <slot>
+            </slot>
+          </div>
+        </gux-popup>
+      </div>
+    </template>
+    <gux-listbox-multi aria-labelledby="gux-label-i" aria-describedby="gux-error-i" role="listbox" aria-multiselectable="true" tabindex="0">
+      <template shadowrootmode="open">
+        <slot>
+        </slot>
+        <slot name="create">
+        </slot>
+      </template>
+      <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
+        <template shadowrootmode="open">
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
+          </svg>
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Ant
+      </gux-option-multi>
+      <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
+        <template shadowrootmode="open">
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
+          </svg>
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Bat
+      </gux-option-multi>
+      <gux-option-multi value="c" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
+        <template shadowrootmode="open">
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
+          </svg>
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Cat
+      </gux-option-multi>
+    </gux-listbox-multi>
+  </gux-dropdown-multi>
+  <label slot="label" id="gux-label-i">
+    Label
+  </label>
+  <span slot="error" id="gux-error-i">
+    This is an error message
+  </span>
+</gux-form-field-dropdown>
+`;
+
+exports[`gux-form-field-dropdown #render should render multi select dropdown as expected when an optional "help" slot is provided 1`] = `
+<gux-form-field-dropdown>
+  <template shadowrootmode="open">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
+      <legend class="gux-form-field-screenreader-label">
+        Label This is a help message
+      </legend>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <slot>
+          </slot>
+        </div>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help gux-show">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-dropdown-multi>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <div class="gux-dropdown-container">
+        <gux-popup>
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
+            <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
+                  Select...
+                </span>
+              </span>
+              <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+              </gux-icon>
+            </button>
+          </div>
+          <div slot="popup" class="gux-listbox-container">
+            <slot>
+            </slot>
+          </div>
+        </gux-popup>
+      </div>
+    </template>
+    <gux-listbox-multi aria-labelledby="gux-label-i" aria-describedby="gux-help-i" role="listbox" aria-multiselectable="true" tabindex="0">
+      <template shadowrootmode="open">
+        <slot>
+        </slot>
+        <slot name="create">
+        </slot>
+      </template>
+      <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
+        <template shadowrootmode="open">
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
+          </svg>
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Ant
+      </gux-option-multi>
+      <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
+        <template shadowrootmode="open">
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
+          </svg>
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Bat
+      </gux-option-multi>
+      <gux-option-multi value="c" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
+        <template shadowrootmode="open">
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
+          </svg>
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Cat
+      </gux-option-multi>
+    </gux-listbox-multi>
+  </gux-dropdown-multi>
+  <label slot="label" id="gux-label-i">
+    Label
+  </label>
+  <span slot="help" id="gux-help-i">
     This is a help message
   </span>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown multi select dropdown #render help multi select should render component as expected 2`] = `
+exports[`gux-form-field-dropdown #render should render multi select dropdown as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-dropdown>
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default This is some tooltip text
+        Label 
+      This is some tooltip text
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
+            <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+                </span>
+              </span>
+              <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
+          <div slot="popup" class="gux-listbox-container">
+            <slot>
+            </slot>
           </div>
         </gux-popup>
       </div>
     </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" role="listbox" aria-multiselectable="true" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
+        <slot>
+        </slot>
+        <slot name="create">
+        </slot>
       </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+      <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+      <gux-option-multi value="c" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
   <gux-label-info-beta slot="label-info">
     <span slot="content">
@@ -224,1301 +500,1279 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown multi select dropdown #render help should render component as expected 1`] = `
-<gux-form-field-dropdown>
+exports[`gux-form-field-dropdown #render should render multi select dropdown as expected when indicator-mark is "optional" 1`] = `
+<gux-form-field-dropdown indicator-mark="optional">
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default This is a help message
+        Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="optional">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
-        <div class="gux-form-field-help gux-show">
+        <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
+            <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+                </span>
+              </span>
+              <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
+          <div slot="popup" class="gux-listbox-container">
+            <slot>
+            </slot>
           </div>
         </gux-popup>
       </div>
     </template>
-    <gux-listbox-multi aria-describedby="gux-help-i" aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" role="listbox" aria-multiselectable="true" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
+        <slot>
+        </slot>
+        <slot name="create">
+        </slot>
       </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+      <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+      <gux-option-multi value="c" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
-  <span id="gux-help-i" slot="help">
-    This is a help message
-  </span>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown multi select dropdown #render input attributes should render component as expected (1) 1`] = `
-<gux-form-field-dropdown>
+exports[`gux-form-field-dropdown #render should render multi select dropdown as expected when indicator-mark is "required" 1`] = `
+<gux-form-field-dropdown indicator-mark="required">
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
+            <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+                </span>
+              </span>
+              <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
+          <div slot="popup" class="gux-listbox-container">
+            <slot>
+            </slot>
           </div>
         </gux-popup>
       </div>
     </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" role="listbox" aria-multiselectable="true" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
+        <slot>
+        </slot>
+        <slot name="create">
+        </slot>
       </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+      <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+      <gux-option-multi value="c" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown multi select dropdown #render input attributes should render component as expected (2) 1`] = `
+exports[`gux-form-field-dropdown #render should render multi select dropdown as expected when input attribute is "disabled" 1`] = `
 <gux-form-field-dropdown>
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown-multi disabled="">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup disabled="">
-          <div class="gux-disabled gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+          <div class="gux-target-container gux-target-container-not-filterable gux-disabled" slot="target">
+            <button type="button" class="gux-field gux-field-button" disabled="" aria-haspopup="listbox" aria-expanded="false">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+                </span>
+              </span>
+              <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
+          <div slot="popup" class="gux-listbox-container">
+            <slot>
+            </slot>
           </div>
         </gux-popup>
       </div>
     </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" role="listbox" aria-multiselectable="true" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
+        <slot>
+        </slot>
+        <slot name="create">
+        </slot>
       </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+      <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+      <gux-option-multi value="c" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown multi select dropdown #render input attributes should render component as expected (3) 1`] = `
+exports[`gux-form-field-dropdown #render should render multi select dropdown as expected when input attribute is "required" 1`] = `
 <gux-form-field-dropdown>
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default Required
+        Label Required
       </legend>
-      <div class="gux-above gux-form-field-visual-label gux-required" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above gux-required" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required" required="">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown-multi required="">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
+            <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+                </span>
+              </span>
+              <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
+          <div slot="popup" class="gux-listbox-container">
+            <slot>
+            </slot>
           </div>
         </gux-popup>
       </div>
     </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" role="listbox" aria-multiselectable="true" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
+        <slot>
+        </slot>
+        <slot name="create">
+        </slot>
       </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+      <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+      <gux-option-multi value="c" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (1) 1`] = `
-<gux-form-field-dropdown>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Default
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-dropdown-multi>
-    <template shadowrootmode="open">
-      <div class="gux-dropdown-container">
-        <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
-                  Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
-            </button>
-          </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
-          </div>
-        </gux-popup>
-      </div>
-    </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
-      </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Ant
-      </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Bat
-      </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
-      </gux-option-multi>
-    </gux-listbox-multi>
-  </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
-  </label>
-</gux-form-field-dropdown>
-`;
-
-exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (2) 1`] = `
+exports[`gux-form-field-dropdown #render should render multi select dropdown as expected when label-position is above 1`] = `
 <gux-form-field-dropdown label-position="above">
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
+            <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+                </span>
+              </span>
+              <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
+          <div slot="popup" class="gux-listbox-container">
+            <slot>
+            </slot>
           </div>
         </gux-popup>
       </div>
     </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" role="listbox" aria-multiselectable="true" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
+        <slot>
+        </slot>
+        <slot name="create">
+        </slot>
       </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+      <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+      <gux-option-multi value="c" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (3) 1`] = `
+exports[`gux-form-field-dropdown #render should render multi select dropdown as expected when label-position is beside 1`] = `
 <gux-form-field-dropdown label-position="beside">
   <template shadowrootmode="open">
-    <fieldset class="gux-beside gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-beside">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
-      <div class="gux-beside gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-beside" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
+            <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+                </span>
+              </span>
+              <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
+          <div slot="popup" class="gux-listbox-container">
+            <slot>
+            </slot>
           </div>
         </gux-popup>
       </div>
     </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" role="listbox" aria-multiselectable="true" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
+        <slot>
+        </slot>
+        <slot name="create">
+        </slot>
       </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+      <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+      <gux-option-multi value="c" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (4) 1`] = `
+exports[`gux-form-field-dropdown #render should render multi select dropdown as expected when label-position is screenreader 1`] = `
 <gux-form-field-dropdown label-position="screenreader">
   <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
       <div class="gux-form-field-visual-label gux-screenreader" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
+            <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+                </span>
+              </span>
+              <gux-icon class="gux-expand-icon" size="small" screenreader-text="Dropdown" iconname="custom/chevron-down-small-regular">
+              </gux-icon>
             </button>
           </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
+          <div slot="popup" class="gux-listbox-container">
+            <slot>
+            </slot>
           </div>
         </gux-popup>
       </div>
     </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" role="listbox" aria-multiselectable="true" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
+        <slot>
+        </slot>
+        <slot name="create">
+        </slot>
       </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi value="a" disabled="" id="gux-option-multi-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+      <gux-option-multi value="b" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+      <gux-option-multi value="c" id="gux-option-multi-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+          <svg class="gux-checkbox-container" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 13 13">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z">
+            </path>
           </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown multi select dropdown #render multi indicator marks should render component as expected optional dropdown (1) 1`] = `
+exports[`gux-form-field-dropdown #render should render single select dropdown as expected 1`] = `
 <gux-form-field-dropdown>
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi>
-    <template shadowrootmode="open">
-      <div class="gux-dropdown-container">
-        <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
-                  Select...
-                </div>
+  <gux-dropdown>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <gux-popup>
+        <div class="gux-target-container-not-filterable" slot="target">
+          <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+            <div class="gux-field-content">
+              <div class="gux-placeholder">
+                Select...
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
-            </button>
-          </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
-          </div>
-        </gux-popup>
-      </div>
+            </div>
+            <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
+          </button>
+        </div>
+        <slot slot="popup">
+        </slot>
+      </gux-popup>
     </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
+    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
+        <slot>
+        </slot>
       </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option value="a" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
-      </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+        </template>Ant
+      </gux-option>
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
-      </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+        </template>Bat
+      </gux-option>
+      <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
-      </gux-option-multi>
-    </gux-listbox-multi>
-  </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
+        </template>Cat
+      </gux-option>
+    </gux-listbox>
+  </gux-dropdown>
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown multi select dropdown #render multi indicator marks should render component as expected optional dropdown (2) 1`] = `
-<gux-form-field-dropdown indicator-mark="optional">
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Default
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-dropdown-multi>
-    <template shadowrootmode="open">
-      <div class="gux-dropdown-container">
-        <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
-                  Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
-            </button>
-          </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
-          </div>
-        </gux-popup>
-      </div>
-    </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
-      </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Ant
-      </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Bat
-      </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
-      </gux-option-multi>
-    </gux-listbox-multi>
-  </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
-  </label>
-</gux-form-field-dropdown>
-`;
-
-exports[`gux-form-field-dropdown multi select dropdown #render multi indicator marks should render component as expected optional dropdown (3) 1`] = `
-<gux-form-field-dropdown indicator-mark="required">
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Default
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-dropdown-multi>
-    <template shadowrootmode="open">
-      <div class="gux-dropdown-container">
-        <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
-                  Select...
-                </div>
-              </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
-            </button>
-          </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
-          </div>
-        </gux-popup>
-      </div>
-    </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
-      </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Ant
-      </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Bat
-      </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
-      </gux-option-multi>
-    </gux-listbox-multi>
-  </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
-  </label>
-</gux-form-field-dropdown>
-`;
-
-exports[`gux-form-field-dropdown multi select dropdown #render multi label-info should render component as expected 1`] = `
+exports[`gux-form-field-dropdown #render should render single select dropdown as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-dropdown>
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default This is some tooltip text
+        Label This is an error message
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <slot></slot>
+        <div class="gux-input gux-input-error">
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error gux-show">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi>
-    <template shadowrootmode="open">
-      <div class="gux-dropdown-container">
-        <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
-            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
-                  Select...
-                </div>
+  <gux-dropdown>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <gux-popup>
+        <div class="gux-target-container-not-filterable gux-error" slot="target">
+          <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+            <div class="gux-field-content">
+              <div class="gux-placeholder">
+                Select...
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
-            </button>
-          </div>
-          <div class="gux-listbox-container" slot="popup">
-            <slot></slot>
-          </div>
-        </gux-popup>
-      </div>
+            </div>
+            <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
+          </button>
+        </div>
+        <slot slot="popup">
+        </slot>
+      </gux-popup>
     </template>
-    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
+    <gux-listbox aria-labelledby="gux-label-i" aria-describedby="gux-error-i" role="listbox" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
-        <slot name="create"></slot>
+        <slot>
+        </slot>
       </template>
-      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option value="a" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
-      </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+        </template>Ant
+      </gux-option>
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
-      </gux-option-multi>
-      <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
+        </template>Bat
+      </gux-option>
+      <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
-          <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
-          </svg>
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
-      </gux-option-multi>
-    </gux-listbox-multi>
-  </gux-dropdown-multi>
-  <label id="gux-label-i" slot="label">
-    Default
+        </template>Cat
+      </gux-option>
+    </gux-listbox>
+  </gux-dropdown>
+  <label slot="label" id="gux-label-i">
+    Label
+  </label>
+  <span slot="error" id="gux-error-i">
+    This is an error message
+  </span>
+</gux-form-field-dropdown>
+`;
+
+exports[`gux-form-field-dropdown #render should render single select dropdown as expected when an optional "help" slot is provided 1`] = `
+<gux-form-field-dropdown>
+  <template shadowrootmode="open">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
+      <legend class="gux-form-field-screenreader-label">
+        Label This is a help message
+      </legend>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <slot>
+          </slot>
+        </div>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help gux-show">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-dropdown>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <gux-popup>
+        <div class="gux-target-container-not-filterable" slot="target">
+          <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+            <div class="gux-field-content">
+              <div class="gux-placeholder">
+                Select...
+              </div>
+            </div>
+            <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
+          </button>
+        </div>
+        <slot slot="popup">
+        </slot>
+      </gux-popup>
+    </template>
+    <gux-listbox aria-labelledby="gux-label-i" aria-describedby="gux-help-i" role="listbox" tabindex="0">
+      <template shadowrootmode="open">
+        <slot>
+        </slot>
+      </template>
+      <gux-option value="a" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
+        <template shadowrootmode="open">
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Ant
+      </gux-option>
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+        <template shadowrootmode="open">
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Bat
+      </gux-option>
+      <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+        <template shadowrootmode="open">
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Cat
+      </gux-option>
+    </gux-listbox>
+  </gux-dropdown>
+  <label slot="label" id="gux-label-i">
+    Label
+  </label>
+  <span slot="help" id="gux-help-i">
+    This is a help message
+  </span>
+</gux-form-field-dropdown>
+`;
+
+exports[`gux-form-field-dropdown #render should render single select dropdown as expected when an optional "label-info" slot is provided 1`] = `
+<gux-form-field-dropdown>
+  <template shadowrootmode="open">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
+      <legend class="gux-form-field-screenreader-label">
+        Label 
+      This is some tooltip text
+      </legend>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <slot>
+          </slot>
+        </div>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-dropdown>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <gux-popup>
+        <div class="gux-target-container-not-filterable" slot="target">
+          <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
+            <div class="gux-field-content">
+              <div class="gux-placeholder">
+                Select...
+              </div>
+            </div>
+            <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
+          </button>
+        </div>
+        <slot slot="popup">
+        </slot>
+      </gux-popup>
+    </template>
+    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
+      <template shadowrootmode="open">
+        <slot>
+        </slot>
+      </template>
+      <gux-option value="a" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
+        <template shadowrootmode="open">
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Ant
+      </gux-option>
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+        <template shadowrootmode="open">
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Bat
+      </gux-option>
+      <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+        <template shadowrootmode="open">
+          <div class="gux-option-wrapper">
+            <gux-truncate tooltip-placement="right">
+              <slot>
+              </slot>
+            </gux-truncate>
+            <slot name="subtext">
+            </slot>
+          </div>
+        </template>Cat
+      </gux-option>
+    </gux-listbox>
+  </gux-dropdown>
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
   <gux-label-info-beta slot="label-info">
     <span slot="content">
@@ -1528,942 +1782,730 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi label-info 
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown single select dropdown #render indicator marks should render component as expected optional dropdown (1) 1`] = `
-<gux-form-field-dropdown>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Default
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-dropdown>
-    <template shadowrootmode="open">
-      <gux-popup>
-        <div class="gux-target-container-collapsed" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
-                Select...
-              </div>
-            </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
-          </button>
-        </div>
-        <slot slot="popup"></slot>
-      </gux-popup>
-    </template>
-    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <template shadowrootmode="open">
-        <slot></slot>
-      </template>
-      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <template shadowrootmode="open">
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Ant
-      </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <template shadowrootmode="open">
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Bat
-      </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <template shadowrootmode="open">
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
-      </gux-option>
-    </gux-listbox>
-  </gux-dropdown>
-  <label id="gux-label-i" slot="label">
-    Default
-  </label>
-</gux-form-field-dropdown>
-`;
-
-exports[`gux-form-field-dropdown single select dropdown #render indicator marks should render component as expected optional dropdown (2) 1`] = `
+exports[`gux-form-field-dropdown #render should render single select dropdown as expected when indicator-mark is "optional" 1`] = `
 <gux-form-field-dropdown indicator-mark="optional">
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="optional">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
-        <div class="gux-target-container-collapsed" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+        <div class="gux-target-container-not-filterable" slot="target">
+          <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
             <div class="gux-field-content">
               <div class="gux-placeholder">
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+            <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
           </button>
         </div>
-        <slot slot="popup"></slot>
+        <slot slot="popup">
+        </slot>
       </gux-popup>
     </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
+        <slot>
+        </slot>
       </template>
-      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
+      <gux-option value="a" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
+      <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown single select dropdown #render indicator marks should render component as expected optional dropdown (3) 1`] = `
+exports[`gux-form-field-dropdown #render should render single select dropdown as expected when indicator-mark is "required" 1`] = `
 <gux-form-field-dropdown indicator-mark="required">
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
-        <div class="gux-target-container-collapsed" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+        <div class="gux-target-container-not-filterable" slot="target">
+          <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
             <div class="gux-field-content">
               <div class="gux-placeholder">
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+            <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
           </button>
         </div>
-        <slot slot="popup"></slot>
+        <slot slot="popup">
+        </slot>
       </gux-popup>
     </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
+        <slot>
+        </slot>
       </template>
-      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
+      <gux-option value="a" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
+      <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown single select dropdown #render input attributes should render component as expected (1) 1`] = `
+exports[`gux-form-field-dropdown #render should render single select dropdown as expected when input attribute is "disabled" 1`] = `
 <gux-form-field-dropdown>
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-dropdown>
-    <template shadowrootmode="open">
-      <gux-popup>
-        <div class="gux-target-container-collapsed" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
-                Select...
-              </div>
-            </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
-          </button>
-        </div>
-        <slot slot="popup"></slot>
-      </gux-popup>
-    </template>
-    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <template shadowrootmode="open">
-        <slot></slot>
-      </template>
-      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <template shadowrootmode="open">
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Ant
-      </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <template shadowrootmode="open">
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Bat
-      </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <template shadowrootmode="open">
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
-      </gux-option>
-    </gux-listbox>
-  </gux-dropdown>
-  <label id="gux-label-i" slot="label">
-    Default
-  </label>
-</gux-form-field-dropdown>
-`;
-
-exports[`gux-form-field-dropdown single select dropdown #render input attributes should render component as expected (2) 1`] = `
-<gux-form-field-dropdown>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Default
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown disabled="">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup disabled="">
-        <div class="gux-disabled gux-target-container-collapsed" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
+        <div class="gux-target-container-not-filterable gux-disabled" slot="target">
+          <button type="button" class="gux-field gux-field-button" disabled="" aria-haspopup="listbox" aria-expanded="false">
             <div class="gux-field-content">
               <div class="gux-placeholder">
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+            <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
           </button>
         </div>
-        <slot slot="popup"></slot>
+        <slot slot="popup">
+        </slot>
       </gux-popup>
     </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
+        <slot>
+        </slot>
       </template>
-      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
+      <gux-option value="a" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
+      <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown single select dropdown #render input attributes should render component as expected (3) 1`] = `
+exports[`gux-form-field-dropdown #render should render single select dropdown as expected when input attribute is "required" 1`] = `
 <gux-form-field-dropdown>
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default Required
+        Label Required
       </legend>
-      <div class="gux-above gux-form-field-visual-label gux-required" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above gux-required" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required" required="">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown required="">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
-        <div class="gux-target-container-collapsed" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+        <div class="gux-target-container-not-filterable" slot="target">
+          <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
             <div class="gux-field-content">
               <div class="gux-placeholder">
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+            <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
           </button>
         </div>
-        <slot slot="popup"></slot>
+        <slot slot="popup">
+        </slot>
       </gux-popup>
     </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
+        <slot>
+        </slot>
       </template>
-      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
+      <gux-option value="a" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
+      <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (1) 1`] = `
-<gux-form-field-dropdown>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Default
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-dropdown>
-    <template shadowrootmode="open">
-      <gux-popup>
-        <div class="gux-target-container-collapsed" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
-                Select...
-              </div>
-            </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
-          </button>
-        </div>
-        <slot slot="popup"></slot>
-      </gux-popup>
-    </template>
-    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <template shadowrootmode="open">
-        <slot></slot>
-      </template>
-      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <template shadowrootmode="open">
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Ant
-      </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <template shadowrootmode="open">
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Bat
-      </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <template shadowrootmode="open">
-          <div class="gux-option-wrapper">
-            <gux-truncate tooltip-placement="right">
-              <slot></slot>
-            </gux-truncate>
-            <slot name="subtext"></slot>
-          </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
-      </gux-option>
-    </gux-listbox>
-  </gux-dropdown>
-  <label id="gux-label-i" slot="label">
-    Default
-  </label>
-</gux-form-field-dropdown>
-`;
-
-exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (2) 1`] = `
+exports[`gux-form-field-dropdown #render should render single select dropdown as expected when label-position is above 1`] = `
 <gux-form-field-dropdown label-position="above">
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
-        <div class="gux-target-container-collapsed" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+        <div class="gux-target-container-not-filterable" slot="target">
+          <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
             <div class="gux-field-content">
               <div class="gux-placeholder">
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+            <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
           </button>
         </div>
-        <slot slot="popup"></slot>
+        <slot slot="popup">
+        </slot>
       </gux-popup>
     </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
+        <slot>
+        </slot>
       </template>
-      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
+      <gux-option value="a" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
+      <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (3) 1`] = `
+exports[`gux-form-field-dropdown #render should render single select dropdown as expected when label-position is beside 1`] = `
 <gux-form-field-dropdown label-position="beside">
   <template shadowrootmode="open">
-    <fieldset class="gux-beside gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-beside">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
-      <div class="gux-beside gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-beside" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
-        <div class="gux-target-container-collapsed" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+        <div class="gux-target-container-not-filterable" slot="target">
+          <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
             <div class="gux-field-content">
               <div class="gux-placeholder">
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+            <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
           </button>
         </div>
-        <slot slot="popup"></slot>
+        <slot slot="popup">
+        </slot>
       </gux-popup>
     </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
+        <slot>
+        </slot>
       </template>
-      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
+      <gux-option value="a" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
+      <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (4) 1`] = `
+exports[`gux-form-field-dropdown #render should render single select dropdown as expected when label-position is screenreader 1`] = `
 <gux-form-field-dropdown label-position="screenreader">
   <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
       <div class="gux-form-field-visual-label gux-screenreader" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <slot></slot>
+          <slot>
+          </slot>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
-        <div class="gux-target-container-collapsed" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+        <div class="gux-target-container-not-filterable" slot="target">
+          <button type="button" class="gux-field gux-field-button" aria-haspopup="listbox" aria-expanded="false">
             <div class="gux-field-content">
               <div class="gux-placeholder">
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+            <gux-icon class="gux-expand-icon" screenreader-text="Dropdown" size="small" iconname="custom/chevron-down-small-regular">
+            </gux-icon>
           </button>
         </div>
-        <slot slot="popup"></slot>
+        <slot slot="popup">
+        </slot>
       </gux-popup>
     </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <template shadowrootmode="open">
-        <slot></slot>
+        <slot>
+        </slot>
       </template>
-      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
+      <gux-option value="a" disabled="" id="gux-option-i" role="option" class="gux-disabled" aria-disabled="true">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Ant
+        </template>Ant
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
+      <gux-option value="b" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Bat
+        </template>Bat
       </gux-option>
-      <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
+      <gux-option value="c" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
         <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate tooltip-placement="right">
-              <slot></slot>
+              <slot>
+              </slot>
             </gux-truncate>
-            <slot name="subtext"></slot>
+            <slot name="subtext">
+            </slot>
           </div>
-        </template>
-        Cat
-        <span slot="subtext">
-          Medium
-        </span>
+        </template>Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label id="gux-label-i" slot="label">
-    Default
+  <label slot="label" id="gux-label-i">
+    Label
   </label>
 </gux-form-field-dropdown>
 `;

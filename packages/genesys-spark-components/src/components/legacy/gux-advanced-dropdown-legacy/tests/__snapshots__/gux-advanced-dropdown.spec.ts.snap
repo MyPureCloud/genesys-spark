@@ -1,16 +1,18 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-advanced-dropdown-legacy #render should render component as expected (1) 1`] = `
 <gux-advanced-dropdown-legacy>
   <template shadowrootmode="open">
     <gux-popup>
-      <div class="gux-select-field" slot="target">
-        <a class="gux-select-input" tabindex="0"></a>
+      <div slot="target" class="gux-select-field">
+        <a class="gux-select-input" tabindex="0">
+        </a>
         <div class="gux-icon-wrapper">
-          <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="custom/chevron-down-small-regular">
+          </gux-icon>
         </div>
       </div>
-      <div class="gux-advanced-dropdown-menu" slot="popup">
+      <div slot="popup" class="gux-advanced-dropdown-menu">
         <div class="gux-dropdown-menu-container">
           <gux-form-field-search label-position="screenreader">
             <label slot="label">
@@ -19,13 +21,16 @@ exports[`gux-advanced-dropdown-legacy #render should render component as expecte
             <input slot="input" type="search">
           </gux-form-field-search>
           <div class="gux-dropdown-options" style="max-height: 320px;">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
         </div>
       </div>
     </gux-popup>
   </template>
-  <gux-dropdown-option text="English" value="en"></gux-dropdown-option>
-  <gux-dropdown-option text="Dutch" value="nl"></gux-dropdown-option>
+  <gux-dropdown-option value="en" text="English">
+  </gux-dropdown-option>
+  <gux-dropdown-option value="nl" text="Dutch">
+  </gux-dropdown-option>
 </gux-advanced-dropdown-legacy>
 `;

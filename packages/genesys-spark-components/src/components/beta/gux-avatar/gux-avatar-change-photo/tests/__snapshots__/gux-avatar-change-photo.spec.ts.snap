@@ -1,11 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-avatar #render component with valid markup 1`] = `
 <gux-avatar-change-photo-beta>
-  <template shadowrootmode="open">
-    <button aria-label="Change profile photo" class="gux-change-photo">
-      <gux-icon class="gux-change-photo-icon" decorative="" icon-name="fa/camera-solid" size="small"></gux-icon>
-      <slot name="avatar"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <button class="gux-change-photo" aria-label="Change profile photo">
+      <gux-icon class="gux-change-photo-icon" icon-name="fa/camera-solid" size="small" decorative="">
+      </gux-icon>
+      <slot name="avatar">
+      </slot>
       <gux-tooltip-beta placement="top" visualonly="">
         <div slot="content">
           Change profile photo
@@ -13,6 +15,7 @@ exports[`gux-avatar #render component with valid markup 1`] = `
       </gux-tooltip-beta>
     </button>
   </template>
-  <gux-avatar-beta name="Conor Darcy" slot="avatar"></gux-avatar-beta>
+  <gux-avatar-beta slot="avatar" name="Conor Darcy">
+  </gux-avatar-beta>
 </gux-avatar-change-photo-beta>
 `;

@@ -72,6 +72,7 @@ Type: `Promise<void>`
  - [gux-avatar-group-add-item-beta](../gux-avatar-group/gux-avatar-group-add-item)
  - [gux-avatar-group-item-beta](../gux-avatar-group/gux-avatar-group-item)
  - [gux-button](../../stable/gux-button)
+ - [gux-form-field-input-clear-button](../../stable/gux-form-field/helper-components/gux-form-field-input-clear-button)
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
  - [gux-label-info-beta](../gux-label-info)
  - [gux-rich-highlight-list-item](../gux-rich-text-editor/gux-rich-text-editor-list/gux-rich-highlight-list-item)
@@ -80,6 +81,7 @@ Type: `Promise<void>`
  - [gux-rich-text-editor-action-rich-style](../gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
  - [gux-rich-text-editor-action-text-highlight](../gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-text-highlight)
  - [gux-rich-text-editor-menu](../gux-rich-text-editor/gux-rich-text-editor-menu)
+ - [gux-segmented-control-item](../gux-segmented-control/gux-segmented-control-item)
  - [gux-table-toolbar-menu-button](../../stable/gux-table-toolbar/gux-table-toolbar-menu-button)
 
 ### Depends on
@@ -95,6 +97,7 @@ graph TD;
   gux-avatar-group-add-item-beta --> gux-tooltip-beta
   gux-avatar-group-item-beta --> gux-tooltip-beta
   gux-button --> gux-tooltip-beta
+  gux-form-field-input-clear-button --> gux-tooltip-beta
   gux-icon-tooltip-beta --> gux-tooltip-beta
   gux-label-info-beta --> gux-tooltip-beta
   gux-rich-highlight-list-item --> gux-tooltip-beta
@@ -103,6 +106,7 @@ graph TD;
   gux-rich-text-editor-action-rich-style --> gux-tooltip-beta
   gux-rich-text-editor-action-text-highlight --> gux-tooltip-beta
   gux-rich-text-editor-menu --> gux-tooltip-beta
+  gux-segmented-control-item --> gux-tooltip-beta
   gux-table-toolbar-menu-button --> gux-tooltip-beta
   style gux-tooltip-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```

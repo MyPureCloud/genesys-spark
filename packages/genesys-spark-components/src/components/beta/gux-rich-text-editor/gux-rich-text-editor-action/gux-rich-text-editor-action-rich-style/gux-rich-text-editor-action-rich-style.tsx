@@ -12,10 +12,10 @@ import { trackComponent } from '@utils/tracking/usage';
 import { hasDisabledParent } from '../../gux-rich-text-editor.service';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { afterNextRender } from '@utils/dom/after-next-render';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import translationResources from '../i18n/en.json';
 
-/** 
+/**
 @slot - for a collection of gux-rich-style-list-item elements.
 */
 

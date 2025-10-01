@@ -1,13 +1,14 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`gux-rich-text-editor-action-rich-style should build and render 1`] = `
+exports[`gux-rich-text-editor-action-rich-style #render should render component as expected (1) 1`] = `
 <gux-rich-text-editor-action-rich-style>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup exceedtargetwidth="" placement="bottom-start">
-      <gux-button-slot accent="ghost" icon-only="" slot="target">
-        <button aria-expanded="false" aria-haspopup="true" type="button">
+      <gux-button-slot accent="ghost" slot="target" icon-only="">
+        <button type="button" aria-haspopup="true" aria-expanded="false">
           <div class="gux-target-display">
-            <gux-icon icon-name="custom/chevron-down-small-regular" screenreader-text="Rich Style Dropdown"></gux-icon>
+            <gux-icon icon-name="custom/chevron-down-small-regular" screenreader-text="Rich Style Dropdown">
+            </gux-icon>
           </div>
         </button>
         <gux-tooltip-beta>
@@ -18,7 +19,43 @@ exports[`gux-rich-text-editor-action-rich-style should build and render 1`] = `
       </gux-button-slot>
       <div class="gux-list-container" slot="popup">
         <gux-rich-text-editor-list>
-          <slot></slot>
+          <slot>
+          </slot>
+        </gux-rich-text-editor-list>
+      </div>
+    </gux-popup>
+  </template>
+  <gux-rich-style-list-item text-style="heading-1">
+    Heading 1
+  </gux-rich-style-list-item>
+  <gux-rich-style-list-item text-style="heading-2">
+    Heading 2
+  </gux-rich-style-list-item>
+  <gux-rich-style-list-item text-style="heading-3">
+    Heading 3
+  </gux-rich-style-list-item>
+  <gux-rich-style-list-item text-style="paragraph">
+    Paragraph
+  </gux-rich-style-list-item>
+</gux-rich-text-editor-action-rich-style>
+`;
+
+exports[`gux-rich-text-editor-action-rich-style #render should render component as expected (2) 1`] = `
+<gux-rich-text-editor-action-rich-style disabled="">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <gux-popup exceedtargetwidth="" placement="bottom-start">
+      <gux-button-slot accent="ghost" slot="target" icon-only="">
+        <button type="button" disabled="" aria-haspopup="true" aria-expanded="false">
+          <div class="gux-target-display">
+            <gux-icon icon-name="custom/chevron-down-small-regular" screenreader-text="Rich Style Dropdown">
+            </gux-icon>
+          </div>
+        </button>
+      </gux-button-slot>
+      <div class="gux-list-container" slot="popup">
+        <gux-rich-text-editor-list>
+          <slot>
+          </slot>
         </gux-rich-text-editor-list>
       </div>
     </gux-popup>

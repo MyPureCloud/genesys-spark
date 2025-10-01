@@ -1,627 +1,437 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`gux-form-field-number #render clearable should render component as expected (1) 1`] = `
+exports[`gux-form-field-number #render should render clearable component as expected (1) 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input" part="input-section">
           <div class="gux-input-container">
-            <slot name="input"></slot>
+            <slot name="input">
+            </slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" value="123" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-number>
 `;
 
-exports[`gux-form-field-number #render clearable should render component as expected (2) 1`] = `
+exports[`gux-form-field-number #render should render clearable component as expected (2) 1`] = `
 <gux-form-field-number clearable="">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input" part="input-section">
-          <div class="gux-clear gux-input-container">
-            <slot name="input"></slot>
-            <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
+          <div class="gux-input-container gux-clear">
+            <slot name="input">
+            </slot>
+            <gux-form-field-input-clear-button>
+            </gux-form-field-input-clear-button>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" value="123" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-number>
 `;
 
-exports[`gux-form-field-number #render clearable should render component as expected (3) 1`] = `
+exports[`gux-form-field-number #render should render clearable component as expected (3) 1`] = `
 <gux-form-field-number clearable="true">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input" part="input-section">
-          <div class="gux-clear gux-input-container">
-            <slot name="input"></slot>
-            <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
+          <div class="gux-input-container gux-clear">
+            <slot name="input">
+            </slot>
+            <gux-form-field-input-clear-button>
+            </gux-form-field-input-clear-button>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" value="123" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-number>
 `;
 
-exports[`gux-form-field-number #render clearable should render component as expected (4) 1`] = `
+exports[`gux-form-field-number #render should render clearable component as expected (4) 1`] = `
 <gux-form-field-number clearable="false">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input" part="input-section">
           <div class="gux-input-container">
-            <slot name="input"></slot>
+            <slot name="input">
+            </slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" value="123" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-number>
 `;
 
-exports[`gux-form-field-number #render clearable should render component as expected (5) 1`] = `
+exports[`gux-form-field-number #render should render clearable component as expected (5) 1`] = `
 <gux-form-field-number clearable="">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input" part="input-section">
-          <div class="gux-disabled gux-input-container">
-            <slot name="input"></slot>
+          <div class="gux-input-container gux-disabled">
+            <slot name="input">
+            </slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" disabled="" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment" disabled="">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" disabled="" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement" disabled="">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input disabled="" id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" value="123" disabled="" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-number>
 `;
 
-exports[`gux-form-field-number #render error should render component as expected 1`] = `
+exports[`gux-form-field-number #render should render component as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-input-error" part="input-section">
           <div class="gux-input-container">
-            <slot name="input"></slot>
+            <slot name="input">
+            </slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error gux-show" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error gux-show">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input aria-describedby="gux-form-field-error-i" aria-invalid="true" id="gux-form-field-input-i" name="e-1" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" name="e-1" id="gux-form-field-input-i" aria-invalid="true" aria-describedby="gux-form-field-error-i">
+  <label slot="label" for="gux-form-field-input-i">
     Default
   </label>
-  <span id="gux-form-field-error-i" slot="error">
+  <span slot="error" id="gux-form-field-error-i">
     This is an error message
   </span>
 </gux-form-field-number>
 `;
 
-exports[`gux-form-field-number #render help should render component as expected 1`] = `
+exports[`gux-form-field-number #render should render component as expected when an optional "help" slot is provided 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input" part="input-section">
           <div class="gux-input-container">
-            <slot name="input"></slot>
+            <slot name="input">
+            </slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help gux-show">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" name="e-1" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" name="e-1" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i">
+  <label slot="label" for="gux-form-field-input-i">
     Default
   </label>
-  <span id="gux-form-field-help-i" slot="help">
+  <span slot="help" id="gux-form-field-help-i">
     This is a help message
   </span>
 </gux-form-field-number>
 `;
 
-exports[`gux-form-field-number #render indicator marks should render component as expected (1) 1`] = `
+exports[`gux-form-field-number #render should render component as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input" part="input-section">
           <div class="gux-input-container">
-            <slot name="input"></slot>
+            <slot name="input">
+            </slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-number>
-`;
-
-exports[`gux-form-field-number #render indicator marks should render component as expected (2) 1`] = `
-<gux-form-field-number indicator-mark="optional">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input" part="input-section">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
-            </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
-            </button>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-number>
-`;
-
-exports[`gux-form-field-number #render indicator marks should render component as expected (3) 1`] = `
-<gux-form-field-number indicator-mark="required">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input" part="input-section">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
-            </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
-            </button>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-number>
-`;
-
-exports[`gux-form-field-number #render input attributes should render component as expected (1) 1`] = `
-<gux-form-field-number>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input" part="input-section">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
-            </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
-            </button>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-number>
-`;
-
-exports[`gux-form-field-number #render input attributes should render component as expected (2) 1`] = `
-<gux-form-field-number>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input" part="input-section">
-          <div class="gux-disabled gux-input-container">
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-step-buttons-container">
-            <button class="gux-step-button" disabled="" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
-            </button>
-            <button class="gux-step-button" disabled="" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
-            </button>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input disabled="" id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-number>
-`;
-
-exports[`gux-form-field-number #render input attributes should render component as expected (3) 1`] = `
-<gux-form-field-number>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label gux-required">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input" part="input-section">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
-            </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
-            </button>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" required="" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-number>
-`;
-
-exports[`gux-form-field-number #render label-info should render component as expected 1`] = `
-<gux-form-field-number>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input" part="input-section">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
-            </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
-            </button>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" name="e-1" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" name="e-1" id="gux-form-field-input-i" aria-describedby="gux-label-info-beta-i">
+  <label slot="label" for="gux-form-field-input-i">
     Default
   </label>
-  <gux-label-info-beta id="gux-label-info-beta-i" slot="label-info">
+  <gux-label-info-beta slot="label-info" id="gux-label-info-beta-i">
     <span slot="content">
       This is some tooltip text
     </span>
@@ -629,177 +439,372 @@ exports[`gux-form-field-number #render label-info should render component as exp
 </gux-form-field-number>
 `;
 
-exports[`gux-form-field-number #render label-position should render component as expected (1) 1`] = `
+exports[`gux-form-field-number #render should render component as expected when indicator-mark is "optional" 1`] = `
+<gux-form-field-number indicator-mark="optional">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="optional">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input" part="input-section">
+          <div class="gux-input-container">
+            <slot name="input">
+            </slot>
+          </div>
+          <div class="gux-step-buttons-container">
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
+            </button>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
+            </button>
+          </div>
+        </div>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="number" value="123" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+</gux-form-field-number>
+`;
+
+exports[`gux-form-field-number #render should render component as expected when indicator-mark is "required" 1`] = `
+<gux-form-field-number indicator-mark="required">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input" part="input-section">
+          <div class="gux-input-container">
+            <slot name="input">
+            </slot>
+          </div>
+          <div class="gux-step-buttons-container">
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
+            </button>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
+            </button>
+          </div>
+        </div>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="number" value="123" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+</gux-form-field-number>
+`;
+
+exports[`gux-form-field-number #render should render component as expected when input attribute is "disabled" 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input" part="input-section">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
+          <div class="gux-input-container gux-disabled">
+            <slot name="input">
+            </slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment" disabled="">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement" disabled="">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" value="123" disabled="" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-number>
 `;
 
-exports[`gux-form-field-number #render label-position should render component as expected (2) 1`] = `
+exports[`gux-form-field-number #render should render component as expected when input attribute is "required" 1`] = `
+<gux-form-field-number>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above gux-required">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required" required="">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input" part="input-section">
+          <div class="gux-input-container">
+            <slot name="input">
+            </slot>
+          </div>
+          <div class="gux-step-buttons-container">
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
+            </button>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
+            </button>
+          </div>
+        </div>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-message">
+            <slot name="error">
+            </slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help">
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input slot="input" type="number" value="123" required="" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
+    Label
+  </label>
+</gux-form-field-number>
+`;
+
+exports[`gux-form-field-number #render should render component as expected when label-position is above 1`] = `
 <gux-form-field-number label-position="above">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-above">
+      <div class="gux-form-field-label gux-above">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input" part="input-section">
           <div class="gux-input-container">
-            <slot name="input"></slot>
+            <slot name="input">
+            </slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" value="123" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-number>
 `;
 
-exports[`gux-form-field-number #render label-position should render component as expected (3) 1`] = `
+exports[`gux-form-field-number #render should render component as expected when label-position is beside 1`] = `
 <gux-form-field-number label-position="beside">
-  <template shadowrootmode="open">
-    <div class="gux-beside gux-form-field-container">
-      <div class="gux-beside gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-form-field-container gux-beside">
+      <div class="gux-form-field-label gux-beside">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input" part="input-section">
           <div class="gux-input-container">
-            <slot name="input"></slot>
+            <slot name="input">
+            </slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" value="123" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-number>
 `;
 
-exports[`gux-form-field-number #render label-position should render component as expected (4) 1`] = `
+exports[`gux-form-field-number #render should render component as expected when label-position is screenreader 1`] = `
 <gux-form-field-number label-position="screenreader">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-form-field-container gux-screenreader">
       <div class="gux-form-field-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input" part="input-section">
           <div class="gux-input-container">
-            <slot name="input"></slot>
+            <slot name="input">
+            </slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Increment">
+              <gux-icon icon-name="custom/chevron-up-small-regular" decorative="">
+              </gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <button class="gux-step-button" tabindex="-1" type="button" title="Decrement">
+              <gux-icon icon-name="custom/chevron-down-small-regular" decorative="">
+              </gux-icon>
             </button>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="number" value="10">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="number" value="123" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-number>

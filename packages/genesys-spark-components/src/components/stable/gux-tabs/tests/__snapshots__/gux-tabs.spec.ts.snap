@@ -1,23 +1,26 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`gux-tabs #render should render as expected 1`] = `
-<gux-tabs class="example">
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to horizontal and center respectively 1`] = `
+<gux-tabs orientation="horizontal" alignment="center" class="gux-tabs-horizontal">
   <template shadowrootmode="open">
-    <div class="gux-horizontal gux-left gux-tabs">
-      <slot name="tab-list"></slot>
-      <div class="gux-horizontal gux-left gux-panel-container">
-        <slot></slot>
+    <div class="gux-tabs gux-center gux-horizontal">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-center gux-horizontal gux-panel-container">
+        <slot>
+        </slot>
       </div>
     </div>
   </template>
   <gux-tab-list slot="tab-list">
     <!---->
     <div class="gux-tab-container">
-      <div class="gux-scroll-button-container"></div>
-      <div aria-owns="gux-2-1-tab gux-2-2-tab gux-2-3-tab" class="gux-scrollable-section" role="tablist">
-        <gux-tab tab-id="2-1">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
           <!---->
-          <button aria-controls="gux-2-1-panel" aria-selected="false" class="gux-tab" id="gux-2-1-tab" role="tab" tabindex="-1" type="button">
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
             <gux-tooltip-title>
               <span>
                 Tab Header 1
@@ -25,9 +28,9 @@ exports[`gux-tabs #render should render as expected 1`] = `
             </gux-tooltip-title>
           </button>
         </gux-tab>
-        <gux-tab tab-id="2-2">
+        <gux-tab tab-id="b">
           <!---->
-          <button aria-controls="gux-2-2-panel" aria-selected="false" class="gux-tab" id="gux-2-2-tab" role="tab" tabindex="-1" type="button">
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
             <gux-tooltip-title>
               <span>
                 Tab Header 2
@@ -35,9 +38,9 @@ exports[`gux-tabs #render should render as expected 1`] = `
             </gux-tooltip-title>
           </button>
         </gux-tab>
-        <gux-tab tab-id="2-3">
+        <gux-tab tab-id="c">
           <!---->
-          <button aria-controls="gux-2-3-panel" aria-selected="false" class="gux-tab" id="gux-2-3-tab" role="tab" tabindex="-1" type="button">
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
             <gux-tooltip-title>
               <span>
                 Tab Header 3
@@ -45,9 +48,9 @@ exports[`gux-tabs #render should render as expected 1`] = `
             </gux-tooltip-title>
           </button>
         </gux-tab>
-        <gux-tab gux-disabled="" tab-id="2-4">
+        <gux-tab tab-id="d" gux-disabled="">
           <!---->
-          <button aria-controls="gux-2-4-panel" aria-selected="false" class="gux-disabled gux-tab" disabled="" id="gux-2-4-tab" role="tab" type="button">
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
             <gux-tooltip-title>
               <span>
                 Tab Header 4
@@ -55,9 +58,9 @@ exports[`gux-tabs #render should render as expected 1`] = `
             </gux-tooltip-title>
           </button>
         </gux-tab>
-        <gux-tab gux-disabled="true" tab-id="2-5">
+        <gux-tab tab-id="e" gux-disabled="">
           <!---->
-          <button aria-controls="gux-2-5-panel" aria-selected="false" class="gux-disabled gux-tab" disabled="" id="gux-2-5-tab" role="tab" type="button">
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
             <gux-tooltip-title>
               <span>
                 Tab Header 5
@@ -66,60 +69,64 @@ exports[`gux-tabs #render should render as expected 1`] = `
           </button>
         </gux-tab>
       </div>
-      <div class="gux-scroll-button-container"></div>
+      <div class="gux-scroll-button-container">
+      </div>
     </div>
   </gux-tab-list>
-  <gux-tab-panel aria-labelledby="gux-2-1-tab" hidden="" id="gux-2-1-panel" role="tabpanel" tab-id="2-1" tabindex="0">
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
     <template shadowrootmode="open">
-      <slot></slot>
-    </template>
-    Tab content 1
+      <slot>
+      </slot>
+    </template>Tab content 1
   </gux-tab-panel>
-  <gux-tab-panel aria-labelledby="gux-2-2-tab" hidden="" id="gux-2-2-panel" role="tabpanel" tab-id="2-2" tabindex="0">
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
     <template shadowrootmode="open">
-      <slot></slot>
-    </template>
-    Tab content 2
+      <slot>
+      </slot>
+    </template>Tab content 2
   </gux-tab-panel>
-  <gux-tab-panel aria-labelledby="gux-2-3-tab" hidden="" id="gux-2-3-panel" role="tabpanel" tab-id="2-3" tabindex="0">
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
     <template shadowrootmode="open">
-      <slot></slot>
-    </template>
-    Tab content 3
+      <slot>
+      </slot>
+    </template>Tab content 3
   </gux-tab-panel>
-  <gux-tab-panel aria-labelledby="gux-2-4-tab" hidden="" id="gux-2-4-panel" role="tabpanel" tab-id="2-4" tabindex="0">
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
     <template shadowrootmode="open">
-      <slot></slot>
-    </template>
-    Tab content 4
+      <slot>
+      </slot>
+    </template>Tab content 4
   </gux-tab-panel>
-  <gux-tab-panel aria-labelledby="gux-2-5-tab" hidden="" id="gux-2-5-panel" role="tabpanel" tab-id="2-5" tabindex="0">
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
     <template shadowrootmode="open">
-      <slot></slot>
-    </template>
-    Tab content 5
+      <slot>
+      </slot>
+    </template>Tab content 5
   </gux-tab-panel>
 </gux-tabs>
 `;
 
-exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
-<gux-tabs orientation="vertical">
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to horizontal and fullWidth respectively 1`] = `
+<gux-tabs orientation="horizontal" alignment="fullWidth" class="gux-tabs-horizontal">
   <template shadowrootmode="open">
-    <div class="gux-left gux-tabs gux-vertical">
-      <slot name="tab-list"></slot>
-      <div class="gux-left gux-panel-container gux-vertical">
-        <slot></slot>
+    <div class="gux-tabs gux-fullWidth gux-horizontal">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-fullWidth gux-horizontal gux-panel-container">
+        <slot>
+        </slot>
       </div>
     </div>
   </template>
   <gux-tab-list slot="tab-list">
     <!---->
     <div class="gux-tab-container">
-      <div class="gux-scroll-button-container"></div>
-      <div aria-owns="gux-2-1-tab gux-2-2-tab gux-2-3-tab" class="gux-scrollable-section" role="tablist">
-        <gux-tab tab-id="2-1">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
           <!---->
-          <button aria-controls="gux-2-1-panel" aria-selected="false" class="gux-tab" id="gux-2-1-tab" role="tab" tabindex="-1" type="button">
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
             <gux-tooltip-title>
               <span>
                 Tab Header 1
@@ -127,9 +134,9 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
             </gux-tooltip-title>
           </button>
         </gux-tab>
-        <gux-tab tab-id="2-2">
+        <gux-tab tab-id="b">
           <!---->
-          <button aria-controls="gux-2-2-panel" aria-selected="false" class="gux-tab" id="gux-2-2-tab" role="tab" tabindex="-1" type="button">
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
             <gux-tooltip-title>
               <span>
                 Tab Header 2
@@ -137,9 +144,9 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
             </gux-tooltip-title>
           </button>
         </gux-tab>
-        <gux-tab tab-id="2-3">
+        <gux-tab tab-id="c">
           <!---->
-          <button aria-controls="gux-2-3-panel" aria-selected="false" class="gux-tab" id="gux-2-3-tab" role="tab" tabindex="-1" type="button">
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
             <gux-tooltip-title>
               <span>
                 Tab Header 3
@@ -147,9 +154,9 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
             </gux-tooltip-title>
           </button>
         </gux-tab>
-        <gux-tab gux-disabled="" tab-id="2-4">
+        <gux-tab tab-id="d" gux-disabled="">
           <!---->
-          <button aria-controls="gux-2-4-panel" aria-selected="false" class="gux-disabled gux-tab" disabled="" id="gux-2-4-tab" role="tab" type="button">
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
             <gux-tooltip-title>
               <span>
                 Tab Header 4
@@ -157,9 +164,9 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
             </gux-tooltip-title>
           </button>
         </gux-tab>
-        <gux-tab gux-disabled="true" tab-id="2-5">
+        <gux-tab tab-id="e" gux-disabled="">
           <!---->
-          <button aria-controls="gux-2-5-panel" aria-selected="false" class="gux-disabled gux-tab" disabled="" id="gux-2-5-tab" role="tab" type="button">
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
             <gux-tooltip-title>
               <span>
                 Tab Header 5
@@ -168,38 +175,1205 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
           </button>
         </gux-tab>
       </div>
-      <div class="gux-scroll-button-container"></div>
+      <div class="gux-scroll-button-container">
+      </div>
     </div>
   </gux-tab-list>
-  <gux-tab-panel aria-labelledby="gux-2-1-tab" hidden="" id="gux-2-1-panel" role="tabpanel" tab-id="2-1" tabindex="0">
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
     <template shadowrootmode="open">
-      <slot></slot>
-    </template>
-    Tab content 1
+      <slot>
+      </slot>
+    </template>Tab content 1
   </gux-tab-panel>
-  <gux-tab-panel aria-labelledby="gux-2-2-tab" hidden="" id="gux-2-2-panel" role="tabpanel" tab-id="2-2" tabindex="0">
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
     <template shadowrootmode="open">
-      <slot></slot>
-    </template>
-    Tab content 2
+      <slot>
+      </slot>
+    </template>Tab content 2
   </gux-tab-panel>
-  <gux-tab-panel aria-labelledby="gux-2-3-tab" hidden="" id="gux-2-3-panel" role="tabpanel" tab-id="2-3" tabindex="0">
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
     <template shadowrootmode="open">
-      <slot></slot>
-    </template>
-    Tab content 3
+      <slot>
+      </slot>
+    </template>Tab content 3
   </gux-tab-panel>
-  <gux-tab-panel aria-labelledby="gux-2-4-tab" hidden="" id="gux-2-4-panel" role="tabpanel" tab-id="2-4" tabindex="0">
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
     <template shadowrootmode="open">
-      <slot></slot>
-    </template>
-    Tab content 4
+      <slot>
+      </slot>
+    </template>Tab content 4
   </gux-tab-panel>
-  <gux-tab-panel aria-labelledby="gux-2-5-tab" hidden="" id="gux-2-5-panel" role="tabpanel" tab-id="2-5" tabindex="0">
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
     <template shadowrootmode="open">
-      <slot></slot>
-    </template>
-    Tab content 5
+      <slot>
+      </slot>
+    </template>Tab content 5
+  </gux-tab-panel>
+</gux-tabs>
+`;
+
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to horizontal and left respectively 1`] = `
+<gux-tabs orientation="horizontal" alignment="left" class="gux-tabs-horizontal">
+  <template shadowrootmode="open">
+    <div class="gux-tabs gux-left gux-horizontal">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-left gux-horizontal gux-panel-container">
+        <slot>
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-tab-list slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="b">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="c">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="d" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="e" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+      </div>
+      <div class="gux-scroll-button-container">
+      </div>
+    </div>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 1
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 2
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 3
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 4
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 5
+  </gux-tab-panel>
+</gux-tabs>
+`;
+
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to horizontal and null respectively 1`] = `
+<gux-tabs orientation="horizontal" class="gux-tabs-horizontal">
+  <template shadowrootmode="open">
+    <div class="gux-tabs gux-left gux-horizontal">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-left gux-horizontal gux-panel-container">
+        <slot>
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-tab-list slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="b">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="c">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="d" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="e" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+      </div>
+      <div class="gux-scroll-button-container">
+      </div>
+    </div>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 1
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 2
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 3
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 4
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 5
+  </gux-tab-panel>
+</gux-tabs>
+`;
+
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to null and center respectively 1`] = `
+<gux-tabs alignment="center" class="gux-tabs-horizontal">
+  <template shadowrootmode="open">
+    <div class="gux-tabs gux-center gux-horizontal">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-center gux-horizontal gux-panel-container">
+        <slot>
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-tab-list slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="b">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="c">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="d" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="e" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+      </div>
+      <div class="gux-scroll-button-container">
+      </div>
+    </div>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 1
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 2
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 3
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 4
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 5
+  </gux-tab-panel>
+</gux-tabs>
+`;
+
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to null and fullWidth respectively 1`] = `
+<gux-tabs alignment="fullWidth" class="gux-tabs-horizontal">
+  <template shadowrootmode="open">
+    <div class="gux-tabs gux-fullWidth gux-horizontal">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-fullWidth gux-horizontal gux-panel-container">
+        <slot>
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-tab-list slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="b">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="c">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="d" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="e" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+      </div>
+      <div class="gux-scroll-button-container">
+      </div>
+    </div>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 1
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 2
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 3
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 4
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 5
+  </gux-tab-panel>
+</gux-tabs>
+`;
+
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to null and left respectively 1`] = `
+<gux-tabs alignment="left" class="gux-tabs-horizontal">
+  <template shadowrootmode="open">
+    <div class="gux-tabs gux-left gux-horizontal">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-left gux-horizontal gux-panel-container">
+        <slot>
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-tab-list slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="b">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="c">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="d" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="e" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+      </div>
+      <div class="gux-scroll-button-container">
+      </div>
+    </div>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 1
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 2
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 3
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 4
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 5
+  </gux-tab-panel>
+</gux-tabs>
+`;
+
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to null and null respectively 1`] = `
+<gux-tabs class="gux-tabs-horizontal">
+  <template shadowrootmode="open">
+    <div class="gux-tabs gux-left gux-horizontal">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-left gux-horizontal gux-panel-container">
+        <slot>
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-tab-list slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="b">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="c">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="d" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="e" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+      </div>
+      <div class="gux-scroll-button-container">
+      </div>
+    </div>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 1
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 2
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 3
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 4
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 5
+  </gux-tab-panel>
+</gux-tabs>
+`;
+
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to vertical and center respectively 1`] = `
+<gux-tabs orientation="vertical" alignment="center" class="gux-tabs-vertical">
+  <template shadowrootmode="open">
+    <div class="gux-tabs gux-center gux-vertical">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-center gux-vertical gux-panel-container">
+        <slot>
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-tab-list slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="b">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="c">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="d" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="e" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+      </div>
+      <div class="gux-scroll-button-container">
+      </div>
+    </div>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 1
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 2
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 3
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 4
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 5
+  </gux-tab-panel>
+</gux-tabs>
+`;
+
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to vertical and fullWidth respectively 1`] = `
+<gux-tabs orientation="vertical" alignment="fullWidth" class="gux-tabs-vertical">
+  <template shadowrootmode="open">
+    <div class="gux-tabs gux-fullWidth gux-vertical">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-fullWidth gux-vertical gux-panel-container">
+        <slot>
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-tab-list slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="b">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="c">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="d" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="e" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+      </div>
+      <div class="gux-scroll-button-container">
+      </div>
+    </div>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 1
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 2
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 3
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 4
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 5
+  </gux-tab-panel>
+</gux-tabs>
+`;
+
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to vertical and left respectively 1`] = `
+<gux-tabs orientation="vertical" alignment="left" class="gux-tabs-vertical">
+  <template shadowrootmode="open">
+    <div class="gux-tabs gux-left gux-vertical">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-left gux-vertical gux-panel-container">
+        <slot>
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-tab-list slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="b">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="c">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="d" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="e" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+      </div>
+      <div class="gux-scroll-button-container">
+      </div>
+    </div>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 1
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 2
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 3
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 4
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 5
+  </gux-tab-panel>
+</gux-tabs>
+`;
+
+exports[`gux-tabs #render should render as expected when orientation and alignment are set to vertical and null respectively 1`] = `
+<gux-tabs orientation="vertical" class="gux-tabs-vertical">
+  <template shadowrootmode="open">
+    <div class="gux-tabs gux-left gux-vertical">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-left gux-vertical gux-panel-container">
+        <slot>
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-tab-list slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="b">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="c">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="d" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="e" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+      </div>
+      <div class="gux-scroll-button-container">
+      </div>
+    </div>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 1
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 2
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 3
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 4
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 5
+  </gux-tab-panel>
+</gux-tabs>
+`;
+
+exports[`gux-tabs #render should render as expected when tabs overflow their container 1`] = `
+<gux-tabs class="gux-tabs-horizontal">
+  <template shadowrootmode="open">
+    <div class="gux-tabs gux-left gux-horizontal">
+      <slot name="tab-list">
+      </slot>
+      <div class="gux-left gux-horizontal gux-panel-container">
+        <slot>
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-tab-list slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container">
+      </div>
+      <div role="tablist" class="gux-scrollable-section" aria-owns="gux-a-tab gux-b-tab gux-c-tab">
+        <gux-tab tab-id="a">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-a-tab" role="tab" aria-controls="gux-a-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="b">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-b-tab" role="tab" aria-controls="gux-b-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="c">
+          <!---->
+          <button class="gux-tab" type="button" id="gux-c-tab" role="tab" aria-controls="gux-c-panel" aria-selected="false" tabindex="-1">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="d" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-d-tab" role="tab" aria-controls="gux-d-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+        <gux-tab tab-id="e" gux-disabled="">
+          <!---->
+          <button class="gux-disabled gux-tab" type="button" disabled="" id="gux-e-tab" role="tab" aria-controls="gux-e-panel" aria-selected="false">
+            <gux-tooltip-title>
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title>
+          </button>
+        </gux-tab>
+      </div>
+      <div class="gux-scroll-button-container">
+      </div>
+    </div>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="a" id="gux-a-panel" role="tabpanel" aria-labelledby="gux-a-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 1
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="b" id="gux-b-panel" role="tabpanel" aria-labelledby="gux-b-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 2
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="c" id="gux-c-panel" role="tabpanel" aria-labelledby="gux-c-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 3
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="d" id="gux-d-panel" role="tabpanel" aria-labelledby="gux-d-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 4
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="e" id="gux-e-panel" role="tabpanel" aria-labelledby="gux-e-tab" tabindex="0" hidden="">
+    <template shadowrootmode="open">
+      <slot>
+      </slot>
+    </template>Tab content 5
   </gux-tab-panel>
 </gux-tabs>
 `;

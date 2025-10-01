@@ -1,52 +1,55 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-context-menu renders 1`] = `
 <gux-context-menu>
-  <template shadowrootmode="open">
-    <gux-popup exceed-target-width="" offset="4" placement="bottom-start">
-      <div class="gux-button-container" slot="target">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <gux-popup placement="bottom-start" offset="4" exceed-target-width="">
+      <div slot="target" class="gux-button-container">
         <gux-button-slot accent="ghost">
-          <button aria-expanded="false" aria-haspopup="true" id="gux-i" type="button">
+          <button type="button" id="gux-i" aria-haspopup="true" aria-expanded="false">
             <gux-screen-reader-beta>
               Context menu
             </gux-screen-reader-beta>
-            <gux-icon decorative="" icon-name="fa/ellipsis-vertical-regular" size="small"></gux-icon>
+            <gux-icon icon-name="fa/ellipsis-vertical-regular" size="small" decorative="">
+            </gux-icon>
           </button>
         </gux-button-slot>
       </div>
-      <div class="gux-list-container" slot="popup">
-        <gux-list role="list" tabindex="-1">
+      <div slot="popup" class="gux-list-container">
+        <gux-list tabindex="-1" role="list">
           <template shadowrootmode="open">
-            <slot></slot>
+            <slot>
+            </slot>
           </template>
-          <slot></slot>
+          <slot>
+          </slot>
         </gux-list>
       </div>
     </gux-popup>
   </template>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
-      <button data-testid="list-item-button" tabindex="-1" type="button">
-        <slot></slot>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" tabindex="-1" data-testid="list-item-button">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Test 1
+    </template>Test 1
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
-      <button data-testid="list-item-button" tabindex="-1" type="button">
-        <slot></slot>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" tabindex="-1" data-testid="list-item-button">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Test 2
+    </template>Test 2
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
-      <button data-testid="list-item-button" tabindex="-1" type="button">
-        <slot></slot>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" tabindex="-1" data-testid="list-item-button">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Test 3
+    </template>Test 3
   </gux-list-item>
 </gux-context-menu>
 `;

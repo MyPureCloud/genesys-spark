@@ -152,6 +152,8 @@
   inline-size: fit-content;
   min-inline-size: ui.$gse-ui-phoneInput-dropdown-menu-minWidth;
   margin: 0;
+  border-radius: ui.$gse-ui-menu-borderRadius;
+  box-shadow: ui.$gse-ui-menu-boxShadow;
 }
 
 .gux-option-content {

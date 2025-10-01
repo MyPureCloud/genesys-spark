@@ -1,12 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`gux-rich-text-editor-action-text-highlight should build and render 1`] = `
+exports[`gux-rich-text-editor-action-text-highlight #render should render component as expected (1) 1`] = `
 <gux-rich-text-editor-action-text-highlight>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup exceedtargetwidth="" placement="bottom-start">
       <gux-button-slot accent="ghost" icon-only="" slot="target">
-        <button aria-expanded="false" aria-haspopup="true" aria-pressed="false" type="button">
-          <gux-icon decorative="" icon-name="fa/highlighter-line-regular" size="small"></gux-icon>
+        <button type="button" aria-haspopup="true" aria-expanded="false" aria-pressed="false">
+          <gux-icon size="small" icon-name="fa/highlighter-line-regular" decorative="">
+          </gux-icon>
           <gux-screen-reader-beta>
             Text Highlight
           </gux-screen-reader-beta>
@@ -26,19 +27,78 @@ exports[`gux-rich-text-editor-action-text-highlight should build and render 1`] 
           </button>
         </gux-button-slot>
         <gux-rich-text-editor-list>
-          <slot></slot>
+          <slot>
+          </slot>
         </gux-rich-text-editor-list>
       </div>
     </gux-popup>
   </template>
-  <gux-rich-highlight-list-item highlight="tomato"></gux-rich-highlight-list-item>
-  <gux-rich-highlight-list-item highlight="coral"></gux-rich-highlight-list-item>
-  <gux-rich-highlight-list-item highlight="pear"></gux-rich-highlight-list-item>
-  <gux-rich-highlight-list-item highlight="mango"></gux-rich-highlight-list-item>
-  <gux-rich-highlight-list-item highlight="raspberry"></gux-rich-highlight-list-item>
-  <gux-rich-highlight-list-item highlight="blueberry"></gux-rich-highlight-list-item>
-  <gux-rich-highlight-list-item highlight="mineral"></gux-rich-highlight-list-item>
-  <gux-rich-highlight-list-item highlight="islandaqua"></gux-rich-highlight-list-item>
-  <gux-rich-highlight-list-item class="custom-highlight" highlight="inherit"></gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="tomato">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="coral">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="pear">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="mango">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="raspberry">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="blueberry">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="mineral">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="islandaqua">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item class="custom-highlight" highlight="inherit">
+  </gux-rich-highlight-list-item>
+</gux-rich-text-editor-action-text-highlight>
+`;
+
+exports[`gux-rich-text-editor-action-text-highlight #render should render component as expected (2) 1`] = `
+<gux-rich-text-editor-action-text-highlight disabled="">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <gux-popup disabled="" exceedtargetwidth="" placement="bottom-start">
+      <gux-button-slot accent="ghost" icon-only="" slot="target">
+        <button type="button" disabled="" aria-haspopup="true" aria-expanded="false" aria-pressed="false">
+          <gux-icon size="small" icon-name="fa/highlighter-line-regular" decorative="">
+          </gux-icon>
+          <gux-screen-reader-beta>
+            Text Highlight
+          </gux-screen-reader-beta>
+        </button>
+      </gux-button-slot>
+      <div class="gux-text-highlight-popup" slot="popup">
+        <gux-button-slot accent="tertiary">
+          <button type="button">
+            <gux-truncate max-lines="1">
+              No Highlight
+            </gux-truncate>
+          </button>
+        </gux-button-slot>
+        <gux-rich-text-editor-list>
+          <slot>
+          </slot>
+        </gux-rich-text-editor-list>
+      </div>
+    </gux-popup>
+  </template>
+  <gux-rich-highlight-list-item highlight="tomato">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="coral">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="pear">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="mango">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="raspberry">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="blueberry">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="mineral">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="islandaqua">
+  </gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item class="custom-highlight" highlight="inherit">
+  </gux-rich-highlight-list-item>
 </gux-rich-text-editor-action-text-highlight>
 `;

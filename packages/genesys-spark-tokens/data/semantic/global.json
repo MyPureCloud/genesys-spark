@@ -1100,62 +1100,70 @@
         "type": "sizing",
         "description": "The recommended divider indicator width, used for the indicators of active tabs, for example"
       }
+    },
+    "action": {
+      "height": {
+        "value": "{size.2xs}",
+        "type": "sizing",
+        "description": "This token was created for the Segmented Control divder line height."
+      }
     }
   },
   "z_index": {
     "base": {
       "value": "{z_index.0}",
-      "type": "zindex"
+      "type": "zindex",
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "show-focus": {
       "value": "{z_index.1}",
       "type": "zindex",
-      "description": "The recommended z-index for focus outlines."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "sticky": {
       "value": "{z_index.1}",
       "type": "zindex",
-      "description": "The recommended z-index for sticky elements."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "popup": {
       "value": "{z_index.100}",
       "type": "zindex",
-      "description": "The recommended z-index for popup elements."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "popover": {
       "value": "{z_index.200}",
       "type": "zindex",
-      "description": "The recommended z-index for popover elements."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "tooltip": {
       "value": "{z_index.200}",
       "type": "zindex",
-      "description": "The recommended z-index for tooltips."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "panel": {
       "value": "{z_index.300}",
       "type": "zindex",
-      "description": "The recommended z-index for panel elements."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "navbar": {
       "value": "{z_index.400}",
       "type": "zindex",
-      "description": "The recommended z-index for navbars."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "sidebar": {
       "value": "{z_index.400}",
       "type": "zindex",
-      "description": "The recommended z-index for sidebars."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "toast": {
       "value": "{z_index.500}",
       "type": "zindex",
-      "description": "The recommended z-index for toasts."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "modal": {
       "value": "{z_index.600}",
       "type": "zindex",
-      "description": "The recommended z-index for modals."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     }
   },
   "code": {
@@ -1169,6 +1177,462 @@
         },
         "type": "typography",
         "description": "This typography token is recommended to be used only for code blocks."
+      }
+    }
+  },
+  "shadow": {
+    "1_card": {
+      "default": {
+        "value": {
+          "x": "0",
+          "y": "2",
+          "blur": "3",
+          "spread": "1",
+          "color": "{effects.shadows.10}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "This is the shadow style we use in cards in the default state."
+      },
+      "hover": {
+        "value": {
+          "x": "0",
+          "y": "2",
+          "blur": "4",
+          "spread": "3",
+          "color": "{effects.shadows.30}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "This is the shadow style we use in cards in the hover state."
+      }
+    },
+    "2_side_panel": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.20}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "2",
+          "blur": "3",
+          "spread": "0",
+          "color": "{effects.shadows.30}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Side Panels."
+    },
+    "4_copilot": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.20}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "2",
+          "blur": "3",
+          "spread": "0",
+          "color": "{effects.shadows.30}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Side Panels."
+    },
+    "6_modal": {
+      "value": [
+        {
+          "x": "0",
+          "y": "2",
+          "blur": "4",
+          "spread": "3",
+          "color": "{effects.shadows.30}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Modals."
+    },
+    "7_menu": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.30}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.30}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Floating Menus; like the dropdown or calendar menus."
+    },
+    "8_dragged_item": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.40}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "1",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.40}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in elements that are currently being dragged by the user."
+    },
+    "9_toast": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.40}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.40}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Toasts."
+    },
+    "10_tooltip": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.40}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.40}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Tooltips."
+    },
+    "scroll_indicator": {
+      "value": {
+        "x": "0",
+        "y": "-4",
+        "blur": "14",
+        "spread": "4",
+        "color": "{effects.shadows.20}",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    }
+  },
+  "elevation": {
+    "0_page": {
+      "value": "{z_index.0}",
+      "type": "zindex",
+      "description": "The base token for elevation."
+    },
+    "1_card": {
+      "value": "{z_index.100}",
+      "type": "zindex",
+      "description": "The recommended z-index for cards."
+    },
+    "2_side_panel": {
+      "value": "{z_index.200}",
+      "type": "zindex",
+      "description": "The recommended z-index for side panels."
+    },
+    "3_global_navigation": {
+      "value": "{z_index.300}",
+      "type": "zindex",
+      "description": "The recommended z-index for global navigation."
+    },
+    "4_copilot": {
+      "value": "{z_index.400}",
+      "type": "zindex",
+      "description": "The recommended z-index for the copilot panel."
+    },
+    "5_shroud": {
+      "value": "{z_index.500}",
+      "type": "zindex",
+      "description": "The recommended z-index for shrouds."
+    },
+    "6_modal": {
+      "value": "{z_index.550}",
+      "type": "zindex",
+      "description": "The recommended z-index for modals."
+    },
+    "7_menu": {
+      "value": "{z_index.600}",
+      "type": "zindex",
+      "description": "The recommended z-index for menus, like dropdown menus or popovers."
+    },
+    "8_dragged_item": {
+      "value": "{z_index.700}",
+      "type": "zindex",
+      "description": "The recommended z-index for items that are currently being dragged by the user."
+    },
+    "9_toast": {
+      "value": "{z_index.800}",
+      "type": "zindex",
+      "description": "The recommended z-index for toasts."
+    },
+    "10_tooltip": {
+      "value": "{z_index.900}",
+      "type": "zindex",
+      "description": "The recommended z-index for tooltips."
+    }
+  },
+  "glow": {
+    "ai": {
+      "default": {
+        "value": [
+          {
+            "x": "0",
+            "y": "1px",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.yellow.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "-1px",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.orange.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-1px",
+            "y": "0",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.gold.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "1px",
+            "y": "0",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.teal.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-1px",
+            "y": "1px",
+            "blur": "4px",
+            "spread": "0",
+            "color": "{effects.ai_glow.yellow.30}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "1px",
+            "blur": "4px",
+            "spread": "0",
+            "color": "{effects.ai_glow.orange.40}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-1px",
+            "y": "0",
+            "blur": "4px",
+            "spread": "0",
+            "color": "{effects.ai_glow.gold.40}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "1px",
+            "y": "0",
+            "blur": "4px",
+            "spread": "0",
+            "color": "{effects.ai_glow.teal.50}",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow",
+        "description": "The glow we use to highlight important AI elements."
+      },
+      "hover": {
+        "value": [
+          {
+            "x": "0",
+            "y": "1px",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.yellow.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "-1px",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.orange.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-1px",
+            "y": "0",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.gold.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "1px",
+            "y": "0",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.teal.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-1px",
+            "y": "3px",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.yellow.40}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "-3px",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.orange.60}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-3px",
+            "y": "0",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.gold.60}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "3px",
+            "y": "0",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.teal.70}",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow",
+        "description": "The glow we use to highlight important AI elements on the hover state."
+      },
+      "active": {
+        "value": [
+          {
+            "x": "0",
+            "y": "1px",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.yellow.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "-1px",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.orange.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-1px",
+            "y": "0",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.gold.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "1px",
+            "y": "0",
+            "blur": "0",
+            "spread": "0",
+            "color": "{effects.ai_glow.teal.100}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-1px",
+            "y": "4px",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.yellow.40}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "-4px",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.orange.60}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-4px",
+            "y": "0",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.gold.60}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "4px",
+            "y": "0",
+            "blur": "6px",
+            "spread": "0",
+            "color": "{effects.ai_glow.teal.70}",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow",
+        "description": "The glow we use to highlight important AI elements on the active state."
       }
     }
   }

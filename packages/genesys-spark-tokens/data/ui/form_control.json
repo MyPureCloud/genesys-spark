@@ -305,6 +305,12 @@
         "value": "{theme.border_radius.form_control.input.medium}",
         "type": "borderRadius"
       }
+    },
+    "form_stepper": {
+      "gap": {
+        "value": "{spacing.xl}",
+        "type": "spacing"
+      }
     }
   }
 }

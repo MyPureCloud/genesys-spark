@@ -79,5 +79,14 @@ export default [
       '@typescript-eslint/unbound-method': 'off',
       '@typescript-eslint/require-await': 'off'
     }
+  },
+  {
+    files: ['**/*.spec.{ts,js}'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+        ...globals.node
+      }
+    }
   }
 ];

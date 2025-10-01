@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-avatar-overflow-item-beta #render renders with name 1`] = `"<gux-avatar-overflow-item-beta name="John Doe" role="menuitem" hydrated=""><template shadowrootmode="open"><button type="button" aria-label="John Doe" tabindex="-1"><span class="gux-avatar gux-accent-3"><slot name="image"><span class="gux-avatar-initials" aria-hidden="true">JD</span></slot></span><span>John Doe</span></button></template></gux-avatar-overflow-item-beta>"`;

@@ -1,32 +1,30 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 
-gux-tabs[orientation='vertical'] > gux-tab-list {
-  gux-tab {
-    box-sizing: border-box;
-    border-inline-end: ui.$gse-ui-tabs-item-divider-vertical-width solid
-      ui.$gse-ui-tabs-item-divider-dividerColor;
+gux-tab.gux-vertical {
+  box-sizing: border-box;
+  border-inline-end: ui.$gse-ui-tabs-item-divider-vertical-width solid
+    ui.$gse-ui-tabs-item-divider-dividerColor;
 
-    .gux-tab {
-      display: flex;
-      justify-content: flex-end;
-      inline-size: ui.$gse-ui-tabs-set-vertical-width;
-      block-size: ui.$gse-ui-tabs-item-vertical-fixedHeight;
-      padding: ui.$gse-ui-tabs-item-vertical-padding;
-      border-inline-end: ui.$gse-ui-tabs-item-indicator-vertical-width solid
-        transparent;
+  .gux-tab {
+    display: flex;
+    justify-content: flex-end;
+    inline-size: ui.$gse-ui-tabs-set-vertical-width;
+    block-size: ui.$gse-ui-tabs-item-vertical-fixedHeight;
+    padding: ui.$gse-ui-tabs-item-vertical-padding;
+    border-inline-end: ui.$gse-ui-tabs-item-indicator-vertical-width solid
+      transparent;
 
-      &.gux-active {
-        border-inline-end-color: ui.$gse-ui-tabs-item-indicator-activeColor;
-      }
+    &.gux-active {
+      border-inline-end-color: ui.$gse-ui-tabs-item-indicator-activeColor;
+    }
 
-      &:hover:not(.gux-active):not(.gux-disabled) {
-        border-inline-end-color: ui.$gse-ui-tabs-item-indicator-hoverColor;
-      }
+    &:hover:not(.gux-active):not(.gux-disabled) {
+      border-inline-end-color: ui.$gse-ui-tabs-item-indicator-hoverColor;
     }
   }
 }
 
-gux-tabs:not([orientation='vertical']) > gux-tab-list {
+gux-tab.gux-horizontal {
   .gux-tab {
     box-sizing: border-box;
     max-inline-size: 160px;

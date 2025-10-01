@@ -1,5 +1,5 @@
 import { AxeResults } from 'axe-core';
-import { expect as baseExpect } from '@playwright/test';
+import { expect as baseExpect, Locator } from '@playwright/test';
 import { test, E2EPage } from '@stencil/playwright';
 import AxeBuilder from '@axe-core/playwright';
 import { RenderConfig } from './commonTestUtils';
@@ -23,7 +23,7 @@ async function setMode(page: E2EPage, mode: Mode) {
   );
 }
 
-async function runAxe(page: E2EPage): Promise<AxeResults> {
+export async function runAxe(page: E2EPage): Promise<AxeResults> {
   return new AxeBuilder({ page })
     .withTags([
       'wcag2a',
@@ -70,7 +70,7 @@ export async function snap(
 
   const animations = disableAnimations ? 'disabled' : 'allow';
 
-  if (await page.locator('gux-tooltip').isVisible()) {
+  if (await anyVisible(page.locator('gux-tooltip'))) {
     expect(await page.screenshot({ animations })).toMatchSnapshot();
   } else if (element && (await page.locator(element).isVisible())) {
     expect(
@@ -78,6 +78,21 @@ export async function snap(
     ).toMatchSnapshot();
   } else {
     expect(await page.screenshot({ animations })).toMatchSnapshot();
+  }
+}
+
+async function anyVisible(locator: Locator): Promise<boolean> {
+  for await (const l of iterateLocator(locator)) {
+    if (await l.isVisible()) {
+      return true;
+    }
+  }
+  return false;
+}
+
+async function* iterateLocator(locator: Locator): AsyncGenerator<Locator> {
+  for (let index = 0; index < (await locator.count()); index++) {
+    yield locator.nth(index);
   }
 }
 

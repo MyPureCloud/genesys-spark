@@ -51,6 +51,7 @@ graph TD;
   gux-form-field-text-like --> gux-form-field-input-clear-button
   gux-form-field-text-like --> gux-icon
   gux-form-field-input-clear-button --> gux-icon
+  gux-form-field-input-clear-button --> gux-tooltip-beta
   gux-button --> gux-tooltip-beta
   style gux-rich-text-editor-action-link fill:#f9f,stroke:#333,stroke-width:4px
 ```

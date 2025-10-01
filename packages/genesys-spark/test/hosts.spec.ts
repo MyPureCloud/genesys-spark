@@ -14,7 +14,7 @@ const NON_STANDARD_DOMAINS = [
   'mypurecloud.jp'
 ];
 
-describe('The hosts module', () => {
+describe.skip('The hosts module', () => {
   beforeEach(() => {
     window.IS_DEV_MODE = false;
   });

@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-tooltip-title #render should render component as expected (1) 1`] = `"<gux-tooltip-title hydrated="" class="gux-overflow-hidden" aria-describedby="gux-tooltip-i"><!----><span class="gux-title-container"><span><slot aria-hidden="true" onslotchange="{this.onSlotChange.bind(this)}">Some long text to truncate and use a tooltip</slot></span></span><gux-tooltip aria-hidden="true" hidden="" id="gux-tooltip-i" role="tooltip" hydrated=""><div slot="content"></div></gux-tooltip></gux-tooltip-title>"`;
-
-exports[`gux-tooltip-title #render should render component as expected (2) 1`] = `"<gux-tooltip-title hydrated=""><!----><span class="gux-title-container"><div style="max-width: 200px;">Some short text</div></span></gux-tooltip-title>"`;

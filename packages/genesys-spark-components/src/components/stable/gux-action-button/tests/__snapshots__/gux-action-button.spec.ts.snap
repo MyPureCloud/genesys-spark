@@ -1,28 +1,32 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-action-button renders 1`] = `
-<gux-action-button accent="primary" lang="en">
-  <template shadowrootmode="open">
+<gux-action-button lang="en" accent="primary">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-action-button-container">
-      <gux-popup exceed-target-width="" placement="bottom-end">
-        <div class="gux-action-button-container" slot="target">
-          <gux-button-slot accent="primary" class="gux-action-button">
-            <button data-testid="action-button" type="button">
-              <slot name="title"></slot>
+      <gux-popup placement="bottom-end" exceed-target-width="">
+        <div slot="target" class="gux-action-button-container">
+          <gux-button-slot class="gux-action-button" accent="primary">
+            <button type="button" data-testid="action-button">
+              <slot name="title">
+              </slot>
             </button>
           </gux-button-slot>
-          <gux-button-slot accent="primary" class="gux-dropdown-button">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="More options" data-testid="dropdown-button" type="button">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
+          <gux-button-slot class="gux-dropdown-button" accent="primary">
+            <button type="button" aria-haspopup="true" aria-expanded="false" aria-label="More options" data-testid="dropdown-button">
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small">
+              </gux-icon>
             </button>
           </gux-button-slot>
         </div>
         <div class="gux-list-container" slot="popup">
-          <gux-list role="list" tabindex="-1">
+          <gux-list tabindex="-1" role="list">
             <template shadowrootmode="open">
-              <slot></slot>
+              <slot>
+              </slot>
             </template>
-            <slot></slot>
+            <slot>
+            </slot>
           </gux-list>
         </div>
       </gux-popup>
@@ -32,39 +36,40 @@ exports[`gux-action-button renders 1`] = `
     Primary
   </div>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
-      <button data-testid="list-item-button" tabindex="-1" type="button">
-        <slot></slot>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" tabindex="-1" data-testid="list-item-button">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Test 1
+    </template>Test 1
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
-      <button data-testid="list-item-button" tabindex="-1" type="button">
-        <slot></slot>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" tabindex="-1" data-testid="list-item-button">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Test 2
+    </template>Test 2
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
-      <button data-testid="list-item-button" tabindex="-1" type="button">
-        <slot></slot>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" tabindex="-1" data-testid="list-item-button">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Test 3
+    </template>Test 3
   </gux-list-item>
   <gux-list-divider role="presentation">
-    <template shadowrootmode="open"></template>
+    <template shadowrootmode="open">
+    </template>
   </gux-list-divider>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
-      <button data-testid="list-item-button" tabindex="-1" type="button">
-        <slot></slot>
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" tabindex="-1" data-testid="list-item-button">
+        <slot>
+        </slot>
       </button>
-    </template>
-    Test 4
+    </template>Test 4
   </gux-list-item>
 </gux-action-button>
 `;

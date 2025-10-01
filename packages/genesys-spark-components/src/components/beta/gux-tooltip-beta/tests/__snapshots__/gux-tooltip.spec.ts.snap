@@ -1,79 +1,37 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`gux-tooltip-beta #remove should remove component as expected (1) 1`] = `
-<body>
-  <div aria-describedby="gux-tooltip-i">
-    <div>
-      Element
-    </div>
-  </div>
-</body>
-`;
-
-exports[`gux-tooltip-beta #remove should remove component as expected (2) 1`] = `
-<body>
-  <div>
-    <div aria-describedby="gux-tooltip-i" id="element">
-      Element
-    </div>
-  </div>
-</body>
-`;
-
-exports[`gux-tooltip-beta #render should render component as expected (1) 1`] = `
-<body>
-  <div aria-describedby="gux-tooltip-i">
-    <div>
-      Element
-    </div>
-    <gux-tooltip-beta id="gux-tooltip-i">
-      <template shadowrootmode="open">
-        <gux-tooltip-base-beta>
-          <template shadowrootmode="open">
-            <div class="gux-container gux-light" data-placement="bottom-start">
-              <slot name="content"></slot>
-            </div>
-          </template>
-          <span slot="content">
-            <slot name="content">
-              <slot></slot>
-            </slot>
-          </span>
-        </gux-tooltip-base-beta>
-      </template>
+exports[`gux-tooltip-beta #render should link to "for" element 1`] = `
+<gux-tooltip-beta for="element" id="gux-tooltip-i">
+  <template shadowrootmode="open">
+    <gux-tooltip-base-beta placement="bottom-start" accent="light" tooltipid="gux-tooltip-i">
       <span slot="content">
-        Tooltip
+        <slot name="content">
+          <slot>
+          </slot>
+        </slot>
       </span>
-    </gux-tooltip-beta>
+    </gux-tooltip-base-beta>
+  </template>
+  <div slot="content">
+    Tooltip
   </div>
-</body>
+</gux-tooltip-beta>
 `;
 
-exports[`gux-tooltip-beta #render should render component as expected (2) 1`] = `
-<body>
-  <div>
-    <div aria-describedby="gux-tooltip-i" id="element">
-      Element
-    </div>
-    <gux-tooltip-beta for="element" id="gux-tooltip-i">
-      <template shadowrootmode="open">
-        <gux-tooltip-base-beta>
-          <template shadowrootmode="open">
-            <div class="gux-container gux-light" data-placement="bottom-start">
-              <slot name="content"></slot>
-            </div>
-          </template>
-          <span slot="content">
-            <slot name="content">
-              <slot></slot>
-            </slot>
-          </span>
-        </gux-tooltip-base-beta>
-      </template>
-      <div slot="content">
-        Tooltip
-      </div>
-    </gux-tooltip-beta>
-  </div>
-</body>
+exports[`gux-tooltip-beta #render should link to sibling element 1`] = `
+<gux-tooltip-beta id="gux-tooltip-i">
+  <template shadowrootmode="open">
+    <gux-tooltip-base-beta placement="bottom-start" accent="light" tooltipid="gux-tooltip-i">
+      <span slot="content">
+        <slot name="content">
+          <slot>
+          </slot>
+        </slot>
+      </span>
+    </gux-tooltip-base-beta>
+  </template>
+  <span slot="content">
+    Tooltip
+  </span>
+</gux-tooltip-beta>
 `;

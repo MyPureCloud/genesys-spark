@@ -1,283 +1,300 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`gux-flyout-menu #render should render as expected 1`] = `
-<gux-flyout-menu aria-haspopup="true" tabindex="0">
+exports[`gux-flyout-menu #render Should render as expected menu with submenus 1`] = `
+<gux-flyout-menu tabindex="0" aria-haspopup="true">
   <template shadowrootmode="open">
-    <gux-announce-beta></gux-announce-beta>
+    <gux-announce-beta>
+    </gux-announce-beta>
     <span>
-      <slot name="target"></slot>
+      <slot name="target">
+      </slot>
     </span>
     <div class="gux-flyout-menu-content">
       <div class="gux-arrow">
-        <div class="gux-arrow-caret"></div>
+        <div class="gux-arrow-caret">
+        </div>
       </div>
-      <slot name="menu"></slot>
+      <slot name="menu">
+      </slot>
     </div>
   </template>
   <span slot="target">
     Example Target Element
   </span>
-  <gux-menu role="menu" slot="menu">
+  <gux-menu slot="menu" id="target-menu" role="menu">
     <template shadowrootmode="open">
-      <slot></slot>
+      <slot>
+      </slot>
     </template>
     <gux-menu-option>
       <template shadowrootmode="open">
-        <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+        <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
           <span class="gux-menu-option-button-text">
-            <slot></slot>
+            <slot>
+            </slot>
           </span>
         </button>
-      </template>
-      Option One
+      </template>Option One
     </gux-menu-option>
     <gux-submenu label="Submenu Two">
       <template shadowrootmode="open">
-        <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
+        <button type="button" class="gux-submenu-button" role="menuitem" tabindex="-1" aria-haspopup="true" aria-expanded="false">
           <span class="gux-submenu-button-text">
             Submenu Two
           </span>
-          <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular" size="small"></gux-icon>
+          <gux-icon class="gux-submenu-open-icon" icon-name="custom/chevron-right-small-regular" decorative="" size="small">
+          </gux-icon>
         </button>
         <div class="gux-submenu-wrapper">
-          <div class="gux-submenu-content" role="menu">
-            <slot></slot>
+          <div role="menu" class="gux-submenu-content">
+            <slot>
+            </slot>
           </div>
         </div>
       </template>
       <gux-menu-option>
         <template shadowrootmode="open">
-          <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+          <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
             <span class="gux-menu-option-button-text">
-              <slot></slot>
+              <slot>
+              </slot>
             </span>
           </button>
-        </template>
-        Option One
+        </template>Option One
       </gux-menu-option>
-      <gux-submenu label="Submenu Two">
+      <gux-submenu id="submenu-two" label="Submenu Two">
         <template shadowrootmode="open">
-          <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
+          <button type="button" class="gux-submenu-button" role="menuitem" tabindex="-1" aria-haspopup="true" aria-expanded="false">
             <span class="gux-submenu-button-text">
               Submenu Two
             </span>
-            <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular" size="small"></gux-icon>
+            <gux-icon class="gux-submenu-open-icon" icon-name="custom/chevron-right-small-regular" decorative="" size="small">
+            </gux-icon>
           </button>
           <div class="gux-submenu-wrapper">
-            <div class="gux-submenu-content" role="menu">
-              <slot></slot>
+            <div role="menu" class="gux-submenu-content">
+              <slot>
+              </slot>
             </div>
           </div>
         </template>
         <gux-menu-option>
           <template shadowrootmode="open">
-            <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+            <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
               <span class="gux-menu-option-button-text">
-                <slot></slot>
+                <slot>
+                </slot>
               </span>
             </button>
-          </template>
-          Option One
+          </template>Option One
         </gux-menu-option>
         <gux-menu-option>
           <template shadowrootmode="open">
-            <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+            <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
               <span class="gux-menu-option-button-text">
-                <slot></slot>
+                <slot>
+                </slot>
               </span>
             </button>
-          </template>
-          Option Two
+          </template>Option Two
         </gux-menu-option>
         <gux-menu-option>
           <template shadowrootmode="open">
-            <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+            <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
               <span class="gux-menu-option-button-text">
-                <slot></slot>
+                <slot>
+                </slot>
               </span>
             </button>
-          </template>
-          Option Three
+          </template>Option Three
         </gux-menu-option>
       </gux-submenu>
       <gux-menu-option>
         <template shadowrootmode="open">
-          <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+          <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
             <span class="gux-menu-option-button-text">
-              <slot></slot>
+              <slot>
+              </slot>
             </span>
           </button>
-        </template>
-        Option Three
+        </template>Option Three
       </gux-menu-option>
     </gux-submenu>
     <gux-menu-option>
       <template shadowrootmode="open">
-        <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+        <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
           <span class="gux-menu-option-button-text">
-            <slot></slot>
+            <slot>
+            </slot>
           </span>
         </button>
-      </template>
-      Option Three
+      </template>Option Three
     </gux-menu-option>
     <gux-menu-option>
       <template shadowrootmode="open">
-        <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+        <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
           <span class="gux-menu-option-button-text">
-            <slot></slot>
+            <slot>
+            </slot>
           </span>
         </button>
-      </template>
-      Option Four
+      </template>Option Four
     </gux-menu-option>
     <gux-submenu label="Submenu Five">
       <template shadowrootmode="open">
-        <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
+        <button type="button" class="gux-submenu-button" role="menuitem" tabindex="-1" aria-haspopup="true" aria-expanded="false">
           <span class="gux-submenu-button-text">
             Submenu Five
           </span>
-          <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular" size="small"></gux-icon>
+          <gux-icon class="gux-submenu-open-icon" icon-name="custom/chevron-right-small-regular" decorative="" size="small">
+          </gux-icon>
         </button>
         <div class="gux-submenu-wrapper">
-          <div class="gux-submenu-content" role="menu">
-            <slot></slot>
+          <div role="menu" class="gux-submenu-content">
+            <slot>
+            </slot>
           </div>
         </div>
       </template>
       <gux-menu-option>
         <template shadowrootmode="open">
-          <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+          <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
             <span class="gux-menu-option-button-text">
-              <slot></slot>
+              <slot>
+              </slot>
             </span>
           </button>
-        </template>
-        Option One
+        </template>Option One
       </gux-menu-option>
       <gux-menu-option>
         <template shadowrootmode="open">
-          <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+          <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
             <span class="gux-menu-option-button-text">
-              <slot></slot>
+              <slot>
+              </slot>
             </span>
           </button>
-        </template>
-        Option Two
+        </template>Option Two
       </gux-menu-option>
       <gux-submenu label="Submenu Three">
         <template shadowrootmode="open">
-          <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
+          <button type="button" class="gux-submenu-button" role="menuitem" tabindex="-1" aria-haspopup="true" aria-expanded="false">
             <span class="gux-submenu-button-text">
               Submenu Three
             </span>
-            <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular" size="small"></gux-icon>
+            <gux-icon class="gux-submenu-open-icon" icon-name="custom/chevron-right-small-regular" decorative="" size="small">
+            </gux-icon>
           </button>
           <div class="gux-submenu-wrapper">
-            <div class="gux-submenu-content" role="menu">
-              <slot></slot>
+            <div role="menu" class="gux-submenu-content">
+              <slot>
+              </slot>
             </div>
           </div>
         </template>
         <gux-menu-option>
           <template shadowrootmode="open">
-            <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+            <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
               <span class="gux-menu-option-button-text">
-                <slot></slot>
+                <slot>
+                </slot>
               </span>
             </button>
-          </template>
-          Option One
+          </template>Option One
         </gux-menu-option>
         <gux-submenu label="Submenu Two">
           <template shadowrootmode="open">
-            <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
+            <button type="button" class="gux-submenu-button" role="menuitem" tabindex="-1" aria-haspopup="true" aria-expanded="false">
               <span class="gux-submenu-button-text">
                 Submenu Two
               </span>
-              <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular" size="small"></gux-icon>
+              <gux-icon class="gux-submenu-open-icon" icon-name="custom/chevron-right-small-regular" decorative="" size="small">
+              </gux-icon>
             </button>
             <div class="gux-submenu-wrapper">
-              <div class="gux-submenu-content" role="menu">
-                <slot></slot>
+              <div role="menu" class="gux-submenu-content">
+                <slot>
+                </slot>
               </div>
             </div>
           </template>
           <gux-menu-option>
             <template shadowrootmode="open">
-              <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+              <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
                 <span class="gux-menu-option-button-text">
-                  <slot></slot>
+                  <slot>
+                  </slot>
                 </span>
               </button>
-            </template>
-            Option One
+            </template>Option One
           </gux-menu-option>
           <gux-submenu label="Submenu Two">
             <template shadowrootmode="open">
-              <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
+              <button type="button" class="gux-submenu-button" role="menuitem" tabindex="-1" aria-haspopup="true" aria-expanded="false">
                 <span class="gux-submenu-button-text">
                   Submenu Two
                 </span>
-                <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular" size="small"></gux-icon>
+                <gux-icon class="gux-submenu-open-icon" icon-name="custom/chevron-right-small-regular" decorative="" size="small">
+                </gux-icon>
               </button>
               <div class="gux-submenu-wrapper">
-                <div class="gux-submenu-content" role="menu">
-                  <slot></slot>
+                <div role="menu" class="gux-submenu-content">
+                  <slot>
+                  </slot>
                 </div>
               </div>
             </template>
             <gux-menu-option>
               <template shadowrootmode="open">
-                <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+                <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
                   <span class="gux-menu-option-button-text">
-                    <slot></slot>
+                    <slot>
+                    </slot>
                   </span>
                 </button>
-              </template>
-              Option One
+              </template>Option One
             </gux-menu-option>
             <gux-menu-option>
               <template shadowrootmode="open">
-                <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+                <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
                   <span class="gux-menu-option-button-text">
-                    <slot></slot>
+                    <slot>
+                    </slot>
                   </span>
                 </button>
-              </template>
-              Option Two
+              </template>Option Two
             </gux-menu-option>
             <gux-menu-option>
               <template shadowrootmode="open">
-                <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+                <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
                   <span class="gux-menu-option-button-text">
-                    <slot></slot>
+                    <slot>
+                    </slot>
                   </span>
                 </button>
-              </template>
-              Option Three
+              </template>Option Three
             </gux-menu-option>
           </gux-submenu>
           <gux-menu-option>
             <template shadowrootmode="open">
-              <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+              <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
                 <span class="gux-menu-option-button-text">
-                  <slot></slot>
+                  <slot>
+                  </slot>
                 </span>
               </button>
-            </template>
-            Option Three
+            </template>Option Three
           </gux-menu-option>
         </gux-submenu>
         <gux-menu-option>
           <template shadowrootmode="open">
-            <button aria-haspopup="false" class="gux-menu-option-button" tabindex="-1" type="button">
+            <button type="button" class="gux-menu-option-button" aria-haspopup="false" tabindex="-1">
               <span class="gux-menu-option-button-text">
-                <slot></slot>
+                <slot>
+                </slot>
               </span>
             </button>
-          </template>
-          Option Three
+          </template>Option Three
         </gux-menu-option>
       </gux-submenu>
     </gux-submenu>

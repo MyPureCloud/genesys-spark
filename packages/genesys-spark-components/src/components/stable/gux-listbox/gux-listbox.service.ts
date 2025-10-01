@@ -35,7 +35,8 @@ export function isOption(item: Element): boolean {
     'GUX-OPTION',
     'GUX-OPTION-ICON',
     'GUX-OPTION-MULTI',
-    'GUX-OPTION-STATUS-BETA'
+    'GUX-OPTION-STATUS-BETA',
+    'GUX-SELECT-ALL'
   ];
   return optionTypes.includes(item.tagName);
 }

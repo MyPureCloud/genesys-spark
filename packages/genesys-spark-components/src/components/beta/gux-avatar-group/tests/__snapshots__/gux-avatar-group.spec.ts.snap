@@ -1,26 +1,32 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
+exports[`gux-avatar-group #render renders avatar group 1`] = `
 <gux-avatar-group-beta role="menu">
   <template shadowrootmode="open">
-    <slot></slot>
+    <slot>
+    </slot>
     <gux-avatar-overflow-beta>
-      <gux-avatar-overflow-item-beta accent="auto" name="Paul Quinn"></gux-avatar-overflow-item-beta>
-      <gux-avatar-overflow-item-beta accent="auto" name="Roisin Smyth"></gux-avatar-overflow-item-beta>
-      <gux-avatar-overflow-item-beta accent="auto" name="Thomas U."></gux-avatar-overflow-item-beta>
-      <gux-avatar-overflow-item-beta accent="auto" name="Valerie Wall"></gux-avatar-overflow-item-beta>
-      <gux-avatar-overflow-item-beta accent="auto" name="Xavier Yarrow"></gux-avatar-overflow-item-beta>
+      <gux-avatar-overflow-item-beta name="Paul Quinn" accent="auto">
+      </gux-avatar-overflow-item-beta>
+      <gux-avatar-overflow-item-beta name="Roisin Smyth" accent="auto">
+      </gux-avatar-overflow-item-beta>
+      <gux-avatar-overflow-item-beta name="Thomas U." accent="auto">
+      </gux-avatar-overflow-item-beta>
+      <gux-avatar-overflow-item-beta name="Valerie Wall" accent="auto">
+      </gux-avatar-overflow-item-beta>
+      <gux-avatar-overflow-item-beta name="Xavier Yarrow" accent="auto">
+      </gux-avatar-overflow-item-beta>
     </gux-avatar-overflow-beta>
   </template>
   <gux-avatar-group-item-beta name="Conor Darcy" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Conor Darcy" class="gux-accent-0 gux-avatar" tabindex="0" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Conor Darcy" tabindex="0" class="gux-avatar gux-accent-0">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             CD
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Conor Darcy
           </div>
@@ -29,14 +35,14 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Elliot Fitzgerald" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Elliot Fitzgerald" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Elliot Fitzgerald" tabindex="-1" class="gux-avatar gux-accent-5">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             EF
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Elliot Fitzgerald
           </div>
@@ -45,14 +51,14 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Greg Hayes" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Greg Hayes" class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Greg Hayes" tabindex="-1" class="gux-avatar gux-accent-3">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             GH
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Greg Hayes
           </div>
@@ -61,14 +67,14 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Iseult Jones" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Iseult Jones" class="gux-accent-9 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Iseult Jones" tabindex="-1" class="gux-avatar gux-accent-9">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             IJ
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Iseult Jones
           </div>
@@ -77,14 +83,14 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="John King" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="John King" class="gux-accent-8 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="John King" tabindex="-1" class="gux-avatar gux-accent-8">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             JK
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             John King
           </div>
@@ -93,14 +99,14 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Larissa Mendez" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Larissa Mendez" class="gux-accent-6 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Larissa Mendez" tabindex="-1" class="gux-avatar gux-accent-6">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             LM
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Larissa Mendez
           </div>
@@ -109,14 +115,14 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Nancy Omaha" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Nancy Omaha" class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Nancy Omaha" tabindex="-1" class="gux-avatar gux-accent-3">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             NO
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Nancy Omaha
           </div>
@@ -124,15 +130,15 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
       </button>
     </template>
   </gux-avatar-group-item-beta>
-  <gux-avatar-group-item-beta hidden="" name="Paul Quinn" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Paul Quinn" class="gux-accent-9 gux-avatar" tabindex="-1" type="button">
+  <gux-avatar-group-item-beta name="Paul Quinn" hidden="" role="menuitem">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Paul Quinn" tabindex="-1" class="gux-avatar gux-accent-9">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             PQ
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Paul Quinn
           </div>
@@ -140,15 +146,15 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
       </button>
     </template>
   </gux-avatar-group-item-beta>
-  <gux-avatar-group-item-beta hidden="" name="Roisin Smyth" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Roisin Smyth" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
+  <gux-avatar-group-item-beta name="Roisin Smyth" hidden="" role="menuitem">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Roisin Smyth" tabindex="-1" class="gux-avatar gux-accent-5">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             RS
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Roisin Smyth
           </div>
@@ -156,15 +162,15 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
       </button>
     </template>
   </gux-avatar-group-item-beta>
-  <gux-avatar-group-item-beta hidden="" name="Thomas U." role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Thomas U." class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
+  <gux-avatar-group-item-beta name="Thomas U." hidden="" role="menuitem">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Thomas U." tabindex="-1" class="gux-avatar gux-accent-3">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             TU
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Thomas U.
           </div>
@@ -172,15 +178,15 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
       </button>
     </template>
   </gux-avatar-group-item-beta>
-  <gux-avatar-group-item-beta hidden="" name="Valerie Wall" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Valerie Wall" class="gux-accent-4 gux-avatar" tabindex="-1" type="button">
+  <gux-avatar-group-item-beta name="Valerie Wall" hidden="" role="menuitem">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Valerie Wall" tabindex="-1" class="gux-avatar gux-accent-4">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             VW
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Valerie Wall
           </div>
@@ -188,15 +194,15 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
       </button>
     </template>
   </gux-avatar-group-item-beta>
-  <gux-avatar-group-item-beta hidden="" name="Xavier Yarrow" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Xavier Yarrow" class="gux-accent-3 gux-avatar gux-last-item" tabindex="-1" type="button">
+  <gux-avatar-group-item-beta name="Xavier Yarrow" hidden="" role="menuitem">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Xavier Yarrow" tabindex="-1" class="gux-avatar gux-accent-3 gux-last-item">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             XY
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Xavier Yarrow
           </div>
@@ -207,24 +213,30 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
 </gux-avatar-group-beta>
 `;
 
-exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
+exports[`gux-avatar-group #render renders avatar group with add item 1`] = `
 <gux-avatar-group-beta role="menu">
   <template shadowrootmode="open">
-    <slot></slot>
+    <slot>
+    </slot>
     <gux-avatar-overflow-beta>
-      <gux-avatar-overflow-item-beta accent="auto" name="Paul Quinn"></gux-avatar-overflow-item-beta>
-      <gux-avatar-overflow-item-beta accent="auto" name="Roisin Smyth"></gux-avatar-overflow-item-beta>
-      <gux-avatar-overflow-item-beta accent="auto" name="Thomas U."></gux-avatar-overflow-item-beta>
-      <gux-avatar-overflow-item-beta accent="auto" name="Valerie Wall"></gux-avatar-overflow-item-beta>
-      <gux-avatar-overflow-item-beta accent="auto" name="Xavier Yarrow"></gux-avatar-overflow-item-beta>
+      <gux-avatar-overflow-item-beta name="Paul Quinn" accent="auto">
+      </gux-avatar-overflow-item-beta>
+      <gux-avatar-overflow-item-beta name="Roisin Smyth" accent="auto">
+      </gux-avatar-overflow-item-beta>
+      <gux-avatar-overflow-item-beta name="Thomas U." accent="auto">
+      </gux-avatar-overflow-item-beta>
+      <gux-avatar-overflow-item-beta name="Valerie Wall" accent="auto">
+      </gux-avatar-overflow-item-beta>
+      <gux-avatar-overflow-item-beta name="Xavier Yarrow" accent="auto">
+      </gux-avatar-overflow-item-beta>
     </gux-avatar-overflow-beta>
     <gux-avatar-group-add-item-beta class="gux-add-item-overflow" role="menuitem">
-      <template shadowrootmode="open">
-        <button aria-label="Add more items to group" class="gux-avatar" tabindex="-1" type="button">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
+        <button type="button" aria-label="Add more items to group" tabindex="-1" class="gux-avatar">
           <span aria-hidden="true">
             +
           </span>
-          <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+          <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
             <div slot="content">
               Add more items to group
             </div>
@@ -234,14 +246,14 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </gux-avatar-group-add-item-beta>
   </template>
   <gux-avatar-group-item-beta name="Conor Darcy" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Conor Darcy" class="gux-accent-0 gux-avatar" tabindex="0" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Conor Darcy" tabindex="0" class="gux-avatar gux-accent-0">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             CD
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Conor Darcy
           </div>
@@ -250,14 +262,14 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Elliot Fitzgerald" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Elliot Fitzgerald" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Elliot Fitzgerald" tabindex="-1" class="gux-avatar gux-accent-5">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             EF
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Elliot Fitzgerald
           </div>
@@ -266,14 +278,14 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Greg Hayes" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Greg Hayes" class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Greg Hayes" tabindex="-1" class="gux-avatar gux-accent-3">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             GH
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Greg Hayes
           </div>
@@ -282,14 +294,14 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Iseult Jones" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Iseult Jones" class="gux-accent-9 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Iseult Jones" tabindex="-1" class="gux-avatar gux-accent-9">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             IJ
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Iseult Jones
           </div>
@@ -298,14 +310,14 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="John King" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="John King" class="gux-accent-8 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="John King" tabindex="-1" class="gux-avatar gux-accent-8">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             JK
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             John King
           </div>
@@ -314,14 +326,14 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Larissa Mendez" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Larissa Mendez" class="gux-accent-6 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Larissa Mendez" tabindex="-1" class="gux-avatar gux-accent-6">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             LM
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Larissa Mendez
           </div>
@@ -330,14 +342,14 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Nancy Omaha" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Nancy Omaha" class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Nancy Omaha" tabindex="-1" class="gux-avatar gux-accent-3">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             NO
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Nancy Omaha
           </div>
@@ -345,15 +357,15 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
       </button>
     </template>
   </gux-avatar-group-item-beta>
-  <gux-avatar-group-item-beta hidden="" name="Paul Quinn" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Paul Quinn" class="gux-accent-9 gux-avatar" tabindex="-1" type="button">
+  <gux-avatar-group-item-beta name="Paul Quinn" hidden="" role="menuitem">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Paul Quinn" tabindex="-1" class="gux-avatar gux-accent-9">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             PQ
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Paul Quinn
           </div>
@@ -361,15 +373,15 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
       </button>
     </template>
   </gux-avatar-group-item-beta>
-  <gux-avatar-group-item-beta hidden="" name="Roisin Smyth" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Roisin Smyth" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
+  <gux-avatar-group-item-beta name="Roisin Smyth" hidden="" role="menuitem">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Roisin Smyth" tabindex="-1" class="gux-avatar gux-accent-5">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             RS
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Roisin Smyth
           </div>
@@ -377,15 +389,15 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
       </button>
     </template>
   </gux-avatar-group-item-beta>
-  <gux-avatar-group-item-beta hidden="" name="Thomas U." role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Thomas U." class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
+  <gux-avatar-group-item-beta name="Thomas U." hidden="" role="menuitem">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Thomas U." tabindex="-1" class="gux-avatar gux-accent-3">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             TU
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Thomas U.
           </div>
@@ -393,15 +405,15 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
       </button>
     </template>
   </gux-avatar-group-item-beta>
-  <gux-avatar-group-item-beta hidden="" name="Valerie Wall" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Valerie Wall" class="gux-accent-4 gux-avatar" tabindex="-1" type="button">
+  <gux-avatar-group-item-beta name="Valerie Wall" hidden="" role="menuitem">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Valerie Wall" tabindex="-1" class="gux-avatar gux-accent-4">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             VW
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Valerie Wall
           </div>
@@ -409,15 +421,15 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
       </button>
     </template>
   </gux-avatar-group-item-beta>
-  <gux-avatar-group-item-beta hidden="" name="Xavier Yarrow" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Xavier Yarrow" class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
+  <gux-avatar-group-item-beta name="Xavier Yarrow" hidden="" role="menuitem">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Xavier Yarrow" tabindex="-1" class="gux-avatar gux-accent-3">
         <slot name="image">
-          <span aria-hidden="true" class="gux-avatar-initials">
+          <span class="gux-avatar-initials" aria-hidden="true">
             XY
           </span>
         </slot>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Xavier Yarrow
           </div>
@@ -426,12 +438,12 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-add-item-beta hidden="" role="menuitem">
-    <template shadowrootmode="open">
-      <button aria-label="Add more items to group" class="gux-avatar" tabindex="-1" type="button">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
+      <button type="button" aria-label="Add more items to group" tabindex="-1" class="gux-avatar">
         <span aria-hidden="true">
           +
         </span>
-        <gux-tooltip-beta aria-hidden="true" placement="top" visual-only="">
+        <gux-tooltip-beta aria-hidden="true" visual-only="" placement="top">
           <div slot="content">
             Add more items to group
           </div>

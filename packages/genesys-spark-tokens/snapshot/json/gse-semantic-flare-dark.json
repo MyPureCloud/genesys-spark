@@ -59,6 +59,18 @@
           "new_tab": {
             "hover": "#0c193d",
             "selected": "#102251"
+          },
+          "level_2": {
+            "option": {
+              "hover": "#081129"
+            }
+          },
+          "top_nav": {
+            "connected": {
+              "default": "#079167",
+              "hover": "#0e5c42",
+              "active": "#044834"
+            }
           }
         }
       }
@@ -109,23 +121,38 @@
           "tonal_subtle": {
             "top_left": "#313644",
             "bottom_right": "#2f2f44"
+          },
+          "default": {
+            "left_side": "#2c363c",
+            "right_side": "#465066"
+          },
+          "active": "#475675",
+          "copilot_launcher": {
+            "top_left": "#ffc650",
+            "middle": "#ff451a",
+            "bottom_right": "#5476d5"
           }
+        },
+        "brand": {
+          "inverse": "#ff451a"
         }
       },
       "global_nav": {
         "desktop": {
           "top_command_bar": "#1e1e21",
           "menu_panel": {
-            "primary_top-left_value": "#141c34",
-            "primary_bottom-right_value": "#141929",
-            "secondary_top-left_value": "#141929",
-            "secondary_bottom-right_value": "#131315"
+            "primary": "#19327a",
+            "secondary": "#0c193d",
+            "feedback_container": "#19327a"
           }
         },
         "mobile": {
           "header": "#1e1e21",
           "footer": "#141c34"
         }
+      },
+      "sunken": {
+        "base": "#475675"
       }
     },
     "system": {
@@ -203,6 +230,32 @@
         "offline_reduced": "#4e5056",
         "out_of_office_reduced": "#62375d",
         "notification": "#ff451a"
+      },
+      "notification": {
+        "primary": "#e22245",
+        "secondary": "#c9a132",
+        "neutral": "#1e1e21",
+        "subtle": "#3d538f",
+        "dark_only_content": "#2a2a2e",
+        "light_only_content": "#ffffff",
+        "tertiary": "#09b581",
+        "light_content": "#2a2a2e"
+      },
+      "illustration": {
+        "default": "#829ce5",
+        "success_base": "#cef0e6",
+        "success_symbol": "#056d4d",
+        "error_base": "#f9d3da",
+        "error_symbol": "#b51b37",
+        "warning_base": "#fce9b2",
+        "warning_symbol": "#6c5619",
+        "info_base": "#ddeaf7",
+        "info_symbol": "#345b82",
+        "operation_base": "#d5def7",
+        "operation_symbol": "#2143a2",
+        "background_solid": "#bfc6d91a",
+        "background_gradient": "#bfc6d933",
+        "background_gradient_white": "#ffffff0d"
       }
     },
     "form_control": {
@@ -217,6 +270,10 @@
           "first_level": "#81cbe5",
           "subsequent_level": "#9fd6ea"
         }
+      },
+      "segment": {
+        "active": "#1e1e21",
+        "hover": "#354a72"
       }
     }
   },
@@ -307,6 +364,7 @@
       "special_accents": {
         "ai": "#1589b2",
         "brand": "#ff451a",
+        "brand_inverse": "#ffffff",
         "ai_gradient": {
           "top_left": "#9fd6ea",
           "bottom_right": "#a89ee9"
@@ -341,21 +399,21 @@
       },
       "error": {
         "high_emphasis": "#ffffff",
-        "accent": "#e84e6a"
+        "accent": "#ee7a8f"
       },
       "icon": {
         "default": "#b2b7c4"
       },
       "indicators": {
         "positive": "#09b581",
-        "negative": "#e84e6a",
+        "negative": "#ee7a8f",
         "neutral": "#c1c6d4"
       }
     },
     "form_control": {
       "help_text": {
         "default": "#c1c6d4",
-        "error": "#e84e6a"
+        "error": "#ee7a8f"
       },
       "text_input": {
         "placeholder": "#c1c6d4",
@@ -367,16 +425,21 @@
         "selected": "#5476d5",
         "hover": "#829ce5",
         "active": "#adbff0",
-        "error": "#e84e6a"
+        "error": "#ee7a8f"
       },
       "label": {
         "default": "#ffffff",
-        "required_accent": "#e84e6a",
+        "required_accent": "#ee7a8f",
         "optional_accent": "#b2b7c4",
         "tooltip": "#b2b7c4"
       },
       "search": {
         "matching_text": "#2a2a2e"
+      },
+      "segment": {
+        "active": "#d5def7",
+        "hover": "#d5def7",
+        "default": "#d5def7"
       }
     }
   },
@@ -402,12 +465,6 @@
         "enabled": "#2143a2",
         "hover": "#19327a",
         "active": "#5476d5"
-      },
-      "special_accents": {
-        "ai": {
-          "top_left": "#056385",
-          "bottom_right": "#6e5ddb"
-        }
       },
       "global_nav": {
         "tree_view": {
@@ -490,7 +547,36 @@
     }
   },
   "effects": {
-    "box_shadow": "#000000b3"
+    "box_shadow": "#000000b3",
+    "shadows": {
+      "10": "#0000004d",
+      "20": "#00000059",
+      "30": "#00000073",
+      "40": "#00000080",
+      "50": "#0009"
+    },
+    "ai_glow": {
+      "yellow": {
+        "30": "#cc9e404d",
+        "40": "#cc9e4066",
+        "100": "#ffc650"
+      },
+      "gold": {
+        "40": "#cc7f3366",
+        "60": "#cc7f3399",
+        "100": "#ff9f40"
+      },
+      "orange": {
+        "40": "#cc371566",
+        "60": "#cc371599",
+        "100": "#ff451a"
+      },
+      "teal": {
+        "50": "#05638580",
+        "70": "#056385b3",
+        "100": "#53bee5"
+      }
+    }
   },
   "charts": {
     "categorical_data": {
@@ -590,7 +676,7 @@
     },
     "sparkline": {
       "mono": "#5476d5",
-      "negative": "#e84e6a",
+      "negative": "#ee7a8f",
       "positive": "#09b581",
       "neutral": "#808db2",
       "trendline": "#6a6d75"

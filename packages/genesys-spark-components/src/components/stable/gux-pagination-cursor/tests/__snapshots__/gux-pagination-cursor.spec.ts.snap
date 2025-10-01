@@ -1,20 +1,22 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-pagination-cursor #render should render as expected (1) 1`] = `
 <gux-pagination-cursor label="Example label">
   <template shadowrootmode="open">
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
-        <button class="gux-simple-button" disabled="" type="button">
-          <gux-icon decorative="" iconname="custom/chevron-left-small-regular" size="small"></gux-icon>
+        <button class="gux-simple-button" type="button" disabled="">
+          <gux-icon iconname="custom/chevron-left-small-regular" decorative="" size="small">
+          </gux-icon>
           <gux-screen-reader-beta>
             Previous
           </gux-screen-reader-beta>
         </button>
       </gux-button-slot>
       <gux-button-slot accent="ghost">
-        <button class="gux-simple-button" disabled="" type="button">
-          <gux-icon decorative="" iconname="custom/chevron-right-small-regular" size="small"></gux-icon>
+        <button class="gux-simple-button" type="button" disabled="">
+          <gux-icon iconname="custom/chevron-right-small-regular" decorative="" size="small">
+          </gux-icon>
           <gux-screen-reader-beta>
             Next
           </gux-screen-reader-beta>
@@ -30,8 +32,9 @@ exports[`gux-pagination-cursor #render should render as expected (2) 1`] = `
   <template shadowrootmode="open">
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
-        <button class="gux-simple-button" disabled="" type="button">
-          <gux-icon decorative="" iconname="custom/chevron-left-small-regular" size="small"></gux-icon>
+        <button class="gux-simple-button" type="button" disabled="">
+          <gux-icon iconname="custom/chevron-left-small-regular" decorative="" size="small">
+          </gux-icon>
           <gux-screen-reader-beta>
             Previous
           </gux-screen-reader-beta>
@@ -39,7 +42,8 @@ exports[`gux-pagination-cursor #render should render as expected (2) 1`] = `
       </gux-button-slot>
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
-          <gux-icon decorative="" iconname="custom/chevron-right-small-regular" size="small"></gux-icon>
+          <gux-icon iconname="custom/chevron-right-small-regular" decorative="" size="small">
+          </gux-icon>
           <gux-screen-reader-beta>
             Next
           </gux-screen-reader-beta>
@@ -51,12 +55,13 @@ exports[`gux-pagination-cursor #render should render as expected (2) 1`] = `
 `;
 
 exports[`gux-pagination-cursor #render should render as expected (3) 1`] = `
-<gux-pagination-cursor has-next="" has-previous="" label="Example label">
+<gux-pagination-cursor has-previous="" has-next="" label="Example label">
   <template shadowrootmode="open">
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
-          <gux-icon decorative="" iconname="custom/chevron-left-small-regular" size="small"></gux-icon>
+          <gux-icon iconname="custom/chevron-left-small-regular" decorative="" size="small">
+          </gux-icon>
           <gux-screen-reader-beta>
             Previous
           </gux-screen-reader-beta>
@@ -64,7 +69,8 @@ exports[`gux-pagination-cursor #render should render as expected (3) 1`] = `
       </gux-button-slot>
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
-          <gux-icon decorative="" iconname="custom/chevron-right-small-regular" size="small"></gux-icon>
+          <gux-icon iconname="custom/chevron-right-small-regular" decorative="" size="small">
+          </gux-icon>
           <gux-screen-reader-beta>
             Next
           </gux-screen-reader-beta>
@@ -81,15 +87,17 @@ exports[`gux-pagination-cursor #render should render as expected (4) 1`] = `
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
-          <gux-icon decorative="" iconname="custom/chevron-left-small-regular" size="small"></gux-icon>
+          <gux-icon iconname="custom/chevron-left-small-regular" decorative="" size="small">
+          </gux-icon>
           <gux-screen-reader-beta>
             Previous
           </gux-screen-reader-beta>
         </button>
       </gux-button-slot>
       <gux-button-slot accent="ghost">
-        <button class="gux-simple-button" disabled="" type="button">
-          <gux-icon decorative="" iconname="custom/chevron-right-small-regular" size="small"></gux-icon>
+        <button class="gux-simple-button" type="button" disabled="">
+          <gux-icon iconname="custom/chevron-right-small-regular" decorative="" size="small">
+          </gux-icon>
           <gux-screen-reader-beta>
             Next
           </gux-screen-reader-beta>
@@ -101,13 +109,14 @@ exports[`gux-pagination-cursor #render should render as expected (4) 1`] = `
 `;
 
 exports[`gux-pagination-cursor #render should render as expected (5) 1`] = `
-<gux-pagination-cursor label="Example label" layout="advanced">
+<gux-pagination-cursor layout="advanced" label="Example label">
   <template shadowrootmode="open">
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
-        <button disabled="" type="button">
+        <button type="button" disabled="">
           <div class="gux-button-align-content">
-            <gux-icon decorative="" iconname="custom/chevron-left-small-regular" size="small"></gux-icon>
+            <gux-icon decorative="" iconname="custom/chevron-left-small-regular" size="small">
+            </gux-icon>
             <span>
               Previous
             </span>
@@ -115,12 +124,13 @@ exports[`gux-pagination-cursor #render should render as expected (5) 1`] = `
         </button>
       </gux-button-slot>
       <gux-button-slot accent="ghost">
-        <button disabled="" type="button">
+        <button type="button" disabled="">
           <div class="gux-button-align-content">
             <span>
               Next
             </span>
-            <gux-icon decorative="" iconname="custom/chevron-right-small-regular" size="small"></gux-icon>
+            <gux-icon decorative="" iconname="custom/chevron-right-small-regular" size="small">
+            </gux-icon>
           </div>
         </button>
       </gux-button-slot>

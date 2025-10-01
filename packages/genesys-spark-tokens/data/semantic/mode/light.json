@@ -171,7 +171,7 @@
               "description": "The background color for the default state of the navigation buttons in the return button of the global navigation."
             },
             "hover": {
-              "value": "{theme.background.custom_accents.global_nav.30}",
+              "value": "{theme.background.custom_accents.global_nav.15}",
               "type": "color",
               "description": "The background color for the hover state of the navigation buttons in the return button of the global navigation."
             }
@@ -198,6 +198,30 @@
               "value": "{theme.background.custom_accents.global_nav.20}",
               "type": "color",
               "description": "The background color for the selected state of the navigation buttons in the new tab button of the global navigation."
+            }
+          },
+          "level_2": {
+            "option": {
+              "hover": {
+                "value": "{theme.background.custom_accents.global_nav.5}",
+                "type": "color"
+              }
+            }
+          },
+          "top_nav": {
+            "connected": {
+              "default": {
+                "value": "{theme.background.system.success.40}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{theme.background.system.success.45}",
+                "type": "color"
+              },
+              "active": {
+                "value": "{theme.background.system.success.50}",
+                "type": "color"
+              }
             }
           }
         }
@@ -382,6 +406,47 @@
               },
               "description": "This is the bottom right color that the ai gradient uses for container elements."
             }
+          },
+          "default": {
+            "left_side": {
+              "value": "{theme.background.custom_accents.ai.5}",
+              "type": "color",
+              "description": "The color used in the left side of the AI background gradient."
+            },
+            "right_side": {
+              "value": "{theme.background.custom_accents.ai.15}",
+              "type": "color",
+              "description": "The color used in the right side of the AI background gradient."
+            }
+          },
+          "active": {
+            "value": "{theme.background.custom_accents.ai.25}",
+            "type": "color",
+            "description": "The color used for the active state of the AI backgrounds."
+          },
+          "copilot_launcher": {
+            "top_left": {
+              "value": "{theme.effects.ai_glow.30}",
+              "type": "color",
+              "description": "This is the top left color that the ai gradient uses for borders."
+            },
+            "middle": {
+              "value": "{theme.effects.ai_glow.40}",
+              "type": "color",
+              "description": "This is the middle color that the ai gradient uses for borders."
+            },
+            "bottom_right": {
+              "value": "{theme.border.custom_accents.ai.50}",
+              "type": "color",
+              "description": "This is the bottom right color that the ai gradient uses for borders."
+            }
+          }
+        },
+        "brand": {
+          "inverse": {
+            "value": "{theme.foreground.special_accents.brand.10}",
+            "type": "color",
+            "description": "This is a background colour for brand logos"
           }
         }
       },
@@ -393,25 +458,17 @@
             "description": "The background color of the top command bar for the desktop global navigation."
           },
           "menu_panel": {
-            "primary_top-left_value": {
-              "value": "{theme.background.container.global_nav.desktop.20}",
-              "type": "color",
-              "description": "The top-left color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            "primary": {
+              "value": "{theme.background.custom_accents.global_nav.15}",
+              "type": "color"
             },
-            "primary_bottom-right_value": {
-              "value": "{theme.background.container.global_nav.desktop.40}",
-              "type": "color",
-              "description": "The bottom-right color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            "secondary": {
+              "value": "{theme.background.custom_accents.global_nav.10}",
+              "type": "color"
             },
-            "secondary_top-left_value": {
-              "value": "{theme.background.container.global_nav.desktop.40}",
-              "type": "color",
-              "description": "The  top-left color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
-            },
-            "secondary_bottom-right_value": {
-              "value": "{theme.background.container.global_nav.desktop.50}",
-              "type": "color",
-              "description": "The bottom-right color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
+            "feedback_container": {
+              "value": "{theme.background.custom_accents.global_nav.20}",
+              "type": "color"
             }
           }
         },
@@ -426,6 +483,13 @@
             "type": "color",
             "description": "The background color of the footer for the mobile global navigation."
           }
+        }
+      },
+      "sunken": {
+        "base": {
+          "value": "{theme.background.container.primary.55}",
+          "type": "color",
+          "description": "background for segmented control"
         }
       }
     },
@@ -770,6 +834,98 @@
           "value": "{theme.background.custom_accents.status.70}",
           "type": "color"
         }
+      },
+      "notification": {
+        "primary": {
+          "value": "{theme.background.custom_accents.notification.10}",
+          "type": "color"
+        },
+        "secondary": {
+          "value": "{theme.background.custom_accents.notification.20}",
+          "type": "color"
+        },
+        "neutral": {
+          "value": "{theme.background.custom_accents.notification.30}",
+          "type": "color"
+        },
+        "subtle": {
+          "value": "{theme.background.custom_accents.notification.40}",
+          "type": "color"
+        },
+        "dark_only_content": {
+          "value": "{theme.foreground.primary.30}",
+          "type": "color"
+        },
+        "light_only_content": {
+          "value": "{theme.foreground.primary.30d}",
+          "type": "other"
+        },
+        "tertiary": {
+          "value": "{theme.background.custom_accents.notification.50}",
+          "type": "color"
+        },
+        "light_content": {
+          "value": "{theme.foreground.secondary.10}",
+          "type": "color"
+        }
+      },
+      "illustration": {
+        "default": {
+          "value": "{theme.foreground.special_accents.illustration.10}",
+          "type": "color"
+        },
+        "success_base": {
+          "value": "{theme.foreground.special_accents.illustration.20}",
+          "type": "color"
+        },
+        "success_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.30}",
+          "type": "color"
+        },
+        "error_base": {
+          "value": "{theme.foreground.special_accents.illustration.40}",
+          "type": "color"
+        },
+        "error_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.50}",
+          "type": "color"
+        },
+        "warning_base": {
+          "value": "{theme.foreground.special_accents.illustration.60}",
+          "type": "color"
+        },
+        "warning_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.70}",
+          "type": "color"
+        },
+        "info_base": {
+          "value": "{theme.foreground.special_accents.illustration.80}",
+          "type": "color"
+        },
+        "info_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.90}",
+          "type": "color"
+        },
+        "operation_base": {
+          "value": "{theme.foreground.special_accents.illustration.100}",
+          "type": "color"
+        },
+        "operation_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.110}",
+          "type": "color"
+        },
+        "background_solid": {
+          "value": "{theme.foreground.special_accents.illustration.120}",
+          "type": "color"
+        },
+        "background_gradient": {
+          "value": "{theme.foreground.special_accents.illustration.130}",
+          "type": "color"
+        },
+        "background_gradient_white": {
+          "value": "{theme.foreground.special_accents.illustration.140}",
+          "type": "color"
+        }
       }
     },
     "form_control": {
@@ -799,6 +955,16 @@
             "type": "color",
             "description": "The color of the highlight of the text that matches a search query on a subsequent level."
           }
+        }
+      },
+      "segment": {
+        "active": {
+          "value": "{theme.background.container.primary.10}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{theme.background.container.primary.65}",
+          "type": "color"
         }
       }
     }
@@ -1111,6 +1277,11 @@
           "value": "{theme.foreground.special_accents.global_nav.desktop.50}",
           "type": "color",
           "description": "Accent color, mostly used for accents in the Global Navigation such as current page"
+        },
+        "brand_inverse": {
+          "value": "{theme.foreground.high_contrast.10}",
+          "type": "color",
+          "description": "The brand color foreground for inverse logos"
         }
       }
     },
@@ -1311,6 +1482,20 @@
           "type": "color",
           "description": "The color for text that matches a search query."
         }
+      },
+      "segment": {
+        "active": {
+          "value": "{theme.foreground.form_control.click_input.10}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{theme.foreground.form_control.click_input.20}",
+          "type": "color"
+        },
+        "default": {
+          "value": "{theme.foreground.form_control.click_input.10}",
+          "type": "color"
+        }
       }
     }
   },
@@ -1398,20 +1583,6 @@
           "value": "{theme.border.edges.active.10}",
           "type": "color",
           "description": "The color for the edge borders of high contrast surfaces that are on the active state."
-        }
-      },
-      "special_accents": {
-        "ai": {
-          "top_left": {
-            "value": "{theme.border.custom_accents.ai.10}",
-            "type": "color",
-            "description": "This is the top left color that the ai gradient uses for borders."
-          },
-          "bottom_right": {
-            "value": "{theme.border.custom_accents.ai.20}",
-            "type": "color",
-            "description": "This is the bottom right color that the ai gradient uses for borders."
-          }
         }
       },
       "global_nav": {
@@ -1542,6 +1713,186 @@
       }
     }
   },
+  "effects": {
+    "ai_glow": {
+      "yellow": {
+        "30": {
+          "value": "{theme.effects.ai_glow.30}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.3",
+                "space": "lch"
+              }
+            }
+          },
+          "description": "This is the yellow color that the ai gradient uses for borders."
+        },
+        "40": {
+          "value": "{theme.effects.ai_glow.30}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.4",
+                "space": "lch"
+              }
+            }
+          },
+          "description": "This is the yellow color that the ai gradient uses for borders."
+        },
+        "100": {
+          "value": "{theme.effects.ai_glow.30}",
+          "type": "color",
+          "description": "This is the yellow color that the ai gradient uses for borders."
+        }
+      },
+      "gold": {
+        "40": {
+          "value": "{theme.effects.ai_glow.35}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.4",
+                "space": "lch"
+              }
+            }
+          },
+          "description": "This is the gold that the ai gradient uses for borders."
+        },
+        "60": {
+          "value": "{theme.effects.ai_glow.35}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.6",
+                "space": "lch"
+              }
+            }
+          },
+          "description": "This is the gold that the ai gradient uses for borders."
+        },
+        "100": {
+          "value": "{theme.effects.ai_glow.35}",
+          "type": "color",
+          "description": "This is the gold that the ai gradient uses for borders."
+        }
+      },
+      "orange": {
+        "40": {
+          "value": "{theme.effects.ai_glow.40}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.4",
+                "space": "lch"
+              }
+            }
+          },
+          "description": "This is the orange color that the ai gradient uses for borders."
+        },
+        "60": {
+          "value": "{theme.effects.ai_glow.40}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.6",
+                "space": "lch"
+              }
+            }
+          },
+          "description": "This is the orange color that the ai gradient uses for borders."
+        },
+        "100": {
+          "value": "{theme.effects.ai_glow.40}",
+          "type": "color",
+          "description": "This is the orange color that the ai gradient uses for borders."
+        }
+      },
+      "teal": {
+        "50": {
+          "value": "{theme.border.custom_accents.ai.10}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.5",
+                "space": "lch"
+              }
+            }
+          },
+          "description": "This is the teal color that the ai gradient uses for borders."
+        },
+        "70": {
+          "value": "{theme.border.custom_accents.ai.10}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.7",
+                "space": "lch"
+              }
+            }
+          },
+          "description": "This is the teal color that the ai gradient uses for borders."
+        },
+        "100": {
+          "value": "{theme.border.custom_accents.ai.10}",
+          "type": "color",
+          "description": "This is the teal color that the ai gradient uses for borders."
+        }
+      }
+    },
+    "box_shadow": {
+      "value": "{theme.background.container.high_contrast.10}",
+      "type": "color",
+      "$extensions": {
+        "studio.tokens": {
+          "modify": {
+            "type": "alpha",
+            "value": "0.15",
+            "space": "srgb"
+          }
+        }
+      },
+      "description": "[DEPRECATED] Please use the global set shadow styles"
+    },
+    "shadows": {
+      "10": {
+        "value": "{theme.effects.box_shadow.10}",
+        "type": "color"
+      },
+      "20": {
+        "value": "{theme.effects.box_shadow.20}",
+        "type": "color"
+      },
+      "30": {
+        "value": "{theme.effects.box_shadow.30}",
+        "type": "color"
+      },
+      "40": {
+        "value": "{theme.effects.box_shadow.40}",
+        "type": "color"
+      },
+      "50": {
+        "value": "{theme.effects.box_shadow.50}",
+        "type": "color"
+      }
+    }
+  },
   "container": {
     "lg": {
       "box_shadow": {
@@ -1554,7 +1905,7 @@
           "type": "dropShadow"
         },
         "type": "boxShadow",
-        "description": "The recommended box shadow for large containers, like modals or popovers."
+        "description": "[DEPRECATED] Please use the global set shadow styles"
       }
     },
     "md": {
@@ -1568,7 +1919,7 @@
           "type": "dropShadow"
         },
         "type": "boxShadow",
-        "description": "The shadow we used for medium-sized components like elevated cards or menus."
+        "description": "[DEPRECATED] Please use the global set shadow styles"
       }
     },
     "sm": {
@@ -1582,22 +1933,7 @@
           "type": "dropShadow"
         },
         "type": "boxShadow",
-        "description": "The shadow we used for small-sized components like tooltips."
-      }
-    }
-  },
-  "effects": {
-    "box_shadow": {
-      "value": "{theme.background.container.high_contrast.10}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "alpha",
-            "value": "0.15",
-            "space": "srgb"
-          }
-        }
+        "description": "[DEPRECATED] Please use the global set shadow styles"
       }
     }
   },

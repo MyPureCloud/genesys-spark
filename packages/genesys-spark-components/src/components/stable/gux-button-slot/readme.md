@@ -31,6 +31,7 @@
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-pagination-buttons-legacy](../../legacy/gux-pagination-legacy/gux-pagination-buttons-legacy)
  - [gux-pagination-cursor](../gux-pagination-cursor)
+ - [gux-prompt-input-beta](../../beta/gux-prompt-input)
  - [gux-rich-text-editor-action](../../beta/gux-rich-text-editor/gux-rich-text-editor-action)
  - [gux-rich-text-editor-action-link](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
  - [gux-rich-text-editor-action-rich-style](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
@@ -56,6 +57,7 @@ graph TD;
   gux-pagination-buttons --> gux-button-slot
   gux-pagination-buttons-legacy --> gux-button-slot
   gux-pagination-cursor --> gux-button-slot
+  gux-prompt-input-beta --> gux-button-slot
   gux-rich-text-editor-action --> gux-button-slot
   gux-rich-text-editor-action-link --> gux-button-slot
   gux-rich-text-editor-action-rich-style --> gux-button-slot

@@ -1,59 +1,55 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use 'sass:color';
 
-gux-tabs {
-  &[orientation='vertical'] {
+.gux-vertical {
+  .gux-tab-container {
+    display: flex;
+    flex-direction: column;
+    inline-size: ui.$gse-ui-tabs-set-vertical-width;
     block-size: 100%;
+    margin-inline-end: ui.$gse-ui-tabs-set-vertical-marginRight;
+    border-inline-end: ui.$gse-ui-tabs-item-divider-horizontal-height solid
+      ui.$gse-ui-tabs-item-divider-dividerColor;
 
-    > gux-tab-list {
-      .gux-tab-container {
-        display: flex;
-        flex-direction: column;
-        inline-size: ui.$gse-ui-tabs-set-vertical-width;
-        block-size: 100%;
-        margin-inline-end: ui.$gse-ui-tabs-set-vertical-marginRight;
-        border-inline-end: ui.$gse-ui-tabs-item-divider-horizontal-height solid
-          ui.$gse-ui-tabs-item-divider-dividerColor;
+    .gux-scroll-button-container {
+      inline-size: 100%;
 
-        .gux-scroll-button-container {
-          inline-size: 100%;
+      button {
+        inline-size: 100%;
+      }
+    }
 
-          button {
-            inline-size: 100%;
-          }
-        }
+    .gux-scrollable-section {
+      flex-direction: column;
+      block-size: 100%;
+      overflow-y: auto;
+      scrollbar-width: none;
 
-        .gux-scrollable-section {
-          flex-direction: column;
-          block-size: 100%;
-          overflow-y: auto;
-          scrollbar-width: none; /* Firefox */
-          -ms-overflow-style: none; /* Internet Explorer 10+ */
-          scroll-behavior: smooth;
+      /* Firefox */
+      -ms-overflow-style: none;
 
-          &::-webkit-scrollbar {
-            /* WebKit */
-            inline-size: 0;
-            block-size: 0;
-          }
-        }
+      /* Internet Explorer 10+ */
+      scroll-behavior: smooth;
+
+      &::-webkit-scrollbar {
+        /* WebKit */
+        inline-size: 0;
+        block-size: 0;
       }
     }
   }
+}
 
-  &:not([orientation='vertical']) {
-    > gux-tab-list {
-      .gux-tab-container {
-        block-size: ui.$gse-ui-tabs-set-horizontal-height;
-        margin-block-end: ui.$gse-ui-tabs-set-horizontal-marginBottom;
-        border-block-end: ui.$gse-ui-tabs-item-divider-horizontal-height solid
-          ui.$gse-ui-tabs-item-divider-dividerColor;
-      }
+.gux-horizontal {
+  .gux-tab-container {
+    block-size: ui.$gse-ui-tabs-set-horizontal-height;
+    margin-block-end: ui.$gse-ui-tabs-set-horizontal-marginBottom;
+    border-block-end: ui.$gse-ui-tabs-item-divider-horizontal-height solid
+      ui.$gse-ui-tabs-item-divider-dividerColor;
+  }
 
-      .gux-scrollable-section {
-        overflow-x: auto;
-      }
-    }
+  .gux-scrollable-section {
+    overflow-x: auto;
   }
 
   .gux-tab-container {
@@ -63,35 +59,35 @@ gux-tabs {
     overflow: hidden;
     background-color: transparent;
   }
+}
 
-  .gux-scrollable-section {
-    display: flex;
-    flex: 1 1 auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
+.gux-scrollable-section {
+  display: flex;
+  flex: 1 1 auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 
-    &::-webkit-scrollbar {
-      block-size: 0;
-    }
+  &::-webkit-scrollbar {
+    block-size: 0;
+  }
+}
+
+.gux-scroll-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ui.$gse-ui-advancedTabs-set-backgroundColor;
+  border-radius: ui.$gse-ui-button-borderRadius; // TODO: COMUI-2341. Should we use button tokens here ?
+
+  gux-button-slot {
+    inline-size: 100%;
+    block-size: 100%;
   }
 
-  .gux-scroll-button-container {
+  button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ui.$gse-ui-advancedTabs-set-backgroundColor;
-    border-radius: ui.$gse-ui-button-borderRadius; // TODO: COMUI-2341. Should we use button tokens here ?
-
-    gux-button-slot {
-      inline-size: 100%;
-      block-size: 100%;
-    }
-
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      block-size: 100%;
-    }
+    block-size: 100%;
   }
 }

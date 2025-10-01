@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 @mixin gux-hide-offscreen {
   position: absolute;
   top: auto;
@@ -25,14 +27,22 @@
   @include gux-hide-offscreen;
 }
 
+@mixin button-text {
+  font-family: ui.$gse-ui-button-text-fontFamily;
+  font-size: ui.$gse-ui-button-text-fontSize;
+  font-weight: ui.$gse-ui-button-text-fontWeight;
+  line-height: ui.$gse-ui-button-text-lineHeight;
+}
+
 @mixin gux-sr-only-clip {
+  // https://github.com/stylelint/stylelint/issues/8728
+  /* stylelint-disable-next-line nesting-selector-no-missing-scoping-root */
   &:not(:focus):not(:active) {
     position: absolute;
     width: 1px;
     height: 1px;
     overflow: hidden;
     white-space: nowrap;
-    clip: rect(0 0 0 0);
     clip-path: inset(50%);
   }
 }

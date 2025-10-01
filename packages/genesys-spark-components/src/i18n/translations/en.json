@@ -37,6 +37,12 @@
     "previousMonth": "Previous month: {localizedPreviousMonthAndYear}",
     "nextMonth": "Next month: {localizedNextMonthAndYear}"
   },
+  "gux-cloud-logo": {
+    "genesysCloudLogo": "Genesys Cloud Logo"
+  },
+  "gux-cloud-logomark": {
+    "genesysCloudLogomark": "Genesys Cloud Logomark"
+  },
   "gux-column-manager": {
     "search": "Search",
     "searchResults": "search results",
@@ -411,6 +417,12 @@
     "noMatches": "No matches",
     "loading": "Loading..."
   },
+  "gux-logo": {
+    "genesysLogo": "Genesys Logo"
+  },
+  "gux-logomark": {
+    "genesysLogomark": "Genesys Logomark"
+  },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
   },
@@ -723,8 +735,15 @@
     "regionDropdown": "Region Dropdown",
     "regionDropdownButton": "Region Dropdown Button"
   },
+  "gux-prompt-input": {
+    "inputPlaceholder": "Ask Genesys AI",
+    "generateGenesysAIText": "Generate Genesys AI text"
+  },
   "gux-radial-loading": {
     "loading": "Loading"
+  },
+  "gux-rating": {
+    "editRating": "Edit Rating"
   },
   "gux-rich-text-editor-action": {
     "bold": "Bold",
@@ -761,6 +780,10 @@
     "raspberry": "Raspberry",
     "tomato": "Tomato",
     "additionalActions": "Additional Actions"
+  },
+  "gux-select-all": {
+    "allOptions": "All options",
+    "of": "of"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"

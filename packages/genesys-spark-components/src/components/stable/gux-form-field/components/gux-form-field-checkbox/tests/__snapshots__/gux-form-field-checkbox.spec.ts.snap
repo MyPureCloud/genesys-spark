@@ -1,34 +1,39 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-form-field-checkbox #render should render component as expected (1) 1`] = `
 <gux-form-field-checkbox>
   <template shadowrootmode="open">
-    <div class="gux-form-field-container">
+    <div class="gux-form-field-container" aria-disabled="false">
       <div class="gux-input-label">
         <div class="gux-input">
-          <slot name="input"></slot>
+          <slot name="input">
+          </slot>
         </div>
-        <div aria-disabled="false" class="gux-label-beside">
-          <slot name="label"></slot>
+        <div class="gux-label-beside" aria-disabled="false">
+          <slot name="label">
+          </slot>
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="checkbox" name="food-1[]" value="pizza" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Pizza
   </label>
 </gux-form-field-checkbox>
@@ -37,32 +42,37 @@ exports[`gux-form-field-checkbox #render should render component as expected (1)
 exports[`gux-form-field-checkbox #render should render component as expected (2) 1`] = `
 <gux-form-field-checkbox class="gux-disabled">
   <template shadowrootmode="open">
-    <div class="gux-form-field-container">
+    <div class="gux-form-field-container" aria-disabled="true">
       <div class="gux-input-label">
         <div class="gux-input">
-          <slot name="input"></slot>
+          <slot name="input">
+          </slot>
         </div>
-        <div aria-disabled="true" class="gux-label-beside">
-          <slot name="label"></slot>
+        <div class="gux-label-beside" aria-disabled="true">
+          <slot name="label">
+          </slot>
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input disabled="" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="checkbox" name="food-1[]" value="pizza" disabled="" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Pizza
   </label>
 </gux-form-field-checkbox>
@@ -71,35 +81,40 @@ exports[`gux-form-field-checkbox #render should render component as expected (2)
 exports[`gux-form-field-checkbox #render should render component as expected (3) 1`] = `
 <gux-form-field-checkbox class="gux-input-error">
   <template shadowrootmode="open">
-    <div class="gux-form-field-container">
+    <div class="gux-form-field-container" aria-disabled="false">
       <div class="gux-input-label">
         <div class="gux-input">
-          <slot name="input"></slot>
+          <slot name="input">
+          </slot>
         </div>
-        <div aria-disabled="false" class="gux-label-beside">
-          <slot name="label"></slot>
+        <div class="gux-label-beside" aria-disabled="false">
+          <slot name="label">
+          </slot>
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error gux-show" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error gux-show">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input aria-describedby="gux-form-field-error-i" aria-invalid="true" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="checkbox" name="food-1[]" value="pizza" id="gux-form-field-input-i" aria-invalid="true" aria-describedby="gux-form-field-error-i">
+  <label slot="label" for="gux-form-field-input-i">
     Pizza
   </label>
-  <span id="gux-form-field-error-i" slot="error">
+  <span slot="error" id="gux-form-field-error-i">
     This is an error message
   </span>
 </gux-form-field-checkbox>
@@ -108,106 +123,79 @@ exports[`gux-form-field-checkbox #render should render component as expected (3)
 exports[`gux-form-field-checkbox #render should render component as expected (4) 1`] = `
 <gux-form-field-checkbox>
   <template shadowrootmode="open">
-    <div class="gux-form-field-container">
+    <div class="gux-form-field-container" aria-disabled="false">
       <div class="gux-input-label">
         <div class="gux-input">
-          <slot name="input"></slot>
+          <slot name="input">
+          </slot>
         </div>
-        <div aria-disabled="false" class="gux-label-beside">
-          <slot name="label"></slot>
+        <div class="gux-label-beside" aria-disabled="false">
+          <slot name="label">
+          </slot>
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input checked="" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="checkbox" name="food-1[]" value="pizza" checked="" id="gux-form-field-input-i">
+  <label slot="label" for="gux-form-field-input-i">
     Pizza
   </label>
 </gux-form-field-checkbox>
 `;
 
 exports[`gux-form-field-checkbox #render should render component as expected (5) 1`] = `
-<gux-form-field-checkbox class="gux-input-error">
-  <template shadowrootmode="open">
-    <div class="gux-form-field-container">
-      <div class="gux-input-label">
-        <div class="gux-input">
-          <slot name="input"></slot>
-        </div>
-        <div aria-disabled="false" class="gux-label-beside">
-          <slot name="label"></slot>
-        </div>
-      </div>
-      <div class="error-and-help-text">
-        <div class="gux-form-field-error gux-show" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input aria-describedby="gux-form-field-error-i" aria-invalid="true" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
-  <label for="gux-form-field-input-i" slot="label">
-    Pizza
-  </label>
-  <span id="gux-form-field-error-i" slot="error">
-    Error message
-  </span>
-</gux-form-field-checkbox>
-`;
-
-exports[`gux-form-field-checkbox #render should render component as expected (6) 1`] = `
 <gux-form-field-checkbox>
   <template shadowrootmode="open">
-    <div class="gux-form-field-container">
+    <div class="gux-form-field-container" aria-disabled="false">
       <div class="gux-input-label">
         <div class="gux-input">
-          <slot name="input"></slot>
+          <slot name="input">
+          </slot>
         </div>
-        <div aria-disabled="false" class="gux-label-beside">
-          <slot name="label"></slot>
+        <div class="gux-label-beside" aria-disabled="false">
+          <slot name="label">
+          </slot>
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help gux-show">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </div>
   </template>
-  <input aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
-  <label for="gux-form-field-input-i" slot="label">
+  <input slot="input" type="checkbox" name="food-1[]" value="pizza" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i">
+  <label slot="label" for="gux-form-field-input-i">
     Pizza
   </label>
-  <span id="gux-form-field-help-i" slot="help">
+  <span slot="help" id="gux-form-field-help-i">
     This is a help message
   </span>
 </gux-form-field-checkbox>

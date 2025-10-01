@@ -72,7 +72,11 @@ export class GuxIcon {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: getRootIconName(this.iconName) });
 
-    await this.prepIcon(this.iconName);
+    try {
+      await this.prepIcon(this.iconName);
+    } catch (error) {
+      logError(this.root, `Failed to load "${this.iconName}"icon: ${error}`);
+    }
   }
 
   componentDidLoad(): void {

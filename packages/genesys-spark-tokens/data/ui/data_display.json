@@ -378,6 +378,18 @@
           "value": "{container.xs.gap}",
           "type": "spacing"
         }
+      },
+      "sticky": {
+        "elevation_container": {
+          "padding": {
+            "value": "{container.lg.padding}, 0px, 0px, 0px",
+            "type": "spacing"
+          }
+        },
+        "box_shadow": {
+          "value": "{shadow.scroll_indicator}",
+          "type": "boxShadow"
+        }
       }
     },
     "inline_dropdown": {
@@ -440,6 +452,12 @@
       "text": {
         "value": "{foreground.form_control.label.default}",
         "type": "color"
+      }
+    },
+    "fixed_column": {
+      "box_shadow": {
+        "value": "{shadow.scroll_indicator}",
+        "type": "boxShadow"
       }
     }
   },
@@ -987,20 +1005,18 @@
       }
     }
   },
-  "global_nav": {
-    "side_menu": {
-      "value": "linear-gradient(135deg, {color.emerald.500} 0%, {color.emerald.200} 100%)",
-      "type": "color"
-    }
-  },
   "data_table_composed": {
     "box_shadow": {
-      "value": "{container.sm.box_shadow}",
+      "value": "{shadow.1_card.default}",
       "type": "boxShadow"
     },
     "width": {
       "value": "1440px",
       "type": "sizing"
+    },
+    "gap": {
+      "value": "{container.md.gap}",
+      "type": "spacing"
     }
   },
   "focus": {

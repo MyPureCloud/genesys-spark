@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-text-highlight #render should handle no highlight property 1`] = `
 <gux-text-highlight text="Some text to highlight in the tests">
@@ -13,49 +13,46 @@ exports[`gux-text-highlight #render should handle no highlight property 1`] = `
 exports[`gux-text-highlight #render should handle no text property 1`] = `
 <gux-text-highlight highlight="Other text">
   <template shadowrootmode="open">
-    <span></span>
+    <span>
+    </span>
   </template>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render contains strategy 1`] = `
-<gux-text-highlight highlight="te" strategy="contains" text="Some text to highlight in the tests">
+<gux-text-highlight highlight="te" text="Some text to highlight in the tests" strategy="contains">
   <template shadowrootmode="open">
     <span>
       Some
       <mark>
         te
-      </mark>
-      xt to highlight in the
+      </mark>xt to highlight in the
       <mark>
         te
-      </mark>
-      sts
+      </mark>sts
     </span>
   </template>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render contains strategy case insensitively 1`] = `
-<gux-text-highlight highlight="TE" strategy="contains" text="Some text to highlight in the tests">
+<gux-text-highlight highlight="TE" text="Some text to highlight in the tests" strategy="contains">
   <template shadowrootmode="open">
     <span>
       Some
       <mark>
         te
-      </mark>
-      xt to highlight in the
+      </mark>xt to highlight in the
       <mark>
         te
-      </mark>
-      sts
+      </mark>sts
     </span>
   </template>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render contains strategy when no match found 1`] = `
-<gux-text-highlight highlight="Other text" strategy="contains" text="Some text to highlight in the tests">
+<gux-text-highlight highlight="Other text" text="Some text to highlight in the tests" strategy="contains">
   <template shadowrootmode="open">
     <span>
       Some text to highlight in the tests
@@ -70,8 +67,7 @@ exports[`gux-text-highlight #render should render default strategy 1`] = `
     <span>
       <mark>
         Some text
-      </mark>
-      to highlight in the tests
+      </mark>to highlight in the tests
     </span>
   </template>
 </gux-text-highlight>
@@ -83,8 +79,7 @@ exports[`gux-text-highlight #render should render default strategy case insensit
     <span>
       <mark>
         Some text
-      </mark>
-      to highlight in the tests
+      </mark>to highlight in the tests
     </span>
   </template>
 </gux-text-highlight>
@@ -101,43 +96,39 @@ exports[`gux-text-highlight #render should render default strategy when no match
 `;
 
 exports[`gux-text-highlight #render should render fuzzy strategy 1`] = `
-<gux-text-highlight highlight="text test" strategy="fuzzy" text="Some text to highlight in the tests">
+<gux-text-highlight highlight="text test" text="Some text to highlight in the tests" strategy="fuzzy">
   <template shadowrootmode="open">
     <span>
       Some
       <mark>
         text
-      </mark>
-      to highlight in the
+      </mark>to highlight in the
       <mark>
         test
-      </mark>
-      s
+      </mark>s
     </span>
   </template>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render fuzzy strategy case insensitively 1`] = `
-<gux-text-highlight highlight="TEXT TEST" strategy="fuzzy" text="Some text to highlight in the tests">
+<gux-text-highlight highlight="TEXT TEST" text="Some text to highlight in the tests" strategy="fuzzy">
   <template shadowrootmode="open">
     <span>
       Some
       <mark>
         text
-      </mark>
-      to highlight in the
+      </mark>to highlight in the
       <mark>
         test
-      </mark>
-      s
+      </mark>s
     </span>
   </template>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render fuzzy strategy when no match found 1`] = `
-<gux-text-highlight highlight="Other word" strategy="fuzzy" text="Some text to highlight in the tests">
+<gux-text-highlight highlight="Other word" text="Some text to highlight in the tests" strategy="fuzzy">
   <template shadowrootmode="open">
     <span>
       Some text to highlight in the tests
@@ -147,33 +138,31 @@ exports[`gux-text-highlight #render should render fuzzy strategy when no match f
 `;
 
 exports[`gux-text-highlight #render should render start strategy 1`] = `
-<gux-text-highlight highlight="Some text" strategy="start" text="Some text to highlight in the tests">
+<gux-text-highlight highlight="Some text" text="Some text to highlight in the tests" strategy="start">
   <template shadowrootmode="open">
     <span>
       <mark>
         Some text
-      </mark>
-      to highlight in the tests
+      </mark>to highlight in the tests
     </span>
   </template>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render start strategy case insensitively 1`] = `
-<gux-text-highlight highlight="some text" strategy="start" text="Some text to highlight in the tests">
+<gux-text-highlight highlight="some text" text="Some text to highlight in the tests" strategy="start">
   <template shadowrootmode="open">
     <span>
       <mark>
         Some text
-      </mark>
-      to highlight in the tests
+      </mark>to highlight in the tests
     </span>
   </template>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render start strategy when no match found 1`] = `
-<gux-text-highlight highlight="Other text" strategy="start" text="Some text to highlight in the tests">
+<gux-text-highlight highlight="Other text" text="Some text to highlight in the tests" strategy="start">
   <template shadowrootmode="open">
     <span>
       Some text to highlight in the tests

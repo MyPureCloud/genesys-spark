@@ -13,16 +13,6 @@
   },
   "global_nav": {
     "menu_option": {
-      "selected": {
-        "background_color": {
-          "value": "{background.interactive.global_nav.desktop.option.active_panel}",
-          "type": "color"
-        },
-        "foreground_color": {
-          "value": "{foreground.interactive.global_nav.desktop.level2.selected}",
-          "type": "color"
-        }
-      },
       "disabled": {
         "background_color": {
           "value": "{background.container.elevated.default}",
@@ -50,6 +40,34 @@
             "type": "color"
           }
         }
+      },
+      "new_tab": {
+        "default": {
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.default}",
+            "type": "color"
+          }
+        },
+        "hover": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.new_tab.hover}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.hover}",
+            "type": "color"
+          }
+        },
+        "selected": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.new_tab.selected}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.selected}",
+            "type": "color"
+          }
+        }
       }
     }
   },
@@ -58,6 +76,76 @@
       "gap": {
         "value": "{form_control.field.click_input.gap}",
         "type": "spacing"
+      }
+    }
+  },
+  "side_panel": {
+    "header": {
+      "icon_gap": {
+        "value": "{container.md.gap}",
+        "type": "spacing",
+        "description": "DEPRECATED"
+      }
+    },
+    "heading": {
+      "text": {
+        "value": "{heading.md.semi_bold}",
+        "type": "typography"
+      }
+    }
+  },
+  "background": {
+    "container": {
+      "global_nav": {
+        "desktop": {
+          "menu_panel": {
+            "primary_top-left_value": {
+              "value": "{theme.background.container.global_nav.desktop.20}",
+              "type": "color",
+              "description": "The top-left color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            },
+            "primary_bottom-right_value": {
+              "value": "{theme.background.container.global_nav.desktop.40}",
+              "type": "color",
+              "description": "The bottom-right color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            },
+            "secondary_top-left_value": {
+              "value": "{theme.background.container.global_nav.desktop.40}",
+              "type": "color",
+              "description": "The  top-left color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
+            },
+            "secondary_bottom-right_value": {
+              "value": "{theme.background.container.global_nav.desktop.50}",
+              "type": "color",
+              "description": "The bottom-right color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
+            }
+          }
+        }
+      }
+    }
+  },
+  "segmented_control": {
+    "button": {
+      "start": {
+        "border_radius": {
+          "value": "{theme.border_radius.container.small} 0 0 {theme.border_radius.container.small}",
+          "type": "borderRadius",
+          "description": "Deprecated token since the new segmented control doesn't use different border sizes anymore."
+        }
+      },
+      "selected": {
+        "border_radius": {
+          "value": "{theme.border_radius.container.small}",
+          "type": "borderRadius",
+          "description": "Deprecated token since the new segmented control doesn't use different border sizes anymore."
+        }
+      },
+      "end": {
+        "border_radius": {
+          "value": "0 {theme.border_radius.container.small} {theme.border_radius.container.small} 0",
+          "type": "borderRadius",
+          "description": "Deprecated token since the new segmented control doesn't use different border sizes anymore."
+        }
       }
     }
   }

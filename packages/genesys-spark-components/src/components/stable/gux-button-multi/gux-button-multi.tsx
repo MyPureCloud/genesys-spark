@@ -88,6 +88,21 @@ export class GuxButtonMulti {
         this.isOpen = false;
         break;
       }
+      case 'Enter':
+      case 'ArrowDown':
+        if (composedPath.includes(this.dropdownButton)) {
+          event.preventDefault();
+          this.isOpen = true;
+          this.focusFirstItemInPopupList();
+        }
+        break;
+      case 'ArrowUp':
+        if (composedPath.includes(this.dropdownButton)) {
+          event.preventDefault();
+          this.isOpen = true;
+          this.focusLastItemInPopupList();
+        }
+        break;
     }
   }
 
@@ -146,6 +161,12 @@ export class GuxButtonMulti {
   private focusFirstItemInPopupList(): void {
     afterNextRenderTimeout(() => {
       void this.listElement.guxFocusFirstItem();
+    });
+  }
+
+  private focusLastItemInPopupList(): void {
+    afterNextRenderTimeout(() => {
+      void this.listElement.guxFocusLastItem();
     });
   }
 

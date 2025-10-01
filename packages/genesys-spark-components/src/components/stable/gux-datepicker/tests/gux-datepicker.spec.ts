@@ -1,6 +1,6 @@
 const useRegionalDates = jest.fn().mockReturnValue(false);
 
-jest.mock('i18n/use-regional-dates', () => ({
+jest.mock('../../../../i18n/use-regional-dates', () => ({
   __esModule: true,
   useRegionalDates
 }));

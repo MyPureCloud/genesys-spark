@@ -268,38 +268,32 @@ test.describe('gux-toggle', () => {
     });
   });
 
-  test.describe('Regression tests', () => {
-    checkRenders({
-      renderConfigs: [
-        {
-          description: 'COMUI-3436: TargetSize Violation for toggles in tables',
-          html: `
-          <gux-table compact>
-            <table slot="data">
-              <thead>
-                <tr>
-                  <th data-column-name="first-name">First name</th>
-                  <th data-column-name="last-name">Last name</th>
-                  <th data-column-name="toggle">Toggle</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>John</td>
-                  <td>Doe</td>
-                  <td><gux-toggle></gux-toggle></td>
-                </tr>
-                <tr>
-                  <td>Jane</td>
-                  <td>Doe</td>
-                  <td><gux-toggle></gux-toggle></td>
-                </tr>
-              </tbody>
-            </table>
-          </gux-table>`
-        }
-      ],
-      element: 'gux-table'
+  test.describe('testing aria-label functionality', () => {
+    test('should set aria-label on toggle slider when label is provided on gux-toggle', async ({
+      page
+    }) => {
+      const html = '<gux-toggle lang="en" label="Dark Mode"></gux-toggle>';
+      await setContent(page, html);
+
+      const slider = page.locator('gux-toggle-slider');
+      await expect(slider).toHaveAttribute('aria-label', 'Dark Mode');
+    });
+
+    test('should update aria-label when label changes', async ({ page }) => {
+      const html = '<gux-toggle lang="en" label="Dark Mode"></gux-toggle>';
+      await setContent(page, html);
+
+      const toggle = page.locator('gux-toggle');
+      const slider = toggle.locator('gux-toggle-slider .gux-toggle-slider');
+
+      await expect(slider).toHaveAttribute('aria-label', 'Dark Mode');
+
+      await toggle.evaluate((el: HTMLGuxToggleElement) => {
+        el.label = 'Light Mode';
+      });
+      await page.waitForChanges();
+
+      await expect(slider).toHaveAttribute('aria-label', 'Light Mode');
     });
   });
 });

@@ -2,6 +2,10 @@
 
 :host {
   display: block;
+  font-family: initial;
+  font-size: initial;
+  font-weight: initial;
+  line-height: initial;
   outline: none;
 }
 
@@ -66,7 +70,7 @@
           font-weight: ui.$gse-ui-toggle-label-fontWeight;
           line-height: ui.$gse-ui-toggle-label-lineHeight;
           color: ui.$gse-ui-formControl-label-labelColor;
-          word-wrap: break-word;
+          overflow-wrap: break-word;
 
           &.gux-hidden {
             visibility: hidden;

@@ -1,11 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-breadcrumbs #render should render component as expected (1) 1`] = `
 <gux-breadcrumbs>
   <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
-        <slot></slot>
+        <slot>
+        </slot>
       </ol>
     </nav>
   </template>
@@ -17,7 +18,8 @@ exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
   <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
-        <slot></slot>
+        <slot>
+        </slot>
       </ol>
     </nav>
   </template>
@@ -25,39 +27,39 @@ exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
-          <slot></slot>
+          <slot>
+          </slot>
         </span>
-        <span aria-hidden="true" class="gux-breadcrumb-separator">
+        <span class="gux-breadcrumb-separator" aria-hidden="true">
           /
         </span>
       </span>
-    </template>
-    Category
+    </template>Category
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <gux-link-beta size="medium" standalone="">
           <a href="#">
-            <slot></slot>
+            <slot>
+            </slot>
           </a>
         </gux-link-beta>
-        <span aria-hidden="true" class="gux-breadcrumb-separator">
+        <span class="gux-breadcrumb-separator" aria-hidden="true">
           /
         </span>
       </span>
-    </template>
-    Parent
+    </template>Parent
   </gux-breadcrumb-item>
   <gux-breadcrumb-item role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
-        <span aria-current="page" class="gux-active gux-breadcrumb-content">
-          <slot></slot>
+        <span class="gux-breadcrumb-content gux-active" aria-current="page">
+          <slot>
+          </slot>
         </span>
       </span>
-    </template>
-    Current
+    </template>Current
   </gux-breadcrumb-item>
 </gux-breadcrumbs>
 `;
@@ -67,7 +69,8 @@ exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
   <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
-        <slot></slot>
+        <slot>
+        </slot>
       </ol>
     </nav>
   </template>
@@ -75,39 +78,39 @@ exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
-          <slot></slot>
+          <slot>
+          </slot>
         </span>
-        <span aria-hidden="true" class="gux-breadcrumb-separator">
+        <span class="gux-breadcrumb-separator" aria-hidden="true">
           /
         </span>
       </span>
-    </template>
-    Category
+    </template>Category
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <gux-link-beta size="medium" standalone="">
           <a href="#">
-            <slot></slot>
+            <slot>
+            </slot>
           </a>
         </gux-link-beta>
-        <span aria-hidden="true" class="gux-breadcrumb-separator">
+        <span class="gux-breadcrumb-separator" aria-hidden="true">
           /
         </span>
       </span>
-    </template>
-    Parent
+    </template>Parent
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
-        <span aria-current="page" class="gux-active gux-breadcrumb-content">
-          <slot></slot>
+        <span class="gux-breadcrumb-content gux-active" aria-current="page">
+          <slot>
+          </slot>
         </span>
       </span>
-    </template>
-    Current
+    </template>Current
   </gux-breadcrumb-item>
 </gux-breadcrumbs>
 `;
@@ -117,7 +120,8 @@ exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
   <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
-        <slot></slot>
+        <slot>
+        </slot>
       </ol>
     </nav>
   </template>
@@ -125,39 +129,39 @@ exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
-          <slot></slot>
+          <slot>
+          </slot>
         </span>
-        <span aria-hidden="true" class="gux-breadcrumb-separator">
+        <span class="gux-breadcrumb-separator" aria-hidden="true">
           /
         </span>
       </span>
-    </template>
-    Category
+    </template>Category
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <gux-link-beta size="medium" standalone="">
           <a href="#">
-            <slot></slot>
+            <slot>
+            </slot>
           </a>
         </gux-link-beta>
-        <span aria-hidden="true" class="gux-breadcrumb-separator">
+        <span class="gux-breadcrumb-separator" aria-hidden="true">
           /
         </span>
       </span>
-    </template>
-    Parent
+    </template>Parent
   </gux-breadcrumb-item>
   <gux-breadcrumb-item role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
-        <span aria-current="page" class="gux-active gux-breadcrumb-content">
-          <slot></slot>
+        <span class="gux-breadcrumb-content gux-active" aria-current="page">
+          <slot>
+          </slot>
         </span>
       </span>
-    </template>
-    Current
+    </template>Current
   </gux-breadcrumb-item>
 </gux-breadcrumbs>
 `;
@@ -167,7 +171,8 @@ exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
   <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
-        <slot></slot>
+        <slot>
+        </slot>
       </ol>
     </nav>
   </template>
@@ -175,39 +180,39 @@ exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-secondary">
         <span class="gux-breadcrumb-content">
-          <slot></slot>
+          <slot>
+          </slot>
         </span>
-        <span aria-hidden="true" class="gux-breadcrumb-separator">
+        <span class="gux-breadcrumb-separator" aria-hidden="true">
           /
         </span>
       </span>
-    </template>
-    Category
+    </template>Category
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-secondary">
         <gux-link-beta size="small" standalone="">
           <a href="#">
-            <slot></slot>
+            <slot>
+            </slot>
           </a>
         </gux-link-beta>
-        <span aria-hidden="true" class="gux-breadcrumb-separator">
+        <span class="gux-breadcrumb-separator" aria-hidden="true">
           /
         </span>
       </span>
-    </template>
-    Parent
+    </template>Parent
   </gux-breadcrumb-item>
   <gux-breadcrumb-item role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-secondary">
-        <span aria-current="page" class="gux-active gux-breadcrumb-content">
-          <slot></slot>
+        <span class="gux-breadcrumb-content gux-active" aria-current="page">
+          <slot>
+          </slot>
         </span>
       </span>
-    </template>
-    Current
+    </template>Current
   </gux-breadcrumb-item>
 </gux-breadcrumbs>
 `;
@@ -217,7 +222,8 @@ exports[`gux-breadcrumbs #render should render component as expected (6) 1`] = `
   <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
-        <slot></slot>
+        <slot>
+        </slot>
       </ol>
     </nav>
   </template>
@@ -225,39 +231,39 @@ exports[`gux-breadcrumbs #render should render component as expected (6) 1`] = `
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-invalid">
         <span class="gux-breadcrumb-content">
-          <slot></slot>
+          <slot>
+          </slot>
         </span>
-        <span aria-hidden="true" class="gux-breadcrumb-separator">
+        <span class="gux-breadcrumb-separator" aria-hidden="true">
           /
         </span>
       </span>
-    </template>
-    Category
+    </template>Category
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-invalid">
         <gux-link-beta size="medium" standalone="">
           <a href="#">
-            <slot></slot>
+            <slot>
+            </slot>
           </a>
         </gux-link-beta>
-        <span aria-hidden="true" class="gux-breadcrumb-separator">
+        <span class="gux-breadcrumb-separator" aria-hidden="true">
           /
         </span>
       </span>
-    </template>
-    Parent
+    </template>Parent
   </gux-breadcrumb-item>
   <gux-breadcrumb-item role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-invalid">
-        <span aria-current="page" class="gux-active gux-breadcrumb-content">
-          <slot></slot>
+        <span class="gux-breadcrumb-content gux-active" aria-current="page">
+          <slot>
+          </slot>
         </span>
       </span>
-    </template>
-    Current
+    </template>Current
   </gux-breadcrumb-item>
 </gux-breadcrumbs>
 `;

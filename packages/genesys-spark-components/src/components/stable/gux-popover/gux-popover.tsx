@@ -27,6 +27,7 @@ import { ThrottleMethod } from '@utils/decorator/throttle-method';
 /**
  * @slot - popover content
  * @slot title - Slot for popover title
+ * @slot footer - Slot for popover footer
  */
 
 @Component({
@@ -120,6 +121,10 @@ export class GuxPopover {
     return getSlot(this.root, 'title');
   }
 
+  get footerSlot(): Element | null {
+    return getSlot(this.root, 'footer');
+  }
+
   private runUpdatePosition(): void {
     if (this.cleanupUpdatePosition) {
       this.cleanupUpdatePosition();
@@ -179,9 +184,9 @@ export class GuxPopover {
           left: -90
         }[side];
 
-        // This is 13 because this makes the arrow look aligned when horizontal
+        // This is 12 because this makes the arrow look aligned when horizontal
         // or 15 if vertical due to extra padding needed to show the shadow.
-        const arrowLen = side === 'left' || side === 'right' ? 15 : 13;
+        const arrowLen = side === 'left' || side === 'right' ? 15 : 12;
 
         if (middlewareData.arrow) {
           let x = middlewareData.arrow.x;
@@ -265,6 +270,9 @@ export class GuxPopover {
         </div>
         <div class="gux-popover-content">
           <slot />
+        </div>
+        <div class={{ 'gux-popover-footer': Boolean(this.footerSlot) }}>
+          <slot name="footer"></slot>
         </div>
       </div>
     ) as JSX.Element;

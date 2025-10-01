@@ -373,7 +373,7 @@
       "type": "border"
     },
     "box_shadow": {
-      "value": "{container.sm.box_shadow}",
+      "value": "{shadow.7_menu}",
       "type": "boxShadow"
     },
     "padding": {
@@ -447,7 +447,7 @@
     },
     "select-all": {
       "padding": {
-        "value": "{interactive.sm.padding} 0px 0px 0px",
+        "value": "{interactive.lg.padding}",
         "type": "spacing"
       },
       "gap": {
@@ -852,7 +852,7 @@
       }
     },
     "box_shadow": {
-      "value": "{container.sm.box_shadow}",
+      "value": "{shadow.7_menu}",
       "type": "boxShadow"
     },
     "cta_group": {
@@ -1297,9 +1297,8 @@
         }
       },
       "box_shadow": {
-        "value": "{container.sm.box_shadow}",
-        "type": "boxShadow",
-        "description": "The shadow we used for small-sized components like tooltips."
+        "value": "{shadow.1_card.default}",
+        "type": "boxShadow"
       },
       "status_icon": {
         "success": {
@@ -2007,6 +2006,10 @@
           "value": "128px",
           "type": "sizing"
         },
+        "min_height": {
+          "value": "53px",
+          "type": "sizing"
+        },
         "body": {
           "margin_right": {
             "value": "{progress_and_loading.medium.gap}",
@@ -2021,6 +2024,10 @@
       "vertical": {
         "min_height": {
           "value": "90px",
+          "type": "sizing"
+        },
+        "min_width": {
+          "value": "128px",
           "type": "sizing"
         },
         "body": {
@@ -2135,6 +2142,18 @@
     "text": {
       "value": "{body.sm.semi_bold}",
       "type": "typography"
+    },
+    "shortened": {
+      "gap": {
+        "value": "{container.sm.gap}",
+        "type": "spacing"
+      },
+      "edit": {
+        "gap": {
+          "value": "{container.xs.gap}",
+          "type": "spacing"
+        }
+      }
     }
   },
   "prompt_input": {
@@ -2155,6 +2174,14 @@
         "min_height": {
           "value": "{container.md.height}",
           "type": "sizing"
+        }
+      },
+      "label_container": {
+        "scroll_enabled": {
+          "padding": {
+            "value": "0px {interactive.md.padding} 0px 0px",
+            "type": "spacing"
+          }
         }
       }
     },
@@ -2191,6 +2218,14 @@
         "gap": {
           "value": "{container.sm.gap}",
           "type": "spacing"
+        }
+      },
+      "label_container": {
+        "scroll_enabled": {
+          "padding": {
+            "value": "0px {interactive.md.padding} 0px 0px",
+            "type": "spacing"
+          }
         }
       }
     },

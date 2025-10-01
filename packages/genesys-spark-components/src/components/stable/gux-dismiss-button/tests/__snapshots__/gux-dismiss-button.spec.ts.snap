@@ -1,12 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-dismiss-button #render should render component as expected (1) 1`] = `
 <gux-dismiss-button>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-button-slot accent="ghost">
-      <button title="Dismiss" type="button">
+      <button type="button" title="Dismiss">
         <div class="gux-icon-container">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
+          <gux-icon icon-name="fa/xmark-large-regular" decorative="" size="small">
+          </gux-icon>
         </div>
       </button>
     </gux-button-slot>

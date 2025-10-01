@@ -44,21 +44,33 @@
       "global_nav": {
         "desktop": {
           "option": {
-            "hover": "#19327a",
+            "hover": "#1a2b67",
             "active_panel": "#2143a2",
             "active_selected": "#2954cb"
           },
           "return": {
             "default": "#2143a2",
-            "hover": "#2954cb"
+            "hover": "#19327a"
           },
           "menu": {
-            "closed_hover": "#19327a",
-            "open_hover": "#19327a"
+            "closed_hover": "#1a2b67",
+            "open_hover": "#1a2b67"
           },
           "new_tab": {
-            "hover": "#19327a",
+            "hover": "#1a2b67",
             "selected": "#2143a2"
+          },
+          "level_2": {
+            "option": {
+              "hover": "#102251"
+            }
+          },
+          "top_nav": {
+            "connected": {
+              "default": "#056d4d",
+              "hover": "#0e5c42",
+              "active": "#044834"
+            }
           }
         }
       }
@@ -109,23 +121,38 @@
           "tonal_subtle": {
             "top_left": "#ebf7fb",
             "bottom_right": "#e8e5fa"
+          },
+          "default": {
+            "left_side": "#ebf6fb",
+            "right_side": "#e7e9f9"
+          },
+          "active": "#d5def7",
+          "copilot_launcher": {
+            "top_left": "#ffc650",
+            "middle": "#ff451a",
+            "bottom_right": "#5476d5"
           }
+        },
+        "brand": {
+          "inverse": "#ff451a"
         }
       },
       "global_nav": {
         "desktop": {
           "top_command_bar": "#ffffff",
           "menu_panel": {
-            "primary_top-left_value": "#3d538f",
-            "primary_bottom-right_value": "#263b73",
-            "secondary_top-left_value": "#263b73",
-            "secondary_bottom-right_value": "#152550"
+            "primary": "#19327a",
+            "secondary": "#1a2b67",
+            "feedback_container": "#2143a2"
           }
         },
         "mobile": {
           "header": "#1e1e21",
           "footer": "#dfe3ec"
         }
+      },
+      "sunken": {
+        "base": "#eff3ff"
       }
     },
     "system": {
@@ -203,6 +230,32 @@
         "offline_reduced": "#cecfd3",
         "out_of_office_reduced": "#e2b7db",
         "notification": "#ff451a"
+      },
+      "notification": {
+        "primary": "#e22245",
+        "secondary": "#f8c73e",
+        "neutral": "#e7e9f9",
+        "subtle": "#2954cb",
+        "dark_only_content": "#2a2a2e",
+        "light_only_content": "#ffffff",
+        "tertiary": "#056d4d",
+        "light_content": "#ffffff"
+      },
+      "illustration": {
+        "default": "#2143a2",
+        "success_base": "#cef0e6",
+        "success_symbol": "#056d4d",
+        "error_base": "#f9d3da",
+        "error_symbol": "#b51b37",
+        "warning_base": "#fce9b2",
+        "warning_symbol": "#6c5619",
+        "info_base": "#ddeaf7",
+        "info_symbol": "#345b82",
+        "operation_base": "#d5def7",
+        "operation_symbol": "#2143a2",
+        "background_solid": "#bfc6d94d",
+        "background_gradient": "#bfc6d980",
+        "background_gradient_white": "#ffffff"
       }
     },
     "form_control": {
@@ -217,6 +270,10 @@
           "first_level": "#81cbe5",
           "subsequent_level": "#9fd6ea"
         }
+      },
+      "segment": {
+        "active": "#ffffff",
+        "hover": "#d5def7"
       }
     }
   },
@@ -312,7 +369,8 @@
           "top_left": "#28afe0",
           "bottom_right": "#6e5ddb"
         },
-        "global_nav": "#152550"
+        "global_nav": "#152550",
+        "brand_inverse": "#ffffff"
       }
     },
     "system": {
@@ -377,6 +435,11 @@
       },
       "search": {
         "matching_text": "#2a2a2e"
+      },
+      "segment": {
+        "active": "#2143a2",
+        "hover": "#19327a",
+        "default": "#2143a2"
       }
     }
   },
@@ -403,12 +466,6 @@
         "enabled": "#2143a2",
         "hover": "#102251",
         "active": "#19327a"
-      },
-      "special_accents": {
-        "ai": {
-          "top_left": "#28afe0",
-          "bottom_right": "#8b7de2"
-        }
       },
       "global_nav": {
         "tree_view": {
@@ -458,6 +515,38 @@
       }
     }
   },
+  "effects": {
+    "ai_glow": {
+      "yellow": {
+        "30": "#ffc6504d",
+        "40": "#ffc65066",
+        "100": "#ffc650"
+      },
+      "gold": {
+        "40": "#ff9f4066",
+        "60": "#ff9f4099",
+        "100": "#ff9f40"
+      },
+      "orange": {
+        "40": "#ff451a66",
+        "60": "#ff451a99",
+        "100": "#ff451a"
+      },
+      "teal": {
+        "50": "#53bee580",
+        "70": "#53bee5b3",
+        "100": "#53bee5"
+      }
+    },
+    "box_shadow": "#2a2a2e26",
+    "shadows": {
+      "10": "#3d538f1a",
+      "20": "#3d538f26",
+      "30": "#3d538f33",
+      "40": "#3d538f40",
+      "50": "#3d538f4d"
+    }
+  },
   "container": {
     "lg": {
       "box_shadow": {
@@ -489,9 +578,6 @@
         "offsetY": "0"
       }
     }
-  },
-  "effects": {
-    "box_shadow": "#2a2a2e26"
   },
   "charts": {
     "categorical_data": {
