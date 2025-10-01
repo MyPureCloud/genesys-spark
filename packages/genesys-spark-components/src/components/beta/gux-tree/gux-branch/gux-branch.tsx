@@ -4,7 +4,8 @@ import {
   Element,
   h,
   JSX,
-  Prop
+  Prop,
+  Watch
 } from '@stencil/core';
 
 /**
@@ -43,10 +44,25 @@ export class GuxBranch {
   @Prop()
   selected: boolean = false;
 
+  @Watch('selected')
+  handleSelectedChange(newValue: boolean) {
+    this.internals.ariaSelected = newValue.toString();
+    this.root.setAttribute('aria-selected', newValue.toString());
+  }
+
+  @Watch('active')
+  handleActiveChange(active: boolean) {
+    this.root.setAttribute('tabIndex', active ? '0' : '');
+
+    if (active) {
+      this.root.focus();
+    }
+  }
+
   componentWillLoad() {
     this.internals.role = 'treeitem';
     this.root.setAttribute('role', 'treeitem');
-    this.root.setAttribute('tabIndex', '0');
+    this.root.setAttribute('tabIndex', this.active ? '0' : '');
   }
 
   componentWillRender() {
@@ -65,6 +81,7 @@ export class GuxBranch {
         <div
           class={{
             'gux-target': true,
+            'gux-disabled': this.disabled,
             'gux-selected': this.selected
           }}
         >

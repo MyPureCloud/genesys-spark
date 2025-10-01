@@ -30,4 +30,5 @@ export interface TreeNodeElement extends HTMLElement {
   filtered: boolean;
   active: boolean;
   selected: boolean;
+  expanded?: boolean;
 }

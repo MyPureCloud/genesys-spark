@@ -2,25 +2,29 @@ import {
   AttachInternals,
   Component,
   Element,
-  Event,
-  EventEmitter,
   h,
   JSX,
   Prop,
   Listen,
-  State
+  Watch,
+  forceUpdate
 } from '@stencil/core';
 
 import {
-  onClickedNode,
-  convertValueToArray,
-  getTreeNodes
+  handleTreeNodeSpecificEvent,
+  setFirstNodeActive,
+  setInitialActiveNode,
+  setLastNodeActive,
+  setNextNodeActive,
+  setPreviousNodeActive,
+  setSelectedNode,
+  setParentNodeActive,
+  setChildNodeActive,
+  setSelectedNodeByValue
 } from './gux-tree.service';
 
 import { trackComponent } from '@utils/tracking/usage';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
-import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
-import { TreeNodeElement } from './tree-node-types';
 
 /**
  * @slot default - gux-tree-view-branch or gux-tree-view-leaf elements
@@ -39,75 +43,93 @@ export class GuxTreeBeta {
   @AttachInternals()
   internals: ElementInternals;
 
-  @State()
-  selectedValues: string[] = [];
-
-  @State()
-  treeNodes: TreeNodeElement[] = [];
-
-  @Event()
-  internaltreenodesupdated: EventEmitter;
-
   @Prop({ mutable: true })
   value: string;
 
+  @Watch('value')
+  handleValueChange(): void {
+    simulateNativeEvent(this.root, 'input');
+    simulateNativeEvent(this.root, 'change');
+  }
+
   @Listen('click')
   onClick(event: MouseEvent): void {
-    let eventFromLeaf = false;
-    whenEventIsFrom('gux-leaf', event, (leaf: HTMLGuxLeafElement) => {
-      console.info('from leaf', { leaf });
-      if (leaf.value) {
-        leaf.selected = true;
-        onClickedNode(leaf, value => this.updateValue(value));
-        eventFromLeaf = true;
+    handleTreeNodeSpecificEvent({
+      event,
+      onLeaf: leaf => {
+        setSelectedNode(this.root, leaf);
+      },
+      onBranch: branch => {
+        branch.expanded = !branch.expanded;
+        setSelectedNode(this.root, branch);
       }
     });
-    // If it's got a value attribute, that's good enough.
-    if (!eventFromLeaf) {
-      whenEventIsFrom('gux-branch', event, (branch: HTMLGuxBranchElement) => {
-        console.info('from branch', { branch });
-        branch.selected = true;
-        branch.expanded = !branch.expanded;
-        onClickedNode(branch, value => this.updateValue(value));
-        return;
-      });
-    }
   }
 
   @Listen('keydown')
   handleKeydown(event: KeyboardEvent): void {
     switch (event.key) {
-      case 'ArrowRight':
-        console.warn('not implemented');
-        break;
-      case 'ArrowLeft':
-        console.warn('not implemented');
-        break;
       case 'ArrowDown':
-        console.warn('move focus to next visible node');
+        event.preventDefault();
+        setNextNodeActive(this.root);
         break;
       case 'ArrowUp':
-        console.warn('move focus to previous visible node');
+        event.preventDefault();
+        setPreviousNodeActive(this.root);
         break;
       case 'Home':
-        console.warn('move focus to fist visible node');
+        event.preventDefault();
+        setFirstNodeActive(this.root);
         break;
       case 'End':
-        console.warn('move focus to last visible node');
+        event.preventDefault();
+        setLastNodeActive(this.root);
         break;
+      case 'ArrowLeft':
+      case 'ArrowRight':
       case 'Enter':
-        console.warn('not implemented');
+        handleTreeNodeSpecificEvent({
+          event,
+          onLeaf: leaf => {
+            switch (event.key) {
+              case 'ArrowLeft':
+                event.preventDefault();
+                setParentNodeActive(this.root);
+                break;
+              case 'Enter':
+                event.preventDefault();
+                setSelectedNode(this.root, leaf);
+                break;
+            }
+          },
+          onBranch: branch => {
+            switch (event.key) {
+              case 'ArrowRight':
+                event.preventDefault();
+                if (!branch.expanded) {
+                  branch.expanded = true;
+                } else {
+                  setChildNodeActive(this.root);
+                }
+                break;
+              case 'ArrowLeft':
+                event.preventDefault();
+                if (branch.expanded) {
+                  branch.expanded = false;
+                } else {
+                  setParentNodeActive(this.root);
+                }
+                break;
+              case 'Enter':
+                event.preventDefault();
+                setSelectedNode(this.root, branch);
+                break;
+            }
+          }
+        });
         break;
-    }
-  }
-
-  @Listen('keyup')
-  handleKeyup(event: KeyboardEvent): void {
-    switch (event.key) {
-      case ' ': {
-        console.warn('not implemented');
-        break;
-      }
+      default:
+        return;
     }
   }
 
@@ -115,32 +137,16 @@ export class GuxTreeBeta {
     trackComponent(this.root);
     this.internals.role = 'tree';
     this.root.setAttribute('role', 'tree');
-    this.setTreeNodes();
+
+    setSelectedNodeByValue(this.root, this.value);
+    setInitialActiveNode(this.root);
   }
 
-  componentWillRender(): void {
-    this.treeNodes.forEach(treeNode => {
-      treeNode.selected = treeNode.value === this.value;
-    });
-  }
-
-  private setTreeNodes(): void {
-    this.selectedValues = convertValueToArray(this.value);
-    this.treeNodes = getTreeNodes(this.root);
-    this.internaltreenodesupdated.emit();
+  private onSlotchange(): void {
+    forceUpdate(this.root);
   }
 
   render(): JSX.Element {
-    return (<slot onSlotchange={() => this.setTreeNodes()} />) as JSX.Element;
-  }
-
-  private updateValue(newValue: string): void {
-    console.info(this.value, newValue);
-    if (this.value !== newValue) {
-      this.value = newValue;
-
-      simulateNativeEvent(this.root, 'input');
-      simulateNativeEvent(this.root, 'change');
-    }
+    return (<slot onSlotchange={() => this.onSlotchange()} />) as JSX.Element;
   }
 }

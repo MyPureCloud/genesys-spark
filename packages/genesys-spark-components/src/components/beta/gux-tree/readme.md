@@ -12,6 +12,13 @@
 | `value`  | `value`   |             | `string` | `undefined` |
 
 
+## Events
+
+| Event                      | Description | Type               |
+| -------------------------- | ----------- | ------------------ |
+| `internaltreenodesupdated` |             | `CustomEvent<any>` |
+
+
 ## Slots
 
 | Slot        | Description                                         |

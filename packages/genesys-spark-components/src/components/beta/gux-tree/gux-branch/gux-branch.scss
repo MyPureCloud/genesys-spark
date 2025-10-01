@@ -13,6 +13,10 @@
     &.gux-selected {
       background-color: lightgrey;
     }
+
+    &.gux-disabled {
+      opacity: 0.5;
+    }
   }
 
   .gux-treeitems {
