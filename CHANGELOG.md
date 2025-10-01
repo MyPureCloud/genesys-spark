@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.177.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.176.0...v4.177.0) (2025-10-01)
+
+
+### Features
+
+* **tokens:** Updated AI gradients ([1d87c7b](https://github.com/MyPureCloud/genesys-spark/commit/1d87c7bef2b690f0cc3b1efb77afbaea180c9fe2))
+
 ## [4.176.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.175.3...v4.176.0) (2025-09-30)
 
 
