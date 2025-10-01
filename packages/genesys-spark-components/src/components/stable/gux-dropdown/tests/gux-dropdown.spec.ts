@@ -142,5 +142,28 @@ describe('gux-dropdown', () => {
       expect(page.rootInstance).toBeInstanceOf(GuxDropdown);
       expect(page.root).toMatchSnapshot();
     });
+    it(`should render as expected with gux-option whose slotted content includes whitespace`, async () => {
+      const components = [GuxDropdown, GuxListbox, GuxOption];
+      // With frog option selected below, the snapshot should show the selected item's text with
+      // dropdown closed as "Frog"
+      // Prior bug only considered first node of slot content, which below is a whitespace text node.
+      // And not "Frog Amphibian" because subtext slot should be ignored.
+      const html = `
+      <gux-dropdown lang="en" value="f">
+        <gux-listbox aria-label="Animals">
+          <gux-option value="e">Eel</gux-option>
+          <gux-option value="f">
+            <span>Frog</span>
+            <span slot="subtext">Amphibian</span>
+          </gux-option>
+          <gux-option value="g">Goat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      `;
+      const page = await newSpecPage({ components, html, language });
+
+      expect(page.rootInstance).toBeInstanceOf(GuxDropdown);
+      expect(page.root).toMatchSnapshot();
+    });
   });
 });

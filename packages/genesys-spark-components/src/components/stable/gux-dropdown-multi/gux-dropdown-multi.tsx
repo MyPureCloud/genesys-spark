@@ -25,7 +25,7 @@ import translationResources from './i18n/en.json';
 import {
   getSearchOption,
   setInitialActiveOption,
-  getOptionDefaultSlot,
+  getOptionDefaultSlotText,
   convertValueToArray
 } from '../gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
@@ -478,8 +478,7 @@ export class GuxDropdownMulti {
     if (textInputLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, textInput);
       if (option && this.filterType !== 'custom') {
-        const optionSlotTextContent =
-          getOptionDefaultSlot(option)?.textContent.trim();
+        const optionSlotTextContent = getOptionDefaultSlotText(option);
         return optionSlotTextContent?.substring(textInputLength);
       }
 
@@ -512,7 +511,7 @@ export class GuxDropdownMulti {
   private getSelectedOptionValueString(): string {
     return this.getOptionElementByValue(this.value)
       .map(option => {
-        return getOptionDefaultSlot(option)?.textContent.trim();
+        return getOptionDefaultSlotText(option);
       })
       .join(', ');
   }

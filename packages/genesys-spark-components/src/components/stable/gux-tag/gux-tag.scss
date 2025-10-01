@@ -53,10 +53,6 @@ $focus-outline-offset: 5px;
     }
   }
 
-  .gux-sr-only {
-    @include mixins.gux-sr-only-clip;
-  }
-
   .gux-tag-remove-button {
     all: unset;
     display: flex;
