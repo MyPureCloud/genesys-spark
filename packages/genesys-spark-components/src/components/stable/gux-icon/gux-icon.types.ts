@@ -1014,6 +1014,7 @@ export type GuxIconIconName =
   | 'fa/phone-slash-regular'
   | 'fa/phone-xmark-regular'
   | 'fa/play-regular'
+  | 'fa/play-solid-full'
   | 'fa/plus-regular'
   | 'fa/print-regular'
   | 'fa/puzzle-piece-regular'
