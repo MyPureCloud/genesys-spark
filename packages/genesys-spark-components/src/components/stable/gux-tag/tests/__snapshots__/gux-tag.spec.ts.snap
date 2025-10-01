@@ -114,8 +114,9 @@ exports[`gux-tag #render should render component as expected (6) 1`] = `
       <gux-screen-reader-beta>
         disabled tag with label:
       </gux-screen-reader-beta>
-      <button class="gux-tag-remove-button" disabled="" type="button">
-        <gux-icon class="gux-tag-remove-icon" decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+      <button class="gux-tag-remove-button" type="button" disabled="">
+        <gux-icon class="gux-tag-remove-icon" icon-name="fa/xmark-large-regular" decorative="">
+        </gux-icon>
         <gux-screen-reader-beta>
           Remove tag with label:
         </gux-screen-reader-beta>
