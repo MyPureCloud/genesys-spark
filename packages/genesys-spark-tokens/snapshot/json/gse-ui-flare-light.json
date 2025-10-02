@@ -1708,7 +1708,8 @@
       }
     },
     "group": {
-      "gap": "8px"
+      "gap": "8px",
+      "padding_left": "24px"
     }
   },
   "menu": {

@@ -427,6 +427,7 @@
   "--gse-ui-checkbox-focus-borderRadiusSmall",
   "--gse-ui-checkbox-focus-offset",
   "--gse-ui-checkbox-gap",
+  "--gse-ui-checkbox-helper-padding",
   "--gse-ui-checkbox-icon-default-selectedForegroundColor",
   "--gse-ui-checkbox-icon-default-unselectedForegroundColor",
   "--gse-ui-checkbox-icon-error-foregroundColor",
