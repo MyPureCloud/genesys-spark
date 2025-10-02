@@ -63,7 +63,7 @@ describe('gux-avatar-group.service', () => {
         hasAttribute: jest.fn().mockReturnValue(false),
         focus: jest.fn()
       }
-    ] as HTMLElement[];
+    ] as unknown as HTMLElement[];
 
     mockGroup = {
       querySelectorAll: jest.fn().mockReturnValue(mockGroupItems),
@@ -76,18 +76,12 @@ describe('gux-avatar-group.service', () => {
   });
 
   describe('groupKeyboardNavigation', () => {
-    let mockEvent: KeyboardEvent;
-
-    beforeEach(() => {
-      mockEvent = {
-        key: '',
+    it('should handle ArrowLeft key', () => {
+      const mockEvent = {
+        key: 'ArrowLeft',
         stopPropagation: jest.fn(),
         preventDefault: jest.fn()
       } as unknown as KeyboardEvent;
-    });
-
-    it('should handle ArrowLeft key', () => {
-      mockEvent.key = 'ArrowLeft';
 
       groupKeyboardNavigation(mockEvent, mockElement);
 
@@ -96,7 +90,11 @@ describe('gux-avatar-group.service', () => {
     });
 
     it('should handle ArrowUp key', () => {
-      mockEvent.key = 'ArrowUp';
+      const mockEvent = {
+        key: 'ArrowUp',
+        stopPropagation: jest.fn(),
+        preventDefault: jest.fn()
+      } as unknown as KeyboardEvent;
 
       groupKeyboardNavigation(mockEvent, mockElement);
 
@@ -105,7 +103,11 @@ describe('gux-avatar-group.service', () => {
     });
 
     it('should handle ArrowRight key', () => {
-      mockEvent.key = 'ArrowRight';
+      const mockEvent = {
+        key: 'ArrowRight',
+        stopPropagation: jest.fn(),
+        preventDefault: jest.fn()
+      } as unknown as KeyboardEvent;
 
       groupKeyboardNavigation(mockEvent, mockElement);
 
@@ -114,7 +116,11 @@ describe('gux-avatar-group.service', () => {
     });
 
     it('should handle ArrowDown key', () => {
-      mockEvent.key = 'ArrowDown';
+      const mockEvent = {
+        key: 'ArrowDown',
+        stopPropagation: jest.fn(),
+        preventDefault: jest.fn()
+      } as unknown as KeyboardEvent;
 
       groupKeyboardNavigation(mockEvent, mockElement);
 
@@ -123,7 +129,11 @@ describe('gux-avatar-group.service', () => {
     });
 
     it('should handle Home key', () => {
-      mockEvent.key = 'Home';
+      const mockEvent = {
+        key: 'Home',
+        stopPropagation: jest.fn(),
+        preventDefault: jest.fn()
+      } as unknown as KeyboardEvent;
 
       groupKeyboardNavigation(mockEvent, mockElement);
 
@@ -132,7 +142,11 @@ describe('gux-avatar-group.service', () => {
     });
 
     it('should handle End key', () => {
-      mockEvent.key = 'End';
+      const mockEvent = {
+        key: 'End',
+        stopPropagation: jest.fn(),
+        preventDefault: jest.fn()
+      } as unknown as KeyboardEvent;
 
       groupKeyboardNavigation(mockEvent, mockElement);
 
@@ -141,7 +155,11 @@ describe('gux-avatar-group.service', () => {
     });
 
     it('should not handle other keys', () => {
-      mockEvent.key = 'Enter';
+      const mockEvent = {
+        key: 'Enter',
+        stopPropagation: jest.fn(),
+        preventDefault: jest.fn()
+      } as unknown as KeyboardEvent;
 
       groupKeyboardNavigation(mockEvent, mockElement);
 
