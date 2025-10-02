@@ -585,7 +585,6 @@ export class GuxDropdownMulti {
                   onFocus={() => (this.expanded = true)}
                   disabled={this.disabled}
                 ></input>
-                {this.renderTargetContent()}
               </div>
             </div>
           </div>
@@ -626,7 +625,7 @@ export class GuxDropdownMulti {
           aria-haspopup="listbox"
           aria-expanded={this.expanded.toString()}
         >
-          {!this.hasTextInput() && this.renderTargetContent()}
+          {this.renderTargetContent()}
           {this.renderTag()}
           {this.renderRadialLoading()}
           <gux-icon
@@ -642,7 +641,7 @@ export class GuxDropdownMulti {
     ) as JSX.Element;
   }
   private renderTargetContent(): JSX.Element {
-    if (!(this.expanded && this.hasTextInput())) {
+    if (!this.hasTextInput()) {
       return (
         <span class="gux-field-content">{this.renderTargetDisplay()}</span>
       ) as JSX.Element;
