@@ -1,0 +1,97 @@
+<h1>gux-blank-state-beta</h1>
+
+<h4>
+  The blank state will transition from large to medium or small when the view
+  becomes smaller. Use the the drag icon to see the difference.
+</h4>
+
+<gux-blank-state-beta class="blank-state-styling">
+  <gux-icon slot="image" icon-name="bot" decorative="true"></gux-icon>
+  <div slot="primary-message">Customer profile required</div>
+  <div slot="additional-guidance">Create or link a customer profile.</div>
+  <button slot="call-to-action" type="button" onclick="notify(event)">
+    Call to action
+  </button>
+</gux-blank-state-beta>
+
+<h4>
+  A blank-state with an illustration, icon and a secondary action and left
+  alignment
+</h4>
+
+<gux-blank-state-beta alignment="left" class="blank-state-styling">
+  <gux-illustration-beta
+    slot="image"
+    variant="user"
+    status="warning"
+    background-shape="gradient-wide"
+  ></gux-illustration-beta>
+  <div slot="primary-message">Customer profile required</div>
+  <div slot="additional-guidance">Create or link a customer profile.</div>
+  <button slot="call-to-action" type="button" onclick="notify(event)">
+    Call to action
+  </button>
+  <button slot="secondary-call-to-action" type="button" onclick="notify(event)">
+    Link Profile
+  </button>
+</gux-blank-state-beta>
+
+<h4>A blank-state with an illustration, icon and a secondary action</h4>
+
+<gux-blank-state-beta class="blank-state-styling">
+  <gux-illustration-beta
+    slot="image"
+    variant="user"
+    status="warning"
+    background-shape="solid-wide"
+  ></gux-illustration-beta>
+  <div slot="primary-message">Customer profile required</div>
+  <div slot="additional-guidance">Create or link a customer profile.</div>
+  <button slot="call-to-action" type="button" onclick="notify(event)">
+    Create Profile
+  </button>
+  <button slot="secondary-call-to-action" type="button" onclick="notify(event)">
+    Call to action secondary
+  </button>
+</gux-blank-state-beta>
+
+<h4>A blank-state with an illustration, icon and no padding</h4>
+
+<gux-blank-state-beta class="blank-state-styling" no-padding>
+  <gux-illustration-beta
+    slot="image"
+    variant="user"
+    status="warning"
+  ></gux-illustration-beta>
+  <div slot="primary-message">Customer profile required</div>
+  <div slot="additional-guidance">Create or link a customer profile.</div>
+  <button slot="call-to-action" type="button" onclick="notify(event)">
+    Create Profile
+  </button>
+</gux-blank-state-beta>
+
+<h4>A blank-state with illustration, icon and a background shape</h4>
+
+<gux-blank-state-beta class="blank-state-styling">
+  <gux-illustration-beta
+    slot="image"
+    variant="user"
+    status="warning"
+    background-shape="gradient-narrow"
+  ></gux-illustration-beta>
+  <div slot="primary-message">Customer profile required</div>
+  <div slot="additional-guidance">Create or link a customer profile.</div>
+  <button slot="call-to-action" type="button" onclick="notify(event)">
+    Create Profile
+  </button>
+</gux-blank-state-beta>
+
+<style>
+  .blank-state-styling {
+    inline-size: 300px;
+    block-size: 300px;
+    overflow: auto;
+    resize: horizontal;
+    border: 1px dashed gainsboro;
+  }
+</style>

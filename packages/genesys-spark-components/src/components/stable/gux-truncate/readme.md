@@ -47,6 +47,7 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [gux-blank-state-beta](../../beta/gux-blank-state-beta)
  - [gux-dropdown](../gux-dropdown)
  - [gux-file-list-item](../gux-form-field/components/gux-form-field-file-beta/components/gux-file-list-item)
  - [gux-inline-dropdown-beta](../../beta/gux-inline-dropdown)
@@ -75,6 +76,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-truncate --> gux-tooltip
+  gux-blank-state-beta --> gux-truncate
   gux-dropdown --> gux-truncate
   gux-file-list-item --> gux-truncate
   gux-inline-dropdown-beta --> gux-truncate
