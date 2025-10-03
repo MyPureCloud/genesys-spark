@@ -1,7 +1,7 @@
 import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
 
 import { TreeNodeElement } from './tree-node-types';
-
+import { randomHTMLId } from '@utils/dom/random-html-id';
 // Utility functions for node type checking
 function isNode(item: Element): boolean {
   const nodeTypes = ['GUX-LEAF', 'GUX-BRANCH'];
@@ -31,6 +31,10 @@ function getAllTreeNodes(tree: HTMLGuxTreeBetaElement): TreeNodeElement[] {
   function getNodes(element: Element): void {
     for (const child of Array.from(element.children)) {
       if (isNode(child)) {
+        const node = child as TreeNodeElement;
+        if (!node.value) {
+          node.value = randomHTMLId('gux-tree-node');
+        }
         nodes.push(child as TreeNodeElement);
       }
 

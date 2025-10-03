@@ -23,8 +23,10 @@ import {
   setSelectedNodeByValue
 } from './gux-tree.service';
 
+import { randomHTMLId } from '@utils/dom/random-html-id';
 import { trackComponent } from '@utils/tracking/usage';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
+import { logWarn } from '@utils/error/log-error';
 
 /**
  * @slot default - gux-tree-view-branch or gux-tree-view-leaf elements
@@ -39,6 +41,7 @@ import simulateNativeEvent from '@utils/dom/simulate-native-event';
 export class GuxTreeBeta {
   @Element()
   root: HTMLGuxTreeBetaElement;
+  private labelId: string;
 
   @AttachInternals()
   internals: ElementInternals;
@@ -140,6 +143,20 @@ export class GuxTreeBeta {
 
     setSelectedNodeByValue(this.root, this.value);
     setInitialActiveNode(this.root);
+    this.setLabelId();
+  }
+
+  private setLabelId(): void {
+    const treeLabel = this.root.querySelector('[slot=tree-label]');
+
+    if (!treeLabel) {
+      logWarn(this.root, 'Label prop is required for accessibility');
+      return;
+    }
+
+    this.labelId = treeLabel?.id || randomHTMLId('gux-tree-label');
+    treeLabel.id = this.labelId;
+    this.root.setAttribute('aria-labelledby', this.labelId);
   }
 
   private onSlotchange(): void {
@@ -147,6 +164,11 @@ export class GuxTreeBeta {
   }
 
   render(): JSX.Element {
-    return (<slot onSlotchange={() => this.onSlotchange()} />) as JSX.Element;
+    return (
+      <div>
+        <slot name="tree-label"></slot>
+        <slot onSlotchange={() => this.onSlotchange()} />
+      </div>
+    ) as JSX.Element;
   }
 }
