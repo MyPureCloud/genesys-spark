@@ -95,7 +95,8 @@ module.exports = {
             return `${component}.html`;
           },
           transform: generateComponentPage
-        }
+        },
+        { from: 'sounds', to: 'sounds' }
       ]
     })
   ],

@@ -63,7 +63,8 @@
     "google-libphonenumber": "3.2.43",
     "intl-messageformat": "10.7.18",
     "requestanimationframe-timer": "3.0.3",
-    "sortablejs": "1.15.6"
+    "sortablejs": "1.15.6",
+    "wavesurfer.js": "7.11.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",

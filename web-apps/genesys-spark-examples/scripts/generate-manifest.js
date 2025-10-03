@@ -12,7 +12,10 @@ const build = `${process.env.BUILD_NUMBER}`;
 const buildDate = new Date().toISOString();
 const indexFiles = globSync(path.join(__dirname, '../dist/*.html'))
   .map(file => ({ file: path.basename(file) }))
-  .concat({ file: 'versions.json' });
+  .concat({ file: 'versions.json' })
+  .concat({ file: 'sounds/ie.mp3' })
+  .concat({ file: 'sounds/gb.mp3' })
+  .concat({ file: 'sounds/us.mp3' });
 
 const manifest = {
   name,
