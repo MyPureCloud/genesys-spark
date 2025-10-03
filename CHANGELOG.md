@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.177.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.177.0...v4.177.1) (2025-10-03)
+
+
+### Bug Fixes
+
+* **dropdown-multi:** dropdown not opening after closing through the chevron button ([147e850](https://github.com/MyPureCloud/genesys-spark/commit/147e8500da7a908654af9e689ad58fdb5a3d40ab))
+* **gux-dropdown:** Use all slotted option content for selected text and filtering, not just the first node ([4f05e0e](https://github.com/MyPureCloud/genesys-spark/commit/4f05e0e29bc0bae23d8049d47b498bf6655ec4fb))
+* **tag:** stopping screenreader text from bleeding out in some cases ([376abba](https://github.com/MyPureCloud/genesys-spark/commit/376abba6a237ef4a659cdc1eba9ca5617c2a3f49))
+
 ## [4.177.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.176.0...v4.177.0) (2025-10-01)
 
 
