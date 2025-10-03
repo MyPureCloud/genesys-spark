@@ -422,7 +422,7 @@
             "type": "color",
             "description": "The color used for the active state of the AI backgrounds."
           },
-          "copilot_launcher": {
+          "copilot": {
             "top_left": {
               "value": "{theme.effects.ai_glow.30}",
               "type": "color",
@@ -435,6 +435,11 @@
             },
             "bottom_right": {
               "value": "{theme.border.custom_accents.ai.50}",
+              "type": "color",
+              "description": "This is the bottom right color that the ai gradient uses for borders."
+            },
+            "bottom_right_active": {
+              "value": "{theme.border.custom_accents.ai.10}",
               "type": "color",
               "description": "This is the bottom right color that the ai gradient uses for borders."
             }
