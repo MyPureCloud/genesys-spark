@@ -480,6 +480,28 @@
   --gse-ui-links-active-foregroundColor: #102251;
   --gse-ui-links-visited-foregroundColor: #3d538f;
   --gse-ui-links-focusOutline-borderRadius: 4px;
+  --gse-ui-copilotButton-glow-default:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 1px 4px 0 #ffc6504d, 0 1px 4px 0 #ff451a66,
+    -1px 0 4px 0 #ff9f4066, 1px 0 4px 0 #53bee580;
+  --gse-ui-copilotButton-glow-hover:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 3px 6px 0 #ffc65066, 0 -3px 6px 0 #ff451a99,
+    -3px 0 6px 0 #ff9f4099, 3px 0 6px 0 #53bee5b3;
+  --gse-ui-copilotButton-glow-active:
+    0 1px 0 0 #ffc650, 0 -1px 0 0 #ff451a, -1px 0 0 0 #ff9f40,
+    1px 0 0 0 #53bee5, -1px 4px 6px 0 #ffc65066, 0 -4px 6px 0 #ff451a99,
+    -4px 0 6px 0 #ff9f4099, 4px 0 6px 0 #53bee5b3;
+  --gse-ui-copilotButton-disabled-opacity: 0.5;
+  --gse-ui-copilotButton-default-backgroundColor-bottomLeft: #ffd785;
+  --gse-ui-copilotButton-default-backgroundColor-middle: #ff7d5f;
+  --gse-ui-copilotButton-default-backgroundColor-topRight: #879fe2;
+  --gse-ui-copilotButton-hover-backgroundColor-bottomLeft: #ffcc61;
+  --gse-ui-copilotButton-hover-backgroundColor-middle: #ff5831;
+  --gse-ui-copilotButton-hover-backgroundColor-topRight: #6584d9;
+  --gse-ui-copilotButton-active-backgroundColor-bottomLeft: #ffc650;
+  --gse-ui-copilotButton-active-backgroundColor-middle: #ff451a;
+  --gse-ui-copilotButton-active-backgroundColor-topRight: #53bee5;
   --gse-ui-radioButton-icon-default-unselectedForegroundColor: #a3a8b5;
   --gse-ui-radioButton-icon-default-selectedForegroundColor: #2143a2;
   --gse-ui-radioButton-icon-hover-foregroundColor: #19327a;
