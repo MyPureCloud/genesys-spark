@@ -1,0 +1,21 @@
+<h1>gux-audio-preview-beta</h1>
+
+<gux-audio-upload-beta id="audioUpload"></gux-audio-upload-beta>
+
+<style
+  onload="(function() {
+  const audioUpload = document.getElementById('audioUpload');
+
+  audioUpload.addEventListener('audioSubmit', (event) => {
+    const { audioBlob, transcribe } = event.detail;
+    console.log('Audio submitted:', {
+      size: audioBlob.size,
+      type: audioBlob.type
+    });
+  });
+})()"
+>
+
+
+  --noop: none;
+</style>
