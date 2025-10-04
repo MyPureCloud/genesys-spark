@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.178.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.177.1...v4.178.0) (2025-10-04)
+
+
+### Features
+
+* **blank-state-beta:** addition of new blank state component ([c8a2fa9](https://github.com/MyPureCloud/genesys-spark/commit/c8a2fa9fd9e9c26ba0779e3bf58b0f16e60057af))
+
 ### [4.177.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.177.0...v4.177.1) (2025-10-03)
 
 
