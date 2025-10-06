@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`gux-radial-loading #render should render component as expected (1) 1`] = `
-<gux-radial-loading screenreader-text="Loading">
+exports[`gux-radial-loading #render should render as expected for "around-icon" context 1`] = `
+<gux-radial-loading lang="en" context="around-icon" screenreader-text="Loading">
   <template shadowrootmode="open">
-    <div class="gux-modal" role="progressbar" aria-label="Loading">
+    <div class="gux-around-icon" role="progressbar" aria-label="Loading">
       <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
         <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
         </circle>
@@ -17,10 +17,10 @@ exports[`gux-radial-loading #render should render component as expected (1) 1`] 
 </gux-radial-loading>
 `;
 
-exports[`gux-radial-loading #render should render component as expected (2) 1`] = `
-<gux-radial-loading context="modal" screenreader-text="Loading">
+exports[`gux-radial-loading #render should render as expected for "around-icon-light" context 1`] = `
+<gux-radial-loading lang="en" context="around-icon-light" screenreader-text="Loading">
   <template shadowrootmode="open">
-    <div class="gux-modal" role="progressbar" aria-label="Loading">
+    <div class="gux-around-icon-light" role="progressbar" aria-label="Loading">
       <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
         <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
         </circle>
@@ -34,8 +34,25 @@ exports[`gux-radial-loading #render should render component as expected (2) 1`] 
 </gux-radial-loading>
 `;
 
-exports[`gux-radial-loading #render should render component as expected (3) 1`] = `
-<gux-radial-loading context="full-page" screenreader-text="Loading">
+exports[`gux-radial-loading #render should render as expected for "default" context 1`] = `
+<gux-radial-loading lang="en" context="default" screenreader-text="Loading">
+  <template shadowrootmode="open">
+    <div class="gux-default" role="progressbar" aria-label="Loading">
+      <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
+        <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle" stroke-linecap="round">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle-mask" stroke-linecap="round">
+        </circle>
+      </svg>
+    </div>
+  </template>
+</gux-radial-loading>
+`;
+
+exports[`gux-radial-loading #render should render as expected for "full-page" context 1`] = `
+<gux-radial-loading lang="en" context="full-page" screenreader-text="Loading">
   <template shadowrootmode="open">
     <div class="gux-full-page" role="progressbar" aria-label="Loading">
       <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
@@ -51,8 +68,8 @@ exports[`gux-radial-loading #render should render component as expected (3) 1`] 
 </gux-radial-loading>
 `;
 
-exports[`gux-radial-loading #render should render component as expected (4) 1`] = `
-<gux-radial-loading context="input" screenreader-text="Loading">
+exports[`gux-radial-loading #render should render as expected for "input" context 1`] = `
+<gux-radial-loading lang="en" context="input" screenreader-text="Loading">
   <template shadowrootmode="open">
     <div class="gux-input" role="progressbar" aria-label="Loading">
       <svg class="gux-svg-container" viewBox="0 0 16 16" role="presentation">
@@ -61,6 +78,23 @@ exports[`gux-radial-loading #render should render component as expected (4) 1`] 
         <circle cx="50%" cy="50%" r="7" class="gux-dynamic-circle" stroke-linecap="round">
         </circle>
         <circle cx="50%" cy="50%" r="7" class="gux-dynamic-circle-mask" stroke-linecap="round">
+        </circle>
+      </svg>
+    </div>
+  </template>
+</gux-radial-loading>
+`;
+
+exports[`gux-radial-loading #render should render as expected for "modal" context 1`] = `
+<gux-radial-loading lang="en" context="modal" screenreader-text="Loading">
+  <template shadowrootmode="open">
+    <div class="gux-modal" role="progressbar" aria-label="Loading">
+      <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
+        <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle" stroke-linecap="round">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle-mask" stroke-linecap="round">
         </circle>
       </svg>
     </div>
