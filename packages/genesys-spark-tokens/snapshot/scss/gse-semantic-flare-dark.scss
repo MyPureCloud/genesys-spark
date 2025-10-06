@@ -67,9 +67,10 @@
   --gse-semantic-background-container-specialAccents-ai-default-leftSide: #2c363c;
   --gse-semantic-background-container-specialAccents-ai-default-rightSide: #465066;
   --gse-semantic-background-container-specialAccents-ai-active: #475675;
-  --gse-semantic-background-container-specialAccents-ai-copilotLauncher-topLeft: #ffc650;
-  --gse-semantic-background-container-specialAccents-ai-copilotLauncher-middle: #ff451a;
-  --gse-semantic-background-container-specialAccents-ai-copilotLauncher-bottomRight: #5476d5;
+  --gse-semantic-background-container-specialAccents-ai-copilot-topLeft: #ffc650;
+  --gse-semantic-background-container-specialAccents-ai-copilot-middle: #ff451a;
+  --gse-semantic-background-container-specialAccents-ai-copilot-bottomRight: #5476d5;
+  --gse-semantic-background-container-specialAccents-ai-copilot-bottomRightActive: #53bee5;
   --gse-semantic-background-container-specialAccents-brand-inverse: #ff451a;
   --gse-semantic-background-container-globalNav-desktop-topCommandBar: #1e1e21;
   --gse-semantic-background-container-globalNav-desktop-menuPanel-primary: #19327a;
@@ -77,6 +78,7 @@
   --gse-semantic-background-container-globalNav-desktop-menuPanel-feedbackContainer: #19327a;
   --gse-semantic-background-container-globalNav-mobile-header: #1e1e21;
   --gse-semantic-background-container-globalNav-mobile-footer: #141c34;
+  --gse-semantic-background-container-sunken-base: #475675;
   --gse-semantic-background-system-error-tonalMedium: #440a15;
   --gse-semantic-background-system-error-tonalHigh: #881429;
   --gse-semantic-background-system-error-tonalSubtle: #2d070e;
@@ -138,6 +140,8 @@
   --gse-semantic-background-system-notification-subtle: #3d538f;
   --gse-semantic-background-system-notification-darkOnlyContent: #2a2a2e;
   --gse-semantic-background-system-notification-lightOnlyContent: #ffffff;
+  --gse-semantic-background-system-notification-tertiary: #09b581;
+  --gse-semantic-background-system-notification-lightContent: #2a2a2e;
   --gse-semantic-background-system-illustration-default: #829ce5;
   --gse-semantic-background-system-illustration-successBase: #cef0e6;
   --gse-semantic-background-system-illustration-successSymbol: #056d4d;
@@ -156,6 +160,8 @@
   --gse-semantic-background-formControl-textInput-track: #1e1e21;
   --gse-semantic-background-formControl-search-matchingText-firstLevel: #81cbe5;
   --gse-semantic-background-formControl-search-matchingText-subsequentLevel: #9fd6ea;
+  --gse-semantic-background-formControl-segment-active: #1e1e21;
+  --gse-semantic-background-formControl-segment-hover: #354a72;
   --gse-semantic-foreground-interactive-primary-default: #ffffff;
   --gse-semantic-foreground-interactive-primary-active: #ffffff;
   --gse-semantic-foreground-interactive-primary-hover: #ffffff;
@@ -245,6 +251,9 @@
   --gse-semantic-foreground-formControl-label-optionalAccent: #b2b7c4;
   --gse-semantic-foreground-formControl-label-tooltip: #b2b7c4;
   --gse-semantic-foreground-formControl-search-matchingText: #2a2a2e;
+  --gse-semantic-foreground-formControl-segment-active: #d5def7;
+  --gse-semantic-foreground-formControl-segment-hover: #d5def7;
+  --gse-semantic-foreground-formControl-segment-default: #d5def7;
   --gse-semantic-border-focus: #5476d5;
   --gse-semantic-border-container-divider: #4f5157;
   --gse-semantic-border-container-edges-default: #4f5157;
@@ -260,9 +269,6 @@
   --gse-semantic-border-container-highConstrast-enabled: #2143a2;
   --gse-semantic-border-container-highConstrast-hover: #19327a;
   --gse-semantic-border-container-highConstrast-active: #5476d5;
-  --gse-semantic-border-container-specialAccents-ai-topLeft: #cc9e40;
-  --gse-semantic-border-container-specialAccents-ai-bottomRight: #056385;
-  --gse-semantic-border-container-specialAccents-ai-middle: #ff451a;
   --gse-semantic-border-container-globalNav-treeView-bar: #263b73;
   --gse-semantic-border-container-globalNav-topCommandBar-divider: #3e4044;
   --gse-semantic-border-container-globalNav-panel-divider: #3e4044;
@@ -290,6 +296,18 @@
   --gse-semantic-effects-shadows-30: #00000073;
   --gse-semantic-effects-shadows-40: #00000080;
   --gse-semantic-effects-shadows-50: #0009;
+  --gse-semantic-effects-aiGlow-yellow-30: #cc9e404d;
+  --gse-semantic-effects-aiGlow-yellow-40: #cc9e4066;
+  --gse-semantic-effects-aiGlow-yellow-100: #ffc650;
+  --gse-semantic-effects-aiGlow-gold-40: #cc7f3366;
+  --gse-semantic-effects-aiGlow-gold-60: #cc7f3399;
+  --gse-semantic-effects-aiGlow-gold-100: #ff9f40;
+  --gse-semantic-effects-aiGlow-orange-40: #cc371566;
+  --gse-semantic-effects-aiGlow-orange-60: #cc371599;
+  --gse-semantic-effects-aiGlow-orange-100: #ff451a;
+  --gse-semantic-effects-aiGlow-teal-50: #05638580;
+  --gse-semantic-effects-aiGlow-teal-70: #056385b3;
+  --gse-semantic-effects-aiGlow-teal-100: #53bee5;
   --gse-semantic-charts-categoricalData-category1-default: #53bee5;
   --gse-semantic-charts-categoricalData-category1-shading: #4793b0;
   --gse-semantic-charts-categoricalData-category2-default: #467aae;

@@ -1,18 +1,19 @@
 {
-  "name": "default-agent",
-  "version": "1.0.0",
+  "name": "q_ide_default",
   "description": "Agent configuration",
   "mcpServers": {
     "Playwright": {
       "command": "npx",
       "disabled": false,
       "timeout": 60000,
-      "args": ["@playwright/mcp@latest"]
+      "args": ["@playwright/mcp@1.55.0"]
     }
   },
   "tools": ["@Playwright"],
   "allowedTools": [],
   "toolsSettings": {},
-  "includedFiles": [],
-  "resources": []
+  "resources": [],
+  "prompt": "",
+  "toolAliases": {},
+  "useLegacyMcpJson": true
 }

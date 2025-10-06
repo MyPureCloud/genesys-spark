@@ -127,10 +127,11 @@
             "right_side": "#465066"
           },
           "active": "#475675",
-          "copilot_launcher": {
+          "copilot": {
             "top_left": "#ffc650",
             "middle": "#ff451a",
-            "bottom_right": "#5476d5"
+            "bottom_right": "#5476d5",
+            "bottom_right_active": "#53bee5"
           }
         },
         "brand": {
@@ -150,6 +151,9 @@
           "header": "#1e1e21",
           "footer": "#141c34"
         }
+      },
+      "sunken": {
+        "base": "#475675"
       }
     },
     "system": {
@@ -234,7 +238,9 @@
         "neutral": "#1e1e21",
         "subtle": "#3d538f",
         "dark_only_content": "#2a2a2e",
-        "light_only_content": "#ffffff"
+        "light_only_content": "#ffffff",
+        "tertiary": "#09b581",
+        "light_content": "#2a2a2e"
       },
       "illustration": {
         "default": "#829ce5",
@@ -265,6 +271,10 @@
           "first_level": "#81cbe5",
           "subsequent_level": "#9fd6ea"
         }
+      },
+      "segment": {
+        "active": "#1e1e21",
+        "hover": "#354a72"
       }
     }
   },
@@ -426,6 +436,11 @@
       },
       "search": {
         "matching_text": "#2a2a2e"
+      },
+      "segment": {
+        "active": "#d5def7",
+        "hover": "#d5def7",
+        "default": "#d5def7"
       }
     }
   },
@@ -451,13 +466,6 @@
         "enabled": "#2143a2",
         "hover": "#19327a",
         "active": "#5476d5"
-      },
-      "special_accents": {
-        "ai": {
-          "top_left": "#cc9e40",
-          "bottom_right": "#056385",
-          "middle": "#ff451a"
-        }
       },
       "global_nav": {
         "tree_view": {
@@ -547,6 +555,28 @@
       "30": "#00000073",
       "40": "#00000080",
       "50": "#0009"
+    },
+    "ai_glow": {
+      "yellow": {
+        "30": "#cc9e404d",
+        "40": "#cc9e4066",
+        "100": "#ffc650"
+      },
+      "gold": {
+        "40": "#cc7f3366",
+        "60": "#cc7f3399",
+        "100": "#ff9f40"
+      },
+      "orange": {
+        "40": "#cc371566",
+        "60": "#cc371599",
+        "100": "#ff451a"
+      },
+      "teal": {
+        "50": "#05638580",
+        "70": "#056385b3",
+        "100": "#53bee5"
+      }
     }
   },
   "charts": {

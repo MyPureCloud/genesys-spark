@@ -742,6 +742,9 @@
   "gux-radial-loading": {
     "loading": "Loading"
   },
+  "gux-rating": {
+    "editRating": "Edit Rating"
+  },
   "gux-rich-text-editor-action": {
     "bold": "Bold",
     "italic": "Italic",

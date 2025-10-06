@@ -93,11 +93,11 @@ export class GuxTag {
 
   private renderSrText(): JSX.Element {
     return (
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         {this.disabled
           ? this.i18n('tag-disabled', { label: this.label })
           : this.i18n('tag', { label: this.label })}
-      </div>
+      </gux-screen-reader-beta>
     ) as JSX.Element;
   }
 

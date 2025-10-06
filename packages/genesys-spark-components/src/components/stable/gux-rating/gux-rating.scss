@@ -30,9 +30,36 @@
   gux-icon {
     flex: 0 0 auto;
     color: ui.$gse-ui-rating-default-color;
+  }
 
+  &:not(.gux-compact) gux-icon {
     &:hover:not(.gux-disabled) {
       color: ui.$gse-ui-rating-hover-color;
+      cursor: pointer;
+    }
+  }
+
+  .gux-star-rating-compact {
+    display: flex;
+    flex-direction: column;
+    gap: ui.$gse-ui-ratingGroup-shortened-edit-gap;
+    align-items: flex-start;
+    justify-content: center;
+
+    .gux-star-rating-label-value {
+      display: flex;
+      flex-direction: row;
+      gap: ui.$gse-ui-ratingGroup-shortened-gap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gux-star-rating-value {
+      font-family: ui.$gse-ui-ratingGroup-text-fontFamily;
+      font-size: ui.$gse-ui-ratingGroup-text-fontSize;
+      font-weight: ui.$gse-ui-ratingGroup-text-fontWeight;
+      line-height: ui.$gse-ui-ratingGroup-text-lineHeight;
+      color: ui.$gse-ui-ratingGroup-label;
     }
   }
 }

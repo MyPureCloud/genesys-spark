@@ -378,6 +378,18 @@
           "value": "{container.xs.gap}",
           "type": "spacing"
         }
+      },
+      "sticky": {
+        "elevation_container": {
+          "padding": {
+            "value": "{container.lg.padding}, 0px, 0px, 0px",
+            "type": "spacing"
+          }
+        },
+        "box_shadow": {
+          "value": "{shadow.scroll_indicator}",
+          "type": "boxShadow"
+        }
       }
     },
     "inline_dropdown": {
@@ -991,12 +1003,6 @@
           "type": "sizing"
         }
       }
-    }
-  },
-  "global_nav": {
-    "side_menu": {
-      "value": "linear-gradient(135deg, {color.emerald.500} 0%, {color.emerald.200} 100%)",
-      "type": "color"
     }
   },
   "data_table_composed": {

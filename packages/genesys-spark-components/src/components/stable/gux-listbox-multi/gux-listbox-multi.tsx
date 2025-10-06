@@ -26,7 +26,7 @@ import {
   setNextOptionActive,
   setPreviousOptionActive,
   hasActiveOption,
-  getOptionDefaultSlot,
+  getOptionDefaultSlotText,
   convertValueToArray
 } from '../gux-listbox/gux-listbox.service';
 
@@ -275,8 +275,7 @@ export class GuxListboxMulti {
       );
 
       if (this.filterType !== 'custom' && this.filterType !== 'none') {
-        listboxOption.filtered = !getOptionDefaultSlot(listboxOption)
-          ?.textContent.trim()
+        listboxOption.filtered = !getOptionDefaultSlotText(listboxOption)
           .toLowerCase()
           .startsWith(this.textInput.toLowerCase());
       }

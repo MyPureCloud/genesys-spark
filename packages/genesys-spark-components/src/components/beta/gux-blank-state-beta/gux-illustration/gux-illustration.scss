@@ -1,0 +1,111 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
+.gux-illustration {
+  position: relative;
+  display: grid;
+  place-items: center;
+  inline-size: ui.$gse-ui-blankState-mainIllustration-width;
+  block-size: ui.$gse-ui-blankState-mainIllustration-height;
+}
+
+.gux-background-shape {
+  grid-area: 1 / 1;
+  inline-size: 177px; // Token required : COMUI-4166
+  block-size: 70px; // Token Required : COMUI-4166
+
+  &.gux-background-shape-solid-wide,
+  &.gux-background-shape-solid-narrow,
+  svg {
+    fill: ui.$gse-ui-blankState-mainIllustration-background-solidColor;
+  }
+
+  &.gux-background-shape-gradient-wide,
+  &.gux-background-shape-gradient-narrow {
+    svg {
+      fill: ui.$gse-ui-blankState-mainIllustration-background-gradient; // Token Required: COMUI-4166
+    }
+  }
+}
+
+.gux-illustration-variant {
+  display: flex;
+  grid-area: 1 / 1;
+  place-items: center;
+
+  svg {
+    inline-size: ui.$gse-ui-blankState-mainIllustration-illustration-height;
+    block-size: ui.$gse-ui-blankState-mainIllustration-illustration-height;
+    fill: ui.$gse-ui-blankState-mainIllustration-illustrationColor;
+  }
+}
+
+.gux-illustration-status {
+  position: absolute;
+  inset-block-start: 66px; // Token Required : COMUI-4166
+  inset-inline-start: 111px; // Token Required : COMUI-4166
+
+  svg {
+    inline-size: 32px; // Token required : COMUI-4166
+    block-size: 32px; // Token Required: COMUI-4166
+  }
+
+  &.gux-illustration-status-success {
+    svg {
+      path:first-child {
+        fill: ui.$gse-ui-blankState-mainIllustration-smallIcon-successBaseColor;
+      }
+
+      path:last-child {
+        fill: ui.$gse-ui-blankState-mainIllustration-smallIcon-successSymbolColor;
+      }
+    }
+  }
+
+  &.gux-illustration-status-error {
+    svg {
+      path:first-child {
+        fill: ui.$gse-ui-blankState-mainIllustration-smallIcon-errorBaseColor;
+      }
+
+      path:last-child {
+        fill: ui.$gse-ui-blankState-mainIllustration-smallIcon-errorSymbolColor;
+      }
+    }
+  }
+
+  &.gux-illustration-status-info {
+    svg {
+      path:first-child {
+        fill: ui.$gse-ui-blankState-mainIllustration-smallIcon-infoBaseColor;
+      }
+
+      path:last-child {
+        fill: ui.$gse-ui-blankState-mainIllustration-smallIcon-infoSymbolColor;
+      }
+    }
+  }
+
+  &.gux-illustration-status-add {
+    svg {
+      path:first-child {
+        fill: ui.$gse-ui-blankState-mainIllustration-smallIcon-operationBaseColor;
+      }
+
+      path:last-child {
+        fill: ui.$gse-ui-blankState-mainIllustration-smallIcon-operationSymbolColor;
+      }
+    }
+  }
+
+  &.gux-illustration-status-warning {
+    svg {
+      path:first-child {
+        fill: ui.$gse-ui-blankState-mainIllustration-smallIcon-warningBaseColor;
+      }
+
+      path:last-child {
+        fill: ui.$gse-ui-blankState-mainIllustration-smallIcon-warningSymbolColor;
+      }
+    }
+  }
+}

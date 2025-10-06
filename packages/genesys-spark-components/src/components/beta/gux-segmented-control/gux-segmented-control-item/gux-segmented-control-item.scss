@@ -3,109 +3,82 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 button {
   all: unset;
 }
 
-.gux-container {
-  block-size: ui.$gse-ui-segmentedControl-height;
-  border-color: ui.$gse-ui-segmentedControl-divider-color;
-  border-style: ui.$gse-ui-segmentedControl-divider-style;
-  border-width: ui.$gse-ui-segmentedControl-divider-width;
-  border-inline-end: none;
-  border-radius: ui.$gse-ui-segmentedControl-button-middle-borderRadius;
+.gux-segmented-control-item {
+  @include mixins.button-text;
 
-  &.gux-start {
-    border-inline-start-color: ui.$gse-ui-segmentedControl-divider-color;
-    border-radius: ui.$gse-ui-segmentedControl-button-start-borderRadius;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: ui.$gse-ui-segmentedControl-button-gap;
+  place-content: stretch flex-start;
+  align-items: center;
+  block-size: 100%;
+  padding: ui.$gse-ui-segmentedControl-button-padding;
+  color: ui.$gse-ui-segmentedControl-button-default-foregroundColor;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: ui.$gse-ui-segmentedControl-borderRadius;
 
-    .gux-segmented-control-item {
-      border-radius: 3px 0 0 3px; // TODO: Replace with token COMUI-3729
+  &.gux-icon-only {
+    padding: ui.$gse-ui-segmentedControl-iconOnly-padding;
+
+    .gux-text {
+      &.gux-icon-only {
+        @include mixins.gux-sr-only-clip;
+      }
     }
   }
 
-  &.gux-end {
-    border-style: ui.$gse-ui-segmentedControl-divider-style;
-    border-width: ui.$gse-ui-segmentedControl-divider-width;
-    border-inline-end-color: ui.$gse-ui-segmentedControl-divider-color;
-    border-radius: ui.$gse-ui-segmentedControl-button-end-borderRadius;
-
-    .gux-segmented-control-item {
-      border-radius: 0 3px 3px 0; // TODO: Replace with token COMUI-3729
-    }
+  &:hover {
+    color: ui.$gse-ui-segmentedControl-button-hover-foregroundColor;
+    background-color: ui.$gse-ui-segmentedControl-button-hover-backgroundColor;
   }
 
-  &.gux-start.gux-end {
-    border-radius: ui.$gse-ui-segmentedControl-borderRadius;
-  }
-
-  &.gux-parent-disabled {
+  &[disabled] {
+    color: ui.$gse-ui-segmentedControl-button-disabled-foregroundColor;
     pointer-events: none;
+    cursor: default;
     user-select: none;
-    border-color: color-mix(
-      in srgb,
-      #{ui.$gse-ui-segmentedControl-divider-color} 50%,
-      rgb(0 0 0 / 0%)
-    ); // Token Issue: https://inindca.atlassian.net/browse/COMUI-3205
+    background-color: ui.$gse-ui-segmentedControl-button-disabled-backgroundColor;
+    opacity: ui.$gse-ui-segmentedControl-button-disabled-opacity;
   }
 
-  .gux-segmented-control-item {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: ui.$gse-ui-segmentedControl-button-gap;
-    place-content: stretch flex-start;
-    align-items: center;
-    block-size: 100%;
-    padding: ui.$gse-ui-segmentedControl-button-padding;
-    color: ui.$gse-ui-segmentedControl-button-default-foregroundColor;
-    white-space: nowrap;
-    cursor: pointer;
-    background-color: ui.$gse-ui-segmentedControl-button-default-backgroundColor;
+  &.gux-selected {
+    color: ui.$gse-ui-segmentedControl-button-active-foregroundColor;
+    background-color: ui.$gse-ui-segmentedControl-button-active-backgroundColor;
+    box-shadow: ui.$gse-ui-segmentedControl-button-active-boxShadow;
+  }
 
-    &.gux-icon-only {
-      padding: ui.$gse-ui-segmentedControl-iconOnly-padding;
+  &:focus-visible {
+    position: relative;
+    z-index: global.$gse-semantic-zIndex-showFocus;
+    outline-offset: ui.$gse-ui-segmentedControl-focus-offset;
 
-      .gux-text {
-        &.gux-icon-only {
-          @include mixins.gux-sr-only-clip;
-        }
-      }
+    @include focus.gux-focus-ring;
+  }
+
+  .gux-icon {
+    line-height: 0;
+
+    slot[name='icon']::slotted(gux-icon) {
+      inline-size: ui.$gse-ui-icon-small-size;
+      block-size: ui.$gse-ui-icon-small-size;
     }
+  }
+}
 
-    &:hover {
-      color: ui.$gse-ui-segmentedControl-button-hover-foregroundColor;
-      background-color: ui.$gse-ui-segmentedControl-button-hover-backgroundColor;
-    }
-
-    &[disabled] {
-      color: ui.$gse-ui-segmentedControl-button-disabled-foregroundColor;
-      pointer-events: none;
-      cursor: default;
-      background-color: ui.$gse-ui-segmentedControl-button-disabled-backgroundColor;
-      opacity: ui.$gse-ui-segmentedControl-button-disabled-opacity;
-    }
-
-    &.gux-selected {
-      color: ui.$gse-ui-segmentedControl-button-active-foregroundColor;
-      background-color: ui.$gse-ui-segmentedControl-button-active-backgroundColor;
-    }
-
-    &:focus-visible {
-      position: relative;
-      z-index: global.$gse-semantic-zIndex-showFocus;
-      outline-offset: ui.$gse-ui-segmentedControl-focus-offset;
-
-      @include focus.gux-focus-ring;
-    }
-
-    .gux-icon {
-      line-height: 0;
-
-      slot[name='icon']::slotted(gux-icon) {
-        inline-size: ui.$gse-ui-icon-small-size;
-        block-size: ui.$gse-ui-icon-small-size;
-      }
-    }
+:host(:last-of-type) {
+  gux-segmented-control-divider {
+    display: none;
   }
 }

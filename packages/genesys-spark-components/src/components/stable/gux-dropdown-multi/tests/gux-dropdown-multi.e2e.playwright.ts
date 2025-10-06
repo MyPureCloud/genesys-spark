@@ -81,7 +81,7 @@ test.describe('gux-dropdown-multi', () => {
       const dropMenu = component.locator('.gux-popup-container');
 
       // Check listbox is expanded
-      await expect(dropMenu).toHaveClass(/gux-expanded/);
+      await expect(dropMenu).toHaveClass('gux-expanded');
     });
 
     test('selects and unselects items on click', async ({ page }) => {
@@ -197,7 +197,7 @@ test.describe('gux-dropdown-multi', () => {
 
       // Check listbox is expanded
       const dropMenu = component.locator('.gux-popup-container');
-      await expect(dropMenu).toHaveClass(/gux-expanded/);
+      await expect(dropMenu).toHaveClass('gux-expanded');
     });
   });
 
@@ -211,13 +211,13 @@ test.describe('gux-dropdown-multi', () => {
 
       // Check listbox is expanded
       const dropMenu = component.locator('.gux-popup-container');
-      await expect(dropMenu).toHaveClass(/gux-expanded/);
+      await expect(dropMenu).toHaveClass('gux-expanded');
 
       // Press escape
       await dropMenu.press('Escape');
 
       // Check listbox is expanded
-      await expect(dropMenu).not.toHaveClass(/gux-expanded/);
+      await expect(dropMenu).not.toHaveClass('gux-expanded');
     });
 
     test('focuses the listbox when down arrow is pressed', async ({ page }) => {
@@ -371,6 +371,43 @@ test.describe('gux-dropdown-multi', () => {
       await selectAll.click();
       await page.waitForChanges();
       expect(await counterText.textContent()).toContain('(3 of 3)');
+    });
+
+    test('can reopen dropdown after select-all, close, and clear', async ({
+      page
+    }) => {
+      await setContent(page, selectAllHtml);
+      const component = page.locator('gux-dropdown-multi');
+      const dropdownButton = component.locator('button.gux-field');
+      const dropMenu = component.locator('.gux-popup-container');
+
+      await dropdownButton.click();
+      await page.waitForChanges();
+      await expect(dropMenu).toHaveClass('gux-expanded');
+
+      const selectAll = page.locator('gux-select-all');
+      await selectAll.click();
+      await page.waitForChanges();
+
+      const selectedItems = component.locator('gux-option-multi.gux-selected');
+      expect(await selectedItems.count()).toBe(3);
+
+      await dropdownButton.click();
+      await page.waitForChanges();
+      await expect(dropMenu).not.toHaveClass('gux-expanded');
+
+      const removeButton = component.locator('.gux-tag-remove-button');
+      expect(await removeButton.count()).toBe(1);
+      await removeButton.click();
+      await page.waitForChanges();
+
+      expect(await component.locator('.gux-selected').count()).toBe(0);
+      expect(await component.locator('.gux-tag-remove-button').count()).toBe(0);
+
+      await dropdownButton.click();
+      await page.waitForChanges();
+
+      await expect(dropMenu).toHaveClass('gux-expanded');
     });
   });
 

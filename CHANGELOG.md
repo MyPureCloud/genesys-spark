@@ -2,6 +2,90 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.178.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.177.1...v4.178.0) (2025-10-04)
+
+
+### Features
+
+* **blank-state-beta:** addition of new blank state component ([c8a2fa9](https://github.com/MyPureCloud/genesys-spark/commit/c8a2fa9fd9e9c26ba0779e3bf58b0f16e60057af))
+
+### [4.177.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.177.0...v4.177.1) (2025-10-03)
+
+
+### Bug Fixes
+
+* **dropdown-multi:** dropdown not opening after closing through the chevron button ([147e850](https://github.com/MyPureCloud/genesys-spark/commit/147e8500da7a908654af9e689ad58fdb5a3d40ab))
+* **gux-dropdown:** Use all slotted option content for selected text and filtering, not just the first node ([4f05e0e](https://github.com/MyPureCloud/genesys-spark/commit/4f05e0e29bc0bae23d8049d47b498bf6655ec4fb))
+* **tag:** stopping screenreader text from bleeding out in some cases ([376abba](https://github.com/MyPureCloud/genesys-spark/commit/376abba6a237ef4a659cdc1eba9ca5617c2a3f49))
+
+## [4.177.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.176.0...v4.177.0) (2025-10-01)
+
+
+### Features
+
+* **tokens:** Updated AI gradients ([1d87c7b](https://github.com/MyPureCloud/genesys-spark/commit/1d87c7bef2b690f0cc3b1efb77afbaea180c9fe2))
+
+## [4.176.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.175.3...v4.176.0) (2025-09-30)
+
+
+### Features
+
+* **icon:** add comparison icons ([d3ed36e](https://github.com/MyPureCloud/genesys-spark/commit/d3ed36e99be2e0806c8a52fd2b76ebb08c10af24))
+* **rating:** addition of responsive behaviour ([f8f5acd](https://github.com/MyPureCloud/genesys-spark/commit/f8f5acdd8180f83782288542dacf5974cb638c0c))
+* **segmented-control:** Updating redesign for UI component segmented control ([#1292](https://github.com/MyPureCloud/genesys-spark/issues/1292)) ([e927d43](https://github.com/MyPureCloud/genesys-spark/commit/e927d4350b75ea4854e00eb49dc7823618a60a11))
+
+### [4.175.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.175.2...v4.175.3) (2025-09-27)
+
+### [4.175.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.175.1...v4.175.2) (2025-09-26)
+
+
+### Bug Fixes
+
+* **button-slot:** set inline-size to initial for inline accent ([7baa385](https://github.com/MyPureCloud/genesys-spark/commit/7baa3855b98a135ac34e4f86d19036ea4fa71cb2))
+* **toggle-slider:** update aria-label when changed dynamically ([1f97a16](https://github.com/MyPureCloud/genesys-spark/commit/1f97a165632a78382220dd51ef3f18854dedc339))
+
+### [4.175.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.175.0...v4.175.1) (2025-09-25)
+
+
+### Bug Fixes
+
+* **card:** fix stylings of slotted elements on example page ([b275485](https://github.com/MyPureCloud/genesys-spark/commit/b2754853c225aed2064b30db7e7220d2bce42133))
+
+## [4.175.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.174.0...v4.175.0) (2025-09-24)
+
+
+### Features
+
+* **icon:** new icons ([d72125a](https://github.com/MyPureCloud/genesys-spark/commit/d72125a8993c4f767bfd6c6db09e30339ed7a550))
+
+## [4.174.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.173.2...v4.174.0) (2025-09-23)
+
+
+### Features
+
+* **icon:** added new icons ([728cc15](https://github.com/MyPureCloud/genesys-spark/commit/728cc158db20f3191ebdc56bd66f25516f4e26bc))
+
+
+### Bug Fixes
+
+* **screen-reader-beta:** remove component from contributing to layout ([fa99c14](https://github.com/MyPureCloud/genesys-spark/commit/fa99c1440ea55eb3b18239e9115371abece27815))
+
+### [4.173.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.173.1...v4.173.2) (2025-09-20)
+
+
+### Bug Fixes
+
+* **form-field:** Prevent icon shrinking on long text ([#1388](https://github.com/MyPureCloud/genesys-spark/issues/1388)) ([08aa301](https://github.com/MyPureCloud/genesys-spark/commit/08aa30151182971fd49d09f30bfcbe4503b20792))
+
+### [4.173.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.173.0...v4.173.1) (2025-09-19)
+
+
+### Bug Fixes
+
+* **icon:** improved error handling ([eef4a8f](https://github.com/MyPureCloud/genesys-spark/commit/eef4a8fc5663032bdad3e4d1ee716285542d01db))
+* **segmented-control-beta:** fixed long list rendering ([ef82487](https://github.com/MyPureCloud/genesys-spark/commit/ef8248750ccd6f10e7ce41e02ddf5f73c5e99bee))
+* **toggle:** added alert role to error message ([c035d7c](https://github.com/MyPureCloud/genesys-spark/commit/c035d7c65c9775b87c2e90fe892edc318bb387cb))
+
 ## [4.173.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.172.0...v4.173.0) (2025-09-18)
 
 

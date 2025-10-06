@@ -267,4 +267,33 @@ test.describe('gux-toggle', () => {
       await expect(toggle).toHaveJSProperty('checked', false);
     });
   });
+
+  test.describe('testing aria-label functionality', () => {
+    test('should set aria-label on toggle slider when label is provided on gux-toggle', async ({
+      page
+    }) => {
+      const html = '<gux-toggle lang="en" label="Dark Mode"></gux-toggle>';
+      await setContent(page, html);
+
+      const slider = page.locator('gux-toggle-slider');
+      await expect(slider).toHaveAttribute('aria-label', 'Dark Mode');
+    });
+
+    test('should update aria-label when label changes', async ({ page }) => {
+      const html = '<gux-toggle lang="en" label="Dark Mode"></gux-toggle>';
+      await setContent(page, html);
+
+      const toggle = page.locator('gux-toggle');
+      const slider = toggle.locator('gux-toggle-slider .gux-toggle-slider');
+
+      await expect(slider).toHaveAttribute('aria-label', 'Dark Mode');
+
+      await toggle.evaluate((el: HTMLGuxToggleElement) => {
+        el.label = 'Light Mode';
+      });
+      await page.waitForChanges();
+
+      await expect(slider).toHaveAttribute('aria-label', 'Light Mode');
+    });
+  });
 });

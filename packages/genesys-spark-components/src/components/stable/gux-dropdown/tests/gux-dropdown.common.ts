@@ -9,7 +9,9 @@ const listboxContent = {
     <gux-option value="a">Ant</gux-option>
     <gux-option value="b">Bear Large<span slot="subtext">Large</span></gux-option>
     <gux-option value="be">Bee Small<span slot="subtext">Small</span></gux-option>
-    <gux-option value="c">Cat</gux-option>
+    <gux-option value="c">
+      <span>Cat</span>
+    </gux-option>
     <gux-option value="">None</gux-option>
   `,
   'gux-option-icon': `

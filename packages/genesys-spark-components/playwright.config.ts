@@ -5,5 +5,8 @@ import { matchers, createConfig } from '@stencil/playwright';
 expect.extend(matchers);
 
 export default createConfig({
-  testMatch: '*.e2e.playwright.ts'
+  testMatch: '*.e2e.playwright.ts',
+  use: {
+    timezoneId: 'UTC'
+  }
 });

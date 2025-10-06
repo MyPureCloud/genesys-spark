@@ -34,8 +34,7 @@
 
 :host(.gux-group-checkbox) {
   ::slotted(gux-form-field-checkbox) {
-    // need token COMUI-2994
-    padding-inline-start: 24px;
+    padding-inline-start: ui.$gse-ui-checkbox-group-paddingLeft;
   }
 
   slot[name='group-checkbox']::slotted(gux-form-field-checkbox) {

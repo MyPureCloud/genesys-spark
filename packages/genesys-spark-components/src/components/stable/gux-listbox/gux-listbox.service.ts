@@ -1,4 +1,5 @@
 import { ListboxOptionElement } from './options/option-types';
+import { getTextContentFromNodes } from '@utils/dom/get-text-content-from-nodes';
 
 export function getListOptions(
   list: HTMLGuxListboxElement
@@ -216,17 +217,18 @@ export function matchOption(
   option: ListboxOptionElement,
   matchString: string
 ): boolean {
-  //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
-  return getOptionDefaultSlot(option)
-    ?.textContent.trim()
+  return getOptionDefaultSlotText(option)
     .toLowerCase()
     .startsWith(matchString.toLowerCase());
 }
 
-export function getOptionDefaultSlot(
-  option: ListboxOptionElement
-): Node | undefined {
-  return option.shadowRoot.querySelector('slot')?.assignedNodes()[0];
+/**
+ * Get the content of a list option's default slot as text
+ */
+export function getOptionDefaultSlotText(option: ListboxOptionElement): string {
+  const slottedContent =
+    option.shadowRoot.querySelector('slot')?.assignedNodes() ?? [];
+  return getTextContentFromNodes(slottedContent);
 }
 
 export function convertValueToArray(value: string): string[] {
