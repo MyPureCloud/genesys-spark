@@ -24,7 +24,7 @@
     "@tokens-studio/sd-transforms": "^2.0.1",
     "change-case": "^5.4.4",
     "dir-compare": "^5.0.0",
-    "eslint": "^9.36.0",
+    "eslint": "^9.37.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "glob": "^11.0.3",
     "globals": "^16.4.0",
