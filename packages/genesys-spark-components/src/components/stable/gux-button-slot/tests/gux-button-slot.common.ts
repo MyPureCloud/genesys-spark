@@ -24,6 +24,10 @@ export const renderConfigs = [
     html: '<gux-button-slot accent="danger"><button type="button"accent="primary">Button</button></gux-button-slot>'
   },
   {
+    description: 'should render ai button',
+    html: '<gux-button-slot accent="ai"><button type="button"accent="primary">Button</button></gux-button-slot>'
+  },
+  {
     description: 'should render inline button',
     html: '<gux-button-slot accent="inline"><button type="button"accent="primary">Button</button></gux-button-slot>'
   },
@@ -60,6 +64,10 @@ export const renderConfigs = [
     html: '<gux-button-slot accent="danger"><button type="button"accent="primary" disabled>Button</button></gux-button-slot>'
   },
   {
+    description: 'should render disabled ai button',
+    html: '<gux-button-slot accent="ai"><button type="button"accent="primary" disabled>Button</button></gux-button-slot>'
+  },
+  {
     description: 'should render disabled inline button',
     html: '<gux-button-slot accent="inline"><button type="button"accent="primary" disabled>Button</button></gux-button-slot>'
   },
@@ -90,6 +98,10 @@ export const renderConfigs = [
   {
     description: 'should render danger input[type=button]',
     html: '<gux-button-slot accent="danger"><input type="button"accent="primary" value="Button"/></gux-button-slot>'
+  },
+  {
+    description: 'should render ai input[type=button]',
+    html: '<gux-button-slot accent="ai"><input type="button"accent="primary" value="Button"/></gux-button-slot>'
   },
   {
     description: 'should render inline input[type=button]',
@@ -124,6 +136,10 @@ export const renderConfigs = [
     html: '<gux-button-slot accent="danger"><input type="button"accent="primary" disabled value="Button"/></gux-button-slot>'
   },
   {
+    description: 'should render disabled ai input[type=button]',
+    html: '<gux-button-slot accent="ai"><input type="button"accent="primary" disabled value="Button"/></gux-button-slot>'
+  },
+  {
     description: 'should render disabled inline input[type=button]',
     html: '<gux-button-slot accent="inline"><input type="button"accent="primary" disabled value="Button"/></gux-button-slot>'
   },
@@ -156,6 +172,10 @@ export const renderConfigs = [
     html: '<gux-button-slot accent="danger"><input type="submit"accent="primary" value="Button"/></gux-button-slot>'
   },
   {
+    description: 'should render ai input[type=submit]',
+    html: '<gux-button-slot accent="ai"><input type="submit"accent="primary" value="Button"/></gux-button-slot>'
+  },
+  {
     description: 'should render inline input[type=submit]',
     html: '<gux-button-slot accent="inline"><input type="submit"accent="primary" value="Button"/></gux-button-slot>'
   },
@@ -186,6 +206,10 @@ export const renderConfigs = [
   {
     description: 'should render disabled danger input[type=submit]',
     html: '<gux-button-slot accent="danger"><input type="submit"accent="primary" disabled value="Button"/></gux-button-slot>'
+  },
+  {
+    description: 'should render disabled ai input[type=submit]',
+    html: '<gux-button-slot accent="ai"><input type="submit"accent="primary" disabled value="Button"/></gux-button-slot>'
   },
   {
     description: 'should render disabled inline input[type=submit]',
