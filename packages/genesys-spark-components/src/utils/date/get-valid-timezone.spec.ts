@@ -1,8 +1,8 @@
 import { getValidTimezone } from './get-valid-timezone';
-import { timeZoneIdentifiers } from '../../i18n/time-zone/identifiers';
+import { genesysSupportedTimeZones } from '../../i18n/time-zone/identifiers';
 
 describe('#getValidTimezone', () => {
-  const validTimeZoneIdentifiers = timeZoneIdentifiers;
+  const validTimeZoneIdentifiers = genesysSupportedTimeZones;
   const invalidTimeZoneIdentifiers = ['invalid', '', null];
 
   describe('Valid Timezones', () => {
