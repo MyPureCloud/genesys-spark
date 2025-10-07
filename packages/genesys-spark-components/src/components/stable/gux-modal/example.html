@@ -13,11 +13,11 @@
 
   <h2>Typical Modal</h2>
 
-  <gux-button onclick="document.getElementById('example1').showModal()"
+  <gux-button onclick="document.getElementById('typical-modal').showModal()"
     >Open</gux-button
   >
 
-  <gux-modal id="example1" size="small">
+  <gux-modal id="typical-modal" size="small">
     <div slot="title">Modal Title</div>
     <div slot="content">This contains the modal content.</div>
     <gux-cta-group slot="footer" align="end">
@@ -27,7 +27,7 @@
       >
       <gux-button
         slot="dismiss"
-        onclick="document.getElementById('example1').close()"
+        onclick="document.getElementById('typical-modal').close()"
         >Cancel</gux-button
       >
     </gux-cta-group>
@@ -36,10 +36,10 @@
 
 <div>
   <h2>No title</h2>
-  <gux-button onclick="document.getElementById('example2').showModal()"
+  <gux-button onclick="document.getElementById('no-title-modal').showModal()"
     >Open</gux-button
   >
-  <gux-modal id="example2" size="small">
+  <gux-modal id="no-title-modal" size="small">
     <div slot="content">This contains the modal content.</div>
     <gux-cta-group slot="footer" align="end">
       <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
@@ -48,7 +48,32 @@
       >
       <gux-button
         slot="dismiss"
-        onclick="document.getElementById('example2').close()"
+        onclick="document.getElementById('no-title-modal').close()"
+        >Cancel</gux-button
+      >
+    </gux-cta-group>
+  </gux-modal>
+</div>
+
+<div>
+  <h2>Dangerous Action Modal</h2>
+
+  <gux-button
+    onclick="document.getElementById('dangerous-action-modal').showModal()"
+    >Open</gux-button
+  >
+
+  <gux-modal id="dangerous-action-modal" size="small">
+    <div slot="title">Modal Title</div>
+    <div slot="content">This contains the modal content.</div>
+    <gux-cta-group slot="footer" align="end" dangerous>
+      <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+      <gux-button slot="secondary" onclick="notify(event)"
+        >Secondary</gux-button
+      >
+      <gux-button
+        slot="dismiss"
+        onclick="document.getElementById('dangerous-action-modal').close()"
         >Cancel</gux-button
       >
     </gux-cta-group>
@@ -58,11 +83,12 @@
 <div>
   <h2>Modal Sizes</h2>
 
-  <gux-button onclick="document.getElementById('example3').showModal()"
+  <gux-button
+    onclick="document.getElementById('dynamic-size-modal').showModal()"
     >Dynamic (Default)</gux-button
   >
 
-  <gux-modal id="example3" size="dynamic">
+  <gux-modal id="dynamic-size-modal" size="dynamic">
     <div slot="title">Modal Title</div>
     <div slot="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis,
@@ -124,17 +150,17 @@
       >
       <gux-button
         slot="dismiss"
-        onclick="document.getElementById('example3').close()"
+        onclick="document.getElementById('dynamic-size-modal').close()"
         >Cancel</gux-button
       >
     </gux-cta-group>
   </gux-modal>
 
-  <gux-button onclick="document.getElementById('example4').showModal()"
+  <gux-button onclick="document.getElementById('small-size-modal').showModal()"
     >Small</gux-button
   >
 
-  <gux-modal id="example4" size="small">
+  <gux-modal id="small-size-modal" size="small">
     <div slot="title">Modal Title</div>
     <div slot="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis,
@@ -196,17 +222,17 @@
       >
       <gux-button
         slot="dismiss"
-        onclick="document.getElementById('example4').close()"
+        onclick="document.getElementById('small-size-modal').close()"
         >Cancel</gux-button
       >
     </gux-cta-group>
   </gux-modal>
 
-  <gux-button onclick="document.getElementById('example5').showModal()"
+  <gux-button onclick="document.getElementById('medium-size-modal').showModal()"
     >Medium</gux-button
   >
 
-  <gux-modal id="example5" size="medium">
+  <gux-modal id="medium-size-modal" size="medium">
     <div slot="title">Modal Title</div>
     <div slot="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis,
@@ -268,17 +294,17 @@
       >
       <gux-button
         slot="dismiss"
-        onclick="document.getElementById('example5').close()"
+        onclick="document.getElementById('medium-size-modal').close()"
         >Cancel</gux-button
       >
     </gux-cta-group>
   </gux-modal>
 
-  <gux-button onclick="document.getElementById('example6').showModal()"
+  <gux-button onclick="document.getElementById('large-size-modal').showModal()"
     >Large</gux-button
   >
 
-  <gux-modal id="example6" size="large">
+  <gux-modal id="large-size-modal" size="large">
     <div slot="title">Modal Title</div>
     <div slot="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis,
@@ -340,7 +366,7 @@
       >
       <gux-button
         slot="dismiss"
-        onclick="document.getElementById('example6').close()"
+        onclick="document.getElementById('large-size-modal').close()"
         >Cancel</gux-button
       >
     </gux-cta-group>
@@ -350,10 +376,11 @@
 <div>
   <h2>Only content</h2>
 
-  <gux-button onclick="document.getElementById('example7').showModal()"
+  <gux-button
+    onclick="document.getElementById('content-only-modal').showModal()"
     >Open</gux-button
   >
-  <gux-modal id="example7" size="small">
+  <gux-modal id="content-only-modal" size="small">
     <div slot="content">
       Fusce sit amet quam congue, sodales purus vitae, pretium lorem. Curabitur
       quis volutpat augue, non efficitur quam. Curabitur leo est, feugiat eu
@@ -383,15 +410,17 @@
     The focus ring is only visible when using the keyboard to navigate.
   </gux-inline-alert>
 
-  <gux-button onclick="document.getElementById('example8').showModal()"
+  <gux-button
+    onclick="document.getElementById('default-focus-modal').showModal()"
     >Autofocus 'X' (default)</gux-button
   >
 
-  <gux-button onclick="document.getElementById('example9').showModal()"
+  <gux-button
+    onclick="document.getElementById('primary-focus-modal').showModal()"
     >Autofocus primary button</gux-button
   >
 
-  <gux-modal id="example8" size="small">
+  <gux-modal id="default-focus-modal" size="small">
     <div slot="title">Default focus</div>
     <div slot="content">
       <p>By default, the modal will autofocus on the 'X' button.</p>
@@ -407,13 +436,13 @@
       >
       <gux-button
         slot="dismiss"
-        onclick="document.getElementById('example8').close()"
+        onclick="document.getElementById('default-focus-modal').close()"
         >Cancel</gux-button
       >
     </gux-cta-group>
   </gux-modal>
 
-  <gux-modal id="example9" size="small">
+  <gux-modal id="primary-focus-modal" size="small">
     <div slot="title">Autofocus accept button</div>
     <div slot="content">
       <p>
@@ -439,7 +468,7 @@
       >
       <gux-button
         slot="dismiss"
-        onclick="document.getElementById('example9').close()"
+        onclick="document.getElementById('primary-focus-modal').close()"
         >Cancel</gux-button
       >
     </gux-cta-group>
