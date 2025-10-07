@@ -37,7 +37,7 @@ exports[`gux-form-field-dropdown #render should render multi select dropdown as 
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi>
+  <gux-dropdown-multi role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -159,7 +159,7 @@ exports[`gux-form-field-dropdown #render should render multi select dropdown as 
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi>
+  <gux-dropdown-multi role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -284,7 +284,7 @@ exports[`gux-form-field-dropdown #render should render multi select dropdown as 
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi>
+  <gux-dropdown-multi role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -410,7 +410,7 @@ exports[`gux-form-field-dropdown #render should render multi select dropdown as 
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi>
+  <gux-dropdown-multi role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -537,7 +537,7 @@ exports[`gux-form-field-dropdown #render should render multi select dropdown as 
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi>
+  <gux-dropdown-multi role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -659,7 +659,7 @@ exports[`gux-form-field-dropdown #render should render multi select dropdown as 
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi>
+  <gux-dropdown-multi role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -781,7 +781,7 @@ exports[`gux-form-field-dropdown #render should render multi select dropdown as 
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi disabled="">
+  <gux-dropdown-multi disabled="" role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup disabled="">
@@ -903,7 +903,7 @@ exports[`gux-form-field-dropdown #render should render multi select dropdown as 
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi required="">
+  <gux-dropdown-multi required="" role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -1025,7 +1025,7 @@ exports[`gux-form-field-dropdown #render should render multi select dropdown as 
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi>
+  <gux-dropdown-multi role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -1147,7 +1147,7 @@ exports[`gux-form-field-dropdown #render should render multi select dropdown as 
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi>
+  <gux-dropdown-multi role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -1269,7 +1269,7 @@ exports[`gux-form-field-dropdown #render should render multi select dropdown as 
       </div>
     </fieldset>
   </template>
-  <gux-dropdown-multi>
+  <gux-dropdown-multi role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -1391,7 +1391,7 @@ exports[`gux-form-field-dropdown #render should render single select dropdown as
       </div>
     </fieldset>
   </template>
-  <gux-dropdown>
+  <gux-dropdown role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
@@ -1495,7 +1495,7 @@ exports[`gux-form-field-dropdown #render should render single select dropdown as
       </div>
     </fieldset>
   </template>
-  <gux-dropdown>
+  <gux-dropdown role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-not-filterable gux-error" slot="target">
@@ -1602,7 +1602,7 @@ exports[`gux-form-field-dropdown #render should render single select dropdown as
       </div>
     </fieldset>
   </template>
-  <gux-dropdown>
+  <gux-dropdown role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
@@ -1710,7 +1710,7 @@ exports[`gux-form-field-dropdown #render should render single select dropdown as
       </div>
     </fieldset>
   </template>
-  <gux-dropdown>
+  <gux-dropdown role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
@@ -1819,7 +1819,7 @@ exports[`gux-form-field-dropdown #render should render single select dropdown as
       </div>
     </fieldset>
   </template>
-  <gux-dropdown>
+  <gux-dropdown role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
@@ -1923,7 +1923,7 @@ exports[`gux-form-field-dropdown #render should render single select dropdown as
       </div>
     </fieldset>
   </template>
-  <gux-dropdown>
+  <gux-dropdown role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
@@ -2027,7 +2027,7 @@ exports[`gux-form-field-dropdown #render should render single select dropdown as
       </div>
     </fieldset>
   </template>
-  <gux-dropdown disabled="">
+  <gux-dropdown disabled="" role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup disabled="">
         <div class="gux-target-container-not-filterable gux-disabled" slot="target">
@@ -2131,7 +2131,7 @@ exports[`gux-form-field-dropdown #render should render single select dropdown as
       </div>
     </fieldset>
   </template>
-  <gux-dropdown required="">
+  <gux-dropdown required="" role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
@@ -2235,7 +2235,7 @@ exports[`gux-form-field-dropdown #render should render single select dropdown as
       </div>
     </fieldset>
   </template>
-  <gux-dropdown>
+  <gux-dropdown role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
@@ -2339,7 +2339,7 @@ exports[`gux-form-field-dropdown #render should render single select dropdown as
       </div>
     </fieldset>
   </template>
-  <gux-dropdown>
+  <gux-dropdown role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
@@ -2443,7 +2443,7 @@ exports[`gux-form-field-dropdown #render should render single select dropdown as
       </div>
     </fieldset>
   </template>
-  <gux-dropdown>
+  <gux-dropdown role="listbox">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">

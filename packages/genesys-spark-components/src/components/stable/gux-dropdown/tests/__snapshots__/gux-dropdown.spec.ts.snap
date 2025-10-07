@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
-<gux-dropdown lang="en" value="j">
+<gux-dropdown lang="en" value="j" role="listbox">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
       <div class="gux-target-container-not-filterable" slot="target">
@@ -143,7 +143,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
 `;
 
 exports[`gux-dropdown #render should render as expected with gux-option whose slotted content includes whitespace 1`] = `
-<gux-dropdown lang="en" value="f">
+<gux-dropdown lang="en" value="f" role="listbox">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
       <div class="gux-target-container-not-filterable" slot="target">
@@ -215,7 +215,7 @@ exports[`gux-dropdown #render should render as expected with gux-option whose sl
 `;
 
 exports[`gux-dropdown #render should render as expected with gux-option-group and gux-option 1`] = `
-<gux-dropdown lang="en" value="f">
+<gux-dropdown lang="en" value="f" role="listbox">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
       <div class="gux-target-container-not-filterable" slot="target">
@@ -398,7 +398,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
 `;
 
 exports[`gux-dropdown #render should render as expected with gux-option-group and gux-option-icon 1`] = `
-<gux-dropdown lang="en" value="f">
+<gux-dropdown lang="en" value="f" role="listbox">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
       <div class="gux-target-container-not-filterable" slot="target">
@@ -515,7 +515,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
 `;
 
 exports[`gux-dropdown #render should render as expected with gux-option-icon 1`] = `
-<gux-dropdown lang="en" value="j">
+<gux-dropdown lang="en" value="j" role="listbox">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
       <div class="gux-target-container-not-filterable" slot="target">
