@@ -22,6 +22,7 @@
   display: none;
   border: none;
   border-radius: ui.$gse-ui-flyoutMenu-borderRadius;
+  box-shadow: ui.$gse-ui-menu-boxShadow;
   opacity: 0;
 
   &.gux-shown {
@@ -51,7 +52,6 @@
       transparent;
     border-inline-end: calc(#{ui.$gse-ui-flyoutMenu-anchor-width} / 2) solid
       transparent;
-    filter: drop-shadow(#{gse-ui-menu-boxShadow});
   }
 }
 
