@@ -174,6 +174,7 @@ export class GuxColumnManagerItem {
         if (doReorder) {
           this.internal_keyboard_reorder_emit.emit();
         }
+
         this.internal_keyboard_reorder_finish.emit();
       }
     }
@@ -185,6 +186,7 @@ export class GuxColumnManagerItem {
 
   private onMouseDown(): void {
     this.isDragging = false;
+    this.isReordering = true;
   }
 
   private onMouseUp(event: MouseEvent): void {
@@ -194,7 +196,6 @@ export class GuxColumnManagerItem {
     if (!this.isDragging) {
       this.isReordering = !this.isReordering;
       this.internal_mouse_reorder_move.emit(clickedElement);
-      // this.pendingReorder = this.mouseOnTopHalf(event) ? 'above' : 'below';
       document.removeEventListener('mouseup', this.onMouseUp);
     }
   }

@@ -48,7 +48,6 @@ export class GuxColumnManager {
   private searchElement: HTMLInputElement;
   private announceElement: HTMLGuxAnnounceBetaElement;
   private i18n: GetI18nValue;
-  private startMouseClickIndex: number = null;
 
   @Element()
   root: HTMLElement;
@@ -118,21 +117,19 @@ export class GuxColumnManager {
   handleInternalMousereordermove(event: CustomEvent): void {
     event.stopPropagation();
 
-    if (typeof this.startMouseClickIndex === 'number') {
+    if (typeof this.keyboardOrderChange?.oldIndex === 'number') {
       //2nd mouse click triggered
-      const startIndex = this.startMouseClickIndex;
       const newIndex = getIndexInParent(event.target as HTMLElement);
-      this.keyboardOrderChange = {
-        oldIndex: startIndex,
-        newIndex
-      };
+      this.keyboardOrderChange.newIndex = newIndex;
       this.emitOrderChange(this.keyboardOrderChange);
-      this.startMouseClickIndex = null;
       this.keyboardOrderChange = getEmptyKeyboardOrderChange();
     } else {
       // First mouse click triggered
-      const newIndex = getIndexInParent(event.target as HTMLElement);
-      this.startMouseClickIndex = newIndex;
+      const startIndex = getIndexInParent(event.target as HTMLElement);
+      this.keyboardOrderChange = {
+        oldIndex: startIndex,
+        newIndex: null
+      };
     }
   }
 
