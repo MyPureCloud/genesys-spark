@@ -10,7 +10,8 @@ import {
   Method,
   Prop,
   State,
-  Watch
+  Watch,
+  Host
 } from '@stencil/core';
 
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
@@ -657,17 +658,19 @@ export class GuxDropdownMulti {
   }
 
   render(): JSX.Element {
-    return [
-      <div class="gux-dropdown-container">
-        <gux-popup
-          expanded={this.expanded && (!this.loading || this.isFilterable())}
-          disabled={this.disabled || (this.loading && !this.isFilterable())}
-          exceedTargetWidth={this.exceedTargetWidth}
-        >
-          {this.renderTarget()}
-          {this.renderPopup()}
-        </gux-popup>
-      </div>
-    ] as JSX.Element;
+    return (
+      <Host role="listbox">
+        <div class="gux-dropdown-container">
+          <gux-popup
+            expanded={this.expanded && (!this.loading || this.isFilterable())}
+            disabled={this.disabled || (this.loading && !this.isFilterable())}
+            exceedTargetWidth={this.exceedTargetWidth}
+          >
+            {this.renderTarget()}
+            {this.renderPopup()}
+          </gux-popup>
+        </div>
+      </Host>
+    ) as JSX.Element;
   }
 }
