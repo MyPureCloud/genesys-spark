@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.179.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.178.0...v4.179.0) (2025-10-07)
+
+
+### Features
+
+* **tokens:** Added copilot tokens ([cf1520a](https://github.com/MyPureCloud/genesys-spark/commit/cf1520afeac917c92919cab0dd345224723b38a7))
+* **tokens:** Generated CSS vars ([5c9e400](https://github.com/MyPureCloud/genesys-spark/commit/5c9e400e919acc36c666cbc921247bda6f2c3266))
+
 ## [4.178.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.177.1...v4.178.0) (2025-10-04)
 
 
