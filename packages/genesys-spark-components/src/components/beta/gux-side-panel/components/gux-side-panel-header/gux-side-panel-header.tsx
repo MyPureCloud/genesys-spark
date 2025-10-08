@@ -65,6 +65,8 @@ export class GuxSidePanelHeader {
         {this.renderSlot('icon')}
         {this.renderTitleDesc()}
         {this.renderSlot('badge')}
+        {this.renderSlot('expand')}
+        {this.renderSlot('collapse')}
       </div>
     ) as JSX.Element;
   }
