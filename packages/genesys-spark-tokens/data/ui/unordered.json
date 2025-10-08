@@ -661,6 +661,40 @@
     "border_radius": {
       "value": "{theme.border_radius.container.small}",
       "type": "borderRadius"
+    },
+    "ai": {
+      "background_color": {
+        "value": "{background.container.special_accents.ai.default.left_side}",
+        "type": "color"
+      },
+      "foreground_color": {
+        "value": "{foreground.system.info.high_emphasis}",
+        "type": "color"
+      },
+      "icon_color": {
+        "value": "{foreground.container.high_emphasis}",
+        "type": "color"
+      },
+      "border_color": {
+        "value": "{border.custom_accents.ai.low_emphasis}",
+        "type": "color"
+      },
+      "actions": {
+        "gap": {
+          "value": "{container.sm.gap}",
+          "type": "spacing"
+        }
+      },
+      "content": {
+        "padding_top": {
+          "value": "{container.xs.padding}",
+          "type": "spacing"
+        }
+      },
+      "padding": {
+        "value": "{container.2xs.padding} {container.md.padding}",
+        "type": "spacing"
+      }
     }
   },
   "rating": {

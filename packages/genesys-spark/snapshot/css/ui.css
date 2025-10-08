@@ -381,6 +381,13 @@
   --gse-ui-alert-error-foregroundColor: #2a2a2e;
   --gse-ui-alert-error-iconColor: #b51b37;
   --gse-ui-alert-borderRadius: 4px;
+  --gse-ui-alert-ai-backgroundColor: #ebf6fb;
+  --gse-ui-alert-ai-foregroundColor: #2a2a2e;
+  --gse-ui-alert-ai-iconColor: #2a2a2e;
+  --gse-ui-alert-ai-borderColor: #53bee5;
+  --gse-ui-alert-ai-actions-gap: 8px;
+  --gse-ui-alert-ai-content-paddingTop: 8px;
+  --gse-ui-alert-ai-padding: 2px 16px;
   --gse-ui-breadcrumbs-primary-height: 20px;
   --gse-ui-breadcrumbs-primary-separator-padding: 0 12px;
   --gse-ui-breadcrumbs-secondary-height: 16px;
@@ -2880,6 +2887,13 @@
   --gse-ui-alert-error-foregroundColor: #ffffff;
   --gse-ui-alert-error-iconColor: #ee7a8f;
   --gse-ui-alert-borderRadius: 4px;
+  --gse-ui-alert-ai-backgroundColor: #2c363c;
+  --gse-ui-alert-ai-foregroundColor: #ffffff;
+  --gse-ui-alert-ai-iconColor: #ffffff;
+  --gse-ui-alert-ai-borderColor: #056385;
+  --gse-ui-alert-ai-actions-gap: 8px;
+  --gse-ui-alert-ai-content-paddingTop: 8px;
+  --gse-ui-alert-ai-padding: 2px 16px;
   --gse-ui-breadcrumbs-primary-height: 20px;
   --gse-ui-breadcrumbs-primary-separator-padding: 0 12px;
   --gse-ui-breadcrumbs-secondary-height: 16px;

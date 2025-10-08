@@ -381,6 +381,13 @@
   --gse-ui-alert-error-foregroundColor: #2e394c;
   --gse-ui-alert-error-iconColor: #cc0a0a;
   --gse-ui-alert-borderRadius: 4px;
+  --gse-ui-alert-ai-backgroundColor: #ebf6fb;
+  --gse-ui-alert-ai-foregroundColor: #2e394c;
+  --gse-ui-alert-ai-iconColor: #2e394c;
+  --gse-ui-alert-ai-borderColor: #53bee5;
+  --gse-ui-alert-ai-actions-gap: 8px;
+  --gse-ui-alert-ai-content-paddingTop: 8px;
+  --gse-ui-alert-ai-padding: 2px 16px;
   --gse-ui-breadcrumbs-primary-height: 20px;
   --gse-ui-breadcrumbs-primary-separator-padding: 0 12px;
   --gse-ui-breadcrumbs-secondary-height: 16px;

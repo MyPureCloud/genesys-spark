@@ -514,6 +514,11 @@
         "active": "#102251",
         "error": "#e22245"
       }
+    },
+    "custom_accents": {
+      "ai": {
+        "low_emphasis": "#53bee5"
+      }
     }
   },
   "effects": {

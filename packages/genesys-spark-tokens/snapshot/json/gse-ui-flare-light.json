@@ -1249,6 +1249,19 @@
       }
     },
     "border_radius": "4px",
+    "ai": {
+      "background_color": "#ebf6fb",
+      "foreground_color": "#2a2a2e",
+      "icon_color": "#2a2a2e",
+      "border_color": "#53bee5",
+      "actions": {
+        "gap": "8px"
+      },
+      "content": {
+        "padding_top": "8px"
+      },
+      "padding": "2px 16px"
+    },
     "text": {
       "fontFamily": "'Noto Sans'",
       "fontWeight": "400",
