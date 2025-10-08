@@ -881,7 +881,7 @@
           "description": "The recommended vertical padding for the form footer content."
         },
         "horizontal_padding": {
-          "value": "{container.xl.padding}",
+          "value": "{container.lg.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
