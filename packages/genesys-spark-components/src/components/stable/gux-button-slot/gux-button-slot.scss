@@ -197,3 +197,45 @@
     background: none;
   }
 }
+
+:host([accent='ai']) {
+  ::slotted(input[type='button']),
+  ::slotted(input[type='submit']),
+  ::slotted(button) {
+    color: #fff;
+    background: linear-gradient(
+      64deg,
+      #{ui.$gse-ui-copilotButton-default-backgroundColor-bottomLeft} 5.51%,
+      #{ui.$gse-ui-copilotButton-default-backgroundColor-middle} 48.28%,
+      #{ui.$gse-ui-copilotButton-default-backgroundColor-topRight} 88.65%
+    );
+    border: none;
+    box-shadow: ui.$gse-ui-copilotButton-glow-default;
+  }
+
+  ::slotted(input[type='button']:hover:enabled),
+  ::slotted(input[type='submit']:hover:enabled),
+  ::slotted(button:hover:enabled) {
+    color: #fff;
+    background: linear-gradient(
+      54deg,
+      #{ui.$gse-ui-copilotButton-hover-backgroundColor-bottomLeft} 7.09%,
+      #{ui.$gse-ui-copilotButton-hover-backgroundColor-middle} 47.64%,
+      #{ui.$gse-ui-copilotButton-hover-backgroundColor-topRight} 103.51%
+    );
+    box-shadow: ui.$gse-ui-copilotButton-glow-hover;
+  }
+
+  ::slotted(input[type='button']:active:enabled),
+  ::slotted(input[type='submit']:active:enabled),
+  ::slotted(button:active:enabled) {
+    color: #fff;
+    background: linear-gradient(
+      54deg,
+      #{ui.$gse-ui-copilotButton-active-backgroundColor-bottomLeft} 7.17%,
+      #{ui.$gse-ui-copilotButton-active-backgroundColor-middle} 46.7%,
+      #{ui.$gse-ui-copilotButton-active-backgroundColor-topRight} 83.3%
+    );
+    box-shadow: ui.$gse-ui-copilotButton-glow-active;
+  }
+}

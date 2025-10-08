@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
+exports[`gux-button-slot #render should render ai button 1`] = `
+<gux-button-slot accent="ai">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <button type="button" accent="primary">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render ai input[type=button] 1`] = `
+<gux-button-slot accent="ai">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <input type="button" accent="primary" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render ai input[type=submit] 1`] = `
+<gux-button-slot accent="ai">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <input type="submit" accent="primary" value="Button">
+</gux-button-slot>
+`;
+
 exports[`gux-button-slot #render should render button with invalid accent 1`] = `
 <gux-button-slot accent="invalid">
   <template shadowrootmode="open">
@@ -73,6 +105,38 @@ exports[`gux-button-slot #render should render default input[type=submit] 1`] = 
     </slot>
   </template>
   <input type="submit" accent="primary" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled ai button 1`] = `
+<gux-button-slot accent="ai">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <button type="button" accent="primary" disabled="">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled ai input[type=button] 1`] = `
+<gux-button-slot accent="ai">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <input type="button" accent="primary" disabled="" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled ai input[type=submit] 1`] = `
+<gux-button-slot accent="ai">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <input type="submit" accent="primary" disabled="" value="Button">
 </gux-button-slot>
 `;
 
