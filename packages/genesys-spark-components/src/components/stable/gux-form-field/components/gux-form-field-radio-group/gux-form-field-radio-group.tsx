@@ -118,6 +118,9 @@ export class GuxFormFieldRadioGroupBeta {
         }
         break;
       }
+      case 'Shift': {
+        break;
+      }
       default: {
         if (this.root.matches(':focus-within')) {
           void this.groupLabelInfo?.hideTooltip();
