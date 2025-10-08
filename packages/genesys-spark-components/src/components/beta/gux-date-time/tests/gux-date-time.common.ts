@@ -1,4 +1,4 @@
-import { timeZoneIdentifiers } from '../../../../i18n/time-zone/identifiers';
+import { genesysSupportedTimeZones } from '../../../../i18n/time-zone/identifiers';
 
 export const renderConfigs = ['short', 'medium', 'full', 'long'].map(
   (format: string) => ({
@@ -7,7 +7,7 @@ export const renderConfigs = ['short', 'medium', 'full', 'long'].map(
   })
 );
 
-export const timezoneRenderConfigs = timeZoneIdentifiers.map(
+export const timezoneRenderConfigs = genesysSupportedTimeZones.map(
   (timeZone: string) => ({
     description: `should render as expected for "${timeZone}" timezone`,
     html: `<gux-date-time-beta time-zone=${timeZone} datetime="2022-07-07T12:00:00.000Z" format="full"></gux-date-time-beta>`

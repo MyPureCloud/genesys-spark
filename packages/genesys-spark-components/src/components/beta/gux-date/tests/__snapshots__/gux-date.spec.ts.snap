@@ -904,6 +904,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Africa/Asmera" timezone 1`] = `
+<gux-date-beta time-zone="Africa/Asmera" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Africa/Bamako" timezone 1`] = `
 <gux-date-beta time-zone="Africa/Bamako" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -1256,6 +1264,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Africa/Timbuktu" timezone 1`] = `
+<gux-date-beta time-zone="Africa/Timbuktu" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Africa/Tripoli" timezone 1`] = `
 <gux-date-beta time-zone="Africa/Tripoli" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -1330,6 +1346,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Argentina/Catamarca" timezone 1`] = `
 <gux-date-beta time-zone="America/Argentina/Catamarca" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Argentina/ComodRivadavia" timezone 1`] = `
+<gux-date-beta time-zone="America/Argentina/ComodRivadavia" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -1440,6 +1464,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Atka" timezone 1`] = `
+<gux-date-beta time-zone="America/Atka" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Bahia" timezone 1`] = `
 <gux-date-beta time-zone="America/Bahia" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -1512,6 +1544,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Buenos_Aires" timezone 1`] = `
+<gux-date-beta time-zone="America/Buenos_Aires" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Cambridge_Bay" timezone 1`] = `
 <gux-date-beta time-zone="America/Cambridge_Bay" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -1544,6 +1584,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Catamarca" timezone 1`] = `
+<gux-date-beta time-zone="America/Catamarca" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Cayenne" timezone 1`] = `
 <gux-date-beta time-zone="America/Cayenne" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -1570,6 +1618,30 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Chihuahua" timezone 1`] = `
 <gux-date-beta time-zone="America/Chihuahua" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Ciudad_Juarez" timezone 1`] = `
+<gux-date-beta time-zone="America/Ciudad_Juarez" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Coral_Harbour" timezone 1`] = `
+<gux-date-beta time-zone="America/Coral_Harbour" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Cordoba" timezone 1`] = `
+<gux-date-beta time-zone="America/Cordoba" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -1680,8 +1752,24 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Ensenada" timezone 1`] = `
+<gux-date-beta time-zone="America/Ensenada" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Fort_Nelson" timezone 1`] = `
 <gux-date-beta time-zone="America/Fort_Nelson" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Fort_Wayne" timezone 1`] = `
+<gux-date-beta time-zone="America/Fort_Wayne" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -1698,6 +1786,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Glace_Bay" timezone 1`] = `
 <gux-date-beta time-zone="America/Glace_Bay" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Godthab" timezone 1`] = `
+<gux-date-beta time-zone="America/Godthab" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -1848,6 +1944,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Indianapolis" timezone 1`] = `
+<gux-date-beta time-zone="America/Indianapolis" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Inuvik" timezone 1`] = `
 <gux-date-beta time-zone="America/Inuvik" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -1872,6 +1976,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Jujuy" timezone 1`] = `
+<gux-date-beta time-zone="America/Jujuy" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Juneau" timezone 1`] = `
 <gux-date-beta time-zone="America/Juneau" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -1890,6 +2002,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Kentucky/Monticello" timezone 1`] = `
 <gux-date-beta time-zone="America/Kentucky/Monticello" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Knox_IN" timezone 1`] = `
+<gux-date-beta time-zone="America/Knox_IN" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -1922,6 +2042,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Los_Angeles" timezone 1`] = `
 <gux-date-beta time-zone="America/Los_Angeles" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Louisville" timezone 1`] = `
+<gux-date-beta time-zone="America/Louisville" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -1992,6 +2120,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Mendoza" timezone 1`] = `
+<gux-date-beta time-zone="America/Mendoza" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Menominee" timezone 1`] = `
 <gux-date-beta time-zone="America/Menominee" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -2056,6 +2192,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Montreal" timezone 1`] = `
+<gux-date-beta time-zone="America/Montreal" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Montserrat" timezone 1`] = `
 <gux-date-beta time-zone="America/Montserrat" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -2074,6 +2218,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/New_York" timezone 1`] = `
 <gux-date-beta time-zone="America/New_York" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Nipigon" timezone 1`] = `
+<gux-date-beta time-zone="America/Nipigon" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -2144,6 +2296,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Pangnirtung" timezone 1`] = `
+<gux-date-beta time-zone="America/Pangnirtung" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Paramaribo" timezone 1`] = `
 <gux-date-beta time-zone="America/Paramaribo" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -2176,6 +2336,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Porto_Acre" timezone 1`] = `
+<gux-date-beta time-zone="America/Porto_Acre" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Porto_Velho" timezone 1`] = `
 <gux-date-beta time-zone="America/Porto_Velho" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -2194,6 +2362,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Punta_Arenas" timezone 1`] = `
 <gux-date-beta time-zone="America/Punta_Arenas" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Rainy_River" timezone 1`] = `
+<gux-date-beta time-zone="America/Rainy_River" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -2240,6 +2416,22 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Rosario" timezone 1`] = `
+<gux-date-beta time-zone="America/Rosario" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Santa_Isabel" timezone 1`] = `
+<gux-date-beta time-zone="America/Santa_Isabel" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Santarem" timezone 1`] = `
 <gux-date-beta time-zone="America/Santarem" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -2274,6 +2466,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Scoresbysund" timezone 1`] = `
 <gux-date-beta time-zone="America/Scoresbysund" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Shiprock" timezone 1`] = `
+<gux-date-beta time-zone="America/Shiprock" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -2360,6 +2560,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Thunder_Bay" timezone 1`] = `
+<gux-date-beta time-zone="America/Thunder_Bay" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Tijuana" timezone 1`] = `
 <gux-date-beta time-zone="America/Tijuana" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -2392,6 +2600,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Virgin" timezone 1`] = `
+<gux-date-beta time-zone="America/Virgin" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Whitehorse" timezone 1`] = `
 <gux-date-beta time-zone="America/Whitehorse" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -2410,6 +2626,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Yakutat" timezone 1`] = `
 <gux-date-beta time-zone="America/Yakutat" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "America/Yellowknife" timezone 1`] = `
+<gux-date-beta time-zone="America/Yellowknife" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -2476,6 +2700,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 <gux-date-beta time-zone="Antarctica/Rothera" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Antarctica/South_Pole" timezone 1`] = `
+<gux-date-beta time-zone="Antarctica/South_Pole" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Friday, July 8, 2022
   </template>
 </gux-date-beta>
 `;
@@ -2568,6 +2800,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Ashkhabad" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Ashkhabad" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Atyrau" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Atyrau" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -2640,6 +2880,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Calcutta" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Calcutta" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Chita" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Chita" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -2656,8 +2904,32 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Chongqing" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Chongqing" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Chungking" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Chungking" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Colombo" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Colombo" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Dacca" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Dacca" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -2720,6 +2992,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Harbin" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Harbin" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Hebron" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Hebron" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -2754,6 +3034,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Irkutsk" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Irkutsk" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Istanbul" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Istanbul" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -2808,8 +3096,24 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Kashgar" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Kashgar" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Kathmandu" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Kathmandu" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Katmandu" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Katmandu" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -2858,6 +3162,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Kuwait" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Kuwait" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Macao" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Macao" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -2992,8 +3304,24 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Rangoon" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Rangoon" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Riyadh" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Riyadh" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Saigon" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Saigon" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -3080,6 +3408,22 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Tel_Aviv" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Tel_Aviv" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Thimbu" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Thimbu" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Thimphu" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Thimphu" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -3104,8 +3448,24 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Ujung_Pandang" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Ujung_Pandang" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Ulaanbaatar" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Ulaanbaatar" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Asia/Ulan_Bator" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Ulan_Bator" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -3208,8 +3568,24 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Atlantic/Faeroe" timezone 1`] = `
+<gux-date-beta time-zone="Atlantic/Faeroe" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Atlantic/Faroe" timezone 1`] = `
 <gux-date-beta time-zone="Atlantic/Faroe" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Atlantic/Jan_Mayen" timezone 1`] = `
+<gux-date-beta time-zone="Atlantic/Jan_Mayen" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -3256,6 +3632,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/ACT" timezone 1`] = `
+<gux-date-beta time-zone="Australia/ACT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/Adelaide" timezone 1`] = `
 <gux-date-beta time-zone="Australia/Adelaide" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -3274,6 +3658,22 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/Broken_Hill" timezone 1`] = `
 <gux-date-beta time-zone="Australia/Broken_Hill" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/Canberra" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Canberra" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/Currie" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Currie" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -3304,6 +3704,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/LHI" timezone 1`] = `
+<gux-date-beta time-zone="Australia/LHI" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/Lindeman" timezone 1`] = `
 <gux-date-beta time-zone="Australia/Lindeman" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -3328,6 +3736,22 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/NSW" timezone 1`] = `
+<gux-date-beta time-zone="Australia/NSW" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/North" timezone 1`] = `
+<gux-date-beta time-zone="Australia/North" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/Perth" timezone 1`] = `
 <gux-date-beta time-zone="Australia/Perth" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -3336,8 +3760,88 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/Queensland" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Queensland" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/South" timezone 1`] = `
+<gux-date-beta time-zone="Australia/South" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/Sydney" timezone 1`] = `
 <gux-date-beta time-zone="Australia/Sydney" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/Tasmania" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Tasmania" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/Victoria" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Victoria" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/West" timezone 1`] = `
+<gux-date-beta time-zone="Australia/West" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Australia/Yancowinna" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Yancowinna" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Brazil/Acre" timezone 1`] = `
+<gux-date-beta time-zone="Brazil/Acre" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Brazil/DeNoronha" timezone 1`] = `
+<gux-date-beta time-zone="Brazil/DeNoronha" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Brazil/East" timezone 1`] = `
+<gux-date-beta time-zone="Brazil/East" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Brazil/West" timezone 1`] = `
+<gux-date-beta time-zone="Brazil/West" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -3354,6 +3858,94 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "CST6CDT" timezone 1`] = `
 <gux-date-beta time-zone="CST6CDT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Canada/Atlantic" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Atlantic" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Canada/Central" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Central" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Canada/Eastern" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Eastern" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Canada/Mountain" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Mountain" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Canada/Newfoundland" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Newfoundland" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Canada/Pacific" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Pacific" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Canada/Saskatchewan" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Saskatchewan" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Canada/Yukon" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Yukon" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Chile/Continental" timezone 1`] = `
+<gux-date-beta time-zone="Chile/Continental" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Chile/EasterIsland" timezone 1`] = `
+<gux-date-beta time-zone="Chile/EasterIsland" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Cuba" timezone 1`] = `
+<gux-date-beta time-zone="Cuba" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -3384,8 +3976,32 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Egypt" timezone 1`] = `
+<gux-date-beta time-zone="Egypt" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Eire" timezone 1`] = `
+<gux-date-beta time-zone="Eire" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Etc/GMT" timezone 1`] = `
 <gux-date-beta time-zone="Etc/GMT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Etc/GMT+0" timezone 1`] = `
+<gux-date-beta time-zone="Etc/GMT+0" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -3482,6 +4098,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Etc/GMT+12" timezone 1`] = `
 <gux-date-beta time-zone="Etc/GMT+12" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Etc/GMT-0" timezone 1`] = `
+<gux-date-beta time-zone="Etc/GMT-0" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -3600,8 +4224,48 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Etc/GMT0" timezone 1`] = `
+<gux-date-beta time-zone="Etc/GMT0" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Etc/Greenwich" timezone 1`] = `
+<gux-date-beta time-zone="Etc/Greenwich" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Etc/UCT" timezone 1`] = `
+<gux-date-beta time-zone="Etc/UCT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Etc/UTC" timezone 1`] = `
 <gux-date-beta time-zone="Etc/UTC" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Etc/Universal" timezone 1`] = `
+<gux-date-beta time-zone="Etc/Universal" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Etc/Zulu" timezone 1`] = `
+<gux-date-beta time-zone="Etc/Zulu" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -3634,6 +4298,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Europe/Athens" timezone 1`] = `
 <gux-date-beta time-zone="Europe/Athens" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Europe/Belfast" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Belfast" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -3776,6 +4448,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Europe/Kiev" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Kiev" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Europe/Kirov" timezone 1`] = `
 <gux-date-beta time-zone="Europe/Kirov" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -3866,6 +4546,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Europe/Moscow" timezone 1`] = `
 <gux-date-beta time-zone="Europe/Moscow" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Europe/Nicosia" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Nicosia" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -4000,8 +4688,24 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Europe/Tiraspol" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Tiraspol" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Europe/Ulyanovsk" timezone 1`] = `
 <gux-date-beta time-zone="Europe/Ulyanovsk" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Europe/Uzhgorod" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Uzhgorod" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -4064,6 +4768,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Europe/Zaporozhye" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Zaporozhye" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Europe/Zurich" timezone 1`] = `
 <gux-date-beta time-zone="Europe/Zurich" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -4072,8 +4784,80 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "GB" timezone 1`] = `
+<gux-date-beta time-zone="GB" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "GB-Eire" timezone 1`] = `
+<gux-date-beta time-zone="GB-Eire" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "GMT" timezone 1`] = `
+<gux-date-beta time-zone="GMT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "GMT+0" timezone 1`] = `
+<gux-date-beta time-zone="GMT+0" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "GMT-0" timezone 1`] = `
+<gux-date-beta time-zone="GMT-0" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "GMT0" timezone 1`] = `
+<gux-date-beta time-zone="GMT0" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Greenwich" timezone 1`] = `
+<gux-date-beta time-zone="Greenwich" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "HST" timezone 1`] = `
 <gux-date-beta time-zone="HST" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Hongkong" timezone 1`] = `
+<gux-date-beta time-zone="Hongkong" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Iceland" timezone 1`] = `
+<gux-date-beta time-zone="Iceland" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -4168,6 +4952,54 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Iran" timezone 1`] = `
+<gux-date-beta time-zone="Iran" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Israel" timezone 1`] = `
+<gux-date-beta time-zone="Israel" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Jamaica" timezone 1`] = `
+<gux-date-beta time-zone="Jamaica" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Japan" timezone 1`] = `
+<gux-date-beta time-zone="Japan" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Kwajalein" timezone 1`] = `
+<gux-date-beta time-zone="Kwajalein" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Friday, July 8, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Libya" timezone 1`] = `
+<gux-date-beta time-zone="Libya" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "MET" timezone 1`] = `
 <gux-date-beta time-zone="MET" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -4186,6 +5018,62 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "MST7MDT" timezone 1`] = `
 <gux-date-beta time-zone="MST7MDT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Mexico/BajaNorte" timezone 1`] = `
+<gux-date-beta time-zone="Mexico/BajaNorte" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Mexico/BajaSur" timezone 1`] = `
+<gux-date-beta time-zone="Mexico/BajaSur" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Mexico/General" timezone 1`] = `
+<gux-date-beta time-zone="Mexico/General" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "NZ" timezone 1`] = `
+<gux-date-beta time-zone="NZ" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Friday, July 8, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "NZ-CHAT" timezone 1`] = `
+<gux-date-beta time-zone="NZ-CHAT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Friday, July 8, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Navajo" timezone 1`] = `
+<gux-date-beta time-zone="Navajo" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "PRC" timezone 1`] = `
+<gux-date-beta time-zone="PRC" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -4256,6 +5144,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Pacific/Enderbury" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Enderbury" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Friday, July 8, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Pacific/Fakaofo" timezone 1`] = `
 <gux-date-beta time-zone="Pacific/Fakaofo" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -4314,6 +5210,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Pacific/Honolulu" timezone 1`] = `
 <gux-date-beta time-zone="Pacific/Honolulu" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Pacific/Johnston" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Johnston" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -4440,6 +5344,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Pacific/Ponape" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Ponape" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Pacific/Port_Moresby" timezone 1`] = `
 <gux-date-beta time-zone="Pacific/Port_Moresby" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -4458,6 +5370,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Pacific/Saipan" timezone 1`] = `
 <gux-date-beta time-zone="Pacific/Saipan" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Pacific/Samoa" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Samoa" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -4488,6 +5408,14 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Pacific/Truk" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Truk" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "Pacific/Wake" timezone 1`] = `
 <gux-date-beta time-zone="Pacific/Wake" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -4504,6 +5432,166 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Pacific/Yap" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Yap" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Poland" timezone 1`] = `
+<gux-date-beta time-zone="Poland" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Portugal" timezone 1`] = `
+<gux-date-beta time-zone="Portugal" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "ROC" timezone 1`] = `
+<gux-date-beta time-zone="ROC" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "ROK" timezone 1`] = `
+<gux-date-beta time-zone="ROK" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Singapore" timezone 1`] = `
+<gux-date-beta time-zone="Singapore" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Turkey" timezone 1`] = `
+<gux-date-beta time-zone="Turkey" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "UCT" timezone 1`] = `
+<gux-date-beta time-zone="UCT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/Alaska" timezone 1`] = `
+<gux-date-beta time-zone="US/Alaska" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/Aleutian" timezone 1`] = `
+<gux-date-beta time-zone="US/Aleutian" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/Arizona" timezone 1`] = `
+<gux-date-beta time-zone="US/Arizona" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/Central" timezone 1`] = `
+<gux-date-beta time-zone="US/Central" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/East-Indiana" timezone 1`] = `
+<gux-date-beta time-zone="US/East-Indiana" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/Eastern" timezone 1`] = `
+<gux-date-beta time-zone="US/Eastern" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/Hawaii" timezone 1`] = `
+<gux-date-beta time-zone="US/Hawaii" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/Indiana-Starke" timezone 1`] = `
+<gux-date-beta time-zone="US/Indiana-Starke" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/Michigan" timezone 1`] = `
+<gux-date-beta time-zone="US/Michigan" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/Mountain" timezone 1`] = `
+<gux-date-beta time-zone="US/Mountain" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/Pacific" timezone 1`] = `
+<gux-date-beta time-zone="US/Pacific" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "US/Samoa" timezone 1`] = `
+<gux-date-beta time-zone="US/Samoa" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "UTC" timezone 1`] = `
 <gux-date-beta time-zone="UTC" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -4512,8 +5600,32 @@ exports[`gux-date #render regional dates #render different time zones should ren
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Universal" timezone 1`] = `
+<gux-date-beta time-zone="Universal" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "W-SU" timezone 1`] = `
+<gux-date-beta time-zone="W-SU" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different time zones should render as expected for "WET" timezone 1`] = `
 <gux-date-beta time-zone="WET" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render regional dates #render different time zones should render as expected for "Zulu" timezone 1`] = `
+<gux-date-beta time-zone="Zulu" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -5456,6 +6568,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Africa/Asmera" timezone 1`] = `
+<gux-date-beta time-zone="Africa/Asmera" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Africa/Bamako" timezone 1`] = `
 <gux-date-beta time-zone="Africa/Bamako" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -5808,6 +6928,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Africa/Timbuktu" timezone 1`] = `
+<gux-date-beta time-zone="Africa/Timbuktu" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Africa/Tripoli" timezone 1`] = `
 <gux-date-beta time-zone="Africa/Tripoli" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -5882,6 +7010,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Argentina/Catamarca" timezone 1`] = `
 <gux-date-beta time-zone="America/Argentina/Catamarca" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Argentina/ComodRivadavia" timezone 1`] = `
+<gux-date-beta time-zone="America/Argentina/ComodRivadavia" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -5992,6 +7128,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Atka" timezone 1`] = `
+<gux-date-beta time-zone="America/Atka" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Bahia" timezone 1`] = `
 <gux-date-beta time-zone="America/Bahia" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6064,6 +7208,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Buenos_Aires" timezone 1`] = `
+<gux-date-beta time-zone="America/Buenos_Aires" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Cambridge_Bay" timezone 1`] = `
 <gux-date-beta time-zone="America/Cambridge_Bay" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6096,6 +7248,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Catamarca" timezone 1`] = `
+<gux-date-beta time-zone="America/Catamarca" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Cayenne" timezone 1`] = `
 <gux-date-beta time-zone="America/Cayenne" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6122,6 +7282,30 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Chihuahua" timezone 1`] = `
 <gux-date-beta time-zone="America/Chihuahua" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Ciudad_Juarez" timezone 1`] = `
+<gux-date-beta time-zone="America/Ciudad_Juarez" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Coral_Harbour" timezone 1`] = `
+<gux-date-beta time-zone="America/Coral_Harbour" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Cordoba" timezone 1`] = `
+<gux-date-beta time-zone="America/Cordoba" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -6232,8 +7416,24 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Ensenada" timezone 1`] = `
+<gux-date-beta time-zone="America/Ensenada" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Fort_Nelson" timezone 1`] = `
 <gux-date-beta time-zone="America/Fort_Nelson" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Fort_Wayne" timezone 1`] = `
+<gux-date-beta time-zone="America/Fort_Wayne" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -6250,6 +7450,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Glace_Bay" timezone 1`] = `
 <gux-date-beta time-zone="America/Glace_Bay" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Godthab" timezone 1`] = `
+<gux-date-beta time-zone="America/Godthab" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -6400,6 +7608,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Indianapolis" timezone 1`] = `
+<gux-date-beta time-zone="America/Indianapolis" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Inuvik" timezone 1`] = `
 <gux-date-beta time-zone="America/Inuvik" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6424,6 +7640,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Jujuy" timezone 1`] = `
+<gux-date-beta time-zone="America/Jujuy" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Juneau" timezone 1`] = `
 <gux-date-beta time-zone="America/Juneau" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6442,6 +7666,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Kentucky/Monticello" timezone 1`] = `
 <gux-date-beta time-zone="America/Kentucky/Monticello" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Knox_IN" timezone 1`] = `
+<gux-date-beta time-zone="America/Knox_IN" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -6474,6 +7706,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Los_Angeles" timezone 1`] = `
 <gux-date-beta time-zone="America/Los_Angeles" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Louisville" timezone 1`] = `
+<gux-date-beta time-zone="America/Louisville" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -6544,6 +7784,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Mendoza" timezone 1`] = `
+<gux-date-beta time-zone="America/Mendoza" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Menominee" timezone 1`] = `
 <gux-date-beta time-zone="America/Menominee" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6608,6 +7856,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Montreal" timezone 1`] = `
+<gux-date-beta time-zone="America/Montreal" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Montserrat" timezone 1`] = `
 <gux-date-beta time-zone="America/Montserrat" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6626,6 +7882,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/New_York" timezone 1`] = `
 <gux-date-beta time-zone="America/New_York" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Nipigon" timezone 1`] = `
+<gux-date-beta time-zone="America/Nipigon" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -6696,6 +7960,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Pangnirtung" timezone 1`] = `
+<gux-date-beta time-zone="America/Pangnirtung" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Paramaribo" timezone 1`] = `
 <gux-date-beta time-zone="America/Paramaribo" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6728,6 +8000,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Porto_Acre" timezone 1`] = `
+<gux-date-beta time-zone="America/Porto_Acre" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Porto_Velho" timezone 1`] = `
 <gux-date-beta time-zone="America/Porto_Velho" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6746,6 +8026,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Punta_Arenas" timezone 1`] = `
 <gux-date-beta time-zone="America/Punta_Arenas" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Rainy_River" timezone 1`] = `
+<gux-date-beta time-zone="America/Rainy_River" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -6792,6 +8080,22 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Rosario" timezone 1`] = `
+<gux-date-beta time-zone="America/Rosario" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Santa_Isabel" timezone 1`] = `
+<gux-date-beta time-zone="America/Santa_Isabel" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Santarem" timezone 1`] = `
 <gux-date-beta time-zone="America/Santarem" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6826,6 +8130,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Scoresbysund" timezone 1`] = `
 <gux-date-beta time-zone="America/Scoresbysund" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Shiprock" timezone 1`] = `
+<gux-date-beta time-zone="America/Shiprock" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -6912,6 +8224,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Thunder_Bay" timezone 1`] = `
+<gux-date-beta time-zone="America/Thunder_Bay" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Tijuana" timezone 1`] = `
 <gux-date-beta time-zone="America/Tijuana" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6944,6 +8264,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Virgin" timezone 1`] = `
+<gux-date-beta time-zone="America/Virgin" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Whitehorse" timezone 1`] = `
 <gux-date-beta time-zone="America/Whitehorse" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -6962,6 +8290,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Yakutat" timezone 1`] = `
 <gux-date-beta time-zone="America/Yakutat" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "America/Yellowknife" timezone 1`] = `
+<gux-date-beta time-zone="America/Yellowknife" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -7028,6 +8364,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 <gux-date-beta time-zone="Antarctica/Rothera" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Antarctica/South_Pole" timezone 1`] = `
+<gux-date-beta time-zone="Antarctica/South_Pole" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Friday, July 8, 2022
   </template>
 </gux-date-beta>
 `;
@@ -7120,6 +8464,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Ashkhabad" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Ashkhabad" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Atyrau" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Atyrau" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -7192,6 +8544,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Calcutta" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Calcutta" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Chita" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Chita" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -7208,8 +8568,32 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Chongqing" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Chongqing" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Chungking" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Chungking" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Colombo" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Colombo" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Dacca" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Dacca" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -7272,6 +8656,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Harbin" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Harbin" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Hebron" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Hebron" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -7306,6 +8698,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Irkutsk" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Irkutsk" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Istanbul" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Istanbul" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -7360,8 +8760,24 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Kashgar" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Kashgar" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Kathmandu" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Kathmandu" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Katmandu" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Katmandu" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -7410,6 +8826,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Kuwait" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Kuwait" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Macao" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Macao" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -7544,8 +8968,24 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Rangoon" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Rangoon" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Riyadh" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Riyadh" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Saigon" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Saigon" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -7632,6 +9072,22 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Tel_Aviv" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Tel_Aviv" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Thimbu" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Thimbu" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Thimphu" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Thimphu" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -7656,8 +9112,24 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Ujung_Pandang" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Ujung_Pandang" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Ulaanbaatar" timezone 1`] = `
 <gux-date-beta time-zone="Asia/Ulaanbaatar" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Asia/Ulan_Bator" timezone 1`] = `
+<gux-date-beta time-zone="Asia/Ulan_Bator" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -7760,8 +9232,24 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Atlantic/Faeroe" timezone 1`] = `
+<gux-date-beta time-zone="Atlantic/Faeroe" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Atlantic/Faroe" timezone 1`] = `
 <gux-date-beta time-zone="Atlantic/Faroe" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Atlantic/Jan_Mayen" timezone 1`] = `
+<gux-date-beta time-zone="Atlantic/Jan_Mayen" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -7808,6 +9296,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/ACT" timezone 1`] = `
+<gux-date-beta time-zone="Australia/ACT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/Adelaide" timezone 1`] = `
 <gux-date-beta time-zone="Australia/Adelaide" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -7826,6 +9322,22 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/Broken_Hill" timezone 1`] = `
 <gux-date-beta time-zone="Australia/Broken_Hill" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/Canberra" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Canberra" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/Currie" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Currie" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -7856,6 +9368,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/LHI" timezone 1`] = `
+<gux-date-beta time-zone="Australia/LHI" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/Lindeman" timezone 1`] = `
 <gux-date-beta time-zone="Australia/Lindeman" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -7880,6 +9400,22 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/NSW" timezone 1`] = `
+<gux-date-beta time-zone="Australia/NSW" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/North" timezone 1`] = `
+<gux-date-beta time-zone="Australia/North" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/Perth" timezone 1`] = `
 <gux-date-beta time-zone="Australia/Perth" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -7888,8 +9424,88 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/Queensland" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Queensland" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/South" timezone 1`] = `
+<gux-date-beta time-zone="Australia/South" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/Sydney" timezone 1`] = `
 <gux-date-beta time-zone="Australia/Sydney" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/Tasmania" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Tasmania" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/Victoria" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Victoria" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/West" timezone 1`] = `
+<gux-date-beta time-zone="Australia/West" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Australia/Yancowinna" timezone 1`] = `
+<gux-date-beta time-zone="Australia/Yancowinna" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Brazil/Acre" timezone 1`] = `
+<gux-date-beta time-zone="Brazil/Acre" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Brazil/DeNoronha" timezone 1`] = `
+<gux-date-beta time-zone="Brazil/DeNoronha" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Brazil/East" timezone 1`] = `
+<gux-date-beta time-zone="Brazil/East" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Brazil/West" timezone 1`] = `
+<gux-date-beta time-zone="Brazil/West" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -7906,6 +9522,94 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "CST6CDT" timezone 1`] = `
 <gux-date-beta time-zone="CST6CDT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Canada/Atlantic" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Atlantic" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Canada/Central" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Central" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Canada/Eastern" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Eastern" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Canada/Mountain" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Mountain" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Canada/Newfoundland" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Newfoundland" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Canada/Pacific" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Pacific" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Canada/Saskatchewan" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Saskatchewan" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Canada/Yukon" timezone 1`] = `
+<gux-date-beta time-zone="Canada/Yukon" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Chile/Continental" timezone 1`] = `
+<gux-date-beta time-zone="Chile/Continental" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Chile/EasterIsland" timezone 1`] = `
+<gux-date-beta time-zone="Chile/EasterIsland" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Cuba" timezone 1`] = `
+<gux-date-beta time-zone="Cuba" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -7936,8 +9640,32 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Egypt" timezone 1`] = `
+<gux-date-beta time-zone="Egypt" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Eire" timezone 1`] = `
+<gux-date-beta time-zone="Eire" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Etc/GMT" timezone 1`] = `
 <gux-date-beta time-zone="Etc/GMT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Etc/GMT+0" timezone 1`] = `
+<gux-date-beta time-zone="Etc/GMT+0" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -8034,6 +9762,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Etc/GMT+12" timezone 1`] = `
 <gux-date-beta time-zone="Etc/GMT+12" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Etc/GMT-0" timezone 1`] = `
+<gux-date-beta time-zone="Etc/GMT-0" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -8152,8 +9888,48 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Etc/GMT0" timezone 1`] = `
+<gux-date-beta time-zone="Etc/GMT0" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Etc/Greenwich" timezone 1`] = `
+<gux-date-beta time-zone="Etc/Greenwich" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Etc/UCT" timezone 1`] = `
+<gux-date-beta time-zone="Etc/UCT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Etc/UTC" timezone 1`] = `
 <gux-date-beta time-zone="Etc/UTC" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Etc/Universal" timezone 1`] = `
+<gux-date-beta time-zone="Etc/Universal" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Etc/Zulu" timezone 1`] = `
+<gux-date-beta time-zone="Etc/Zulu" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -8186,6 +9962,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Europe/Athens" timezone 1`] = `
 <gux-date-beta time-zone="Europe/Athens" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Europe/Belfast" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Belfast" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -8328,6 +10112,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Europe/Kiev" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Kiev" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Europe/Kirov" timezone 1`] = `
 <gux-date-beta time-zone="Europe/Kirov" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -8418,6 +10210,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Europe/Moscow" timezone 1`] = `
 <gux-date-beta time-zone="Europe/Moscow" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Europe/Nicosia" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Nicosia" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -8552,8 +10352,24 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Europe/Tiraspol" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Tiraspol" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Europe/Ulyanovsk" timezone 1`] = `
 <gux-date-beta time-zone="Europe/Ulyanovsk" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Europe/Uzhgorod" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Uzhgorod" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -8616,6 +10432,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Europe/Zaporozhye" timezone 1`] = `
+<gux-date-beta time-zone="Europe/Zaporozhye" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Europe/Zurich" timezone 1`] = `
 <gux-date-beta time-zone="Europe/Zurich" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -8624,8 +10448,80 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "GB" timezone 1`] = `
+<gux-date-beta time-zone="GB" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "GB-Eire" timezone 1`] = `
+<gux-date-beta time-zone="GB-Eire" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "GMT" timezone 1`] = `
+<gux-date-beta time-zone="GMT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "GMT+0" timezone 1`] = `
+<gux-date-beta time-zone="GMT+0" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "GMT-0" timezone 1`] = `
+<gux-date-beta time-zone="GMT-0" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "GMT0" timezone 1`] = `
+<gux-date-beta time-zone="GMT0" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Greenwich" timezone 1`] = `
+<gux-date-beta time-zone="Greenwich" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "HST" timezone 1`] = `
 <gux-date-beta time-zone="HST" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Hongkong" timezone 1`] = `
+<gux-date-beta time-zone="Hongkong" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Iceland" timezone 1`] = `
+<gux-date-beta time-zone="Iceland" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -8720,6 +10616,54 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Iran" timezone 1`] = `
+<gux-date-beta time-zone="Iran" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Israel" timezone 1`] = `
+<gux-date-beta time-zone="Israel" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Jamaica" timezone 1`] = `
+<gux-date-beta time-zone="Jamaica" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Japan" timezone 1`] = `
+<gux-date-beta time-zone="Japan" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Kwajalein" timezone 1`] = `
+<gux-date-beta time-zone="Kwajalein" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Friday, July 8, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Libya" timezone 1`] = `
+<gux-date-beta time-zone="Libya" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "MET" timezone 1`] = `
 <gux-date-beta time-zone="MET" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -8738,6 +10682,62 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "MST7MDT" timezone 1`] = `
 <gux-date-beta time-zone="MST7MDT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Mexico/BajaNorte" timezone 1`] = `
+<gux-date-beta time-zone="Mexico/BajaNorte" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Mexico/BajaSur" timezone 1`] = `
+<gux-date-beta time-zone="Mexico/BajaSur" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Mexico/General" timezone 1`] = `
+<gux-date-beta time-zone="Mexico/General" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "NZ" timezone 1`] = `
+<gux-date-beta time-zone="NZ" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Friday, July 8, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "NZ-CHAT" timezone 1`] = `
+<gux-date-beta time-zone="NZ-CHAT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Friday, July 8, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Navajo" timezone 1`] = `
+<gux-date-beta time-zone="Navajo" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "PRC" timezone 1`] = `
+<gux-date-beta time-zone="PRC" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -8808,6 +10808,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Pacific/Enderbury" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Enderbury" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Friday, July 8, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Pacific/Fakaofo" timezone 1`] = `
 <gux-date-beta time-zone="Pacific/Fakaofo" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -8866,6 +10874,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Pacific/Honolulu" timezone 1`] = `
 <gux-date-beta time-zone="Pacific/Honolulu" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Pacific/Johnston" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Johnston" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -8992,6 +11008,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Pacific/Ponape" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Ponape" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Pacific/Port_Moresby" timezone 1`] = `
 <gux-date-beta time-zone="Pacific/Port_Moresby" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -9010,6 +11034,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Pacific/Saipan" timezone 1`] = `
 <gux-date-beta time-zone="Pacific/Saipan" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Pacific/Samoa" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Samoa" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
@@ -9040,6 +11072,14 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Pacific/Truk" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Truk" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Pacific/Wake" timezone 1`] = `
 <gux-date-beta time-zone="Pacific/Wake" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -9056,6 +11096,166 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Pacific/Yap" timezone 1`] = `
+<gux-date-beta time-zone="Pacific/Yap" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Poland" timezone 1`] = `
+<gux-date-beta time-zone="Poland" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Portugal" timezone 1`] = `
+<gux-date-beta time-zone="Portugal" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "ROC" timezone 1`] = `
+<gux-date-beta time-zone="ROC" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "ROK" timezone 1`] = `
+<gux-date-beta time-zone="ROK" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Singapore" timezone 1`] = `
+<gux-date-beta time-zone="Singapore" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Turkey" timezone 1`] = `
+<gux-date-beta time-zone="Turkey" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "UCT" timezone 1`] = `
+<gux-date-beta time-zone="UCT" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/Alaska" timezone 1`] = `
+<gux-date-beta time-zone="US/Alaska" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/Aleutian" timezone 1`] = `
+<gux-date-beta time-zone="US/Aleutian" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/Arizona" timezone 1`] = `
+<gux-date-beta time-zone="US/Arizona" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/Central" timezone 1`] = `
+<gux-date-beta time-zone="US/Central" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/East-Indiana" timezone 1`] = `
+<gux-date-beta time-zone="US/East-Indiana" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/Eastern" timezone 1`] = `
+<gux-date-beta time-zone="US/Eastern" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/Hawaii" timezone 1`] = `
+<gux-date-beta time-zone="US/Hawaii" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/Indiana-Starke" timezone 1`] = `
+<gux-date-beta time-zone="US/Indiana-Starke" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/Michigan" timezone 1`] = `
+<gux-date-beta time-zone="US/Michigan" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/Mountain" timezone 1`] = `
+<gux-date-beta time-zone="US/Mountain" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/Pacific" timezone 1`] = `
+<gux-date-beta time-zone="US/Pacific" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "US/Samoa" timezone 1`] = `
+<gux-date-beta time-zone="US/Samoa" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "UTC" timezone 1`] = `
 <gux-date-beta time-zone="UTC" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -9064,8 +11264,32 @@ exports[`gux-date #render using non regional dates #render different time zones 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Universal" timezone 1`] = `
+<gux-date-beta time-zone="Universal" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "W-SU" timezone 1`] = `
+<gux-date-beta time-zone="W-SU" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render using non regional dates #render different time zones should render as expected for "WET" timezone 1`] = `
 <gux-date-beta time-zone="WET" datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    Thursday, July 7, 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different time zones should render as expected for "Zulu" timezone 1`] = `
+<gux-date-beta time-zone="Zulu" datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     Thursday, July 7, 2022
   </template>
