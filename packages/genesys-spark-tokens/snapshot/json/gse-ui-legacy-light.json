@@ -1297,7 +1297,7 @@
       "desktop": {
         "bottom_padding": "16px",
         "top_padding": "16px",
-        "horizontal_padding": "32px",
+        "horizontal_padding": "24px",
         "gap": "16px"
       },
       "mobile": {
