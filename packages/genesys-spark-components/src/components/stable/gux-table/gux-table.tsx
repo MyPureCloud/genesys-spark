@@ -420,7 +420,7 @@ export class GuxTable {
   /******************************* Rendering *******************************/
 
   private get isTableEmpty(): boolean {
-    return !this.root.children[0] || this.tableRows.length < 1;
+    return this.tableColumns && this.tableRows.length < 1;
   }
 
   private get tableContainerClasses(): { [k: string]: boolean } {
