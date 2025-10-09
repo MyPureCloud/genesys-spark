@@ -4,7 +4,8 @@ import {
   h,
   State,
   Event,
-  EventEmitter
+  EventEmitter,
+  Prop
 } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { hasSlot } from '@utils/dom/has-slot';
@@ -27,6 +28,9 @@ export class GuxSidePanelHeader {
   @Element()
   private root: HTMLElement;
 
+  @Prop()
+  expandable: boolean = false;
+
   @State()
   private expanded: boolean = false;
 
@@ -35,13 +39,6 @@ export class GuxSidePanelHeader {
 
   @Event()
   guxcollapsed: EventEmitter<void>;
-
-  @Event()
-  sidePanelDismiss: EventEmitter<void>;
-
-  private onDismissHandler(): void {
-    this.sidePanelDismiss.emit();
-  }
 
   private renderSlot(slotName: SlotName): JSX.Element | null {
     if (hasSlot(this.root, slotName)) {
@@ -83,12 +80,8 @@ export class GuxSidePanelHeader {
     }
   }
 
-  private isExpandable(): boolean {
-    return Boolean(this.root.querySelector('slot[name="expand"]'));
-  }
-
   private renderExpandOrCollapse(): JSX.Element | null {
-    if (!this.isExpandable()) {
+    if (!this.expandable) {
       return null;
     }
 
@@ -131,16 +124,13 @@ export class GuxSidePanelHeader {
       <div
         class={{
           'title-block': true,
-          'gux-expandable': this.isExpandable()
+          'gux-expandable': this.expandable
         }}
       >
         {this.renderSlot('icon')}
         {this.renderTitleDesc()}
         {this.renderSlot('badge')}
         {this.renderExpandOrCollapse()}
-        <gux-dismiss-button
-          onClick={this.onDismissHandler.bind(this)}
-        ></gux-dismiss-button>
       </div>
     ) as JSX.Element;
   }
