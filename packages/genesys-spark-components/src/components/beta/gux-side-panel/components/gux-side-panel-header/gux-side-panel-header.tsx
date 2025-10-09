@@ -1,4 +1,11 @@
-import { Component, Element, h } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  State,
+  Event,
+  EventEmitter
+} from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { hasSlot } from '@utils/dom/has-slot';
 import { SlotName } from './gux-side-panel-header.types';
@@ -19,6 +26,22 @@ export class GuxSidePanelHeader {
 
   @Element()
   private root: HTMLElement;
+
+  @State()
+  private expanded: boolean = false;
+
+  @Event()
+  guxexpanded: EventEmitter<void>;
+
+  @Event()
+  guxcollapsed: EventEmitter<void>;
+
+  @Event()
+  sidePanelDismiss: EventEmitter<void>;
+
+  private onDismissHandler(): void {
+    this.sidePanelDismiss.emit();
+  }
 
   private renderSlot(slotName: SlotName): JSX.Element | null {
     if (hasSlot(this.root, slotName)) {
@@ -50,6 +73,50 @@ export class GuxSidePanelHeader {
     return null;
   }
 
+  private toggleExpandableState(): void {
+    this.expanded = !this.expanded;
+
+    if (this.expanded) {
+      this.guxexpanded.emit();
+    } else {
+      this.guxcollapsed.emit();
+    }
+  }
+
+  private isExpandable(): boolean {
+    return Boolean(this.root.querySelector('slot[name="expand"]'));
+  }
+
+  private renderExpandOrCollapse(): JSX.Element | null {
+    if (!this.isExpandable()) {
+      return null;
+    }
+
+    if (this.expanded) {
+      return (
+        <gux-button-slot accent="ghost" icon-only>
+          <button
+            class="gux-collapse"
+            onClick={() => this.toggleExpandableState()}
+          >
+            <gux-icon decorative size="small" icon-name="collapse"></gux-icon>
+          </button>
+        </gux-button-slot>
+      );
+    } else {
+      return (
+        <gux-button-slot accent="ghost" icon-only>
+          <button
+            class="gux-expand"
+            onClick={() => this.toggleExpandableState()}
+          >
+            <gux-icon decorative size="small" icon-name="expand"></gux-icon>
+          </button>
+        </gux-button-slot>
+      );
+    }
+  }
+
   componentWillLoad(): void {
     trackComponent(this.root);
   }
@@ -61,12 +128,19 @@ export class GuxSidePanelHeader {
 
   render(): JSX.Element {
     return (
-      <div class="title-block">
+      <div
+        class={{
+          'title-block': true,
+          'gux-expandable': this.isExpandable()
+        }}
+      >
         {this.renderSlot('icon')}
         {this.renderTitleDesc()}
         {this.renderSlot('badge')}
-        {this.renderSlot('expand')}
-        {this.renderSlot('collapse')}
+        {this.renderExpandOrCollapse()}
+        <gux-dismiss-button
+          onClick={this.onDismissHandler.bind(this)}
+        ></gux-dismiss-button>
       </div>
     ) as JSX.Element;
   }

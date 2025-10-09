@@ -1,11 +1,4 @@
-import {
-  Component,
-  Event,
-  EventEmitter,
-  h,
-  Element,
-  Prop
-} from '@stencil/core';
+import { Component, h, Element, Prop } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxSidePanelSize } from './gux-side-panel.types';
 import { hasSlot } from '@utils/dom/has-slot';
@@ -28,13 +21,6 @@ export class GuxSidePanel {
 
   @Prop({ reflect: true })
   size: GuxSidePanelSize = 'small';
-
-  @Event()
-  sidePanelDismiss: EventEmitter<void>;
-
-  private onDismissHandler(): void {
-    this.sidePanelDismiss.emit();
-  }
 
   componentWillLoad(): void {
     trackComponent(this.root, { variant: this.size });
@@ -109,9 +95,6 @@ export class GuxSidePanel {
         }}
       >
         {this.renderHeader()}
-        <gux-dismiss-button
-          onClick={this.onDismissHandler.bind(this)}
-        ></gux-dismiss-button>
         <div class="gux-side-panel-content-wrapper">
           {this.renderTabs()}
           {this.renderContent()}

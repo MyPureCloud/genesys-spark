@@ -195,7 +195,7 @@
     </footer>
   </gux-modal-side-panel-beta>
 
-  <gux-side-panel-beta size="medium" id="expandable-example">
+  <gux-side-panel-beta size="medium" id="expandable-example" expandable="true">
     <gux-side-panel-header slot="header">
       <gux-side-panel-heading slot="title"
         >Expandable Side Panel</gux-side-panel-heading
@@ -207,20 +207,7 @@
         icon-name="user-add"
         screenreader-text="add John Smith to contact list"
       ></gux-icon>
-      <gux-icon
-        id="expand-icon"
-        slot="expand"
-        decorative
-        size="small"
-        icon-name="expand"
-      ></gux-icon>
-      <gux-icon
-        id="collapse-icon"
-        slot="collapse"
-        decorative
-        size="small"
-        icon-name="collapse"
-      ></gux-icon>
+      <slot name="expand"></slot>
     </gux-side-panel-header>
     <div slot="content" id="expandable-content">
       Pellentesque habitant morbi tristique senectus et netus et malesuada fames
@@ -262,8 +249,6 @@
   const toggleTabsPanel = document.getElementById('toggle-tabsPanel');
   const toggleHeadingSize = document.getElementById('toggle-headingSize');
   const toggleExpandablePanel = document.getElementById('toggle-expandablePanel');
-  const expandIcon = document.getElementById('expand-icon');
-  const collapseIcon = document.getElementById('collapse-icon');
 
   function hideAllPanels() {
     dynamicSidePanel.style.display = 'none';
@@ -346,16 +331,11 @@
     togglePanel(expandableSidePanel);
   });
 
-  expandIcon.addEventListener('click', function(event) {
+  expandableSidePanel.addEventListener('guxexpanded', function(event) {
     document.getElementById('expandable-content').classList.toggle('gux-expanded');
-    expandIcon.style.display = 'none';
-    collapseIcon.style.display = 'block';
   });
-
-  collapseIcon.addEventListener('click', function(event) {
+  expandableSidePanel.addEventListener('guxcollapsed', function(event) {
     document.getElementById('expandable-content').classList.toggle('gux-expanded');
-    collapseIcon.style.display = 'none';
-    expandIcon.style.display = 'block';
   });
 })()"
 >
@@ -395,16 +375,5 @@
 
   .gux-expanded {
     block-size: 400px; /* The developer can set this to whichever value they need */
-  }
-
-  #collapse-icon {
-    position: relative;
-    inset-inline-end: 10px;
-    display: none;
-  }
-
-  #collapse-icon:hover,
-  #expand-icon:hover {
-    cursor: pointer;
   }
 </style>
