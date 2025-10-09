@@ -1,7 +1,1 @@
-export type SlotName =
-  | 'icon'
-  | 'title'
-  | 'description'
-  | 'badge'
-  | 'expand'
-  | 'collapse';
+export type SlotName = 'icon' | 'title' | 'description' | 'badge' | 'expand';
