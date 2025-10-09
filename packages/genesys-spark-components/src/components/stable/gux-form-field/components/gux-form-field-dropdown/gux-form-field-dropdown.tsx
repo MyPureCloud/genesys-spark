@@ -115,6 +115,9 @@ export class GuxFormFieldDropdown {
         }
         break;
       }
+      case 'Shift': {
+        break;
+      }
       default: {
         if (this.dropdownElement.matches(':focus-within')) {
           void this.labelInfo?.hideTooltip();

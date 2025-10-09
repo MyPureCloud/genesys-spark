@@ -104,6 +104,9 @@ export class GuxFormFieldFileBeta {
         }
         break;
       }
+      case 'Shift': {
+        break;
+      }
       default: {
         if (this.input.matches(':focus-visible')) {
           void this.labelInfo?.hideTooltip();
