@@ -25,7 +25,6 @@ test.describe('gux-side-panel-beta', () => {
       await setContent(page, html);
       const dismissSpy = await page.spyOnEvent('sidePanelDismiss');
       const sidePanel = page.locator('gux-side-panel-beta');
-      await page.pause();
       const dismissButton = sidePanel.locator('gux-dismiss-button >> button');
       await dismissButton.click();
       await page.waitForChanges();
