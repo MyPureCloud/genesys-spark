@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxList } from '@components/stable/gux-list/gux-list';
 import { GuxListItem } from '@components/stable/gux-list/gux-list-item/gux-list-item';
 import { GuxButton } from '@components/stable/gux-button/gux-button';

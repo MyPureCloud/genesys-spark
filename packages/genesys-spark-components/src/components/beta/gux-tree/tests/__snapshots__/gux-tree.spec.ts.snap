@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`gux-time #render should render as expected 1`] = `
+<gux-tree-beta role="tree" aria-activedescendant="">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <gux-branch tabindex="0" role="treeitem" aria-expanded="false">
+    <template shadowrootmode="open">
+      <div class="gux-container">
+        <div class="gux-target">
+          <div class="gux-branch-indicator">
+            <gux-icon class="gux-arrow-icon" decorative="" icon-name="fa/caret-right-solid" size="small">
+            </gux-icon>
+          </div>
+          <div class="gux-icon">
+            <slot name="icon">
+            </slot>
+          </div>
+          <div class="gux-label">
+            <slot name="label">
+            </slot>
+          </div>
+        </div>
+        <div role="group" class="gux-treeitems">
+          <slot>
+          </slot>
+        </div>
+      </div>
+    </template>
+    <div slot="label">
+      Projects
+    </div>
+    <gux-leaf role="treeitem" tabindex="">
+      <template shadowrootmode="open">
+        <div class="gux-target">
+          <div class="gux-icon">
+            <slot name="icon">
+            </slot>
+          </div>
+          <div class="gux-label">
+            <slot name="label">
+            </slot>
+          </div>
+        </div>
+      </template>
+      <div slot="label">
+        Project-1
+      </div>
+    </gux-leaf>
+    <gux-leaf role="treeitem" tabindex="">
+      <template shadowrootmode="open">
+        <div class="gux-target">
+          <div class="gux-icon">
+            <slot name="icon">
+            </slot>
+          </div>
+          <div class="gux-label">
+            <slot name="label">
+            </slot>
+          </div>
+        </div>
+      </template>
+      <div slot="label">
+        Project-2
+      </div>
+    </gux-leaf>
+  </gux-branch>
+  <gux-branch role="treeitem" tabindex="" aria-expanded="false">
+    <template shadowrootmode="open">
+      <div class="gux-container">
+        <div class="gux-target">
+          <div class="gux-branch-indicator">
+            <gux-icon class="gux-arrow-icon" decorative="" icon-name="fa/caret-right-solid" size="small">
+            </gux-icon>
+          </div>
+          <div class="gux-icon">
+            <slot name="icon">
+            </slot>
+          </div>
+          <div class="gux-label">
+            <slot name="label">
+            </slot>
+          </div>
+        </div>
+        <div role="group" class="gux-treeitems">
+          <slot>
+          </slot>
+        </div>
+      </div>
+    </template>
+    <div slot="label">
+      Reports
+    </div>
+    <gux-branch role="treeitem" tabindex="" aria-expanded="false">
+      <template shadowrootmode="open">
+        <div class="gux-container">
+          <div class="gux-target">
+            <div class="gux-branch-indicator">
+              <gux-icon class="gux-arrow-icon" decorative="" icon-name="fa/caret-right-solid" size="small">
+              </gux-icon>
+            </div>
+            <div class="gux-icon">
+              <slot name="icon">
+              </slot>
+            </div>
+            <div class="gux-label">
+              <slot name="label">
+              </slot>
+            </div>
+          </div>
+          <div role="group" class="gux-treeitems">
+            <slot>
+            </slot>
+          </div>
+        </div>
+      </template>
+      <div slot="label">
+        2025
+      </div>
+      <gux-leaf role="treeitem" tabindex="">
+        <template shadowrootmode="open">
+          <div class="gux-target">
+            <div class="gux-icon">
+              <slot name="icon">
+              </slot>
+            </div>
+            <div class="gux-label">
+              <slot name="label">
+              </slot>
+            </div>
+          </div>
+        </template>
+        <div slot="label">
+          doc 1
+        </div>
+      </gux-leaf>
+      <gux-leaf role="treeitem" tabindex="">
+        <template shadowrootmode="open">
+          <div class="gux-target">
+            <div class="gux-icon">
+              <slot name="icon">
+              </slot>
+            </div>
+            <div class="gux-label">
+              <slot name="label">
+              </slot>
+            </div>
+          </div>
+        </template>
+        <div slot="label">
+          doc 2
+        </div>
+      </gux-leaf>
+      <gux-leaf role="treeitem" tabindex="">
+        <template shadowrootmode="open">
+          <div class="gux-target">
+            <div class="gux-icon">
+              <slot name="icon">
+              </slot>
+            </div>
+            <div class="gux-label">
+              <slot name="label">
+              </slot>
+            </div>
+          </div>
+        </template>
+        <div slot="label">
+          doc 3
+        </div>
+      </gux-leaf>
+    </gux-branch>
+    <gux-branch role="treeitem" tabindex="" aria-expanded="false">
+      <template shadowrootmode="open">
+        <div class="gux-container">
+          <div class="gux-target">
+            <div class="gux-branch-indicator">
+              <gux-icon class="gux-arrow-icon" decorative="" icon-name="fa/caret-right-solid" size="small">
+              </gux-icon>
+            </div>
+            <div class="gux-icon">
+              <slot name="icon">
+              </slot>
+            </div>
+            <div class="gux-label">
+              <slot name="label">
+              </slot>
+            </div>
+          </div>
+          <div role="group" class="gux-treeitems">
+            <slot>
+            </slot>
+          </div>
+        </div>
+      </template>
+      <div slot="label">
+        2024
+      </div>
+    </gux-branch>
+  </gux-branch>
+  <gux-leaf role="treeitem" tabindex="">
+    <template shadowrootmode="open">
+      <div class="gux-target">
+        <div class="gux-icon">
+          <slot name="icon">
+          </slot>
+        </div>
+        <div class="gux-label">
+          <slot name="label">
+          </slot>
+        </div>
+      </div>
+    </template>
+    <div slot="label">
+      Untitled Documents
+    </div>
+  </gux-leaf>
+</gux-tree-beta>
+`;
