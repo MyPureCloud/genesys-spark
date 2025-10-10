@@ -406,10 +406,14 @@ exports[`gux-time-picker #render using non regional dates should render as expec
         </div>
         <button class="gux-input-time-am-pm-selector" type="button" aria-label="AM selected, click to toggle">
           <div class="gux-meridiem gux-visible">
-            AM
+            <span>
+              AM
+            </span>
           </div>
           <div class="gux-meridiem">
-            PM
+            <span>
+              PM
+            </span>
           </div>
         </button>
         <button class="gux-clock-button" type="button" aria-label="Toggle suggested times" aria-expanded="false">
@@ -1064,10 +1068,14 @@ exports[`gux-time-picker #render using non regional dates should render as expec
         </div>
         <button class="gux-input-time-am-pm-selector" type="button" aria-label="AM selected, click to toggle">
           <div class="gux-meridiem gux-visible">
-            AM
+            <span>
+              AM
+            </span>
           </div>
           <div class="gux-meridiem">
-            PM
+            <span>
+              PM
+            </span>
           </div>
         </button>
         <button class="gux-clock-button" type="button" aria-label="Toggle suggested times" aria-expanded="false">
@@ -2604,10 +2612,14 @@ exports[`gux-time-picker #render using regional dates should render as expected 
         </div>
         <button class="gux-input-time-am-pm-selector" type="button" aria-label="AM selected, click to toggle">
           <div class="gux-meridiem gux-visible">
-            AM
+            <span>
+              ص
+            </span>
           </div>
           <div class="gux-meridiem">
-            PM
+            <span>
+              م
+            </span>
           </div>
         </button>
         <button class="gux-clock-button" type="button" aria-label="Toggle suggested times" aria-expanded="false">
@@ -2968,10 +2980,14 @@ exports[`gux-time-picker #render using regional dates should render as expected 
         </div>
         <button class="gux-input-time-am-pm-selector" type="button" aria-label="AM selected, click to toggle">
           <div class="gux-meridiem gux-visible">
-            AM
+            <span>
+              AM
+            </span>
           </div>
           <div class="gux-meridiem">
-            PM
+            <span>
+              PM
+            </span>
           </div>
         </button>
         <button class="gux-clock-button" type="button" aria-label="Toggle suggested times" aria-expanded="false">
@@ -3626,10 +3642,14 @@ exports[`gux-time-picker #render using regional dates should render as expected 
         </div>
         <button class="gux-input-time-am-pm-selector" type="button" aria-label="AM selected, click to toggle">
           <div class="gux-meridiem gux-visible">
-            AM
+            <span>
+              am
+            </span>
           </div>
           <div class="gux-meridiem">
-            PM
+            <span>
+              pm
+            </span>
           </div>
         </button>
         <button class="gux-clock-button" type="button" aria-label="Toggle suggested times" aria-expanded="false">
@@ -3883,6 +3903,18 @@ exports[`gux-time-picker #render using regional dates should render as expected 
   <template shadowrootmode="open">
     <gux-popup class="gux-time-picker">
       <div class="gux-input-time" slot="target">
+        <button class="gux-input-time-am-pm-selector" type="button" aria-label="AM selected, click to toggle">
+          <div class="gux-meridiem gux-visible">
+            <span>
+              오전
+            </span>
+          </div>
+          <div class="gux-meridiem">
+            <span>
+              오후
+            </span>
+          </div>
+        </button>
         <div class="gux-input-time-container">
           <input role="spinbutton" class="gux-input-time-hours" type="text" value="09" aria-label="Input hours" pattern="^(0?[1-9]|1[012])$" aria-valuetext="09" aria-valuenow="09" aria-valuemin="1" aria-valuemax="12">
           <span class="gux-time-separator">
@@ -3890,14 +3922,6 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           </span>
           <input role="spinbutton" class="gux-input-time-minutes" type="text" value="00" aria-label="Input minutes" pattern="^[0-5][0-9]$" aria-valuetext="00" aria-valuenow="00" aria-valuemin="0" aria-valuemax="59">
         </div>
-        <button class="gux-input-time-am-pm-selector" type="button" aria-label="AM selected, click to toggle">
-          <div class="gux-meridiem gux-visible">
-            AM
-          </div>
-          <div class="gux-meridiem">
-            PM
-          </div>
-        </button>
         <button class="gux-clock-button" type="button" aria-label="Toggle suggested times" aria-expanded="false">
           <gux-icon decorative="" icon-name="fa/clock-regular" size="small">
           </gux-icon>
@@ -5031,6 +5055,18 @@ exports[`gux-time-picker #render using regional dates should render as expected 
   <template shadowrootmode="open">
     <gux-popup class="gux-time-picker">
       <div class="gux-input-time" slot="target">
+        <button class="gux-input-time-am-pm-selector" type="button" aria-label="AM selected, click to toggle">
+          <div class="gux-meridiem gux-visible">
+            <span>
+              上午
+            </span>
+          </div>
+          <div class="gux-meridiem">
+            <span>
+              下午
+            </span>
+          </div>
+        </button>
         <div class="gux-input-time-container">
           <input role="spinbutton" class="gux-input-time-hours" type="text" value="09" aria-label="Input hours" pattern="^(0?[1-9]|1[012])$" aria-valuetext="09" aria-valuenow="09" aria-valuemin="1" aria-valuemax="12">
           <span class="gux-time-separator">
@@ -5038,14 +5074,6 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           </span>
           <input role="spinbutton" class="gux-input-time-minutes" type="text" value="00" aria-label="Input minutes" pattern="^[0-5][0-9]$" aria-valuetext="00" aria-valuenow="00" aria-valuemin="0" aria-valuemax="59">
         </div>
-        <button class="gux-input-time-am-pm-selector" type="button" aria-label="AM selected, click to toggle">
-          <div class="gux-meridiem gux-visible">
-            AM
-          </div>
-          <div class="gux-meridiem">
-            PM
-          </div>
-        </button>
         <button class="gux-clock-button" type="button" aria-label="Toggle suggested times" aria-expanded="false">
           <gux-icon decorative="" icon-name="fa/clock-regular" size="small">
           </gux-icon>
