@@ -10,6 +10,8 @@ import {
 import { trackComponent } from '@utils/tracking/usage';
 import { hasSlot } from '@utils/dom/has-slot';
 import { SlotName } from './gux-side-panel-header.types';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import translationResources from '../../i18n/en.json';
 
 /**
  * @slot icon - Icon component displayed on the left side of the header
@@ -24,6 +26,7 @@ import { SlotName } from './gux-side-panel-header.types';
 })
 export class GuxSidePanelHeader {
   private internals: ElementInternals;
+  private i18n: GetI18nValue;
 
   @Element()
   private root: HTMLElement;
@@ -39,6 +42,11 @@ export class GuxSidePanelHeader {
 
   @Event()
   guxcollapsed: EventEmitter<void>;
+
+  async componentWillLoad(): Promise<void> {
+    trackComponent(this.root);
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
+  }
 
   private renderSlot(slotName: SlotName): JSX.Element | null {
     if (hasSlot(this.root, slotName)) {
@@ -90,9 +98,13 @@ export class GuxSidePanelHeader {
         <gux-button-slot accent="ghost" icon-only>
           <button
             class="gux-collapse"
+            aria-expanded={this.expanded.toString()}
             onClick={() => this.toggleExpandableState()}
           >
             <gux-icon decorative size="small" icon-name="collapse"></gux-icon>
+            <gux-screen-reader-beta>
+              {this.i18n('collapse')}
+            </gux-screen-reader-beta>
           </button>
         </gux-button-slot>
       );
@@ -101,17 +113,17 @@ export class GuxSidePanelHeader {
         <gux-button-slot accent="ghost" icon-only>
           <button
             class="gux-expand"
+            aria-expanded={this.expanded.toString()}
             onClick={() => this.toggleExpandableState()}
           >
             <gux-icon decorative size="small" icon-name="expand"></gux-icon>
+            <gux-screen-reader-beta>
+              {this.i18n('expand')}
+            </gux-screen-reader-beta>
           </button>
         </gux-button-slot>
       );
     }
-  }
-
-  componentWillLoad(): void {
-    trackComponent(this.root);
   }
 
   connectedCallback() {
