@@ -34,10 +34,14 @@
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "types": "dist/index.d.ts",
+  "dependencies": {
+    "genesys-spark-utils": "file:../genesys-spark-utils"
+  },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.24.3"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.2",
     "@rollup/plugin-replace": "^6.0.2",
     "@tsconfig/strictest": "^2.0.6",
     "dir-compare": "^5.0.0",

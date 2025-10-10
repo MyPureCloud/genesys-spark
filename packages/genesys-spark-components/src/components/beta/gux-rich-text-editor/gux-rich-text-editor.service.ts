@@ -1,4 +1,4 @@
-import { getClosestElement } from '../../../genesys-spark-utils/get-closest-element';
+import { getClosestElement } from 'genesys-spark-utils';
 import { GuxRichTextEditorActionTypes } from './gux-rich-text-editor-action/gux-rich-text-editor-action.types';
 
 export function hasDisabledParent(root: HTMLElement): boolean {

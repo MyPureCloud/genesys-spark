@@ -57,6 +57,7 @@
     }
   },
   "workspaces": [
+    "./packages/genesys-spark-utils",
     "./packages/genesys-spark-tokens",
     "./packages/genesys-spark",
     "./packages/genesys-spark-components",
