@@ -1,3 +1,37 @@
+export const expandablePanel = `<gux-side-panel-beta size="medium" id="expandable-example">
+  <gux-side-panel-header slot="header" expandable="true">
+    <gux-side-panel-heading slot="title"
+      >Expandable Side Panel</gux-side-panel-heading
+    >
+    <gux-icon
+      slot="icon"
+      decorative
+      size="medium"
+      icon-name="user-add"
+      screenreader-text="add John Smith to contact list"
+    ></gux-icon>
+  </gux-side-panel-header>
+  <div slot="content" id="expandable-content">
+    Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+    ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+    tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+    Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+  </div>
+  <footer slot="footer" aria-label="Side panel footer">
+    <gux-cta-group>
+      <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+      <gux-button slot="secondary" onclick="notify(event)"
+        >Secondary</gux-button
+      >
+      <gux-button
+        slot="dismiss"
+        onclick="document.getElementById('expandable-example').style.display = 'none'"
+        >Dismiss</gux-button
+      >
+    </gux-cta-group>
+  </footer>
+</gux-side-panel-beta>`;
+
 export const minimalPanel = `<gux-side-panel-beta>
           <div slot="content">
       Pellentesque habitant morbi tristique senectus et netus et malesuada fames
@@ -200,5 +234,41 @@ export const renderConfigs = [
       Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
     </div>
         </gux-side-panel-beta>`
+  },
+  {
+    description: 'Should render expandable side panel',
+    html: `<gux-side-panel-beta size="medium" id="expandable-example">
+      <gux-side-panel-header slot="header" expandable="true">
+        <gux-side-panel-heading slot="title"
+          >Expandable Side Panel</gux-side-panel-heading
+        >
+        <gux-icon
+          slot="icon"
+          decorative
+          size="medium"
+          icon-name="user-add"
+          screenreader-text="add John Smith to contact list"
+        ></gux-icon>
+      </gux-side-panel-header>
+      <div slot="content" id="expandable-content">
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+        ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+        tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+        Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+      </div>
+      <footer slot="footer" aria-label="Side panel footer">
+        <gux-cta-group>
+          <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+          <gux-button slot="secondary" onclick="notify(event)"
+            >Secondary</gux-button
+          >
+          <gux-button
+            slot="dismiss"
+            onclick="document.getElementById('expandable-example').style.display = 'none'"
+            >Dismiss</gux-button
+          >
+        </gux-cta-group>
+      </footer>
+    </gux-side-panel-beta>`
   }
 ];

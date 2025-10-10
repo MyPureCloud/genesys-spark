@@ -1,10 +1,10 @@
 import {
   Component,
-  Event,
-  EventEmitter,
   h,
   Element,
-  Prop
+  Prop,
+  Event,
+  EventEmitter
 } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxSidePanelSize } from './gux-side-panel.types';
