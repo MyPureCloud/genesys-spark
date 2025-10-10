@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.179.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.179.1...v4.179.2) (2025-10-10)
+
+
+### Bug Fixes
+
+* **other:** fixed label-info bug on Shift+Tab ([27cbe12](https://github.com/MyPureCloud/genesys-spark/commit/27cbe127818d0b74dbf4c8c128f50c8c4d66ef4e))
+* **table:** improved empty table detection ([a5846e5](https://github.com/MyPureCloud/genesys-spark/commit/a5846e5877f4011951d2013ed335a6dfff3d2a19))
+
 ### [4.179.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.179.0...v4.179.1) (2025-10-08)
 
 ## [4.179.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.178.0...v4.179.0) (2025-10-07)
