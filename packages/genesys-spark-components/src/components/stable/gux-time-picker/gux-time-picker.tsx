@@ -18,7 +18,9 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
 import { logError } from '../../../utils/error/log-error';
-
+import * as sparkIntl from '../../../genesys-spark-utils/intl';
+// Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
+import { useRegionalDates } from '../../../i18n/use-regional-dates';
 import {
   GuxClockType,
   GuxISOHourMinute,
@@ -37,7 +39,9 @@ import {
   getValue,
   incrementHour,
   incrementMinute,
-  isAm
+  isAm,
+  getAmPmStrings,
+  getAmPmPosition
 } from './gux-time-picker.service';
 
 @Component({
@@ -359,6 +363,37 @@ export class GuxTimePicker {
     ) as JSX.Element;
   }
 
+  private renderAmPmBefore(): boolean {
+    return !!(
+      useRegionalDates() &&
+      getAmPmPosition(sparkIntl.determineDisplayLocale(this.root)) === 'before'
+    );
+  }
+
+  private renderAmString(): JSX.Element {
+    if (useRegionalDates()) {
+      return (
+        <span>
+          {getAmPmStrings(sparkIntl.determineDisplayLocale(this.root)).am}
+        </span>
+      );
+    } else {
+      return <span>{this.i18n('am')}</span>;
+    }
+  }
+
+  private renderPmString(): JSX.Element {
+    if (useRegionalDates()) {
+      return (
+        <span>
+          {getAmPmStrings(sparkIntl.determineDisplayLocale(this.root)).pm}
+        </span>
+      );
+    } else {
+      return <span>{this.i18n('pm')}</span>;
+    }
+  }
+
   private renderAmPmSelector(): JSX.Element {
     if (this.clockType === '12h') {
       return (
@@ -377,7 +412,7 @@ export class GuxTimePicker {
               'gux-visible': isAm(this.value)
             }}
           >
-            {this.i18n('am')}
+            {this.renderAmString()}
           </div>
           <div
             class={{
@@ -385,7 +420,7 @@ export class GuxTimePicker {
               'gux-visible': !isAm(this.value)
             }}
           >
-            {this.i18n('pm')}
+            {this.renderPmString()}
           </div>
         </button>
       ) as JSX.Element;
@@ -442,8 +477,9 @@ export class GuxTimePicker {
         slot="target"
         onClick={this.onTargetClick.bind(this)}
       >
+        {this.renderAmPmBefore() && this.renderAmPmSelector()}
         {this.renderNumberInput()}
-        {this.renderAmPmSelector()}
+        {!this.renderAmPmBefore() && this.renderAmPmSelector()}
         {this.renderClockButton()}
       </div>
     ) as JSX.Element;
