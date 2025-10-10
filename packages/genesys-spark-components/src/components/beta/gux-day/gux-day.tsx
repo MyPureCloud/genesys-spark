@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 import { getDesiredLocale } from '../../../i18n';
-import * as sparkIntl from '../../../genesys-spark-utils/intl';
+import { sparkIntl } from 'genesys-spark-utils';
 import { Temporal } from '@js-temporal/polyfill';
 import { formatPlainDate } from '@utils/date/temporal';
 

@@ -3,9 +3,9 @@ import {
   dateTimeFormat,
   getFormat,
   relativeTimeFormat
-} from '../src/utils/intl';
+} from '../src/spark-intl';
 
-describe('The intl module', () => {
+describe('The spark-intl module', () => {
   beforeEach(() => {
     // Reset the Dom
     document.documentElement.innerHTML = '<head></head><body></body>';

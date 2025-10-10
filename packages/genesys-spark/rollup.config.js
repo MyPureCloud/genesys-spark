@@ -1,4 +1,5 @@
 import replace from '@rollup/plugin-replace';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import dts from 'rollup-plugin-dts';
 import esbuild from 'rollup-plugin-esbuild';
 
@@ -9,6 +10,7 @@ export default [
   {
     input: `src/index.ts`,
     plugins: [
+      nodeResolve(),
       replace({
         values: {
           IS_DEV_MODE: IS_DEV_MODE,
@@ -35,6 +37,7 @@ export default [
   {
     input: `src/index.ts`,
     plugins: [
+      nodeResolve(),
       replace({
         values: {
           IS_DEV_MODE: IS_DEV_MODE,

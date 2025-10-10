@@ -4,7 +4,7 @@ import {
   DateTimeFormatter,
   GuxDateTimeFormat
 } from '../../../i18n/DateTimeFormatter';
-import * as sparkIntl from '../../../genesys-spark-utils/intl';
+import { sparkIntl } from 'genesys-spark-utils';
 // Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
 import { useRegionalDates } from '../../../i18n/use-regional-dates';
 import { getDesiredLocale } from '../../../i18n/index';
