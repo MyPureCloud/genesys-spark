@@ -1,5 +1,5 @@
 import { getDesiredLocale } from '../../../i18n';
-import * as sparkIntl from '../../../genesys-spark-utils/intl';
+import { sparkIntl } from 'genesys-spark-utils';
 // Remove useRegionalDates with this ticket https://inindca.atlassian.net/browse/COMUI-2598
 import { useRegionalDates } from '../../../i18n/use-regional-dates';
 

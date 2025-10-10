@@ -1,0 +1,5 @@
+{
+  "*": "prettier --ignore-unknown --write",
+  "*.{ts,tsx,js,jsx}": "eslint --fix ",
+  "package.json": ["prettier-package-json --write"]
+}

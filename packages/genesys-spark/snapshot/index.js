@@ -157,7 +157,7 @@ function relativeTimeFormat(localeOrOptions, options) {
 }
 function determineDisplayLocale(element = document.body) {
   var _a;
-  const domLocale = (_a = getClosestElement(element, "*[lang]")) == null ? void 0 : _a.lang;
+  const domLocale = (_a = getClosestElement(element, "*[lang]")) === null || _a === void 0 ? void 0 : _a.lang;
   const domLocaleWithOverride = domLocaleOverride(domLocale);
   if (!domLocaleWithOverride || browserHasRegionData(domLocaleWithOverride)) {
     return navigator.language;
@@ -167,10 +167,10 @@ function determineDisplayLocale(element = document.body) {
 }
 function browserHasRegionData(localeString) {
   var _a;
-  return browserLocaleOverride(localeString) || localeString.length == 2 && ((_a = navigator.language) == null ? void 0 : _a.startsWith(`${localeString}-`));
+  return browserLocaleOverride(localeString) || localeString.length == 2 && ((_a = navigator.language) === null || _a === void 0 ? void 0 : _a.startsWith(`${localeString}-`));
 }
 function domLocaleOverride(localeString) {
-  if ((localeString == null ? void 0 : localeString.toLowerCase()) === "en-us") {
+  if ((localeString === null || localeString === void 0 ? void 0 : localeString.toLowerCase()) === "en-us") {
     return "en";
   } else {
     return localeString;
@@ -180,9 +180,9 @@ function browserLocaleOverride(localeString) {
   var _a, _b;
   switch (localeString.toLowerCase()) {
     case "zh-cn":
-      return Boolean((_a = navigator.language) == null ? void 0 : _a.toLowerCase().startsWith("zh-sg"));
+      return Boolean((_a = navigator.language) === null || _a === void 0 ? void 0 : _a.toLowerCase().startsWith("zh-sg"));
     case "zh-tw":
-      return Boolean((_b = navigator.language) == null ? void 0 : _b.toLowerCase().startsWith("zh-hk"));
+      return Boolean((_b = navigator.language) === null || _b === void 0 ? void 0 : _b.toLowerCase().startsWith("zh-hk"));
     default:
       return false;
   }
@@ -194,10 +194,7 @@ function getFormat(locale) {
     month: "numeric",
     day: "numeric"
   };
-  const dateTimeFormat2 = new Intl.DateTimeFormat(
-    locale,
-    options
-  );
+  const dateTimeFormat2 = new Intl.DateTimeFormat(locale, options);
   const parts = dateTimeFormat2.formatToParts(date);
   const dateString = parts.map(({ type, value }) => {
     switch (type) {
@@ -214,7 +211,7 @@ function getFormat(locale) {
   return dateString.replace(/\s/g, "").replace(/‏/g, "");
 }
 
-var intl = /*#__PURE__*/Object.freeze({
+var sparkIntl = /*#__PURE__*/Object.freeze({
   __proto__: null,
   dateTimeFormat: dateTimeFormat,
   determineDisplayLocale: determineDisplayLocale,
@@ -271,4 +268,4 @@ function registerSparkChartComponents(opts) {
   return Promise.all([checkAndLoadScript(SCRIPT_SRC)]).then();
 }
 
-export { intl as Intl, loadSparkFonts, registerSparkChartComponents, registerSparkComponents };
+export { sparkIntl as Intl, loadSparkFonts, registerSparkChartComponents, registerSparkComponents };

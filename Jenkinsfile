@@ -109,6 +109,7 @@ webappPipelineV2 {
     }
     ciTests = {
         // Setup
+        sh('npm run build --workspace=packages/genesys-spark-utils')
         sh('npm run build --workspace=packages/genesys-spark-tokens')
         sh('npm run build --workspace=packages/genesys-spark')
         sh('npm run stencil --workspace=packages/genesys-spark-components')

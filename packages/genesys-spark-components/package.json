@@ -8,14 +8,13 @@
     "dist/"
   ],
   "scripts": {
-    "build": "npm run clean && npm run i18n && npm run build-themes && npm run generate-gux-icon-types-file && npm run copy-genesys-spark-utils && npm run stencil && npm run build-wrapper",
+    "build": "npm run clean && npm run i18n && npm run build-themes && npm run generate-gux-icon-types-file && npm run stencil && npm run build-wrapper",
     "build-i18n": "./scripts/build-i18n.js",
     "build-themes": "./scripts/build-themes.js",
     "build-wrapper": "./scripts/wrap-stencil.js",
     "check-a11y": "node ./scripts/check-a11y.mjs",
     "check-readmes": "./scripts/check-readmes.sh",
     "clean": "rm -r ./dist ./build || true",
-    "copy-genesys-spark-utils": "node ./scripts/copy-genesys-spark-utils.mjs",
     "predev": "npm run i18n && npm run build-themes && npm run generate-gux-icon-types-file ",
     "dev": "npm run stencil.dev",
     "eslint": "eslint . --fix",
@@ -60,6 +59,7 @@
     "@floating-ui/dom": "1.7.4",
     "@js-temporal/polyfill": "0.5.1",
     "@vvo/tzdb": "6.187.0",
+    "genesys-spark-utils": "file:../genesys-spark-utils",
     "google-libphonenumber": "3.2.43",
     "intl-messageformat": "10.7.18",
     "requestanimationframe-timer": "3.0.3",
