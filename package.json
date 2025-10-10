@@ -69,11 +69,11 @@
     "google-libphonenumber": "3.2.43"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "commitizen": "^4.3.1",
     "cross-replace": "^0.2.0",
-    "eslint": "^9.36.0",
+    "eslint": "^9.37.0",
     "eslint-config-genesys-spark-components": "^0.0.1",
     "git-cz": "^4.9.0",
     "globals": "^16.4.0",
