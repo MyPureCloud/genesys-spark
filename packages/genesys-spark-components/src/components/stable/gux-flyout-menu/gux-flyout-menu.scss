@@ -52,6 +52,7 @@
       transparent;
     border-inline-end: calc(#{ui.$gse-ui-flyoutMenu-anchor-width} / 2) solid
       transparent;
+    filter: drop-shadow(0 0 4px global.$gse-semantic-effects-boxShadow);
   }
 }
 
