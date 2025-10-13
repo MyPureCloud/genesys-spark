@@ -280,3 +280,35 @@ export function getValidValueMinuteChange(
 
   return `${hour}:${wanted}`;
 }
+
+export function getAmPmStrings(locale: string): { am: string; pm: string } {
+  const timeFormat = new Intl.DateTimeFormat(locale, {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  });
+  // 9 AM
+  const amFormatParts = timeFormat.formatToParts(new Date(2020, 0, 1, 9, 0));
+  // 9 PM
+  const pmFormatParts = timeFormat.formatToParts(new Date(2020, 0, 1, 21, 0));
+  return {
+    am: amFormatParts.find(part => part.type === 'dayPeriod')?.value ?? 'AM',
+    pm: pmFormatParts.find(part => part.type === 'dayPeriod')?.value ?? 'PM'
+  };
+}
+
+export function getAmPmPosition(locale: string): 'none' | 'before' | 'after' {
+  const fmt = new Intl.DateTimeFormat(locale, {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  });
+  const parts = fmt.formatToParts(new Date(2020, 0, 1, 9, 30));
+  const order = parts.map(part => part.type);
+  const dayIndex = order.indexOf('dayPeriod');
+  const hourIndex = order.indexOf('hour');
+  if (dayIndex < 0) {
+    return 'none';
+  }
+  return dayIndex < hourIndex ? 'before' : 'after';
+}

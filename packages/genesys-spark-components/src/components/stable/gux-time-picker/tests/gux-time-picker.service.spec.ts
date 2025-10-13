@@ -1,3 +1,10 @@
+const useRegionalDates = jest.fn().mockReturnValue(false);
+
+jest.mock('../../../../i18n/use-regional-dates', () => ({
+  __esModule: true,
+  useRegionalDates
+}));
+
 import { languageList } from '../../../../i18n/languageList';
 
 import {
@@ -13,7 +20,9 @@ import {
   getHoursPattern,
   getMinutesPattern,
   getValidValueHourChange,
-  getValidValueMinuteChange
+  getValidValueMinuteChange,
+  getAmPmStrings,
+  getAmPmPosition
 } from '../gux-time-picker.service';
 
 import {
@@ -395,7 +404,11 @@ describe('gux-time-picker.service', () => {
     });
   });
 
-  describe('#getLocaleClockType', () => {
+  describe('#getLocaleClockType using non regional dates', () => {
+    beforeAll(() => {
+      useRegionalDates.mockReturnValue(false);
+    });
+
     languageList.forEach((locale: string) => {
       it(`should work as expected for "${locale}"`, async () => {
         const element = document.createElement('div');
@@ -934,5 +947,49 @@ describe('gux-time-picker.service', () => {
         });
       }
     );
+  });
+});
+
+describe('#getLocaleClockType using regional dates', () => {
+  beforeAll(() => {
+    useRegionalDates.mockReturnValue(true);
+  });
+
+  const hardCoded24hrLocales = [
+    { locale: 'ar', expected: '12h' },
+    { locale: 'ko', expected: '12h' },
+    { locale: 'zh-cn', expected: '24h' },
+    { locale: 'zh-tw', expected: '12h' }
+  ];
+
+  hardCoded24hrLocales.forEach(({ locale, expected }) => {
+    it(`should return "${expected}" for "${locale}" when using regional dates`, async () => {
+      const element = document.createElement('div');
+      element.setAttribute('lang', locale);
+
+      expect(getLocaleClockType(element)).toEqual(expected);
+    });
+  });
+});
+
+describe('AM/PM behavior for regional dates enabled', () => {
+  beforeAll(() => {
+    useRegionalDates.mockReturnValue(true);
+  });
+
+  it('should maintain consistent behavior for getAmPmStrings', () => {
+    const enStrings = getAmPmStrings('en-US');
+    const zhTwStrings = getAmPmStrings('zh-TW');
+    expect(enStrings.am).toBe('AM');
+    expect(enStrings.pm).toBe('PM');
+    expect(zhTwStrings.am).toBe('上午');
+    expect(zhTwStrings.pm).toBe('下午');
+  });
+
+  it('should maintain consistent behavior for getAmPmPosition', () => {
+    const enPosition = getAmPmPosition('en-US');
+    const zhTwPosition = getAmPmPosition('zh-TW');
+    expect(enPosition).toBe('after');
+    expect(zhTwPosition).toBe('before');
   });
 });
