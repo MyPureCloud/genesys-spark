@@ -1,0 +1,46 @@
+:host {
+  display: block;
+}
+
+.gux-container {
+  .gux-target {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid brown;
+
+    &.gux-selected {
+      background-color: lightgrey;
+    }
+
+    &.gux-disabled {
+      opacity: 0.5;
+    }
+
+    .gux-checkbox-container,
+    .gux-checkbox-container input,
+    .gux-label,
+    .gux-icon,
+    .gux-branch-indicator {
+      cursor: pointer;
+    }
+  }
+
+  .gux-treeitems {
+    display: none;
+    padding-inline-start: 20px;
+  }
+
+  &.gux-expanded {
+    .gux-branch-indicator {
+      gux-icon {
+        rotate: 90deg;
+      }
+    }
+
+    .gux-treeitems {
+      display: block;
+    }
+  }
+}
