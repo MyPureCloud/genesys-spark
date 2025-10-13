@@ -591,7 +591,7 @@ export class GuxDropdown {
 
   render(): JSX.Element {
     return (
-      <Host role="listbox">
+      <Host role="combobox">
         <gux-popup
           expanded={this.expanded && (!this.loading || this.isFilterable())}
           disabled={this.disabled || (this.loading && !this.isFilterable())}

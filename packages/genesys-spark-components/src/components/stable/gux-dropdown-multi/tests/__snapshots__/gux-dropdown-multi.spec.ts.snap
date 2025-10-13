@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-dropdown-multi #render should render as expected 1`] = `
-<gux-dropdown-multi role="listbox">
+<gux-dropdown-multi role="combobox">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-dropdown-container">
       <gux-popup>

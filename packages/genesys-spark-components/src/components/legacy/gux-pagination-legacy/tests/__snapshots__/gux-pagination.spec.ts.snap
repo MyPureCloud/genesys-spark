@@ -18,7 +18,7 @@ exports[`gux-pagination-legacy #render should render component as expected (1) 1
         <gux-pagination-items-per-page-legacy items-per-page="25">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
@@ -173,7 +173,7 @@ exports[`gux-pagination-legacy #render should render component as expected (2) 1
         <gux-pagination-items-per-page-legacy items-per-page="50">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 50 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 50 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
@@ -328,7 +328,7 @@ exports[`gux-pagination-legacy #render should render component as expected (3) 1
         <gux-pagination-items-per-page-legacy items-per-page="75">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 75 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 75 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
@@ -483,7 +483,7 @@ exports[`gux-pagination-legacy #render should render component as expected (4) 1
         <gux-pagination-items-per-page-legacy items-per-page="100">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 100 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 100 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
@@ -638,7 +638,7 @@ exports[`gux-pagination-legacy #render should render component as expected (5) 1
         <gux-pagination-items-per-page-legacy items-per-page="25">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
@@ -793,7 +793,7 @@ exports[`gux-pagination-legacy #render should render component as expected (6) 1
         <gux-pagination-items-per-page-legacy items-per-page="25">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
@@ -948,7 +948,7 @@ exports[`gux-pagination-legacy #render should render component as expected (7) 1
         <gux-pagination-items-per-page-legacy items-per-page="50">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 50 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 50 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
@@ -1103,7 +1103,7 @@ exports[`gux-pagination-legacy #render should render component as expected (8) 1
         <gux-pagination-items-per-page-legacy items-per-page="75">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 75 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 75 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
@@ -1258,7 +1258,7 @@ exports[`gux-pagination-legacy #render should render component as expected (9) 1
         <gux-pagination-items-per-page-legacy items-per-page="100">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 100 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 100 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
@@ -1539,7 +1539,7 @@ exports[`gux-pagination-legacy #render should render component as expected (12) 
         <gux-pagination-items-per-page-legacy items-per-page="25">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
@@ -1694,7 +1694,7 @@ exports[`gux-pagination-legacy #render should render component as expected (13) 
         <gux-pagination-items-per-page-legacy items-per-page="25">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
@@ -1849,7 +1849,7 @@ exports[`gux-pagination-legacy #render should render component as expected (14) 
         <gux-pagination-items-per-page-legacy items-per-page="25">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="listbox">
+              <gux-dropdown aria-label="Items per page dropdown, 25 selected" role="combobox">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
                     <div class="gux-target-container-not-filterable" slot="target">
