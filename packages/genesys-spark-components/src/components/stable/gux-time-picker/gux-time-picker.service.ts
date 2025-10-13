@@ -297,7 +297,7 @@ export function getAmPmStrings(locale: string): { am: string; pm: string } {
   };
 }
 
-export function getAmPmPosition(locale: string): string {
+export function getAmPmPosition(locale: string): 'none' | 'before' | 'after' {
   const fmt = new Intl.DateTimeFormat(locale, {
     hour: 'numeric',
     minute: '2-digit',

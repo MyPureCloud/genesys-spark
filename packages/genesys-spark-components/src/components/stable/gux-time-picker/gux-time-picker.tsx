@@ -477,12 +477,25 @@ export class GuxTimePicker {
         slot="target"
         onClick={this.onTargetClick.bind(this)}
       >
-        {this.renderAmPmBefore() && this.renderAmPmSelector()}
-        {this.renderNumberInput()}
-        {!this.renderAmPmBefore() && this.renderAmPmSelector()}
-        {this.renderClockButton()}
+        {this.renderTargetContent()}
       </div>
     ) as JSX.Element;
+  }
+
+  private renderTargetContent(): JSX.Element {
+    if (this.renderAmPmBefore()) {
+      return [
+        this.renderAmPmSelector(),
+        this.renderNumberInput(),
+        this.renderClockButton()
+      ];
+    } else {
+      return [
+        this.renderNumberInput(),
+        this.renderAmPmSelector(),
+        this.renderClockButton()
+      ];
+    }
   }
 
   private renderPopup(): JSX.Element {
