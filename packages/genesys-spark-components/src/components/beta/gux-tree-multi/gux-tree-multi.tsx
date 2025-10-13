@@ -63,14 +63,29 @@ export class GuxTreeMulti {
 
   @Listen('click')
   onClick(event: MouseEvent): void {
+    const path = event.composedPath();
+    const selectTargets = ['gux-checkbox-container', 'gux-label', 'gux-icon'];
+    const isSelectionClick = path.some(el => {
+      const element = el as HTMLElement;
+      return (
+        element.classList &&
+        selectTargets.some(target => element.classList.contains(target))
+      );
+    });
+
     handleTreeNodeSpecificEvent({
       event,
       onLeaf: leaf => {
-        toggleNodeSelection(this.root, leaf);
+        if (isSelectionClick) {
+          toggleNodeSelection(this.root, leaf);
+        }
       },
       onBranch: branch => {
-        branch.expanded = !branch.expanded;
-        toggleNodeSelection(this.root, branch);
+        if (isSelectionClick) {
+          toggleNodeSelection(this.root, branch);
+        } else {
+          branch.expanded = !branch.expanded;
+        }
       }
     });
   }

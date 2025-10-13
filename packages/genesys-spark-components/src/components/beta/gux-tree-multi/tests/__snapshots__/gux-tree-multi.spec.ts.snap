@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-tree-multi #render should render as expected 1`] = `
-<gux-tree-multi-beta role="tree" aria-activedescendant="">
+<gux-tree-multi-beta role="tree" aria-multiselectable="true" aria-activedescendant="">
   <template shadowrootmode="open">
     <slot>
     </slot>
   </template>
-  <gux-branch-multi tabindex="0" role="treeitem" aria-expanded="false">
+  <gux-branch-multi value="projects" tabindex="0" role="treeitem" aria-expanded="false">
     <template shadowrootmode="open">
       <div class="gux-container">
         <div class="gux-target">
@@ -15,13 +15,13 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
             </gux-icon>
           </div>
           <div class="gux-checkbox-container">
-            <input type="checkbox">
+            <input type="checkbox" aria-labelledby="gux-branch-label-i">
           </div>
           <div class="gux-icon">
             <slot name="icon">
             </slot>
           </div>
-          <div class="gux-label">
+          <div class="gux-label" id="gux-branch-label-i">
             <slot name="label">
             </slot>
           </div>
@@ -39,13 +39,13 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
       <template shadowrootmode="open">
         <div class="gux-target">
           <div class="gux-checkbox-container">
-            <input type="checkbox">
+            <input type="checkbox" aria-labelledby="gux-leaf-label-i">
           </div>
           <div class="gux-icon">
             <slot name="icon">
             </slot>
           </div>
-          <div class="gux-label">
+          <div class="gux-label" id="gux-leaf-label-i">
             <slot name="label">
             </slot>
           </div>
@@ -59,13 +59,13 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
       <template shadowrootmode="open">
         <div class="gux-target">
           <div class="gux-checkbox-container">
-            <input type="checkbox">
+            <input type="checkbox" aria-labelledby="gux-leaf-label-i">
           </div>
           <div class="gux-icon">
             <slot name="icon">
             </slot>
           </div>
-          <div class="gux-label">
+          <div class="gux-label" id="gux-leaf-label-i">
             <slot name="label">
             </slot>
           </div>
@@ -76,7 +76,7 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
       </div>
     </gux-leaf-multi>
   </gux-branch-multi>
-  <gux-branch-multi role="treeitem" tabindex="" aria-expanded="false">
+  <gux-branch-multi value="reports" role="treeitem" tabindex="" aria-expanded="false">
     <template shadowrootmode="open">
       <div class="gux-container">
         <div class="gux-target">
@@ -85,13 +85,13 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
             </gux-icon>
           </div>
           <div class="gux-checkbox-container">
-            <input type="checkbox">
+            <input type="checkbox" aria-labelledby="gux-branch-label-i">
           </div>
           <div class="gux-icon">
             <slot name="icon">
             </slot>
           </div>
-          <div class="gux-label">
+          <div class="gux-label" id="gux-branch-label-i">
             <slot name="label">
             </slot>
           </div>
@@ -105,7 +105,7 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
     <div slot="label">
       Reports
     </div>
-    <gux-branch-multi role="treeitem" tabindex="" aria-expanded="false">
+    <gux-branch-multi value="2025" role="treeitem" tabindex="" aria-expanded="false">
       <template shadowrootmode="open">
         <div class="gux-container">
           <div class="gux-target">
@@ -114,13 +114,13 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
               </gux-icon>
             </div>
             <div class="gux-checkbox-container">
-              <input type="checkbox">
+              <input type="checkbox" aria-labelledby="gux-branch-label-i">
             </div>
             <div class="gux-icon">
               <slot name="icon">
               </slot>
             </div>
-            <div class="gux-label">
+            <div class="gux-label" id="gux-branch-label-i">
               <slot name="label">
               </slot>
             </div>
@@ -138,13 +138,13 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
         <template shadowrootmode="open">
           <div class="gux-target">
             <div class="gux-checkbox-container">
-              <input type="checkbox">
+              <input type="checkbox" aria-labelledby="gux-leaf-label-i">
             </div>
             <div class="gux-icon">
               <slot name="icon">
               </slot>
             </div>
-            <div class="gux-label">
+            <div class="gux-label" id="gux-leaf-label-i">
               <slot name="label">
               </slot>
             </div>
@@ -158,13 +158,13 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
         <template shadowrootmode="open">
           <div class="gux-target">
             <div class="gux-checkbox-container">
-              <input type="checkbox">
+              <input type="checkbox" aria-labelledby="gux-leaf-label-i">
             </div>
             <div class="gux-icon">
               <slot name="icon">
               </slot>
             </div>
-            <div class="gux-label">
+            <div class="gux-label" id="gux-leaf-label-i">
               <slot name="label">
               </slot>
             </div>
@@ -178,13 +178,13 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
         <template shadowrootmode="open">
           <div class="gux-target">
             <div class="gux-checkbox-container">
-              <input type="checkbox">
+              <input type="checkbox" aria-labelledby="gux-leaf-label-i">
             </div>
             <div class="gux-icon">
               <slot name="icon">
               </slot>
             </div>
-            <div class="gux-label">
+            <div class="gux-label" id="gux-leaf-label-i">
               <slot name="label">
               </slot>
             </div>
@@ -195,7 +195,7 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
         </div>
       </gux-leaf-multi>
     </gux-branch-multi>
-    <gux-branch-multi role="treeitem" tabindex="" aria-expanded="false">
+    <gux-branch-multi value="2024" role="treeitem" tabindex="" aria-expanded="false">
       <template shadowrootmode="open">
         <div class="gux-container">
           <div class="gux-target">
@@ -204,13 +204,13 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
               </gux-icon>
             </div>
             <div class="gux-checkbox-container">
-              <input type="checkbox">
+              <input type="checkbox" aria-labelledby="gux-branch-label-i">
             </div>
             <div class="gux-icon">
               <slot name="icon">
               </slot>
             </div>
-            <div class="gux-label">
+            <div class="gux-label" id="gux-branch-label-i">
               <slot name="label">
               </slot>
             </div>
@@ -230,13 +230,13 @@ exports[`gux-tree-multi #render should render as expected 1`] = `
     <template shadowrootmode="open">
       <div class="gux-target">
         <div class="gux-checkbox-container">
-          <input type="checkbox">
+          <input type="checkbox" aria-labelledby="gux-leaf-label-i">
         </div>
         <div class="gux-icon">
           <slot name="icon">
           </slot>
         </div>
-        <div class="gux-label">
+        <div class="gux-label" id="gux-leaf-label-i">
           <slot name="label">
           </slot>
         </div>

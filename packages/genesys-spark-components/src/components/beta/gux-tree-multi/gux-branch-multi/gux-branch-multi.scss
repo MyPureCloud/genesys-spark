@@ -17,6 +17,14 @@
     &.gux-disabled {
       opacity: 0.5;
     }
+
+    .gux-checkbox-container,
+    .gux-checkbox-container input,
+    .gux-label,
+    .gux-icon,
+    .gux-branch-indicator {
+      cursor: pointer;
+    }
   }
 
   .gux-treeitems {

@@ -8,6 +8,8 @@ import {
   Watch
 } from '@stencil/core';
 
+import { randomHTMLId } from '@utils/dom/random-html-id';
+
 /**
  * @slot label - Required slot for the text
  * @slot icon - Optional slot for an icon
@@ -20,6 +22,8 @@ import {
   shadow: true
 })
 export class GuxLeafMulti {
+  private labelId: string;
+
   @Element()
   root: HTMLElement;
 
@@ -57,6 +61,7 @@ export class GuxLeafMulti {
   }
 
   componentWillLoad() {
+    this.labelId = randomHTMLId('gux-leaf-label');
     this.internals.role = 'treeitem';
     this.root.setAttribute('role', 'treeitem');
     this.root.setAttribute('tabIndex', this.active ? '0' : '');
@@ -76,13 +81,13 @@ export class GuxLeafMulti {
             type="checkbox"
             checked={this.selected}
             disabled={this.disabled}
-            aria-label="Select item"
+            aria-labelledby={this.labelId}
           />
         </div>
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <div class="gux-label">
+        <div class="gux-label" id={this.labelId}>
           <slot name="label"></slot>
         </div>
       </div>

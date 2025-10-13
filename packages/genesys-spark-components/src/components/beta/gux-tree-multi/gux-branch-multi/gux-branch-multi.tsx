@@ -8,6 +8,8 @@ import {
   Watch
 } from '@stencil/core';
 
+import { randomHTMLId } from '@utils/dom/random-html-id';
+
 /**
  * @slot label - Required slot for the branch text
  * @slot icon - Optional slot for the icon
@@ -20,6 +22,8 @@ import {
   shadow: true
 })
 export class GuxBranchMulti {
+  private labelId: string;
+
   @Element()
   root: HTMLElement;
 
@@ -63,6 +67,7 @@ export class GuxBranchMulti {
   }
 
   componentWillLoad() {
+    this.labelId = randomHTMLId('gux-branch-label');
     this.internals.role = 'treeitem';
     this.root.setAttribute('role', 'treeitem');
     this.root.setAttribute('tabIndex', this.active ? '0' : '');
@@ -101,7 +106,7 @@ export class GuxBranchMulti {
               type="checkbox"
               checked={this.selected}
               disabled={this.disabled}
-              aria-label="Select branch"
+              aria-labelledby={this.labelId}
               ref={el => {
                 if (el) {
                   el.indeterminate = this.indeterminate;
@@ -112,7 +117,7 @@ export class GuxBranchMulti {
           <div class="gux-icon">
             <slot name="icon"></slot>
           </div>
-          <div class="gux-label">
+          <div class="gux-label" id={this.labelId}>
             <slot name="label"></slot>
           </div>
         </div>
