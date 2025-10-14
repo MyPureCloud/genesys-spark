@@ -31,6 +31,7 @@ You can choose between two type (secondary and primary).
  - [gux-pagination-ellipsis-button](../gux-pagination/gux-pagination-buttons/gux-pagination-ellipsis-button)
  - [gux-rating](../gux-rating)
  - [gux-rich-text-editor-action-link](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
+ - [gux-rich-text-editor-beta](../../beta/gux-rich-text-editor)
 
 ### Depends on
 
@@ -44,6 +45,7 @@ graph TD;
   gux-pagination-ellipsis-button --> gux-button
   gux-rating --> gux-button
   gux-rich-text-editor-action-link --> gux-button
+  gux-rich-text-editor-beta --> gux-button
   style gux-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
