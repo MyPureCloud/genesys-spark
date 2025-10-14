@@ -5,13 +5,6 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property     | Attribute    | Description | Type      | Default |
-| ------------ | ------------ | ----------- | --------- | ------- |
-| `expandable` | `expandable` |             | `boolean` | `false` |
-
-
 ## Events
 
 | Event              | Description | Type                |
