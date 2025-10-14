@@ -43,6 +43,9 @@ export class GuxSidePanelHeader {
   @Event()
   guxcollapsed: EventEmitter<void>;
 
+  @Event()
+  sidePanelDismiss: EventEmitter<void>;
+
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
@@ -86,6 +89,10 @@ export class GuxSidePanelHeader {
     } else {
       this.guxcollapsed.emit();
     }
+  }
+
+  private onDismissHandler(): void {
+    this.sidePanelDismiss.emit();
   }
 
   private renderExpandOrCollapse(): JSX.Element | null {
@@ -143,6 +150,10 @@ export class GuxSidePanelHeader {
         {this.renderTitleDesc()}
         {this.renderSlot('badge')}
         {this.renderExpandOrCollapse()}
+        <gux-dismiss-button
+          position={this.expandable ? 'inherit' : 'absolute'}
+          onClick={this.onDismissHandler.bind(this)}
+        ></gux-dismiss-button>
       </div>
     ) as JSX.Element;
   }

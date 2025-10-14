@@ -63,9 +63,6 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-modal-side-panel-beta --> gux-side-panel-beta
-  gux-side-panel-beta --> gux-dismiss-button
-  gux-dismiss-button --> gux-button-slot
-  gux-dismiss-button --> gux-icon
   style gux-modal-side-panel-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

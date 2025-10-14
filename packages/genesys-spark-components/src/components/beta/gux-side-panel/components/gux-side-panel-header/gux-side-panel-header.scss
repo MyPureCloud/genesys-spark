@@ -38,11 +38,8 @@
   cursor: pointer;
 }
 
-.gux-expandable gux-dismiss-button {
-  position: absolute; /* TODO: same question as below */
-  inset-block-start: 20px; /* TODO: should I hardcode this value here? Maybe it makes more sense for the 
-                dismiss-button component to handle positioning absolute or not, so we
-                don't have to hardcode this here */
-  inset-inline-end: 0; /* TODO: Same question as above */
-  color: global.$gse-semantic-background-interactive-primary-default; /* TODO: this color doesn't get applied. Figure out why */
+.gux-expandable {
+  gux-dismiss-button::part(gux-icon) {
+    color: global.$gse-semantic-background-interactive-primary-default;
+  }
 }
