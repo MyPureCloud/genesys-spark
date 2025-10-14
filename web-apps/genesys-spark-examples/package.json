@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "genesys-spark": "file:../../packages/genesys-spark",
-    "monaco-editor": "^0.53.0",
+    "monaco-editor": "0.54.0",
     "parse5": "^8.0.0"
   },
   "devDependencies": {
@@ -34,8 +34,8 @@
     "file-loader": "^6.2.0",
     "glob": "^11.0.3",
     "globals": "^16.4.0",
-    "lint-staged": "^16.2.3",
-    "monaco-editor-webpack-plugin": "^7.1.0",
+    "lint-staged": "^16.2.4",
+    "monaco-editor-webpack-plugin": "^7.1.1",
     "npm-run-all": "^4.1.5",
     "postcss-html": "^1.8.0",
     "postcss-less": "^6.0.0",
@@ -45,7 +45,7 @@
     "prettier-package-json": "^2.8.0",
     "sass": "^1.89.2",
     "sass-loader": "^16.0.5",
-    "semver": "^7.7.2",
+    "semver": "^7.7.3",
     "style-loader": "^4.0.0",
     "stylelint": "^16.25.0",
     "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",
@@ -54,7 +54,7 @@
     "stylelint-config-standard": "^39.0.1",
     "stylelint-order": "^7.0.0",
     "stylelint-scss": "^6.12.1",
-    "webpack": "^5.102.0",
+    "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
   },
