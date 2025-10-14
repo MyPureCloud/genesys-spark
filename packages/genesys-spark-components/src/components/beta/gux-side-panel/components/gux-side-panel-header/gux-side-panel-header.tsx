@@ -4,8 +4,7 @@ import {
   h,
   State,
   Event,
-  EventEmitter,
-  Prop
+  EventEmitter
 } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { hasSlot } from '@utils/dom/has-slot';
@@ -31,11 +30,11 @@ export class GuxSidePanelHeader {
   @Element()
   private root: HTMLElement;
 
-  @Prop()
-  expandable: boolean = false;
-
   @State()
   private expanded: boolean = false;
+
+  @State()
+  private expandable: boolean = false;
 
   @Event()
   guxexpanded: EventEmitter<void>;
@@ -49,6 +48,15 @@ export class GuxSidePanelHeader {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
+
+    const parent = this.root.parentElement;
+    if (parent) {
+      this.expandable = Boolean(parent.getAttribute('expandable'));
+    }
+  }
+
+  private onDismissHandler(): void {
+    this.sidePanelDismiss.emit();
   }
 
   private renderSlot(slotName: SlotName): JSX.Element | null {
@@ -89,10 +97,6 @@ export class GuxSidePanelHeader {
     } else {
       this.guxcollapsed.emit();
     }
-  }
-
-  private onDismissHandler(): void {
-    this.sidePanelDismiss.emit();
   }
 
   private renderExpandOrCollapse(): JSX.Element | null {
@@ -150,10 +154,12 @@ export class GuxSidePanelHeader {
         {this.renderTitleDesc()}
         {this.renderSlot('badge')}
         {this.renderExpandOrCollapse()}
-        <gux-dismiss-button
-          position={this.expandable ? 'inherit' : 'absolute'}
-          onClick={this.onDismissHandler.bind(this)}
-        ></gux-dismiss-button>
+        {this.expandable && (
+          <gux-dismiss-button
+            position="inherit"
+            onClick={this.onDismissHandler.bind(this)}
+          ></gux-dismiss-button>
+        )}
       </div>
     ) as JSX.Element;
   }

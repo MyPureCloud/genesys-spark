@@ -1,5 +1,5 @@
-export const expandablePanel = `<gux-side-panel-beta size="medium" id="expandable-example">
-  <gux-side-panel-header slot="header" expandable="true">
+export const expandablePanel = `<gux-side-panel-beta size="medium" id="expandable-example" expandable="true">
+  <gux-side-panel-header slot="header">
     <gux-side-panel-heading slot="title"
       >Expandable Side Panel</gux-side-panel-heading
     >
@@ -237,8 +237,8 @@ export const renderConfigs = [
   },
   {
     description: 'Should render expandable side panel',
-    html: `<gux-side-panel-beta size="medium" id="expandable-example">
-      <gux-side-panel-header slot="header" expandable="true">
+    html: `<gux-side-panel-beta size="medium" id="expandable-example" expandable="true">
+      <gux-side-panel-header slot="header" >
         <gux-side-panel-heading slot="title"
           >Expandable Side Panel</gux-side-panel-heading
         >

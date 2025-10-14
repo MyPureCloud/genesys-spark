@@ -44,10 +44,10 @@ export class GuxDismissButton {
         <button type="button" title={this.i18n('dismiss')}>
           <div class="gux-icon-container">
             <gux-icon
-              part="gux-icon"
               icon-name="fa/xmark-large-regular"
               decorative
               size="small"
+              part="gux-icon"
             ></gux-icon>
           </div>
         </button>
