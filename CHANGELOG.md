@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.180.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.179.3...v4.180.0) (2025-10-14)
+
+
+### Features
+
+* **form-field-time-picker:** Update AM PM to reflect regional date times behind feat toggle ([1c96ea8](https://github.com/MyPureCloud/genesys-spark/commit/1c96ea82c21bfc5977f734b6352f746db503bffd))
+
 ### [4.179.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.179.2...v4.179.3) (2025-10-11)
 
 ### [4.179.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.179.1...v4.179.2) (2025-10-10)
