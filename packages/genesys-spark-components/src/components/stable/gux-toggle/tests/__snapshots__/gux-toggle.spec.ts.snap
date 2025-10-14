@@ -3,7 +3,7 @@
 exports[`gux-toggle #render COMUI-3436: TargetSize Violation for toggles in tables 1`] = `
 <gux-toggle>
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="Toggle Switch">
@@ -26,7 +26,7 @@ exports[`gux-toggle #render COMUI-3436: TargetSize Violation for toggles in tabl
 exports[`gux-toggle #render should render basic toggle 1`] = `
 <gux-toggle>
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="Toggle Switch">
@@ -49,7 +49,30 @@ exports[`gux-toggle #render should render basic toggle 1`] = `
 exports[`gux-toggle #render should render checked disabled toggle 1`] = `
 <gux-toggle checked="" disabled="">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container gux-disabled">
+    <div class="gux-toggle-container gux-disabled" aria-disabled="true">
+      <div class="gux-toggle-input">
+        <gux-toggle-slider>
+          <div class="gux-toggle-slider gux-checked gux-disabled" role="checkbox" aria-checked="true" aria-disabled="true" tabindex="" aria-label="Toggle Switch">
+            <div class="gux-slider">
+              <div class="gux-switch">
+                <gux-icon icon-name="fa/check-solid" decorative="">
+                </gux-icon>
+              </div>
+            </div>
+          </div>
+        </gux-toggle-slider>
+      </div>
+    </div>
+    <gux-announce-beta>
+    </gux-announce-beta>
+  </template>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render checked loading toggle 1`] = `
+<gux-toggle checked="" loading="">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-toggle-container gux-disabled" aria-disabled="true">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider gux-checked gux-disabled" role="checkbox" aria-checked="true" aria-disabled="true" tabindex="" aria-label="Toggle Switch">
@@ -72,7 +95,7 @@ exports[`gux-toggle #render should render checked disabled toggle 1`] = `
 exports[`gux-toggle #render should render checked toggle 1`] = `
 <gux-toggle checked="">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider gux-checked" role="checkbox" aria-checked="true" aria-disabled="false" tabindex="0" aria-label="Toggle Switch">
@@ -95,7 +118,7 @@ exports[`gux-toggle #render should render checked toggle 1`] = `
 exports[`gux-toggle #render should render checked toggle with deprecated labels 1`] = `
 <gux-toggle checked="" checked-label="on" unchecked-label="off">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider gux-checked" role="checkbox" aria-checked="true" aria-disabled="false" tabindex="0" aria-label="on">
@@ -135,7 +158,7 @@ exports[`gux-toggle #render should render checked toggle with deprecated labels 
 exports[`gux-toggle #render should render checked toggle with deprecated labels and right position 1`] = `
 <gux-toggle checked="" checked-label="on" unchecked-label="off" label-position="right">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider gux-checked" role="checkbox" aria-checked="true" aria-disabled="false" tabindex="0" aria-label="on">
@@ -172,10 +195,51 @@ exports[`gux-toggle #render should render checked toggle with deprecated labels 
 </gux-toggle>
 `;
 
+exports[`gux-toggle #render should render checked toggle with error message 1`] = `
+<gux-toggle checked="" label="On" error-message="Invalid selection">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-toggle-container" aria-disabled="false">
+      <div class="gux-toggle-input">
+        <gux-toggle-slider>
+          <div class="gux-toggle-slider gux-checked gux-error" role="checkbox" aria-checked="true" aria-disabled="false" tabindex="0" aria-label="On" aria-describedby="gux-toggle-error-i">
+            <div class="gux-slider">
+              <div class="gux-switch">
+              </div>
+            </div>
+          </div>
+        </gux-toggle-slider>
+        <div class="gux-toggle-label-and-error">
+          <div class="gux-toggle-label">
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id="gux-toggle-label-i">
+                  On
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div role="alert" id="gux-toggle-error-i" class="gux-toggle-error">
+        <div class="gux-toggle-error-container">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-toggle-error-message">
+            Invalid selection
+          </div>
+        </div>
+      </div>
+    </div>
+    <gux-announce-beta>
+    </gux-announce-beta>
+  </template>
+</gux-toggle>
+`;
+
 exports[`gux-toggle #render should render checked toggle with label 1`] = `
 <gux-toggle checked="" label="on">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider gux-checked" role="checkbox" aria-checked="true" aria-disabled="false" tabindex="0" aria-label="on">
@@ -209,7 +273,7 @@ exports[`gux-toggle #render should render checked toggle with label 1`] = `
 exports[`gux-toggle #render should render checked toggle with long deprecated labels and right position 1`] = `
 <gux-toggle checked="" checked-label="This is a long label for the toggle to test how it works" unchecked-label="This is another long label for the toggle to test how it works" label-position="right">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider gux-checked" role="checkbox" aria-checked="true" aria-disabled="false" tabindex="0" aria-label="This is a long label for the toggle to test how it works">
@@ -249,7 +313,7 @@ exports[`gux-toggle #render should render checked toggle with long deprecated la
 exports[`gux-toggle #render should render checked toggle with long right-positioned label 1`] = `
 <gux-toggle checked="" label="This is a long label for the toggle to test how it works" label-position="right">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider gux-checked" role="checkbox" aria-checked="true" aria-disabled="false" tabindex="0" aria-label="This is a long label for the toggle to test how it works">
@@ -283,7 +347,7 @@ exports[`gux-toggle #render should render checked toggle with long right-positio
 exports[`gux-toggle #render should render checked toggle with right-positioned label 1`] = `
 <gux-toggle checked="" label="on" label-position="right">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider gux-checked" role="checkbox" aria-checked="true" aria-disabled="false" tabindex="0" aria-label="on">
@@ -314,10 +378,192 @@ exports[`gux-toggle #render should render checked toggle with right-positioned l
 </gux-toggle>
 `;
 
+exports[`gux-toggle #render should render disabled toggle 1`] = `
+<gux-toggle disabled="">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-toggle-container gux-disabled" aria-disabled="true">
+      <div class="gux-toggle-input">
+        <gux-toggle-slider>
+          <div class="gux-toggle-slider gux-disabled" role="checkbox" aria-checked="false" aria-disabled="true" tabindex="" aria-label="Toggle Switch">
+            <div class="gux-slider">
+              <div class="gux-switch">
+                <gux-icon icon-name="fa/check-solid" decorative="">
+                </gux-icon>
+              </div>
+            </div>
+          </div>
+        </gux-toggle-slider>
+      </div>
+    </div>
+    <gux-announce-beta>
+    </gux-announce-beta>
+  </template>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render disabled toggle with label and error 1`] = `
+<gux-toggle disabled="" label="On" error-message="Cannot be changed">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-toggle-container gux-disabled" aria-disabled="true">
+      <div class="gux-toggle-input">
+        <gux-toggle-slider>
+          <div class="gux-toggle-slider gux-disabled gux-error" role="checkbox" aria-checked="false" aria-disabled="true" tabindex="" aria-label="On" aria-describedby="gux-toggle-error-i">
+            <div class="gux-slider">
+              <div class="gux-switch">
+              </div>
+            </div>
+          </div>
+        </gux-toggle-slider>
+        <div class="gux-toggle-label-and-error">
+          <div class="gux-toggle-label">
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id="gux-toggle-label-i">
+                  On
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div role="alert" id="gux-toggle-error-i" class="gux-toggle-error">
+        <div class="gux-toggle-error-container">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-toggle-error-message">
+            Cannot be changed
+          </div>
+        </div>
+      </div>
+    </div>
+    <gux-announce-beta>
+    </gux-announce-beta>
+  </template>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render inline toggle 1`] = `
+<gux-toggle display-inline="" class="gux-display-inline">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-toggle-container" aria-disabled="false">
+      <div class="gux-toggle-input">
+        <gux-toggle-slider>
+          <div class="gux-toggle-slider" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="Toggle Switch">
+            <div class="gux-slider">
+              <div class="gux-switch">
+                <gux-icon icon-name="fa/check-solid" decorative="">
+                </gux-icon>
+              </div>
+            </div>
+          </div>
+        </gux-toggle-slider>
+      </div>
+    </div>
+    <gux-announce-beta>
+    </gux-announce-beta>
+  </template>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render inline toggle with label 1`] = `
+<gux-toggle display-inline="" label="On" class="gux-display-inline">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-toggle-container" aria-disabled="false">
+      <div class="gux-toggle-input">
+        <gux-toggle-slider>
+          <div class="gux-toggle-slider" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="On">
+            <div class="gux-slider">
+              <div class="gux-switch">
+                <gux-icon icon-name="fa/check-solid" decorative="">
+                </gux-icon>
+              </div>
+            </div>
+          </div>
+        </gux-toggle-slider>
+        <div class="gux-toggle-label-and-error">
+          <div class="gux-toggle-label">
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id="gux-toggle-label-i">
+                  On
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <gux-announce-beta>
+    </gux-announce-beta>
+  </template>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render loading toggle 1`] = `
+<gux-toggle loading="">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-toggle-container gux-disabled" aria-disabled="true">
+      <div class="gux-toggle-input">
+        <gux-toggle-slider>
+          <div class="gux-toggle-slider gux-disabled" role="checkbox" aria-checked="false" aria-disabled="true" tabindex="" aria-label="Toggle Switch">
+            <div class="gux-slider">
+              <div class="gux-switch">
+                <gux-icon icon-name="fa/check-solid" decorative="">
+                </gux-icon>
+              </div>
+            </div>
+          </div>
+        </gux-toggle-slider>
+      </div>
+    </div>
+    <gux-announce-beta>
+    </gux-announce-beta>
+  </template>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render loading toggle with label 1`] = `
+<gux-toggle loading="" label="Processing">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-toggle-container gux-disabled" aria-disabled="true">
+      <div class="gux-toggle-input">
+        <gux-toggle-slider>
+          <div class="gux-toggle-slider gux-disabled" role="checkbox" aria-checked="false" aria-disabled="true" tabindex="" aria-label="Processing">
+            <div class="gux-slider">
+              <div class="gux-switch">
+                <gux-icon icon-name="fa/check-solid" decorative="">
+                </gux-icon>
+              </div>
+            </div>
+          </div>
+        </gux-toggle-slider>
+        <div class="gux-toggle-label-and-error">
+          <div class="gux-toggle-label">
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id="gux-toggle-label-i">
+                  Processing
+                </span>
+                <div class="gux-toggle-label-loading">
+                  <gux-radial-loading context="input">
+                  </gux-radial-loading>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <gux-announce-beta>
+    </gux-announce-beta>
+  </template>
+</gux-toggle>
+`;
+
 exports[`gux-toggle #render should render toggle inside heading element 1`] = `
 <gux-toggle label="On">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="On">
@@ -351,7 +597,7 @@ exports[`gux-toggle #render should render toggle inside heading element 1`] = `
 exports[`gux-toggle #render should render toggle with deprecated checked/unchecked labels 1`] = `
 <gux-toggle checked-label="On" unchecked-label="Off">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="On">
@@ -391,7 +637,7 @@ exports[`gux-toggle #render should render toggle with deprecated checked/uncheck
 exports[`gux-toggle #render should render toggle with deprecated labels and left position 1`] = `
 <gux-toggle checked-label="On" unchecked-label="Off" label-position="left">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container gux-toggle-label-left">
+    <div class="gux-toggle-container gux-toggle-label-left" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="On">
@@ -428,10 +674,51 @@ exports[`gux-toggle #render should render toggle with deprecated labels and left
 </gux-toggle>
 `;
 
+exports[`gux-toggle #render should render toggle with error message 1`] = `
+<gux-toggle label="On" error-message="This field is required">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <div class="gux-toggle-container" aria-disabled="false">
+      <div class="gux-toggle-input">
+        <gux-toggle-slider>
+          <div class="gux-toggle-slider gux-error" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="On" aria-describedby="gux-toggle-error-i">
+            <div class="gux-slider">
+              <div class="gux-switch">
+              </div>
+            </div>
+          </div>
+        </gux-toggle-slider>
+        <div class="gux-toggle-label-and-error">
+          <div class="gux-toggle-label">
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id="gux-toggle-label-i">
+                  On
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div role="alert" id="gux-toggle-error-i" class="gux-toggle-error">
+        <div class="gux-toggle-error-container">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
+          <div class="gux-toggle-error-message">
+            This field is required
+          </div>
+        </div>
+      </div>
+    </div>
+    <gux-announce-beta>
+    </gux-announce-beta>
+  </template>
+</gux-toggle>
+`;
+
 exports[`gux-toggle #render should render toggle with label 1`] = `
 <gux-toggle label="On">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container">
+    <div class="gux-toggle-container" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="On">
@@ -465,7 +752,7 @@ exports[`gux-toggle #render should render toggle with label 1`] = `
 exports[`gux-toggle #render should render toggle with left-positioned label 1`] = `
 <gux-toggle label="On" label-position="left">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container gux-toggle-label-left">
+    <div class="gux-toggle-container gux-toggle-label-left" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="On">
@@ -499,7 +786,7 @@ exports[`gux-toggle #render should render toggle with left-positioned label 1`] 
 exports[`gux-toggle #render should render toggle with long deprecated labels and left position 1`] = `
 <gux-toggle checked-label="This is a long label for the toggle to test how it works" unchecked-label="This is another long label for the toggle to test how it works" label-position="left">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container gux-toggle-label-left">
+    <div class="gux-toggle-container gux-toggle-label-left" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="This is a long label for the toggle to test how it works">
@@ -539,7 +826,7 @@ exports[`gux-toggle #render should render toggle with long deprecated labels and
 exports[`gux-toggle #render should render toggle with long left-positioned label 1`] = `
 <gux-toggle label="This is a long label for the toggle to test how it works" label-position="left">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
-    <div class="gux-toggle-container gux-toggle-label-left">
+    <div class="gux-toggle-container gux-toggle-label-left" aria-disabled="false">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <div class="gux-toggle-slider" role="checkbox" aria-checked="false" aria-disabled="false" tabindex="0" aria-label="This is a long label for the toggle to test how it works">

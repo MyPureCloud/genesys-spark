@@ -185,6 +185,7 @@ export class GuxToggle {
             'gux-toggle-label-left': this.labelPosition === 'left',
             'gux-disabled': this.disabled || this.loading
           }}
+          aria-disabled={this.disabled || this.loading ? 'true' : 'false'}
         >
           <div class="gux-toggle-input" onClick={this.toggle.bind(this)}>
             <gux-toggle-slider

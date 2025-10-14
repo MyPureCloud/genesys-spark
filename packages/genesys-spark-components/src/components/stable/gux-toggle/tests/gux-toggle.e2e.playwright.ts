@@ -9,7 +9,8 @@ import { renderConfigs } from './gux-toggle.common';
 test.describe('gux-toggle', () => {
   checkRenders({
     renderConfigs,
-    element: 'gux-toggle'
+    element: 'gux-toggle',
+    disableAnimations: true
   });
 
   test.describe('User Interactions', () => {
@@ -275,7 +276,8 @@ test.describe('gux-toggle', () => {
       const html = '<gux-toggle lang="en" label="Dark Mode"></gux-toggle>';
       await setContent(page, html);
 
-      const slider = page.locator('gux-toggle-slider');
+      const toggle = page.locator('gux-toggle');
+      const slider = toggle.locator('gux-toggle-slider .gux-toggle-slider');
       await expect(slider).toHaveAttribute('aria-label', 'Dark Mode');
     });
 

@@ -8,8 +8,20 @@ const currentRenderConfigs = [
     html: '<gux-toggle checked></gux-toggle>'
   },
   {
+    description: 'should render disabled toggle',
+    html: '<gux-toggle disabled></gux-toggle>'
+  },
+  {
     description: 'should render checked disabled toggle',
     html: '<gux-toggle checked disabled></gux-toggle>'
+  },
+  {
+    description: 'should render loading toggle',
+    html: '<gux-toggle loading></gux-toggle>'
+  },
+  {
+    description: 'should render checked loading toggle',
+    html: '<gux-toggle checked loading></gux-toggle>'
   },
   {
     description: 'should render toggle with label',
@@ -18,6 +30,22 @@ const currentRenderConfigs = [
   {
     description: 'should render checked toggle with label',
     html: '<gux-toggle checked label="on"></gux-toggle>'
+  },
+  {
+    description: 'should render toggle with error message',
+    html: '<gux-toggle label="On" error-message="This field is required"></gux-toggle>'
+  },
+  {
+    description: 'should render checked toggle with error message',
+    html: '<gux-toggle checked label="On" error-message="Invalid selection"></gux-toggle>'
+  },
+  {
+    description: 'should render inline toggle',
+    html: '<gux-toggle display-inline></gux-toggle>'
+  },
+  {
+    description: 'should render inline toggle with label',
+    html: '<gux-toggle display-inline label="On"></gux-toggle>'
   },
   {
     description: 'should render toggle with left-positioned label',
@@ -49,6 +77,15 @@ const currentRenderConfigs = [
     label="This is a long label for the toggle to test how it works"
     label-position="right"
   ></gux-toggle>`
+  },
+
+  {
+    description: 'should render disabled toggle with label and error',
+    html: '<gux-toggle disabled label="On" error-message="Cannot be changed"></gux-toggle>'
+  },
+  {
+    description: 'should render loading toggle with label',
+    html: '<gux-toggle loading label="Processing"></gux-toggle>'
   },
   {
     description: 'should render toggle inside heading element',
