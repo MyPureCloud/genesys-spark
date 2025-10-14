@@ -2970,6 +2970,7 @@
       "checkbox.focus.offset": "062f9756e2a36a5ce064ed11bf706cf4b92eeb38",
       "checkbox.gap": "56a0f2281f70246b786e30c706ed0e6fa81132b6",
       "checkbox.group.gap": "c9281fb8eb34dff03d47415fc690eec5b27fc8c2",
+      "checkbox.group.padding_left": "7f45bfec085c3bac44c0f7718b9ea9e624f1a21a",
       "checkbox.helper.gap": "3626b4f09ceab1295a09707ca9ee83a7529bb5fc",
       "checkbox.icon.active.foreground_color": "e3a082cf408d9cbfe9d6fa9d698381124ec0a989",
       "checkbox.icon.default.selected_foreground_color": "bf260596f51963414150962e8a8f34bbeb5ebb7e",
