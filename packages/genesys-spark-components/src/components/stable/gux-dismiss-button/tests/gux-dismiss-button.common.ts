@@ -5,6 +5,6 @@ export const renderConfigs = [
   },
   {
     description: 'Should render dismiss button with toolbar icon',
-    html: `<gux-dismiss-button iconType='toolbar'></gux-dismiss-button>`
+    html: `<gux-dismiss-button icon-type='toolbar'></gux-dismiss-button>`
   }
 ];

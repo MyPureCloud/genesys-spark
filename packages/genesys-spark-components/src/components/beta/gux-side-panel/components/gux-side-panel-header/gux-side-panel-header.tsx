@@ -158,7 +158,7 @@ export class GuxSidePanelHeader {
           <gux-dismiss-button
             position="inherit"
             onClick={this.onDismissHandler.bind(this)}
-            iconType="toolbar"
+            icon-type="toolbar"
           ></gux-dismiss-button>
         )}
       </div>
