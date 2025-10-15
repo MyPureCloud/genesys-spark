@@ -51,6 +51,11 @@ export class GuxDropdownMultiTag {
     }
   }
 
+  @Listen('focusin')
+  onFocusin(event: FocusEvent): void {
+    event.stopPropagation();
+  }
+
   private removeTag(event: Event): void {
     event.stopPropagation();
 

@@ -1,196 +1,201 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-tag #render should render component as expected (1) 1`] = `
 <gux-tag>
   <template shadowrootmode="open">
-    <div aria-disabled="false" class="gux-accent-default gux-emphasis-bold gux-size-small gux-tag">
+    <div class="gux-tag gux-accent-default gux-size-small gux-emphasis-bold" aria-disabled="false">
       <gux-tooltip-title>
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
-  </template>
-  default
+  </template>default
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (2) 1`] = `
 <gux-tag accent="default">
   <template shadowrootmode="open">
-    <div aria-disabled="false" class="gux-accent-default gux-emphasis-bold gux-size-small gux-tag">
+    <div class="gux-tag gux-accent-default gux-size-small gux-emphasis-bold" aria-disabled="false">
       <gux-tooltip-title>
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
-  </template>
-  default (explicit)
+  </template>default (explicit)
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (3) 1`] = `
 <gux-tag accent="1">
   <template shadowrootmode="open">
-    <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-small gux-tag">
+    <div class="gux-tag gux-accent-1 gux-size-small gux-emphasis-bold" aria-disabled="false">
       <gux-tooltip-title>
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
-  </template>
-  Accent 1
+  </template>Accent 1
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (4) 1`] = `
 <gux-tag accent="1">
   <template shadowrootmode="open">
-    <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-small gux-tag">
+    <div class="gux-tag gux-accent-1 gux-size-small gux-emphasis-bold" aria-disabled="false">
       <gux-tooltip-title>
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
   </template>
-  <gux-icon decorative="true" icon-name="bolt"></gux-icon>
-  Accent 1
+  <gux-icon icon-name="bolt" decorative="true">
+  </gux-icon>Accent 1
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (5) 1`] = `
 <gux-tag accent="1" removable="">
   <template shadowrootmode="open">
-    <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-small gux-tag">
+    <div class="gux-tag gux-accent-1 gux-size-small gux-emphasis-bold" aria-disabled="false">
       <gux-tooltip-title>
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
       <button class="gux-tag-remove-button" type="button">
-        <gux-icon class="gux-tag-remove-icon" decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+        <gux-icon class="gux-tag-remove-icon" icon-name="fa/xmark-large-regular" decorative="">
+        </gux-icon>
         <gux-screen-reader-beta>
           Remove tag with label:
         </gux-screen-reader-beta>
       </button>
     </div>
   </template>
-  <gux-icon decorative="true" icon-name="bolt"></gux-icon>
-  Accent 1
+  <gux-icon icon-name="bolt" decorative="true">
+  </gux-icon>Accent 1
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (6) 1`] = `
-<gux-tag accent="1" disabled="" removable="">
+<gux-tag accent="1" removable="" disabled="">
   <template shadowrootmode="open">
-    <div aria-disabled="true" class="gux-accent-1 gux-disabled gux-emphasis-bold gux-size-small gux-tag">
+    <div class="gux-tag gux-accent-1 gux-disabled gux-size-small gux-emphasis-bold" aria-disabled="true">
       <gux-tooltip-title>
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         disabled tag with label:
-      </div>
-      <button class="gux-tag-remove-button" disabled="" type="button">
-        <gux-icon class="gux-tag-remove-icon" decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+      </gux-screen-reader-beta>
+      <button class="gux-tag-remove-button" type="button" disabled="">
+        <gux-icon class="gux-tag-remove-icon" icon-name="fa/xmark-large-regular" decorative="">
+        </gux-icon>
         <gux-screen-reader-beta>
           Remove tag with label:
         </gux-screen-reader-beta>
       </button>
     </div>
   </template>
-  <gux-icon decorative="true" icon-name="bolt"></gux-icon>
-  Accent 1
+  <gux-icon icon-name="bolt" decorative="true">
+  </gux-icon>Accent 1
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (7) 1`] = `
-<gux-tag accent="1" emphasis="subtle">
+<gux-tag emphasis="subtle" accent="1">
   <template shadowrootmode="open">
-    <div aria-disabled="false" class="gux-accent-1 gux-emphasis-subtle gux-size-small gux-tag">
+    <div class="gux-tag gux-accent-1 gux-size-small gux-emphasis-subtle" aria-disabled="false">
       <gux-tooltip-title>
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
-  </template>
-  Subtle 1
+  </template>Subtle 1
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (8) 1`] = `
-<gux-tag accent="1" emphasis="bold">
+<gux-tag emphasis="bold" accent="1">
   <template shadowrootmode="open">
-    <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-small gux-tag">
+    <div class="gux-tag gux-accent-1 gux-size-small gux-emphasis-bold" aria-disabled="false">
       <gux-tooltip-title>
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
-  </template>
-  Bold 1
+  </template>Bold 1
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (9) 1`] = `
-<gux-tag accent="1" size="small">
+<gux-tag size="small" accent="1">
   <template shadowrootmode="open">
-    <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-small gux-tag">
+    <div class="gux-tag gux-accent-1 gux-size-small gux-emphasis-bold" aria-disabled="false">
       <gux-tooltip-title>
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
-  </template>
-  Small 1
+  </template>Small 1
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (10) 1`] = `
-<gux-tag accent="1" size="large">
+<gux-tag size="large" accent="1">
   <template shadowrootmode="open">
-    <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-large gux-tag">
+    <div class="gux-tag gux-accent-1 gux-size-large gux-emphasis-bold" aria-disabled="false">
       <gux-tooltip-title>
         <span>
-          <slot aria-hidden="true"></slot>
+          <slot aria-hidden="true">
+          </slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
-  </template>
-  Large 1
+  </template>Large 1
 </gux-tag>
 `;

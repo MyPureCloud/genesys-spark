@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-label-info-beta #render should render info variant 1`] = `"<gux-label-info-beta variant="info" hydrated=""><template shadowrootmode="open"><div class="gux-label-info" aria-describedby="gux-tooltip-i"><gux-screen-reader-beta hydrated=""></gux-screen-reader-beta><gux-icon icon-name="fa/circle-info-regular" size="small" hydrated=""></gux-icon><gux-tooltip-beta id="gux-tooltip-i" hydrated=""><slot name="content"></slot></gux-tooltip-beta></div></template></gux-label-info-beta>"`;
-
-exports[`gux-label-info-beta #render should render question variant 1`] = `"<gux-label-info-beta variant="question" hydrated=""><template shadowrootmode="open"><div class="gux-label-info" aria-describedby="gux-tooltip-i"><gux-screen-reader-beta hydrated="">This is some tooltip text</gux-screen-reader-beta><gux-icon icon-name="fa/circle-question-regular" size="small" hydrated=""></gux-icon><gux-tooltip-beta id="gux-tooltip-i" hydrated=""><slot name="content"></slot></gux-tooltip-beta></div></template><span slot="content">This is some tooltip text</span></gux-label-info-beta>"`;

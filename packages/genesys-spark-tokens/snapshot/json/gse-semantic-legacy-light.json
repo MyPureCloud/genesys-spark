@@ -127,10 +127,11 @@
             "right_side": "#e7e9f9"
           },
           "active": "#d5def7",
-          "copilot_launcher": {
+          "copilot": {
             "top_left": "#ffc650",
             "middle": "#ff451a",
-            "bottom_right": "#5476d5"
+            "bottom_right": "#5476d5",
+            "bottom_right_active": "#53bee5"
           }
         },
         "brand": {
@@ -150,6 +151,9 @@
           "header": "#1e1e21",
           "footer": "#dfe3ec"
         }
+      },
+      "sunken": {
+        "base": "#ebedf5"
       }
     },
     "system": {
@@ -234,7 +238,9 @@
         "neutral": "#e7e9f9",
         "subtle": "#2954cb",
         "dark_only_content": "#2e394c",
-        "light_only_content": "#ffffff"
+        "light_only_content": "#ffffff",
+        "tertiary": "#056d4d",
+        "light_content": "#ffffff"
       },
       "illustration": {
         "default": "#2143a2",
@@ -265,6 +271,10 @@
           "first_level": "#ffef27",
           "subsequent_level": "#fff793"
         }
+      },
+      "segment": {
+        "active": "#ffffff",
+        "hover": "#cad1e1"
       }
     }
   },
@@ -426,6 +436,11 @@
       },
       "search": {
         "matching_text": "#2a2a2e"
+      },
+      "segment": {
+        "active": "#2a60c8",
+        "hover": "#2754ac",
+        "default": "#2a60c8"
       }
     }
   },
@@ -452,13 +467,6 @@
         "enabled": "#2a60c8",
         "hover": "#23478f",
         "active": "#2a60c8"
-      },
-      "special_accents": {
-        "ai": {
-          "top_left": "#ffc650",
-          "middle": "#ff451a",
-          "bottom_right": "#53bee5"
-        }
       },
       "global_nav": {
         "tree_view": {
@@ -508,6 +516,38 @@
       }
     }
   },
+  "effects": {
+    "ai_glow": {
+      "yellow": {
+        "30": "#ffc6504d",
+        "40": "#ffc65066",
+        "100": "#ffc650"
+      },
+      "gold": {
+        "40": "#ff9f4066",
+        "60": "#ff9f4099",
+        "100": "#ff9f40"
+      },
+      "orange": {
+        "40": "#ff451a66",
+        "60": "#ff451a99",
+        "100": "#ff451a"
+      },
+      "teal": {
+        "50": "#53bee580",
+        "70": "#53bee5b3",
+        "100": "#53bee5"
+      }
+    },
+    "box_shadow": "#28324326",
+    "shadows": {
+      "10": "#3d538f26",
+      "20": "#3d538f33",
+      "30": "#3d538f40",
+      "40": "#3d538f4d",
+      "50": "#3d538f66"
+    }
+  },
   "container": {
     "lg": {
       "box_shadow": {
@@ -538,16 +578,6 @@
         "offsetX": "0",
         "offsetY": "0"
       }
-    }
-  },
-  "effects": {
-    "box_shadow": "#28324326",
-    "shadows": {
-      "10": "#3d538f26",
-      "20": "#3d538f33",
-      "30": "#3d538f40",
-      "40": "#3d538f4d",
-      "50": "#3d538f66"
     }
   },
   "charts": {

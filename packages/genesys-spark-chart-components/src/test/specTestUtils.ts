@@ -1,5 +1,5 @@
 import { NewSpecPageOptions } from '@stencil/core/internal';
-import { newSpecPage as stencilSpecPage } from '@stencil/core/testing';
+import { newSpecPage as stencilSpecPage } from 'jest-stencil-runner';
 import MutationObserver from 'mutation-observer';
 
 export async function newSpecPage(opts: NewSpecPageOptions) {

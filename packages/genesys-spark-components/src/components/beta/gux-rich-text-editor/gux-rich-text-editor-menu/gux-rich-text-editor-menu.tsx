@@ -1,7 +1,7 @@
 import { JSX, Component, h, State, Element, Listen, Host } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from '../gux-rich-text-editor-action/i18n/en.json';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { afterNextRender } from '@utils/dom/after-next-render';

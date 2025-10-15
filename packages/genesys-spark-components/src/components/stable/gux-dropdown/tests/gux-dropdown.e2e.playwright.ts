@@ -1,3 +1,5 @@
+/* eslint playwright/expect-expect: ["error", { "assertFunctionNames": ["assertDropdownClose", "assertDropdownOpen"] }] */
+
 import {
   checkRenders,
   setContent,
@@ -85,6 +87,15 @@ test.describe('gux-dropdown', () => {
       visibleItems = await getUnfilteredOptions(page, 'gux-option');
       await expect(visibleItems).toHaveCount(2);
       await expect(visibleItems.first()).toContainText('Bear');
+
+      await filterInput.selectText();
+      await page.keyboard.press('c');
+      await page.waitForChanges();
+
+      // Should find the "Cat" option even though its slotted content starts with whitespace
+      visibleItems = await getUnfilteredOptions(page, 'gux-option');
+      await expect(visibleItems).toHaveCount(1);
+      await expect(visibleItems.first()).toContainText('Cat');
     });
 
     test('does not filter items when filter type is custom', async ({
@@ -120,7 +131,7 @@ test.describe('gux-dropdown', () => {
       await setContent(page, html);
 
       await openWithClick(page);
-      await expectDropdownToBeOpen(page);
+      await assertDropdownOpen(page);
     });
   });
 
@@ -132,12 +143,12 @@ test.describe('gux-dropdown', () => {
       await setContent(page, html);
 
       await openWithKeyboard(page);
-      await expectDropdownToBeOpen(page);
+      await assertDropdownOpen(page);
 
       const button = page.locator('.gux-field-button');
       await button.press('Escape');
 
-      await expectDropdownToBeClosed(page);
+      await assertDropdownClosed(page);
     });
 
     test('focuses the listbox when down arrow is pressed', async ({ page }) => {
@@ -271,7 +282,7 @@ test.describe('gux-dropdown', () => {
       await page.waitForChanges();
 
       await page.keyboard.press('Enter');
-      await expectDropdownToBeClosed(page);
+      await assertDropdownClosed(page);
 
       await page.waitForChanges();
 
@@ -305,7 +316,7 @@ test.describe('gux-dropdown', () => {
         .locator('gux-dropdown gux-listbox gux-option')
         .nth(4);
       await lastOption.click();
-      await expectDropdownToBeClosed(page);
+      await assertDropdownClosed(page);
 
       await page.waitForChanges();
 
@@ -341,7 +352,7 @@ test.describe('gux-dropdown', () => {
         .locator('gux-dropdown gux-listbox gux-option')
         .nth(1);
       await secondOption.click();
-      await expectDropdownToBeClosed(page);
+      await assertDropdownClosed(page);
 
       await page.waitForChanges();
 
@@ -367,7 +378,7 @@ test.describe('gux-dropdown', () => {
         .locator('gux-dropdown gux-listbox gux-option')
         .nth(2);
       await thirdOption.click();
-      await expectDropdownToBeClosed(page);
+      await assertDropdownClosed(page);
 
       await page.waitForChanges();
 
@@ -400,7 +411,7 @@ test.describe('gux-dropdown', () => {
         .locator('gux-dropdown gux-listbox gux-option-icon')
         .nth(1);
       await secondOption.click();
-      await expectDropdownToBeClosed(page);
+      await assertDropdownClosed(page);
 
       await openWithKeyboard(page);
 
@@ -428,12 +439,12 @@ async function getUnfilteredOptions(page: E2EPage, optionType: string) {
   );
 }
 
-async function expectDropdownToBeOpen(page: E2EPage) {
+async function assertDropdownOpen(page: E2EPage) {
   const button = page.locator('.gux-field-button');
   await expect(button).toHaveAttribute('aria-expanded', 'true');
 }
 
-async function expectDropdownToBeClosed(page: E2EPage) {
+async function assertDropdownClosed(page: E2EPage) {
   const button = page.locator('.gux-field-button');
   await expect(button).toHaveAttribute('aria-expanded', 'false');
 }

@@ -1,351 +1,873 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-rating #render should render component as expected (1) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" role="spinbutton" tabindex="0">
+<gux-rating aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (2) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" role="spinbutton" tabindex="0" value="0">
+<gux-rating value="0" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (3) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="1" role="spinbutton" tabindex="0" value="1">
+<gux-rating value="1" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (4) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="2" role="spinbutton" tabindex="0" value="2">
+<gux-rating value="2" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (5) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" role="spinbutton" tabindex="0" value="3">
+<gux-rating value="3" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (6) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="4" role="spinbutton" tabindex="0" value="4">
+<gux-rating value="4" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (7) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="spinbutton" tabindex="0" value="5">
+<gux-rating value="5" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (8) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" increment="half" role="spinbutton" tabindex="0">
+<gux-rating increment="half" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (9) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" increment="half" role="spinbutton" tabindex="0" value="0">
+<gux-rating increment="half" value="0" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (10) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="0.5" increment="half" role="spinbutton" tabindex="0" value="0.5">
+<gux-rating increment="half" value="0.5" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="0.5" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-sharp-half-stroke-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-sharp-half-stroke-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (11) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="1" increment="half" role="spinbutton" tabindex="0" value="1">
+<gux-rating increment="half" value="1" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (12) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="1.5" increment="half" role="spinbutton" tabindex="0" value="1.5">
+<gux-rating increment="half" value="1.5" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="1.5" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-sharp-half-stroke-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-sharp-half-stroke-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (13) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="2" increment="half" role="spinbutton" tabindex="0" value="2">
+<gux-rating increment="half" value="2" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (14) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="2.5" increment="half" role="spinbutton" tabindex="0" value="2.5">
+<gux-rating increment="half" value="2.5" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="2.5" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-sharp-half-stroke-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-sharp-half-stroke-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (15) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" increment="half" role="spinbutton" tabindex="0" value="3">
+<gux-rating increment="half" value="3" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (16) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="3.5" increment="half" role="spinbutton" tabindex="0" value="3.5">
+<gux-rating increment="half" value="3.5" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="3.5" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-sharp-half-stroke-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-sharp-half-stroke-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (17) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="4" increment="half" role="spinbutton" tabindex="0" value="4">
+<gux-rating increment="half" value="4" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (18) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="4.5" increment="half" role="spinbutton" tabindex="0" value="4.5">
+<gux-rating increment="half" value="4.5" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="4.5" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-sharp-half-stroke-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-sharp-half-stroke-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (19) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" increment="half" role="spinbutton" tabindex="0" value="5">
+<gux-rating increment="half" value="5" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (20) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="10" aria-valuemin="0" aria-valuenow="0" max-value="10" role="spinbutton" tabindex="0" value="0">
+<gux-rating value="0" max-value="10" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (21) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="10" aria-valuemin="0" aria-valuenow="5" max-value="10" role="spinbutton" tabindex="0" value="5">
+<gux-rating value="5" max-value="10" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="5" aria-valuemin="0" aria-valuemax="10">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (22) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" max-value="10" role="spinbutton" tabindex="0" value="10">
+<gux-rating value="10" max-value="10" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (23) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" disabled="" role="spinbutton" tabindex="-1" value="3">
+<gux-rating value="3" disabled="" aria-label="Feedback" role="spinbutton" tabindex="-1" aria-readonly="false" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
-    <div class="gux-disabled gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+    <div class="gux-rating-star-container gux-disabled">
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
     </div>
   </template>
 </gux-rating>
 `;
 
 exports[`gux-rating #render should render component as expected (24) 1`] = `
-<gux-rating aria-label="Feedback" aria-readonly="true" aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" readonly="" role="spinbutton" tabindex="0" value="3">
+<gux-rating value="3" readonly="" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="true" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5">
   <template shadowrootmode="open">
     <div class="gux-rating-star-container">
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-solid" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
-      <gux-icon decorative="" icon-name="fa/star-regular" size="small"></gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+      <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+      </gux-icon>
+    </div>
+  </template>
+</gux-rating>
+`;
+
+exports[`gux-rating #render should render component as expected (25) 1`] = `
+<gux-rating compact="" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
+  <template shadowrootmode="open">
+    <div class="gux-rating-star-container gux-compact">
+      <div class="gux-star-rating-compact">
+        <div class="gux-star-rating-label-value">
+          <gux-icon tabindex="0" icon-name="fa/star-regular" decorative="" size="small">
+          </gux-icon>
+          <span class="gux-star-rating-value">
+            0
+          </span>
+        </div>
+        <div class="gux-edit-rating-button">
+          <gux-button tabindex="-1" id="popover-target" accent="inline">
+            Edit Rating
+          </gux-button>
+          <gux-popover-beta position="bottom-start" for="popover-target">
+            <gux-rating tabindex="-1" max-value="5" aria-label="Feedback" role="spinbutton" aria-readonly="false" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
+              <template shadowrootmode="open">
+                <div class="gux-rating-star-container">
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                </div>
+              </template>
+            </gux-rating>
+          </gux-popover-beta>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-rating>
+`;
+
+exports[`gux-rating #render should render component as expected (26) 1`] = `
+<gux-rating compact="" value="0" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
+  <template shadowrootmode="open">
+    <div class="gux-rating-star-container gux-compact">
+      <div class="gux-star-rating-compact">
+        <div class="gux-star-rating-label-value">
+          <gux-icon tabindex="0" icon-name="fa/star-regular" decorative="" size="small">
+          </gux-icon>
+          <span class="gux-star-rating-value">
+            0
+          </span>
+        </div>
+        <div class="gux-edit-rating-button">
+          <gux-button tabindex="-1" id="popover-target" accent="inline">
+            Edit Rating
+          </gux-button>
+          <gux-popover-beta position="bottom-start" for="popover-target">
+            <gux-rating tabindex="-1" max-value="5" aria-label="Feedback" role="spinbutton" aria-readonly="false" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
+              <template shadowrootmode="open">
+                <div class="gux-rating-star-container">
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                </div>
+              </template>
+            </gux-rating>
+          </gux-popover-beta>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-rating>
+`;
+
+exports[`gux-rating #render should render component as expected (27) 1`] = `
+<gux-rating compact="" value="1" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5">
+  <template shadowrootmode="open">
+    <div class="gux-rating-star-container gux-compact">
+      <div class="gux-star-rating-compact">
+        <div class="gux-star-rating-label-value">
+          <gux-icon tabindex="0" icon-name="fa/star-solid" decorative="" size="small">
+          </gux-icon>
+          <span class="gux-star-rating-value">
+            1
+          </span>
+        </div>
+        <div class="gux-edit-rating-button">
+          <gux-button tabindex="-1" id="popover-target" accent="inline">
+            Edit Rating
+          </gux-button>
+          <gux-popover-beta position="bottom-start" for="popover-target">
+            <gux-rating tabindex="-1" max-value="5" aria-label="Feedback" role="spinbutton" aria-readonly="false" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5">
+              <template shadowrootmode="open">
+                <div class="gux-rating-star-container">
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                </div>
+              </template>
+            </gux-rating>
+          </gux-popover-beta>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-rating>
+`;
+
+exports[`gux-rating #render should render component as expected (28) 1`] = `
+<gux-rating compact="" value="2" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5">
+  <template shadowrootmode="open">
+    <div class="gux-rating-star-container gux-compact">
+      <div class="gux-star-rating-compact">
+        <div class="gux-star-rating-label-value">
+          <gux-icon tabindex="0" icon-name="fa/star-solid" decorative="" size="small">
+          </gux-icon>
+          <span class="gux-star-rating-value">
+            2
+          </span>
+        </div>
+        <div class="gux-edit-rating-button">
+          <gux-button tabindex="-1" id="popover-target" accent="inline">
+            Edit Rating
+          </gux-button>
+          <gux-popover-beta position="bottom-start" for="popover-target">
+            <gux-rating tabindex="-1" max-value="5" aria-label="Feedback" role="spinbutton" aria-readonly="false" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5">
+              <template shadowrootmode="open">
+                <div class="gux-rating-star-container">
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                </div>
+              </template>
+            </gux-rating>
+          </gux-popover-beta>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-rating>
+`;
+
+exports[`gux-rating #render should render component as expected (29) 1`] = `
+<gux-rating compact="" value="3" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5">
+  <template shadowrootmode="open">
+    <div class="gux-rating-star-container gux-compact">
+      <div class="gux-star-rating-compact">
+        <div class="gux-star-rating-label-value">
+          <gux-icon tabindex="0" icon-name="fa/star-solid" decorative="" size="small">
+          </gux-icon>
+          <span class="gux-star-rating-value">
+            3
+          </span>
+        </div>
+        <div class="gux-edit-rating-button">
+          <gux-button tabindex="-1" id="popover-target" accent="inline">
+            Edit Rating
+          </gux-button>
+          <gux-popover-beta position="bottom-start" for="popover-target">
+            <gux-rating tabindex="-1" max-value="5" aria-label="Feedback" role="spinbutton" aria-readonly="false" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5">
+              <template shadowrootmode="open">
+                <div class="gux-rating-star-container">
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                </div>
+              </template>
+            </gux-rating>
+          </gux-popover-beta>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-rating>
+`;
+
+exports[`gux-rating #render should render component as expected (30) 1`] = `
+<gux-rating compact="" value="4" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5">
+  <template shadowrootmode="open">
+    <div class="gux-rating-star-container gux-compact">
+      <div class="gux-star-rating-compact">
+        <div class="gux-star-rating-label-value">
+          <gux-icon tabindex="0" icon-name="fa/star-solid" decorative="" size="small">
+          </gux-icon>
+          <span class="gux-star-rating-value">
+            4
+          </span>
+        </div>
+        <div class="gux-edit-rating-button">
+          <gux-button tabindex="-1" id="popover-target" accent="inline">
+            Edit Rating
+          </gux-button>
+          <gux-popover-beta position="bottom-start" for="popover-target">
+            <gux-rating tabindex="-1" max-value="5" aria-label="Feedback" role="spinbutton" aria-readonly="false" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5">
+              <template shadowrootmode="open">
+                <div class="gux-rating-star-container">
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                </div>
+              </template>
+            </gux-rating>
+          </gux-popover-beta>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-rating>
+`;
+
+exports[`gux-rating #render should render component as expected (31) 1`] = `
+<gux-rating compact="" value="5" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">
+  <template shadowrootmode="open">
+    <div class="gux-rating-star-container gux-compact">
+      <div class="gux-star-rating-compact">
+        <div class="gux-star-rating-label-value">
+          <gux-icon tabindex="0" icon-name="fa/star-solid" decorative="" size="small">
+          </gux-icon>
+          <span class="gux-star-rating-value">
+            5
+          </span>
+        </div>
+        <div class="gux-edit-rating-button">
+          <gux-button tabindex="-1" id="popover-target" accent="inline">
+            Edit Rating
+          </gux-button>
+          <gux-popover-beta position="bottom-start" for="popover-target">
+            <gux-rating tabindex="-1" max-value="5" aria-label="Feedback" role="spinbutton" aria-readonly="false" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">
+              <template shadowrootmode="open">
+                <div class="gux-rating-star-container">
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                </div>
+              </template>
+            </gux-rating>
+          </gux-popover-beta>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-rating>
+`;
+
+exports[`gux-rating #render should render component as expected (32) 1`] = `
+<gux-rating compact="" increment="half" value="2.5" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="false" aria-valuenow="2.5" aria-valuemin="0" aria-valuemax="5">
+  <template shadowrootmode="open">
+    <div class="gux-rating-star-container gux-compact">
+      <div class="gux-star-rating-compact">
+        <div class="gux-star-rating-label-value">
+          <gux-icon tabindex="0" icon-name="fa/star-solid" decorative="" size="small">
+          </gux-icon>
+          <span class="gux-star-rating-value">
+            2.5
+          </span>
+        </div>
+        <div class="gux-edit-rating-button">
+          <gux-button tabindex="-1" id="popover-target" accent="inline">
+            Edit Rating
+          </gux-button>
+          <gux-popover-beta position="bottom-start" for="popover-target">
+            <gux-rating tabindex="-1" max-value="5" aria-label="Feedback" role="spinbutton" aria-readonly="false" aria-valuenow="2.5" aria-valuemin="0" aria-valuemax="5">
+              <template shadowrootmode="open">
+                <div class="gux-rating-star-container">
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-sharp-half-stroke-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                </div>
+              </template>
+            </gux-rating>
+          </gux-popover-beta>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-rating>
+`;
+
+exports[`gux-rating #render should render component as expected (33) 1`] = `
+<gux-rating compact="" value="3" readonly="" aria-label="Feedback" role="spinbutton" tabindex="0" aria-readonly="true" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5">
+  <template shadowrootmode="open">
+    <div class="gux-rating-star-container gux-compact">
+      <div class="gux-star-rating-compact">
+        <div class="gux-star-rating-label-value">
+          <gux-icon tabindex="0" icon-name="fa/star-solid" decorative="" size="small">
+          </gux-icon>
+          <span class="gux-star-rating-value">
+            3
+          </span>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-rating>
+`;
+
+exports[`gux-rating #render should render component as expected (34) 1`] = `
+<gux-rating compact="" value="3" disabled="" aria-label="Feedback" role="spinbutton" tabindex="-1" aria-readonly="false" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5">
+  <template shadowrootmode="open">
+    <div class="gux-rating-star-container gux-disabled gux-compact">
+      <div class="gux-star-rating-compact">
+        <div class="gux-star-rating-label-value">
+          <gux-icon tabindex="0" icon-name="fa/star-solid" decorative="" size="small">
+          </gux-icon>
+          <span class="gux-star-rating-value">
+            3
+          </span>
+        </div>
+        <div class="gux-edit-rating-button">
+          <gux-button tabindex="-1" id="popover-target" accent="inline" disabled="">
+            Edit Rating
+          </gux-button>
+          <gux-popover-beta position="bottom-start" for="popover-target">
+            <gux-rating tabindex="-1" max-value="5" aria-label="Feedback" role="spinbutton" aria-readonly="false" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5">
+              <template shadowrootmode="open">
+                <div class="gux-rating-star-container">
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-solid" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                  <gux-icon icon-name="fa/star-regular" decorative="" size="small">
+                  </gux-icon>
+                </div>
+              </template>
+            </gux-rating>
+          </gux-popover-beta>
+        </div>
+      </div>
     </div>
   </template>
 </gux-rating>

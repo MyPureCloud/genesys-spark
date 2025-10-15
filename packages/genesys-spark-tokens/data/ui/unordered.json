@@ -751,30 +751,6 @@
         "value": "{container.sm.gap}",
         "type": "spacing"
       },
-      "start": {
-        "border_radius": {
-          "value": "{theme.border_radius.container.small} 0 0 {theme.border_radius.container.small}",
-          "type": "borderRadius"
-        }
-      },
-      "selected": {
-        "border_radius": {
-          "value": "{theme.border_radius.container.small}",
-          "type": "borderRadius"
-        }
-      },
-      "middle": {
-        "border_radius": {
-          "value": "0",
-          "type": "borderRadius"
-        }
-      },
-      "end": {
-        "border_radius": {
-          "value": "0 {theme.border_radius.container.small} {theme.border_radius.container.small} 0",
-          "type": "borderRadius"
-        }
-      },
       "disabled": {
         "opacity": {
           "value": "{opacity.disabled}",
@@ -795,28 +771,39 @@
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.link.default}",
+          "value": "{foreground.form_control.segment.default}",
           "type": "color"
         }
       },
       "hover": {
         "background_color": {
-          "value": "{background.container.elevated.hover}",
+          "value": "{background.form_control.segment.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.link.active}",
+          "value": "{foreground.form_control.segment.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "{background.interactive.secondary.active}",
+          "value": "{background.form_control.segment.active}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.link.active}",
+          "value": "{foreground.form_control.segment.active}",
           "type": "color"
+        },
+        "box_shadow": {
+          "value": {
+            "x": "0",
+            "y": "1",
+            "blur": "3",
+            "spread": "0",
+            "color": "{effects.shadows.50}",
+            "type": "dropShadow"
+          },
+          "type": "boxShadow"
         }
       }
     },
@@ -855,6 +842,29 @@
         "value": "0",
         "type": "spacing"
       }
+    },
+    "container": {
+      "background": {
+        "value": "{background.container.sunken.base}",
+        "type": "color"
+      }
+    },
+    "divider_line": {
+      "value": "{divider.action.height}",
+      "type": "sizing",
+      "description": "This token refers to the height of the divider line component within the segmented component."
+    },
+    "divider_component": {
+      "margin": {
+        "value": "{interactive.md.gap}",
+        "type": "spacing",
+        "description": "This is a token for the divider margin within the segmented control."
+      }
+    },
+    "padding": {
+      "value": "{container.2xs.padding}",
+      "type": "spacing",
+      "description": "Padding for the segmented control component."
     }
   },
   "form_footer": {
@@ -871,7 +881,7 @@
           "description": "The recommended vertical padding for the form footer content."
         },
         "horizontal_padding": {
-          "value": "{container.xl.padding}",
+          "value": "{container.lg.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },

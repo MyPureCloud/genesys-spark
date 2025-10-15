@@ -1,324 +1,347 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`gux-form-field-phone #render error should render component as expected 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-phone>
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default Custom Error Message
+        Label This is an error message
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-input-error">
           <div class="gux-input-container">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
         </div>
-        <div class="gux-form-field-error gux-show" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error gux-show">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
-  <gux-phone-input-beta aria-describedby="gux-form-field-error-i" id="gux-form-field-input-i"></gux-phone-input-beta>
-  <label for="gux-form-field-input-i" slot="label">
-    Default
+  <gux-phone-input-beta id="gux-form-field-input-i" aria-describedby="gux-form-field-error-i">
+  </gux-phone-input-beta>
+  <label slot="label" for="gux-form-field-input-i">
+    Label
   </label>
-  <span id="gux-form-field-error-i" slot="error">
-    Custom Error Message
+  <span slot="error" id="gux-form-field-error-i">
+    This is an error message
   </span>
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render help should render component as expected 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when an optional "help" slot is provided 1`] = `
 <gux-form-field-phone>
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Default
+        Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help gux-show">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
-  <gux-phone-input-beta aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i"></gux-phone-input-beta>
-  <label for="gux-form-field-input-i" slot="label">
-    Default
+  <gux-phone-input-beta id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i">
+  </gux-phone-input-beta>
+  <label slot="label" for="gux-form-field-input-i">
+    Label
   </label>
-  <span id="gux-form-field-help-i" slot="help">
-    Custom Help Message
+  <span slot="help" id="gux-form-field-help-i">
+    This is a help message
   </span>
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render label-position indicator marks should render component as expected (1) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-phone>
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
-        Label
+        Label 
+      This is some tooltip text
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
-  <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <gux-phone-input-beta id="gux-form-field-input-i" aria-describedby="gux-label-info-beta-i">
+  </gux-phone-input-beta>
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
+  <gux-label-info-beta slot="label-info" id="gux-label-info-beta-i">
+    <span slot="content">
+      This is some tooltip text
+    </span>
+  </gux-label-info-beta>
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render label-position indicator marks should render component as expected (2) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when indicator-mark is "optional" 1`] = `
 <gux-form-field-phone indicator-mark="optional">
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
         Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="optional">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
-  <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <gux-phone-input-beta id="gux-form-field-input-i">
+  </gux-phone-input-beta>
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render label-position indicator marks should render component as expected (3) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when indicator-mark is "required" 1`] = `
 <gux-form-field-phone indicator-mark="required">
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
         Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
-  <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <gux-phone-input-beta id="gux-form-field-input-i">
+  </gux-phone-input-beta>
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render label-position should render component as expected (1) 1`] = `
-<gux-form-field-phone>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Label
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <slot></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-phone>
-`;
-
-exports[`gux-form-field-phone #render label-position should render component as expected (2) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when label-position is above 1`] = `
 <gux-form-field-phone label-position="above">
   <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-above">
       <legend class="gux-form-field-screenreader-label">
         Label
       </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-above" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
-  <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <gux-phone-input-beta id="gux-form-field-input-i">
+  </gux-phone-input-beta>
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render label-position should render component as expected (3) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when label-position is beside 1`] = `
 <gux-form-field-phone label-position="beside">
   <template shadowrootmode="open">
-    <fieldset class="gux-beside gux-form-field-fieldset-container">
+    <fieldset class="gux-form-field-fieldset-container gux-beside">
       <legend class="gux-form-field-screenreader-label">
         Label
       </legend>
-      <div class="gux-beside gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+      <div class="gux-form-field-visual-label gux-beside" role="presentation">
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
-  <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <gux-phone-input-beta id="gux-form-field-input-i">
+  </gux-phone-input-beta>
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-phone>
 `;
 
-exports[`gux-form-field-phone #render label-position should render component as expected (4) 1`] = `
+exports[`gux-form-field-phone #render should render component as expected when label-position is screenreader 1`] = `
 <gux-form-field-phone label-position="screenreader">
   <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
@@ -326,32 +349,40 @@ exports[`gux-form-field-phone #render label-position should render component as 
         Label
       </legend>
       <div class="gux-form-field-visual-label gux-screenreader" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
+        <slot name="label">
+        </slot>
+        <gux-form-field-label-indicator variant="required">
+        </gux-form-field-label-indicator>
+        <slot name="label-info">
+        </slot>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <slot></slot>
+            <slot>
+            </slot>
           </div>
         </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <div role="alert" class="gux-form-field-error">
+          <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative="" size="small">
+          </gux-icon>
           <div class="gux-message">
-            <slot name="error"></slot>
+            <slot name="error">
+            </slot>
           </div>
         </div>
         <div class="gux-form-field-help">
           <div class="gux-message">
-            <slot name="help"></slot>
+            <slot name="help">
+            </slot>
           </div>
         </div>
       </div>
     </fieldset>
   </template>
-  <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <gux-phone-input-beta id="gux-form-field-input-i">
+  </gux-phone-input-beta>
+  <label slot="label" for="gux-form-field-input-i">
     Label
   </label>
 </gux-form-field-phone>

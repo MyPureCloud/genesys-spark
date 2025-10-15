@@ -118,6 +118,9 @@ export class GuxFormFieldTimePicker {
         }
         break;
       }
+      case 'Shift': {
+        break;
+      }
       default: {
         if (this.input.matches(':focus-within')) {
           clearTimeout(this.hideLabelInfoTimeout);

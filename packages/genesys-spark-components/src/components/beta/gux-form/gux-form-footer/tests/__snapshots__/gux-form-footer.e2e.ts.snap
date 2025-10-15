@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-form-footer #render should render as expected for "page-desktop" placement 1`] = `"<gux-form-footer placement="page-desktop" class="gux-form-footer-page-desktop" hydrated=""><template shadowrootmode="open"><slot></slot></template> <footer> <gux-button accent="primary" hydrated="">Primary</gux-button> <gux-button accent="secondary" hydrated="">Secondary</gux-button> </footer> </gux-form-footer>"`;
-
-exports[`gux-form-footer #render should render as expected for "page-mobile" placement 1`] = `"<gux-form-footer placement="page-mobile" class="gux-form-footer-page-mobile" hydrated=""><template shadowrootmode="open"><slot></slot></template> <footer> <gux-button accent="primary" hydrated="">Primary</gux-button> <gux-button accent="secondary" hydrated="">Secondary</gux-button> </footer> </gux-form-footer>"`;
-
-exports[`gux-form-footer #render should render as expected for "side-sheet-desktop" placement 1`] = `"<gux-form-footer placement="side-sheet-desktop" class="gux-form-footer-side-sheet-desktop" hydrated=""><template shadowrootmode="open"><slot></slot></template> <footer> <gux-button accent="primary" hydrated="">Primary</gux-button> <gux-button accent="secondary" hydrated="">Secondary</gux-button> </footer> </gux-form-footer>"`;

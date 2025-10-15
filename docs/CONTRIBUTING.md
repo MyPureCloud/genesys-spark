@@ -82,9 +82,8 @@ Not:
 
 - Components should follow our best practices for [Component Design](/packages/genesys-spark-components/documentation/COMPONENT_DESIGN.md)
 - Components should be implemented in TypeScript, with Stencil (if you think you need to deviate from this, talk to the common UI dev team first)
-- Create tests for your component
   - Use unit tests for helper utils and any JS APIs on the component
-  - Use [Puppeteer](https://developers.google.com/web/tools/puppeteer) e2e tests for user interactions
+  - Use [Playwright](https://stenciljs.com/docs/testing/playwright/e2e-testing) e2e tests for user interactions
   - Create a [snapshot test](https://jestjs.io/docs/en/snapshot-testing) for detecting unintended markup changes
   - Be sure your component meets the [Testing and Building Accessible Components Guidelines](/packages/genesys-spark-components/documentation/A11Y_TESTING.md)
 - [Make sure any text generated within your component uses the `i18n` localization tools for string replacement](/packages/genesys-spark-components/documentation/COMPONENT_LOCALIZATION.md). Refer to the [Genesys Cloud Localization Process](https://intranet.genesys.com/display/Localization/Genesys+Cloud+Localization+Process) for more information about the localization process.

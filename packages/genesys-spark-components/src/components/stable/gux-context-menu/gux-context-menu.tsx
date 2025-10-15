@@ -9,14 +9,16 @@ import {
   Host
 } from '@stencil/core';
 import { Placement } from '@floating-ui/dom';
+import uiTokens from 'genesys-spark-tokens/dist/json/gse-ui-flare-light.json';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { trackComponent } from '@utils/tracking/usage';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { afterNextRender } from '@utils/dom/after-next-render';
 import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
+import { parsePxValue } from '@utils/tokens/parse-px-value';
 
 @Component({
   styleUrl: 'gux-context-menu.scss',
@@ -164,7 +166,7 @@ export class GuxContextMenu {
         <gux-popup
           placement={this.placement}
           expanded={this.isOpen}
-          offset={4} // --gse-ui-contextMenu-gap TODO: Should use the json token as part of COMUI-2480
+          offset={parsePxValue(uiTokens.dropdown['gap'])} // --gse-ui-dropdown-gap
           exceed-target-width
         >
           <div slot="target" class="gux-button-container">

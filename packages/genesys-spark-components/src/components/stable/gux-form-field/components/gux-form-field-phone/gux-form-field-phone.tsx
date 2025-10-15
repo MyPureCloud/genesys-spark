@@ -119,6 +119,9 @@ export class GuxFormFieldPhone {
         }
         break;
       }
+      case 'Shift': {
+        break;
+      }
       default: {
         if (this.input.matches(':focus-within')) {
           void this.labelInfo?.hideTooltip();

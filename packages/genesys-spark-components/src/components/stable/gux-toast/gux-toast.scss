@@ -73,7 +73,7 @@
         font-family: ui.$gse-ui-toast-text-fontFamily;
         font-size: ui.$gse-ui-toast-text-fontSize;
         line-height: ui.$gse-ui-toast-text-lineHeight;
-        word-break: break-all;
+        overflow-wrap: anywhere;
       }
     }
 

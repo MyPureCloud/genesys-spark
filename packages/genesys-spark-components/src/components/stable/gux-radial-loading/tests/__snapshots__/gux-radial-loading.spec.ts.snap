@@ -1,13 +1,16 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-radial-loading #render should render component as expected (1) 1`] = `
 <gux-radial-loading screenreader-text="Loading">
   <template shadowrootmode="open">
-    <div aria-label="Loading" class="gux-modal" role="progressbar">
-      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
-        <circle class="gux-dynamic-circle-mask" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
+    <div class="gux-modal" role="progressbar" aria-label="Loading">
+      <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
+        <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle" stroke-linecap="round">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle-mask" stroke-linecap="round">
+        </circle>
       </svg>
     </div>
   </template>
@@ -17,11 +20,14 @@ exports[`gux-radial-loading #render should render component as expected (1) 1`] 
 exports[`gux-radial-loading #render should render component as expected (2) 1`] = `
 <gux-radial-loading context="modal" screenreader-text="Loading">
   <template shadowrootmode="open">
-    <div aria-label="Loading" class="gux-modal" role="progressbar">
-      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
-        <circle class="gux-dynamic-circle-mask" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
+    <div class="gux-modal" role="progressbar" aria-label="Loading">
+      <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
+        <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle" stroke-linecap="round">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle-mask" stroke-linecap="round">
+        </circle>
       </svg>
     </div>
   </template>
@@ -31,11 +37,14 @@ exports[`gux-radial-loading #render should render component as expected (2) 1`] 
 exports[`gux-radial-loading #render should render component as expected (3) 1`] = `
 <gux-radial-loading context="full-page" screenreader-text="Loading">
   <template shadowrootmode="open">
-    <div aria-label="Loading" class="gux-full-page" role="progressbar">
-      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
-        <circle class="gux-dynamic-circle-mask" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
+    <div class="gux-full-page" role="progressbar" aria-label="Loading">
+      <svg class="gux-svg-container" viewBox="0 0 48 48" role="presentation">
+        <circle cx="50%" cy="50%" r="22" class="gux-static-circle">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle" stroke-linecap="round">
+        </circle>
+        <circle cx="50%" cy="50%" r="22" class="gux-dynamic-circle-mask" stroke-linecap="round">
+        </circle>
       </svg>
     </div>
   </template>
@@ -45,11 +54,14 @@ exports[`gux-radial-loading #render should render component as expected (3) 1`] 
 exports[`gux-radial-loading #render should render component as expected (4) 1`] = `
 <gux-radial-loading context="input" screenreader-text="Loading">
   <template shadowrootmode="open">
-    <div aria-label="Loading" class="gux-input" role="progressbar">
-      <svg class="gux-svg-container" role="presentation" viewBox="0 0 16 16">
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="7"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="7" stroke-linecap="round"></circle>
-        <circle class="gux-dynamic-circle-mask" cx="50%" cy="50%" r="7" stroke-linecap="round"></circle>
+    <div class="gux-input" role="progressbar" aria-label="Loading">
+      <svg class="gux-svg-container" viewBox="0 0 16 16" role="presentation">
+        <circle cx="50%" cy="50%" r="7" class="gux-static-circle">
+        </circle>
+        <circle cx="50%" cy="50%" r="7" class="gux-dynamic-circle" stroke-linecap="round">
+        </circle>
+        <circle cx="50%" cy="50%" r="7" class="gux-dynamic-circle-mask" stroke-linecap="round">
+        </circle>
       </svg>
     </div>
   </template>

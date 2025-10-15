@@ -1,3 +1,12 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: inline-flex;
+  block-size: ui.$gse-ui-segmentedControl-height;
+  padding: ui.$gse-ui-segmentedControl-padding;
+  background-color: ui.$gse-ui-segmentedControl-container-background;
+  border: ui.$gse-ui-segmentedControl-border-width
+    ui.$gse-ui-segmentedControl-border-style
+    ui.$gse-ui-segmentedControl-border-color;
+  border-radius: ui.$gse-ui-segmentedControl-borderRadius;
 }

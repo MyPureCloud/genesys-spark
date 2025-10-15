@@ -1,9 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-form-description should render component as expected (1) 1`] = `
 <gux-form-description>
   <template shadowrootmode="open">
-    <slot></slot>
+    <slot>
+    </slot>
   </template>
   <span>
     This is a simple paragraph to accompany the form header.

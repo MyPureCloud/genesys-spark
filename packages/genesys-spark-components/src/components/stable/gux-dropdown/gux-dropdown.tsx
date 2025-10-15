@@ -27,7 +27,7 @@ import {
   getSearchOption,
   getListOptions,
   setInitialActiveOption,
-  getOptionDefaultSlot
+  getOptionDefaultSlotText
 } from '../gux-listbox/gux-listbox.service';
 import {
   ListboxOptionElement,
@@ -136,7 +136,7 @@ export class GuxDropdown {
           return this.filterElement.focus();
         } else if (this.shiftTabFromExpandedFilterInput(event)) {
           event.preventDefault();
-          return this.collapseListbox('focusFieldButton');
+          return this.collapseListbox('noFocusChange');
         } else {
           this.collapseListbox('noFocusChange');
         }
@@ -399,9 +399,7 @@ export class GuxDropdown {
     if (filterLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, filter);
       if (option && this.filterType !== 'custom') {
-        //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
-        const optionSlotTextContent =
-          getOptionDefaultSlot(option)?.textContent.trim();
+        const optionSlotTextContent = getOptionDefaultSlotText(option);
         return optionSlotTextContent?.substring(filterLength);
       }
     }
@@ -452,7 +450,7 @@ export class GuxDropdown {
   }
 
   private getOptionDefaultText(optionElement: HTMLGuxOptionElement) {
-    return getOptionDefaultSlot(optionElement)?.textContent.trim();
+    return getOptionDefaultSlotText(optionElement);
   }
 
   private renderOption(option: HTMLGuxOptionElement): JSX.Element {

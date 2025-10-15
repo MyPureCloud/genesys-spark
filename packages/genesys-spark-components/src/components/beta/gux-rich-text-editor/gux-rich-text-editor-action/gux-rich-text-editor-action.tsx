@@ -1,7 +1,7 @@
 import { Component, Element, Prop, h } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
 import { GuxRichTextEditorActionTypes } from './gux-rich-text-editor-action.types';
 import {

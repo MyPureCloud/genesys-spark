@@ -1,31 +1,36 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-blank-state should render the component as expected 1`] = `
 <gux-blank-state>
   <template shadowrootmode="open">
     <div class="gux-container">
       <div class="gux-image">
-        <slot name="image"></slot>
+        <slot name="image">
+        </slot>
       </div>
       <div class="gux-message">
-        <slot name="primary-message"></slot>
+        <slot name="primary-message">
+        </slot>
       </div>
       <div class="gux-guidance">
-        <slot name="additional-guidance"></slot>
+        <slot name="additional-guidance">
+        </slot>
       </div>
       <gux-button-slot accent="primary">
-        <slot name="call-to-action"></slot>
+        <slot name="call-to-action">
+        </slot>
       </gux-button-slot>
     </div>
   </template>
-  <gux-icon decorative="true" icon-name="bot" slot="image"></gux-icon>
+  <gux-icon slot="image" icon-name="bot" decorative="true">
+  </gux-icon>
   <div slot="primary-message">
     Sorry, something went wrong.
   </div>
   <div slot="additional-guidance">
     Please refresh this page to try again.
   </div>
-  <button onclick="notify(event)" slot="call-to-action" type="button">
+  <button slot="call-to-action" type="button" onclick="notify(event)">
     Call to action
   </button>
 </gux-blank-state>

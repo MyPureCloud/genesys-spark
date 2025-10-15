@@ -1,6 +1,6 @@
 import { newSpecPage } from '@test/specTestUtils';
 import { GuxTooltipPointer } from '../gux-tooltip-pointer';
-import { GuxTooltipBase } from 'components/beta/gux-tooltip-base/gux-tooltip-base';
+import { GuxTooltipBase } from '@components/beta/gux-tooltip-base/gux-tooltip-base';
 
 const components = [GuxTooltipPointer, GuxTooltipBase];
 const language = 'en';

@@ -1,7 +1,7 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-pagination-item-counts-legacy #render should render as expected (1) 1`] = `
-<gux-pagination-item-counts-legacy current-page="0" items-per-page="0" total-items="0">
+<gux-pagination-item-counts-legacy total-items="0" current-page="0" items-per-page="0">
   <div class="gux-pagination-item-counts-container">
     <span class="gux-pagination-item-counts-range">
       0 - 0
@@ -14,7 +14,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (1)
 `;
 
 exports[`gux-pagination-item-counts-legacy #render should render as expected (2) 1`] = `
-<gux-pagination-item-counts-legacy current-page="2" items-per-page="25" total-items="99">
+<gux-pagination-item-counts-legacy total-items="99" current-page="2" items-per-page="25">
   <div class="gux-pagination-item-counts-container">
     <span class="gux-pagination-item-counts-range">
       26 - 50
@@ -27,7 +27,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (2)
 `;
 
 exports[`gux-pagination-item-counts-legacy #render should render as expected (3) 1`] = `
-<gux-pagination-item-counts-legacy current-page="2" items-per-page="50" total-items="99">
+<gux-pagination-item-counts-legacy total-items="99" current-page="2" items-per-page="50">
   <div class="gux-pagination-item-counts-container">
     <span class="gux-pagination-item-counts-range">
       51 - 99
@@ -40,7 +40,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (3)
 `;
 
 exports[`gux-pagination-item-counts-legacy #render should render as expected (4) 1`] = `
-<gux-pagination-item-counts-legacy current-page="1" items-per-page="100" total-items="99">
+<gux-pagination-item-counts-legacy total-items="99" current-page="1" items-per-page="100">
   <div class="gux-pagination-item-counts-container">
     <span class="gux-pagination-item-counts-range">
       1 - 99
@@ -53,7 +53,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (4)
 `;
 
 exports[`gux-pagination-item-counts-legacy #render should render as expected (5) 1`] = `
-<gux-pagination-item-counts-legacy current-page="2" items-per-page="25" total-items="0">
+<gux-pagination-item-counts-legacy total-items="0" current-page="2" items-per-page="25">
   <div class="gux-pagination-item-counts-container">
     <span class="gux-pagination-item-counts-range">
       0 - 0
@@ -66,7 +66,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (5)
 `;
 
 exports[`gux-pagination-item-counts-legacy #render should render as expected (6) 1`] = `
-<gux-pagination-item-counts-legacy current-page="2" items-per-page="25" total-items="10">
+<gux-pagination-item-counts-legacy total-items="10" current-page="2" items-per-page="25">
   <div class="gux-pagination-item-counts-container">
     <span class="gux-pagination-item-counts-range">
       26 - 10

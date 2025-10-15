@@ -13,7 +13,7 @@ import { OnResize } from '@utils/decorator/on-resize';
 import { hasSlot } from '@utils/dom/has-slot';
 import { trackComponent } from '@utils/tracking/usage';
 import { getActionsFromGroup } from './gux-rich-text-editor.service';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './gux-rich-text-editor-action/i18n/en.json';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { OnMutation } from '@utils/decorator/on-mutation';

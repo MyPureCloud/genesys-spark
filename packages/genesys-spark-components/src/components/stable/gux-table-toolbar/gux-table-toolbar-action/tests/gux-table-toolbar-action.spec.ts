@@ -1,4 +1,4 @@
-import { newSpecPage } from '@test/specTestUtils';
+import { newSpecPage, checkRenders } from '@test/specTestUtils';
 import { GuxTableToolbarAction } from '../gux-table-toolbar-action';
 import { renderConfigs } from './gux-table-toolbar-action.common';
 const components = [GuxTableToolbarAction];
@@ -22,12 +22,5 @@ describe('click', () => {
 });
 
 describe('#render', () => {
-  renderConfigs.forEach(({ description, html }) => {
-    it(description, async () => {
-      const page = await newSpecPage({ components, html, language });
-
-      expect(page.rootInstance).toBeInstanceOf(GuxTableToolbarAction);
-      expect(page.root).toMatchSnapshot();
-    });
-  });
+  checkRenders(renderConfigs, components);
 });

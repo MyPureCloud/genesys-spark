@@ -1,26 +1,31 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-accordion renders 1`] = `
 <gux-accordion>
   <template shadowrootmode="open">
-    <slot></slot>
+    <slot>
+    </slot>
   </template>
   <gux-accordion-section>
     <template shadowrootmode="open">
       <section>
         <div id="gux-accordion-header-i" role="heading">
-          <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header" type="button">
+          <button class="gux-header" type="button" aria-expanded="false" aria-controls="gux-accordion-section-i">
             <div class="gux-header-text">
-              <slot name="header"></slot>
-              <slot name="subheader"></slot>
+              <slot name="header">
+              </slot>
+              <slot name="subheader">
+              </slot>
             </div>
             <div class="gux-header-icon">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small">
+              </gux-icon>
             </div>
           </button>
         </div>
-        <div aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout" id="gux-accordion-section-i" role="region">
-          <slot name="content"></slot>
+        <div id="gux-accordion-section-i" role="region" aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout">
+          <slot name="content">
+          </slot>
         </div>
       </section>
     </template>
@@ -35,18 +40,22 @@ exports[`gux-accordion renders 1`] = `
     <template shadowrootmode="open">
       <section>
         <div id="gux-accordion-header-i" role="heading">
-          <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header" type="button">
+          <button class="gux-header" type="button" aria-expanded="false" aria-controls="gux-accordion-section-i">
             <div class="gux-header-text">
-              <slot name="header"></slot>
-              <slot name="subheader"></slot>
+              <slot name="header">
+              </slot>
+              <slot name="subheader">
+              </slot>
             </div>
             <div class="gux-header-icon">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small">
+              </gux-icon>
             </div>
           </button>
         </div>
-        <div aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout" id="gux-accordion-section-i" role="region">
-          <slot name="content"></slot>
+        <div id="gux-accordion-section-i" role="region" aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout">
+          <slot name="content">
+          </slot>
         </div>
       </section>
     </template>
@@ -61,18 +70,22 @@ exports[`gux-accordion renders 1`] = `
     <template shadowrootmode="open">
       <section class="gux-disabled">
         <div id="gux-accordion-header-i" role="heading">
-          <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header" disabled="" type="button">
+          <button class="gux-header" type="button" aria-expanded="false" aria-controls="gux-accordion-section-i" disabled="">
             <div class="gux-header-text">
-              <slot name="header"></slot>
-              <slot name="subheader"></slot>
+              <slot name="header">
+              </slot>
+              <slot name="subheader">
+              </slot>
             </div>
             <div class="gux-header-icon">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small">
+              </gux-icon>
             </div>
           </button>
         </div>
-        <div aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout" id="gux-accordion-section-i" role="region">
-          <slot name="content"></slot>
+        <div id="gux-accordion-section-i" role="region" aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout">
+          <slot name="content">
+          </slot>
         </div>
       </section>
     </template>
@@ -90,19 +103,24 @@ exports[`gux-accordion renders 1`] = `
     <template shadowrootmode="open">
       <section>
         <div id="gux-accordion-header-i" role="heading">
-          <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header" type="button">
-            <slot name="icon"></slot>
+          <button class="gux-header" type="button" aria-expanded="false" aria-controls="gux-accordion-section-i">
+            <slot name="icon">
+            </slot>
             <div class="gux-header-text">
-              <slot name="header"></slot>
-              <slot name="subheader"></slot>
+              <slot name="header">
+              </slot>
+              <slot name="subheader">
+              </slot>
             </div>
             <div class="gux-header-icon">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small">
+              </gux-icon>
             </div>
           </button>
         </div>
-        <div aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout" id="gux-accordion-section-i" role="region">
-          <slot name="content"></slot>
+        <div id="gux-accordion-section-i" role="region" aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout">
+          <slot name="content">
+          </slot>
         </div>
       </section>
     </template>
@@ -112,7 +130,8 @@ exports[`gux-accordion renders 1`] = `
     <h3 slot="subheader">
       This is the subheader
     </h3>
-    <gux-icon icon-name="user-add" screenreader-text="add John Smith to contact list" slot="icon"></gux-icon>
+    <gux-icon slot="icon" icon-name="user-add" screenreader-text="add John Smith to contact list">
+    </gux-icon>
     <div slot="content">
       Sample Content
     </div>
@@ -121,19 +140,24 @@ exports[`gux-accordion renders 1`] = `
     <template shadowrootmode="open">
       <section>
         <div id="gux-accordion-header-i" role="heading">
-          <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header gux-reverse-headings" type="button">
-            <slot name="icon"></slot>
+          <button class="gux-header gux-reverse-headings" type="button" aria-expanded="false" aria-controls="gux-accordion-section-i">
+            <slot name="icon">
+            </slot>
             <div class="gux-header-text">
-              <slot name="header"></slot>
-              <slot name="subheader"></slot>
+              <slot name="header">
+              </slot>
+              <slot name="subheader">
+              </slot>
             </div>
             <div class="gux-header-icon">
-              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small">
+              </gux-icon>
             </div>
           </button>
         </div>
-        <div aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout" id="gux-accordion-section-i" role="region">
-          <slot name="content"></slot>
+        <div id="gux-accordion-section-i" role="region" aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout">
+          <slot name="content">
+          </slot>
         </div>
       </section>
     </template>
@@ -143,7 +167,8 @@ exports[`gux-accordion renders 1`] = `
     <h3 slot="subheader">
       This is the subheader
     </h3>
-    <gux-icon icon-name="user-add" screenreader-text="add John Smith to contact list" slot="icon"></gux-icon>
+    <gux-icon slot="icon" icon-name="user-add" screenreader-text="add John Smith to contact list">
+    </gux-icon>
     <div slot="content">
       Sample Content
     </div>

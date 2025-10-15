@@ -46,7 +46,7 @@ describe('gux-popover', () => {
       );
       expect(elementWrapper).not.toHaveClass('gux-hidden');
       expect(autoUpdateSpy).toHaveBeenCalledTimes(1);
-      expect(cleanupSpy).not.toBeCalled();
+      expect(cleanupSpy).not.toHaveBeenCalled();
 
       element.isOpen = false;
       await page.waitForChanges();

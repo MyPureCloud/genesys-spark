@@ -62,6 +62,10 @@ Type: `Promise<void>`
 
 ## Dependencies
 
+### Used by
+
+ - [gux-rating](../../stable/gux-rating)
+
 ### Depends on
 
 - [gux-dismiss-button](../../stable/gux-dismiss-button)
@@ -72,6 +76,7 @@ graph TD;
   gux-popover-beta --> gux-dismiss-button
   gux-dismiss-button --> gux-button-slot
   gux-dismiss-button --> gux-icon
+  gux-rating --> gux-popover-beta
   style gux-popover-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

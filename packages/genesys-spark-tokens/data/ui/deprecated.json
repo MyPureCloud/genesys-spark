@@ -40,6 +40,34 @@
             "type": "color"
           }
         }
+      },
+      "new_tab": {
+        "default": {
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.default}",
+            "type": "color"
+          }
+        },
+        "hover": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.new_tab.hover}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.hover}",
+            "type": "color"
+          }
+        },
+        "selected": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.new_tab.selected}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.selected}",
+            "type": "color"
+          }
+        }
       }
     }
   },
@@ -92,6 +120,31 @@
               "description": "The bottom-right color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
             }
           }
+        }
+      }
+    }
+  },
+  "segmented_control": {
+    "button": {
+      "start": {
+        "border_radius": {
+          "value": "{theme.border_radius.container.small} 0 0 {theme.border_radius.container.small}",
+          "type": "borderRadius",
+          "description": "Deprecated token since the new segmented control doesn't use different border sizes anymore."
+        }
+      },
+      "selected": {
+        "border_radius": {
+          "value": "{theme.border_radius.container.small}",
+          "type": "borderRadius",
+          "description": "Deprecated token since the new segmented control doesn't use different border sizes anymore."
+        }
+      },
+      "end": {
+        "border_radius": {
+          "value": "0 {theme.border_radius.container.small} {theme.border_radius.container.small} 0",
+          "type": "borderRadius",
+          "description": "Deprecated token since the new segmented control doesn't use different border sizes anymore."
         }
       }
     }

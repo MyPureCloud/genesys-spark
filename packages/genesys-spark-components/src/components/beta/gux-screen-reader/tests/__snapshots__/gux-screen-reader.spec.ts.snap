@@ -1,12 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`gux-screen-reader-beta #render should render component as expected (1) 1`] = `
 <gux-screen-reader-beta>
   <template shadowrootmode="open">
     <span class="gux-sr-only">
-      <slot></slot>
+      <slot>
+      </slot>
     </span>
-  </template>
-  This should not be visible
+  </template>This should not be visible
 </gux-screen-reader-beta>
 `;

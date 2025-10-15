@@ -11,7 +11,7 @@ import {
 } from '@stencil/core';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import translationResources from '../i18n/en.json';
 import { hasDisabledParent } from '../../gux-rich-text-editor.service';
 import { whenEventIsFrom } from '@utils/dom/when-event-is-from';

@@ -3,24 +3,14 @@ jest.mock('../../../../../utils/error/log-error', () => ({
   logWarn: jest.fn()
 }));
 
-import { newSpecPage } from '@test/specTestUtils';
+import { newSpecPage, checkRenders } from '@test/specTestUtils';
 import { GuxAvatarFocusable } from '../gux-avatar-focusable';
 import { logWarn } from '../../../../../utils/error/log-error';
 import { renderConfigs } from './gux-avatar-focusable.common';
 
 describe('gux-avatar-focusable', () => {
   describe('#render', () => {
-    renderConfigs.forEach(({ description, html }) => {
-      it(description, async () => {
-        const page = await newSpecPage({
-          components: [GuxAvatarFocusable],
-          html
-        });
-
-        expect(page.root).toMatchSnapshot();
-        expect(logWarn).not.toHaveBeenCalled();
-      });
-    });
+    checkRenders(renderConfigs, [GuxAvatarFocusable]);
   });
 
   describe('warnings', () => {
