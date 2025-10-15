@@ -61,7 +61,7 @@
   }
 
   :host(.gux-show-subtext) {
-    place-content: stretch flex-start;
+    align-items: flex-start;
     block-size: auto;
 
     .gux-option-wrapper {

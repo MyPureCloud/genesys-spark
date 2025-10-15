@@ -1,0 +1,370 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`gux-listbox #render should render basic gux-listbox 1`] = `
+<gux-listbox id="listbox" aria-label="Listbox" role="listbox" tabindex="0">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <gux-option value="option1" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 1
+  </gux-option>
+  <gux-option value="option2" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 2
+  </gux-option>
+  <gux-option value="option3" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 3
+  </gux-option>
+</gux-listbox>
+`;
+
+exports[`gux-listbox #render should render gux-listbox in disabled state 1`] = `
+<gux-listbox id="listbox-disabled" disabled="true" aria-label="Listbox" role="listbox" tabindex="0">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <gux-option value="option1" id="gux-option-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 1
+  </gux-option>
+  <gux-option value="option2" id="gux-option-i" role="option" class="gux-disabled" aria-selected="false" aria-disabled="true">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 2
+  </gux-option>
+</gux-listbox>
+`;
+
+exports[`gux-listbox #render should render gux-listbox in loading state 1`] = `
+<gux-listbox id="listbox-loading" loading="true" aria-label="Listbox">
+  <template shadowrootmode="open">
+    <div class="gux-message-container">
+      <gux-radial-loading context="modal">
+      </gux-radial-loading>
+      <span>
+        Loading...
+      </span>
+    </div>
+    <div hidden="">
+      <slot>
+      </slot>
+    </div>
+  </template>
+  <gux-option value="option1" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 1
+  </gux-option>
+  <gux-option value="option2" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 2
+  </gux-option>
+</gux-listbox>
+`;
+
+exports[`gux-listbox #render should render gux-listbox with empty message when all options filtered 1`] = `
+<gux-listbox id="listbox-empty" filter="xyz" filter-type="starts-with" empty-message="No matches found" aria-label="Listbox">
+  <template shadowrootmode="open">
+    <div class="gux-message-container">
+      <div class="gux-no-matches">
+        No matches found
+      </div>
+    </div>
+    <div hidden="">
+      <slot>
+      </slot>
+    </div>
+  </template>
+  <gux-option value="option1" id="gux-option-i" role="option" class="gux-filtered" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 1
+  </gux-option>
+  <gux-option value="option2" id="gux-option-i" role="option" class="gux-filtered" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 2
+  </gux-option>
+</gux-listbox>
+`;
+
+exports[`gux-listbox #render should render gux-listbox with icon options 1`] = `
+<gux-listbox id="listbox-icons" aria-label="Listbox" role="listbox" tabindex="0">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <gux-option-icon icon-name="user" value="user1" id="gux-option-icon-i" role="option" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <gux-icon decorative="" icon-name="user" size="small">
+      </gux-icon>
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>User 1
+  </gux-option-icon>
+  <gux-option-icon icon-name="user" value="user2" id="gux-option-icon-i" role="option" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <gux-icon decorative="" icon-name="user" size="small">
+      </gux-icon>
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>User 2
+  </gux-option-icon>
+  <gux-option-icon icon-name="user" value="user3" id="gux-option-icon-i" role="option" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <gux-icon decorative="" icon-name="user" size="small">
+      </gux-icon>
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>User 3
+  </gux-option-icon>
+</gux-listbox>
+`;
+
+exports[`gux-listbox #render should render gux-listbox with option groups 1`] = `
+<gux-listbox id="listbox-groups" aria-label="Listbox">
+  <template shadowrootmode="open">
+    <div class="gux-message-container">
+      <div class="gux-no-matches">
+        No matches
+      </div>
+    </div>
+    <div hidden="">
+      <slot>
+      </slot>
+    </div>
+  </template>
+  <gux-option-group label="Group 1">
+    <gux-option value="g1-option1" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+      <template shadowrootmode="open">
+        <div class="gux-option-wrapper">
+          <gux-truncate tooltip-placement="right">
+            <slot>
+            </slot>
+          </gux-truncate>
+          <slot name="subtext">
+          </slot>
+        </div>
+      </template>Group 1 Option 1
+    </gux-option>
+    <gux-option value="g1-option2" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+      <template shadowrootmode="open">
+        <div class="gux-option-wrapper">
+          <gux-truncate tooltip-placement="right">
+            <slot>
+            </slot>
+          </gux-truncate>
+          <slot name="subtext">
+          </slot>
+        </div>
+      </template>Group 1 Option 2
+    </gux-option>
+  </gux-option-group>
+  <gux-option-group label="Group 2">
+    <gux-option-icon icon-name="user" value="g2-option1" id="gux-option-icon-i" role="option" aria-selected="false" aria-disabled="false">
+      <template shadowrootmode="open">
+        <gux-icon decorative="" icon-name="user" size="small">
+        </gux-icon>
+        <div class="gux-option-wrapper">
+          <gux-truncate tooltip-placement="right">
+            <slot>
+            </slot>
+          </gux-truncate>
+          <slot name="subtext">
+          </slot>
+        </div>
+      </template>Group 2 Option 1
+    </gux-option-icon>
+    <gux-option-icon icon-name="user" value="g2-option2" id="gux-option-icon-i" role="option" aria-selected="false" aria-disabled="false">
+      <template shadowrootmode="open">
+        <gux-icon decorative="" icon-name="user" size="small">
+        </gux-icon>
+        <div class="gux-option-wrapper">
+          <gux-truncate tooltip-placement="right">
+            <slot>
+            </slot>
+          </gux-truncate>
+          <slot name="subtext">
+          </slot>
+        </div>
+      </template>Group 2 Option 2
+    </gux-option-icon>
+  </gux-option-group>
+</gux-listbox>
+`;
+
+exports[`gux-listbox #render should render gux-listbox with selected value 1`] = `
+<gux-listbox id="listbox-selected" value="option2" aria-label="Listbox" role="listbox" tabindex="0">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <gux-option value="option1" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 1
+  </gux-option>
+  <gux-option value="option2" id="gux-option-i" role="option" class="gux-selected" aria-selected="true" aria-disabled="false">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 2
+  </gux-option>
+  <gux-option value="option3" id="gux-option-i" role="option" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Option 3
+  </gux-option>
+</gux-listbox>
+`;
+
+exports[`gux-listbox #render should render gux-listbox with subtext options 1`] = `
+<gux-listbox id="listbox-subtext" aria-label="Listbox" role="listbox" tabindex="0">
+  <template shadowrootmode="open">
+    <slot>
+    </slot>
+  </template>
+  <gux-option value="option1" id="gux-option-i" role="option" class="gux-show-subtext" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Primary Text 1
+    <span slot="subtext">
+      Subtext 1
+    </span>
+  </gux-option>
+  <gux-option-icon icon-name="user" value="option2" id="gux-option-icon-i" role="option" class="gux-show-subtext" aria-selected="false" aria-disabled="false">
+    <template shadowrootmode="open">
+      <gux-icon decorative="" icon-name="user" size="small">
+      </gux-icon>
+      <div class="gux-option-wrapper">
+        <gux-truncate tooltip-placement="right">
+          <slot>
+          </slot>
+        </gux-truncate>
+        <slot name="subtext">
+        </slot>
+      </div>
+    </template>Primary Text 2
+    <span slot="subtext">
+      Subtext 2
+    </span>
+  </gux-option-icon>
+</gux-listbox>
+`;

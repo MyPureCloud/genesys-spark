@@ -141,7 +141,7 @@ export class GuxOptionIcon {
           'gux-show-subtext': this.hasSubtext
         }}
         aria-selected={this.getAriaSelected()}
-        aria-disabled={this.disabled.toString()}
+        aria-disabled={(this.disabled || this.hasDisabledParent()).toString()}
       >
         {this.renderMaybeIcon('start')}
         <div class="gux-option-wrapper">
