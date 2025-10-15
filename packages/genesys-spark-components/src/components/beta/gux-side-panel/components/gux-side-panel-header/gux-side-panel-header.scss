@@ -37,9 +37,3 @@
   color: global.$gse-semantic-background-interactive-primary-default;
   cursor: pointer;
 }
-
-.gux-expandable {
-  gux-dismiss-button::part(gux-icon) {
-    color: global.$gse-semantic-background-interactive-primary-default;
-  }
-}
