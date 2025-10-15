@@ -71,7 +71,7 @@ export class GuxLeafMulti {
     return (
       <div
         class={{
-          'gux-target': true,
+          'gux-selection-target': true,
           'gux-disabled': this.disabled,
           'gux-selected': this.selected
         }}

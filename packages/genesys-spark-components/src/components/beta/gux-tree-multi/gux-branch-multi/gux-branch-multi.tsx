@@ -101,27 +101,28 @@ export class GuxBranchMulti {
               size="small"
             ></gux-icon>
           </div>
-          <div class="gux-checkbox-container">
-            <input
-              type="checkbox"
-              checked={this.selected}
-              disabled={this.disabled}
-              aria-labelledby={this.labelId}
-              ref={el => {
-                if (el) {
-                  el.indeterminate = this.indeterminate;
-                }
-              }}
-            />
-          </div>
-          <div class="gux-icon">
-            <slot name="icon"></slot>
-          </div>
-          <div class="gux-label" id={this.labelId}>
-            <slot name="label"></slot>
+          <div class="gux-selection-target">
+            <div class="gux-checkbox-container">
+              <input
+                type="checkbox"
+                checked={this.selected}
+                disabled={this.disabled}
+                aria-labelledby={this.labelId}
+                ref={el => {
+                  if (el) {
+                    el.indeterminate = this.indeterminate;
+                  }
+                }}
+              />
+            </div>
+            <div class="gux-icon">
+              <slot name="icon"></slot>
+            </div>
+            <div class="gux-label" id={this.labelId}>
+              <slot name="label"></slot>
+            </div>
           </div>
         </div>
-
         <div role="group" class="gux-treeitems">
           <slot></slot>
         </div>

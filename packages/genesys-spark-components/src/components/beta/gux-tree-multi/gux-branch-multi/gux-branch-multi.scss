@@ -18,11 +18,9 @@
       opacity: 0.5;
     }
 
-    .gux-checkbox-container,
-    .gux-checkbox-container input,
-    .gux-label,
-    .gux-icon,
-    .gux-branch-indicator {
+    .gux-selection-target {
+      display: flex;
+      gap: 10px;
       cursor: pointer;
     }
   }
