@@ -12,14 +12,6 @@ This component is meant for use in other components as a dismiss button.
 | `position` | `position` |             | `"absolute" \| "inherit"` | `'absolute'` |
 | `size`     | `size`     |             | `"medium" \| "small"`     | `'medium'`   |
 
-
-## Shadow Parts
-
-| Part         | Description |
-| ------------ | ----------- |
-| `"gux-icon"` |             |
-
-
 ## Dependencies
 
 ### Used by
