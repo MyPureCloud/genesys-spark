@@ -94,7 +94,7 @@ export class GuxOption {
           'gux-show-subtext': this.hasSubtext
         }}
         aria-selected={this.getAriaSelected()}
-        aria-disabled={this.disabled.toString()}
+        aria-disabled={(this.disabled || this.hasDisabledParent()).toString()}
       >
         <div class="gux-option-wrapper">
           <gux-truncate
