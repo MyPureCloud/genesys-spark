@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.180.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.180.0...v4.180.1) (2025-10-15)
+
+
+### Bug Fixes
+
+* **context-menu:** now using token for offset ([eac27ac](https://github.com/MyPureCloud/genesys-spark/commit/eac27ac62ddb4d992e25f9835b6498eae437a727))
+
 ## [4.180.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.179.3...v4.180.0) (2025-10-14)
 
 
