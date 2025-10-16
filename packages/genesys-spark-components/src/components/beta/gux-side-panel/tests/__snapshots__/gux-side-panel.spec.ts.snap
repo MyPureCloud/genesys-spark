@@ -7,10 +7,8 @@ exports[`gux-modal-side-panel-beta renders correctly when open is false 1`] = `
       <gux-side-panel-beta size="medium">
         <template shadowrootmode="open">
           <section class="gux-side-panel gux-side-panel-medium">
-            <slot name="header">
-            </slot>
-            <gux-dismiss-button>
-            </gux-dismiss-button>
+            <slot name="header"></slot>
+            <gux-dismiss-button position="absolute"></gux-dismiss-button>
             <div class="gux-side-panel-content-wrapper">
               <div class="gux-side-panel-content">
                 <slot name="content">
@@ -64,10 +62,8 @@ exports[`gux-modal-side-panel-beta renders correctly when open is true 1`] = `
       <gux-side-panel-beta size="medium">
         <template shadowrootmode="open">
           <section class="gux-side-panel gux-side-panel-medium">
-            <slot name="header">
-            </slot>
-            <gux-dismiss-button>
-            </gux-dismiss-button>
+            <slot name="header"></slot>
+            <gux-dismiss-button position="absolute"></gux-dismiss-button>
             <div class="gux-side-panel-content-wrapper">
               <div class="gux-side-panel-content">
                 <slot name="content">
@@ -121,10 +117,8 @@ exports[`gux-modal-side-panel-beta renders correctly with large size 1`] = `
       <gux-side-panel-beta size="large">
         <template shadowrootmode="open">
           <section class="gux-side-panel gux-side-panel-large">
-            <slot name="header">
-            </slot>
-            <gux-dismiss-button>
-            </gux-dismiss-button>
+            <slot name="header"></slot>
+            <gux-dismiss-button position="absolute"></gux-dismiss-button>
             <div class="gux-side-panel-content-wrapper">
               <div class="gux-side-panel-content">
                 <slot name="content">
@@ -178,10 +172,8 @@ exports[`gux-modal-side-panel-beta renders correctly with medium size 1`] = `
       <gux-side-panel-beta size="medium">
         <template shadowrootmode="open">
           <section class="gux-side-panel gux-side-panel-medium">
-            <slot name="header">
-            </slot>
-            <gux-dismiss-button>
-            </gux-dismiss-button>
+            <slot name="header"></slot>
+            <gux-dismiss-button position="absolute"></gux-dismiss-button>
             <div class="gux-side-panel-content-wrapper">
               <div class="gux-side-panel-content">
                 <slot name="content">
@@ -235,10 +227,8 @@ exports[`gux-modal-side-panel-beta renders correctly with small size 1`] = `
       <gux-side-panel-beta size="small">
         <template shadowrootmode="open">
           <section class="gux-side-panel gux-side-panel-small">
-            <slot name="header">
-            </slot>
-            <gux-dismiss-button>
-            </gux-dismiss-button>
+            <slot name="header"></slot>
+            <gux-dismiss-button position="absolute"></gux-dismiss-button>
             <div class="gux-side-panel-content-wrapper">
               <div class="gux-side-panel-content">
                 <slot name="content">
@@ -289,10 +279,8 @@ exports[`gux-side-panel-beta renders correctly with h1 heading level 1`] = `
 <gux-side-panel-beta size="small">
   <template shadowrootmode="open">
     <section class="gux-side-panel gux-side-panel-small">
-      <slot name="header">
-      </slot>
-      <gux-dismiss-button>
-      </gux-dismiss-button>
+      <slot name="header"></slot>
+      <gux-dismiss-button position="absolute"></gux-dismiss-button>
       <div class="gux-side-panel-content-wrapper">
         <div class="gux-side-panel-content">
           <slot name="content">
@@ -326,10 +314,8 @@ exports[`gux-side-panel-beta renders correctly with h2 heading level 1`] = `
 <gux-side-panel-beta size="small">
   <template shadowrootmode="open">
     <section class="gux-side-panel gux-side-panel-small">
-      <slot name="header">
-      </slot>
-      <gux-dismiss-button>
-      </gux-dismiss-button>
+      <slot name="header"></slot>
+      <gux-dismiss-button position="absolute"></gux-dismiss-button>
       <div class="gux-side-panel-content-wrapper">
         <div class="gux-side-panel-content">
           <slot name="content">
@@ -363,10 +349,8 @@ exports[`gux-side-panel-beta renders correctly with h3 heading level 1`] = `
 <gux-side-panel-beta size="small">
   <template shadowrootmode="open">
     <section class="gux-side-panel gux-side-panel-small">
-      <slot name="header">
-      </slot>
-      <gux-dismiss-button>
-      </gux-dismiss-button>
+      <slot name="header"></slot>
+      <gux-dismiss-button position="absolute"></gux-dismiss-button>
       <div class="gux-side-panel-content-wrapper">
         <div class="gux-side-panel-content">
           <slot name="content">
@@ -400,10 +384,8 @@ exports[`gux-side-panel-beta renders correctly with h4 heading level 1`] = `
 <gux-side-panel-beta size="small">
   <template shadowrootmode="open">
     <section class="gux-side-panel gux-side-panel-small">
-      <slot name="header">
-      </slot>
-      <gux-dismiss-button>
-      </gux-dismiss-button>
+      <slot name="header"></slot>
+      <gux-dismiss-button position="absolute"></gux-dismiss-button>
       <div class="gux-side-panel-content-wrapper">
         <div class="gux-side-panel-content">
           <slot name="content">
@@ -437,10 +419,8 @@ exports[`gux-side-panel-beta renders correctly with h5 heading level 1`] = `
 <gux-side-panel-beta size="small">
   <template shadowrootmode="open">
     <section class="gux-side-panel gux-side-panel-small">
-      <slot name="header">
-      </slot>
-      <gux-dismiss-button>
-      </gux-dismiss-button>
+      <slot name="header"></slot>
+      <gux-dismiss-button position="absolute"></gux-dismiss-button>
       <div class="gux-side-panel-content-wrapper">
         <div class="gux-side-panel-content">
           <slot name="content">
@@ -474,10 +454,8 @@ exports[`gux-side-panel-beta renders correctly with h6 heading level 1`] = `
 <gux-side-panel-beta size="small">
   <template shadowrootmode="open">
     <section class="gux-side-panel gux-side-panel-small">
-      <slot name="header">
-      </slot>
-      <gux-dismiss-button>
-      </gux-dismiss-button>
+      <slot name="header"></slot>
+      <gux-dismiss-button position="absolute"></gux-dismiss-button>
       <div class="gux-side-panel-content-wrapper">
         <div class="gux-side-panel-content">
           <slot name="content">
@@ -511,10 +489,8 @@ exports[`gux-side-panel-beta renders correctly with large size 1`] = `
 <gux-side-panel-beta size="large">
   <template shadowrootmode="open">
     <section class="gux-side-panel gux-side-panel-large">
-      <slot name="header">
-      </slot>
-      <gux-dismiss-button>
-      </gux-dismiss-button>
+      <slot name="header"></slot>
+      <gux-dismiss-button position="absolute"></gux-dismiss-button>
       <div class="gux-side-panel-content-wrapper">
         <div class="gux-side-panel-content">
           <slot name="content">
@@ -548,10 +524,8 @@ exports[`gux-side-panel-beta renders correctly with maximum panel 1`] = `
 <gux-side-panel-beta size="small">
   <template shadowrootmode="open">
     <section class="gux-side-panel gux-side-panel-small">
-      <slot name="header">
-      </slot>
-      <gux-dismiss-button>
-      </gux-dismiss-button>
+      <slot name="header"></slot>
+      <gux-dismiss-button position="absolute"></gux-dismiss-button>
       <div class="gux-side-panel-content-wrapper">
         <div class="gux-side-panel-tabs">
           <slot name="tabs">
@@ -625,10 +599,8 @@ exports[`gux-side-panel-beta renders correctly with medium size 1`] = `
 <gux-side-panel-beta size="medium">
   <template shadowrootmode="open">
     <section class="gux-side-panel gux-side-panel-medium">
-      <slot name="header">
-      </slot>
-      <gux-dismiss-button>
-      </gux-dismiss-button>
+      <slot name="header"></slot>
+      <gux-dismiss-button position="absolute"></gux-dismiss-button>
       <div class="gux-side-panel-content-wrapper">
         <div class="gux-side-panel-content">
           <slot name="content">
@@ -662,8 +634,7 @@ exports[`gux-side-panel-beta renders correctly with minimal panel 1`] = `
 <gux-side-panel-beta size="small">
   <template shadowrootmode="open">
     <section class="gux-side-panel gux-side-panel-small">
-      <gux-dismiss-button>
-      </gux-dismiss-button>
+      <gux-dismiss-button position="absolute"></gux-dismiss-button>
       <div class="gux-side-panel-content-wrapper">
         <div class="gux-side-panel-content">
           <slot name="content">
@@ -685,10 +656,8 @@ exports[`gux-side-panel-beta renders correctly with small size 1`] = `
 <gux-side-panel-beta size="small">
   <template shadowrootmode="open">
     <section class="gux-side-panel gux-side-panel-small">
-      <slot name="header">
-      </slot>
-      <gux-dismiss-button>
-      </gux-dismiss-button>
+      <slot name="header"></slot>
+      <gux-dismiss-button position="absolute"></gux-dismiss-button>
       <div class="gux-side-panel-content-wrapper">
         <div class="gux-side-panel-content">
           <slot name="content">
