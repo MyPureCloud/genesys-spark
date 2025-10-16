@@ -785,6 +785,10 @@
     "allOptions": "All options",
     "of": "of"
   },
+  "gux-side-panel": {
+    "expand": "Expand Side Panel",
+    "collapse": "Collapse Side Panel"
+  },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
   },

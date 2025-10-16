@@ -1,4 +1,5 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 
 :host {
   display: block;
@@ -29,4 +30,9 @@
 .badge {
   flex: 0 0 auto;
   align-content: center;
+}
+
+.gux-expand:hover {
+  color: global.$gse-semantic-background-interactive-primary-default;
+  cursor: pointer;
 }

@@ -1,4 +1,5 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 
 gux-button-slot {
   position: absolute;
@@ -37,6 +38,10 @@ gux-button-slot {
       align-self: auto;
       order: 0;
       color: ui.$gse-ui-dismissButton-foregroundColor;
+
+      &.gux-toolbar-icon {
+        color: global.$gse-semantic-background-interactive-primary-default;
+      }
     }
   }
 }

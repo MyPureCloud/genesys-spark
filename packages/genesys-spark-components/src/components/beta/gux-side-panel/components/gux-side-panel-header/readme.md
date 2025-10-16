@@ -5,6 +5,15 @@
 <!-- Auto Generated Below -->
 
 
+## Events
+
+| Event              | Description | Type                |
+| ------------------ | ----------- | ------------------- |
+| `guxcollapsed`     |             | `CustomEvent<void>` |
+| `guxexpanded`      |             | `CustomEvent<void>` |
+| `sidePanelDismiss` |             | `CustomEvent<void>` |
+
+
 ## Slots
 
 | Slot            | Description                                             |
@@ -20,12 +29,22 @@
 ### Depends on
 
 - [gux-truncate](../../../../stable/gux-truncate)
+- [gux-button-slot](../../../../stable/gux-button-slot)
+- [gux-icon](../../../../stable/gux-icon)
+- [gux-screen-reader-beta](../../../gux-screen-reader)
+- [gux-dismiss-button](../../../../stable/gux-dismiss-button)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-side-panel-header --> gux-truncate
+  gux-side-panel-header --> gux-button-slot
+  gux-side-panel-header --> gux-icon
+  gux-side-panel-header --> gux-screen-reader-beta
+  gux-side-panel-header --> gux-dismiss-button
   gux-truncate --> gux-tooltip
+  gux-dismiss-button --> gux-button-slot
+  gux-dismiss-button --> gux-icon
   style gux-side-panel-header fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

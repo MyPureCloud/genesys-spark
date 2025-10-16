@@ -1,9 +1,11 @@
-import { checkRenders, test } from '@test/playwrightTestUtils';
-import { renderConfig } from './gux-dismiss-button.common';
+import { checkRenders } from '@test/specTestUtils';
+import { GuxDismissButton } from '../gux-dismiss-button';
+import { renderConfigs } from './gux-dismiss-button.common';
 
-test.describe('gux-dismiss-button', () => {
-  checkRenders({
-    renderConfigs: [renderConfig],
-    element: 'gux-dismiss-button'
+const components = [GuxDismissButton];
+
+describe('gux-dismiss-button', () => {
+  describe('#render', () => {
+    checkRenders(renderConfigs, components);
   });
 });

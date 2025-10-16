@@ -5,9 +5,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                             | Default   |
-| -------- | --------- | ----------- | -------------------------------- | --------- |
-| `size`   | `size`    |             | `"large" \| "medium" \| "small"` | `'small'` |
+| Property     | Attribute    | Description | Type                             | Default   |
+| ------------ | ------------ | ----------- | -------------------------------- | --------- |
+| `expandable` | `expandable` |             | `boolean`                        | `false`   |
+| `size`       | `size`       |             | `"large" \| "medium" \| "small"` | `'small'` |
 
 
 ## Events

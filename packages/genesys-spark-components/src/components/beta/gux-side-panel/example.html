@@ -49,6 +49,12 @@
     <gux-button accent="secondary" id="toggle-headingSize"
       >Toggle heading size</gux-button
     >
+
+    <h2>Expandable</h2>
+
+    <gux-button accent="secondary" id="toggle-expandablePanel"
+      >Toggle expandable panel</gux-button
+    >
   </div>
 
   <gux-side-panel-beta size="medium" id="dynamic-example">
@@ -140,7 +146,6 @@
       <gux-side-panel-heading slot="title"
         >Modal Side Panel</gux-side-panel-heading
       >
-
       <gux-icon
         slot="icon"
         decorative
@@ -189,6 +194,40 @@
       </gux-cta-group>
     </footer>
   </gux-modal-side-panel-beta>
+
+  <gux-side-panel-beta size="medium" id="expandable-example" expandable="true">
+    <gux-side-panel-header slot="header">
+      <gux-side-panel-heading slot="title"
+        >Expandable Side Panel</gux-side-panel-heading
+      >
+      <gux-icon
+        slot="icon"
+        decorative
+        size="medium"
+        icon-name="user-add"
+        screenreader-text="add John Smith to contact list"
+      ></gux-icon>
+    </gux-side-panel-header>
+    <div slot="content" id="expandable-content">
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </div>
+    <footer slot="footer" aria-label="Side panel footer">
+      <gux-cta-group>
+        <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+        <gux-button slot="secondary" onclick="notify(event)"
+          >Secondary</gux-button
+        >
+        <gux-button
+          slot="dismiss"
+          onclick="document.getElementById('expandable-example').style.display = 'none'"
+          >Dismiss</gux-button
+        >
+      </gux-cta-group>
+    </footer>
+  </gux-side-panel-beta>
 </div>
 
 <style
@@ -198,6 +237,7 @@
   const modalSidePanel = document.getElementById('modal-example');
   const dynamicSidePanel = document.getElementById('dynamic-example');
   const tabsSidePanel = document.getElementById('tabs-example');
+  const expandableSidePanel = document.getElementById('expandable-example');
 
   // Buttons
   const modalSmall = document.getElementById('modal-small');
@@ -207,10 +247,12 @@
   const toggleMedium = document.getElementById('toggle-medium');
   const toggleTabsPanel = document.getElementById('toggle-tabsPanel');
   const toggleHeadingSize = document.getElementById('toggle-headingSize');
+  const toggleExpandablePanel = document.getElementById('toggle-expandablePanel');
 
   function hideAllPanels() {
     dynamicSidePanel.style.display = 'none';
     tabsSidePanel.style.display = 'none';
+    expandableSidePanel.style.display = 'none';
   }
 
   function showPanel(panel, size = null) {
@@ -259,6 +301,10 @@
     showPanel(tabsSidePanel);
   });
 
+  toggleExpandablePanel.addEventListener('click', function () {
+    showPanel(expandableSidePanel);
+  });
+
   toggleHeadingSize.addEventListener('click', function () {
     const headings = document.querySelectorAll('gux-side-panel-heading');
     headings.forEach(heading => {
@@ -278,6 +324,17 @@
 
   tabsSidePanel.addEventListener('sidePanelDismiss', function(event) {
     togglePanel(tabsSidePanel);
+  });
+
+  expandableSidePanel.addEventListener('sidePanelDismiss', function(event) {
+    togglePanel(expandableSidePanel);
+  });
+
+  expandableSidePanel.addEventListener('guxexpanded', function(event) {
+    document.getElementById('expandable-content').classList.toggle('gux-expanded');
+  });
+  expandableSidePanel.addEventListener('guxcollapsed', function(event) {
+    document.getElementById('expandable-content').classList.toggle('gux-expanded');
   });
 })()"
 >
@@ -304,5 +361,18 @@
 
   #tabs-example {
     display: none;
+  }
+
+  #expandable-example {
+    display: none;
+  }
+
+  #expandable-example gux-side-panel-header {
+    gap: 12px; /* The developer can set this to whichever value they need */
+    block-size: 56px; /* The developer can set this to whichever value they need */
+  }
+
+  .gux-expanded {
+    block-size: 400px; /* The developer can set this to whichever value they need */
   }
 </style>

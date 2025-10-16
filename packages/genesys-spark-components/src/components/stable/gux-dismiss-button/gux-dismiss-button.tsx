@@ -7,7 +7,8 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
 import {
   GuxDismissButtonPosition,
-  GuxDismissButtonSize
+  GuxDismissButtonSize,
+  GuxDismissButtonIconType
 } from './gux-dismiss-button.types';
 
 @Component({
@@ -26,6 +27,9 @@ export class GuxDismissButton {
 
   @Prop()
   size: GuxDismissButtonSize = 'medium';
+
+  @Prop()
+  iconType: GuxDismissButtonIconType = 'default';
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.position });
@@ -47,6 +51,9 @@ export class GuxDismissButton {
               icon-name="fa/xmark-large-regular"
               decorative
               size="small"
+              class={{
+                'gux-toolbar-icon': this.iconType === 'toolbar'
+              }}
             ></gux-icon>
           </div>
         </button>
