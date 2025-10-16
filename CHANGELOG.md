@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.180.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.180.1...v4.180.2) (2025-10-16)
+
+
+### Bug Fixes
+
+* **toggle:** added aria-disabled attribute ([54f454f](https://github.com/MyPureCloud/genesys-spark/commit/54f454fbabff3027101098fa8e92cdf86674b0b0))
+
 ### [4.180.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.180.0...v4.180.1) (2025-10-15)
 
 
