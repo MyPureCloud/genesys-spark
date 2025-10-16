@@ -10,8 +10,8 @@
 
 .gux-background-shape {
   grid-area: 1 / 1;
-  inline-size: 177px; // Token required : COMUI-4166
-  block-size: 70px; // Token Required : COMUI-4166
+  inline-size: ui.$gse-ui-blankState-mainIllustration-background-width;
+  block-size: ui.$gse-ui-blankState-mainIllustration-background-height;
 
   &.gux-background-shape-solid-wide,
   &.gux-background-shape-solid-narrow,
@@ -22,7 +22,10 @@
   &.gux-background-shape-gradient-wide,
   &.gux-background-shape-gradient-narrow {
     svg {
-      fill: ui.$gse-ui-blankState-mainIllustration-background-gradient; // Token Required: COMUI-4166
+      fill: url('#gux-background-gradient');
+      //These are set on the <stop> within the svg elements(wide.svg and narrow.svg)
+      --gradient-start: #ffffff0d; // TODO : COMUI-4166
+      --gradient-end: #bfc6d933; // TODO : COMUI-4166
     }
   }
 }
@@ -41,12 +44,12 @@
 
 .gux-illustration-status {
   position: absolute;
-  inset-block-start: 66px; // Token Required : COMUI-4166
-  inset-inline-start: 111px; // Token Required : COMUI-4166
+  inset-block-start: ui.$gse-ui-blankState-mainIllustration-smallIcon-position-left;
+  inset-inline-start: ui.$gse-ui-blankState-mainIllustration-smallIcon-position-top;
 
   svg {
-    inline-size: 32px; // Token required : COMUI-4166
-    block-size: 32px; // Token Required: COMUI-4166
+    inline-size: ui.$gse-ui-icon-large-size;
+    block-size: ui.$gse-ui-icon-large-size;
   }
 
   &.gux-illustration-status-success {

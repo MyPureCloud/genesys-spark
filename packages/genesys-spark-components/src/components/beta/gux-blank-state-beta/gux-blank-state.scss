@@ -25,7 +25,7 @@ $gse-ui-blankState-large-minWidth: 570px; // --gse-ui-blankState-large-minWidth
   .gux-call-to-actions {
     display: flex;
     flex-direction: column;
-    gap: 4px; // Token Required : COMUI-4166
+    gap: ui.$gse-ui-blankState-gapCtaGroup;
     padding-block-start: ui.$gse-ui-blankState-gapContent;
   }
 
