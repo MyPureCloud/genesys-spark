@@ -27,3 +27,55 @@
     screenreader-text="Loading..."
   ></gux-radial-loading>
 </div>
+
+<div>
+  <h2>Around Icon</h2>
+  <div class="loading-icon-container">
+    <gux-radial-loading
+      context="around-icon"
+      screenreader-text="Loading..."
+    ></gux-radial-loading>
+    <gux-icon
+      icon-name="fa/phone-regular"
+      size="small"
+      screenreader-text="Around icon example"
+    ></gux-icon>
+  </div>
+</div>
+
+<div>
+  <h2>Around Icon Light</h2>
+  <div class="loading-icon-container light dark-bg">
+    <gux-radial-loading
+      context="around-icon-light"
+      screenreader-text="Loading..."
+    >
+    </gux-radial-loading>
+    <gux-icon
+      icon-name="fa/phone-regular"
+      size="small"
+      screenreader-text="Around icon example"
+    ></gux-icon>
+  </div>
+</div>
+
+<style>
+  .loading-icon-container {
+    display: grid;
+    place-items: center center;
+    inline-size: fit-content;
+    padding: 4px;
+  }
+
+  .loading-icon-container > * {
+    grid-area: 1 / 1;
+  }
+
+  .dark-bg {
+    background-color: var(--gse-core-color-mineral-1000);
+  }
+
+  .loading-icon-container.light > gux-icon {
+    color: var(--gse-ui-button-primary-default-foregroundColor);
+  }
+</style>
