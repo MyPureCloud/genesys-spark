@@ -701,6 +701,7 @@ export type GuxIconIconName =
   | 'fa/arrow-right-to-line-solid'
   | 'fa/arrow-rotate-left-regular'
   | 'fa/arrow-turn-down-right-regular'
+  | 'fa/arrow-up-arrow-down-regular'
   | 'fa/arrow-up-from-line-regular'
   | 'fa/arrow-up-left-regular'
   | 'fa/arrow-up-regular'

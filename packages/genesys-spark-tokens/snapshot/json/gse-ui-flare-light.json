@@ -4085,6 +4085,7 @@
     },
     "padding": "32px 16px",
     "gap_message": "4px",
+    "gap_cta_group": "4px",
     "gap_main": "12px",
     "gap_content": "24px",
     "icon_color": "#6a6d75",
@@ -4103,12 +4104,18 @@
         "operation_base_color": "#d5def7",
         "operation_symbol_color": "#2143a2",
         "width": "32px",
-        "height": "32px"
+        "height": "32px",
+        "position": {
+          "left": "66px",
+          "top": "111px"
+        }
       },
       "background": {
         "solid_color": "#bfc6d94d",
-        "gradient": "#bfc6d980",
-        "white": "#ffffff"
+        "gradient": "linear-gradient(90deg, #ffffff 0%, #bfc6d980 100%)",
+        "white": "#ffffff",
+        "width": "180px",
+        "height": "71px"
       },
       "illustration": {
         "height": "82px"
