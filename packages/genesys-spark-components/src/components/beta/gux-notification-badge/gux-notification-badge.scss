@@ -1,0 +1,113 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/scss/mixins.scss';
+
+// UNUSED TOKENS:
+// $gse-ui-notificationBadge-lightOnlyContentColor
+// $gse-ui-notificationBadge-darkOnlyContentColor
+// $gse-ui-notificationBadge-width-large-large
+// $gse-ui-notificationBadge-width-medium-large
+// $gse-ui-notificationBadge-width-large-medium
+// $gse-ui-notificationBadge-width-medium-medium
+
+// MISSING TOKENS:
+// $gse-ui-notificationBadge-tertiaryBackgroundColor: global.$gse-semantic-theme-background-system-success-40
+
+// $gse-ui-notificationBadge-large-padding = 0 6px;
+// $gse-ui-notificationBadge-medium-padding = 0 4px;
+// $gse-ui-notificationBadge-small-padding = 0;
+
+:host {
+  display: inline-block;
+  block-size: fit-content;
+  color: inherit;
+  background-color: inherit;
+  border-radius: global.$gse-core-borderRadius-full;
+}
+
+.gux-notification-badge {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: ui.$gse-ui-notificationBadge-width-large-default;
+  block-size: ui.$gse-ui-notificationBadge-height-large;
+  padding-block: 0;
+  padding-inline: 6px; // TODO: Get token for this
+  font-family: ui.$gse-ui-notificationBadge-large-fontFamily;
+  font-size: ui.$gse-ui-notificationBadge-large-fontSize;
+  font-weight: ui.$gse-ui-notificationBadge-large-fontWeight;
+  line-height: ui.$gse-ui-notificationBadge-large-lineHeight;
+  color: ui.$gse-ui-notificationBadge-lightContentColor;
+  border-radius: global.$gse-core-borderRadius-lg;
+
+  &.gux-icon-only {
+    max-inline-size: ui.$gse-ui-notificationBadge-width-large-default;
+  }
+
+  & > gux-icon {
+    inline-size: ui.$gse-ui-notificationBadge-iconSize-large;
+    block-size: ui.$gse-ui-notificationBadge-iconSize-large;
+  }
+
+  &.gux-medium {
+    min-inline-size: ui.$gse-ui-notificationBadge-width-medium-default;
+    block-size: ui.$gse-ui-notificationBadge-height-medium;
+    padding-block: 0;
+    padding-inline: 4px; // TODO: Get token for this
+    font-family: ui.$gse-ui-notificationBadge-medium-fontFamily;
+    font-size: ui.$gse-ui-notificationBadge-medium-fontSize;
+    font-weight: ui.$gse-ui-notificationBadge-medium-fontWeight;
+    line-height: ui.$gse-ui-notificationBadge-medium-lineHeight;
+
+    &.gux-icon-only {
+      max-inline-size: ui.$gse-ui-notificationBadge-width-medium-default;
+      padding: 0; // TODO: Get token for this
+    }
+
+    & > gux-icon {
+      inline-size: ui.$gse-ui-notificationBadge-iconSize-medium;
+      block-size: ui.$gse-ui-notificationBadge-iconSize-medium;
+    }
+  }
+
+  &.gux-small {
+    inline-size: ui.$gse-ui-notificationBadge-width-small;
+    min-inline-size: ui.$gse-ui-notificationBadge-width-small;
+    block-size: ui.$gse-ui-notificationBadge-height-small;
+    padding: 0;
+
+    & > slot {
+      visibility: hidden;
+    }
+  }
+
+  &.gux-info-on-dark {
+    color: ui.$gse-ui-notificationBadge-darkContentColor;
+    background-color: ui.$gse-ui-notificationBadge-neutralBackgroundColor;
+  }
+
+  &.gux-error {
+    background-color: ui.$gse-ui-notificationBadge-primaryBackgroundColor;
+  }
+
+  &.gux-warning {
+    color: ui.$gse-ui-notificationBadge-darkContentColor;
+    background-color: ui.$gse-ui-notificationBadge-secondaryBackgroundColor;
+  }
+
+  &.gux-info-on-light {
+    background-color: ui.$gse-ui-notificationBadge-subtleBackgroundColor;
+  }
+
+  &.gux-success {
+    // TODO: Get token for this $gse-ui-notificationBadge-tertiaryBackgroundColor
+    background-color: global.$gse-semantic-theme-background-system-success-40;
+  }
+
+  &.gux-inherit {
+    color: inherit;
+    background-color: inherit;
+  }
+}

@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-notification-badge #render should render as expected for "error" accent 1`] = `
+<gux-notification-badge accent="error">
+  <template shadowrootmode="open">
+    <div class="gux-error gux-medium gux-notification-badge">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  9
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "info-on-dark" accent 1`] = `
+<gux-notification-badge accent="info-on-dark">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-medium gux-notification-badge">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  9
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "info-on-light" accent 1`] = `
+<gux-notification-badge accent="info-on-light">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-light gux-medium gux-notification-badge">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  9
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "large" size with an icon 1`] = `
+<gux-notification-badge size="large">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-large gux-notification-badge">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  <gux-icon icon-name="fa/diamond-regular" screenreader-text="Diamond notification badge example"></gux-icon>
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "large" size with one digit 1`] = `
+<gux-notification-badge size="large">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-large gux-notification-badge">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  9
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "large" size with three digits 1`] = `
+<gux-notification-badge size="large">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-large gux-notification-badge">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  99+
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "large" size with two digits 1`] = `
+<gux-notification-badge size="large">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-large gux-notification-badge">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  99
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "medium" size with an icon 1`] = `
+<gux-notification-badge size="medium">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-medium gux-notification-badge">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  <gux-icon icon-name="fa/diamond-regular" screenreader-text="Diamond notification badge example"></gux-icon>
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "medium" size with one digit 1`] = `
+<gux-notification-badge size="medium">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-medium gux-notification-badge">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  9
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "medium" size with three digits 1`] = `
+<gux-notification-badge size="medium">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-medium gux-notification-badge">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  99+
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "medium" size with two digits 1`] = `
+<gux-notification-badge size="medium">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-medium gux-notification-badge">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  99
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "small" size with an icon 1`] = `
+<gux-notification-badge size="small">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-notification-badge gux-small">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  <gux-icon icon-name="fa/diamond-regular" screenreader-text="Diamond notification badge example"></gux-icon>
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "small" size with one digit 1`] = `
+<gux-notification-badge size="small">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-notification-badge gux-small">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  9
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "small" size with three digits 1`] = `
+<gux-notification-badge size="small">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-notification-badge gux-small">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  99+
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "small" size with two digits 1`] = `
+<gux-notification-badge size="small">
+  <template shadowrootmode="open">
+    <div class="gux-info-on-dark gux-notification-badge gux-small">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  99
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "success" accent 1`] = `
+<gux-notification-badge accent="success">
+  <template shadowrootmode="open">
+    <div class="gux-medium gux-notification-badge gux-success">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  9
+</gux-notification-badge>
+`;
+
+exports[`gux-notification-badge #render should render as expected for "warning" accent 1`] = `
+<gux-notification-badge accent="warning">
+  <template shadowrootmode="open">
+    <div class="gux-medium gux-notification-badge gux-warning">
+      <slot></slot>
+      <gux-screen-reader-beta>
+        New Notifications
+      </gux-screen-reader-beta>
+    </div>
+  </template>
+  9
+</gux-notification-badge>
+`;
