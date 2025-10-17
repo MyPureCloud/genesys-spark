@@ -7,7 +7,8 @@ import {
 import {
   renderConfigs,
   minimalPanel,
-  maximumPanel
+  maximumPanel,
+  expandablePanel
 } from './gux-side-panel.common';
 
 test.describe('gux-side-panel-beta', () => {
@@ -24,7 +25,6 @@ test.describe('gux-side-panel-beta', () => {
       await setContent(page, html);
       const dismissSpy = await page.spyOnEvent('sidePanelDismiss');
       const sidePanel = page.locator('gux-side-panel-beta');
-
       const dismissButton = sidePanel.locator('gux-dismiss-button >> button');
       await dismissButton.click();
       await page.waitForChanges();
@@ -80,5 +80,39 @@ test.describe('gux-side-panel-beta', () => {
         await expect(element).toBeHidden();
       }
     });
+  });
+
+  test('should fire guxexpanded event when expand button is clicked', async ({
+    page
+  }) => {
+    const html = expandablePanel;
+    await setContent(page, html);
+    const dismissSpy = await page.spyOnEvent('guxexpanded');
+    const sidePanel = page.locator('gux-side-panel-beta');
+    const header = sidePanel.locator('gux-side-panel-header');
+    const expandedButton = header.locator('.gux-expand');
+    await expandedButton.click();
+    await page.waitForChanges();
+
+    expect(dismissSpy).toHaveLength(1);
+  });
+
+  test('should fire guxcollapse event when collapse button is clicked', async ({
+    page
+  }) => {
+    const html = expandablePanel;
+    await setContent(page, html);
+    const dismissSpy = await page.spyOnEvent('guxcollapsed');
+    const sidePanel = page.locator('gux-side-panel-beta');
+    const header = sidePanel.locator('gux-side-panel-header');
+    const expandedButton = header.locator('.gux-expand');
+    await expandedButton.click();
+    await page.waitForChanges();
+
+    const collapsedButton = header.locator('.gux-collapse');
+    await collapsedButton.click();
+    await page.waitForChanges();
+
+    expect(dismissSpy).toHaveLength(1);
   });
 });

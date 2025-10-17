@@ -38,6 +38,7 @@
  - [gux-rich-text-editor-action-rich-style](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
  - [gux-rich-text-editor-action-text-highlight](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-text-highlight)
  - [gux-rich-text-editor-menu](../../beta/gux-rich-text-editor/gux-rich-text-editor-menu)
+ - [gux-side-panel-header](../../beta/gux-side-panel/components/gux-side-panel-header)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
  - [gux-tab-list](../gux-tabs/gux-tab-list)
@@ -65,6 +66,7 @@ graph TD;
   gux-rich-text-editor-action-rich-style --> gux-button-slot
   gux-rich-text-editor-action-text-highlight --> gux-button-slot
   gux-rich-text-editor-menu --> gux-button-slot
+  gux-side-panel-header --> gux-button-slot
   gux-tab-advanced --> gux-button-slot
   gux-tab-advanced-list --> gux-button-slot
   gux-tab-list --> gux-button-slot
