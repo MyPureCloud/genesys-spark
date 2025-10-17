@@ -12,6 +12,7 @@ import { Placement } from '@floating-ui/dom';
 import { OnMutation } from '@utils/decorator/on-mutation';
 import { OnResize } from '@utils/decorator/on-resize';
 import { getTextContentFromNodes } from '@utils/dom/get-text-content-from-nodes';
+import { GuxTooltipAccent } from '../gux-tooltip/gux-tooltip-types';
 
 /**
  * @slot - text node or element containing text to truncate
@@ -39,6 +40,9 @@ export class GuxTruncate {
    */
   @Prop()
   tooltipPlacement: Placement = 'bottom-start';
+
+  @Prop()
+  tooltipAccent: GuxTooltipAccent = 'light';
 
   @Method()
   async setShowTooltip() {
@@ -77,6 +81,7 @@ export class GuxTruncate {
     if (this.needsTruncation()) {
       return (
         <gux-tooltip
+          accent={this.tooltipAccent}
           placement={this.tooltipPlacement}
           aria-hidden="true"
           ref={el => (this.tooltipElement = el)}

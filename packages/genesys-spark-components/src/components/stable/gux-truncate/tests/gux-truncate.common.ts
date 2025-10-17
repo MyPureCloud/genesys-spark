@@ -68,5 +68,10 @@ export const renderConfigs = [
         </table>
       </gux-table>
     `
+  },
+  {
+    description:
+      'should display dark tooltip accent when toolip-accent set to dark',
+    html: '<gux-truncate style="inline-size: 100px" tooltip-accent="dark">Some text to truncate with dark tooltip</gux-truncate>'
   }
 ];
