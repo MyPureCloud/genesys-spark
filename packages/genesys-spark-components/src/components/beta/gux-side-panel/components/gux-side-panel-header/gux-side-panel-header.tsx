@@ -1,4 +1,11 @@
-import { Component, Element, h } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  Fragment,
+  h
+} from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { hasSlot } from '@utils/dom/has-slot';
 import { SlotName } from './gux-side-panel-header.types';
@@ -19,6 +26,13 @@ export class GuxSidePanelHeader {
 
   @Element()
   private root: HTMLElement;
+
+  @Event()
+  sidePanelDismiss: EventEmitter<void>;
+
+  private onDismissHandler(): void {
+    this.sidePanelDismiss.emit();
+  }
 
   private renderSlot(slotName: SlotName): JSX.Element | null {
     if (hasSlot(this.root, slotName)) {
@@ -57,15 +71,29 @@ export class GuxSidePanelHeader {
   connectedCallback() {
     this.internals = this.root.attachInternals();
     this.internals.role = 'banner';
+
+    const sidePanel = this.root.parentElement as HTMLGuxSidePanelBetaElement;
+    // update tagName for V5 release
+    if (
+      sidePanel.tagName === 'gux-side-panel-beta' ||
+      sidePanel.tagName === 'gux-modal-side-panel-beta'
+    ) {
+      sidePanel.hideDismissButton();
+    }
   }
 
   render(): JSX.Element {
     return (
-      <div class="title-block">
-        {this.renderSlot('icon')}
-        {this.renderTitleDesc()}
-        {this.renderSlot('badge')}
-      </div>
+      <Fragment>
+        <gux-dismiss-button
+          onClick={this.onDismissHandler.bind(this)}
+        ></gux-dismiss-button>
+        <div class="title-block">
+          {this.renderSlot('icon')}
+          {this.renderTitleDesc()}
+          {this.renderSlot('badge')}
+        </div>
+      </Fragment>
     ) as JSX.Element;
   }
 }

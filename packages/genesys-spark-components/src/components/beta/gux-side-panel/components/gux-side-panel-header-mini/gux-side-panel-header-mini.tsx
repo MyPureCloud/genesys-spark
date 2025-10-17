@@ -7,8 +7,10 @@ import {
   Prop
 } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
+ * @slot icon - Icon component displayed on the left side of the header
  * @slot - Text content for the mini header
  */
 @Component({
@@ -32,9 +34,27 @@ export class GuxSidePanelHeaderMini {
     this.sidePanelDismiss.emit();
   }
 
+  @Event()
+  sidePanelExpand: EventEmitter<void>;
+
+  private onExpandHandler(): void {
+    this.sidePanelExpand.emit();
+  }
+
+  private renderIcon(): JSX.Element | null {
+    if (hasSlot(this.root, 'icon')) {
+      return (
+        <div class="gux-side-panel-header-mini-icon">
+          <slot name="icon" />
+        </div>
+      );
+    }
+    return null;
+  }
+
   private renderExpandButton(): JSX.Element {
     return (
-      <gux-button accent="ghost">
+      <gux-button accent="ghost" onClick={this.onExpandHandler.bind(this)}>
         <gux-icon decorative size="small" icon-name="expand"></gux-icon>
       </gux-button>
     );
@@ -47,12 +67,16 @@ export class GuxSidePanelHeaderMini {
   connectedCallback() {
     this.internals = this.root.attachInternals();
     this.internals.role = 'banner';
+
+    const sidePanel = this.root.parentElement as HTMLGuxSidePanelBetaElement;
+    sidePanel.hideDismissButton();
   }
 
   render(): JSX.Element {
     return (
       <div class="gux-side-panel-header-mini">
         <div class="gux-side-panel-header-mini-title">
+          {this.renderIcon()}
           <slot />
         </div>
         <div class="gux-side-panel-header-mini-actions">

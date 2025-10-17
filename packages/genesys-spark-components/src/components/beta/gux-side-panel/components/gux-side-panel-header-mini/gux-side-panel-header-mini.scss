@@ -8,6 +8,7 @@
   display: flex;
   gap: var(--gse-ui-sidePanel-header-navBased-gap);
   align-items: center;
+  block-size: var(--gse-ui-sidePanel-navBased-header-maxHeight);
   padding: var(--gse-ui-sidePanel-header-navBased-padding);
   font-family: var(--gse-ui-sidePanel-heading-navBased-fontFamily);
   font-size: var(--gse-ui-sidePanel-heading-navBased-fontSize);
@@ -16,7 +17,16 @@
 }
 
 .gux-side-panel-header-mini-title {
+  display: flex;
   flex: 1 1 auto;
+  gap: var(--gse-ui-sidePanel-header-titleBlock-iconGap);
+  align-items: center;
+}
+
+.gux-side-panel-header-mini-icon {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
 }
 
 .gux-side-panel-header-mini-actions {

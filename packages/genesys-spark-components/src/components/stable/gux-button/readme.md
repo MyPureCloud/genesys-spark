@@ -30,6 +30,7 @@ You can choose between two type (secondary and primary).
 
  - [gux-pagination-ellipsis-button](../gux-pagination/gux-pagination-buttons/gux-pagination-ellipsis-button)
  - [gux-rich-text-editor-action-link](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
+ - [gux-side-panel-header-mini](../../beta/gux-side-panel/components/gux-side-panel-header-mini)
 
 ### Depends on
 
@@ -42,6 +43,7 @@ graph TD;
   gux-tooltip-beta --> gux-tooltip-base-beta
   gux-pagination-ellipsis-button --> gux-button
   gux-rich-text-editor-action-link --> gux-button
+  gux-side-panel-header-mini --> gux-button
   style gux-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

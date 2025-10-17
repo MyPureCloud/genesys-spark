@@ -31,15 +31,19 @@
     max-inline-size: ui.$gse-ui-sidePanel-widthSize-lg;
   }
 
+  &.gux-side-panel-expanded {
+    max-inline-size: unset;
+  }
+
   & .gux-side-panel-content-wrapper {
     flex: 1 1 100%;
     overflow-y: auto;
+    border-block-start: ui.$gse-ui-sidePanel-divider-width
+      ui.$gse-ui-sidePanel-divider-style ui.$gse-ui-sidePanel-divider-color;
   }
 
   & .gux-side-panel-content {
     padding: ui.$gse-ui-sidePanel-body-padding;
-    border-block-start: ui.$gse-ui-sidePanel-divider-width
-      ui.$gse-ui-sidePanel-divider-style ui.$gse-ui-sidePanel-divider-color;
   }
 }
 
