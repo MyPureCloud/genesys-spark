@@ -2,6 +2,6 @@
   "*": "prettier --ignore-unknown --write",
   "*.{css,html,scss}": "stylelint --fix --allow-empty-input",
   "*.{ts,tsx,js,jsx}": "eslint --fix ",
-  "*.svg": "svgo -i",
+  "!(src/components/stable/gux-icon/icons/{brand,legacy}/**).svg": "svgo -i",
   "package.json": ["prettier-package-json --write"]
 }
