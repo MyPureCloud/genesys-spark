@@ -24,7 +24,7 @@ const html = `
 `;
 const language = 'en';
 
-describe('gux-dropdown', () => {
+describe('gux-dropdown-multi', () => {
   describe('#render', () => {
     it(`should render as expected`, async () => {
       const page = await newSpecPage({ components, html, language });
