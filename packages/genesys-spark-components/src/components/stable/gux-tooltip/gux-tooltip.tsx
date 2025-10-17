@@ -26,6 +26,7 @@ import { findElementById } from '@utils/dom/find-element-by-id';
 import { afterNextRender } from '@utils/dom/after-next-render';
 import { GuxTooltipAccent } from './gux-tooltip-types';
 import { overflowDetection } from '@utils/dom/overflow-detection';
+import { tooltipManager } from '@utils/tooltip/tooltip-manager';
 
 /**
  * @slot content - Slot for content
@@ -160,6 +161,10 @@ export class GuxTooltip {
   }
   private show(): void {
     clearTimeout(this.hideDelayTimeout);
+
+    // Register with tooltip manager to enforce uniqueness
+    tooltipManager.register(this.root, () => this.immediateHide());
+
     this.isShown = true;
     afterNextRender(() => {
       this.runUpdatePosition();
@@ -168,11 +173,18 @@ export class GuxTooltip {
 
   private hide(): void {
     this.hideDelayTimeout = setTimeout(() => {
-      if (this.cleanupUpdatePosition) {
-        this.cleanupUpdatePosition();
-      }
-      this.isShown = false;
+      this.immediateHide();
     }, 350);
+  }
+
+  private immediateHide(): void {
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
+    this.isShown = false;
+
+    // Unregister from tooltip manager
+    tooltipManager.unregister(this.root);
   }
 
   private getForElement(): HTMLElement {
