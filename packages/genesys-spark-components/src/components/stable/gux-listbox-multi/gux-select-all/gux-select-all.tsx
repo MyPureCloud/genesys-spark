@@ -22,6 +22,7 @@ import translationResources from './i18n/en.json';
 export class GuxSelectAll {
   private i18n: GetI18nValue;
   private listboxElement: HTMLGuxListboxMultiElement;
+  private scrollHandler: (event: Event) => void;
 
   @Element()
   root: HTMLElement;
@@ -54,18 +55,21 @@ export class GuxSelectAll {
   }
 
   disconnectedCallback(): void {
-    this.listboxElement.removeEventListener(
-      'scroll',
-      this.applyListboxScrollListener
-    );
+    if (this.listboxElement && this.scrollHandler) {
+      this.listboxElement.removeEventListener('scroll', this.scrollHandler);
+    }
   }
 
   private applyListboxScrollListener(): void {
     if (this.listboxElement) {
-      this.listboxElement.addEventListener('scroll', (event: Event) => {
+      this.scrollHandler = (event: Event): void => {
         event.stopPropagation();
         const target = event.target as HTMLElement;
         this.hasScrolled = target.scrollTop > 0;
+      };
+
+      this.listboxElement.addEventListener('scroll', this.scrollHandler, {
+        passive: true
       });
     }
   }
