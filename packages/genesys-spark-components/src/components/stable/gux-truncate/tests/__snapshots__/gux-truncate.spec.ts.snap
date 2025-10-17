@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
+exports[`gux-truncate #render should display dark tooltip accent when toolip-accent set to dark 1`] = `
+<gux-truncate tooltip-accent="dark" style="inline-size: 100px;">
+  <template shadowrootmode="open">
+    <div>
+      <span class="gux-truncate-slot-container">
+        <slot>
+        </slot>
+      </span>
+    </div>
+  </template>Some text to truncate with dark tooltip
+</gux-truncate>
+`;
+
 exports[`gux-truncate #render should not truncate slotted div if it is not overflowing 1`] = `
 <gux-truncate>
   <template shadowrootmode="open">
