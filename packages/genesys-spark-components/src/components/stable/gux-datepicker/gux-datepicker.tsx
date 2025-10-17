@@ -25,7 +25,7 @@ import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
 import { CalendarModes } from '../../../common-enums';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import * as sparkIntl from '../../../genesys-spark-utils/intl';
+import { sparkIntl } from 'genesys-spark-utils';
 // Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
 import { useRegionalDates } from '../../../i18n/use-regional-dates';
 import { GuxCalendarDayOfWeek } from '../gux-calendar/gux-calendar.types';

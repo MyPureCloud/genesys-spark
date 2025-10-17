@@ -101,4 +101,4 @@ export function registerSparkChartComponents(
 }
 
 // Re-export of utility modules
-export * as Intl from './utils/intl';
+export { sparkIntl as Intl } from 'genesys-spark-utils';

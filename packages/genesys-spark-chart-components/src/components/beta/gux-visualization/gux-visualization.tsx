@@ -13,8 +13,7 @@ import embed, { EmbedOptions, VisualizationSpec, Result } from 'vega-embed';
 import { Spec as VgSpec } from 'vega';
 import { time } from '@redsift/d3-rs-intl';
 
-import * as sparkIntl from '../../../genesys-spark-utils/intl';
-// Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
+import { sparkIntl } from 'genesys-spark-utils';
 
 import { trackComponent } from '@utils/tracking/usage';
 

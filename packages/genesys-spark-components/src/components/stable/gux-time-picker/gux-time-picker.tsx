@@ -18,8 +18,7 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
 import { logError } from '../../../utils/error/log-error';
-import * as sparkIntl from '../../../genesys-spark-utils/intl';
-// Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
+import { sparkIntl } from 'genesys-spark-utils';
 import { useRegionalDates } from '../../../i18n/use-regional-dates';
 import {
   GuxClockType,

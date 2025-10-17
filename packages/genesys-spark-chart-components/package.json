@@ -8,13 +8,12 @@
     "dist/"
   ],
   "scripts": {
-    "build": "npm run clean && npm run i18n && npm run copy-genesys-spark-utils && npm run stencil && npm run build-wrapper",
+    "build": "npm run clean && npm run i18n && npm run stencil && npm run build-wrapper",
     "build-i18n": "./scripts/build-i18n.js",
     "build-wrapper": "./scripts/wrap-stencil.js",
     "check-a11y": "node ./scripts/check-a11y.mjs",
     "check-readmes": "./scripts/check-readmes.sh",
     "clean": "rm -r ./dist ./build || true",
-    "copy-genesys-spark-utils": "node ./scripts/copy-genesys-spark-utils.mjs",
     "predev": "npm run i18n",
     "dev": "npm run stencil.dev",
     "eslint": "eslint . --fix",
@@ -47,6 +46,7 @@
   "types": "dist/types/index.d.ts",
   "dependencies": {
     "@redsift/d3-rs-intl": "^0.4.0",
+    "genesys-spark-utils": "file:../genesys-spark-utils",
     "vega": "5.31.0",
     "vega-embed": "6.29.0",
     "vega-lite": "5.23.0"
