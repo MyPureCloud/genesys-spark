@@ -113,6 +113,26 @@ export class GuxColumnManager {
     );
   }
 
+  @Listen('internal_mouse_reorder_move')
+  handleInternalMousereordermove(event: CustomEvent): void {
+    event.stopPropagation();
+
+    if (typeof this.keyboardOrderChange?.oldIndex === 'number') {
+      //2nd mouse click triggered
+      const newIndex = getIndexInParent(event.target as HTMLElement);
+      this.keyboardOrderChange.newIndex = newIndex;
+      this.emitOrderChange(this.keyboardOrderChange);
+      this.keyboardOrderChange = getEmptyKeyboardOrderChange();
+    } else {
+      // First mouse click triggered
+      const startIndex = getIndexInParent(event.target as HTMLElement);
+      this.keyboardOrderChange = {
+        oldIndex: startIndex,
+        newIndex: null
+      };
+    }
+  }
+
   @Listen('internal_keyboard_reorder_move')
   handleInternalkeyboardreordermove(event: CustomEvent): void {
     event.stopPropagation();

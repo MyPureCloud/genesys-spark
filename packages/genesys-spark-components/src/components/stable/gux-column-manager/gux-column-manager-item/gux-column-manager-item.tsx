@@ -75,6 +75,9 @@ export class GuxColumnManagerItem {
   @Event()
   private internal_keyboard_reorder_finish: EventEmitter<void>;
 
+  @Event()
+  private internal_mouse_reorder_move: EventEmitter<HTMLElement>;
+
   @Method('guxSetHighlight')
   // eslint-disable-next-line @typescript-eslint/require-await
   async guxSetHighlight(
@@ -113,7 +116,6 @@ export class GuxColumnManagerItem {
   @Listen('dragover', { passive: false })
   onDragOver(event: DragEvent) {
     event.preventDefault();
-
     this.pendingReorder = this.mouseOnTopHalf(event) ? 'above' : 'below';
   }
 
@@ -182,6 +184,22 @@ export class GuxColumnManagerItem {
     this.setReorderMode(!this.isReordering, true);
   }
 
+  private onMouseDown(): void {
+    this.isDragging = false;
+    this.isReordering = true;
+  }
+
+  private onMouseUp(event: MouseEvent): void {
+    event.preventDefault();
+    const clickedElement = event.target as HTMLElement;
+
+    if (!this.isDragging) {
+      this.isReordering = !this.isReordering;
+      this.internal_mouse_reorder_move.emit(clickedElement);
+      document.removeEventListener('mouseup', this.onMouseUp);
+    }
+  }
+
   private keyboardReorder(event: KeyboardEvent): void {
     if (this.isReordering) {
       switch (event.key) {
@@ -231,7 +249,7 @@ export class GuxColumnManagerItem {
 
   render(): JSX.Element {
     return (
-      <Host draggable="true">
+      <Host draggable="true" onMouseUp={event => this.onMouseUp(event)}>
         <div
           class={{
             'gux-container': true,
@@ -246,6 +264,7 @@ export class GuxColumnManagerItem {
             }}
             type="button"
             onClick={() => this.toggleReorderMode()}
+            onMouseDown={() => this.onMouseDown()}
             onKeyDown={event => this.keyboardReorder(event)}
             ref={el => (this.reorderButtonElement = el)}
           >
