@@ -36,6 +36,17 @@
       </gux-button-multi>
     </div>
     <div>
+      <h2>Danger</h2>
+      <gux-button-multi accent="danger">
+        <span slot="title">Danger</span>
+        <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+        <gux-list-divider></gux-list-divider>
+        <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+      </gux-button-multi>
+    </div>
+    <div>
       <h2>Invalid</h2>
       <gux-button-multi accent="inline">
         <span slot="title">Invalid</span>
@@ -94,6 +105,20 @@
         <div slot="title">
           <gux-icon icon-name="generic" decorative></gux-icon>
           Tertiary
+        </div>
+        <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+        <gux-list-divider></gux-list-divider>
+        <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+      </gux-button-multi>
+    </div>
+    <div>
+      <h2>Danger</h2>
+      <gux-button-multi accent="danger">
+        <div slot="title">
+          <gux-icon icon-name="generic" decorative></gux-icon>
+          Danger
         </div>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
@@ -162,6 +187,19 @@
     <div>
       <h2>Tertiary</h2>
       <gux-button-multi accent="tertiary" gux-aria-label="Tertiary">
+        <div slot="title">
+          <gux-icon icon-name="generic" decorative></gux-icon>
+        </div>
+        <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+        <gux-list-divider></gux-list-divider>
+        <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+      </gux-button-multi>
+    </div>
+    <div>
+      <h2>Danger</h2>
+      <gux-button-multi accent="danger" gux-aria-label="Danger">
         <div slot="title">
           <gux-icon icon-name="generic" decorative></gux-icon>
         </div>

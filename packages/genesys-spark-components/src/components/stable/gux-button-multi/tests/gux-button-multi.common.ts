@@ -1,4 +1,4 @@
-const accents = ['primary', 'secondary', 'tertiary', 'invalid'];
+const accents = ['primary', 'secondary', 'tertiary', 'danger', 'invalid'];
 export const renderConfigs = [
   ...accents.map((accent: string) => ({
     description: `Should render as expected for "${accent}" accent`,
