@@ -1,4 +1,9 @@
-const guxButtonMultiAccent = ['primary', 'secondary', 'tertiary'] as const;
+const guxButtonMultiAccent = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'danger'
+] as const;
 
 export type GuxButtonMultiAccent = (typeof guxButtonMultiAccent)[number];
 
